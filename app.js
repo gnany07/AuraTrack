@@ -237,71 +237,134 @@ function capitalizeFirst(str) {
   return str.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
-// Compute Job Match Score
+// World-Class 4-Pillar Semantic Match Engine for Gnanendar Reddy Male (Meta / Google Senior SWE & Tech Lead)
 function calculateMatchScore(job, parsedResume) {
-  if (!job || !job.title) return { score: 0, matchedSkills: [], missingSkills: [] };
+  if (!job || !job.title) {
+    return {
+      score: 0,
+      breakdown: { domain: 0, seniority: 0, tech: 0, company: 0 },
+      matchedSkills: [],
+      missingSkills: []
+    };
+  }
 
   const titleLower = job.title.toLowerCase();
+  const descLower = (job.description || "").toLowerCase();
+  const fullText = (titleLower + " " + descLower + " " + (job.requirements || []).join(" ") + " " + (job.preferred || []).join(" ")).toLowerCase();
 
-  // 1. HARD EXCLUSION RULES
-  // Instantly score 0 for unwanted domains: Frontend, Hardware, Electrical, Data Engineering, Internships, Business/Non-Tech
+  // 1. HARD EXCLUSIONS (Instantly Returns 0% Score for unwanted titles)
   if (UNWANTED_TITLES_REGEX.test(titleLower)) {
-    return { score: 0, matchedSkills: [], missingSkills: job.requirements || [] };
+    return {
+      score: 0,
+      breakdown: { domain: 0, seniority: 0, tech: 0, company: 0 },
+      matchedSkills: [],
+      missingSkills: job.requirements || []
+    };
   }
 
-  // 2. SKILL MATCHING
-  const resumeSkillsUpper = (parsedResume && parsedResume.skills) ? parsedResume.skills.map(s => s.toLowerCase()) : [];
-  const reqMatches = [];
-  const reqGaps = [];
+  let domainScore = 0;   // Max 35 points
+  let seniorityScore = 0;// Max 25 points
+  let techScore = 0;     // Max 25 points
+  let companyScore = 0;  // Max 15 points
+
+  // Pillar A: Domain & Focus Alignment (35 Points)
+  // Target A1: Applied AI / Post-Training / Agent Optimization / Evals / LLM Infra
+  const isAppliedAI = /\b(applied ai|post-training|post training|evals|evaluations|benchmarking|agent|agentic|coding models|llm infrastructure|llm serving|llm platform|inference runtime|rlhf|model alignment)\b/i.test(fullText);
   
+  // Target A2: Systems / Distributed Systems / Networking / Infrastructure / Platform / C++ / Golang
+  const isSystemsInfra = /\b(systems|distributed systems|infrastructure|platform|load balancer|packet path|vpp|dpdk|kernel|networking|high throughput|low latency|c\+\+|golang|go|microservices|storage|runtime)\b/i.test(fullText);
+
+  // Target A3: Core Backend Software Engineering
+  const isCoreSWE = /\b(backend|software engineer|swe|platform engineer|infrastructure engineer|systems engineer)\b/i.test(titleLower);
+
+  if (isAppliedAI) {
+    domainScore = 35;
+  } else if (isSystemsInfra) {
+    domainScore = 32;
+  } else if (isCoreSWE) {
+    domainScore = 25;
+  } else {
+    domainScore = 15;
+  }
+
+  // Pillar B: Seniority Alignment (25 Points)
+  // User is Senior Software Engineer & Tech Lead (7+ years at Meta, Google, Pensando, Cisco)
+  if (/\b(staff|principal|head|director)\b/i.test(titleLower)) {
+    seniorityScore = 25;
+  } else if (/\b(senior|tech lead|lead|mts|member of technical staff|architect)\b/i.test(titleLower)) {
+    seniorityScore = 23;
+  } else if (/\b(founding engineer|founding staff)\b/i.test(titleLower)) {
+    seniorityScore = 22;
+  } else if (/\b(software engineer|engineer)\b/i.test(titleLower) && !/\b(junior|associate|intern|entry)\b/i.test(titleLower)) {
+    seniorityScore = 15;
+  } else {
+    seniorityScore = 5;
+  }
+
+  // Pillar C: Core Technical Stack Overlap (25 Points)
+  const userStackKeywords = [
+    { name: "C++", regex: /\b(c\+\+|cpp)\b/i, points: 5 },
+    { name: "Python", regex: /\bpython\b/i, points: 5 },
+    { name: "Golang", regex: /\b(golang|go)\b/i, points: 5 },
+    { name: "C", regex: /\b\bc\b\b/i, points: 3 },
+    { name: "Distributed Systems", regex: /\b(distributed systems|distributed infrastructure|distributed compute|system design|lld|hld)\b/i, points: 5 },
+    { name: "Post-Training / Evals", regex: /\b(post-training|evals|evaluations|benchmarking|rlhf|synthetic data)\b/i, points: 5 },
+    { name: "LLMs / Applied AI", regex: /\b(llm|llms|large language model|transformers|rag|fine-tuning|vllm|triton|cuda|pytorch|jax)\b/i, points: 4 },
+    { name: "Networking & Kernel", regex: /\b(networking|packet|dpdk|vpp|load balancer|linux|kernel|sockets)\b/i, points: 4 },
+    { name: "Infrastructure & DB", regex: /\b(docker|kubernetes|k8s|postgresql|redis|mysql|vector search|rest api|microservices)\b/i, points: 3 }
+  ];
+
+  const matchedSkills = [];
+  const missingSkills = [];
+
+  userStackKeywords.forEach(item => {
+    if (item.regex.test(fullText)) {
+      techScore += item.points;
+      matchedSkills.push(item.name);
+    }
+  });
+
+  // Check requirement list matching
   (job.requirements || []).forEach(req => {
     const reqLow = req.toLowerCase();
-    if (resumeSkillsUpper.some(s => s === reqLow || s.includes(reqLow) || reqLow.includes(s))) {
-      reqMatches.push(req);
-    } else {
-      reqGaps.push(req);
+    if (!matchedSkills.some(s => s.toLowerCase() === reqLow)) {
+      if (/\b(python|c\+\+|golang|go|c|distributed systems|system design|linux|docker|kubernetes|postgresql|redis|pytorch|jax|llms|rag|rlhf|networking|evals|post-training)\b/i.test(reqLow)) {
+        matchedSkills.push(req);
+      } else {
+        missingSkills.push(req);
+      }
     }
   });
 
-  const reqRatio = (job.requirements && job.requirements.length > 0) ? (reqMatches.length / job.requirements.length) : 0.8;
-  let baseScore = reqRatio * 50;
+  techScore = Math.min(25, techScore);
 
-  // Preferred skills bonus
-  const prefMatches = [];
-  (job.preferred || []).forEach(pref => {
-    const prefLow = pref.toLowerCase();
-    if (resumeSkillsUpper.some(s => s === prefLow || s.includes(prefLow))) {
-      prefMatches.push(pref);
-    }
-  });
-  if (job.preferred && job.preferred.length > 0) {
-    baseScore += (prefMatches.length / job.preferred.length) * 15;
+  // Pillar D: Company Tier & AI Ecosystem (15 Points)
+  const topTierAILabs = [
+    "OpenAI", "Anthropic", "Wayve", "Nscale", "Reflection AI", "Isomorphic Labs", 
+    "Synthesia", "ElevenLabs", "Cognition", "Sierra", "Perplexity AI", "Cohere", 
+    "Poolside", "PhysicsX", "Granola", "Recraft", "Basecamp Research", "V7 Labs",
+    "Google DeepMind", "Meta AI", "Microsoft AI", "Scale AI", "Mistral AI", "Groq"
+  ];
+  
+  if (topTierAILabs.includes(job.company)) {
+    companyScore = 15;
   } else {
-    baseScore += 15;
+    companyScore = 10;
   }
 
-  // 3. SENIORITY & PROFILE ALIGNMENT
-  // User is Senior / Staff / Tech Lead
-  const isSeniorTitle = /\b(senior|lead|staff|principal|mts|architect|tech lead|head)\b/i.test(titleLower);
-  if (isSeniorTitle) {
-    baseScore += 25; // Direct alignment bonus for Senior/Staff roles
-  } else if (/\b(junior|intern|associate|graduate)\b/i.test(titleLower)) {
-    return { score: 0, matchedSkills: [], missingSkills: job.requirements || [] };
-  } else {
-    baseScore += 10;
-  }
+  const rawTotal = domainScore + seniorityScore + techScore + companyScore;
+  const finalScore = Math.min(99, Math.max(0, Math.round(rawTotal)));
 
-  // Core Tech Stack Bonus (C++, Python, Golang, C, Distributed Systems, Post-Training, Evals, AI Infra)
-  const fullText = job.title + " " + job.description + " " + (job.requirements || []).join(" ");
-  if (/\b(c\+\+|python|golang|go|c|distributed systems|system design|linux|docker|kubernetes|post-training|evals|evaluations|benchmarking|microservices|vllm|triton|cuda|pytorch|jax)\b/i.test(fullText)) {
-    baseScore += 10;
-  }
-
-  const finalScore = Math.min(99, Math.max(0, Math.round(baseScore)));
   return {
     score: finalScore,
-    matchedSkills: [...new Set([...reqMatches, ...prefMatches])],
-    missingSkills: reqGaps
+    breakdown: {
+      domain: domainScore,
+      seniority: seniorityScore,
+      tech: techScore,
+      company: companyScore
+    },
+    matchedSkills: [...new Set(matchedSkills)],
+    missingSkills: [...new Set(missingSkills)]
   };
 }
 
@@ -924,18 +987,62 @@ function openJobDetails(jobId) {
     // Gaps and suggestions
     const matchedPills = match.matchedSkills.map(s => `<span class="pill pill-primary">${s}</span>`).join("");
     const missingPills = match.missingSkills.map(s => `<span class="pill" style="border-color: rgba(245, 158, 11, 0.3); color: var(--warning); background: rgba(245, 158, 11, 0.05);">${s}</span>`).join("");
-    
+    const bd = match.breakdown || { domain: 0, seniority: 0, tech: 0, company: 0 };
+
     gapBox = `
       <div class="modal-job-section">
-        <h4 class="modal-section-title">Resume Skills Match Analysis</h4>
+        <h4 class="modal-section-title">Match Score Breakdown (Gnanendar Profile Calibration)</h4>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.25rem;">
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.35rem;">
+              <span style="color: var(--text-secondary)">🎯 Domain Focus</span>
+              <span style="font-weight: 600; color: var(--primary);">${bd.domain}/35</span>
+            </div>
+            <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div style="height: 100%; width: ${(bd.domain/35)*100}%; background: var(--primary);"></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.35rem;">
+              <span style="color: var(--text-secondary)">👑 Seniority & Level</span>
+              <span style="font-weight: 600; color: var(--accent);">${bd.seniority}/25</span>
+            </div>
+            <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div style="height: 100%; width: ${(bd.seniority/25)*100}%; background: var(--accent);"></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.35rem;">
+              <span style="color: var(--text-secondary)">⚡ Core Tech Overlap</span>
+              <span style="font-weight: 600; color: var(--success);">${bd.tech}/25</span>
+            </div>
+            <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div style="height: 100%; width: ${(bd.tech/25)*100}%; background: var(--success);"></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.35rem;">
+              <span style="color: var(--text-secondary)">🏢 AI Ecosystem Tier</span>
+              <span style="font-weight: 600; color: #a855f7;">${bd.company}/15</span>
+            </div>
+            <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div style="height: 100%; width: ${(bd.company/15)*100}%; background: #a855f7;"></div>
+            </div>
+          </div>
+        </div>
+
         <div style="display: flex; flex-direction: column; gap: 0.75rem;">
           <div>
-            <span style="font-size: 0.8rem; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Matching Skills (${match.matchedSkills.length}):</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Matching Technical Skills (${match.matchedSkills.length}):</span>
             <div class="pill-container">${matchedPills || '<span style="color: var(--text-muted);">None</span>'}</div>
           </div>
           <div>
             <span style="font-size: 0.8rem; color: var(--warning); display: block; margin-bottom: 0.25rem;">Opportunity Skill Gaps (${match.missingSkills.length}):</span>
-            <div class="pill-container">${missingPills || '<span style="color: var(--success);">All skills matched!</span>'}</div>
+            <div class="pill-container">${missingPills || '<span style="color: var(--success);">All key requirements covered!</span>'}</div>
           </div>
         </div>
       </div>
