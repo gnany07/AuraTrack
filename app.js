@@ -118,7 +118,7 @@ function saveState() {
 }
 
 // Unwanted Role Titles Regex
-const UNWANTED_TITLES_REGEX = /\b(frontend|front-end|front end|ui|ux|ui\/ux|designer|product design|web designer|web developer|css|html|ios|android|mobile|electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|data engineer|data engineering|data scientist|data science|data analyst|analytics engineer|business intelligence|intern|internship|co-op|graduate engineer|junior|entry level|apprentice|sales|account executive|business development|gtm|product manager|program manager|project manager|operations|customer success|recruiter|talent acquisition|human resources|hr|legal|finance|marketing|copywriter|strategist)\b/i;
+const UNWANTED_TITLES_REGEX = /\b(frontend|front-end|front end|ui|ux|ui\/ux|designer|product design|web designer|web developer|css|html|ios|android|mobile|electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|data engineer|data engineering|data scientist|data science|data analyst|analytics engineer|business intelligence|intern|internship|co-op|graduate engineer|junior|entry level|apprentice|solutions engineer|solutions architect|solutions architecture|developer relations|devrel|developer advocate|developer experience|field engineer|forward deployed|sales engineer|customer engineer|partner engineer|support engineer|technical support|technical advocate|sales|account executive|business development|gtm|product manager|program manager|project manager|operations|customer success|recruiter|talent acquisition|human resources|hr|legal|finance|marketing|copywriter|strategist)\b/i;
 
 // Resume Parser Heuristics (Client-Side)
 function parseResumeText(text) {

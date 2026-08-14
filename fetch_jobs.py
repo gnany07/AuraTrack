@@ -226,6 +226,23 @@ EXCLUDED_TITLE_PATTERNS = [
     re.compile(r"\bentry level\b", re.IGNORECASE),
     re.compile(r"\bapprentice\b", re.IGNORECASE),
     
+    # Solutions Engineering, DevRel, Field & Support Roles
+    re.compile(r"\bsolutions engineer\b", re.IGNORECASE),
+    re.compile(r"\bsolutions architect\b", re.IGNORECASE),
+    re.compile(r"\bsolutions architecture\b", re.IGNORECASE),
+    re.compile(r"\bdeveloper relations\b", re.IGNORECASE),
+    re.compile(r"\bdevrel\b", re.IGNORECASE),
+    re.compile(r"\bdeveloper advocate\b", re.IGNORECASE),
+    re.compile(r"\bdeveloper experience\b", re.IGNORECASE),
+    re.compile(r"\bfield engineer\b", re.IGNORECASE),
+    re.compile(r"\bforward deployed\b", re.IGNORECASE),
+    re.compile(r"\bsales engineer\b", re.IGNORECASE),
+    re.compile(r"\bcustomer engineer\b", re.IGNORECASE),
+    re.compile(r"\bpartner engineer\b", re.IGNORECASE),
+    re.compile(r"\bsupport engineer\b", re.IGNORECASE),
+    re.compile(r"\btechnical support\b", re.IGNORECASE),
+    re.compile(r"\btechnical advocate\b", re.IGNORECASE),
+    
     # Non-Engineering & Business Roles
     re.compile(r"\bsales\b", re.IGNORECASE),
     re.compile(r"\baccount executive\b", re.IGNORECASE),
