@@ -810,6 +810,13 @@ function setupDiscoveryFilters() {
     if (allLocOpt) allLocOpt.selected = false;
   }
   
+  if (isInitialSetup && typeSelect) {
+    const fullTimeOpt = typeSelect.querySelector('option[value="Full-time"]');
+    const allTypeOpt = typeSelect.querySelector('option[value=""]');
+    if (fullTimeOpt) fullTimeOpt.selected = true;
+    if (allTypeOpt) allTypeOpt.selected = false;
+  }
+  
   // Set listener
   document.getElementById("job-search").oninput = renderJobDiscovery;
   companySelect.onchange = renderJobDiscovery;
