@@ -775,20 +775,40 @@ function setupDiscoveryFilters() {
   
   const allJobs = getAllJobs();
   
+  // Track if initial setup to apply defaults
+  const isInitialSetup = !categorySelect.dataset.initialized;
+  categorySelect.dataset.initialized = "true";
+  
   const companies = [...new Set(allJobs.map(j => j.company))].sort();
   companies.forEach(company => {
     companySelect.innerHTML += `<option value="${company}">${company}</option>`;
   });
   
   const categories = [...new Set(allJobs.map(j => j.category))].sort();
+  let defaultCategorySelected = false;
   categories.forEach(cat => {
-    categorySelect.innerHTML += `<option value="${cat}">${cat}</option>`;
+    const isDefault = isInitialSetup && (cat === "SWE" || cat === "Platform");
+    if (isDefault) defaultCategorySelected = true;
+    categorySelect.innerHTML += `<option value="${cat}" ${isDefault ? 'selected' : ''}>${cat}</option>`;
   });
+  if (isInitialSetup && defaultCategorySelected) {
+    const allCatOpt = categorySelect.querySelector('option[value=""]');
+    if (allCatOpt) allCatOpt.selected = false;
+  }
   
   const locations = [...new Set(allJobs.map(j => j.location))].sort();
+  let defaultLocationSelected = false;
   locations.forEach(location => {
-    locationSelect.innerHTML += `<option value="${location}">${location}</option>`;
+    const locLower = location.toLowerCase();
+    const isLondon = locLower.includes("london") || locLower.includes("uk") || locLower.includes("united kingdom");
+    const isDefault = isInitialSetup && isLondon;
+    if (isDefault) defaultLocationSelected = true;
+    locationSelect.innerHTML += `<option value="${location}" ${isDefault ? 'selected' : ''}>${location}</option>`;
   });
+  if (isInitialSetup && defaultLocationSelected) {
+    const allLocOpt = locationSelect.querySelector('option[value=""]');
+    if (allLocOpt) allLocOpt.selected = false;
+  }
   
   // Set listener
   document.getElementById("job-search").oninput = renderJobDiscovery;
