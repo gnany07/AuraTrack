@@ -176,43 +176,86 @@ def is_data_engineering_role(full_text: str) -> bool:
     text = (full_text or "").lower()
     return any(p.search(text) for p in DATA_ENGINEERING_PATTERNS)
 
-EXCLUDED_ROLE_PATTERNS = [
-    # Sales / bizdev
+EXCLUDED_TITLE_PATTERNS = [
+    # Frontend & Design
+    re.compile(r"\bfrontend\b", re.IGNORECASE),
+    re.compile(r"\bfront-end\b", re.IGNORECASE),
+    re.compile(r"\bfront end\b", re.IGNORECASE),
+    re.compile(r"\bui\b", re.IGNORECASE),
+    re.compile(r"\bux\b", re.IGNORECASE),
+    re.compile(r"\bui/ux\b", re.IGNORECASE),
+    re.compile(r"\bdesigner\b", re.IGNORECASE),
+    re.compile(r"\bdesign engineer\b", re.IGNORECASE),
+    re.compile(r"\bproduct design\b", re.IGNORECASE),
+    re.compile(r"\bweb designer\b", re.IGNORECASE),
+    re.compile(r"\bweb developer\b", re.IGNORECASE),
+    re.compile(r"\bcss\b", re.IGNORECASE),
+    re.compile(r"\bhtml\b", re.IGNORECASE),
+    re.compile(r"\bios\b", re.IGNORECASE),
+    re.compile(r"\bandroid\b", re.IGNORECASE),
+    re.compile(r"\bmobile\b", re.IGNORECASE),
+    
+    # Electrical & Hardware Engineering
+    re.compile(r"\belectrical\b", re.IGNORECASE),
+    re.compile(r"\bhardware\b", re.IGNORECASE),
+    re.compile(r"\banalog\b", re.IGNORECASE),
+    re.compile(r"\basic\b", re.IGNORECASE),
+    re.compile(r"\bsilicon\b", re.IGNORECASE),
+    re.compile(r"\bfpga\b", re.IGNORECASE),
+    re.compile(r"\brf engineer\b", re.IGNORECASE),
+    re.compile(r"\bpcb\b", re.IGNORECASE),
+    re.compile(r"\bmechanical\b", re.IGNORECASE),
+    re.compile(r"\bchip design\b", re.IGNORECASE),
+    re.compile(r"\bboard design\b", re.IGNORECASE),
+
+    # Data Engineering / Data Science / Analytics
+    re.compile(r"\bdata engineer\b", re.IGNORECASE),
+    re.compile(r"\bdata engineering\b", re.IGNORECASE),
+    re.compile(r"\bdata scientist\b", re.IGNORECASE),
+    re.compile(r"\bdata science\b", re.IGNORECASE),
+    re.compile(r"\bdata analyst\b", re.IGNORECASE),
+    re.compile(r"\banalytics engineer\b", re.IGNORECASE),
+    re.compile(r"\bbusiness intelligence\b", re.IGNORECASE),
+    
+    # Internships / Junior / Entry Level
+    re.compile(r"\bintern\b", re.IGNORECASE),
+    re.compile(r"\binternship\b", re.IGNORECASE),
+    re.compile(r"\bco-op\b", re.IGNORECASE),
+    re.compile(r"\bgraduate engineer\b", re.IGNORECASE),
+    re.compile(r"\bjunior\b", re.IGNORECASE),
+    re.compile(r"\bentry level\b", re.IGNORECASE),
+    re.compile(r"\bapprentice\b", re.IGNORECASE),
+    
+    # Non-Engineering & Business Roles
     re.compile(r"\bsales\b", re.IGNORECASE),
     re.compile(r"\baccount executive\b", re.IGNORECASE),
     re.compile(r"\bbusiness development\b", re.IGNORECASE),
     re.compile(r"\brevenue\b", re.IGNORECASE),
-    re.compile(r"\bgo[- ]to[- ]market\b", re.IGNORECASE),
     re.compile(r"\bgtm\b", re.IGNORECASE),
-    # Program / project management
+    re.compile(r"\bproduct manager\b", re.IGNORECASE),
     re.compile(r"\bprogram manager\b", re.IGNORECASE),
-    re.compile(r"\btechnical program manager\b", re.IGNORECASE),
-    re.compile(r"\btpm\b", re.IGNORECASE),
-    re.compile(r"\bprogram management\b", re.IGNORECASE),
     re.compile(r"\bproject manager\b", re.IGNORECASE),
-    # Operations (business/customer oriented; avoid excluding SRE-style engineering)
-    re.compile(r"\brevenue operations\b", re.IGNORECASE),
-    re.compile(r"\bbusiness operations\b", re.IGNORECASE),
+    re.compile(r"\boperations\b", re.IGNORECASE),
     re.compile(r"\bcustomer success\b", re.IGNORECASE),
-    re.compile(r"\boperations manager\b", re.IGNORECASE),
-    re.compile(r"\bops manager\b", re.IGNORECASE),
-    re.compile(r"\boperations lead\b", re.IGNORECASE),
-    re.compile(r"\bsupport operations\b", re.IGNORECASE),
-    # Additional user exclusions
-    re.compile(r"\bsecurity\b", re.IGNORECASE),
-    re.compile(r"\bprocess manager\b", re.IGNORECASE),
-    re.compile(r"\bprocess management\b", re.IGNORECASE),
-    re.compile(r"\bstrategy\b", re.IGNORECASE),
+    re.compile(r"\brecruiter\b", re.IGNORECASE),
+    re.compile(r"\btalent acquisition\b", re.IGNORECASE),
+    re.compile(r"\bhuman resources\b", re.IGNORECASE),
+    re.compile(r"\bhr\b", re.IGNORECASE),
+    re.compile(r"\blegal\b", re.IGNORECASE),
+    re.compile(r"\bfinance\b", re.IGNORECASE),
+    re.compile(r"\bmarketing\b", re.IGNORECASE),
+    re.compile(r"\bcopywriter\b", re.IGNORECASE),
     re.compile(r"\bstrategist\b", re.IGNORECASE),
-    re.compile(r"\binvestigator\b", re.IGNORECASE),
-    re.compile(r"\bthreat investigator\b", re.IGNORECASE),
     re.compile(r"\bfreelance\b", re.IGNORECASE),
-    re.compile(r"\bfreelancer\b", re.IGNORECASE),
 ]
+
+def is_unwanted_role_title(title: str) -> bool:
+    text = (title or "").lower()
+    return any(p.search(text) for p in EXCLUDED_TITLE_PATTERNS)
 
 def is_excluded_non_engineering_role(full_text: str) -> bool:
     text = (full_text or "").lower()
-    return any(p.search(text) for p in EXCLUDED_ROLE_PATTERNS)
+    return any(p.search(text) for p in EXCLUDED_TITLE_PATTERNS)
 
 def clean_html(raw_html):
     if not raw_html:
@@ -259,12 +302,16 @@ def fetch_ashby(company_name, board_slug=None):
                 team = item.get("team", "") or ""
                 dept = item.get("department", "") or ""
                 
-                # Filter for technical roles
-                keywords = ["engineer", "developer", "scientist", "researcher", "technical staff", "mts", "infrastructure", "systems", "platform", "product manager", "architect", "lead"]
+                # Immediately filter out unwanted title roles (Frontend, Design, Electrical, Hardware, Data Eng, Intern, Non-Tech)
+                if is_unwanted_role_title(title):
+                    continue
+                
+                # Filter for technical software/systems roles
+                keywords = ["engineer", "developer", "scientist", "researcher", "technical staff", "mts", "infrastructure", "systems", "platform", "architect", "lead"]
                 is_tech = (
                     any(kw in title.lower() for kw in keywords) or 
-                    any(kw in team.lower() for kw in ["engineering", "research", "technical", "product", "infrastructure"]) or
-                    any(kw in dept.lower() for kw in ["engineering", "research", "technical", "product", "infrastructure"])
+                    any(kw in team.lower() for kw in ["engineering", "research", "technical", "infrastructure", "systems"]) or
+                    any(kw in dept.lower() for kw in ["engineering", "research", "technical", "infrastructure", "systems"])
                 )
                 if not is_tech:
                     continue
@@ -282,17 +329,13 @@ def fetch_ashby(company_name, board_slug=None):
                     category = "Research"
                 elif "machine learning" in title.lower() or "ml" in title.lower() or "applied science" in title.lower():
                     category = "MLE"
-                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "hardware", "systems"]):
+                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "systems"]):
                     category = "Platform"
-                elif "product manager" in title.lower():
-                    category = "Product"
                 
-                # Keep only London + software-engineering-relevant roles.
+                # Keep only allowed categories
                 if category not in ALLOWED_CATEGORIES:
                     continue
-                if is_data_engineering_role(full_text):
-                    continue
-                if is_excluded_non_engineering_role(full_text):
+                if is_data_engineering_role(full_text) or is_unwanted_role_title(title):
                     continue
                 if not location_matches_target(location):
                     continue
@@ -337,11 +380,15 @@ def fetch_greenhouse(company_name, board_slug):
                 title = item.get("title", "")
                 depts = " ".join([d.get("name", "") for d in item.get("departments", [])])
                 
+                # Immediately filter out unwanted title roles
+                if is_unwanted_role_title(title):
+                    continue
+                
                 # Technical filters
-                keywords = ["engineer", "developer", "scientist", "researcher", "technical staff", "mts", "infrastructure", "systems", "platform", "product manager", "architect", "lead"]
+                keywords = ["engineer", "developer", "scientist", "researcher", "technical staff", "mts", "infrastructure", "systems", "platform", "architect", "lead"]
                 is_tech = (
                     any(kw in title.lower() for kw in keywords) or 
-                    any(kw in depts.lower() for kw in ["engineering", "research", "technical", "product"])
+                    any(kw in depts.lower() for kw in ["engineering", "research", "technical", "infrastructure", "systems"])
                 )
                 if not is_tech:
                     continue

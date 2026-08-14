@@ -64,6 +64,36 @@ function showToast(message, type = "success") {
 }
 
 // Initialize LocalStorage Data
+const DEFAULT_RESUME_TEXT = `Gnanendar Reddy Male
+London, United Kingdom | Email: gnanendarreddymale77@gmail.com | Mobile: +44 7931084323
+LinkedIn: linkedin.com/in/gnanendar-reddy-1862b6117/
+
+EDUCATION
+• Georgia Institute of Technology (Remote) - Master of Science in Computer Science; AI Specialization (2026 – 2028)
+• Indian Institute of Technology (IIT), Roorkee - Bachelor of Technology in Electrical Engineering (2014 – 2018)
+
+TECHNICAL SKILLS & EXPERTISE
+• Skills: Data Structures and Algorithms, OOPs, LLD, HLD, Design Patterns, API Design, Machine Learning, LLM Development, Systems Programming
+• Programming Languages: C++, Python, Golang, C
+• Areas of Interest: Distributed Systems, Machine Learning, Post-Training, Evals, Operating Systems, Computer Networking
+• Dev Tools & Infrastructure: Vim, Git, GitHub, Jira, MySQL, Docker CLI, Linux, Microservices
+
+PROFESSIONAL EXPERIENCE
+• Meta Platforms | Senior Software Engineer (London, UK) | Sept. 2025 – Present
+  - Applied AI Org: Agent Data & Optimization for coding models (Post-Training, Model Understanding, Building Evals, Benchmarking).
+  - Tech Lead for Fraud Deception team. Technical direction for 4 Engineers on the team.
+  - Built scalable policy enforcement infrastructure triggering ML and LLM-based classifiers across Instagram & Facebook.
+• Google | Senior Software Engineer & Tech Lead (Bengaluru, India) | Oct. 2024 – Aug. 2025
+  - Tech Lead for monetization, billing, and invoicing platform on Google Pay for Business team.
+• Google | Software Engineer (Bengaluru, India) | May 2022 – Oct. 2024
+  - Built core billing and invoicing infrastructure from scratch for product monetization across Google Pay.
+• Pensando Systems | Member of Technical Staff (Bengaluru, India) | April 2020 – May 2022
+  - Developed in-house Software Load-balancer application on top of NFF-GO with REST API and packet path support for Microsoft Azure.
+  - Designed and implemented Fastpath networking feature on top of Vector Packet Processor (VPP) for Azure.
+• Cisco Systems | Software Engineer (Bengaluru, India) | Aug. 2018 – April 2020
+  - Worked on Nexus OS data center networking, model-driven programmability, and REST API configurations.
+`;
+
 function loadState() {
   const savedState = localStorage.getItem("auratrack_state");
   if (savedState) {
@@ -73,14 +103,13 @@ function loadState() {
     } catch (e) {
       console.error("Failed to parse saved state", e);
     }
-  } else {
-    // Seed default tracker with a few seed jobs
-    state.tracker.discovered = [
-      "dm-rs-rl", "openai-mts-alignment", "anthropic-research-eng", 
-      "sierra-founding-ai-eng", "ms-ai-partner-mle", "meta-research-llama"
-    ];
-    state.tracker.applied = ["openai-swe-chatgpt", "perplexity-swe-search"];
-    state.tracker.interviewing = ["sierra-mle-inference"];
+  }
+  
+  // If resume text is empty or default, set Gnanendar's actual resume
+  if (!state.resumeText || state.resumeText.includes("Alex Mercer")) {
+    state.resumeText = DEFAULT_RESUME_TEXT;
+    state.parsedResume = parseResumeText(DEFAULT_RESUME_TEXT);
+    saveState();
   }
 }
 
@@ -88,15 +117,24 @@ function saveState() {
   localStorage.setItem("auratrack_state", JSON.stringify(state));
 }
 
+// Unwanted Role Titles Regex
+const UNWANTED_TITLES_REGEX = /\b(frontend|front-end|front end|ui|ux|ui\/ux|designer|product design|web designer|web developer|css|html|ios|android|mobile|electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|data engineer|data engineering|data scientist|data science|data analyst|analytics engineer|business intelligence|intern|internship|co-op|graduate engineer|junior|entry level|apprentice|sales|account executive|business development|gtm|product manager|program manager|project manager|operations|customer success|recruiter|talent acquisition|human resources|hr|legal|finance|marketing|copywriter|strategist)\b/i;
+
 // Resume Parser Heuristics (Client-Side)
 function parseResumeText(text) {
   const normalizedText = text.toLowerCase();
   
+  // Strip out education lines (e.g. "Bachelor of Technology in Electrical Engineering") to avoid extracting degree names as technical skills
+  const cleanSkillsText = text.replace(/Bachelor of Technology in Electrical Engineering/gi, "")
+                              .replace(/Electrical Engineering/gi, "")
+                              .toLowerCase();
+  
   // 1. Extract Skills
   const foundSkills = [];
   allSkillList.forEach(skill => {
-    // Match word boundaries to prevent substring collisions (e.g., 'go' inside 'google')
-    // For phrases like "deep learning", we check direct matching
+    // Avoid matching 'electrical', 'pm', 'ui/ux'
+    if (skill === "ui/ux" || skill === "product management") return;
+    
     let regex;
     if (skill.length <= 3 || skill === "go" || skill === "c" || skill === "git") {
       regex = new RegExp(`\\b${escapeRegExp(skill)}\\b`, "i");
@@ -104,63 +142,40 @@ function parseResumeText(text) {
       regex = new RegExp(escapeRegExp(skill), "i");
     }
     
-    if (regex.test(normalizedText)) {
-      // Return formatting (capitalize properly)
+    if (regex.test(cleanSkillsText)) {
       foundSkills.push(capitalizeSkill(skill));
     }
   });
   
-  // 2. Estimate Experience Level & Seniority
-  let level = "Entry/Mid";
-  const seniorityKeywords = [];
+  // Add core technical skills from experience
+  const coreProfileSkills = ["C++", "Python", "Golang", "C", "Distributed Systems", "Machine Learning", "LLMs", "Post-Training", "Evals", "System Design", "Linux", "Docker", "Kubernetes", "PostgreSQL", "Redis", "Vector Search", "REST APIs", "Microservices"];
+  coreProfileSkills.forEach(s => {
+    if (!foundSkills.includes(s) && cleanSkillsText.includes(s.toLowerCase())) {
+      foundSkills.push(s);
+    }
+  });
   
-  const seniorRegex = /\b(senior|lead|principal|staff|architect|director|manager)\b/i;
-  const phdRegex = /\b(phd|ph\.d\.|doctorate|research fellow)\b/i;
+  // 2. Experience Level & Seniority (Senior / Staff / Lead)
+  let level = "Senior/Staff Engineer";
+  const seniorityKeywords = ["Senior", "Tech Lead", "Staff", "MTS"];
   
-  if (seniorRegex.test(normalizedText)) {
-    level = "Senior/Lead";
-    const match = normalizedText.match(seniorRegex);
-    if (match) seniorityKeywords.push(capitalizeFirst(match[0]));
-  }
-  if (phdRegex.test(normalizedText)) {
-    if (level !== "Senior/Lead") level = "PhD Researcher";
-    seniorityKeywords.push("PhD");
-  }
-  
-  // Extract Years of Experience
-  const yearsRegex = /(\d+)\+?\s*years?\b/gi;
-  let match;
-  let maxYears = 0;
-  while ((match = yearsRegex.exec(normalizedText)) !== null) {
-    const years = parseInt(match[1], 10);
-    if (years > maxYears) maxYears = years;
-  }
-  
-  if (maxYears >= 5 && level === "Entry/Mid") {
-    level = "Senior/Lead";
-  }
-  
-  // Basic contact parsing
-  let email = "";
+  // Contact parsing
+  let email = "gnanendarreddymale77@gmail.com";
   const emailMatch = normalizedText.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i);
   if (emailMatch) email = emailMatch[0];
   
-  // Name (usually first line of text)
-  let name = "";
+  let name = "Gnanendar Reddy Male";
   const lines = text.split("\n").map(l => l.trim()).filter(l => l.length > 0);
-  if (lines.length > 0) {
-    // Take first line as name if it's short
-    if (lines[0].length < 30 && !lines[0].includes("@")) {
-      name = lines[0];
-    }
+  if (lines.length > 0 && lines[0].length < 35 && !lines[0].includes("@")) {
+    name = lines[0];
   }
 
   return {
-    skills: [...new Set(foundSkills)], // De-duplicate
+    skills: [...new Set(foundSkills)],
     experienceLevel: level,
     seniorityKeywords,
     email,
-    name: name || "Developer Profile"
+    name: name || "Gnanendar Reddy Male"
   };
 }
 
@@ -224,68 +239,69 @@ function capitalizeFirst(str) {
 
 // Compute Job Match Score
 function calculateMatchScore(job, parsedResume) {
-  if (!parsedResume || parsedResume.skills.length === 0) {
-    return { score: 0, matchedSkills: [], missingSkills: job.requirements };
+  if (!job || !job.title) return { score: 0, matchedSkills: [], missingSkills: [] };
+
+  const titleLower = job.title.toLowerCase();
+
+  // 1. HARD EXCLUSION RULES
+  // Instantly score 0 for unwanted domains: Frontend, Hardware, Electrical, Data Engineering, Internships, Business/Non-Tech
+  if (UNWANTED_TITLES_REGEX.test(titleLower)) {
+    return { score: 0, matchedSkills: [], missingSkills: job.requirements || [] };
   }
-  
-  const resumeSkillsUpper = parsedResume.skills.map(s => s.toLowerCase());
-  
-  // 1. Calculate Required Skills Match (60% weight)
+
+  // 2. SKILL MATCHING
+  const resumeSkillsUpper = (parsedResume && parsedResume.skills) ? parsedResume.skills.map(s => s.toLowerCase()) : [];
   const reqMatches = [];
   const reqGaps = [];
-  job.requirements.forEach(req => {
-    if (resumeSkillsUpper.includes(req.toLowerCase())) {
+  
+  (job.requirements || []).forEach(req => {
+    const reqLow = req.toLowerCase();
+    if (resumeSkillsUpper.some(s => s === reqLow || s.includes(reqLow) || reqLow.includes(s))) {
       reqMatches.push(req);
     } else {
       reqGaps.push(req);
     }
   });
-  
-  const reqMatchRatio = job.requirements.length > 0 ? (reqMatches.length / job.requirements.length) : 1;
-  const reqScore = reqMatchRatio * 60;
-  
-  // 2. Calculate Preferred Skills Match (25% weight)
+
+  const reqRatio = (job.requirements && job.requirements.length > 0) ? (reqMatches.length / job.requirements.length) : 0.8;
+  let baseScore = reqRatio * 50;
+
+  // Preferred skills bonus
   const prefMatches = [];
-  const prefGaps = [];
-  const preferredList = job.preferred || [];
-  
-  preferredList.forEach(pref => {
-    if (resumeSkillsUpper.includes(pref.toLowerCase())) {
+  (job.preferred || []).forEach(pref => {
+    const prefLow = pref.toLowerCase();
+    if (resumeSkillsUpper.some(s => s === prefLow || s.includes(prefLow))) {
       prefMatches.push(pref);
-    } else {
-      prefGaps.push(pref);
     }
   });
-  
-  const prefMatchRatio = preferredList.length > 0 ? (prefMatches.length / preferredList.length) : 1;
-  const prefScore = preferredList.length > 0 ? (prefMatchRatio * 25) : 25; // If no preferred list, award full 25% for requirements base
-  
-  // 3. Seniority/Experience Alignment (15% weight)
-  let seniorityScore = 0;
-  const jobTitleLower = job.title.toLowerCase();
-  const jobDescLower = job.description.toLowerCase();
-  const resumeLevel = parsedResume.experienceLevel;
-  
-  const jobIsSenior = jobTitleLower.includes("senior") || jobTitleLower.includes("lead") || jobTitleLower.includes("mts") || jobTitleLower.includes("staff") || jobTitleLower.includes("principal");
-  const jobIsPhD = jobTitleLower.includes("scientist") || jobTitleLower.includes("researcher") || jobDescLower.includes("phd") || jobDescLower.includes("ph.d.");
-  
-  if (resumeLevel === "Senior/Lead" && jobIsSenior) {
-    seniorityScore = 15;
-  } else if (resumeLevel === "PhD Researcher" && jobIsPhD) {
-    seniorityScore = 15;
-  } else if (resumeLevel === "Entry/Mid" && !jobIsSenior) {
-    seniorityScore = 15;
+  if (job.preferred && job.preferred.length > 0) {
+    baseScore += (prefMatches.length / job.preferred.length) * 15;
   } else {
-    // Mismatch deduction
-    seniorityScore = 5;
+    baseScore += 15;
   }
-  
-  const totalScore = Math.min(100, Math.max(15, Math.round(reqScore + prefScore + seniorityScore)));
-  
+
+  // 3. SENIORITY & PROFILE ALIGNMENT
+  // User is Senior / Staff / Tech Lead
+  const isSeniorTitle = /\b(senior|lead|staff|principal|mts|architect|tech lead|head)\b/i.test(titleLower);
+  if (isSeniorTitle) {
+    baseScore += 25; // Direct alignment bonus for Senior/Staff roles
+  } else if (/\b(junior|intern|associate|graduate)\b/i.test(titleLower)) {
+    return { score: 0, matchedSkills: [], missingSkills: job.requirements || [] };
+  } else {
+    baseScore += 10;
+  }
+
+  // Core Tech Stack Bonus (C++, Python, Golang, C, Distributed Systems, Post-Training, Evals, AI Infra)
+  const fullText = job.title + " " + job.description + " " + (job.requirements || []).join(" ");
+  if (/\b(c\+\+|python|golang|go|c|distributed systems|system design|linux|docker|kubernetes|post-training|evals|evaluations|benchmarking|microservices|vllm|triton|cuda|pytorch|jax)\b/i.test(fullText)) {
+    baseScore += 10;
+  }
+
+  const finalScore = Math.min(99, Math.max(0, Math.round(baseScore)));
   return {
-    score: totalScore,
-    matchedSkills: [...reqMatches, ...prefMatches],
-    missingSkills: [...reqGaps, ...prefGaps]
+    score: finalScore,
+    matchedSkills: [...new Set([...reqMatches, ...prefMatches])],
+    missingSkills: reqGaps
   };
 }
 
@@ -573,19 +589,24 @@ function renderJobDiscovery() {
   // Clear Grid
   grid.innerHTML = "";
   
+  // Pre-calculate scores and sort jobs by compatibility score descending
+  const evaluatedJobs = allJobs.map(job => {
+    const matchAnalysis = calculateMatchScore(job, state.parsedResume);
+    return { job, score: matchAnalysis.score, matchAnalysis };
+  })
+  .filter(item => item.score > 0 || searchVal.length > 0) // Exclude 0 score unwanted jobs unless user is explicitly searching
+  .sort((a, b) => b.score - a.score);
+  
   let matchCount = 0;
   
-  allJobs.forEach(job => {
-    // 1. Calculate Score
-    const matchAnalysis = calculateMatchScore(job, state.parsedResume);
-    const score = matchAnalysis.score;
-    
+  evaluatedJobs.forEach(({ job, score, matchAnalysis }) => {
     // 2. Apply Filters
     // Text search
-    const textMatches = job.title.toLowerCase().includes(searchVal) || 
+    const textMatches = searchVal.length === 0 || 
+                        job.title.toLowerCase().includes(searchVal) || 
                         job.company.toLowerCase().includes(searchVal) || 
                         job.description.toLowerCase().includes(searchVal) ||
-                        job.requirements.some(req => req.toLowerCase().includes(searchVal));
+                        (job.requirements || []).some(req => req.toLowerCase().includes(searchVal));
                         
     // Company select filter
     const companyMatches = companyVals.length === 0 || companyVals.includes(job.company);
