@@ -1,0 +1,27 @@
+Alex Mercer
+Full Stack & AI Engineer
+alex.mercer@email.com | San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Highly motivated Software Engineer with 5+ years of experience specializing in Machine Learning Systems, LLM orchestrations, and high-performance web frontends. Proven track record of deploying robust RAG pipelines and building scalable interactive web tools.
+
+TECHNICAL SKILLS
+- Programming Languages: Python, JavaScript, TypeScript, SQL, HTML, CSS, C++
+- AI & ML Technologies: PyTorch, LLMs, RAG, Transformers, NLP, Fine-Tuning, Prompt Engineering
+- Frameworks & Web: React, Next.js, Node.js, REST APIs, WebSockets
+- Infrastructure & Tools: Docker, Git, GitHub, PostgreSQL, Redis, Vector Databases
+
+EXPERIENCE
+Lead AI Systems Developer | InnovateAI (2024 - Present)
+- Designed and implemented a client-side vector search and RAG pipeline using TypeScript, PyTorch, and LangChain, improving agent response relevance by 40%.
+- Fine-tuned open-source LLMs (Llama, Mistral) using LoRA adapters for domain-specific automation.
+- Developed the company’s core developer portal using React, Next.js, and Node.js with real-time analytics.
+
+Senior Software Engineer | StackForge Corp (2021 - 2024)
+- Engineered scalable microservices in Python and Node.js serving 1M+ daily active requests.
+- Maintained Docker containers across Kubernetes clusters for low-latency inferencing.
+- Led a team of 4 engineers in migrating frontend systems to TypeScript and responsive CSS layouts.
+
+EDUCATION
+B.S. in Computer Science | Stanford University
+Concentration in Artificial Intelligence

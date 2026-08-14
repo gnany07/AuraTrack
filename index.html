@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraTrack AI - Premium AI Job Tracker & Resume Matcher</title>
+  <meta name="description" content="Track your applications and match your resume to opportunities at Google DeepMind, OpenAI, Anthropic, and other top AI companies.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Load PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <!-- Load job catalog first -->
+  <script src="jobs.js" defer></script>
+  <!-- Load app logic -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">A</div>
+      <span class="logo-text">AuraTrack AI</span>
+    </div>
+    
+    <nav style="flex-grow: 1;">
+      <ul class="nav-links">
+        <li class="nav-item active" id="nav-resume">
+          <a href="#resume">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            Resume Profile
+          </a>
+        </li>
+        <li class="nav-item" id="nav-discover">
+          <a href="#discover">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            Job Discovery
+          </a>
+        </li>
+        <li class="nav-item" id="nav-tracker">
+          <a href="#tracker">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+            Kanban Board
+          </a>
+        </li>
+        <li class="nav-item" id="nav-analytics">
+          <a href="#analytics">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+            Analytics & Gaps
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+      <p style="margin-bottom: 0.25rem;">AuraTrack v1.0.0</p>
+      <p>100% Client-Side Encryption</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    
+    <!-- Top Header bar -->
+    <header class="header">
+      <div>
+        <h1 class="page-title">AI Careers Pipeline</h1>
+        <p class="page-subtitle">Track applications at frontier labs and startups.</p>
+      </div>
+      <div class="user-profile">
+        <div id="resume-badge" class="resume-status-badge">No Resume Loaded</div>
+      </div>
+    </header>
+
+    <!-- Tab 1: Resume Upload Portal -->
+    <section id="section-resume" class="dashboard-section active">
+      <div class="resume-grid">
+        
+        <!-- Left: Upload Box -->
+        <div class="glass resume-box">
+          <div style="margin-bottom: 0.5rem;">
+            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; margin-bottom: 0.25rem;">Analyze Resume</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Input your technical resume to cross-match skills with open positions.</p>
+          </div>
+          
+          <!-- Dropzone -->
+          <div id="dropzone" class="dropzone-container">
+            <svg class="dropzone-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <div>
+              <p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem;">Drag & drop resume (.pdf, .txt) here</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">or click to browse your storage</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--text-muted); font-size: 0.8rem;">
+            <span style="height: 1px; background: var(--border-color); flex-grow: 1;"></span>
+            <span>OR PASTE TEXT DIRECTLY</span>
+            <span style="height: 1px; background: var(--border-color); flex-grow: 1;"></span>
+          </div>
+          
+          <!-- Paste Area -->
+          <textarea id="text-paste-area" class="text-paste-area" placeholder="Paste your resume markdown, plain text, or summary text here..."></textarea>
+          
+          <!-- Action Row -->
+          <div>
+            <button class="btn" style="width: 100%;" onclick="submitResumeText()">Parse & Sync Profile</button>
+          </div>
+        </div>
+        
+        <!-- Right: Analysis Panel -->
+        <div id="resume-results-panel" class="glass analysis-results-box">
+          <!-- Populated by JS -->
+        </div>
+        
+      </div>
+
+      <!-- AI Resume Bullet Optimizer Card -->
+      <div class="glass optimizer-box" style="margin-top: 2rem; padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem;">
+            <svg style="width: 24px; height: 24px; fill: none; stroke: var(--primary); stroke-width: 2;" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+            AI Resume Bullet Optimizer
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Select a target job and enter a bullet point from your resume. AuraTrack's local AI will rewrite it to align with that role.</p>
+        </div>
+        
+        <div class="optimizer-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <label class="form-label" for="opt-job-select" style="margin-bottom: 0.5rem; display: block;">Target Job Opportunity</label>
+            <select id="opt-job-select" class="form-input" style="width: 100%; background: rgba(0, 0, 0, 0.3);">
+              <option value="">-- Select a Job Opportunity --</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="form-label" for="opt-bullet-input" style="margin-bottom: 0.5rem; display: block;">Your Original Resume Bullet Point</label>
+            <textarea id="opt-bullet-input" class="form-input" style="width: 100%; height: 80px; resize: vertical;" placeholder="e.g. Led a team of engineers to build a Python microservice API using Flask and PostgreSQL."></textarea>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 0.5rem;">
+            <button class="btn" onclick="optimizeBulletPoint()">Optimize Bullet Point</button>
+            <div id="ollama-status" class="ollama-status-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">
+              <span class="status-dot offline" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--text-muted); display: inline-block;"></span>
+              Checking local AI server...
+            </div>
+          </div>
+        </div>
+        
+        <!-- Result Suggestion Panel -->
+        <div id="optimizer-result-container" class="optimizer-result" style="display: none; margin-top: 1rem; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
+          <h4 style="font-family: var(--font-display); font-weight: 600; font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary);">Optimized Bullet Suggestions</h4>
+          <div id="optimizer-result-text" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-primary); white-space: pre-wrap;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Job Discovery Feed -->
+    <section id="section-discover" class="dashboard-section">
+      <!-- Search and filters -->
+      <div class="glass filter-bar">
+        <div class="search-input-wrapper">
+          <svg class="search-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="job-search" class="search-input" placeholder="Search roles, skills, or companies...">
+        </div>
+        
+        <select id="filter-company" class="select-filter" multiple size="4" title="Multi-select: click multiple options">
+          <option value="">All Companies</option>
+        </select>
+        
+        <select id="filter-category" class="select-filter" multiple size="4" title="Multi-select: click multiple options">
+          <option value="">All Categories</option>
+        </select>
+        
+        <select id="filter-type" class="select-filter" multiple size="4" title="Multi-select: click multiple options">
+          <option value="">All Types</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Contract">Contract</option>
+          <option value="Internship">Internship</option>
+          <option value="Part-time">Part-time</option>
+        </select>
+        
+        <select id="filter-location" class="select-filter" multiple size="4" title="Multi-select: click multiple options">
+          <option value="">All Locations</option>
+        </select>
+        
+        <select id="filter-match" class="select-filter" multiple size="4" title="Multi-select: click multiple options">
+          <option value="">All Scores</option>
+          <option value="high">High Matches (75%+)</option>
+          <option value="medium">Medium Matches (50%-74%)</option>
+          <option value="low">Low Matches (&lt;50%)</option>
+        </select>
+        
+        <button id="sync-jobs-btn" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem;" onclick="syncLiveJobs()">
+          <svg id="sync-icon-svg" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6H16" />
+          </svg>
+          <span id="sync-btn-text">Sync Live Jobs</span>
+        </button>
+        <button class="btn" onclick="openAddJobModal()">+ Add Custom Job</button>
+      </div>
+      
+      <!-- Jobs Grid -->
+      <div id="jobs-grid" class="jobs-list-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Tab 3: Kanban Application Tracker -->
+    <section id="section-tracker" class="dashboard-section">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; margin-bottom: 0.25rem;">Application Tracker Pipeline</h2>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Drag cards between stages to update your application funnel statuses.</p>
+      </div>
+      
+      <div class="kanban-board">
+        <!-- Column 1: Discovered -->
+        <div class="kanban-column" id="kanban-col-discovered">
+          <div class="column-header discovered">
+            <span class="column-title">Discovered</span>
+            <span class="column-count" id="kanban-count-discovered">0</span>
+          </div>
+          <div class="column-cards-container" id="kanban-list-discovered">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Column 2: Applied -->
+        <div class="kanban-column" id="kanban-col-applied">
+          <div class="column-header applied">
+            <span class="column-title">Applied</span>
+            <span class="column-count" id="kanban-count-applied">0</span>
+          </div>
+          <div class="column-cards-container" id="kanban-list-applied">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Column 3: Interviewing -->
+        <div class="kanban-column" id="kanban-col-interviewing">
+          <div class="column-header interviewing">
+            <span class="column-title">Interviewing</span>
+            <span class="column-count" id="kanban-count-interviewing">0</span>
+          </div>
+          <div class="column-cards-container" id="kanban-list-interviewing">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Column 4: Offer -->
+        <div class="kanban-column" id="kanban-col-offer">
+          <div class="column-header offer">
+            <span class="column-title">Offers</span>
+            <span class="column-count" id="kanban-count-offer">0</span>
+          </div>
+          <div class="column-cards-container" id="kanban-list-offer">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Column 5: Archived -->
+        <div class="kanban-column" id="kanban-col-archived">
+          <div class="column-header archived">
+            <span class="column-title">Archived</span>
+            <span class="column-count" id="kanban-count-archived">0</span>
+          </div>
+          <div class="column-cards-container" id="kanban-list-archived">
+            <!-- Cards populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Analytics Dashboard -->
+    <section id="section-analytics" class="dashboard-section">
+      <div class="analytics-grid">
+        
+        <!-- Funnel Chart -->
+        <div class="glass analytics-card">
+          <h3 class="analytics-card-title">Application Funnel Metrics</h3>
+          <div id="funnel-chart" class="chart-container">
+            <!-- SVG chart generated by JS -->
+          </div>
+        </div>
+        
+        <!-- Preparation Guides / Gaps -->
+        <div class="glass analytics-card">
+          <h3 class="analytics-card-title">Pre-Interview Preparation Hub</h3>
+          <div id="skills-gap-feed">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Job Details Modal -->
+  <div id="details-modal" class="modal-overlay">
+    <div class="glass modal-container">
+      <button class="modal-close" onclick="closeModal()">
+        <svg class="modal-close-svg" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modal-body-content">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Custom Job Modal Form -->
+  <div id="add-job-modal" class="modal-overlay">
+    <div class="glass modal-container" style="max-width: 580px;">
+      <button class="modal-close" onclick="closeAddJobModal()">
+        <svg class="modal-close-svg" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <div class="modal-job-header" style="border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0;">
+        <h2 class="modal-job-title" style="font-size: 1.5rem;">Add External Job Opportunity</h2>
+        <p style="color: var(--text-secondary); font-size: 0.85rem;">Input details from platforms like LinkedIn or careers sites to track them.</p>
+      </div>
+      
+      <form id="add-job-form" onsubmit="submitCustomJob(event)" style="margin-top: 1.5rem;">
+        <div class="form-grid">
+          <div>
+            <label class="form-label" for="job-tit">Role Title *</label>
+            <input type="text" id="job-tit" class="form-input" placeholder="e.g. AI Engineer" required>
+          </div>
+          <div>
+            <label class="form-label" for="job-comp">Company *</label>
+            <input type="text" id="job-comp" class="form-input" placeholder="e.g. Anthropic" required>
+          </div>
+          <div>
+            <label class="form-label" for="job-loc">Location</label>
+            <input type="text" id="job-loc" class="form-input" placeholder="e.g. San Francisco, CA (Hybrid)">
+          </div>
+          <div>
+            <label class="form-label" for="job-sal">Salary Package</label>
+            <input type="text" id="job-sal" class="form-input" placeholder="e.g. $180k - $250k + equity">
+          </div>
+          <div>
+            <label class="form-label" for="job-cat">Category *</label>
+            <select id="job-cat" class="form-input" required>
+              <option value="SWE">Software Engineering (SWE)</option>
+              <option value="MLE">Machine Learning Eng (MLE)</option>
+              <option value="Research">Research & Science</option>
+              <option value="Platform">MLOps & Infrastructure</option>
+              <option value="Product">Product Management</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="job-url">Application URL</label>
+            <input type="text" id="job-url" class="form-input" placeholder="e.g. Careers Page / LinkedIn Link">
+          </div>
+          <div class="form-group-full">
+            <label class="form-label" for="job-reqs">Core Requirements * <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated list for skill matching)</span></label>
+            <input type="text" id="job-reqs" class="form-input" placeholder="e.g. Python, PyTorch, LLMs, System Design" required>
+          </div>
+          <div class="form-group-full">
+            <label class="form-label" for="job-prefs">Preferred Qualifications <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated list)</span></label>
+            <input type="text" id="job-prefs" class="form-input" placeholder="e.g. PhD, CUDA, distributed systems">
+          </div>
+          <div class="form-group-full">
+            <label class="form-label" for="job-desc">Job Description *</label>
+            <textarea id="job-desc" class="form-input" style="height: 100px; resize: vertical;" placeholder="Paste the core overview of the job description here..." required></textarea>
+          </div>
+        </div>
+        
+        <div class="modal-action-row" style="margin-top: 1.5rem; padding-top: 1rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddJobModal()">Cancel</button>
+          <button type="submit" class="btn">Add to Discovery Pipeline</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

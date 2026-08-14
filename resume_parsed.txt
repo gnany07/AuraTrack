@@ -1,0 +1,116 @@
+Gnanendar Reddy Male Email: gnanendarreddymale77@gmail.com
+linkedin.com/in/gnanendar-reddy-1862b6117/ Mobile: +44 7931084323
+London, United Kingdom
+Education
+•
+Georgia Institute of T echnology Remote
+Master of Science in Computer Science; AI Specialization Jan. 2026 – Jan. 2028
+•
+Indian Institute of T echnology (IIT), Roorkee Roorkee, India
+Bachelor of Technology in Electrical Engineering; GPA: 7.482/10.0 July 2014 – May 2018
+•
+Sri Chaitanya IIT Academy Vijayawada, India
+Senior School Certiﬁcate Examination; Marks: 969/1000 April 2012 – May 2014
+•
+T riveni School Khammam, India
+Secondary School Certiﬁcate Examination; GPA: 9.7/10.0 March 2012
+Relevant Coursework
+Computer Networks, Programming in C++, Database Management Systems, Machine Learning, Web Designing and
+Development, Robotics and Control, Microprocessors and Peripheral Devices, Single Chip Microprocessor and its
+Applications, Mathematical Methods
+Technical Skills and Expertise
+• Skills: Data Structures and Algorithms, OOPs, LLD, HLD, Design Patterns, API Design, Machine Learning, LLM
+Development
+• Programming Languages : C++, Python, Golang, C
+• Areas of Interest : Distributed Systems, Machine Learning, Operating Systems, Computer Networking
+• Dev T ools and Software : Vim, Git, GitHub, Jira, MySQL, Docker CLI
+Professional Experience
+•
+Meta Platforms London, United Kingdom
+Senior Software Engineer Sept. 2025 – Present
+◦ Currently working in the Applied AI Org, focusing on Agent Data & Optimization for coding models (Post-Training,
+Model Understanding, Building Evals, Benchmarking).
+◦ Previously Tech lead for Fraud Deception team. Setting up techincal direction for 4 Engineers on the team.
+◦ Previously worked on Scams & Deceptive Identity problem areas across Facebook and Instagram.
+◦ Built a highly precise appeals LLM on IG to reduce Abusive clears as part of the Appeals ﬂow.
+◦ Built a scalable and extensible policy enforcement infrastructure to trigger ML and LLM-based scam classiﬁers on
+various events such as User Reports (Proﬁle, Content, Message) and Follow requests across Instagram.
+◦ Built a heuristics-based policies infrastructure to contain scams. This is being used across many policies in the org.
+•
+Google IT Services India Bengaluru, India
+Senior Software Engineer Oct. 2024 – Aug. 2025
+◦ Served as Tech Lead for the monetization, billing, and invoicing platform on the Google Pay for Business team.
+◦ Responsible for setting technical direction for 4 engineers on the team.
+◦ Collaborated with PMs, EMs, and other TLs to prioritize and plan upcoming projects.
+•
+Google IT Services India Bengaluru, India
+Software Engineer May 2022 – Oct. 2024
+◦ Worked in the Google Pay for Business Merchant Services team to provide value-added services to merchants.
+◦ Designed and developed the payment collection link feature to enable merchants to collect payments via URLs sent
+through the GPay Consumer app, SMS, or WhatsApp.
+◦ Designed and implemented a core billing and invoicing infrastructure from scratch for product monetization across
+Google Pay.
+◦ Modelled subscriptions, collected dues, managed reminder automation, and established proactive cancellation policies
+for services like RuPay Card transactions, Merchant Credit, and Soundpod.
+◦ Engineered the invoicing infrastructure to generate monthly invoices eﬃciently for millions of GPay merchants.
+•
+Pensando Systems India Pvt. Ltd. Bengaluru, India
+Member of Technical Staﬀ April 2020 – May 2022
+◦ Developed an in-house Software Load-balancer application on top of NFF-GO with REST API and packet path
+support for Microsoft Azure.
+◦ Designed and developed a CPS (connections per second) display feature by implementing a sliding window with
+counters algorithm in a multi-threaded environment, achieving 99.5% accuracy.
+◦ Designed and implemented a Fastpath networking feature on top of Vector Packet Processor (VPP) for Microsoft
+Azure.
+◦ Worked on LSPAN, RSPAN, and ERSPAN packet mirroring protocols on the Distributed Services Card platform for
+cloud environments.
+◦ Developed a simulation pipeline and integrated it with test frameworks to improve testing speed and eﬃciency.
+•
+Cisco Systems India Pvt. Ltd. Bengaluru, India
+Software Engineer Aug. 2018 – April 2020
+◦ Worked on auto-provisioning, event manager, and port-proﬁle manager features of the Data Center Nexus OS.
+◦ Contributed to model-driven programmability of Nexus OS to support REST API conﬁgurations.
+•
+Rupeek Fintech Pvt. Ltd. Bengaluru, India
+Research Intern May 2017 – July 2017
+◦ Stone W eight Deduction from the Images of Jewels: Researched, implemented, and deployed a highly accurate
+image processing algorithm to eﬃciently deduct stone pixels from jewel imagery.
+Projects
+•
+Animals Recognition from Images B.Tech Project
+Guide: Prof. Indra Gupta, EE Department, IIT Roorkee Oct. 2017 – March 2018
+◦ Explored various state-of-the-art neural network architectures.
+◦ Developed a deep learning model in Python using the Keras library to achieve high accuracy for the identiﬁcation of
+animals from images and video.
+•
+Martian Harmony Robotic Band SRISHTI 2016 Competition
+Model and Robotics Section, IIT Roorkee Jan. 2016 – March 2016
+◦ Worked on the guitar-playing bot of the robotic band.
+◦ Obtained a note-versus-time map for a song using MIDI software. The map was integrated into an Arduino Mini to
+control servo motors with respect to time so that actuators hit the correct notes on the guitar.
+•
+Automatic License Number Detection of V ehicles B.Tech Term Project
+Guide: Prof. R.S. Anand, EE Department, IIT Roorkee Jan. 2017 – April 2017
+◦ Explored various state-of-the-art image processing algorithms to identify text.
+◦ Developed an image processing algorithm to detect vehicle license plates from images using OpenCV on a Raspberry
+Pi 3.
+Scholastic Achievements
+• Joint Entrance Examination (2014) : Secured an All India Rank of 1728 (Open Category) in JEE Advanced among
+1.4 million candidates.
+• EAMCET (2014) : Secured a State Rank of 312 (Open Category) in EAMCET among 280,000 candidates.
+• IIT Roorkee Merit-cum-Means Scholarship : Awarded the academic scholarship 8 times for excellent performance.
+• Best Project Award at IIT Roorkee : Awarded Best Project in Arts and Technology at the SRISHTI 2016
+exhibition for the Martian Harmony project.
+• Connected Recognition Award at Cisco Systems : Recognized for exceptional engineering contributions toward the
+development of the Cisco Nexus Operating System.
+Extracurricular and Volunteering Activities
+•
+V olunteer at Child Rights and Y ou (CR Y) IIT Roorkee
+Core Volunteer 2015 – 2017
+◦ Taught underprivileged students, facilitated school admissions, organized science exhibitions, and coordinated
+clothes/gift donation drives.
+•
+National Cadet Corps (NCC) IIT Roorkee
+Cadet 2014 – 2017
+◦ Participated in formal parades during Independence Day and Republic Day, and actively organized various social
+awareness rallies.
