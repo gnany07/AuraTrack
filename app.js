@@ -148,7 +148,7 @@ function parseResumeText(text) {
   });
   
   // Add core technical skills from experience
-  const coreProfileSkills = ["C++", "Python", "Golang", "C", "Distributed Systems", "Machine Learning", "LLMs", "Post-Training", "Evals", "System Design", "Linux", "Docker", "Kubernetes", "PostgreSQL", "Redis", "Vector Search", "REST APIs", "Microservices"];
+  const coreProfileSkills = ["C++", "Python", "Golang", "C", "Distributed Systems", "Machine Learning", "LLMs", "Post-Training", "Evals", "System Design", "Linux", "Docker", "Kubernetes", "PostgreSQL", "Redis", "Vector Search", "REST APIs", "Microservices", "Data Structures", "Algorithms", "OpenCV", "Keras", "PyTorch"];
   coreProfileSkills.forEach(s => {
     if (!foundSkills.includes(s) && cleanSkillsText.includes(s.toLowerCase())) {
       foundSkills.push(s);
@@ -968,7 +968,6 @@ function renderPaginationControls(totalMatching, totalPages, currentPage) {
       </div>
     </div>
   `;
-}
 }
 
 function setupDiscoveryFilters() {
