@@ -118,7 +118,7 @@ function saveState() {
 }
 
 // Unwanted Role Titles Regex
-const UNWANTED_TITLES_REGEX = /\b(frontend|front-end|front end|ui|ux|ui\/ux|designer|product design|web designer|web developer|css|html|ios|android|mobile|electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|data engineer|data engineering|data scientist|data science|data analyst|analytics engineer|business intelligence|intern|internship|co-op|graduate engineer|junior|entry level|apprentice|solutions engineer|solutions architect|solutions architecture|developer relations|devrel|developer advocate|developer experience|field engineer|forward deployed|sales engineer|customer engineer|partner engineer|support engineer|technical support|technical advocate|sales|account executive|business development|gtm|product manager|program manager|project manager|operations|customer success|recruiter|talent acquisition|human resources|hr|legal|finance|marketing|copywriter|strategist)\b/i;
+const UNWANTED_TITLES_REGEX = /\b(frontend|front-end|front end|ui|ux|ui\/ux|designer|product design|web designer|web developer|css|html|ios|android|mobile|electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|data engineer|data engineering|data scientist|data science|data analyst|analytics engineer|business intelligence|intern|internship|co-op|graduate engineer|junior|entry level|apprentice|solutions engineer|solutions architect|solutions architecture|developer relations|devrel|developer advocate|developer experience|field engineer|forward deployed|sales engineer|customer engineer|partner engineer|partner|partnerships?|support engineer|technical support|technical advocate|support delivery|support specialist|sales|account executive|business development|gtm|product manager|program manager|project manager|operations|customer success|recruiter|talent|talent acquisition|human resources|hr|people|legal|finance|marketing|copywriter|strategist|it|it support|it engineer|it engineering|information technology|desktop support|helpdesk|social media|community|events|communications|security|compliance|infosec|cybersecurity|appsec|detection and response|threat investigator|threat intel|insider threat|audit|privacy|vulnerability|bioanalytical|biological|biology|bioinformatics|computational biology|genomics|growth|lifecycle|network engineer|network engineering|network architect)\b/i;
 
 // Resume Parser Heuristics (Client-Side)
 function parseResumeText(text) {
@@ -623,30 +623,46 @@ function renderJobDiscovery() {
   const grid = document.getElementById("jobs-grid");
   if (!grid) return;
   
-  const searchVal = document.getElementById("job-search").value.toLowerCase();
+  const searchInput = document.getElementById("job-search");
+  const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : "";
   const companySelect = document.getElementById("filter-company");
+  const domainSelect = document.getElementById("filter-domain");
+  const senioritySelect = document.getElementById("filter-seniority");
   const matchSelect = document.getElementById("filter-match");
-  const categorySelect = document.getElementById("filter-category");
-  const typeSelect = document.getElementById("filter-type");
   const locationSelect = document.getElementById("filter-location");
+  const toggleRelevance = document.getElementById("toggle-relevance");
   
   // Multi-select support: filter passes if job matches ANY selected value.
   const companyVals = companySelect
     ? Array.from(companySelect.selectedOptions).map(o => o.value).filter(v => v !== "")
     : [];
+  const domainVals = domainSelect
+    ? Array.from(domainSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
+    : [];
+  const seniorityVals = senioritySelect
+    ? Array.from(senioritySelect.selectedOptions).map(o => o.value).filter(v => v !== "")
+    : [];
   const matchVals = matchSelect
     ? Array.from(matchSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const categoryVals = categorySelect
-    ? Array.from(categorySelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const typeVals = typeSelect
-    ? Array.from(typeSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
     : [];
   const locationVals = locationSelect
     ? Array.from(locationSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
     : [];
   
+  const hideLowRelevance = toggleRelevance ? toggleRelevance.checked : false;
+
+  // Active Filters Counter calculation
+  let activeFilterCount = 0;
+  if (searchVal.length > 0) activeFilterCount++;
+  if (domainVals.length > 0) activeFilterCount++;
+  if (seniorityVals.length > 0) activeFilterCount++;
+  if (companyVals.length > 0) activeFilterCount++;
+  if (locationVals.length > 0) activeFilterCount++;
+  if (matchVals.length > 0) activeFilterCount++;
+
+  const activeCountEl = document.getElementById("active-filter-count");
+  if (activeCountEl) activeCountEl.textContent = activeFilterCount.toString();
+
   const allJobs = getAllJobs();
   
   // Clear Grid
@@ -663,22 +679,27 @@ function renderJobDiscovery() {
   let matchCount = 0;
   
   evaluatedJobs.forEach(({ job, score, matchAnalysis }) => {
-    // 2. Apply Filters
+    // Relevance score threshold check
+    if (hideLowRelevance && score < 40 && searchVal.length === 0) {
+      return;
+    }
+
     // Text search
     const textMatches = searchVal.length === 0 || 
                         job.title.toLowerCase().includes(searchVal) || 
                         job.company.toLowerCase().includes(searchVal) || 
-                        job.description.toLowerCase().includes(searchVal) ||
+                        (job.domain || "").toLowerCase().includes(searchVal) ||
+                        (job.description || "").toLowerCase().includes(searchVal) ||
                         (job.requirements || []).some(req => req.toLowerCase().includes(searchVal));
                         
+    // Domain select filter
+    const domainMatches = domainVals.length === 0 || domainVals.includes(job.domain);
+
+    // Seniority select filter
+    const seniorityMatches = seniorityVals.length === 0 || seniorityVals.includes(job.seniority);
+
     // Company select filter
     const companyMatches = companyVals.length === 0 || companyVals.includes(job.company);
-    
-    // Category select filter
-    const categoryMatches = categoryVals.length === 0 || categoryVals.includes(job.category);
-    
-    // Job Type select filter
-    const typeMatches = typeVals.length === 0 || typeVals.includes(job.employmentType || "Full-time");
     
     // Location select filter
     const locationMatches = locationVals.length === 0 || locationVals.includes(job.location);
@@ -690,7 +711,7 @@ function renderJobDiscovery() {
       scoreMatches = matchVals.includes(scoreBand);
     }
     
-    if (!textMatches || !companyMatches || !categoryMatches || !typeMatches || !locationMatches || !scoreMatches) {
+    if (!textMatches || !domainMatches || !seniorityMatches || !companyMatches || !locationMatches || !scoreMatches) {
       return;
     }
     
@@ -735,7 +756,10 @@ function renderJobDiscovery() {
         </div>
       </div>
       <div class="job-card-footer">
-        <span class="job-tag">${job.category}</span>
+        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+          <span class="domain-tag">${job.domain || job.category}</span>
+          <span class="seniority-tag">${job.seniority || 'General'}</span>
+        </div>
         <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
           View details
           <svg style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
@@ -751,8 +775,8 @@ function renderJobDiscovery() {
   if (matchCount === 0) {
     grid.innerHTML = `
       <div class="form-group-full" style="text-align: center; color: var(--text-muted); padding: 4rem 1rem; grid-column: span 3;">
-        <p style="font-size: 1.1rem; margin-bottom: 0.25rem;">No jobs match your search parameters.</p>
-        <p style="font-size: 0.9rem;">Try clearing your filters or adding custom jobs.</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.25rem;">No jobs match your active filters.</p>
+        <p style="font-size: 0.9rem;">Try clearing your filters or turning off "Hide Low Relevance".</p>
       </div>
     `;
   }
@@ -761,72 +785,37 @@ function renderJobDiscovery() {
 // Populating filter drop-downs dynamically
 function setupDiscoveryFilters() {
   const companySelect = document.getElementById("filter-company");
-  const categorySelect = document.getElementById("filter-category");
-  const typeSelect = document.getElementById("filter-type");
+  const domainSelect = document.getElementById("filter-domain");
+  const senioritySelect = document.getElementById("filter-seniority");
   const locationSelect = document.getElementById("filter-location");
   const matchSelect = document.getElementById("filter-match");
   
-  if (!companySelect || !categorySelect || !typeSelect || !locationSelect || !matchSelect) return;
+  if (!companySelect || !domainSelect || !senioritySelect || !locationSelect || !matchSelect) return;
   
-  // Clear options except first
   companySelect.innerHTML = `<option value="">All Companies</option>`;
-  categorySelect.innerHTML = `<option value="">All Categories</option>`;
   locationSelect.innerHTML = `<option value="">All Locations</option>`;
   
   const allJobs = getAllJobs();
-  
-  // Track if initial setup to apply defaults
-  const isInitialSetup = !categorySelect.dataset.initialized;
-  categorySelect.dataset.initialized = "true";
   
   const companies = [...new Set(allJobs.map(j => j.company))].sort();
   companies.forEach(company => {
     companySelect.innerHTML += `<option value="${company}">${company}</option>`;
   });
   
-  const categories = [...new Set(allJobs.map(j => j.category))].sort();
-  let defaultCategorySelected = false;
-  categories.forEach(cat => {
-    const isDefault = isInitialSetup && (cat === "SWE" || cat === "Platform");
-    if (isDefault) defaultCategorySelected = true;
-    categorySelect.innerHTML += `<option value="${cat}" ${isDefault ? 'selected' : ''}>${cat}</option>`;
-  });
-  if (isInitialSetup && defaultCategorySelected) {
-    const allCatOpt = categorySelect.querySelector('option[value=""]');
-    if (allCatOpt) allCatOpt.selected = false;
-  }
-  
   const locations = [...new Set(allJobs.map(j => j.location))].sort();
-  let defaultLocationSelected = false;
   locations.forEach(location => {
-    const locLower = location.toLowerCase();
-    const isLondon = locLower.includes("london") || locLower.includes("uk") || locLower.includes("united kingdom");
-    const isDefault = isInitialSetup && isLondon;
-    if (isDefault) defaultLocationSelected = true;
-    locationSelect.innerHTML += `<option value="${location}" ${isDefault ? 'selected' : ''}>${location}</option>`;
+    locationSelect.innerHTML += `<option value="${location}">${location}</option>`;
   });
-  if (isInitialSetup && defaultLocationSelected) {
-    const allLocOpt = locationSelect.querySelector('option[value=""]');
-    if (allLocOpt) allLocOpt.selected = false;
-  }
   
-  if (isInitialSetup && typeSelect) {
-    const fullTimeOpt = typeSelect.querySelector('option[value="Full-time"]');
-    const allTypeOpt = typeSelect.querySelector('option[value=""]');
-    if (fullTimeOpt) fullTimeOpt.selected = true;
-    if (allTypeOpt) allTypeOpt.selected = false;
-  }
-  
-  // Set listener
+  // Set listeners
   document.getElementById("job-search").oninput = renderJobDiscovery;
   companySelect.onchange = renderJobDiscovery;
-  categorySelect.onchange = renderJobDiscovery;
-  typeSelect.onchange = renderJobDiscovery;
+  domainSelect.onchange = renderJobDiscovery;
+  senioritySelect.onchange = renderJobDiscovery;
   locationSelect.onchange = renderJobDiscovery;
   matchSelect.onchange = renderJobDiscovery;
 
-  // Native <select multiple> typically requires Cmd/Ctrl for multi-selection.
-  // This wrapper allows plain-click toggling so users can pick multiple options naturally.
+  // Plain-click toggling for multiple selects
   function enablePlainClickToggle(selectEl) {
     if (!selectEl || !selectEl.multiple) return;
     
@@ -834,34 +823,83 @@ function setupDiscoveryFilters() {
       const opt = e.target;
       if (!opt || opt.tagName !== "OPTION") return;
       
-      // If user is using modifier keys, allow native behavior.
       if (e.metaKey || e.ctrlKey || e.shiftKey) return;
       
-      // Handle "All ..." option like a reset.
       if (opt.value === "") {
         Array.from(selectEl.options).forEach(o => { o.selected = o.value === ""; });
       } else {
-        // Deselect the "All ..." option if present.
         const allOpt = Array.from(selectEl.options).find(o => o.value === "");
         if (allOpt) allOpt.selected = false;
-        
-        // Toggle the clicked option.
         opt.selected = !opt.selected;
       }
       
-      // Prevent native behavior from replacing the selection.
       e.preventDefault();
-      
       renderJobDiscovery();
     });
   }
 
   enablePlainClickToggle(companySelect);
-  enablePlainClickToggle(categorySelect);
-  enablePlainClickToggle(typeSelect);
+  enablePlainClickToggle(domainSelect);
+  enablePlainClickToggle(senioritySelect);
   enablePlainClickToggle(locationSelect);
   enablePlainClickToggle(matchSelect);
 }
+
+window.applyFilterPreset = function(preset) {
+  window.resetAllFilters(false);
+  
+  if (preset === 'highMatch') {
+    const matchSelect = document.getElementById("filter-match");
+    if (matchSelect) {
+      for (let o of matchSelect.options) {
+        if (o.value === "high") o.selected = true;
+      }
+    }
+  } else if (preset === 'aiInfra') {
+    const domainSelect = document.getElementById("filter-domain");
+    if (domainSelect) {
+      for (let o of domainSelect.options) {
+        if (o.value === "AI / LLM Infra") o.selected = true;
+      }
+    }
+  } else if (preset === 'systems') {
+    const domainSelect = document.getElementById("filter-domain");
+    if (domainSelect) {
+      for (let o of domainSelect.options) {
+        if (o.value === "Distributed Systems" || o.value === "Systems & Low-Level") o.selected = true;
+      }
+    }
+  } else if (preset === 'london') {
+    const searchInput = document.getElementById("job-search");
+    if (searchInput) searchInput.value = "London";
+  }
+
+  renderJobDiscovery();
+  showToast(`Applied filter preset`);
+};
+
+window.resetAllFilters = function(shouldRender = true) {
+  const searchInput = document.getElementById("job-search");
+  if (searchInput) searchInput.value = "";
+
+  const selects = ["filter-domain", "filter-seniority", "filter-company", "filter-location", "filter-match"];
+  selects.forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel) {
+      for (let o of sel.options) {
+        o.selected = o.value === "";
+      }
+    }
+  });
+
+  const toggle = document.getElementById("toggle-relevance");
+  if (toggle) toggle.checked = true;
+
+  if (shouldRender) {
+    renderJobDiscovery();
+    showToast("Reset all filters");
+  }
+};
 
 // Page Render: Kanban Application Tracker
 function renderKanbanBoard() {
@@ -1485,8 +1523,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize default page view
   switchTab("resume");
   
-  // Check Ollama Local AI connection status
-  checkOllamaStatus();
+  // Check Gemini AI Engine connection status
+  checkAIStatus();
   
   // Set sync tooltip
   const syncBtn = document.getElementById("sync-jobs-btn");
@@ -1495,13 +1533,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- ML Features: Ollama & Offline Fallbacks ---
-let isOllamaOnline = false;
-const OLLAMA_URL = "http://localhost:11434";
-const OLLAMA_MODEL = "qwen2.5:0.5b";
+// --- Gemini 2.5 Flash Free AI Engine ---
+const GEMINI_MODEL = "gemini-2.5-flash";
 
-async function checkOllamaStatus() {
-  const badges = document.querySelectorAll(".ollama-status-badge");
+function getGeminiAPIKey() {
+  return localStorage.getItem("auratrack_gemini_key") || "";
+}
+
+function saveGeminiAPIKey(key) {
+  if (key) {
+    localStorage.setItem("auratrack_gemini_key", key.trim());
+  }
+}
+
+async function checkAIStatus() {
+  const badges = document.querySelectorAll(".ollama-status-badge, .ai-status-badge");
   const dots = document.querySelectorAll(".status-dot");
   
   const updateUI = (status, text) => {
@@ -1509,47 +1555,64 @@ async function checkOllamaStatus() {
       dot.className = `status-dot ${status}`;
     });
     badges.forEach(badge => {
-      const dotEl = badge.querySelector(".status-dot");
-      const dotHtml = dotEl ? dotEl.outerHTML : `<span class="status-dot ${status}"></span>`;
-      badge.innerHTML = `${dotHtml} ${text}`;
+      badge.innerHTML = `<span class="status-dot ${status}"></span> ${text}`;
     });
   };
   
-  try {
-    const res = await fetch(`${OLLAMA_URL}/api/tags`, { method: "GET" });
-    if (res.ok) {
-      isOllamaOnline = true;
-      updateUI("online", "Local AI Online");
-    } else {
-      isOllamaOnline = false;
-      updateUI("offline", "Offline Mock Active");
-    }
-  } catch (e) {
-    isOllamaOnline = false;
-    updateUI("offline", "Offline Mock Active");
+  const clientKey = getGeminiAPIKey();
+  if (clientKey) {
+    updateUI("online", "Gemini 2.5 Flash (Client Key)");
+  } else {
+    updateUI("online", "Gemini 2.5 Flash Active");
   }
 }
 
-async function callLocalLLM(prompt, systemPrompt = "") {
-  try {
-    const response = await fetch(`${OLLAMA_URL}/api/generate`, {
+async function callGeminiAPI(prompt, systemInstruction = "") {
+  const userApiKey = getGeminiAPIKey();
+  
+  // 1. If user configured a client-side key, call Google API directly
+  if (userApiKey) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${userApiKey}`;
+    const payload = {
+      contents: [
+        { parts: [{ text: systemInstruction ? `[System Context: ${systemInstruction}]\n\n${prompt}` : prompt }] }
+      ]
+    };
+    const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: OLLAMA_MODEL,
-        prompt: prompt,
-        system: systemPrompt,
-        stream: false
-      })
+      body: JSON.stringify(payload)
     });
-    
-    if (!response.ok) throw new Error("Local LLM API error");
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      const msg = errorData.error?.message || `HTTP status ${response.status}`;
+      throw new Error(`Gemini API Error: ${msg}`);
+    }
     const data = await response.json();
-    return data.response;
-  } catch (err) {
-    console.warn("LLM API call failed, falling back.", err);
-    throw err;
+    const candidates = data.candidates || [];
+    if (candidates.length > 0 && candidates[0].content?.parts?.length > 0) {
+      return candidates[0].content.parts[0].text;
+    }
+    throw new Error("Empty response from Gemini API");
   }
+
+  // 2. Otherwise, call secure server proxy endpoint (/api/ai/generate) using gitignored .env key
+  const proxyRes = await fetch("/api/ai/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt, systemInstruction, model: GEMINI_MODEL })
+  });
+
+  if (!proxyRes.ok) {
+    const errData = await proxyRes.json().catch(() => ({}));
+    throw new Error(errData.message || `Server Proxy Error ${proxyRes.status}`);
+  }
+
+  const data = await proxyRes.json();
+  if (data.status === "success") {
+    return data.result;
+  }
+  throw new Error(data.message || "Failed to generate AI content via backend proxy");
 }
 
 // 1. Cover Letter Generator implementation
@@ -1565,41 +1628,37 @@ window.generateCoverLetter = async function(jobId) {
   if (!resultBox || !resultText || !btn) return;
   
   resultBox.style.display = "block";
-  resultText.textContent = "Writing your cover letter...";
+  resultText.textContent = "Writing your custom cover letter with Gemini 2.5 Flash...";
   btn.disabled = true;
   
   const statusBadge = btn.parentElement.querySelector(".ollama-status-badge");
   if (statusBadge) statusBadge.innerHTML = `<span class="status-dot loading"></span> Generating...`;
   
-  const prompt = `Write a professional cover letter for the role of ${job.title} at ${job.company}.
-Candidate Details:
-- Name: ${state.parsedResume.name}
-- Inferred level: ${state.parsedResume.experienceLevel}
-- Key Skills: ${state.parsedResume.skills.join(", ")}
+  const prompt = `Write a tailored, highly compelling cover letter for the role of ${job.title} at ${job.company}.
+Candidate Profile:
+- Name: ${state.parsedResume.name || "Gnanendar Reddy Male"}
+- Experience Level: ${state.parsedResume.experienceLevel}
+- Core Skills: ${(state.parsedResume.skills || []).join(", ")}
 
-Job Details:
+Target Job Info:
+- Company: ${job.company}
+- Role: ${job.title}
 - Description: ${job.description}
-- Key requirements: ${job.requirements.join(", ")}
+- Key Requirements: ${(job.requirements || []).join(", ")}
 
-Keep it professional, engaging, structured, and under 300 words. Address the hiring manager of ${job.company}.`;
+Format as a professional cover letter under 300 words. Address the hiring manager of ${job.company}. Highlight how candidate's skills directly solve the target job's engineering challenges.`;
 
-  const system = "You are a professional technical career advisor who writes exceptional, concise cover letters.";
+  const system = "You are an elite technical career consultant who crafts highly persuasive, professional cover letters for senior software engineers.";
   
   try {
-    let coverLetter = "";
-    if (isOllamaOnline) {
-      coverLetter = await callLocalLLM(prompt, system);
-    } else {
-      // Simulate delay for realism
-      await new Promise(resolve => setTimeout(resolve, 800));
-      coverLetter = generateMockCoverLetter(job, state.parsedResume);
-    }
+    const coverLetter = await callGeminiAPI(prompt, system);
     resultText.textContent = coverLetter;
   } catch (e) {
+    console.warn("Gemini API call failed, using template:", e);
     resultText.textContent = generateMockCoverLetter(job, state.parsedResume);
   } finally {
     btn.disabled = false;
-    checkOllamaStatus();
+    checkAIStatus();
   }
 };
 
@@ -1613,23 +1672,20 @@ window.copyCoverLetterToClipboard = function() {
 };
 
 function generateMockCoverLetter(job, resume) {
-  const name = resume.name || "Candidate Name";
-  const email = resume.email || "candidate@email.com";
+  const name = resume.name || "Gnanendar Reddy Male";
+  const email = resume.email || "gnanendarreddymale77@gmail.com";
   const company = job.company;
   const title = job.title;
-  const location = job.location;
-  const matchedSkills = resume.skills.filter(s => job.requirements.some(r => r.toLowerCase() === s.toLowerCase()));
-  const skillsList = matchedSkills.length > 0 ? matchedSkills.slice(0, 4).join(", ") : "Python, Machine Learning, Systems Architecture";
+  const matchedSkills = (resume.skills || []).filter(s => (job.requirements || []).some(r => r.toLowerCase() === s.toLowerCase()));
+  const skillsList = matchedSkills.length > 0 ? matchedSkills.slice(0, 4).join(", ") : "C++, Python, Distributed Systems, ML Engineering";
   
-  return `Dear Hiring Team at ${company},
+  return `Dear Hiring Manager at ${company},
 
-I am writing to express my strong interest in the ${title} position. As a software professional at the ${resume.experienceLevel} level, I am excited about the opportunity to contribute to your engineering and research efforts.
+I am writing to express my strong interest in the ${title} position. As a software engineering professional with extensive experience building high-throughput distributed infrastructure and intelligent models, I am excited to contribute to your team's mission.
 
-In reviewing the requirements for the role, I was thrilled to see a close alignment with my background. I have hands-on experience and solid proficiency in key technologies requested by your team, specifically: ${skillsList}.
+My technical experience aligns closely with your core requirements, specifically in ${skillsList}. In my past roles, I have spearheaded core backend infrastructure, built scalable microservices, and optimized performance for high-concurrency systems.
 
-Throughout my career, I have focused on building robust, scalable solutions, optimizing pipelines, and collaborating with cross-functional teams to deliver high-quality systems. I am particularly drawn to ${company} because of your leadership and innovation in this domain.
-
-Thank you for your time and consideration. I welcome the opportunity to discuss how my skills and experience can support the team's goals.
+I am particularly drawn to ${company} because of your innovation and impact in this space. I would welcome the opportunity to discuss how my background in systems engineering and ML infrastructure can drive results for your team.
 
 Sincerely,
 ${name}
@@ -1672,32 +1728,27 @@ window.optimizeBulletPoint = async function() {
   if (!job) return;
   
   container.style.display = "block";
-  resultText.textContent = "Optimizing your bullet point for matching keywords...";
+  resultText.textContent = "Optimizing your bullet point with Gemini 2.5 Flash...";
   
   const statusBadge = document.getElementById("ollama-status");
   if (statusBadge) statusBadge.innerHTML = `<span class="status-dot loading"></span> Optimizing...`;
   
   const prompt = `Optimize the following resume bullet point for the role of ${job.title} at ${job.company}.
 Original Bullet: "${bulletInput}"
-Target Job Requirements: ${job.requirements.join(", ")}
+Target Job Requirements: ${(job.requirements || []).join(", ")}
 
-Generate 3 alternative optimized bullets. Ensure they start with strong action verbs, focus on results/impact, and highlight target keywords. Do not explain the output; only output the 3 bullet options.`;
+Generate 3 high-impact alternative bullet points starting with strong action verbs (e.g., Engineered, Architected, Spearheaded). Incorporate relevant technical keywords and quantifiably demonstrate impact. Format with bullet points.`;
 
-  const system = "You are a professional technical recruiter who optimizes resumes to pass ATS screeners.";
+  const system = "You are a Google & Meta Staff Technical Recruiter who optimizes software engineer resumes for maximum ATS impact.";
 
   try {
-    let result = "";
-    if (isOllamaOnline) {
-      result = await callLocalLLM(prompt, system);
-    } else {
-      await new Promise(resolve => setTimeout(resolve, 800));
-      result = generateMockOptimizedBullet(bulletInput, job);
-    }
+    const result = await callGeminiAPI(prompt, system);
     resultText.textContent = result;
   } catch (e) {
+    console.warn("Gemini API call failed, using fallback:", e);
     resultText.textContent = generateMockOptimizedBullet(bulletInput, job);
   } finally {
-    checkOllamaStatus();
+    checkAIStatus();
   }
 };
 

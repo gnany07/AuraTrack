@@ -225,7 +225,45 @@ EXCLUDED_TITLE_PATTERNS = [
     re.compile(r"\bjunior\b", re.IGNORECASE),
     re.compile(r"\bentry level\b", re.IGNORECASE),
     re.compile(r"\bapprentice\b", re.IGNORECASE),
-    
+
+    # IT Engineering & IT Roles
+    re.compile(r"\bit\b", re.IGNORECASE),
+    re.compile(r"\bit support\b", re.IGNORECASE),
+    re.compile(r"\bit engineer\b", re.IGNORECASE),
+    re.compile(r"\bit engineering\b", re.IGNORECASE),
+    re.compile(r"\bit systems\b", re.IGNORECASE),
+    re.compile(r"\bit infrastructure\b", re.IGNORECASE),
+    re.compile(r"\bcorporate it\b", re.IGNORECASE),
+    re.compile(r"\binformation technology\b", re.IGNORECASE),
+    re.compile(r"\bdesktop support\b", re.IGNORECASE),
+    re.compile(r"\bhelpdesk\b", re.IGNORECASE),
+    re.compile(r"\bsystem admin\b", re.IGNORECASE),
+    re.compile(r"\bsystems administrator\b", re.IGNORECASE),
+    re.compile(r"\bsystems manager\b", re.IGNORECASE),
+
+    # Social Media & Community & Comms & Events
+    re.compile(r"\bsocial media\b", re.IGNORECASE),
+    re.compile(r"\bcommunity\b", re.IGNORECASE),
+    re.compile(r"\bevents lead\b", re.IGNORECASE),
+    re.compile(r"\bevents\b", re.IGNORECASE),
+    re.compile(r"\bcommunications\b", re.IGNORECASE),
+
+    # Partner Engineering & Partner Roles & Partnerships
+    re.compile(r"\bpartner\b", re.IGNORECASE),
+    re.compile(r"\bpartnerships?\b", re.IGNORECASE),
+
+    # Talent, Recruiting & HR & People
+    re.compile(r"\btalent\b", re.IGNORECASE),
+    re.compile(r"\btalent acquisition\b", re.IGNORECASE),
+    re.compile(r"\btalent lead\b", re.IGNORECASE),
+    re.compile(r"\btalent partner\b", re.IGNORECASE),
+    re.compile(r"\brecruiting\b", re.IGNORECASE),
+    re.compile(r"\brecruitment\b", re.IGNORECASE),
+    re.compile(r"\brecruiter\b", re.IGNORECASE),
+    re.compile(r"\bpeople\b", re.IGNORECASE),
+    re.compile(r"\bhuman resources\b", re.IGNORECASE),
+    re.compile(r"\bhr\b", re.IGNORECASE),
+
     # Solutions Engineering, DevRel, Field & Support Roles
     re.compile(r"\bsolutions engineer\b", re.IGNORECASE),
     re.compile(r"\bsolutions architect\b", re.IGNORECASE),
@@ -238,11 +276,12 @@ EXCLUDED_TITLE_PATTERNS = [
     re.compile(r"\bforward deployed\b", re.IGNORECASE),
     re.compile(r"\bsales engineer\b", re.IGNORECASE),
     re.compile(r"\bcustomer engineer\b", re.IGNORECASE),
-    re.compile(r"\bpartner engineer\b", re.IGNORECASE),
     re.compile(r"\bsupport engineer\b", re.IGNORECASE),
     re.compile(r"\btechnical support\b", re.IGNORECASE),
     re.compile(r"\btechnical advocate\b", re.IGNORECASE),
-    
+    re.compile(r"\bsupport delivery\b", re.IGNORECASE),
+    re.compile(r"\bsupport specialist\b", re.IGNORECASE),
+
     # Non-Engineering & Business Roles
     re.compile(r"\bsales\b", re.IGNORECASE),
     re.compile(r"\baccount executive\b", re.IGNORECASE),
@@ -254,21 +293,84 @@ EXCLUDED_TITLE_PATTERNS = [
     re.compile(r"\bproject manager\b", re.IGNORECASE),
     re.compile(r"\boperations\b", re.IGNORECASE),
     re.compile(r"\bcustomer success\b", re.IGNORECASE),
-    re.compile(r"\brecruiter\b", re.IGNORECASE),
-    re.compile(r"\btalent acquisition\b", re.IGNORECASE),
-    re.compile(r"\bhuman resources\b", re.IGNORECASE),
-    re.compile(r"\bhr\b", re.IGNORECASE),
     re.compile(r"\blegal\b", re.IGNORECASE),
     re.compile(r"\bfinance\b", re.IGNORECASE),
     re.compile(r"\bmarketing\b", re.IGNORECASE),
     re.compile(r"\bcopywriter\b", re.IGNORECASE),
     re.compile(r"\bstrategist\b", re.IGNORECASE),
     re.compile(r"\bfreelance\b", re.IGNORECASE),
+    re.compile(r"\bstrategic sourcing\b", re.IGNORECASE),
+    re.compile(r"\beconomics & policy\b", re.IGNORECASE),
+    re.compile(r"\bclean energy\b", re.IGNORECASE),
+
+    # Security & Compliance Roles
+    re.compile(r"\bsecurity\b", re.IGNORECASE),
+    re.compile(r"\bcompliance\b", re.IGNORECASE),
+    re.compile(r"\binfosec\b", re.IGNORECASE),
+    re.compile(r"\bcybersecurity\b", re.IGNORECASE),
+    re.compile(r"\bappsec\b", re.IGNORECASE),
+    re.compile(r"\bdetection and response\b", re.IGNORECASE),
+    re.compile(r"\bthreat investigator\b", re.IGNORECASE),
+    re.compile(r"\bthreat intel\b", re.IGNORECASE),
+    re.compile(r"\binsider threat\b", re.IGNORECASE),
+    re.compile(r"\baudit\b", re.IGNORECASE),
+    re.compile(r"\bprivacy\b", re.IGNORECASE),
+    re.compile(r"\bvulnerability\b", re.IGNORECASE),
+
+    # Bioanalytical & Biological Roles
+    re.compile(r"\bbioanalytical\b", re.IGNORECASE),
+    re.compile(r"\bbiological\b", re.IGNORECASE),
+    re.compile(r"\bbiology\b", re.IGNORECASE),
+    re.compile(r"\bbioinformatics\b", re.IGNORECASE),
+    re.compile(r"\bcomputational biology\b", re.IGNORECASE),
+    re.compile(r"\bgenomics\b", re.IGNORECASE),
+
+    # Growth & Network Engineering Roles
+    re.compile(r"\bgrowth\b", re.IGNORECASE),
+    re.compile(r"\blifecycle\b", re.IGNORECASE),
+    re.compile(r"\bnetwork engineer\b", re.IGNORECASE),
+    re.compile(r"\bnetwork engineering\b", re.IGNORECASE),
+    re.compile(r"\bnetwork architect\b", re.IGNORECASE),
 ]
 
 def is_unwanted_role_title(title: str) -> bool:
     text = (title or "").lower()
     return any(p.search(text) for p in EXCLUDED_TITLE_PATTERNS)
+
+def get_seniority_level(title: str) -> str:
+    t = (title or "").lower()
+    if any(k in t for k in ["staff", "principal", "distinguished", "architect", "head", "director", "tech lead", "lead engineer"]):
+        return "Staff / Lead"
+    elif any(k in t for k in ["senior", "sr.", "sr ", "snr"]):
+        return "Senior"
+    return "Mid / General"
+
+def get_technical_domain(title: str, reqs: list = None, desc: str = "") -> str:
+    t = (title or "").lower()
+    req_str = " ".join(reqs or [])
+    txt = (t + " " + req_str + " " + desc).lower()
+    
+    if any(k in t for k in ["rl training", "agent", "llm", "rlhf", "model inference", "post-training", "evals", "vllm", "transformers", "multimodal", "generative ai", "frontier"]):
+        return "AI / LLM Infra"
+    if any(k in txt for k in ["post-training", "rlhf", "llms", "rag", "evals"]):
+        return "AI / LLM Infra"
+
+    if any(k in t for k in ["cuda", "c++", "kernel", "compiler", "low level", "vpp"]):
+        return "Systems & Low-Level"
+    if any(k in txt for k in ["cuda", "triton", "tensorrt-llm", "c++", "vpp", "assembly"]):
+        return "Systems & Low-Level"
+
+    if any(k in t for k in ["machine learning", "mle", "applied science", "computer vision", "nlp", "speech"]):
+        return "ML Engineering"
+    if any(k in txt for k in ["pytorch", "jax", "tensorflow", "deep learning", "computer vision", "nlp"]):
+        return "ML Engineering"
+
+    if any(k in t for k in ["distributed", "storage", "cloud", "kubernetes", "infra", "infrastructure", "fleet", "observability", "reliability"]):
+        return "Distributed Systems"
+    if any(k in txt for k in ["distributed systems", "kubernetes", "docker", "kafka", "redis", "postgresql", "gcp", "aws"]):
+        return "Distributed Systems"
+
+    return "Backend & Platform"
 
 def is_excluded_non_engineering_role(full_text: str) -> bool:
     text = (full_text or "").lower()
@@ -361,14 +463,19 @@ def fetch_ashby(company_name, board_slug=None):
                 salary_match = re.search(r'\$\d{3,},\d{3}\s*(?:-|to)\s*\$\d{3,},\d{3}', desc_plain)
                 salary = salary_match.group(0) if salary_match else "$200,000 - $330,000 + equity"
                 
-                domain = COMPANY_DOMAINS.get(company_name, "github.com")
-                logoUrl = f"https://logo.clearbit.com/{domain}"
+                company_domain = COMPANY_DOMAINS.get(company_name, "github.com")
+                logoUrl = f"https://logo.clearbit.com/{company_domain}"
                 
+                tech_domain = get_technical_domain(title, skills, desc_plain)
+                seniority = get_seniority_level(title)
+
                 jobs.append({
                     "id": f"{slug}-{item.get('id')}",
                     "company": company_name,
                     "title": title,
                     "category": category,
+                    "domain": tech_domain,
+                    "seniority": seniority,
                     "employmentType": get_employment_type(title, employment_type),
                     "location": f"{location} (Hybrid)" if "hybrid" not in location.lower() and "remote" not in location.lower() else location,
                     "salary": salary,
@@ -440,14 +547,19 @@ def fetch_greenhouse(company_name, board_slug):
                 salary_match = re.search(r'\$\d{3,},\d{3}\s*(?:-|to)\s*\$\d{3,},\d{3}', content)
                 salary = salary_match.group(0) if salary_match else "$185,000 - $330,000 + equity"
                 
-                domain = COMPANY_DOMAINS.get(company_name, "github.com")
-                logoUrl = f"https://logo.clearbit.com/{domain}"
+                company_domain = COMPANY_DOMAINS.get(company_name, "github.com")
+                logoUrl = f"https://logo.clearbit.com/{company_domain}"
                 
+                tech_domain = get_technical_domain(title, skills, content)
+                seniority = get_seniority_level(title)
+
                 jobs.append({
                     "id": f"{board_slug}-{item.get('id')}",
                     "company": company_name,
                     "title": title,
                     "category": category,
+                    "domain": tech_domain,
+                    "seniority": seniority,
                     "employmentType": get_employment_type(title),
                     "location": location,
                     "salary": salary,
@@ -800,14 +912,23 @@ def compile_all():
             continue
         all_jobs.append(seed)
     
-    # 3. Save as jobs.js
+    # 3. Enrich and normalize domain & seniority metadata across all jobs
+    for job in all_jobs:
+        if "domain" not in job or not job["domain"]:
+            job["domain"] = get_technical_domain(job.get("title", ""), job.get("requirements", []), job.get("description", ""))
+        if "seniority" not in job or not job["seniority"]:
+            job["seniority"] = get_seniority_level(job.get("title", ""))
+
+    # 4. Save as jobs.js
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M %p")
     
     js_content = f"""// Generated automatically by fetch_jobs.py
 const seedJobs = {json.dumps(all_jobs, indent=2)};
 
-window.seedJobs = seedJobs;
-window.lastSyncedJobs = "{timestamp}";
+if (typeof window !== "undefined") {{
+  window.seedJobs = seedJobs;
+  window.lastSyncedJobs = "{timestamp}";
+}}
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {{
   module.exports = {{ seedJobs }};

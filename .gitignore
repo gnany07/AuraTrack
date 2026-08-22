@@ -1,0 +1,10 @@
+.env
+.env.local
+*.log
+__pycache__/
+.venv/
+venv/
+.DS_Store
+my_resume.pdf
+resume.txt
+resume_parsed.txt

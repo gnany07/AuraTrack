@@ -11,6 +11,19 @@ try:
 except ImportError:
     compile_all = None
 
+# Helper to load .env file
+def load_env():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if os.path.exists(env_path):
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    os.environ[k.strip()] = v.strip()
+
+load_env()
+
 PORT = 8000
 
 class CustomHandler(http.server.SimpleHTTPRequestHandler):
@@ -39,6 +52,60 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_header('Content-Type', 'application/json')
                 self.end_headers()
                 self.wfile.write(json.dumps({"status": "error", "message": "Sync module not found"}).encode('utf-8'))
+
+        elif self.path == '/api/ai/generate':
+            try:
+                content_length = int(self.headers.get('Content-Length', 0))
+                body = self.rfile.read(content_length) if content_length > 0 else b'{}'
+                req_data = json.loads(body.decode('utf-8'))
+                
+                api_key = os.environ.get("GEMINI_API_KEY", "")
+                if not api_key:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.wfile.write(json.dumps({"status": "error", "message": "No GEMINI_API_KEY set in server .env"}).encode('utf-8'))
+                    return
+
+                prompt = req_data.get("prompt", "")
+                system_instruction = req_data.get("systemInstruction", "")
+                model = req_data.get("model", "gemini-2.5-flash")
+
+                import urllib.request
+                gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+                
+                payload = {
+                    "contents": [{
+                        "parts": [{
+                            "text": f"[System Context: {system_instruction}]\n\n{prompt}" if system_instruction else prompt
+                        }]
+                    }]
+                }
+                
+                gemini_req = urllib.request.Request(
+                    gemini_url,
+                    data=json.dumps(payload).encode('utf-8'),
+                    headers={"Content-Type": "application/json"}
+                )
+                
+                with urllib.request.urlopen(gemini_req) as g_resp:
+                    g_data = json.loads(g_resp.read().decode('utf-8'))
+                    candidates = g_data.get("candidates", [])
+                    text = ""
+                    if candidates and candidates[0].get("content", {}).get("parts"):
+                        text = candidates[0]["content"]["parts"][0].get("text", "")
+                    
+                    self.send_response(200)
+                    self.send_header('Content-Type', 'application/json')
+                    self.send_header('Access-Control-Allow-Origin', '*')
+                    self.end_headers()
+                    self.wfile.write(json.dumps({"status": "success", "result": text}).encode('utf-8'))
+
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode('utf-8'))
         else:
             self.send_response(404)
             self.end_headers()
