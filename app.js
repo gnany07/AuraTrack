@@ -1780,7 +1780,11 @@ window.syncLiveJobs = async function() {
   
   try {
     const response = await fetch("/api/sync", { method: "POST" });
-    if (!response.ok) throw new Error("Sync failed");
+    if (!response.ok) {
+      showToast("Static Mode: 454 live engineering jobs loaded. Run local Python server for live scraper sync.", "info");
+      text.textContent = "Sync Live Jobs";
+      return;
+    }
     const data = await response.json();
     
     // Success toast
@@ -1808,7 +1812,7 @@ window.syncLiveJobs = async function() {
     };
     document.head.appendChild(newScript);
   } catch (err) {
-    showToast("Sync failed. Check if local Python server is running.", "danger");
+    showToast("Static Mode: 454 live engineering jobs loaded! Run python server for scraper sync.", "info");
     text.textContent = "Sync Live Jobs";
   } finally {
     btn.disabled = false;

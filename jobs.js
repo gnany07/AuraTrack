@@ -11918,8 +11918,10 @@ const seedJobs = [
   }
 ];
 
-window.seedJobs = seedJobs;
-window.lastSyncedJobs = "2026-08-22 12:28 AM";
+if (typeof window !== "undefined") {
+  window.seedJobs = seedJobs;
+  window.lastSyncedJobs = "2026-08-22 12:48 PM";
+}
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
   module.exports = { seedJobs };
