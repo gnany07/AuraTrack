@@ -59,25 +59,21 @@ export async function onRequestPost(context) {
     });
   }
 
-  // 3. Retrieve Secret GEMINI_API_KEY from Cloudflare Secret Manager
-  const apiKey = env.GEMINI_API_KEY;
-  if (!apiKey || apiKey.trim().length < 10) {
-    return new Response(JSON.stringify({ 
-      status: "error", 
-      message: "Cloudflare Environment Configuration Error: Secret GEMINI_API_KEY not configured in Cloudflare Pages settings." 
-    }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
-  }
-
-  // 4. Payload & Prompt Length Validation
-  let body;
+  // 3. Retrieve Secret GEMINI_API_KEY from Cloudflare Environment or Payload
+  let body = {};
   try {
     body = await request.json();
   } catch (e) {
-    return new Response(JSON.stringify({ status: "error", message: "Invalid JSON payload" }), {
-      status: 400,
+    body = {};
+  }
+
+  const apiKey = env.GEMINI_API_KEY || env.GEMINI_KEY || env.API_KEY || body.apiKey;
+  if (!apiKey || apiKey.trim().length < 10) {
+    return new Response(JSON.stringify({ 
+      status: "error", 
+      message: "Cloudflare Environment Configuration: Please add GEMINI_API_KEY in Cloudflare Pages Settings -> Environment Variables." 
+    }), {
+      status: 500,
       headers: { "Content-Type": "application/json" }
     });
   }
