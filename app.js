@@ -728,9 +728,24 @@ function renderJobDiscovery() {
     // Seniority filter (Multi-select)
     const seniorityMatches = activeSeniorities.size === 0 || activeSeniorities.has(job.seniority);
     
-    // Location filter (Multi-select)
-    const locationMatches = activeLocations.size === 0 || 
-                            [...activeLocations].some(loc => (job.location || "").toLowerCase().includes(loc.toLowerCase()));
+    // Smart Regional Location filter (Multi-select)
+    let locationMatches = activeLocations.size === 0;
+    if (!locationMatches) {
+      const jobLocLower = (job.location || "").toLowerCase();
+      locationMatches = [...activeLocations].some(loc => {
+        const l = loc.toLowerCase();
+        if (l.includes("london") || l.includes("uk")) {
+          return /\b(london|uk|united kingdom|england|cambridge|oxford|edinburgh|bristol|manchester)\b/i.test(jobLocLower);
+        }
+        if (l.includes("san francisco") || l.includes("us")) {
+          return /\b(san francisco|sf|bay area|ca|california|us|united states|seattle|new york|nyc|austin)\b/i.test(jobLocLower);
+        }
+        if (l.includes("remote")) {
+          return /\b(remote|emea|worldwide|anywhere)\b/i.test(jobLocLower);
+        }
+        return jobLocLower.includes(l);
+      });
+    }
     
     // Match score filter
     let scoreMatches = true;
