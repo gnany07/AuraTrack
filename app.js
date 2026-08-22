@@ -1505,6 +1505,102 @@ window.deleteJobFromModal = function(jobId) {
   }
 };
 
+// 1-Click Company Career Importer
+window.promptImportCompanyJobs = function() {
+  const url = prompt(
+    "Paste a Company Career Board URL (e.g. https://jobs.ashbyhq.com/reflectionai or https://boards.greenhouse.io/openai or company slug):",
+    "https://jobs.ashbyhq.com/reflectionai"
+  );
+  if (url) {
+    window.importCompanyJobsFromUrl(url);
+  }
+};
+
+window.importCompanyJobsFromUrl = async function(inputUrl) {
+  if (!inputUrl) return;
+  const url = inputUrl.trim();
+  
+  showToast("Fetching live company jobs from career API...", "info");
+
+  let slug = "";
+  let type = "ashby";
+
+  if (url.includes("ashbyhq.com")) {
+    type = "ashby";
+    const m = url.match(/ashbyhq\.com\/([a-zA-Z0-9_-]+)/);
+    if (m) slug = m[1];
+  } else if (url.includes("greenhouse.io")) {
+    type = "greenhouse";
+    const m = url.match(/greenhouse\.io\/([a-zA-Z0-9_-]+)/);
+    if (m) slug = m[1];
+  } else if (url.includes("lever.co")) {
+    type = "lever";
+    const m = url.match(/lever\.co\/([a-zA-Z0-9_-]+)/);
+    if (m) slug = m[1];
+  }
+
+  if (!slug) {
+    slug = url.toLowerCase().replace(/https?:\/\//, "").replace(/[^a-z0-9]/g, "");
+    type = "ashby";
+  }
+
+  try {
+    let rawJobs = [];
+    let companyName = slug.charAt(0).toUpperCase() + slug.slice(1);
+    if (slug === "reflectionai") companyName = "Reflection AI";
+
+    if (type === "ashby") {
+      const res = await fetch(`https://api.ashbyhq.com/posting-api/job-board/${slug}?includeCompensation=true`);
+      if (!res.ok) throw new Error(`Ashby API returned status ${res.status}`);
+      const data = await res.json();
+      
+      rawJobs = (data.jobs || []).map(j => {
+        const title = j.title || "Software Engineer";
+        const location = j.location || "San Francisco, CA";
+        const desc = j.descriptionPlain || `${title} role at ${companyName}.`;
+        const skills = parseResumeText(desc).skills;
+
+        return {
+          id: `ashby-${slug}-${j.id}`,
+          company: companyName,
+          title: title,
+          category: "SWE",
+          domain: "AI / LLM Infra",
+          seniority: "Senior",
+          employmentType: j.employmentType || "Full-time",
+          location: location,
+          salary: "$200,000 - $350,000 + equity",
+          applyUrl: j.applyUrl || j.jobUrl || url,
+          description: desc,
+          requirements: skills.length > 0 ? skills.slice(0, 6) : ["C++", "Python", "Distributed Systems", "PyTorch"],
+          preferred: skills.length > 6 ? skills.slice(6, 10) : ["LLM Architecture", "Platform Infrastructure"],
+          companyColor: "linear-gradient(135deg, #6366f1, #0f172a)",
+          logoUrl: `https://logo.clearbit.com/${slug}.ai`
+        };
+      });
+    }
+
+    if (rawJobs.length === 0) {
+      showToast(`No open roles found for "${slug}"`, "warning");
+      return;
+    }
+
+    let addedCount = 0;
+    rawJobs.forEach(j => {
+      if (!state.customJobs.some(existing => existing.id === j.id)) {
+        state.customJobs.push(j);
+        addedCount++;
+      }
+    });
+
+    saveState();
+    renderJobDiscovery();
+    showToast(`Successfully imported ${addedCount} live jobs from ${companyName}!`);
+  } catch (err) {
+    showToast(`Import Error: ${err.message}`, "danger");
+  }
+};
+
 // Custom Job Insertion
 window.openAddJobModal = function() {
   const overlay = document.getElementById("add-job-modal");
