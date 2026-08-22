@@ -94,16 +94,16 @@
           </div>
           
           <!-- Dropzone -->
-          <div id="dropzone" class="dropzone-container" style="cursor: pointer;">
+          <label id="dropzone" for="resume-file-input" class="dropzone-container" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
             <input type="file" id="resume-file-input" accept=".pdf,.txt,.md" style="display: none;" onchange="handleFileInputChange(event)">
-            <svg class="dropzone-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="dropzone-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="pointer-events: none;">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>
-            <div>
-              <p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem;">Drag & drop resume (.pdf, .txt, .md) here</p>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">or click anywhere here to browse files</p>
+            <div style="text-align: center; pointer-events: none;">
+              <p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; color: #ffffff;">Drag & drop resume (.pdf, .txt, .md) here</p>
+              <p style="font-size: 0.8rem; color: var(--primary); text-decoration: underline; font-weight: 600;">or click anywhere here to browse files</p>
             </div>
-          </div>
+          </label>
           
           <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--text-muted); font-size: 0.8rem;">
             <span style="height: 1px; background: var(--border-color); flex-grow: 1;"></span>

@@ -527,7 +527,6 @@ window.handleFileInputChange = function(event) {
 // Handle File Drag & Drop
 window.initDropzone = function() {
   const dropzone = document.getElementById("dropzone");
-  const fileInput = document.getElementById("resume-file-input");
   if (!dropzone) return;
   
   ["dragenter", "dragover"].forEach(eventName => {
@@ -556,15 +555,6 @@ window.initDropzone = function() {
       handleUploadedFile(files[0]);
     }
   }, false);
-  
-  dropzone.addEventListener("click", (e) => {
-    if (e.target !== fileInput) {
-      if (fileInput) {
-        fileInput.value = "";
-        fileInput.click();
-      }
-    }
-  });
 };
 
 function handleUploadedFile(file) {
