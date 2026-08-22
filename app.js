@@ -141,6 +141,13 @@ function saveState() {
     }
   };
   localStorage.setItem("auratrack_state", JSON.stringify(serializableState));
+
+  // Asynchronous Cloudflare KV Database Sync
+  fetch("/api/state", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ state: serializableState })
+  }).catch(() => {});
 }
 
 // Unwanted Role Titles Regex
@@ -1286,19 +1293,46 @@ function openJobDetails(jobId) {
     </div>
   `;
   
-  modalBody.innerHTML = `
-    <div class="modal-job-header">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-        <div>
-          <div class="modal-job-company-container">
-            ${job.logoUrl ? `<img src="${job.logoUrl}" class="modal-company-logo" alt="${job.company} logo" onerror="this.style.display='none'">` : ''}
-            <div class="modal-job-company">${job.company}</div>
+    // Format description text into structured engineering scope cards
+    const descParagraphs = (job.description || "").split("\n\n").filter(p => p.trim().length > 0);
+    let structuredAboutRoleHtml = "";
+    
+    if (descParagraphs.length > 1) {
+      structuredAboutRoleHtml = descParagraphs.map((p, idx) => {
+        const titles = ["🚀 Role Overview & Mission", "⚙️ Core Systems & Engineering Scope", "🎯 Technical Impact & Growth"];
+        const title = titles[idx] || `📋 Engineering Scope #${idx + 1}`;
+        return `
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem;">
+            <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-display);">${title}</h5>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">${p.trim()}</p>
           </div>
-          <h2 class="modal-job-title">${job.title}</h2>
+        `;
+      }).join("");
+    } else {
+      structuredAboutRoleHtml = `
+        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem;">
+          <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-display);">🚀 Role Overview & Technical Scope</h5>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">${job.description}</p>
         </div>
-        ${matchBadge}
+      `;
+    }
+
+  modalBody.innerHTML = `
+    <div class="modal-job-header" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+        <div>
+          <div class="modal-job-company-container" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            ${job.logoUrl ? `<img src="${job.logoUrl}" class="modal-company-logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: contain;" alt="${job.company} logo" onerror="this.style.display='none'">` : ''}
+            <div class="modal-job-company" style="font-size: 1.1rem; font-weight: 700; color: var(--text-muted);">${job.company}</div>
+          </div>
+          <h2 class="modal-job-title" style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem;">${job.title}</h2>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          ${matchBadge}
+          <a href="${job.applyUrl || '#'}" target="_blank" class="btn" style="padding: 0.65rem 1.5rem; font-weight: 700; font-size: 0.95rem;">Apply Now ↗</a>
+        </div>
       </div>
-      <div class="modal-job-meta">
+      <div class="modal-job-meta" style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
         <div class="detail-line">
           <svg class="detail-line-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
           <span>${job.location}</span>
@@ -1311,15 +1345,15 @@ function openJobDetails(jobId) {
           <span class="job-tag">${job.category}</span>
         </div>
         <div class="detail-line">
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Current Tracker Stage: </span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Tracker Stage: </span>
           <span class="job-tag" style="background: var(--primary-glow); color: white; font-weight: bold;">${currentStage}</span>
         </div>
       </div>
     </div>
     
     <div class="modal-job-section">
-      <h4 class="modal-section-title">About the Role</h4>
-      <p class="modal-job-text">${job.description}</p>
+      <h4 class="modal-section-title" style="font-size: 1.1rem; font-weight: 800; color: white; margin-bottom: 1rem;">About the Role & Engineering Scope</h4>
+      ${structuredAboutRoleHtml}
     </div>
     
     ${gapBox}
