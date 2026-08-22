@@ -94,6 +94,20 @@ PROFESSIONAL EXPERIENCE
   - Worked on Nexus OS data center networking, model-driven programmability, and REST API configurations.
 `;
 
+function ensureFilterSets() {
+  if (!state.activeFilters) {
+    state.activeFilters = { domain: new Set(), seniority: new Set(), location: new Set(), match: new Set() };
+    return;
+  }
+  const f = state.activeFilters;
+  state.activeFilters = {
+    domain: f.domain instanceof Set ? f.domain : new Set(Array.isArray(f.domain) ? f.domain : []),
+    seniority: f.seniority instanceof Set ? f.seniority : new Set(Array.isArray(f.seniority) ? f.seniority : []),
+    location: f.location instanceof Set ? f.location : new Set(Array.isArray(f.location) ? f.location : []),
+    match: f.match instanceof Set ? f.match : new Set(Array.isArray(f.match) ? f.match : [])
+  };
+}
+
 function loadState() {
   const savedState = localStorage.getItem("auratrack_state");
   if (savedState) {
@@ -105,6 +119,8 @@ function loadState() {
     }
   }
   
+  ensureFilterSets();
+
   // If resume text is empty or default, set Gnanendar's actual resume
   if (!state.resumeText || state.resumeText.includes("Alex Mercer")) {
     state.resumeText = DEFAULT_RESUME_TEXT;
@@ -114,7 +130,17 @@ function loadState() {
 }
 
 function saveState() {
-  localStorage.setItem("auratrack_state", JSON.stringify(state));
+  ensureFilterSets();
+  const serializableState = {
+    ...state,
+    activeFilters: {
+      domain: Array.from(state.activeFilters.domain),
+      seniority: Array.from(state.activeFilters.seniority),
+      location: Array.from(state.activeFilters.location),
+      match: Array.from(state.activeFilters.match)
+    }
+  };
+  localStorage.setItem("auratrack_state", JSON.stringify(serializableState));
 }
 
 // Unwanted Role Titles Regex
@@ -733,6 +759,7 @@ window.resetAllPillFilters = function() {
 
 // Page Render: Job Discovery Feed
 function renderJobDiscovery() {
+  ensureFilterSets();
   const grid = document.getElementById("jobs-grid");
   if (!grid) return;
   
