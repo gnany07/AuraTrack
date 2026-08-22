@@ -708,6 +708,8 @@ function renderJobDiscovery() {
   
   let matchCount = 0;
   
+  // 1. Filter matching jobs & sort descending by score (Top matches first)
+  const filteredJobs = [];
   evaluatedJobs.forEach(({ job, score, matchAnalysis }) => {
     // Relevance score threshold check (only if resume loaded)
     if (hideLowRelevance && score < 40 && searchVal.length === 0 && state.parsedResume?.skills?.length > 0) {
@@ -755,12 +757,27 @@ function renderJobDiscovery() {
       scoreMatches = (activeMatches.has("high") && isHigh) || (activeMatches.has("medium") && isMed);
     }
     
-    if (!textMatches || !domainMatches || !seniorityMatches || !locationMatches || !scoreMatches) {
-      return;
+    if (textMatches && domainMatches && seniorityMatches && locationMatches && scoreMatches) {
+      filteredJobs.push({ job, score, matchAnalysis });
     }
-    
-    matchCount++;
-    
+  });
+
+  const totalMatching = filteredJobs.length;
+  
+  // Update Matching Counter badge
+  const countEl = document.getElementById("matching-jobs-count");
+  if (countEl) countEl.textContent = totalMatching.toString();
+
+  // Reset page to 1 if active page is out of bounds
+  const totalPages = Math.ceil(totalMatching / 20) || 1;
+  let currentPage = state.discoveryPage || 1;
+  if (currentPage > totalPages) currentPage = 1;
+  state.discoveryPage = currentPage;
+
+  // 2. Slice 20 matching jobs for current page
+  const pageJobs = filteredJobs.slice((currentPage - 1) * 20, currentPage * 20);
+
+  pageJobs.forEach(({ job, score, matchAnalysis }) => {
     // Define score pill style
     let scorePillClass = "match-pill-low";
     let scoreLabel = score + "% Match";
@@ -773,7 +790,7 @@ function renderJobDiscovery() {
     }
 
     // Render Skill Badges (Top 3 matched, 2 gap)
-    const matchedSkillTags = (matchAnalysis.matchedSkills || []).slice(0, 3).map(s => 
+    const matchedSkillTags = (matchAnalysis.matchedSkills || []).slice(0, 4).map(s => 
       `<span class="skill-tag-match">✓ ${s}</span>`
     ).join("");
 
@@ -781,65 +798,61 @@ function renderJobDiscovery() {
       `<span class="skill-tag-gap">+ ${s}</span>`
     ).join("");
     
-    // Render Job Card
+    // Render Wide 1-Job-Per-Row Card
     const card = document.createElement("div");
-    card.className = "glass glass-interactive job-card";
+    card.className = "glass glass-interactive job-row-card";
     card.style.setProperty("--company-color", job.companyColor || "var(--primary)");
     card.onclick = () => openJobDetails(job.id);
     
     const logoHtml = job.logoUrl 
-      ? `<div class="company-logo-container" style="display: flex; align-items: center; gap: 0.5rem;">
-           <img src="${job.logoUrl}" class="company-logo" alt="${job.company} logo" style="width: 24px; height: 24px; border-radius: 4px; object-fit: contain;" onerror="this.style.display='none'">
-           <span class="company-badge" style="font-weight: 700; font-size: 0.95rem;">${job.company}</span>
+      ? `<div style="display: flex; align-items: center; gap: 0.6rem;">
+           <img src="${job.logoUrl}" alt="${job.company} logo" style="width: 28px; height: 28px; border-radius: 6px; object-fit: contain;" onerror="this.style.display='none'">
+           <span style="font-weight: 700; font-size: 1rem; color: #ffffff;">${job.company}</span>
          </div>`
-      : `<span class="company-badge" style="font-weight: 700; font-size: 0.95rem;">${job.company}</span>`;
+      : `<span style="font-weight: 700; font-size: 1rem; color: #ffffff;">${job.company}</span>`;
 
     card.innerHTML = `
-      <div>
-        <div class="job-card-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem;">
+      <!-- Column 1: Company & Title & Metadata -->
+      <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
           ${logoHtml}
-          <div class="${scorePillClass}">
-            ${scoreLabel}
+          <div style="display: flex; gap: 0.35rem;">
+            <span class="domain-tag">${job.domain || job.category}</span>
+            <span class="seniority-tag">${job.seniority || 'General'}</span>
           </div>
         </div>
-        <h3 class="job-title" style="font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.6rem; color: #ffffff;">${job.title}</h3>
-        <div class="job-details" style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
-          <div class="detail-line" style="display: flex; align-items: center; gap: 0.4rem;">
-            <svg class="detail-line-icon" style="width: 14px; height: 14px; stroke: var(--primary);" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <span>${job.location}</span>
-          </div>
-          <div class="detail-line" style="display: flex; align-items: center; gap: 0.4rem;">
-            <svg class="detail-line-icon" style="width: 14px; height: 14px; stroke: #10b981;" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span style="color: #34d399; font-weight: 600;">${job.salary}</span>
-          </div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.35;">${job.title}</h3>
+        <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary); flex-wrap: wrap;">
+          <span style="display: inline-flex; align-items: center; gap: 0.3rem;">📍 ${job.location}</span>
+          <span style="color: #34d399; font-weight: 600;">💰 ${job.salary}</span>
         </div>
+      </div>
 
-        <!-- Skill Pills -->
-        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1rem;">
-          ${matchedSkillTags}
+      <!-- Column 2: Skill Alignment Tags -->
+      <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+        <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Skills Alignment</span>
+        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+          ${matchedSkillTags || '<span class="skill-tag-gap">General Engineering</span>'}
           ${gapSkillTags}
         </div>
       </div>
 
-      <div class="job-card-footer" style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
-        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-          <span class="domain-tag">${job.domain || job.category}</span>
-          <span class="seniority-tag">${job.seniority || 'General'}</span>
+      <!-- Column 3: Score Badge & Actions -->
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem;">
+        <div class="${scorePillClass}">
+          ${scoreLabel}
         </div>
-        <span style="font-size: 0.825rem; color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
-          View details →
-        </span>
+        <div style="display: flex; align-items: center; gap: 0.5rem;" onclick="event.stopPropagation();">
+          <a href="${job.applyUrl}" target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Apply Now</a>
+          <button class="btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="openJobDetails('${job.id}')">View Details →</button>
+        </div>
       </div>
     `;
     
     grid.appendChild(card);
   });
-
-  // Update Matching Counter
-  const countEl = document.getElementById("matching-jobs-count");
-  if (countEl) countEl.textContent = matchCount.toString();
   
-  if (matchCount === 0) {
+  if (totalMatching === 0) {
     grid.innerHTML = `
       <div class="form-group-full" style="text-align: center; color: var(--text-muted); padding: 4rem 1rem; grid-column: span 3; background: rgba(255, 255, 255, 0.01); border-radius: 12px; border: 1px dashed rgba(255, 255, 255, 0.1);">
         <p style="font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 0.35rem;">No jobs match your selected filter criteria.</p>
@@ -848,6 +861,58 @@ function renderJobDiscovery() {
       </div>
     `;
   }
+
+  // Render Pagination Bar
+  renderPaginationControls(totalMatching, totalPages, currentPage);
+}
+
+window.changeDiscoveryPage = function(pageNumber) {
+  state.discoveryPage = pageNumber;
+  renderJobDiscovery();
+  const section = document.getElementById("section-discover");
+  if (section) section.scrollIntoView({ behavior: "smooth" });
+};
+
+function renderPaginationControls(totalMatching, totalPages, currentPage) {
+  const container = document.getElementById("pagination-container");
+  if (!container) return;
+
+  if (totalPages <= 1) {
+    container.innerHTML = "";
+    return;
+  }
+
+  const startIdx = (currentPage - 1) * 20 + 1;
+  const endIdx = Math.min(currentPage * 20, totalMatching);
+
+  let pageBtnsHtml = "";
+  
+  // Previous button
+  pageBtnsHtml += `<button class="page-btn" ${currentPage === 1 ? "disabled" : ""} onclick="changeDiscoveryPage(${currentPage - 1})">‹ Prev</button>`;
+
+  // Page numbers (smart windowing)
+  for (let i = 1; i <= totalPages; i++) {
+    if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+      pageBtnsHtml += `<button class="page-btn ${i === currentPage ? "active" : ""}" onclick="changeDiscoveryPage(${i})">${i}</button>`;
+    } else if (i === currentPage - 3 || i === currentPage + 3) {
+      pageBtnsHtml += `<span style="color: var(--text-muted); padding: 0 0.2rem;">...</span>`;
+    }
+  }
+
+  // Next button
+  pageBtnsHtml += `<button class="page-btn" ${currentPage === totalPages ? "disabled" : ""} onclick="changeDiscoveryPage(${currentPage + 1})">Next ›</button>`;
+
+  container.innerHTML = `
+    <div class="pagination-wrapper">
+      <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-secondary);">
+        Showing <strong style="color: var(--primary);">${startIdx} - ${endIdx}</strong> of <strong>${totalMatching}</strong> matching jobs (Page ${currentPage} of ${totalPages})
+      </div>
+      <div class="pagination-btn-group">
+        ${pageBtnsHtml}
+      </div>
+    </div>
+  `;
+}
 }
 
 function setupDiscoveryFilters() {
