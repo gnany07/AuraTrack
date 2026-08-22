@@ -514,57 +514,74 @@ window.submitResumeText = function() {
   showToast("Resume parsed and synchronized successfully!");
 };
 
+// Prevent default browser file drop behavior globally so browser doesn't open files in tab
+window.addEventListener("dragover", e => e.preventDefault(), false);
+window.addEventListener("drop", e => e.preventDefault(), false);
+
+window.handleFileInputChange = function(event) {
+  if (event.target.files && event.target.files.length > 0) {
+    handleUploadedFile(event.target.files[0]);
+  }
+};
+
 // Handle File Drag & Drop
 window.initDropzone = function() {
   const dropzone = document.getElementById("dropzone");
+  const fileInput = document.getElementById("resume-file-input");
   if (!dropzone) return;
   
-  dropzone.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropzone.classList.add("dragover");
+  ["dragenter", "dragover"].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.add("dragover");
+    }, false);
   });
   
-  dropzone.addEventListener("dragleave", () => {
-    dropzone.classList.remove("dragover");
+  ["dragleave", "drop"].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.remove("dragover");
+    }, false);
   });
   
   dropzone.addEventListener("drop", (e) => {
     e.preventDefault();
+    e.stopPropagation();
     dropzone.classList.remove("dragover");
     
-    const files = e.dataTransfer.files;
-    if (files.length > 0) {
+    const files = e.dataTransfer ? e.dataTransfer.files : [];
+    if (files && files.length > 0) {
       handleUploadedFile(files[0]);
     }
-  });
+  }, false);
   
-  dropzone.addEventListener("click", () => {
-    const fileInput = document.createElement("input");
-    fileInput.type = "file";
-    fileInput.accept = ".pdf,.txt";
-    fileInput.onchange = (e) => {
-      if (e.target.files.length > 0) {
-        handleUploadedFile(e.target.files[0]);
+  dropzone.addEventListener("click", (e) => {
+    if (e.target !== fileInput) {
+      if (fileInput) {
+        fileInput.value = "";
+        fileInput.click();
       }
-    };
-    fileInput.click();
+    }
   });
 };
 
 function handleUploadedFile(file) {
-  const isTxt = file.type === "text/plain" || file.name.endsWith(".txt");
-  const isPdf = file.type === "application/pdf" || file.name.endsWith(".pdf");
+  if (!file) return;
+  const ext = file.name.split('.').pop().toLowerCase();
+  const isTxt = ext === "txt" || ext === "md" || file.type === "text/plain";
+  const isPdf = ext === "pdf" || file.type === "application/pdf";
   
   if (!isTxt && !isPdf) {
-    showToast("Unsupported file type. Please upload a .txt or .pdf file.", "danger");
+    showToast("Unsupported file format. Please upload a .pdf, .txt, or .md resume.", "danger");
     return;
   }
   
   if (isTxt) {
     const reader = new FileReader();
     reader.onload = (e) => {
-      const text = e.target.result;
-      processExtractedText(text, file.name);
+      processExtractedText(e.target.result, file.name);
     };
     reader.readAsText(file);
   } else if (isPdf) {
@@ -579,23 +596,32 @@ function processExtractedText(text, filename) {
   state.parsedResume = parseResumeText(text);
   saveState();
   renderResumePortal();
-  showToast(`Loaded and parsed ${filename}`);
+  if (state.currentTab === "discover") renderJobDiscovery();
+  showToast(`Loaded and parsed ${filename} successfully!`);
 }
 
 async function parsePdfFile(file) {
   if (typeof pdfjsLib === "undefined") {
-    showToast("PDF parsing library not loaded. Please check your internet connection.", "danger");
+    showToast("PDF parsing library is loading. Retrying...", "warning");
+    setTimeout(() => parsePdfFile(file), 1000);
     return;
   }
   
-  showToast("Reading PDF file...", "warning");
-  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+  showToast("Extracting text from PDF...", "info");
+  
+  try {
+    if (pdfjsLib.GlobalWorkerOptions) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+    }
+  } catch (err) {
+    console.warn("PDF worker configuration warning:", err);
+  }
   
   const reader = new FileReader();
   reader.onload = async (e) => {
     const arrayBuffer = e.target.result;
     try {
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: false }).promise;
       let text = "";
       
       for (let i = 1; i <= pdf.numPages; i++) {
@@ -606,13 +632,14 @@ async function parsePdfFile(file) {
       }
       
       if (!text.trim()) {
-        showToast("Parsed PDF text was empty. Is the PDF scanned or an image?", "warning");
+        showToast("PDF contains no selectable text. Please ensure it is not a scanned image.", "warning");
+        return;
       }
       
       processExtractedText(text, file.name);
-} catch (err) {
-      console.error("PDF.js processing error:", err);
-      showToast("Failed to parse PDF. Ensure it is a valid text PDF.", "danger");
+    } catch (err) {
+      console.error("PDF processing error:", err);
+      showToast("Could not extract PDF text. Try pasting resume text directly.", "danger");
     }
   };
   reader.readAsArrayBuffer(file);
