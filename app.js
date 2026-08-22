@@ -1563,23 +1563,32 @@ async function callGeminiAPI(prompt, systemInstruction = "") {
     throw new Error("Empty response from Gemini API");
   }
 
-  // 2. Otherwise, call secure server proxy endpoint (/api/ai/generate) using gitignored .env key
-  const proxyRes = await fetch("/api/ai/generate", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt, systemInstruction, model: GEMINI_MODEL })
-  });
+  // 2. Otherwise, attempt calling local server proxy endpoint (/api/ai/generate)
+  try {
+    const proxyRes = await fetch("/api/ai/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt, systemInstruction, model: GEMINI_MODEL })
+    });
 
-  if (!proxyRes.ok) {
-    const errData = await proxyRes.json().catch(() => ({}));
-    throw new Error(errData.message || `Server Proxy Error ${proxyRes.status}`);
+    if (proxyRes.ok) {
+      const data = await proxyRes.json();
+      if (data.status === "success") {
+        return data.result;
+      }
+    }
+  } catch (err) {
+    // Backend server proxy unavailable (e.g. static host like GitHub Pages)
   }
 
-  const data = await proxyRes.json();
-  if (data.status === "success") {
-    return data.result;
+  // 3. Prompt user on static host for their free Gemini key if not saved yet
+  const keyInput = prompt("GitHub Pages Static Mode: Enter your Free Gemini API Key to run AI Cover Letters & Bullet Optimization:\n\n(Get your 100% free key in 5 seconds at https://aistudio.google.com/app/apikey)");
+  if (keyInput && keyInput.trim().length > 5) {
+    saveGeminiAPIKey(keyInput.trim());
+    return callGeminiAPI(prompt, systemInstruction);
   }
-  throw new Error(data.message || "Failed to generate AI content via backend proxy");
+
+  throw new Error("Gemini API key is required on static web hosts.");
 }
 
 // 1. Cover Letter Generator implementation
