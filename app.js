@@ -96,7 +96,7 @@ PROFESSIONAL EXPERIENCE
 
 function ensureFilterSets() {
   if (!state.activeFilters) {
-    state.activeFilters = { domain: new Set(), seniority: new Set(), location: new Set(), match: new Set() };
+    state.activeFilters = { domain: new Set(), seniority: new Set(), location: new Set(), match: new Set(), salary: new Set() };
     return;
   }
   const f = state.activeFilters;
@@ -104,7 +104,8 @@ function ensureFilterSets() {
     domain: f.domain instanceof Set ? f.domain : new Set(Array.isArray(f.domain) ? f.domain : []),
     seniority: f.seniority instanceof Set ? f.seniority : new Set(Array.isArray(f.seniority) ? f.seniority : []),
     location: f.location instanceof Set ? f.location : new Set(Array.isArray(f.location) ? f.location : []),
-    match: f.match instanceof Set ? f.match : new Set(Array.isArray(f.match) ? f.match : [])
+    match: f.match instanceof Set ? f.match : new Set(Array.isArray(f.match) ? f.match : []),
+    salary: f.salary instanceof Set ? f.salary : new Set(Array.isArray(f.salary) ? f.salary : [])
   };
 }
 
@@ -137,7 +138,8 @@ function saveState() {
       domain: Array.from(state.activeFilters.domain),
       seniority: Array.from(state.activeFilters.seniority),
       location: Array.from(state.activeFilters.location),
-      match: Array.from(state.activeFilters.match)
+      match: Array.from(state.activeFilters.match),
+      salary: Array.from(state.activeFilters.salary)
     }
   };
   localStorage.setItem("auratrack_state", JSON.stringify(serializableState));
@@ -755,7 +757,8 @@ window.resetAllPillFilters = function() {
     domain: new Set(),
     seniority: new Set(),
     location: new Set(),
-    match: new Set()
+    match: new Set(),
+    salary: new Set()
   };
   document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
   const searchInput = document.getElementById("job-search");
@@ -779,6 +782,7 @@ function renderJobDiscovery() {
   const activeSeniorities = state.activeFilters?.seniority || new Set();
   const activeLocations = state.activeFilters?.location || new Set();
   const activeMatches = state.activeFilters?.match || new Set();
+  const activeSalaries = state.activeFilters?.salary || new Set();
 
   // Render Active Filter Tags
   const activeTagsContainer = document.getElementById("active-tags-container");
@@ -788,6 +792,7 @@ function renderJobDiscovery() {
     activeSeniorities.forEach(val => tags.push({ cat: "seniority", label: val }));
     activeLocations.forEach(val => tags.push({ cat: "location", label: val }));
     activeMatches.forEach(val => tags.push({ cat: "match", label: val === "high" ? "75%+ High Match" : "50%+ Moderate Match" }));
+    activeSalaries.forEach(val => tags.push({ cat: "salary", label: val === "200k" ? "$200k+ Compensation" : val === "150k" ? "$150k+ Compensation" : "Competitive / Equity" }));
 
     if (tags.length === 0) {
       activeTagsContainer.innerHTML = `<span style="font-size: 0.8rem; color: var(--text-muted);">All Jobs</span>`;
@@ -865,7 +870,24 @@ function renderJobDiscovery() {
       scoreMatches = (activeMatches.has("high") && isHigh) || (activeMatches.has("medium") && isMed);
     }
     
-    if (textMatches && domainMatches && seniorityMatches && locationMatches && scoreMatches) {
+    // Compensation Range filter (Multi-select)
+    let salaryMatches = activeSalaries.size === 0;
+    if (!salaryMatches) {
+      const salStr = (job.salary || "").toLowerCase();
+      const matches = salStr.match(/(\d[\d,]*)/g) || [];
+      const parsedNums = matches.map(m => parseInt(m.replace(/,/g, ""), 10)).filter(n => !isNaN(n));
+      let maxVal = parsedNums.length > 0 ? Math.max(...parsedNums) : 0;
+      if (maxVal > 0 && maxVal < 1000) maxVal *= 1000;
+
+      salaryMatches = [...activeSalaries].some(sal => {
+        if (sal === "200k") return maxVal >= 180000 || salStr.includes("200") || salStr.includes("300") || salStr.includes("250") || salStr.includes("160k") || salStr.includes("180k");
+        if (sal === "150k") return maxVal >= 140000 || salStr.includes("150") || salStr.includes("180") || salStr.includes("200") || salStr.includes("120k");
+        if (sal === "competitive") return salStr.includes("competitive") || salStr.includes("equity") || salStr.includes("doe");
+        return false;
+      });
+    }
+
+    if (textMatches && domainMatches && seniorityMatches && locationMatches && scoreMatches && salaryMatches) {
       filteredJobs.push({ job, score, matchAnalysis });
     }
   });
