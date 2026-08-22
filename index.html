@@ -170,77 +170,88 @@
 
     <!-- Tab 2: Job Discovery Feed -->
     <section id="section-discover" class="dashboard-section">
-      <!-- Search and filters -->
-      <div class="glass filter-bar">
-        <div class="search-input-wrapper">
-          <svg class="search-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-          <input type="text" id="job-search" class="search-input" placeholder="Search roles, skills, or companies...">
-        </div>
+      <!-- Search and Interactive Pill Filters -->
+      <div class="glass filter-bar-v2" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem; border-radius: 14px;">
         
-        <select id="filter-domain" class="select-filter" multiple size="4" title="Multi-select: Tech Domain">
-          <option value="">All Domains</option>
-          <option value="AI / LLM Infra">AI / LLM Infra</option>
-          <option value="Distributed Systems">Distributed Systems</option>
-          <option value="Systems & Low-Level">Systems & Low-Level</option>
-          <option value="ML Engineering">ML Engineering</option>
-          <option value="Backend & Platform">Backend & Platform</option>
-        </select>
-
-        <select id="filter-seniority" class="select-filter" multiple size="4" title="Multi-select: Seniority Level">
-          <option value="">All Seniorities</option>
-          <option value="Staff / Lead">Staff / Lead</option>
-          <option value="Senior">Senior</option>
-          <option value="Mid / General">Mid / General</option>
-        </select>
-
-        <select id="filter-company" class="select-filter" multiple size="4" title="Multi-select: Companies">
-          <option value="">All Companies</option>
-        </select>
-        
-        <select id="filter-location" class="select-filter" multiple size="4" title="Multi-select: Locations">
-          <option value="">All Locations</option>
-        </select>
-        
-        <select id="filter-match" class="select-filter" multiple size="4" title="Multi-select: Score Band">
-          <option value="">All Scores</option>
-          <option value="high">High Matches (75%+)</option>
-          <option value="medium">Medium Matches (50%-74%)</option>
-          <option value="low">Low Matches (&lt;50%)</option>
-        </select>
-
-        <button id="sync-jobs-btn" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem;" onclick="syncLiveJobs()">
-          <svg id="sync-icon-svg" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6H16" />
-          </svg>
-          <span id="sync-btn-text">Sync Jobs</span>
-        </button>
-        <button class="btn" onclick="openAddJobModal()">+ Add Custom Job</button>
-      </div>
-
-      <!-- Presets and Intelligent Relevance Bar -->
-      <div class="filter-controls-row" style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 0.75rem 1.25rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
-        <div class="preset-chips-container" style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-          <span class="preset-label" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Presets:</span>
-          <button class="preset-chip" onclick="applyFilterPreset('highMatch')">🎯 75%+ High Match</button>
-          <button class="preset-chip" onclick="applyFilterPreset('aiInfra')">🚀 AI & LLM Infra</button>
-          <button class="preset-chip" onclick="applyFilterPreset('systems')">⚙️ Systems & Distributed</button>
-          <button class="preset-chip" onclick="applyFilterPreset('london')">🇬🇧 UK / London</button>
+        <!-- Search & Action Row -->
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div class="search-input-wrapper" style="flex-grow: 1;">
+            <svg class="search-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" id="job-search" class="search-input" placeholder="Search by job title, skill (CUDA, PyTorch, C++), company, or keyword...">
+          </div>
+          
+          <button id="sync-jobs-btn" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem;" onclick="syncLiveJobs()">
+            <svg id="sync-icon-svg" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6H16" />
+            </svg>
+            <span id="sync-btn-text">Sync Live Jobs</span>
+          </button>
+          <button class="btn" onclick="openAddJobModal()">+ Add Custom Job</button>
         </div>
 
-        <div class="relevance-toggle-container" style="display: flex; align-items: center; gap: 0.5rem;">
-          <label class="toggle-switch" style="position: relative; display: inline-block; width: 38px; height: 22px;">
-            <input type="checkbox" id="toggle-relevance" onchange="renderJobDiscovery()" style="opacity: 0; width: 0; height: 0;">
-            <span class="toggle-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.1); transition: .3s; border-radius: 22px; border: 1px solid var(--border-color);"></span>
-          </label>
-          <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Hide Low Relevance (&lt;40% Match)</span>
+        <!-- Pill Filters Container -->
+        <div class="pill-filters-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+          
+          <!-- Technical Domain Pills -->
+          <div>
+            <div class="filter-section-title">Technical Domain Tracks</div>
+            <div class="filter-pill-group" id="domain-pill-group">
+              <button class="filter-pill" data-type="domain" data-val="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">🚀 AI / LLM Infra</button>
+              <button class="filter-pill" data-type="domain" data-val="Distributed Systems" onclick="togglePillFilter('domain', 'Distributed Systems', this)">⚙️ Distributed Systems</button>
+              <button class="filter-pill" data-type="domain" data-val="Systems & Low-Level" onclick="togglePillFilter('domain', 'Systems & Low-Level', this)">💻 Systems & Low-Level</button>
+              <button class="filter-pill" data-type="domain" data-val="ML Engineering" onclick="togglePillFilter('domain', 'ML Engineering', this)">🧠 ML Engineering</button>
+              <button class="filter-pill" data-type="domain" data-val="Backend & Platform" onclick="togglePillFilter('domain', 'Backend & Platform', this)">🔧 Backend & Platform</button>
+            </div>
+          </div>
+
+          <!-- Seniority Level Pills -->
+          <div>
+            <div class="filter-section-title">Seniority Level</div>
+            <div class="filter-pill-group" id="seniority-pill-group">
+              <button class="filter-pill" data-type="seniority" data-val="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">👑 Staff / Lead</button>
+              <button class="filter-pill" data-type="seniority" data-val="Senior" onclick="togglePillFilter('seniority', 'Senior', this)">⭐ Senior</button>
+              <button class="filter-pill" data-type="seniority" data-val="Mid / General" onclick="togglePillFilter('seniority', 'Mid / General', this)">⚡ Mid / General</button>
+            </div>
+          </div>
+
+          <!-- Location & Match Score Pills -->
+          <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
+            <div>
+              <div class="filter-section-title">Location</div>
+              <div class="filter-pill-group" id="location-pill-group">
+                <button class="filter-pill" data-type="location" data-val="San Francisco" onclick="togglePillFilter('location', 'San Francisco', this)">🇺🇸 San Francisco / US</button>
+                <button class="filter-pill" data-type="location" data-val="London" onclick="togglePillFilter('location', 'London', this)">🇬🇧 London / UK</button>
+                <button class="filter-pill" data-type="location" data-val="Remote" onclick="togglePillFilter('location', 'Remote', this)">🌐 Remote</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="filter-section-title">Match Level</div>
+              <div class="filter-pill-group" id="match-pill-group">
+                <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">🎯 High Match (75%+)</button>
+                <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">👍 Moderate Match (50%+)</button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="active-filter-status" style="display: flex; align-items: center; gap: 1rem;">
-          <span id="active-filter-badge" style="font-size: 0.85rem; color: var(--text-muted);">Active Filters: <strong id="active-filter-count" style="color: var(--primary);">0</strong></span>
-          <button class="btn-text-link" onclick="resetAllFilters()" style="background: none; border: none; color: var(--accent); font-size: 0.85rem; font-weight: 600; cursor: pointer; text-decoration: underline;">Reset Filters</button>
+        <!-- Active Filter Chips & Counter Bar -->
+        <div class="active-filter-row" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Active Filters:</span>
+            <div id="active-tags-container" style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">None</span>
+            </div>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span id="results-count-badge" style="font-size: 0.875rem; font-weight: 600; color: var(--text-secondary);">Showing <strong id="matching-jobs-count" style="color: var(--primary);">456</strong> of 456 jobs</span>
+            <button class="btn-text-link" onclick="resetAllPillFilters()" style="background: none; border: none; color: #f43f5e; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-decoration: underline;">Clear All Filters</button>
+          </div>
         </div>
+
       </div>
       
       <!-- Jobs Grid -->

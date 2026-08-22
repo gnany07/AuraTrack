@@ -610,13 +610,52 @@ async function parsePdfFile(file) {
       }
       
       processExtractedText(text, file.name);
-    } catch (err) {
+} catch (err) {
       console.error("PDF.js processing error:", err);
       showToast("Failed to parse PDF. Ensure it is a valid text PDF.", "danger");
     }
   };
   reader.readAsArrayBuffer(file);
 }
+
+// --- Interactive Pill Filter State & Engine ---
+if (!state.activeFilters) {
+  state.activeFilters = {
+    domain: new Set(),
+    seniority: new Set(),
+    location: new Set(),
+    match: new Set()
+  };
+}
+
+window.togglePillFilter = function(category, val, btnEl) {
+  if (!state.activeFilters[category]) {
+    state.activeFilters[category] = new Set();
+  }
+  const set = state.activeFilters[category];
+  if (set.has(val)) {
+    set.delete(val);
+    if (btnEl) btnEl.classList.remove("active");
+  } else {
+    set.add(val);
+    if (btnEl) btnEl.classList.add("active");
+  }
+  renderJobDiscovery();
+};
+
+window.resetAllPillFilters = function() {
+  state.activeFilters = {
+    domain: new Set(),
+    seniority: new Set(),
+    location: new Set(),
+    match: new Set()
+  };
+  document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+  const searchInput = document.getElementById("job-search");
+  if (searchInput) searchInput.value = "";
+  renderJobDiscovery();
+  showToast("Cleared all active filters");
+};
 
 // Page Render: Job Discovery Feed
 function renderJobDiscovery() {
@@ -625,43 +664,34 @@ function renderJobDiscovery() {
   
   const searchInput = document.getElementById("job-search");
   const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : "";
-  const companySelect = document.getElementById("filter-company");
-  const domainSelect = document.getElementById("filter-domain");
-  const senioritySelect = document.getElementById("filter-seniority");
-  const matchSelect = document.getElementById("filter-match");
-  const locationSelect = document.getElementById("filter-location");
   const toggleRelevance = document.getElementById("toggle-relevance");
-  
-  // Multi-select support: filter passes if job matches ANY selected value.
-  const companyVals = companySelect
-    ? Array.from(companySelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const domainVals = domainSelect
-    ? Array.from(domainSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const seniorityVals = senioritySelect
-    ? Array.from(senioritySelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const matchVals = matchSelect
-    ? Array.from(matchSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  const locationVals = locationSelect
-    ? Array.from(locationSelect.selectedOptions).map(o => o.value).filter(v => v !== "")
-    : [];
-  
   const hideLowRelevance = toggleRelevance ? toggleRelevance.checked : false;
 
-  // Active Filters Counter calculation
-  let activeFilterCount = 0;
-  if (searchVal.length > 0) activeFilterCount++;
-  if (domainVals.length > 0) activeFilterCount++;
-  if (seniorityVals.length > 0) activeFilterCount++;
-  if (companyVals.length > 0) activeFilterCount++;
-  if (locationVals.length > 0) activeFilterCount++;
-  if (matchVals.length > 0) activeFilterCount++;
+  const activeDomains = state.activeFilters?.domain || new Set();
+  const activeSeniorities = state.activeFilters?.seniority || new Set();
+  const activeLocations = state.activeFilters?.location || new Set();
+  const activeMatches = state.activeFilters?.match || new Set();
 
-  const activeCountEl = document.getElementById("active-filter-count");
-  if (activeCountEl) activeCountEl.textContent = activeFilterCount.toString();
+  // Render Active Filter Tags
+  const activeTagsContainer = document.getElementById("active-tags-container");
+  if (activeTagsContainer) {
+    const tags = [];
+    activeDomains.forEach(val => tags.push({ cat: "domain", label: val }));
+    activeSeniorities.forEach(val => tags.push({ cat: "seniority", label: val }));
+    activeLocations.forEach(val => tags.push({ cat: "location", label: val }));
+    activeMatches.forEach(val => tags.push({ cat: "match", label: val === "high" ? "75%+ High Match" : "50%+ Moderate Match" }));
+
+    if (tags.length === 0) {
+      activeTagsContainer.innerHTML = `<span style="font-size: 0.8rem; color: var(--text-muted);">All Jobs</span>`;
+    } else {
+      activeTagsContainer.innerHTML = tags.map(t => 
+        `<span class="active-tag-chip">
+           ${t.label}
+           <span class="remove-tag" onclick="togglePillFilter('${t.cat}', '${t.label}', document.querySelector('[data-type=\\'${t.cat}\\'][data-val=\\'${t.label}\\']'))">×</span>
+         </span>`
+      ).join("");
+    }
+  }
 
   const allJobs = getAllJobs();
   
@@ -673,14 +703,14 @@ function renderJobDiscovery() {
     const matchAnalysis = calculateMatchScore(job, state.parsedResume);
     return { job, score: matchAnalysis.score, matchAnalysis };
   })
-  .filter(item => item.score > 0 || searchVal.length > 0) // Exclude 0 score unwanted jobs unless user is explicitly searching
+  .filter(item => item.score > 0 || searchVal.length > 0) // Exclude 0 score unwanted jobs
   .sort((a, b) => b.score - a.score);
   
   let matchCount = 0;
   
   evaluatedJobs.forEach(({ job, score, matchAnalysis }) => {
-    // Relevance score threshold check
-    if (hideLowRelevance && score < 40 && searchVal.length === 0) {
+    // Relevance score threshold check (only if resume loaded)
+    if (hideLowRelevance && score < 40 && searchVal.length === 0 && state.parsedResume?.skills?.length > 0) {
       return;
     }
 
@@ -692,35 +722,49 @@ function renderJobDiscovery() {
                         (job.description || "").toLowerCase().includes(searchVal) ||
                         (job.requirements || []).some(req => req.toLowerCase().includes(searchVal));
                         
-    // Domain select filter
-    const domainMatches = domainVals.length === 0 || domainVals.includes(job.domain);
+    // Domain filter (Multi-select)
+    const domainMatches = activeDomains.size === 0 || activeDomains.has(job.domain);
 
-    // Seniority select filter
-    const seniorityMatches = seniorityVals.length === 0 || seniorityVals.includes(job.seniority);
-
-    // Company select filter
-    const companyMatches = companyVals.length === 0 || companyVals.includes(job.company);
+    // Seniority filter (Multi-select)
+    const seniorityMatches = activeSeniorities.size === 0 || activeSeniorities.has(job.seniority);
     
-    // Location select filter
-    const locationMatches = locationVals.length === 0 || locationVals.includes(job.location);
+    // Location filter (Multi-select)
+    const locationMatches = activeLocations.size === 0 || 
+                            [...activeLocations].some(loc => (job.location || "").toLowerCase().includes(loc.toLowerCase()));
     
     // Match score filter
     let scoreMatches = true;
-    if (matchVals.length > 0) {
-      const scoreBand = score >= 75 ? "high" : (score >= 50 ? "medium" : "low");
-      scoreMatches = matchVals.includes(scoreBand);
+    if (activeMatches.size > 0) {
+      const isHigh = score >= 75;
+      const isMed = score >= 50;
+      scoreMatches = (activeMatches.has("high") && isHigh) || (activeMatches.has("medium") && isMed);
     }
     
-    if (!textMatches || !domainMatches || !seniorityMatches || !companyMatches || !locationMatches || !scoreMatches) {
+    if (!textMatches || !domainMatches || !seniorityMatches || !locationMatches || !scoreMatches) {
       return;
     }
     
     matchCount++;
     
-    // Define score class
-    let scoreClass = "low";
-    if (score >= 75) scoreClass = "high";
-    else if (score >= 50) scoreClass = "medium";
+    // Define score pill style
+    let scorePillClass = "match-pill-low";
+    let scoreLabel = score + "% Match";
+    if (score >= 75) {
+      scorePillClass = "match-pill-high";
+      scoreLabel = "🎯 " + score + "% High Match";
+    } else if (score >= 50) {
+      scorePillClass = "match-pill-med";
+      scoreLabel = "👍 " + score + "% Match";
+    }
+
+    // Render Skill Badges (Top 3 matched, 2 gap)
+    const matchedSkillTags = (matchAnalysis.matchedSkills || []).slice(0, 3).map(s => 
+      `<span class="skill-tag-match">✓ ${s}</span>`
+    ).join("");
+
+    const gapSkillTags = (matchAnalysis.missingSkills || []).slice(0, 2).map(s => 
+      `<span class="skill-tag-gap">+ ${s}</span>`
+    ).join("");
     
     // Render Job Card
     const card = document.createElement("div");
@@ -729,176 +773,99 @@ function renderJobDiscovery() {
     card.onclick = () => openJobDetails(job.id);
     
     const logoHtml = job.logoUrl 
-      ? `<div class="company-logo-container">
-           <img src="${job.logoUrl}" class="company-logo" alt="${job.company} logo" onerror="this.style.display='none'">
-           <span class="company-badge">${job.company}</span>
+      ? `<div class="company-logo-container" style="display: flex; align-items: center; gap: 0.5rem;">
+           <img src="${job.logoUrl}" class="company-logo" alt="${job.company} logo" style="width: 24px; height: 24px; border-radius: 4px; object-fit: contain;" onerror="this.style.display='none'">
+           <span class="company-badge" style="font-weight: 700; font-size: 0.95rem;">${job.company}</span>
          </div>`
-      : `<span class="company-badge">${job.company}</span>`;
+      : `<span class="company-badge" style="font-weight: 700; font-size: 0.95rem;">${job.company}</span>`;
 
     card.innerHTML = `
       <div>
-        <div class="job-card-header">
+        <div class="job-card-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem;">
           ${logoHtml}
-          <div class="match-circle ${scoreClass}">
-            ${state.resumeText ? score + "%" : "--"}
+          <div class="${scorePillClass}">
+            ${scoreLabel}
           </div>
         </div>
-        <h3 class="job-title">${job.title}</h3>
-        <div class="job-details">
-          <div class="detail-line">
-            <svg class="detail-line-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <h3 class="job-title" style="font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.6rem; color: #ffffff;">${job.title}</h3>
+        <div class="job-details" style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          <div class="detail-line" style="display: flex; align-items: center; gap: 0.4rem;">
+            <svg class="detail-line-icon" style="width: 14px; height: 14px; stroke: var(--primary);" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             <span>${job.location}</span>
           </div>
-          <div class="detail-line">
-            <svg class="detail-line-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span>${job.salary}</span>
+          <div class="detail-line" style="display: flex; align-items: center; gap: 0.4rem;">
+            <svg class="detail-line-icon" style="width: 14px; height: 14px; stroke: #10b981;" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span style="color: #34d399; font-weight: 600;">${job.salary}</span>
           </div>
         </div>
+
+        <!-- Skill Pills -->
+        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1rem;">
+          ${matchedSkillTags}
+          ${gapSkillTags}
+        </div>
       </div>
-      <div class="job-card-footer">
+
+      <div class="job-card-footer" style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
         <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
           <span class="domain-tag">${job.domain || job.category}</span>
           <span class="seniority-tag">${job.seniority || 'General'}</span>
         </div>
-        <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
-          View details
-          <svg style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
-            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <span style="font-size: 0.825rem; color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+          View details →
         </span>
       </div>
     `;
     
     grid.appendChild(card);
   });
+
+  // Update Matching Counter
+  const countEl = document.getElementById("matching-jobs-count");
+  if (countEl) countEl.textContent = matchCount.toString();
   
   if (matchCount === 0) {
     grid.innerHTML = `
-      <div class="form-group-full" style="text-align: center; color: var(--text-muted); padding: 4rem 1rem; grid-column: span 3;">
-        <p style="font-size: 1.1rem; margin-bottom: 0.25rem;">No jobs match your active filters.</p>
-        <p style="font-size: 0.9rem;">Try clearing your filters or turning off "Hide Low Relevance".</p>
+      <div class="form-group-full" style="text-align: center; color: var(--text-muted); padding: 4rem 1rem; grid-column: span 3; background: rgba(255, 255, 255, 0.01); border-radius: 12px; border: 1px dashed rgba(255, 255, 255, 0.1);">
+        <p style="font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 0.35rem;">No jobs match your selected filter criteria.</p>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Try clearing your active pill filters to view all 456 opportunities.</p>
+        <button class="btn" onclick="resetAllPillFilters()">Clear All Active Filters</button>
       </div>
     `;
   }
 }
 
-// Populating filter drop-downs dynamically
 function setupDiscoveryFilters() {
-  const companySelect = document.getElementById("filter-company");
-  const domainSelect = document.getElementById("filter-domain");
-  const senioritySelect = document.getElementById("filter-seniority");
-  const locationSelect = document.getElementById("filter-location");
-  const matchSelect = document.getElementById("filter-match");
-  
-  if (!companySelect || !domainSelect || !senioritySelect || !locationSelect || !matchSelect) return;
-  
-  companySelect.innerHTML = `<option value="">All Companies</option>`;
-  locationSelect.innerHTML = `<option value="">All Locations</option>`;
-  
-  const allJobs = getAllJobs();
-  
-  const companies = [...new Set(allJobs.map(j => j.company))].sort();
-  companies.forEach(company => {
-    companySelect.innerHTML += `<option value="${company}">${company}</option>`;
-  });
-  
-  const locations = [...new Set(allJobs.map(j => j.location))].sort();
-  locations.forEach(location => {
-    locationSelect.innerHTML += `<option value="${location}">${location}</option>`;
-  });
-  
-  // Set listeners
-  document.getElementById("job-search").oninput = renderJobDiscovery;
-  companySelect.onchange = renderJobDiscovery;
-  domainSelect.onchange = renderJobDiscovery;
-  senioritySelect.onchange = renderJobDiscovery;
-  locationSelect.onchange = renderJobDiscovery;
-  matchSelect.onchange = renderJobDiscovery;
-
-  // Plain-click toggling for multiple selects
-  function enablePlainClickToggle(selectEl) {
-    if (!selectEl || !selectEl.multiple) return;
-    
-    selectEl.addEventListener("mousedown", (e) => {
-      const opt = e.target;
-      if (!opt || opt.tagName !== "OPTION") return;
-      
-      if (e.metaKey || e.ctrlKey || e.shiftKey) return;
-      
-      if (opt.value === "") {
-        Array.from(selectEl.options).forEach(o => { o.selected = o.value === ""; });
-      } else {
-        const allOpt = Array.from(selectEl.options).find(o => o.value === "");
-        if (allOpt) allOpt.selected = false;
-        opt.selected = !opt.selected;
-      }
-      
-      e.preventDefault();
-      renderJobDiscovery();
-    });
+  const searchInput = document.getElementById("job-search");
+  if (searchInput) {
+    searchInput.oninput = renderJobDiscovery;
   }
-
-  enablePlainClickToggle(companySelect);
-  enablePlainClickToggle(domainSelect);
-  enablePlainClickToggle(senioritySelect);
-  enablePlainClickToggle(locationSelect);
-  enablePlainClickToggle(matchSelect);
 }
 
 window.applyFilterPreset = function(preset) {
-  window.resetAllFilters(false);
+  window.resetAllPillFilters();
   
   if (preset === 'highMatch') {
-    const matchSelect = document.getElementById("filter-match");
-    if (matchSelect) {
-      for (let o of matchSelect.options) {
-        if (o.value === "high") o.selected = true;
-      }
-    }
+    const btn = document.querySelector('[data-type="match"][data-val="high"]');
+    togglePillFilter('match', 'high', btn);
   } else if (preset === 'aiInfra') {
-    const domainSelect = document.getElementById("filter-domain");
-    if (domainSelect) {
-      for (let o of domainSelect.options) {
-        if (o.value === "AI / LLM Infra") o.selected = true;
-      }
-    }
+    const btn = document.querySelector('[data-type="domain"][data-val="AI / LLM Infra"]');
+    togglePillFilter('domain', 'AI / LLM Infra', btn);
   } else if (preset === 'systems') {
-    const domainSelect = document.getElementById("filter-domain");
-    if (domainSelect) {
-      for (let o of domainSelect.options) {
-        if (o.value === "Distributed Systems" || o.value === "Systems & Low-Level") o.selected = true;
-      }
-    }
+    const btn1 = document.querySelector('[data-type="domain"][data-val="Distributed Systems"]');
+    const btn2 = document.querySelector('[data-type="domain"][data-val="Systems & Low-Level"]');
+    togglePillFilter('domain', 'Distributed Systems', btn1);
+    togglePillFilter('domain', 'Systems & Low-Level', btn2);
   } else if (preset === 'london') {
-    const searchInput = document.getElementById("job-search");
-    if (searchInput) searchInput.value = "London";
+    const btn = document.querySelector('[data-type="location"][data-val="London"]');
+    togglePillFilter('location', 'London', btn);
   }
 
-  renderJobDiscovery();
   showToast(`Applied filter preset`);
 };
 
 window.resetAllFilters = function(shouldRender = true) {
-  const searchInput = document.getElementById("job-search");
-  if (searchInput) searchInput.value = "";
-
-  const selects = ["filter-domain", "filter-seniority", "filter-company", "filter-location", "filter-match"];
-  selects.forEach(id => {
-    const sel = document.getElementById(id);
-    if (sel) {
-      for (let o of sel.options) {
-        o.selected = o.value === "";
-      }
-    }
-  });
-
-  const toggle = document.getElementById("toggle-relevance");
-  if (toggle) toggle.checked = true;
-
-  if (shouldRender) {
-    renderJobDiscovery();
-    showToast("Reset all filters");
-  }
+  window.resetAllPillFilters();
 };
 
 // Page Render: Kanban Application Tracker
