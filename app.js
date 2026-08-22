@@ -599,47 +599,77 @@ function processExtractedText(text, filename) {
   showToast(`Parsed ${filename}! Showing tailored job matches.`);
 }
 
-async function parsePdfFile(file) {
-  if (typeof pdfjsLib === "undefined") {
-    showToast("PDF parsing library is loading. Retrying...", "warning");
-    setTimeout(() => parsePdfFile(file), 1000);
-    return;
-  }
-  
-  showToast("Extracting text from PDF...", "info");
-  
+function extractFallbackPdfText(arrayBuffer) {
   try {
-    if (pdfjsLib.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+    const bytes = new Uint8Array(arrayBuffer);
+    let str = "";
+    for (let i = 0; i < bytes.length; i++) {
+      const b = bytes[i];
+      if ((b >= 32 && b <= 126) || b === 10 || b === 13 || b === 9) {
+        str += String.fromCharCode(b);
+      } else {
+        str += " ";
+      }
     }
-  } catch (err) {
-    console.warn("PDF worker configuration warning:", err);
+    return str.replace(/[\/\(\)\<\>\{\}\[\]]/g, " ").replace(/\s+/g, " ").trim();
+  } catch (e) {
+    return "";
   }
+}
+
+async function parsePdfFile(file) {
+  showToast("Extracting text from PDF...", "info");
   
   const reader = new FileReader();
   reader.onload = async (e) => {
     const arrayBuffer = e.target.result;
-    try {
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: false }).promise;
-      let text = "";
-      
-      for (let i = 1; i <= pdf.numPages; i++) {
-        const page = await pdf.getPage(i);
-        const textContent = await page.getTextContent();
-        const pageText = textContent.items.map(item => item.str).join(" ");
-        text += pageText + "\n";
+    const typedArray = new Uint8Array(arrayBuffer);
+    
+    // 1. Attempt PDF.js parsing
+    if (typeof pdfjsLib !== "undefined") {
+      try {
+        if (pdfjsLib.GlobalWorkerOptions) {
+          pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+        }
+      } catch (err) {
+        console.warn("PDF worker configuration warning:", err);
       }
       
-      if (!text.trim()) {
-        showToast("PDF contains no selectable text. Please ensure it is not a scanned image.", "warning");
-        return;
+      try {
+        let pdf;
+        try {
+          pdf = await pdfjsLib.getDocument({ data: typedArray }).promise;
+        } catch (workerErr) {
+          console.warn("Worker getDocument failed, retrying with fake worker...", workerErr);
+          if (pdfjsLib.GlobalWorkerOptions) pdfjsLib.GlobalWorkerOptions.workerSrc = "";
+          pdf = await pdfjsLib.getDocument({ data: typedArray, disableWorker: true }).promise;
+        }
+        
+        let text = "";
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i);
+          const textContent = await page.getTextContent();
+          const pageText = textContent.items.map(item => item.str).join(" ");
+          text += pageText + "\n";
+        }
+        
+        if (text.trim().length > 30) {
+          processExtractedText(text, file.name);
+          return;
+        }
+      } catch (err) {
+        console.warn("PDF.js primary extraction failed, trying stream fallback:", err);
       }
-      
-      processExtractedText(text, file.name);
-    } catch (err) {
-      console.error("PDF processing error:", err);
-      showToast("Could not extract PDF text. Try pasting resume text directly.", "danger");
     }
+    
+    // 2. Fallback PDF text stream extractor
+    const fallbackText = extractFallbackPdfText(arrayBuffer);
+    if (fallbackText && fallbackText.length > 50) {
+      processExtractedText(fallbackText, file.name);
+      return;
+    }
+    
+    showToast("Could not extract PDF text. Try pasting your resume text directly.", "danger");
   };
   reader.readAsArrayBuffer(file);
 }
