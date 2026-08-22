@@ -906,6 +906,17 @@ function renderJobDiscovery() {
       `<span class="skill-tag-gap">+ ${s}</span>`
     ).join("");
     
+    // Check if job is tracked in Kanban state
+    let isTracked = false;
+    let trackedStage = "";
+    Object.keys(state.tracker || {}).forEach(stage => {
+      if (state.tracker[stage]?.includes(job.id)) {
+        isTracked = true;
+        const labels = { discovered: "Discovered", applied: "Applied", interviewing: "Interviewing", offer: "Offer", archived: "Archived" };
+        trackedStage = labels[stage] || stage;
+      }
+    });
+
     // Render Wide 1-Job-Per-Row Card
     const card = document.createElement("div");
     card.className = "glass glass-interactive job-row-card";
@@ -951,6 +962,10 @@ function renderJobDiscovery() {
           ${scoreLabel}
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;" onclick="event.stopPropagation();">
+          ${isTracked 
+            ? `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; background: var(--primary-glow); border-color: var(--primary); color: white;" onclick="switchTab('tracker')">✓ ${trackedStage}</button>`
+            : `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="toggleTrackJob('${job.id}')">+ Track Role</button>`
+          }
           <a href="${job.applyUrl}" target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Apply Now</a>
           <button class="btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="openJobDetails('${job.id}')">View Details →</button>
         </div>
@@ -1425,6 +1440,31 @@ window.moveJobFromModal = function(jobId, stage) {
   closeModal();
 };
 
+window.toggleTrackJob = function(jobId) {
+  let isTracked = false;
+  Object.keys(state.tracker || {}).forEach(stage => {
+    if (state.tracker[stage]?.includes(jobId)) {
+      isTracked = true;
+    }
+  });
+
+  if (isTracked) {
+    showToast("Role is already tracked on your Kanban board!");
+    switchTab("tracker");
+    return;
+  }
+
+  if (!state.tracker.discovered) state.tracker.discovered = [];
+  state.tracker.discovered.push(jobId);
+  saveState();
+  renderKanbanBoard();
+  renderJobDiscovery();
+  
+  const allJobs = getAllJobs();
+  const job = allJobs.find(j => j.id === jobId);
+  showToast(`Added "${job?.title || 'Role'}" to Discovered Kanban column!`);
+};
+
 window.deleteJobFromModal = function(jobId) {
   if (confirm("Are you sure you want to delete this job? Custom jobs will be lost. Seed jobs will return to discovery list.")) {
     // Remove from tracker board
@@ -1510,6 +1550,7 @@ window.submitCustomJob = function(e) {
   state.tracker.discovered.push(customId);
   
   saveState();
+  renderKanbanBoard();
   closeAddJobModal();
   setupDiscoveryFilters(); // Recalculate filters
   
