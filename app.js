@@ -464,9 +464,14 @@ function renderResumePortal() {
         </div>
       </div>
       
-      <div style="margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15)">
-        <h4 style="font-family: var(--font-display); color: var(--success); font-size: 0.95rem; margin-bottom: 0.25rem;">✓ Active Matching Profiles</h4>
-        <p style="font-size: 0.85rem; color: var(--text-secondary);">Your profile is active. Open the <strong>Job Discovery</strong> feed to view percentage compatibility scores tailored to your experiences.</p>
+      <div style="margin-top: 1.5rem; padding: 1.25rem; border-radius: 12px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15)); border: 1px solid rgba(139, 92, 246, 0.3);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h4 style="font-family: var(--font-display); color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">✓ Profile Synchronized (${state.parsedResume.skills.length} Skills Detected)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Compatibility match scores calculated across all 456 live engineering roles.</p>
+          </div>
+          <button class="btn" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); padding: 0.65rem 1.25rem; font-weight: 700;" onclick="switchTab('discover')">🚀 View Job Matches →</button>
+        </div>
       </div>
     `;
   } else {
@@ -496,6 +501,7 @@ window.clearResume = function() {
   };
   saveState();
   renderResumePortal();
+  renderJobDiscovery();
   showToast("Profile data cleared", "warning");
 };
 
@@ -503,7 +509,7 @@ window.clearResume = function() {
 window.submitResumeText = function() {
   const area = document.getElementById("text-paste-area");
   if (!area || !area.value.trim()) {
-    showToast("Please enter some resume text first", "warning");
+    showToast("Please enter or paste your resume text first", "warning");
     return;
   }
   
@@ -511,7 +517,9 @@ window.submitResumeText = function() {
   state.parsedResume = parseResumeText(state.resumeText);
   saveState();
   renderResumePortal();
-  showToast("Resume parsed and synchronized successfully!");
+  renderJobDiscovery();
+  switchTab("discover");
+  showToast("Resume parsed! Showing tailored job compatibility scores.");
 };
 
 // Prevent default browser file drop behavior globally so browser doesn't open files in tab
@@ -586,8 +594,9 @@ function processExtractedText(text, filename) {
   state.parsedResume = parseResumeText(text);
   saveState();
   renderResumePortal();
-  if (state.currentTab === "discover") renderJobDiscovery();
-  showToast(`Loaded and parsed ${filename} successfully!`);
+  renderJobDiscovery();
+  switchTab("discover");
+  showToast(`Parsed ${filename}! Showing tailored job matches.`);
 }
 
 async function parsePdfFile(file) {
