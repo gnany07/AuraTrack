@@ -26,16 +26,10 @@ let state = {
     name: ""
   },
   customJobs: [],
-  tracker: {
-    discovered: [],
-    applied: [],
-    interviewing: [],
-    offer: [],
-    archived: []
-  },
   currentTab: "resume",
   selectedJobId: null
 };
+window.state = state;
 
 // Curated + Custom Jobs list getter
 function getAllJobs() {
@@ -109,59 +103,6 @@ function ensureFilterSets() {
   };
 }
 
-function ensureTrackerStages() {
-  if (!state.tracker || typeof state.tracker !== "object") {
-    state.tracker = { discovered: [], applied: [], interviewing: [], offer: [], archived: [] };
-  }
-  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
-  stages.forEach(s => {
-    if (!Array.isArray(state.tracker[s])) {
-      state.tracker[s] = [];
-    }
-  });
-
-  const allJobs = getAllJobs();
-  if (!allJobs || allJobs.length === 0) return;
-
-  // Clean and auto-heal stale job IDs in state.tracker stages that no longer exist in allJobs dataset
-  stages.forEach(stage => {
-    state.tracker[stage] = state.tracker[stage].map(id => {
-      // Check if job exists
-      const existing = allJobs.find(j => j.id === id);
-      if (existing) return id;
-      
-      // Auto-heal stale static IDs by company match
-      if (typeof id === "string" && id.startsWith("static-")) {
-        const parts = id.split("-");
-        const compPart = parts[1] || "";
-        const matched = allJobs.find(j => j.company.toLowerCase().includes(compPart.toLowerCase()));
-        if (matched) return matched.id;
-      }
-      return null;
-    }).filter(Boolean);
-  });
-
-  // If discovered column is empty, automatically populate with top 5 highest matching active roles
-  if (state.tracker.discovered.length === 0) {
-    const sorted = [...allJobs].sort((a, b) => {
-      const scoreA = calculateMatchScore(a, state.parsedResume).score;
-      const scoreB = calculateMatchScore(b, state.parsedResume).score;
-      return scoreB - scoreA;
-    });
-    
-    const topRoles = sorted.slice(0, 5).map(j => j.id);
-    topRoles.forEach(topId => {
-      let isAlreadyTracked = false;
-      stages.forEach(stg => {
-        if (state.tracker[stg].includes(topId)) isAlreadyTracked = true;
-      });
-      if (!isAlreadyTracked) {
-        state.tracker.discovered.push(topId);
-      }
-    });
-  }
-}
-
 async function syncStateFromDB() {
   try {
     const res = await fetch("/api/state");
@@ -170,8 +111,6 @@ async function syncStateFromDB() {
       if (data && data.state && typeof data.state === "object") {
         state = { ...state, ...data.state };
         ensureFilterSets();
-        ensureTrackerStages();
-        if (state.currentTab === "tracker") renderKanbanBoard();
         if (state.currentTab === "discover") renderJobDiscovery();
       }
     }
@@ -192,7 +131,6 @@ function loadState() {
   }
   
   ensureFilterSets();
-  ensureTrackerStages();
 
   // Async Cloudflare KV DB Sync
   syncStateFromDB();
@@ -207,7 +145,6 @@ function loadState() {
 
 function saveState() {
   ensureFilterSets();
-  ensureTrackerStages();
   const serializableState = {
     ...state,
     activeFilters: {
@@ -518,8 +455,6 @@ function switchTab(tabId) {
   // Page-specific render actions
   if (tabId === "discover") {
     renderJobDiscovery();
-  } else if (tabId === "tracker") {
-    renderKanbanBoard();
   } else if (tabId === "analytics") {
     renderAnalytics();
   } else if (tabId === "resume") {
@@ -1004,17 +939,6 @@ function renderJobDiscovery() {
       `<span class="skill-tag-gap">+ ${s}</span>`
     ).join("");
     
-    // Check if job is tracked in Kanban state
-    let isTracked = false;
-    let trackedStage = "";
-    Object.keys(state.tracker || {}).forEach(stage => {
-      if (state.tracker[stage]?.includes(job.id)) {
-        isTracked = true;
-        const labels = { discovered: "Discovered", applied: "Applied", interviewing: "Interviewing", offer: "Offer", archived: "Archived" };
-        trackedStage = labels[stage] || stage;
-      }
-    });
-
     // Render Wide 1-Job-Per-Row Card
     const card = document.createElement("div");
     card.className = "glass glass-interactive job-row-card";
@@ -1060,11 +984,7 @@ function renderJobDiscovery() {
           ${scoreLabel}
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;" onclick="event.stopPropagation();">
-          ${isTracked 
-            ? `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; background: var(--primary-glow); border-color: var(--primary); color: white;" onclick="switchTab('tracker')">✓ ${trackedStage}</button>`
-            : `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="toggleTrackJob('${job.id}')">+ Track Role</button>`
-          }
-          <a href="${job.applyUrl}" target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Apply Now</a>
+          <a href="${job.applyUrl}" target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Apply Now ↗</a>
           <button class="btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="openJobDetails('${job.id}')">View Details →</button>
         </div>
       </div>
@@ -1168,145 +1088,6 @@ window.resetAllFilters = function(shouldRender = true) {
   window.resetAllPillFilters();
 };
 
-// Page Render: Kanban Application Tracker
-function renderKanbanBoard() {
-  ensureTrackerStages();
-  const board = document.getElementById("kanban-board-container") || document.querySelector(".kanban-board");
-  if (!board) return;
-  
-  const allJobs = getAllJobs();
-  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
-  
-  stages.forEach(stage => {
-    const listEl = document.getElementById(`kanban-list-${stage}`);
-    const countEl = document.getElementById(`kanban-count-${stage}`);
-    
-    if (!listEl || !countEl) return;
-    
-    listEl.innerHTML = "";
-    
-    // Get job objects currently in this stage
-    const stageJobIds = state.tracker[stage] || [];
-    const stageJobs = stageJobIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
-    
-    countEl.textContent = stageJobs.length;
-    
-    if (stageJobs.length === 0) {
-      const emptyMsg = document.createElement("div");
-      emptyMsg.className = "kanban-empty-placeholder";
-      emptyMsg.style.cssText = "padding: 1.25rem 0.75rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 12px; margin-top: 0.5rem;";
-      emptyMsg.textContent = "No roles in stage";
-      listEl.appendChild(emptyMsg);
-    } else {
-      stageJobs.forEach(job => {
-        const card = document.createElement("div");
-        card.className = "glass kanban-card";
-        card.draggable = true;
-        card.dataset.id = job.id;
-        card.style.setProperty("--company-color", job.companyColor || "var(--primary)");
-        
-        const matchAnalysis = calculateMatchScore(job, state.parsedResume);
-        let matchBadgeClass = "low";
-        if (matchAnalysis.score >= 75) matchBadgeClass = "high";
-        else if (matchAnalysis.score >= 50) matchBadgeClass = "medium";
-        
-        card.innerHTML = `
-          <div class="kanban-card-company">${job.company}</div>
-          <div class="kanban-card-title">${job.title}</div>
-          <div class="kanban-card-meta">
-            <span>${job.category}</span>
-            ${state.resumeText ? `<span class="kanban-match-badge ${matchBadgeClass}">${matchAnalysis.score}% Match</span>` : ""}
-          </div>
-        `;
-        
-        // Card clicks opens modal details
-        card.addEventListener("click", (e) => {
-          if (card.classList.contains("dragging")) return;
-          openJobDetails(job.id);
-        });
-        
-        // Drag Events
-        card.addEventListener("dragstart", (e) => {
-          card.classList.add("dragging");
-          e.dataTransfer.setData("text/plain", job.id);
-        });
-        
-        card.addEventListener("dragend", () => {
-          card.classList.remove("dragging");
-        });
-        
-        listEl.appendChild(card);
-      });
-    }
-  });
-
-  initKanbanDragDrop();
-}
-
-// Drag & Drop event bindings
-function initKanbanDragDrop() {
-  const containers = document.querySelectorAll(".column-cards-container");
-  
-  containers.forEach(container => {
-    if (container.dataset.dragDropBound) return;
-    container.dataset.dragDropBound = "true";
-
-    container.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      container.classList.add("drag-over");
-    });
-    
-    container.addEventListener("dragleave", () => {
-      container.classList.remove("drag-over");
-    });
-    
-    container.addEventListener("drop", (e) => {
-      e.preventDefault();
-      container.classList.remove("drag-over");
-      
-      const jobId = e.dataTransfer.getData("text/plain");
-      const targetStage = container.id.replace("kanban-list-", "");
-      
-      if (jobId && targetStage) {
-        moveJobToStage(jobId, targetStage);
-      }
-    });
-  });
-}
-
-function moveJobToStage(jobId, targetStage) {
-  ensureTrackerStages();
-
-  // Remove from old stages
-  Object.keys(state.tracker).forEach(stage => {
-    if (Array.isArray(state.tracker[stage])) {
-      state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
-    }
-  });
-  
-  // Push to new stage
-  if (!Array.isArray(state.tracker[targetStage])) {
-    state.tracker[targetStage] = [];
-  }
-  
-  state.tracker[targetStage].push(jobId);
-  saveState();
-  renderKanbanBoard();
-  
-  const allJobs = getAllJobs();
-  const job = allJobs.find(j => j.id === jobId);
-  if (job) {
-    const stageTitles = {
-      discovered: "Discovered",
-      applied: "Applied",
-      interviewing: "Interviewing",
-      offer: "Offers Received",
-      archived: "Archived"
-    };
-    showToast(`Moved "${job.title}" to ${stageTitles[targetStage] || targetStage}`);
-  }
-}
-
 // Job Details Modal
 function openJobDetails(jobId) {
   const allJobs = getAllJobs();
@@ -1400,31 +1181,6 @@ function openJobDetails(jobId) {
     `;
   }
   
-  // Track Status dropdown helper
-  let currentStage = "None";
-  Object.keys(state.tracker).forEach(stage => {
-    if (state.tracker[stage].includes(jobId)) {
-      const stageLabels = {
-        discovered: "Discovered",
-        applied: "Applied",
-        interviewing: "Interviewing",
-        offer: "Offer",
-        archived: "Archived"
-      };
-      currentStage = stageLabels[stage];
-    }
-  });
-  
-  const stageButtonOptions = `
-    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-      <button class="btn btn-secondary" onclick="moveJobFromModal('${jobId}', 'discovered')">Move to Discovered</button>
-      <button class="btn btn-secondary" onclick="moveJobFromModal('${jobId}', 'applied')">Move to Applied</button>
-      <button class="btn btn-secondary" onclick="moveJobFromModal('${jobId}', 'interviewing')">Move to Interviewing</button>
-      <button class="btn btn-secondary" onclick="moveJobFromModal('${jobId}', 'offer')">Move to Offer</button>
-      <button class="btn btn-secondary btn-danger" style="margin-left: auto;" onclick="deleteJobFromModal('${jobId}')">Delete Job</button>
-    </div>
-  `;
-  
     // Format description text into structured engineering scope cards
     const descParagraphs = (job.description || "").split("\n\n").filter(p => p.trim().length > 0);
     let structuredAboutRoleHtml = "";
@@ -1461,7 +1217,6 @@ function openJobDetails(jobId) {
         </div>
         <div style="display: flex; align-items: center; gap: 1rem;">
           ${matchBadge}
-          <a href="${job.applyUrl || '#'}" target="_blank" class="btn" style="padding: 0.65rem 1.5rem; font-weight: 700; font-size: 0.95rem;">Apply Now ↗</a>
         </div>
       </div>
       <div class="modal-job-meta" style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
@@ -1475,10 +1230,6 @@ function openJobDetails(jobId) {
         </div>
         <div class="detail-line">
           <span class="job-tag">${job.category}</span>
-        </div>
-        <div class="detail-line">
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Tracker Stage: </span>
-          <span class="job-tag" style="background: var(--primary-glow); color: white; font-weight: bold;">${currentStage}</span>
         </div>
       </div>
     </div>
@@ -1525,79 +1276,22 @@ function openJobDetails(jobId) {
     </div>
     ` : ""}
     
-    <div class="modal-job-section" style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-      <h4 class="modal-section-title" style="margin-bottom: 1rem;">Update Application Stage</h4>
-      ${stageButtonOptions}
-    </div>
-    
-    <div class="modal-action-row">
+    <div class="modal-action-row" style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: flex-end;">
       <a href="${job.applyUrl}" target="_blank" class="btn" style="text-decoration: none;">
-        Apply on Careers Site
-        <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
-          <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        Apply on Careers Site ↗
       </a>
       <button class="btn btn-secondary" onclick="closeModal()">Close Window</button>
     </div>
   `;
   
   overlay.classList.add("active");
-  checkOllamaStatus();
+  checkAIStatus();
 }
 
 window.closeModal = function() {
   const overlay = document.getElementById("details-modal");
   if (overlay) overlay.classList.remove("active");
   state.selectedJobId = null;
-};
-
-// Modal staging helper actions
-window.moveJobFromModal = function(jobId, stage) {
-  moveJobToStage(jobId, stage);
-  closeModal();
-};
-
-window.toggleTrackJob = function(jobId) {
-  let isTracked = false;
-  Object.keys(state.tracker || {}).forEach(stage => {
-    if (state.tracker[stage]?.includes(jobId)) {
-      isTracked = true;
-    }
-  });
-
-  if (isTracked) {
-    showToast("Role is already tracked on your Kanban board!");
-    switchTab("tracker");
-    return;
-  }
-
-  if (!state.tracker.discovered) state.tracker.discovered = [];
-  state.tracker.discovered.push(jobId);
-  saveState();
-  renderKanbanBoard();
-  renderJobDiscovery();
-  
-  const allJobs = getAllJobs();
-  const job = allJobs.find(j => j.id === jobId);
-  showToast(`Added "${job?.title || 'Role'}" to Discovered Kanban column!`);
-};
-
-window.deleteJobFromModal = function(jobId) {
-  if (confirm("Are you sure you want to delete this job? Custom jobs will be lost. Seed jobs will return to discovery list.")) {
-    // Remove from tracker board
-    Object.keys(state.tracker).forEach(stage => {
-      state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
-    });
-    
-    // Remove from custom list if it is custom
-    state.customJobs = state.customJobs.filter(j => j.id !== jobId);
-    
-    saveState();
-    closeModal();
-    if (state.currentTab === "tracker") renderKanbanBoard();
-    if (state.currentTab === "discover") renderJobDiscovery();
-    showToast("Job removed from tracker", "danger");
-  }
 };
 
 // 1-Click Company Career Importer
@@ -1762,17 +1456,14 @@ window.submitCustomJob = function(e) {
   };
   
   state.customJobs.push(newJob);
-  // Auto-add to discovered stage
-  state.tracker.discovered.push(customId);
-  
+  state.customJobs.push(newJob);
   saveState();
-  renderKanbanBoard();
   closeAddJobModal();
   setupDiscoveryFilters(); // Recalculate filters
   
-  // Go to tracker view to see it
-  switchTab("tracker");
-  showToast(`Custom job "${title}" added to Discovered column!`);
+  // Go to discovery view to see it
+  switchTab("discover");
+  showToast(`Custom job "${title}" added to Job Discovery!`);
 };
 
 // Page Render: Analytics Dashboard
@@ -1784,66 +1475,83 @@ function renderAnalytics() {
   
   const allJobs = getAllJobs();
   
-  // 1. Compile Funnel counts
-  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
-  const counts = stages.map(stage => (state.tracker[stage] || []).length);
-  const maxCount = Math.max(...counts, 1); // Avoid division by zero
+  // 1. Compile Match Distribution across 476 frontier jobs
+  let highMatch = 0;
+  let mediumMatch = 0;
+  let aiInfra = 0;
+  let postTraining = 0;
+  let distSystems = 0;
+
+  allJobs.forEach(job => {
+    const score = calculateMatchScore(job, state.parsedResume).score;
+    if (score >= 75) highMatch++;
+    else if (score >= 50) mediumMatch++;
+    
+    const text = (job.title + " " + (job.domain || "") + " " + job.category).toLowerCase();
+    if (text.includes("infra") || text.includes("platform") || text.includes("cluster") || text.includes("gpu")) aiInfra++;
+    if (text.includes("post-training") || text.includes("reinforcement") || text.includes("rl") || text.includes("eval")) postTraining++;
+    if (text.includes("distributed") || text.includes("backend") || text.includes("systems") || text.includes("swe")) distSystems++;
+  });
+
+  const stages = ["high", "medium", "infra", "post_training", "systems"];
+  const labels = ["🌟 High Match (75%+)", "⚡ Strong Match (50-74%)", "🤖 AI & LLM Infra", "🚀 Post-Training & RL", "⚙️ Distributed Systems"];
+  const counts = [highMatch, mediumMatch, aiInfra, postTraining, distSystems];
+  const maxCount = Math.max(...counts, 1);
   
   // Render Custom SVG Funnel/Bar Chart
   let svgContent = `
     <svg class="svg-chart" viewBox="0 0 400 240">
       <defs>
-        <linearGradient id="grad-discovered" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#6366f1" />
-          <stop offset="100%" stop-color="#8b5cf6" />
-        </linearGradient>
-        <linearGradient id="grad-applied" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#a855f7" />
-          <stop offset="100%" stop-color="#ec4899" />
-        </linearGradient>
-        <linearGradient id="grad-interviewing" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#f59e0b" />
-          <stop offset="100%" stop-color="#ef4444" />
-        </linearGradient>
-        <linearGradient id="grad-offer" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="grad-high" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#10b981" />
           <stop offset="100%" stop-color="#059669" />
         </linearGradient>
-        <linearGradient id="grad-archived" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#71717a" />
-          <stop offset="100%" stop-color="#52525b" />
+        <linearGradient id="grad-medium" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#6366f1" />
+          <stop offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+        <linearGradient id="grad-infra" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3b82f6" />
+          <stop offset="100%" stop-color="#1d4ed8" />
+        </linearGradient>
+        <linearGradient id="grad-post_training" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#a855f7" />
+          <stop offset="100%" stop-color="#ec4899" />
+        </linearGradient>
+        <linearGradient id="grad-systems" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f59e0b" />
+          <stop offset="100%" stop-color="#d97706" />
         </linearGradient>
       </defs>
   `;
   
-  const labels = ["Discovered", "Applied", "Interviewing", "Offers", "Archived"];
   const barHeights = 24;
   const barGap = 16;
   const startY = 15;
-  const chartWidth = 260; // Max bar width
+  const chartWidth = 220;
   
   labels.forEach((label, idx) => {
     const y = startY + idx * (barHeights + barGap);
     const count = counts[idx];
-    const width = Math.round((count / maxCount) * chartWidth) || 8; // min 8px wide bar if count is 0
+    const width = Math.round((count / maxCount) * chartWidth) || 8;
     const stage = stages[idx];
     
     svgContent += `
       <!-- Label -->
       <text x="10" y="${y + 16}" fill="#a1a1aa" font-family="Outfit" font-size="11" font-weight="600">${label}</text>
       <!-- Background Track -->
-      <rect x="100" y="${y}" width="${chartWidth}" height="${barHeights}" rx="4" fill="rgba(255,255,255,0.03)" border="1px solid rgba(255,255,255,0.05)" />
+      <rect x="140" y="${y}" width="${chartWidth}" height="${barHeights}" rx="4" fill="rgba(255,255,255,0.03)" />
       <!-- Colored Bar -->
-      <rect class="funnel-bar" x="100" y="${y}" width="${width}" height="${barHeights}" rx="4" fill="url(#grad-${stage})" onclick="switchTab('tracker')" />
+      <rect class="funnel-bar" x="140" y="${y}" width="${width}" height="${barHeights}" rx="4" fill="url(#grad-${stage})" onclick="switchTab('discover')" style="cursor: pointer;" />
       <!-- Count Value -->
-      <text x="${100 + width + 10}" y="${y + 16}" fill="#f4f4f5" font-family="Outfit" font-size="12" font-weight="700">${count}</text>
+      <text x="${140 + width + 10}" y="${y + 16}" fill="#f4f4f5" font-family="Outfit" font-size="12" font-weight="700">${count}</text>
     `;
   });
   
   svgContent += `</svg>`;
   funnelContainer.innerHTML = svgContent;
   
-  // 2. Skill Gaps & Preparatory Insights
+  // 2. Skill Gaps & Preparatory Insights across top matching frontier roles
   if (!state.resumeText) {
     gapContainer.innerHTML = `
       <div style="text-align: center; color: var(--text-muted); padding: 3rem 1rem;">
@@ -1854,65 +1562,49 @@ function renderAnalytics() {
     return;
   }
   
-  // Aggregate missing skills from roles in the tracker (Discovered, Applied, Interviewing)
-  const trackedJobIds = [
-    ...(state.tracker.discovered || []),
-    ...(state.tracker.applied || []),
-    ...(state.tracker.interviewing || [])
-  ];
-  
-  if (trackedJobIds.length === 0) {
-    gapContainer.innerHTML = `
-      <div style="text-align: center; color: var(--text-muted); padding: 3rem 1rem;">
-        <p style="font-size: 0.95rem;">No active jobs in your tracker.</p>
-        <p style="font-size: 0.8rem;">Move jobs from discovery to generate learning paths.</p>
-      </div>
-    `;
-    return;
-  }
-  
-  const activeJobs = trackedJobIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
-  const gapWeights = {}; // Count how frequently a skill is missing across jobs
-  
-  activeJobs.forEach(job => {
+  // Sort jobs by match score and evaluate skill gaps across top 15 frontier roles
+  const sortedJobs = [...allJobs].sort((a, b) => {
+    return calculateMatchScore(b, state.parsedResume).score - calculateMatchScore(a, state.parsedResume).score;
+  }).slice(0, 15);
+
+  const gapWeights = {};
+  sortedJobs.forEach(job => {
     const analysis = calculateMatchScore(job, state.parsedResume);
-    analysis.missingSkills.forEach(skill => {
+    (analysis.missingSkills || []).forEach(skill => {
       gapWeights[skill] = (gapWeights[skill] || 0) + 1;
     });
   });
   
-  // Sort gaps by frequency of occurrence
   const sortedGaps = Object.entries(gapWeights)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 4); // Take top 4 gaps
+    .slice(0, 4);
     
   if (sortedGaps.length === 0) {
     gapContainer.innerHTML = `
       <div style="padding: 2rem; text-align: center; color: var(--success); background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-sm)">
         <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 0.25rem;">✓ 100% Core Competency Achieved</h4>
-        <p style="font-size: 0.85rem; color: var(--text-secondary);">Fantastic! Your parsed resume covers all necessary prerequisites for the jobs currently in your funnel.</p>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Fantastic! Your parsed resume covers all necessary prerequisites for the top 15 frontier AI roles.</p>
       </div>
     `;
     return;
   }
   
-  // Generate learning tips based on common AI skills
   const learningGuides = {
-    "pytorch": "Work through the PyTorch 'Deep Learning with PyTorch' tutorial. Focus on building custom nn.Module classes, custom datasets, and understanding tensor autograd pathways.",
-    "triton": "Review OpenAI Triton tutorials for building custom GPU kernels. Study block algorithms, memory layouts, and kernel pipelining to stand out in MLOps/Serving roles.",
-    "vllm": "Read the vLLM paper, focusing on PageAttention. Deploy vLLM locally, configure continuous batching, and analyze performance throughput improvements vs. standard HuggingFace pipelines.",
-    "cuda": "Learn parallel computing fundamentals. Code simple matrix multiplications in raw CUDA C++ and study thread blocks, shared memory bank conflicts, and global memory coalescing.",
-    "llms": "Build a toy LLM architecture from scratch. Understand attention heads, positional embeddings (RoPE), KV caching, and decoding strategy structures (top-k, top-p).",
-    "rag": "Implement a hierarchical retrieval system. Study hybrid search (sparse BM25 + dense vectors), parent-child document chunk hierarchies, reranking architectures, and query routing.",
-    "jax": "Study compiler-oriented coding (XLA). Master `jit()`, `grad()`, `vmap()`, and `pmap()` transformations. Practice writing functional architectures without side-effects.",
-    "system design": "Study large-scale data system design. Understand replication models (raft/paxos), messaging bottlenecks (Kafka), database partitioning, and high-availability caching.",
-    "reinforcement learning": "Read Sutton & Barto's RL book. Focus on Policy Gradient algorithms, PPO, Deep Q-Networks, and model-free/model-based architecture differences.",
-    "rlhf": "Analyze the RLHF pipeline: supervised fine-tuning (SFT), reward model training (Bradley-Terry preference mapping), and PPO optimization algorithms."
+    "pytorch": "Work through custom nn.Module classes, custom datasets, and distributed torch.distributed tensor autograd pathways.",
+    "triton": "Review OpenAI Triton tutorials for building custom GPU kernels. Study block algorithms, memory layouts, and kernel pipelining for frontier inference.",
+    "vllm": "Read the vLLM paper focusing on PagedAttention. Deploy continuous batching to maximize serving throughput.",
+    "cuda": "Learn parallel computing fundamentals. Write matrix multiplications in CUDA C++ and optimize warp divergence & memory coalescing.",
+    "llms": "Study architecture fundamentals: multi-head attention, RoPE embeddings, KV caching, and top-p sampling.",
+    "rag": "Implement hybrid search (sparse BM25 + dense vector retrieval) with cross-encoder reranking.",
+    "jax": "Study compiler-oriented coding with XLA: master jit(), grad(), vmap(), and pmap() transformations.",
+    "system design": "Design large-scale distributed backends: Raft/Paxos consensus, Kafka event streaming, and sharded storage.",
+    "reinforcement learning": "Study Policy Gradient algorithms, PPO, Deep Q-Networks, and online reward optimization.",
+    "rlhf": "Analyze the RLHF pipeline: SFT, preference reward modeling, and PPO / DPO alignment algorithms."
   };
   
   let gapHtml = "";
   sortedGaps.forEach(([skill, frequency]) => {
-    const defaultGuide = `Required for ${frequency} active application(s) in your pipeline. Consider building a small side project using ${skill} to document competency in your technical resume.`;
+    const defaultGuide = `Recommended for ${frequency} top frontier role(s). Consider implementing a practical project using ${skill} to highlight on your technical profile.`;
     const guide = learningGuides[skill.toLowerCase()] || defaultGuide;
     
     gapHtml += `
@@ -1920,7 +1612,7 @@ function renderAnalytics() {
         <div class="gap-skill-header">
           <span class="gap-skill-name">${skill}</span>
           <span class="job-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.15)">
-            Missing in ${frequency} job(s)
+            Required in ${frequency} top roles
           </span>
         </div>
         <p class="gap-recommendation">${guide}</p>
@@ -1931,7 +1623,7 @@ function renderAnalytics() {
   gapContainer.innerHTML = `
     <div class="skills-gap-container">
       <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-        We analyzed your resume against the jobs in your tracker. Here are the top gaps you should address to improve match scores:
+        Top skill opportunity areas based on your resume cross-referenced against 476 frontier AI positions:
       </p>
       ${gapHtml}
     </div>
@@ -1939,14 +1631,12 @@ function renderAnalytics() {
 }
 
 // Global page load initializations
-// Global page load initializations
 document.addEventListener("DOMContentLoaded", () => {
   loadState();
   
   // Bind tab buttons
   document.getElementById("nav-resume").onclick = () => switchTab("resume");
   document.getElementById("nav-discover").onclick = () => switchTab("discover");
-  document.getElementById("nav-tracker").onclick = () => switchTab("tracker");
   document.getElementById("nav-analytics").onclick = () => switchTab("analytics");
   
   // Set up dropzone file uploads
@@ -1954,9 +1644,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Setup discovery page filter listeners
   setupDiscoveryFilters();
-  
-  // Setup Kanban columns drag/drop listeners
-  initKanbanDragDrop();
   
   // Initialize default page view
   switchTab("resume");

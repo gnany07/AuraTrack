@@ -43,14 +43,6 @@
             Job Discovery
           </a>
         </li>
-        <li class="nav-item" id="nav-tracker">
-          <a href="#tracker">
-            <svg class="nav-icon" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-            </svg>
-            Kanban Board
-          </a>
-        </li>
         <li class="nav-item" id="nav-analytics">
           <a href="#analytics">
             <svg class="nav-icon" viewBox="0 0 24 24">
@@ -274,72 +266,7 @@
       <div id="pagination-container"></div>
     </section>
 
-    <!-- Tab 3: Kanban Application Tracker -->
-    <section id="section-tracker" class="dashboard-section">
-      <div style="margin-bottom: 1.5rem;">
-        <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; margin-bottom: 0.25rem;">Application Tracker Pipeline</h2>
-        <p style="font-size: 0.85rem; color: var(--text-secondary);">Drag cards between stages to update your application funnel statuses.</p>
-      </div>
-      
-      <div class="kanban-board" id="kanban-board-container">
-        <!-- Column 1: Discovered -->
-        <div class="kanban-column" id="kanban-col-discovered">
-          <div class="column-header discovered">
-            <span class="column-title">Discovered</span>
-            <span class="column-count" id="kanban-count-discovered">0</span>
-          </div>
-          <div class="column-cards-container" id="kanban-list-discovered">
-            <!-- Cards populated by JS -->
-          </div>
-        </div>
-        
-        <!-- Column 2: Applied -->
-        <div class="kanban-column" id="kanban-col-applied">
-          <div class="column-header applied">
-            <span class="column-title">Applied</span>
-            <span class="column-count" id="kanban-count-applied">0</span>
-          </div>
-          <div class="column-cards-container" id="kanban-list-applied">
-            <!-- Cards populated by JS -->
-          </div>
-        </div>
-        
-        <!-- Column 3: Interviewing -->
-        <div class="kanban-column" id="kanban-col-interviewing">
-          <div class="column-header interviewing">
-            <span class="column-title">Interviewing</span>
-            <span class="column-count" id="kanban-count-interviewing">0</span>
-          </div>
-          <div class="column-cards-container" id="kanban-list-interviewing">
-            <!-- Cards populated by JS -->
-          </div>
-        </div>
-        
-        <!-- Column 4: Offer -->
-        <div class="kanban-column" id="kanban-col-offer">
-          <div class="column-header offer">
-            <span class="column-title">Offers</span>
-            <span class="column-count" id="kanban-count-offer">0</span>
-          </div>
-          <div class="column-cards-container" id="kanban-list-offer">
-            <!-- Cards populated by JS -->
-          </div>
-        </div>
-        
-        <!-- Column 5: Archived -->
-        <div class="kanban-column" id="kanban-col-archived">
-          <div class="column-header archived">
-            <span class="column-title">Archived</span>
-            <span class="column-count" id="kanban-count-archived">0</span>
-          </div>
-          <div class="column-cards-container" id="kanban-list-archived">
-            <!-- Cards populated by JS -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tab 4: Analytics Dashboard -->
+    <!-- Tab 3: Analytics Dashboard -->
     <section id="section-analytics" class="dashboard-section">
       <div class="analytics-grid">
         
