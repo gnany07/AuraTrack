@@ -119,6 +119,65 @@ function ensureTrackerStages() {
       state.tracker[s] = [];
     }
   });
+
+  const allJobs = getAllJobs();
+  if (!allJobs || allJobs.length === 0) return;
+
+  // Clean and auto-heal stale job IDs in state.tracker stages that no longer exist in allJobs dataset
+  stages.forEach(stage => {
+    state.tracker[stage] = state.tracker[stage].map(id => {
+      // Check if job exists
+      const existing = allJobs.find(j => j.id === id);
+      if (existing) return id;
+      
+      // Auto-heal stale static IDs by company match
+      if (typeof id === "string" && id.startsWith("static-")) {
+        const parts = id.split("-");
+        const compPart = parts[1] || "";
+        const matched = allJobs.find(j => j.company.toLowerCase().includes(compPart.toLowerCase()));
+        if (matched) return matched.id;
+      }
+      return null;
+    }).filter(Boolean);
+  });
+
+  // If discovered column is empty, automatically populate with top 5 highest matching active roles
+  if (state.tracker.discovered.length === 0) {
+    const sorted = [...allJobs].sort((a, b) => {
+      const scoreA = calculateMatchScore(a, state.parsedResume).score;
+      const scoreB = calculateMatchScore(b, state.parsedResume).score;
+      return scoreB - scoreA;
+    });
+    
+    const topRoles = sorted.slice(0, 5).map(j => j.id);
+    topRoles.forEach(topId => {
+      let isAlreadyTracked = false;
+      stages.forEach(stg => {
+        if (state.tracker[stg].includes(topId)) isAlreadyTracked = true;
+      });
+      if (!isAlreadyTracked) {
+        state.tracker.discovered.push(topId);
+      }
+    });
+  }
+}
+
+async function syncStateFromDB() {
+  try {
+    const res = await fetch("/api/state");
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.state && typeof data.state === "object") {
+        state = { ...state, ...data.state };
+        ensureFilterSets();
+        ensureTrackerStages();
+        if (state.currentTab === "tracker") renderKanbanBoard();
+        if (state.currentTab === "discover") renderJobDiscovery();
+      }
+    }
+  } catch (e) {
+    // LocalStorage fallback is active
+  }
 }
 
 function loadState() {
@@ -134,6 +193,9 @@ function loadState() {
   
   ensureFilterSets();
   ensureTrackerStages();
+
+  // Async Cloudflare KV DB Sync
+  syncStateFromDB();
 
   // If resume text is empty or default, set Gnanendar's actual resume
   if (!state.resumeText || state.resumeText.includes("Alex Mercer")) {
