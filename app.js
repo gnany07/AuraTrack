@@ -109,6 +109,18 @@ function ensureFilterSets() {
   };
 }
 
+function ensureTrackerStages() {
+  if (!state.tracker || typeof state.tracker !== "object") {
+    state.tracker = { discovered: [], applied: [], interviewing: [], offer: [], archived: [] };
+  }
+  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
+  stages.forEach(s => {
+    if (!Array.isArray(state.tracker[s])) {
+      state.tracker[s] = [];
+    }
+  });
+}
+
 function loadState() {
   const savedState = localStorage.getItem("auratrack_state");
   if (savedState) {
@@ -121,6 +133,7 @@ function loadState() {
   }
   
   ensureFilterSets();
+  ensureTrackerStages();
 
   // If resume text is empty or default, set Gnanendar's actual resume
   if (!state.resumeText || state.resumeText.includes("Alex Mercer")) {
@@ -132,6 +145,7 @@ function loadState() {
 
 function saveState() {
   ensureFilterSets();
+  ensureTrackerStages();
   const serializableState = {
     ...state,
     activeFilters: {
@@ -1094,7 +1108,8 @@ window.resetAllFilters = function(shouldRender = true) {
 
 // Page Render: Kanban Application Tracker
 function renderKanbanBoard() {
-  const board = document.getElementById("kanban-board-container");
+  ensureTrackerStages();
+  const board = document.getElementById("kanban-board-container") || document.querySelector(".kanban-board");
   if (!board) return;
   
   const allJobs = getAllJobs();
@@ -1114,47 +1129,56 @@ function renderKanbanBoard() {
     
     countEl.textContent = stageJobs.length;
     
-    stageJobs.forEach(job => {
-      const card = document.createElement("div");
-      card.className = "glass kanban-card";
-      card.draggable = true;
-      card.dataset.id = job.id;
-      card.style.setProperty("--company-color", job.companyColor || "var(--primary)");
-      
-      const matchAnalysis = calculateMatchScore(job, state.parsedResume);
-      let matchBadgeClass = "low";
-      if (matchAnalysis.score >= 75) matchBadgeClass = "high";
-      else if (matchAnalysis.score >= 50) matchBadgeClass = "medium";
-      
-      card.innerHTML = `
-        <div class="kanban-card-company">${job.company}</div>
-        <div class="kanban-card-title">${job.title}</div>
-        <div class="kanban-card-meta">
-          <span>${job.category}</span>
-          ${state.resumeText ? `<span class="kanban-match-badge ${matchBadgeClass}">${matchAnalysis.score}% Match</span>` : ""}
-        </div>
-      `;
-      
-      // Card clicks opens modal details
-      card.addEventListener("click", (e) => {
-        // Prevent click trigger if dragging
-        if (card.classList.contains("dragging")) return;
-        openJobDetails(job.id);
+    if (stageJobs.length === 0) {
+      const emptyMsg = document.createElement("div");
+      emptyMsg.className = "kanban-empty-placeholder";
+      emptyMsg.style.cssText = "padding: 1.25rem 0.75rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 12px; margin-top: 0.5rem;";
+      emptyMsg.textContent = "No roles in stage";
+      listEl.appendChild(emptyMsg);
+    } else {
+      stageJobs.forEach(job => {
+        const card = document.createElement("div");
+        card.className = "glass kanban-card";
+        card.draggable = true;
+        card.dataset.id = job.id;
+        card.style.setProperty("--company-color", job.companyColor || "var(--primary)");
+        
+        const matchAnalysis = calculateMatchScore(job, state.parsedResume);
+        let matchBadgeClass = "low";
+        if (matchAnalysis.score >= 75) matchBadgeClass = "high";
+        else if (matchAnalysis.score >= 50) matchBadgeClass = "medium";
+        
+        card.innerHTML = `
+          <div class="kanban-card-company">${job.company}</div>
+          <div class="kanban-card-title">${job.title}</div>
+          <div class="kanban-card-meta">
+            <span>${job.category}</span>
+            ${state.resumeText ? `<span class="kanban-match-badge ${matchBadgeClass}">${matchAnalysis.score}% Match</span>` : ""}
+          </div>
+        `;
+        
+        // Card clicks opens modal details
+        card.addEventListener("click", (e) => {
+          if (card.classList.contains("dragging")) return;
+          openJobDetails(job.id);
+        });
+        
+        // Drag Events
+        card.addEventListener("dragstart", (e) => {
+          card.classList.add("dragging");
+          e.dataTransfer.setData("text/plain", job.id);
+        });
+        
+        card.addEventListener("dragend", () => {
+          card.classList.remove("dragging");
+        });
+        
+        listEl.appendChild(card);
       });
-      
-      // Drag Events
-      card.addEventListener("dragstart", (e) => {
-        card.classList.add("dragging");
-        e.dataTransfer.setData("text/plain", job.id);
-      });
-      
-      card.addEventListener("dragend", () => {
-        card.classList.remove("dragging");
-      });
-      
-      listEl.appendChild(card);
-    });
+    }
   });
+
+  initKanbanDragDrop();
 }
 
 // Drag & Drop event bindings
@@ -1162,6 +1186,9 @@ function initKanbanDragDrop() {
   const containers = document.querySelectorAll(".column-cards-container");
   
   containers.forEach(container => {
+    if (container.dataset.dragDropBound) return;
+    container.dataset.dragDropBound = "true";
+
     container.addEventListener("dragover", (e) => {
       e.preventDefault();
       container.classList.add("drag-over");
@@ -1178,19 +1205,25 @@ function initKanbanDragDrop() {
       const jobId = e.dataTransfer.getData("text/plain");
       const targetStage = container.id.replace("kanban-list-", "");
       
-      moveJobToStage(jobId, targetStage);
+      if (jobId && targetStage) {
+        moveJobToStage(jobId, targetStage);
+      }
     });
   });
 }
 
 function moveJobToStage(jobId, targetStage) {
+  ensureTrackerStages();
+
   // Remove from old stages
   Object.keys(state.tracker).forEach(stage => {
-    state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
+    if (Array.isArray(state.tracker[stage])) {
+      state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
+    }
   });
   
   // Push to new stage
-  if (!state.tracker[targetStage]) {
+  if (!Array.isArray(state.tracker[targetStage])) {
     state.tracker[targetStage] = [];
   }
   
@@ -1202,13 +1235,13 @@ function moveJobToStage(jobId, targetStage) {
   const job = allJobs.find(j => j.id === jobId);
   if (job) {
     const stageTitles = {
-      discovered: "Inbox / Discovered",
+      discovered: "Discovered",
       applied: "Applied",
       interviewing: "Interviewing",
       offer: "Offers Received",
       archived: "Archived"
     };
-    showToast(`Moved "${job.title}" to ${stageTitles[targetStage]}`);
+    showToast(`Moved "${job.title}" to ${stageTitles[targetStage] || targetStage}`);
   }
 }
 
