@@ -10,3 +10,4 @@ venv/
 my_resume.pdf
 resume.txt
 resume_parsed.txt
+node_modules/
