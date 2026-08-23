@@ -1717,19 +1717,22 @@ window.submitCustomJob = function(e) {
   const title = document.getElementById("job-tit").value.trim();
   const location = document.getElementById("job-loc").value.trim() || "Remote";
   const salary = document.getElementById("job-sal").value.trim() || "Competitive";
-  const category = document.getElementById("job-cat").value;
-  const description = document.getElementById("job-desc").value.trim();
-  const reqStr = document.getElementById("job-reqs").value.trim();
-  const prefStr = document.getElementById("job-prefs").value.trim();
-  const applyUrl = document.getElementById("job-url").value.trim() || "https://linkedin.com";
+  const category = document.getElementById("job-cat").value || "SWE";
+  const description = document.getElementById("job-desc").value.trim() || "Full-time Engineering Role.";
+  const reqStr = (document.getElementById("job-reqs")?.value || "").trim();
+  const prefStr = (document.getElementById("job-prefs")?.value || "").trim();
+  const applyUrl = (document.getElementById("job-url")?.value || "").trim() || "https://linkedin.com";
   
-  if (!company || !title || !description || !reqStr) {
-    showToast("Please fill in all required fields", "warning");
+  if (!company || !title) {
+    showToast("Please enter at least Company Name and Job Title", "warning");
     return;
   }
   
-  const requirements = reqStr.split(",").map(r => r.trim()).filter(r => r.length > 0);
-  const preferred = prefStr.split(",").map(r => r.trim()).filter(r => r.length > 0);
+  let requirements = reqStr ? reqStr.split(",").map(r => r.trim()).filter(r => r.length > 0) : [];
+  if (requirements.length === 0) {
+    requirements = ["Experience building scalable backend or AI systems", "Strong software engineering fundamentals", "Proficiency in modern programming languages"];
+  }
+  const preferred = prefStr ? prefStr.split(",").map(r => r.trim()).filter(r => r.length > 0) : [];
   
   const customId = "custom-" + Date.now();
   
