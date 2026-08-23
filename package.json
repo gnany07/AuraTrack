@@ -1,0 +1,13 @@
+{
+  "name": "auratrack",
+  "version": "1.0.0",
+  "description": "Frontier AI Job Tracker & Candidate Matching Engine",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "deploy": "npx wrangler pages deploy . --project-name=auratrack"
+  },
+  "keywords": ["ai", "job-tracker", "cloudflare-pages"],
+  "author": "Gnanendar Reddy Male",
+  "license": "MIT"
+}
