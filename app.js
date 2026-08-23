@@ -26,6 +26,13 @@ let state = {
     name: ""
   },
   customJobs: [],
+  tracker: {
+    discovered: [],
+    applied: [],
+    interviewing: [],
+    offer: [],
+    archived: []
+  },
   currentTab: "resume",
   selectedJobId: null
 };
@@ -103,6 +110,54 @@ function ensureFilterSets() {
   };
 }
 
+function ensureTrackerStages() {
+  if (!state.tracker || typeof state.tracker !== "object") {
+    state.tracker = { discovered: [], applied: [], interviewing: [], offer: [], archived: [] };
+  }
+  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
+  stages.forEach(s => {
+    if (!Array.isArray(state.tracker[s])) {
+      state.tracker[s] = [];
+    }
+  });
+
+  const allJobs = getAllJobs();
+  if (!allJobs || allJobs.length === 0) return;
+
+  // Clean and auto-heal stale job IDs
+  stages.forEach(stage => {
+    state.tracker[stage] = state.tracker[stage].map(id => {
+      const existing = allJobs.find(j => j.id === id);
+      if (existing) return id;
+      if (typeof id === "string" && id.startsWith("static-")) {
+        const parts = id.split("-");
+        const compPart = parts[1] || "";
+        const matched = allJobs.find(j => j.company.toLowerCase().includes(compPart.toLowerCase()));
+        if (matched) return matched.id;
+      }
+      return null;
+    }).filter(Boolean);
+  });
+
+  // Auto-populate top 5 matching roles if discovered is empty on first launch
+  const totalTracked = stages.reduce((acc, s) => acc + state.tracker[s].length, 0);
+  if (totalTracked === 0 || state.tracker.discovered.length === 0) {
+    const sorted = [...allJobs].sort((a, b) => {
+      return calculateMatchScore(b, state.parsedResume).score - calculateMatchScore(a, state.parsedResume).score;
+    });
+    const topRoles = sorted.slice(0, 5).map(j => j.id);
+    topRoles.forEach(topId => {
+      let isAlreadyTracked = false;
+      stages.forEach(stg => {
+        if (state.tracker[stg].includes(topId)) isAlreadyTracked = true;
+      });
+      if (!isAlreadyTracked) {
+        state.tracker.discovered.push(topId);
+      }
+    });
+  }
+}
+
 async function syncStateFromDB() {
   try {
     const res = await fetch("/api/state");
@@ -111,6 +166,8 @@ async function syncStateFromDB() {
       if (data && data.state && typeof data.state === "object") {
         state = { ...state, ...data.state };
         ensureFilterSets();
+        ensureTrackerStages();
+        if (state.currentTab === "tracker") renderKanbanBoard();
         if (state.currentTab === "discover") renderJobDiscovery();
       }
     }
@@ -131,6 +188,7 @@ function loadState() {
   }
   
   ensureFilterSets();
+  ensureTrackerStages();
 
   // Async Cloudflare KV DB Sync
   syncStateFromDB();
@@ -145,8 +203,10 @@ function loadState() {
 
 function saveState() {
   ensureFilterSets();
+  ensureTrackerStages();
   const serializableState = {
     ...state,
+    tracker: state.tracker,
     activeFilters: {
       domain: Array.from(state.activeFilters.domain),
       seniority: Array.from(state.activeFilters.seniority),
@@ -455,6 +515,8 @@ function switchTab(tabId) {
   // Page-specific render actions
   if (tabId === "discover") {
     renderJobDiscovery();
+  } else if (tabId === "tracker") {
+    renderKanbanBoard();
   } else if (tabId === "analytics") {
     renderAnalytics();
   } else if (tabId === "resume") {
@@ -984,6 +1046,17 @@ function renderJobDiscovery() {
           ${scoreLabel}
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;" onclick="event.stopPropagation();">
+          ${(() => {
+            let trackedStage = null;
+            Object.keys(state.tracker || {}).forEach(stg => {
+              if (state.tracker[stg]?.includes(job.id)) trackedStage = stg;
+            });
+            if (trackedStage) {
+              const stageNames = { discovered: "Discovered", applied: "Applied", interviewing: "Interviewing", offer: "Offer", archived: "Archived" };
+              return `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; background: var(--primary-glow); border-color: var(--primary); color: white;" onclick="switchTab('tracker')">✓ ${stageNames[trackedStage] || trackedStage}</button>`;
+            }
+            return `<button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="toggleTrackJob('${job.id}')">+ Track Role</button>`;
+          })()}
           <a href="${job.applyUrl}" target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">Apply Now ↗</a>
           <button class="btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;" onclick="openJobDetails('${job.id}')">View Details →</button>
         </div>
@@ -1086,6 +1159,194 @@ window.applyFilterPreset = function(preset) {
 
 window.resetAllFilters = function(shouldRender = true) {
   window.resetAllPillFilters();
+};
+
+// Page Render: Kanban Application Tracker
+function renderKanbanBoard() {
+  ensureTrackerStages();
+  const board = document.getElementById("kanban-board-container") || document.querySelector(".kanban-board");
+  if (!board) return;
+  
+  const allJobs = getAllJobs();
+  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
+  
+  stages.forEach(stage => {
+    const listEl = document.getElementById(`kanban-list-${stage}`);
+    const countEl = document.getElementById(`kanban-count-${stage}`);
+    
+    if (!listEl || !countEl) return;
+    
+    listEl.innerHTML = "";
+    
+    // Get job objects currently in this stage
+    const stageJobIds = state.tracker[stage] || [];
+    const stageJobs = stageJobIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
+    
+    countEl.textContent = stageJobs.length;
+    
+    if (stageJobs.length === 0) {
+      const emptyMsg = document.createElement("div");
+      emptyMsg.className = "kanban-empty-placeholder";
+      emptyMsg.style.cssText = "padding: 1.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.825rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 12px; margin-top: 0.5rem;";
+      emptyMsg.textContent = "No roles in stage";
+      listEl.appendChild(emptyMsg);
+    } else {
+      stageJobs.forEach(job => {
+        const card = document.createElement("div");
+        card.className = "glass kanban-card";
+        card.draggable = true;
+        card.dataset.id = job.id;
+        card.style.setProperty("--company-color", job.companyColor || "var(--primary)");
+        
+        const matchAnalysis = calculateMatchScore(job, state.parsedResume);
+        let matchBadgeClass = "low";
+        if (matchAnalysis.score >= 75) matchBadgeClass = "high";
+        else if (matchAnalysis.score >= 50) matchBadgeClass = "medium";
+        
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.25rem;">
+            <div class="kanban-card-company">${job.company}</div>
+            ${state.resumeText ? `<span class="kanban-match-badge ${matchBadgeClass}" style="font-size: 0.75rem; padding: 0.15rem 0.45rem; border-radius: 6px;">${matchAnalysis.score}%</span>` : ""}
+          </div>
+          <div class="kanban-card-title" style="font-size: 0.95rem; font-weight: 700; color: white; margin-bottom: 0.5rem; line-height: 1.3;">${job.title}</div>
+          <div class="kanban-card-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.775rem; color: var(--text-secondary);">
+            <span>📍 ${job.location.split(',')[0]}</span>
+            <span style="color: #34d399; font-weight: 600;">${job.salary.includes('£') ? '£' : '$'}</span>
+          </div>
+          <!-- Quick Move Dropdown / Action Row -->
+          <div style="margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;" onclick="event.stopPropagation();">
+            <select class="kanban-stage-select" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 0.75rem; padding: 0.2rem 0.4rem; cursor: pointer;" onchange="moveJobToStage('${job.id}', this.value)">
+              <option value="discovered" ${stage === 'discovered' ? 'selected' : ''}>Move: Discovered</option>
+              <option value="applied" ${stage === 'applied' ? 'selected' : ''}>Move: Applied</option>
+              <option value="interviewing" ${stage === 'interviewing' ? 'selected' : ''}>Move: Interviewing</option>
+              <option value="offer" ${stage === 'offer' ? 'selected' : ''}>Move: Offer</option>
+              <option value="archived" ${stage === 'archived' ? 'selected' : ''}>Move: Archived</option>
+            </select>
+            <button class="btn-text-link" style="font-size: 0.75rem; color: #f43f5e; background: none; border: none; cursor: pointer;" onclick="deleteJobFromTracker('${job.id}')">Remove</button>
+          </div>
+        `;
+        
+        // Card clicks opens modal details
+        card.addEventListener("click", (e) => {
+          if (card.classList.contains("dragging")) return;
+          openJobDetails(job.id);
+        });
+        
+        // Drag Events
+        card.addEventListener("dragstart", (e) => {
+          card.classList.add("dragging");
+          e.dataTransfer.setData("text/plain", job.id);
+        });
+        
+        card.addEventListener("dragend", () => {
+          card.classList.remove("dragging");
+        });
+        
+        listEl.appendChild(card);
+      });
+    }
+  });
+
+  initKanbanDragDrop();
+}
+
+// Drag & Drop event bindings
+function initKanbanDragDrop() {
+  const containers = document.querySelectorAll(".column-cards-container");
+  
+  containers.forEach(container => {
+    if (container.dataset.dragDropBound) return;
+    container.dataset.dragDropBound = "true";
+
+    container.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      container.classList.add("drag-over");
+    });
+    
+    container.addEventListener("dragleave", () => {
+      container.classList.remove("drag-over");
+    });
+    
+    container.addEventListener("drop", (e) => {
+      e.preventDefault();
+      container.classList.remove("drag-over");
+      
+      const jobId = e.dataTransfer.getData("text/plain");
+      const targetStage = container.id.replace("kanban-list-", "");
+      
+      if (jobId && targetStage) {
+        moveJobToStage(jobId, targetStage);
+      }
+    });
+  });
+}
+
+function moveJobToStage(jobId, targetStage) {
+  ensureTrackerStages();
+
+  // Remove from old stages
+  Object.keys(state.tracker).forEach(stage => {
+    if (Array.isArray(state.tracker[stage])) {
+      state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
+    }
+  });
+  
+  // Push to new stage
+  if (!Array.isArray(state.tracker[targetStage])) {
+    state.tracker[targetStage] = [];
+  }
+  
+  state.tracker[targetStage].push(jobId);
+  saveState();
+  renderKanbanBoard();
+  if (state.currentTab === "discover") renderJobDiscovery();
+  
+  const allJobs = getAllJobs();
+  const job = allJobs.find(j => j.id === jobId);
+  if (job) {
+    const stageTitles = {
+      discovered: "Discovered",
+      applied: "Applied",
+      interviewing: "Interviewing",
+      offer: "Offers Received",
+      archived: "Archived"
+    };
+    showToast(`Moved "${job.title}" to ${stageTitles[targetStage] || targetStage}`);
+  }
+}
+
+window.deleteJobFromTracker = function(jobId) {
+  ensureTrackerStages();
+  Object.keys(state.tracker).forEach(stage => {
+    state.tracker[stage] = state.tracker[stage].filter(id => id !== jobId);
+  });
+  saveState();
+  renderKanbanBoard();
+  if (state.currentTab === "discover") renderJobDiscovery();
+  showToast("Role removed from Kanban board", "info");
+};
+
+window.toggleTrackJob = function(jobId) {
+  ensureTrackerStages();
+  let currentStage = null;
+  Object.keys(state.tracker).forEach(stage => {
+    if (state.tracker[stage]?.includes(jobId)) currentStage = stage;
+  });
+
+  if (currentStage) {
+    showToast(`Role is already in ${currentStage} stage!`, "info");
+    switchTab("tracker");
+    return;
+  }
+
+  state.tracker.discovered.push(jobId);
+  saveState();
+  renderKanbanBoard();
+  renderJobDiscovery();
+  
+  const allJobs = getAllJobs();
+  const job = allJobs.find(j => j.id === jobId);
+  showToast(`Added "${job?.title || 'Role'}" to Discovered column!`);
 };
 
 // Job Details Modal
@@ -1275,6 +1536,17 @@ function openJobDetails(jobId) {
       </div>
     </div>
     ` : ""}
+    
+    <div class="modal-job-section" style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+      <h4 class="modal-section-title" style="margin-bottom: 0.75rem;">Pipeline Tracker Status</h4>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem;" onclick="moveJobToStage('${job.id}', 'discovered')">Move to Discovered</button>
+        <button class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem;" onclick="moveJobToStage('${job.id}', 'applied')">Move to Applied</button>
+        <button class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem;" onclick="moveJobToStage('${job.id}', 'interviewing')">Move to Interviewing</button>
+        <button class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem;" onclick="moveJobToStage('${job.id}', 'offer')">Move to Offer</button>
+        <button class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem;" onclick="moveJobToStage('${job.id}', 'archived')">Archive Role</button>
+      </div>
+    </div>
     
     <div class="modal-action-row" style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: flex-end;">
       <a href="${job.applyUrl}" target="_blank" class="btn" style="text-decoration: none;">
@@ -1637,6 +1909,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Bind tab buttons
   document.getElementById("nav-resume").onclick = () => switchTab("resume");
   document.getElementById("nav-discover").onclick = () => switchTab("discover");
+  document.getElementById("nav-tracker").onclick = () => switchTab("tracker");
   document.getElementById("nav-analytics").onclick = () => switchTab("analytics");
   
   // Set up dropzone file uploads
@@ -1644,6 +1917,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Setup discovery page filter listeners
   setupDiscoveryFilters();
+  
+  // Setup Kanban columns drag/drop listeners
+  initKanbanDragDrop();
   
   // Initialize default page view
   switchTab("resume");
