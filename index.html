@@ -80,32 +80,30 @@
       <div class="user-profile" style="display: flex; align-items: center; gap: 0.75rem;">
         <div id="resume-badge" class="resume-status-badge">No Resume Loaded</div>
         <div class="account-widget-container" style="position: relative;">
-          <button id="account-pill-btn" class="account-pill-btn" onclick="toggleAccountMenu()" title="Account & Multi-User Profile Switcher">
+          <button id="account-pill-btn" class="account-pill-btn" onclick="toggleAccountMenu()" title="Account Profile">
             <span class="user-avatar" id="active-user-avatar">👤</span>
-            <span class="user-name-label" id="active-user-name">Gnanendar Reddy Male</span>
-            <svg style="width: 14px; height: 14px; margin-left: 2px;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="user-name-label" id="active-user-name">Sign In / Register</span>
+            <svg id="account-chevron" style="width: 14px; height: 14px; margin-left: 2px;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           
           <div id="account-dropdown-menu" class="account-dropdown glass" style="display: none;">
-            <div class="account-menu-header">
-              <div style="font-weight: 700; color: #ffffff;" id="menu-user-name">Gnanendar Reddy Male</div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);" id="menu-user-email">gnanendarreddymale77@gmail.com</div>
+            <div class="account-menu-header" id="account-auth-header">
+              <div style="font-weight: 700; color: #ffffff;" id="menu-user-name">Guest User</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);" id="menu-user-email">Not signed in</div>
             </div>
             
             <div class="account-menu-divider"></div>
-            <div class="account-menu-title" style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; padding: 0.25rem 0.5rem;">Profiles & Friends</div>
-            <div id="account-profiles-list" class="account-profiles-list">
-              <!-- Dynamically populated profiles list -->
-            </div>
-            
-            <div class="account-menu-divider"></div>
-            <button class="account-menu-item" onclick="openAuthModal('signup')">
-              <span>➕ Create Account / Friend Profile</span>
+            <button class="account-menu-item" onclick="switchTab('resume'); toggleAccountMenu();">
+              <span>📄 My Resume Profile</span>
             </button>
-            <button class="account-menu-item" onclick="openAuthModal('login')">
+            <button class="account-menu-item" id="btn-menu-switch-account" onclick="openAuthModal('login')">
               <span>🔑 Sign In with Email</span>
             </button>
-            <button class="account-menu-item danger" onclick="signOutCurrentUser()">
+            <button class="account-menu-item" id="btn-menu-create-account" onclick="openAuthModal('signup')">
+              <span>➕ Create Account</span>
+            </button>
+            <div class="account-menu-divider" id="menu-signout-divider" style="display: none;"></div>
+            <button class="account-menu-item danger" id="btn-menu-signout" style="display: none;" onclick="signOutCurrentUser()">
               <span>🚪 Sign Out</span>
             </button>
           </div>
