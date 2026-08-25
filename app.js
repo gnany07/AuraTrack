@@ -15,8 +15,53 @@ Object.values(skillKeywords).forEach(group => {
   allSkillList.push(...group);
 });
 
+// Multi-User & Accounts Management
+const DEFAULT_PRIMARY_USER = {
+  id: "usr_gnanendar",
+  name: "Gnanendar Reddy Male",
+  email: "gnanendarreddymale77@gmail.com",
+  avatar: "👤",
+  isDefault: true
+};
+
+function getAccountsList() {
+  try {
+    const raw = localStorage.getItem("auratrack_accounts");
+    if (raw) {
+      const accounts = JSON.parse(raw);
+      if (Array.isArray(accounts) && accounts.length > 0) return accounts;
+    }
+  } catch (e) {}
+  const initial = [DEFAULT_PRIMARY_USER];
+  try { localStorage.setItem("auratrack_accounts", JSON.stringify(initial)); } catch(e){}
+  return initial;
+}
+
+function saveAccountsList(accounts) {
+  try { localStorage.setItem("auratrack_accounts", JSON.stringify(accounts)); } catch(e){}
+}
+
+function getActiveUserId() {
+  try {
+    return localStorage.getItem("auratrack_current_user_id") || DEFAULT_PRIMARY_USER.id;
+  } catch(e) {
+    return DEFAULT_PRIMARY_USER.id;
+  }
+}
+
+function setActiveUserId(userId) {
+  try { localStorage.setItem("auratrack_current_user_id", userId); } catch(e){}
+}
+
+function getActiveUserProfile() {
+  const accounts = getAccountsList();
+  const activeId = getActiveUserId();
+  return accounts.find(a => a.id === activeId) || accounts[0] || DEFAULT_PRIMARY_USER;
+}
+
 // App State
 let state = {
+  currentUser: DEFAULT_PRIMARY_USER,
   resumeText: "",
   parsedResume: {
     skills: [],
@@ -159,12 +204,17 @@ function ensureTrackerStages() {
 }
 
 async function syncStateFromDB() {
+  const activeUser = getActiveUserProfile();
+  const userId = activeUser.id;
   try {
-    const res = await fetch("/api/state");
+    const headers = { "X-User-Id": userId };
+    if (activeUser.token) headers["Authorization"] = `Bearer ${activeUser.token}`;
+
+    const res = await fetch(`/api/state?userId=${encodeURIComponent(userId)}`, { headers });
     if (res.ok) {
       const data = await res.json();
       if (data && data.state && typeof data.state === "object") {
-        state = { ...state, ...data.state };
+        state = { ...state, ...data.state, currentUser: activeUser };
         ensureFilterSets();
         ensureTrackerStages();
         if (state.currentTab === "tracker") renderKanbanBoard();
@@ -177,15 +227,49 @@ async function syncStateFromDB() {
 }
 
 function loadState() {
-  const savedState = localStorage.getItem("auratrack_state");
+  const activeUser = getActiveUserProfile();
+  const userStorageKey = `auratrack_state_${activeUser.id}`;
+  let savedState = localStorage.getItem(userStorageKey);
+  
+  // Legacy migration check
+  if (!savedState && activeUser.id === DEFAULT_PRIMARY_USER.id) {
+    savedState = localStorage.getItem("auratrack_state");
+  }
+
+  // Fresh initial state template for active user
+  let loadedData = {
+    currentUser: activeUser,
+    resumeText: "",
+    parsedResume: {
+      skills: [],
+      experienceLevel: "Entry/Mid",
+      seniorityKeywords: [],
+      email: activeUser.email || "",
+      name: activeUser.name || ""
+    },
+    customJobs: [],
+    tracker: { discovered: [], applied: [], interviewing: [], offer: [], archived: [] },
+    currentTab: (window.state && window.state.currentTab) || "resume",
+    selectedJobId: null
+  };
+
   if (savedState) {
     try {
       const parsed = JSON.parse(savedState);
-      state = { ...state, ...parsed };
+      loadedData = {
+        ...loadedData,
+        ...parsed,
+        currentUser: activeUser,
+        parsedResume: parsed.parsedResume ? { ...parsed.parsedResume } : loadedData.parsedResume,
+        tracker: parsed.tracker ? { ...parsed.tracker } : loadedData.tracker
+      };
     } catch (e) {
       console.error("Failed to parse saved state", e);
     }
   }
+
+  state = loadedData;
+  window.state = state;
   
   ensureFilterSets();
   ensureTrackerStages();
@@ -193,19 +277,24 @@ function loadState() {
   // Async Cloudflare KV DB Sync
   syncStateFromDB();
 
-  // If resume text is empty or default, set Gnanendar's actual resume
-  if (!state.resumeText || state.resumeText.includes("Alex Mercer")) {
+  // If primary user and resume text is empty or default, set Gnanendar's resume
+  if (activeUser.id === DEFAULT_PRIMARY_USER.id && (!state.resumeText || state.resumeText.includes("Alex Mercer") || state.resumeText.length < 50)) {
     state.resumeText = DEFAULT_RESUME_TEXT;
     state.parsedResume = parseResumeText(DEFAULT_RESUME_TEXT);
     saveState();
   }
+
+  updateAccountUI();
 }
 
 function saveState() {
   ensureFilterSets();
   ensureTrackerStages();
+  const activeUser = getActiveUserProfile();
+  
   const serializableState = {
     ...state,
+    currentUser: activeUser,
     tracker: state.tracker,
     activeFilters: {
       domain: Array.from(state.activeFilters.domain),
@@ -215,13 +304,21 @@ function saveState() {
       salary: Array.from(state.activeFilters.salary)
     }
   };
-  localStorage.setItem("auratrack_state", JSON.stringify(serializableState));
+  
+  const userStorageKey = `auratrack_state_${activeUser.id}`;
+  localStorage.setItem(userStorageKey, JSON.stringify(serializableState));
+  if (activeUser.id === DEFAULT_PRIMARY_USER.id) {
+    localStorage.setItem("auratrack_state", JSON.stringify(serializableState));
+  }
 
-  // Asynchronous Cloudflare KV Database Sync
-  fetch("/api/state", {
+  // Asynchronous Cloudflare KV Database Sync (Isolated per user)
+  const headers = { "Content-Type": "application/json", "X-User-Id": activeUser.id };
+  if (activeUser.token) headers["Authorization"] = `Bearer ${activeUser.token}`;
+
+  fetch(`/api/state?userId=${encodeURIComponent(activeUser.id)}`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ state: serializableState })
+    headers,
+    body: JSON.stringify({ userId: activeUser.id, state: serializableState })
   }).catch(() => {});
 }
 
@@ -1902,6 +1999,216 @@ function renderAnalytics() {
   `;
 }
 
+// Multi-User Account UI & Handler Functions
+window.toggleAccountMenu = function(e) {
+  if (e) e.stopPropagation();
+  const menu = document.getElementById("account-dropdown-menu");
+  if (!menu) return;
+  const isHidden = menu.style.display === "none" || !menu.style.display;
+  menu.style.display = isHidden ? "block" : "none";
+  if (isHidden) updateAccountUI();
+};
+
+window.updateAccountUI = function() {
+  const activeUser = state.currentUser || getActiveUserProfile();
+  const avatarEl = document.getElementById("active-user-avatar");
+  const nameEl = document.getElementById("active-user-name");
+  const menuNameEl = document.getElementById("menu-user-name");
+  const menuEmailEl = document.getElementById("menu-user-email");
+  const profilesList = document.getElementById("account-profiles-list");
+
+  if (avatarEl) avatarEl.textContent = activeUser.avatar || "👤";
+  if (nameEl) nameEl.textContent = activeUser.name || "User";
+  if (menuNameEl) menuNameEl.textContent = activeUser.name || "User";
+  if (menuEmailEl) menuEmailEl.textContent = activeUser.email || "Local Profile";
+
+  if (profilesList) {
+    const accounts = getAccountsList();
+    profilesList.innerHTML = "";
+    accounts.forEach(acc => {
+      const isActive = acc.id === activeUser.id;
+      const item = document.createElement("div");
+      item.className = `profile-select-item ${isActive ? 'active' : ''}`;
+      item.onclick = () => window.switchUserProfile(acc.id);
+      item.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 0.5rem; overflow: hidden;">
+          <span>${acc.avatar || "👤"}</span>
+          <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+            <div style="font-weight: 600; font-size: 0.8rem; color: #ffffff;">${acc.name}</div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">${acc.email || "Local Guest"}</div>
+          </div>
+        </div>
+        ${isActive ? '<span style="color: #34d399; font-size: 0.8rem;">✓</span>' : ''}
+      `;
+      profilesList.appendChild(item);
+    });
+  }
+};
+
+window.switchUserProfile = function(userId) {
+  const accounts = getAccountsList();
+  const target = accounts.find(a => a.id === userId);
+  if (!target) return;
+
+  saveState();
+  setActiveUserId(userId);
+  state.currentUser = target;
+  loadState();
+
+  const menu = document.getElementById("account-dropdown-menu");
+  if (menu) menu.style.display = "none";
+
+  // Re-render UI for new user profile
+  renderResumePortal();
+  if (state.currentTab === "discover") renderJobDiscovery();
+  if (state.currentTab === "tracker") renderKanbanBoard();
+  if (state.currentTab === "analytics") renderAnalytics();
+
+  showToast(`Switched profile to ${target.name}`);
+};
+
+window.openAuthModal = function(tab = "signup") {
+  const modal = document.getElementById("auth-modal");
+  if (!modal) return;
+  const menu = document.getElementById("account-dropdown-menu");
+  if (menu) menu.style.display = "none";
+
+  window.switchAuthTab(tab);
+  modal.classList.add("active");
+};
+
+window.closeAuthModal = function() {
+  const modal = document.getElementById("auth-modal");
+  if (modal) modal.classList.remove("active");
+};
+
+window.switchAuthTab = function(tab) {
+  const title = document.getElementById("auth-modal-title");
+  const tabSignup = document.getElementById("auth-tab-signup");
+  const tabLogin = document.getElementById("auth-tab-login");
+  const nameGroup = document.getElementById("auth-name-group");
+  const nameInput = document.getElementById("auth-name");
+  const submitBtn = document.getElementById("auth-submit-btn");
+
+  if (tab === "login") {
+    if (title) title.textContent = "Sign In to AuraTrack";
+    if (tabSignup) tabSignup.classList.remove("active");
+    if (tabLogin) tabLogin.classList.add("active");
+    if (nameGroup) nameGroup.style.display = "none";
+    if (nameInput) nameInput.required = false;
+    if (submitBtn) submitBtn.textContent = "Sign In";
+  } else {
+    if (title) title.textContent = "Create AuraTrack Account";
+    if (tabSignup) tabSignup.classList.add("active");
+    if (tabLogin) tabLogin.classList.remove("active");
+    if (nameGroup) nameGroup.style.display = "block";
+    if (nameInput) nameInput.required = true;
+    if (submitBtn) submitBtn.textContent = "Create Account & Get Started";
+  }
+};
+
+window.handleAuthSubmit = async function(e) {
+  e.preventDefault();
+  const isLogin = document.getElementById("auth-tab-login")?.classList.contains("active");
+  const email = document.getElementById("auth-email").value.trim();
+  const password = document.getElementById("auth-password").value;
+  const name = document.getElementById("auth-name")?.value.trim() || email.split("@")[0];
+
+  const submitBtn = document.getElementById("auth-submit-btn");
+  if (submitBtn) submitBtn.disabled = true;
+
+  try {
+    const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, name })
+    });
+
+    const data = await res.json();
+    if (data.status === "error") {
+      showToast(data.message || "Authentication failed", "danger");
+      return;
+    }
+
+    const userProfile = {
+      id: data.user?.id || ("usr_" + btoa(email).slice(0, 10)),
+      name: data.user?.name || name,
+      email: data.user?.email || email,
+      avatar: "👤",
+      token: data.token
+    };
+
+    const accounts = getAccountsList();
+    const existingIdx = accounts.findIndex(a => a.id === userProfile.id || a.email === userProfile.email);
+    if (existingIdx >= 0) {
+      accounts[existingIdx] = { ...accounts[existingIdx], ...userProfile };
+    } else {
+      accounts.push(userProfile);
+    }
+    saveAccountsList(accounts);
+    setActiveUserId(userProfile.id);
+
+    state.currentUser = userProfile;
+    loadState();
+    closeAuthModal();
+
+    showToast(`${isLogin ? 'Signed in as' : 'Account created for'} ${userProfile.name}!`);
+  } catch (err) {
+    // Local fallback creation
+    const userId = "usr_" + Date.now().toString(36);
+    const userProfile = { id: userId, name: name || "Friend", email, avatar: "👤" };
+    const accounts = getAccountsList();
+    accounts.push(userProfile);
+    saveAccountsList(accounts);
+    setActiveUserId(userProfile.id);
+    state.currentUser = userProfile;
+    loadState();
+    closeAuthModal();
+    showToast(`Account created locally for ${userProfile.name}!`);
+  } finally {
+    if (submitBtn) submitBtn.disabled = false;
+  }
+};
+
+window.createQuickLocalProfile = function() {
+  const name = prompt("Enter Name for Friend Profile:", "Friend Profile");
+  if (!name) return;
+  const userId = "usr_" + Date.now().toString(36);
+  const newProfile = {
+    id: userId,
+    name: name.trim(),
+    email: `${name.toLowerCase().replace(/[^a-z0-9]/g, "")}@local.user`,
+    avatar: "👤"
+  };
+
+  const accounts = getAccountsList();
+  accounts.push(newProfile);
+  saveAccountsList(accounts);
+  setActiveUserId(newProfile.id);
+  state.currentUser = newProfile;
+  loadState();
+  closeAuthModal();
+  showToast(`Profile created for ${newProfile.name}! Upload your resume to start.`);
+};
+
+window.signOutCurrentUser = function() {
+  const accounts = getAccountsList();
+  const current = getActiveUserProfile();
+  
+  if (confirm(`Sign out of profile "${current.name}"?`)) {
+    // Switch to default primary or first profile
+    const nextUser = accounts.find(a => a.id !== current.id) || DEFAULT_PRIMARY_USER;
+    setActiveUserId(nextUser.id);
+    state.currentUser = nextUser;
+    loadState();
+    
+    const menu = document.getElementById("account-dropdown-menu");
+    if (menu) menu.style.display = "none";
+    showToast(`Signed out. Switched to ${nextUser.name}.`);
+  }
+};
+
 // Global page load initializations
 document.addEventListener("DOMContentLoaded", () => {
   loadState();
@@ -1921,6 +2228,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Setup Kanban columns drag/drop listeners
   initKanbanDragDrop();
   
+  // Close account menu when clicking outside
+  document.addEventListener("click", (e) => {
+    const container = document.querySelector(".account-widget-container");
+    const menu = document.getElementById("account-dropdown-menu");
+    if (menu && container && !container.contains(e.target)) {
+      menu.style.display = "none";
+    }
+  });
+
   // Initialize default page view
   switchTab("resume");
   

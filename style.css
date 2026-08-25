@@ -1534,4 +1534,146 @@ body {
   cursor: not-allowed;
 }
 
+/* ==========================================================================
+   Multi-User & Multi-Tenancy Account Widget & Modal Styles
+   ========================================================================== */
+
+.account-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.account-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.user-avatar {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: #11141d !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  z-index: 1000;
+  animation: modalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.account-menu-header {
+  padding: 0.5rem 0.6rem;
+}
+
+.account-menu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0.4rem 0;
+}
+
+.account-profiles-list {
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-select-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.profile-select-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.profile-select-item.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.account-menu-item {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.account-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.account-menu-item.danger {
+  color: #fb7185;
+}
+
+.account-menu-item.danger:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f43f5e;
+}
+
+/* Auth Modal Tabs */
+.auth-tab {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+  color: #ffffff;
+  border-bottom-color: var(--primary);
+}
+
+.auth-tab:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+
 
