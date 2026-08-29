@@ -38,9 +38,9 @@ const seedJobs = [
     "requirements": [
       "Python",
       "Kubernetes",
-      "Fine-tuning",
-      "Machine Learning",
       "Kafka",
+      "Machine Learning",
+      "Fine-tuning",
       "Azure"
     ],
     "preferred": [
@@ -63,8 +63,8 @@ const seedJobs = [
     "description": "About the Team\n\nData Platform at OpenAI owns the foundational data stack powering critical product, research, and analytics workflows. We operate some of the largest Spark compute fleets in production; design, and build data lakes and metadata systems on Iceberg and Delta with a vision toward exabyt...",
     "requirements": [
       "Distributed Systems",
-      "Machine Learning",
-      "Kafka"
+      "Kafka",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -109,9 +109,9 @@ const seedJobs = [
     "description": "About the Team\n\nThe Applied AI team safely brings OpenAI's technology to the world. We released ChatGPT, Plugins, DALL\u00b7E, and the APIs for GPT-4, GPT-3, embeddings, and fine-tuning. We also operate inference infrastructure at scale. There's a lot more on the immediate horizon.\n\n\n\nWe seek to learn fr...",
     "requirements": [
       "Kubernetes",
-      "Python",
+      "Kafka",
       "Fine-tuning",
-      "Kafka"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -154,9 +154,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/d4dcd344-40cf-44d6-a7dd-172118eb0842/application",
     "description": "Join the engineering teams that bring OpenAI\u2019s ideas safely to the world!!\n\nThe Applied Engineering team works across research, engineering, product, and design to bring OpenAI\u2019s technology to consumers and businesses. We seek to learn from deployment and distribute the benefits of AI, while ensurin...",
     "requirements": [
-      "AWS",
+      "Distributed Systems",
       "Kubernetes",
-      "Distributed Systems"
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -187,6 +187,30 @@ const seedJobs = [
     "logoUrl": "https://logo.clearbit.com/openai.com"
   },
   {
+    "id": "openai-4ef5bf23-cf0e-4b97-a639-11f963c99b88",
+    "company": "OpenAI",
+    "title": "Software Engineer, Financial Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "San Francisco (Hybrid)",
+    "salary": "$200,000 - $330,000 + equity",
+    "applyUrl": "https://jobs.ashbyhq.com/openai/4ef5bf23-cf0e-4b97-a639-11f963c99b88/application",
+    "description": "About the team\n\nOpenAI\u2019s Applied AI organization turns our latest model capabilities into products used by hundreds of millions of consumers, developers, and organizations worldwide. Our teams build the product experiences and platform foundations behind ChatGPT, Codex, our API platform, and offerin...",
+    "requirements": [
+      "Distributed Systems",
+      "Golang",
+      "Go",
+      "API Design"
+    ],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
+    "logoUrl": "https://logo.clearbit.com/openai.com"
+  },
+  {
     "id": "openai-991948b7-0305-4125-bb9a-625f5bc24189",
     "company": "OpenAI",
     "title": "Software Engineer, Integrity Foundations",
@@ -200,9 +224,9 @@ const seedJobs = [
     "description": "About the Team\n\nThe Applied Foundations team at OpenAI is dedicated to ensuring that our cutting-edge technology is not only revolutionary but also secure from a myriad of adversarial threats. We strive to maintain the integrity of our platforms as they scale.\u00a0\n\nThe Applied Foundations team is at th...",
     "requirements": [
       "Kubernetes",
-      "Python",
       "Azure",
-      "Kafka"
+      "Kafka",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -288,8 +312,8 @@ const seedJobs = [
     "description": "About the Team\n\nThe Agent Infrastructure team at OpenAI is responsible for building systems that enable training and deployment of highly useful AI agents, both internally and for the world.\n\nWe work hand-in-hand with researchers to design and scale the environment in which agentic models are traine...",
     "requirements": [
       "Distributed Systems",
-      "Machine Learning",
-      "Kubernetes"
+      "Kubernetes",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -310,14 +334,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a886ff48-b8a1-4e28-b468-296713a5ad78/application",
     "description": "Overview:\nThe Data Acquisition team within the Foundations organization at OpenAI is responsible for all aspects of data collection to support our model training operations. Our team manages web crawling and GPTBot services and works closely with Data Processing, Architecture, and Scaling teams. We ...",
     "requirements": [
+      "Golang",
       "Python",
+      "GCP",
       "Kubernetes",
+      "AWS",
       "Go",
       "React",
-      "Golang",
-      "Node.js",
-      "AWS",
-      "GCP"
+      "Node.js"
     ],
     "preferred": [
       "Azure",
@@ -341,8 +365,8 @@ const seedJobs = [
     "requirements": [
       "Distributed Systems",
       "Go",
-      "Python",
-      "Golang"
+      "Golang",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -363,9 +387,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/770d5c3f-4e72-4b49-aec4-d444e8ad7a64/application",
     "description": "ABOUT THE TEAM\n\nFrontier Systems Foundations, part of Compute Foundations at OpenAI, builds the systems software foundation that turns new compute infrastructure into reliable, usable capacity for frontier model training.\n\nOur mission is to make some of the world's largest GPU clusters work reliably...",
     "requirements": [
+      "Operating Systems",
       "Go",
-      "Golang",
-      "Operating Systems"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -386,10 +410,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/83b6755d-7785-4186-9050-5ef3ad127941/application",
     "description": "About the Team\n\nOur Inference team brings OpenAI\u2019s most capable research and technology to the world through our products. We empower consumers, enterprise and developers alike to use and access our start-of-the-art AI models, allowing them to do things that they\u2019ve never been able to before. We foc...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
-      "PyTorch",
       "Machine Learning",
+      "Distributed Systems",
+      "PyTorch",
+      "CUDA",
       "Azure"
     ],
     "preferred": [
@@ -434,11 +458,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/98a36c10-3497-4955-9cc0-a6f211e4dc1b/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -459,8 +483,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/1faee5e7-3b2f-4d8c-9a6f-ff0f2a4a42a7/application",
     "description": "Join the engineering teams that bring OpenAI\u2019s ideas safely to the world!\n\nThe Applied Engineering team works across research, engineering, product, and design to bring OpenAI\u2019s technology to consumers and businesses. We seek to learn from deployment and distribute the benefits of AI, while ensuring...",
     "requirements": [
-      "Kubernetes",
-      "Design Patterns"
+      "Design Patterns",
+      "Kubernetes"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -481,12 +505,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ecf1abec-898c-4acb-a984-42858836a1ff/application",
     "description": "About the Team\n\nThe Integrity team at OpenAI is dedicated to ensuring that our cutting-edge technology is not only revolutionary, but also secure from a myriad of adversarial threats. We strive to maintain the integrity of our platforms as they scale.\n\nThe Integrity team is at the front lines of def...",
     "requirements": [
+      "Transformers",
       "Deep Learning",
+      "LLMs",
+      "Machine Learning",
       "Fine-tuning",
       "PyTorch",
-      "Machine Learning",
-      "Transformers",
-      "LLMs",
       "TensorFlow"
     ],
     "preferred": [
@@ -508,11 +532,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a90cdb7c-1c33-4fca-9a96-26c236006f14/application",
     "description": "About the Team\n\nJoin the engineering teams that bring OpenAI\u2019s ideas safely to the world!\n\nThe Applied Engineering team works across research, engineering, product, and design to bring OpenAI\u2019s technology to consumers and businesses. We seek to learn from deployment and distribute the benefits of AI...",
     "requirements": [
+      "JavaScript",
       "Python",
       "Kubernetes",
-      "React",
-      "JavaScript",
-      "C"
+      "C",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -533,13 +557,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/984da843-107f-4ff6-ad27-07a06700e338/application",
     "description": "About the Team\n\nWe\u2019re hiring Software Engineers to join our broader Infrastructure organization, which supports multiple high-impact teams. Depending on your interests and experience, you could work on one of several focus areas\u2014including Core Distributed Systems, Reliability Engineering, Observabil...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
-      "Rust",
-      "C"
+      "Distributed Systems",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -560,11 +584,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/4762783e-61e1-4d36-af1d-8dee3c5f70e2/application",
     "description": "ABOUT THE TEAM\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -585,12 +609,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/9d11e1d8-af1d-413b-873f-d8fac2bdee99/application",
     "description": "About the Team\nFull Stack engineers within the Fleet Scheduling team are dedicated to building intuitive and scalable interfaces that empower researchers to efficiently manage AI workloads across some of the largest supercomputers in the world. Our focus is on developing robust, high-performance sys...",
     "requirements": [
-      "Distributed Systems",
+      "Golang",
       "Python",
       "Kubernetes",
+      "Distributed Systems",
       "Go",
       "React",
-      "Golang",
       "Node.js",
       "Azure"
     ],
@@ -635,14 +659,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/b9dee2a0-9bb3-447e-9bce-2b1bed784e5b/application",
     "description": "About the Team\n\nThe Safety Systems team is dedicated to ensuring the safety, robustness, and reliability of AI models and their deployment in the real world. Learn more about OpenAI\u2019s approach to safety. https://openai.com/safety/\n\n\n\nBuilding on the many years of our practical alignment work and app...",
     "requirements": [
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
-      "Machine Learning",
       "Kafka",
-      "Rust",
-      "C"
+      "Machine Learning",
+      "C",
+      "Go"
     ],
     "preferred": [
       "Azure"
@@ -663,10 +687,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/71e7252f-abb1-4b74-8e69-318413042357/application",
     "description": "About the team\n\nThe Applied AI Engineering team is responsible for ensuring the safe and effective deployment of Generative AI applications for developers and startups. We act as a trusted advisor and thought partner for our customers, working to build an effective backlog of GenAI use cases for the...",
     "requirements": [
+      "JavaScript",
       "Go",
-      "Python",
       "Golang",
-      "JavaScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -688,9 +712,9 @@ const seedJobs = [
     "description": "ABOUT THE TEAM\n\nOnline Data builds and operates Habitat, the single product surface of Online Data and the system of record for OpenAI\u2019s online user data. As OpenAI\u2019s scale and product requirements evolve, Habitat is becoming a full-stack, one-size-fits-most database platform with end-to-end ownersh...",
     "requirements": [
       "Distributed Systems",
+      "Rust",
       "API Design",
-      "Python",
-      "Rust"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -771,9 +795,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/f386b209-1259-4b79-bf5a-aa97fc7ce77b/application",
     "description": "ABOUT THE TEAM\n\nOpenAI\u2019s Hardware organization develops AI-native silicon and system-level solutions for the unique demands of advanced AI workloads. Building on efforts like Jalape\u00f1o, the team is developing future generations of AI-native silicon and tightly integrated systems to power the next gen...",
     "requirements": [
-      "PyTorch",
+      "Distributed Systems",
       "LLMs",
-      "Distributed Systems"
+      "PyTorch"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -816,8 +840,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/020b2aae-8be0-408c-ab49-20eefa8541af/application",
     "description": "About the Team\n\nThe Foundations Research team works on high-risk, high-reward ideas that could shape the next decade of AI. Our goal is to advance the science and data that enable our training and scaling efforts, with a particular focus on future frontier models.  Pushing the boundaries of data, sc...",
     "requirements": [
-      "Machine Learning",
-      "LLMs"
+      "LLMs",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -861,8 +885,8 @@ const seedJobs = [
     "requirements": [
       "Distributed Systems",
       "Go",
-      "Python",
-      "Golang"
+      "Golang",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -884,8 +908,8 @@ const seedJobs = [
     "description": "About the Team\n\nOpenAI\u2019s Inference team powers the deployment of our most advanced models - including our GPT models, 4o Image Generation, and Whisper - across a variety of platforms. Our work ensures these models are available, performant, and scalable in production, and we partner closely with Res...",
     "requirements": [
       "TensorRT-LLM",
-      "LLMs",
-      "vLLM"
+      "vLLM",
+      "LLMs"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -906,8 +930,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/be7b1bf5-37ab-40f7-9ec1-e9732244f12a/application",
     "description": "About the team\n\nThe AI Deployment Engineering  team is responsible for ensuring the safe and effective deployment of Generative AI applications. We act as a trusted advisor and thought partner for our customers, working to build an effective backlog of GenAI use cases for their industry and drive th...",
     "requirements": [
-      "Python",
-      "JavaScript"
+      "JavaScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -930,8 +954,8 @@ const seedJobs = [
     "requirements": [
       "Distributed Systems",
       "Go",
-      "Python",
-      "Golang"
+      "Golang",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -971,14 +995,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/2b5e8e15-7952-4170-a927-2ad68e318ed6/application",
     "description": "About the Team:\n\nThe Database Systems team specializes in high-performance distributed databases. Our team built Rockset, the real-time search, analytics, and vector database that powers all vector search and retrieval augmented generation (RAG) at OpenAI. In addition to retrieval, as an online data...",
     "requirements": [
-      "Distributed Systems",
-      "Vector Search",
+      "Azure",
       "Kubernetes",
       "RAG",
-      "AWS",
+      "Distributed Systems",
       "C",
-      "GCP",
-      "Azure"
+      "AWS",
+      "Vector Search",
+      "GCP"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1022,8 +1046,8 @@ const seedJobs = [
     "description": "ABOUT THE TEAM\n\nAt OpenAI, we\u2019re building safe and beneficial artificial general intelligence. We deploy our models through ChatGPT, our APIs, and other cutting-edge products. Behind the scenes, making these systems fast, reliable, and cost-efficient requires world-class infrastructure.\n\nThe Caching...",
     "requirements": [
       "Distributed Systems",
-      "Redis",
-      "Kubernetes"
+      "Kubernetes",
+      "Redis"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1107,10 +1131,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/1ba666a4-0be2-4bd0-ad51-39ed7164c241/application",
     "description": "ABOUT THE TEAM\n\nThe Systems Integration team is responsible for building the infrastructure, tooling, and validation systems that ensure our device software is reliable, testable, and ready to ship. We design and maintain automated test frameworks, hardware-in-the-loop labs, and release pipelines th...",
     "requirements": [
-      "C",
       "GitHub",
-      "Python",
-      "Rust"
+      "C",
+      "Rust",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1133,8 +1157,8 @@ const seedJobs = [
     "requirements": [
       "C",
       "Kubernetes",
-      "Python",
-      "Rust"
+      "Rust",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1198,11 +1222,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ba2ead69-d118-4a91-a4d7-c880d17fa7f9/application",
     "description": "ABOUT THE TEAM\n\nThe Applied AI Engineering team partners closely with customers to help them turn frontier AI capabilities into real products, workflows, and business impact. We act as trusted technical partners across strategy, solution design, architecture, implementation, evaluation, and adoption...",
     "requirements": [
-      "Python",
-      "Go",
-      "Golang",
       "JavaScript",
-      "Machine Learning"
+      "Golang",
+      "Python",
+      "Machine Learning",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1265,14 +1289,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/6eb386ac-9056-4795-aa79-a27e105faf5c/application",
     "description": "About the Team\nTraining Runtime designs the core distributed machine-learning training runtime that powers everything from early research experiments to frontier-scale model runs. With a dual mandate to accelerate researchers and enable frontier scale, we\u2019re building a unified, modular runtime that ...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
-      "Python",
-      "PyTorch",
-      "JAX",
       "Rust",
+      "Python",
+      "Distributed Systems",
       "C",
-      "TensorFlow"
+      "JAX",
+      "PyTorch",
+      "TensorFlow",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1293,11 +1317,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/57cfe1d3-27b6-4761-909c-fec7829e9227/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1358,11 +1382,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/bf036b23-cd23-46d0-a02f-4b1483f4698a/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1383,12 +1407,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/fff02c39-1185-427c-bf89-70d7eaa5e3db/application",
     "description": "About the Team\n\nWith Codex we\u2019re building an AI software engineer. One that you can pair with, delegate to, or even ask to take on future tasks proactively. Our team is a fast-moving group within OpenAI, bringing together research, engineering, design, and product. We iteratively build the Codex age...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "Golang",
       "Rust",
-      "C"
+      "Golang",
+      "Python",
+      "Distributed Systems",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1409,11 +1433,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/28cd6fe2-4096-426b-8b08-52a66458e2c6/application",
     "description": "ABOUT THE TEAM\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1455,18 +1479,18 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/78c2a68b-cc77-4c62-8891-96afb603650a/application",
     "description": "About OpenAI\n\nOpenAI is dedicated to ensuring that artificial general intelligence (AGI) benefits all of humanity. Our mission requires building not only world-class AI models, but also the infrastructure that enables those models to be deployed reliably, efficiently, and at global scale. As demand ...",
     "requirements": [
-      "Triton",
-      "Distributed Systems",
-      "CUDA",
-      "Python",
-      "vLLM",
-      "Go",
+      "Rust",
       "Golang",
-      "Machine Learning"
+      "Python",
+      "Machine Learning",
+      "Distributed Systems",
+      "C",
+      "Go",
+      "Triton"
     ],
     "preferred": [
-      "Rust",
-      "C"
+      "vLLM",
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
     "logoUrl": "https://logo.clearbit.com/openai.com"
@@ -1632,9 +1656,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/63f7f0b3-ba2c-437b-87ba-ec476729f071/application",
     "description": "ABOUT THE TEAM\n\nThe Release Engineer team is responsible for building and maintaining the systems that power software delivery\u2014from CI/CD pipelines and artifact management to release automation and fleet telemetry. We ensure software across bootloaders, firmware, operating systems, and cloud service...",
     "requirements": [
-      "Python",
       "GitHub",
-      "Operating Systems"
+      "Operating Systems",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1677,11 +1701,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/83730f3e-3a96-476e-afb0-15f1f045ab03/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1702,11 +1726,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ad06299f-d4e2-4de6-a925-b2e94b3c1d0b/application",
     "description": "ABOUT THE TEAM\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1727,11 +1751,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/04435c05-7a05-4802-894d-c173327fbac8/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1792,11 +1816,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/89f58eb2-519f-4a36-8be0-2e594724e1bc/application",
     "description": "About the Team\n\nWith Codex we\u2019re building an AI software engineer. One that you can pair with, delegate to, or even ask to take on future tasks proactively. Our team is a fast-moving group within OpenAI, bringing together research, engineering, design, and product. We iteratively build the Codex age...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1860,14 +1884,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/202eb061-23d7-4a58-80c8-bc3b41e56d39/application",
     "description": "About the Role\n\nThe Engineering Acceleration team builds and operates the foundational systems that engineers use to build, test, and ship ChatGPT, the API, and OpenAI's infrastructure.\n\nWe are looking for an engineer to help evolve OpenAI's build and continuous integration systems for a fast-growin...",
     "requirements": [
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "TypeScript",
-      "Golang",
       "Kafka",
-      "Rust",
-      "C"
+      "TypeScript",
+      "C",
+      "Go"
     ],
     "preferred": [
       "Docker"
@@ -1888,11 +1912,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/c00094f9-e071-4870-afec-104beb3ce499/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1913,11 +1937,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/8e301350-62fb-4251-bc34-c7036498f08c/application",
     "description": "ABOUT THE TEAM\n\nThe Software Engineering team is responsible for designing and building the scalable, performant, and secure backend systems that power our products\u2014from early prototypes to large-scale deployments. We collaborate closely with product, hardware, and full-stack teams to ensure our inf...",
     "requirements": [
-      "Distributed Systems",
-      "System Design",
+      "Golang",
       "Python",
+      "Distributed Systems",
       "Go",
-      "Golang"
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -1938,11 +1962,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/7cd8205b-fd73-4af1-9103-1b1fed3b0c22/application",
     "description": "ABOUT THE TEAM\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2007,11 +2031,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/e665817a-bf86-4208-8cf3-c1754c28b401/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2032,11 +2056,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/56fceb8e-589b-410e-8b21-24f9945ccb9d/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2057,11 +2081,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3a64da1c-bf29-4e52-baa3-a8f35f16ff74/application",
     "description": "ABOUT THE TEAM\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2082,11 +2106,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/1953efa7-5c1f-4878-b4cb-926cd35aafdb/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2129,12 +2153,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ef828b89-41ed-4cde-96a9-94ffe5770d4c/application",
     "description": "ABOUT THE TEAM\n\nThe ChatGPT Learning team focuses on building the next generation of learning experiences inside ChatGPT. Learning is already one of the largest consumer use cases on the platform, with millions of people each week using ChatGPT to understand concepts, practice skills, and get unstuc...",
     "requirements": [
+      "Golang",
       "Python",
-      "React",
-      "Go",
       "TypeScript",
-      "Node.js",
-      "Golang"
+      "Go",
+      "React",
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2218,8 +2242,8 @@ const seedJobs = [
     "description": "ABOUT THE TEAM\n\nThe Consumer Devices team at OpenAI builds end-to-end hardware and software systems that bring AI into the physical world. We work at the intersection of custom silicon, embedded systems, operating systems, and cloud services to deliver reliable, production-ready devices at scale.\n\n\n...",
     "requirements": [
       "C",
-      "Rust",
-      "Operating Systems"
+      "Operating Systems",
+      "Rust"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2259,10 +2283,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/0fc4742f-21f9-40a3-925e-adeb0a6920c1/application",
     "description": "ABOUT THE TEAM\n\nTraining Runtime designs the core distributed runtime that powers everything from early research experiments to frontier-scale model runs. We work on building robust, scalable, high performance components to support our distributed training workloads.  Our priorities are to maximize ...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
       "Python",
       "Machine Learning",
-      "Rust",
+      "Distributed Systems",
       "C"
     ],
     "preferred": [
@@ -2348,11 +2372,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae/application",
     "description": "\nAbout the team\n\nThe Applied AI Engineering team is responsible for ensuring the safe and effective deployment of generative AI applications for developers and enterprises. We act as a trusted advisor and thought partner for our API customers, working to build an effective backlog of frontier AI use...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2416,8 +2440,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a653b035-a866-4a5c-9c2a-fda3c2950eee/application",
     "description": "About the Team\n\nThe Future of Computing Research team is an applied research team in the Consumer Devices group focused on developing new methods and models to support our vision as we advance forward in our mission of building AGI that benefits all of humanity.\n\nAbout the Role\n\nAs a Technical Lead ...",
     "requirements": [
-      "CUDA",
-      "Transformers"
+      "Transformers",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2438,9 +2462,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/deff9215-217d-4392-825e-7788cb8205f3/application",
     "description": "ABOUT THE TEAM\n\nOpenAI\u2019s mission is to ensure that artificial general intelligence benefits all of humanity. A majority of our users interact with our products in languages other than English, and our products must work seamlessly across languages, regions, and cultures.\n\nThe Internationalization te...",
     "requirements": [
+      "React",
       "MySQL",
-      "Kubernetes",
-      "React"
+      "Kubernetes"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2483,11 +2507,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/11aaa7ee-21b6-431f-99b1-42c4b830949e/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2574,9 +2598,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/577e6673-0a4a-491b-9a0d-facbdd3bdf3c/application",
     "description": "About the Team\nThe Codex Core Agent team builds the kernel of Codex. We own making the agent better, accelerating research, and making those improvements real in production for our users.\n\nThat means working across the systems that make Codex actually function as an agent in the real world: the prod...",
     "requirements": [
+      "Fine-tuning",
       "Machine Learning",
-      "Python",
-      "Fine-tuning"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2597,33 +2621,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3544fb7b-669b-43e3-8828-94972620bac7/application",
     "description": "About the Role\n\nWe are seeking a Cloud Infrastructure Engineer to help design and evolve the platforms that power OpenAI\u2019s products.\n\nIn this role, you will be a hands-on technical leader, driving the architecture, scalability, reliability, and security of critical infrastructure systems. You will h...",
     "requirements": [
-      "Distributed Systems",
+      "Azure",
       "Kubernetes",
+      "Distributed Systems",
       "AWS",
-      "GCP",
-      "Azure"
-    ],
-    "preferred": [
-      "High performance distributed processing"
-    ],
-    "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
-    "logoUrl": "https://logo.clearbit.com/openai.com"
-  },
-  {
-    "id": "openai-ddf7e534-0c65-4b7e-b97e-f5dc33fc8bdf",
-    "company": "OpenAI",
-    "title": "AI Deployment Manager - Pilots - San Francisco",
-    "category": "SWE",
-    "domain": "Distributed Systems",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "San Francisco (Hybrid)",
-    "salary": "$200,000 - $330,000 + equity",
-    "applyUrl": "https://jobs.ashbyhq.com/openai/ddf7e534-0c65-4b7e-b97e-f5dc33fc8bdf/application",
-    "description": "About the Role\n\nThe AI Deployment Manager (ADM) - Pilots is a customer-facing role responsible for leading structured, time-bound enterprise AI pilots from initial scoping through final executive readout. This role is focused on helping customers evaluate OpenAI\u2019s products in real-world contexts, id...",
-    "requirements": [
-      "Go",
-      "Golang"
+      "GCP"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2663,10 +2665,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/e44bfa94-0b82-4d0c-b224-02155b76eea9/application",
     "description": "ABOUT THE TEAM\n\n\nThe Platform Analytics team builds the systems OpenAI researchers use to understand the quality and behavior of the models we train including what models are doing, why they behave in a particular way, and how that behavior changes across experiments.\n\n\nNeptune https://openai.com/in...",
     "requirements": [
+      "Distributed Systems",
       "C",
       "Operating Systems",
-      "Rust",
-      "Distributed Systems"
+      "Rust"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2687,12 +2689,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/9efcef02-0515-4672-bace-81329944b38b/application",
     "description": "About the Team\n\nThe Scaling team is responsible for the architectural and engineering backbone of OpenAI\u2019s infrastructure. We design and deliver advanced systems that support the deployment and operation of cutting-edge AI models. Our work spans system software, networking, platform architecture, fl...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
       "Python",
       "Kubernetes",
+      "Distributed Systems",
+      "C",
       "PyTorch",
-      "C"
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2713,12 +2715,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/8caa3654-aa0e-48f3-a231-5e9dc276253d/application",
     "description": "About the Team\n\nThe Integrity team at OpenAI is dedicated to ensuring that our cutting-edge technology is not only revolutionary, but also secure from a myriad of adversarial threats. We strive to maintain the integrity of our platforms as they scale.\n\nThe Integrity team is at the front lines of def...",
     "requirements": [
+      "Transformers",
       "Deep Learning",
+      "LLMs",
+      "Machine Learning",
       "Fine-tuning",
       "PyTorch",
-      "Machine Learning",
-      "Transformers",
-      "LLMs",
       "TensorFlow"
     ],
     "preferred": [
@@ -2740,11 +2742,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8/application",
     "description": "\nAbout the team\n\nThe Applied AI Engineering team is responsible for ensuring the safe and effective deployment of generative AI applications for developers and enterprises. We act as a trusted advisor and thought partner for our API customers, working to build an effective backlog of frontier AI use...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2827,8 +2829,8 @@ const seedJobs = [
     "description": "About the Team\n\nOpenAI\u2019s Hardware organization develops system and infrastructure solutions designed for the unique demands of advanced AI workloads. We work closely with research, software, and external hardware partners to shape the next generation of AI systems, from silicon through full-scale de...",
     "requirements": [
       "Distributed Systems",
-      "Machine Learning",
-      "System Design"
+      "System Design",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -2892,14 +2894,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/9b1b62f5-1400-4672-910a-fda6f975f642/application",
     "description": "About the team\n\nOpenAI\u2019s Education team is building products and experiences that help learners, educators, and institutions benefit from AI in ways that are rigorous, useful, and grounded in real learning outcomes.\n\nThe work spans both consumer and B2B education, with close collaboration across eng...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
+      "TypeScript",
+      "Distributed Systems",
       "MySQL",
       "Go",
-      "TypeScript",
-      "React",
-      "Golang",
-      "Rust"
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3003,14 +3005,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/5acf4854-1d42-40ca-bff8-4f6f04cdce68/application",
     "description": "ABOUT THE TEAM\n\nOpenAI\u2019s API Multicloud team is responsible for extending OpenAI\u2019s API platform into strategic cloud environments, starting with AWS https://openai.com/index/openai-on-aws/. The team\u2019s mission is to distribute OpenAI\u2019s API broadly and safely by enabling key API technologies in AWS-na...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
+      "Rust",
       "Deep Learning",
-      "Fine-tuning",
-      "PyTorch",
-      "AWS",
+      "Python",
       "Machine Learning",
-      "Rust"
+      "Fine-tuning",
+      "Distributed Systems",
+      "AWS",
+      "PyTorch"
     ],
     "preferred": [
       "TensorFlow"
@@ -3050,8 +3052,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/7536171d-0f98-4964-8f22-7968db062105/application",
     "description": "About the Role\n\nAs a Director, Compute & Infrastructure FP&A, you will own and drive the monthly forecasting process for the Compute & Infrastructure org by partnering with various stakeholders across Finance, Accounting, Tax and Engineering.  You will play a critical role in planning and forecastin...",
     "requirements": [
-      "AWS",
       "GCP",
+      "AWS",
       "Azure"
     ],
     "preferred": [
@@ -3191,17 +3193,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/f3ddd41c-541f-485e-90d6-86c26e018e9f/application",
     "description": "About the Team\nThe GPT Infrastructure team builds systems that turn advances in model inference and optimization into reliable production capabilities. We enable OpenAI workloads to be qualified and optimized across new accelerator platforms without requiring a one-off port and tuning effort for eve...",
     "requirements": [
-      "Triton",
-      "Distributed Systems",
-      "CUDA",
-      "Python",
-      "vLLM",
-      "Go",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "Distributed Systems",
+      "C",
+      "Go",
+      "Triton",
+      "vLLM"
     ],
     "preferred": [
-      "C"
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
     "logoUrl": "https://logo.clearbit.com/openai.com"
@@ -3219,11 +3221,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ca300a6d-a2a7-4580-aad7-323fbdfee7b1/application",
     "description": "About the Team:\n\n\n\nCompute Infrastructure builds the platform that turns enormous amounts of compute into a reliable engine for frontier AI. We design, provision, schedule, operate, and optimize the systems that connect accelerators, CPUs, networks, storage, data centers, orchestration software, age...",
     "requirements": [
-      "Distributed Systems",
-      "Kubernetes",
-      "Go",
       "Golang",
-      "Operating Systems"
+      "Kubernetes",
+      "Distributed Systems",
+      "Operating Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3266,12 +3268,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/11c51b12-3ba0-4a7a-a0d2-ed0661324dc3/application",
     "description": "About the Team\n\nOpenAI's Industrial Compute organization is responsible for planning, delivering, operating, and optimizing the compute infrastructure that powers frontier AI.\n\nAs OpenAI scales toward becoming an intelligence utility, Industrial Compute coordinates a complex lifecycle spanning infra...",
     "requirements": [
-      "Distributed Systems",
-      "System Design",
+      "Golang",
       "Python",
-      "Go",
       "TypeScript",
-      "Golang"
+      "Distributed Systems",
+      "Go",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3292,11 +3294,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/6d403ec9-d5d3-4754-9092-8fd5e659562a/application",
     "description": "ABOUT THE TEAM\n\nWe\u2019re hiring software engineers to make OpenAI\u2019s Model Performance teams more productive. These teams work on the systems, tooling, and infrastructure that help improve model performance across OpenAI\u2019s training and inference workloads at frontier scale.\n\n\n\n\nABOUT THE ROLE\n\nWe\u2019re loo...",
     "requirements": [
-      "Triton",
-      "Python",
-      "PyTorch",
       "Rust",
-      "C"
+      "Python",
+      "C",
+      "PyTorch",
+      "Triton"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3355,11 +3357,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/f6b9903c-9034-436b-a4ec-4c8643a6d0dd/application",
     "description": "ABOUT THE TEAM\n\nOpenAI\u2019s Hardware organization develops AI-native silicon and system-level solutions for the unique demands of advanced AI workloads. Building on efforts like Jalape\u00f1o, the team is developing future generations of AI-native silicon and tightly integrated systems to power the next gen...",
     "requirements": [
-      "Python",
-      "Go",
-      "Golang",
       "Rust",
-      "C"
+      "Golang",
+      "Python",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3380,12 +3382,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/b398e1c6-0c32-4464-bb34-6ccda901b688/application",
     "description": "About the Team\n\nOpenAI\u2019s Applications Engineering organization builds and operates the products (such as ChatGPT & Codex) that bring our cutting-edge research to millions of users and developers worldwide. \n\nThe Applied Foundations team owns the core product and platform layers that make those exper...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "Golang",
       "Rust",
-      "C"
+      "Golang",
+      "Python",
+      "Distributed Systems",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3466,9 +3468,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/9d48e2e6-41a9-4a90-8b3b-6cc960e95c2f/application",
     "description": "ABOUT THE TEAM\n\nWe\u2019re hiring a Developer Productivity engineer to support OpenAI\u2019s Inference Runtime teams. These teams own the systems responsible for serving models reliably, efficiently, and safely across Codex, ChatGPT, API, and internal research workloads. We\u2019re hiring a Developer Productivity ...",
     "requirements": [
+      "Distributed Systems",
       "C",
-      "Python",
-      "Distributed Systems"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3489,11 +3491,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/4cbbf0b1-7c0b-4c42-bf38-48377f847e91/application",
     "description": "ABOUT THE TEAM\n\nTraining Runtime builds the distributed systems that power OpenAI's largest model training runs - most recently GPT-5.5! The Data Movement area owns the infrastructure that keeps training jobs supplied with the right data at the right time, and keeps model state moving safely and eff...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
+      "Rust",
       "Python",
       "Machine Learning",
-      "Rust",
+      "API Design",
+      "Distributed Systems",
       "C"
     ],
     "preferred": [
@@ -3515,12 +3517,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/72a58872-70e2-4340-a259-e9bea3596883/application",
     "description": "About the Team\n\nSecurity is at the foundation of OpenAI\u2019s mission to ensure that artificial general intelligence benefits all of humanity. The Identity Infrastructure Engineering team sits at the core of this effort, designing and building the identity and access management solutions that protect ou...",
     "requirements": [
-      "Distributed Systems",
-      "System Design",
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "Distributed Systems",
+      "Go",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3562,12 +3564,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/990397de-c00c-4577-b093-d8c82b4e9145/application",
     "description": "About the Team\n\nOpenAI's mission is to ensure that artificial general intelligence (AGI) benefits all of humanity. The API Platform turns frontier research into reliable capabilities that developers use to build transformative products and services for people around the world.\n\nAPI Safety's goal is ...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3589,8 +3591,8 @@ const seedJobs = [
     "description": "AI Systems Engineer - Codex Core Agents\n\n\nAbout The Team\nThe Codex Core Agents team builds the agent harness that turns model capability into real-world action. We own the systems around the model: prompting and interpreting model outputs, executing actions safely in real environments, and feeding p...",
     "requirements": [
       "Distributed Systems",
-      "Python",
-      "Rust"
+      "Rust",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3611,9 +3613,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a6363571-e090-43a7-b758-ee3386a096c1/application",
     "description": "About the Team\nBusiness Systems / Enterprise Platform Technology builds the internal systems, data foundations, workflow infrastructure, and enterprise platforms that help OpenAI operate at scale. The EPT AI Pod builds AI-native internal apps, MCP connectors, multi-agent workflows, and reusable plat...",
     "requirements": [
+      "RAG",
       "System Design",
-      "Python",
-      "RAG"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3655,10 +3657,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/77fbf383-bb97-4006-9b2d-e5de2d6f79d3/application",
     "description": "About the Team\n\nOur team brings OpenAI\u2019s most capable technology to the world through our developer platform: the OpenAI API. As the leading AI development platform, our API is used by millions of developers and the majority of enterprises around the world, and powers the majority of AI applications...",
     "requirements": [
+      "Node.js",
       "Go",
-      "Python",
       "Golang",
-      "Node.js"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3759,12 +3761,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/5a4eed17-29d5-41cb-856e-09bfdaffe017/application",
     "description": "About the Team\n\nThe Monetization team is a new cross-functional group working across engineering, product, research, and design to build the foundational systems that will help OpenAI scale access to intelligence responsibly. Our mission is to develop user-first, privacy-preserving monetization prod...",
     "requirements": [
-      "Distributed Systems",
+      "Golang",
       "Python",
-      "Go",
-      "React",
       "TypeScript",
-      "Golang"
+      "Distributed Systems",
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3785,8 +3787,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/bb90d497-06ef-4bb9-878a-e797a19cd834/application",
     "description": "ABOUT THE TEAM\n\nThe Agent Post-Training team creates the frontier agents OpenAI ships to the world. We are training the models behind our agents in Codex, ChatGPT, the API, and other frontier products: persistent, proactive intelligence that can operate computers, collaborate with people and other a...",
     "requirements": [
-      "LLMs",
-      "RLHF"
+      "RLHF",
+      "LLMs"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3851,8 +3853,8 @@ const seedJobs = [
     "description": "About the Team\nOpenAI\u2019s Hardware organization develops AI-native silicon and system-level solutions for the unique demands of advanced AI workloads. Building on efforts like Jalape\u00f1o, the team is developing future generations of AI-native silicon and tightly integrated systems to power the next gene...",
     "requirements": [
       "C",
-      "Python",
-      "Rust"
+      "Rust",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3873,12 +3875,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/f6278b60-dd42-4aa8-a3cd-c105f75ae8ae/application",
     "description": "About the Team\n\nThe Cloud Agents team builds product infrastructure for long-running agents in the cloud: orchestration, sandboxing and isolation, secure environment connectivity, secrets and identity, observability, reliability, and cost controls. These agents securely connect to diverse developer ...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3899,11 +3901,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/06ec3598-8028-4a17-9654-1b2f21cbdd41/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3924,13 +3926,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/4070d52e-0263-4cd5-9107-052b4ecc1209/application",
     "description": "About the Team\nOpenAI\u2019s API Multicloud team is responsible for extending OpenAI\u2019s API platform into strategic cloud environments, starting with AWS https://openai.com/index/openai-on-aws/. The team\u2019s mission is to distribute OpenAI\u2019s API broadly and safely by enabling key API technologies in cloud-n...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
+      "Python",
+      "TypeScript",
+      "Distributed Systems",
       "AWS",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3951,13 +3953,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/66288824-8b77-4774-bc57-6825d3e6221e/application",
     "description": "About the Team\n\nOpenAI\u2019s API Platform organization builds the products and infrastructure that help first-party and third-party developers build with OpenAI models. We ship the API primitives, tools, SDKs, documentation, playgrounds, and platform experiences that make OpenAI\u2019s capabilities reliable,...",
     "requirements": [
-      "API Design",
-      "Python",
-      "React",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "API Design",
+      "TypeScript",
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -3997,10 +3999,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/eacbd123-83fb-42c6-a5d5-e914b8e135b8/application",
     "description": "ABOUT THE TEAM\n\nThe Applied AI Engineering team is responsible for ensuring the safe and effective deployment of Generative AI applications for developers and startups. We act as a trusted advisor and thought partner for our customers, working to build an effective backlog of GenAI use cases for the...",
     "requirements": [
+      "JavaScript",
       "Go",
-      "Python",
       "Golang",
-      "JavaScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4021,11 +4023,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/44d19f5f-a5da-4226-9d1a-0147604773eb/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4046,9 +4048,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/6b47238e-025a-4350-b270-2f3564002fcc/application",
     "description": "About the Team\n\nThe ChatGPT organization at OpenAI supports our mission by bringing advanced AI capabilities to hundreds of millions of users worldwide. The Image Generation team is responsible for one of the fastest-growing experiences in ChatGPT, enabling users to create, edit, and transform image...",
     "requirements": [
+      "TypeScript",
       "Distributed Systems",
-      "React",
-      "TypeScript"
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4088,10 +4090,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/915a325b-55f6-44e2-8314-34ec0d8bb2c9/application",
     "description": "About the Team\n\nThe Codex Web Layer team provides the web-based systems and user experiences for Codex across the entire stack, from the Electron-like application framework that powers the application, to the user-facing in-app browser.\n\nAbout the Role\n\nIn this role, you will be responsible for desi...",
     "requirements": [
+      "TypeScript",
       "C",
       "API Design",
-      "Python",
-      "TypeScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4155,14 +4157,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/39e06ef9-5e62-425d-81e2-e8690188011f/application",
     "description": "The ChatGPT Finances team builds experiences that help people connect their financial accounts, understand their financial picture, and ask useful questions about their finances through ChatGPT.\n\nOur work spans account connectivity, data ingestion, dashboards, personalized insights, and conversation...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
+      "Golang",
       "Python",
+      "API Design",
+      "TypeScript",
+      "Distributed Systems",
       "Go",
       "React",
-      "TypeScript",
-      "Node.js",
-      "Golang"
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4183,11 +4185,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3fe77c71-1f20-45b5-8291-62f0d2104989/application",
     "description": "ABOUT THE TEAM\n\nOpenAI's mission is to ensure that artificial general intelligence benefits all of humanity. The Consumer Devices team is building a new generation of AI-powered products that seamlessly integrate hardware and software to create intuitive, transformative experiences. We bring togethe...",
     "requirements": [
-      "Python",
-      "Operating Systems",
-      "Machine Learning",
       "Rust",
-      "C"
+      "Python",
+      "Machine Learning",
+      "C",
+      "Operating Systems"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4231,9 +4233,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3302ceaf-f6ca-4803-9846-7fff7ad48a0d/application",
     "description": "ABOUT THE TEAM\n\nThe Agent Post-Training team creates the frontier agents OpenAI ships to the world. We are training the models behind our agents in Codex, ChatGPT, the API, and other frontier products: persistent, proactive intelligence that can operate computers, collaborate with people and other a...",
     "requirements": [
-      "Machine Learning",
+      "RLHF",
       "LLMs",
-      "RLHF"
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4273,11 +4275,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/0ed5f6c7-3977-4da9-9961-202fe76de456/application",
     "description": "\nAbout the team\n\nThe Applied AI Engineering team is responsible for ensuring the safe and effective deployment of generative AI applications for developers and enterprises. We act as a trusted advisor and thought partner for our API customers, working to build an effective backlog of frontier AI use...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4339,11 +4341,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/b46ffd99-f9f2-440c-ac13-448eb7911ad6/application",
     "description": "About the team\n\nThe Applied AI Engineering team is responsible for helping developers and enterprises safely and effectively deploy OpenAI technologies in production. We act as trusted technical advisors and thought partners for customers, working side by side with their teams to identify high-value...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
       "GitHub",
-      "JavaScript"
+      "Python",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4364,11 +4366,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/29f15e50-1611-4256-afad-03b7df0b7aa7/application",
     "description": "About the Team\n\nThe Applied AI Engineering team is responsible for helping developers and enterprises safely and effectively deploy OpenAI technologies in production. We act as trusted technical advisors and thought partners for customers, working side by side with their teams to identify high-value...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
       "GitHub",
-      "JavaScript"
+      "Python",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4389,11 +4391,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/1328e781-c66c-4f71-8eb0-6c684273833b/application",
     "description": "About the Team\n\nThe Applied AI Engineering team is responsible for helping developers and enterprises safely and effectively deploy OpenAI technologies in production. We act as trusted technical advisors and thought partners for customers, working side by side with their teams to identify high-value...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
       "GitHub",
-      "JavaScript"
+      "Python",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4433,11 +4435,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/bb569a6b-a7e9-4c4d-a78e-d35349b2f9d9/application",
     "description": "ABOUT THE TEAM\n\nThe AI Deployment Management (ADM) team enables organizations to turn OpenAI products into real, sustained impact through world-class enablement and training execution.\n\nOur mission is to help customers successfully adopt and operationalize AI across their organizations. We partner w...",
     "requirements": [
-      "Go",
       "Golang",
       "Fine-tuning",
-      "RAG",
-      "C"
+      "C",
+      "Go",
+      "RAG"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4499,11 +4501,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/7ad26793-3f0d-4336-91e8-1aaf800cfdae/application",
     "description": "About the Team\n\nThe Applied AI Engineering team is responsible for helping developers and enterprises safely and effectively deploy OpenAI technologies in production. We act as trusted technical advisors and thought partners for customers, working side by side with their teams to identify high-value...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
       "GitHub",
-      "JavaScript"
+      "Python",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4524,18 +4526,18 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ca54cd23-2bcc-4327-bcb6-46d81ed414a8/application",
     "description": "About the Team\n\nChatGPT is evolving from answering questions to becoming a deeply personalized assistant that helps people discover, create, and make decisions across everyday life. We're building new multimodal product experiences that combine language, images, personalization, and interactive inte...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
-      "Next.js",
-      "Go",
+      "Machine Learning",
       "TypeScript",
-      "React",
-      "Node.js",
-      "Golang"
+      "Distributed Systems",
+      "Next.js",
+      "Go"
     ],
     "preferred": [
-      "Machine Learning",
-      "Rust"
+      "React",
+      "Node.js"
     ],
     "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
     "logoUrl": "https://logo.clearbit.com/openai.com"
@@ -4572,11 +4574,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/01091aed-427d-4e10-8cdb-fb500cf55bb9/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineeriIng teams, security leaders, and transformation teams to identify valuable opportunit...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4597,13 +4599,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/f8b84ae5-743b-41c9-8432-02dff9993d6b/application",
     "description": "ABOUT THE TEAM\n\nChatGPT relies on a large and growing GPU fleet to serve inference workloads reliably and efficiently. We develop the systems and tools that make it possible to introduce new models, manage production deployments, respond to operational issues, and use infrastructure effectively at s...",
     "requirements": [
-      "Distributed Systems",
-      "System Design",
-      "Python",
-      "Go",
-      "Golang",
       "Rust",
-      "C"
+      "Golang",
+      "Python",
+      "Distributed Systems",
+      "C",
+      "Go",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4624,11 +4626,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/d1c6cb87-a44d-4d04-92a8-dc40eccd090e/application",
     "description": "About the Team\n\nWith Codex we\u2019re building an AI software engineer. One that you can pair with, delegate to, or even ask to take on future tasks proactively. Our team is a fast-moving group within OpenAI, bringing together research, engineering, design, and product. We iteratively build the Codex age...",
     "requirements": [
-      "Python",
-      "React",
-      "Go",
       "Golang",
-      "TypeScript"
+      "Python",
+      "TypeScript",
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4671,8 +4673,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/cce31320-258d-4a2f-96f7-6782208d5db6/application",
     "description": "About the Role\n\nWe\u2019re looking for a Competitive Intelligence Lead, a senior individual contributor reporting to the Head of Competitive Intelligence, to help operationalize and scale the company\u2019s competitive intelligence capability.\n\nThis person will own high-priority competitive analyses, executiv...",
     "requirements": [
-      "Machine Learning",
-      "Product Management"
+      "Product Management",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4694,9 +4696,9 @@ const seedJobs = [
     "description": "ABOUT THE TEAM\n\nOpenAI's research training infrastructure powers how our frontier models are trained and evaluated. The Simulation team sits at the intersection between the agentic harness that powers OpenAI's products and the research infrastructure where GPT-next is trained, ensuring that our mode...",
     "requirements": [
       "LLMs",
-      "Python",
+      "Rust",
       "API Design",
-      "Rust"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4717,11 +4719,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/6c552323-f0bd-4756-a5fb-db2cda70173f/application",
     "description": "About the Team\n\nOur Cyber team builds AI systems and products that help trusted defenders understand and respond to cyber threats while improving the safety and reliability of frontier models in security-sensitive settings. \n\nThe team works across product engineering, model training, evaluations, sa...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4763,11 +4765,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714/application",
     "description": "About the Team\n\nThe AI Architect team partners with organizations to turn OpenAI's most capable models into meaningful, real-world impact. We work with customers across industries and digital-native businesses to identify where AI can create value, design secure and scalable solutions, and help thos...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
-      "JavaScript"
+      "Python",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -4969,9 +4971,9 @@ const seedJobs = [
     "description": "About the Team\n\nThe Ecosystem Applied AI Engineering team supports strategic partners as they build high-quality technical integrations into ChatGPT and Codex. Our goal is to create products users depend on, drive adoption and retention, and build an ecosystem where partners win when OpenAI wins.\n\nA...",
     "requirements": [
       "Distributed Systems",
-      "API Design",
+      "Golang",
       "Go",
-      "Golang"
+      "API Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5051,11 +5053,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/aeeabb7a-f6e0-4e8d-a9ad-ae3464288125/application",
     "description": "About the Team\n\nOpenAI's mission is to ensure that AGI benefits all of humanity. The Business Systems team helps make that mission possible by building the internal products and platforms that allow OpenAI to operate with speed, reliability, and care.\n\nWe build internal applications and workflows fo...",
     "requirements": [
-      "Distributed Systems",
       "Python",
+      "TypeScript",
+      "Distributed Systems",
       "MySQL",
-      "React",
-      "TypeScript"
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5142,13 +5144,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/b9336fbf-ef34-48f3-aa3a-4fb5482fe6ea/application",
     "description": "About the Team\n\nThe Systems Integration team is responsible for building the infrastructure, tooling, and validation systems that ensure our device software our device software is reliable, testable, and ready to ship. We design and maintain build systems, CI pipelines, automated test frameworks, an...",
     "requirements": [
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
       "TypeScript",
-      "Golang",
-      "Rust",
       "C",
+      "Go",
       "Docker"
     ],
     "preferred": [
@@ -5208,11 +5210,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ee6b7ece-ffcb-4546-8b4c-ef755ec21c14/application",
     "description": "About the Team\nThe Early Access Program (EAP) team leads high-impact alpha programs at the intersection of customers, Product, Research, Engineering, GTM, Security, Legal, and launch teams. We partner with customers to test emerging capabilities with real-world use cases, surface actionable insights...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5256,12 +5258,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/3229b152-015f-49ad-9921-9c9de95570c8/application",
     "description": "ABOUT THE TEAM\n\nEnterprise Verticals builds role-specific ChatGPT Work experiences for high-value enterprise workflows. We combine product engineering, plugins and skills, connectors, data, evaluations, and customer evidence to turn useful demos into reliable daily work.\n\nThis opening sits within th...",
     "requirements": [
+      "Golang",
       "Python",
-      "React",
-      "Go",
       "TypeScript",
-      "Node.js",
-      "Golang"
+      "Go",
+      "React",
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5324,9 +5326,9 @@ const seedJobs = [
     "description": "ABOUT THE TEAM\n\nThe Enablement Lead (EL) team enables organizations to turn OpenAI products into real, sustained impact through world-class enablement and training execution.\n\nOur mission is to help customers successfully adopt and operationalize AI across their organizations. We partner with enterp...",
     "requirements": [
       "C",
+      "RAG",
       "Go",
-      "Golang",
-      "RAG"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5347,14 +5349,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/96de8acb-556e-451b-bc84-7124bb4b0a20/application",
     "description": "About the Team\n\nAPI Multimodal builds the developer-facing products and infrastructure that bring OpenAI\u2019s image, audio, and real-time model capabilities into the world. We are responsible for high-scale APIs for image generation, speech transcription, speech generation, and low-latency voice intera...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
+      "Python",
       "Computer Vision",
-      "Rust"
+      "API Design",
+      "TypeScript",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5397,12 +5399,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a6ab3111-7092-4da2-a7a6-71e01351bfda/application",
     "description": "About the Team\n\nAPI Agents builds the shared agent harness, tools, and infrastructure that turn OpenAI\u2019s frontier models into systems that can reliably complete real work. We carry the capabilities behind Codex into a much broader set of products and workflows across software engineering, research, ...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5423,12 +5425,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/4c0a6cb6-d365-4e5b-bdff-c093d951026d/application",
     "description": "About the Team\n\nAPI Enterprise Controls is part of the API Infrastructure organization and owns the platform capabilities that help developers, startups, and enterprises adopt the OpenAI API securely and confidently. We build the systems underneath our APIs and developer platform across authenticati...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5472,12 +5474,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/5ed99d32-eed1-4679-b7b4-037de073e57c/application",
     "description": "About the Team\n\nWe're building the foundation for a new kind of AI coworker: persistent agents that have their own environments, can meet people wherever they work, and continue making progress for as long as a task requires. Our goal is to help individuals, teams, and organizations delegate meaning...",
     "requirements": [
-      "Python",
-      "React",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5555,13 +5557,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/a99e16a8-6fb1-41b9-8d2f-3cf80383121c/application",
     "description": "ABOUT THE TEAM\n\nEnterprise Verticals builds role-specific ChatGPT Work experiences for high-value enterprise workflows. We combine product engineering, plugins and skills, connectors, data, evaluations, and customer evidence to turn useful demos into reliable daily work.\n\nThis opening sits within th...",
     "requirements": [
-      "Distributed Systems",
+      "Golang",
       "Python",
+      "TypeScript",
+      "Distributed Systems",
       "Go",
       "React",
-      "TypeScript",
-      "Node.js",
-      "Golang"
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5640,10 +5642,10 @@ const seedJobs = [
     "description": "About the Team\n\nThe Future of Computing Research team is an applied research team within OpenAI\u2019s Consumer Devices group. We study how AI systems perceive people and their surroundings, and we turn that research into capabilities for future products.\n\n\u00a0\n\nOur work spans machine learning, sensing, and...",
     "requirements": [
       "Python",
-      "PyTorch",
-      "Computer Vision",
       "Machine Learning",
-      "C"
+      "Computer Vision",
+      "C",
+      "PyTorch"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5704,11 +5706,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/2226c39d-371b-4dec-bf60-2d76dbe4c445/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5729,10 +5731,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/2bf44c13-a463-4ec7-b152-b8367075246c/application",
     "description": "About the Team\n\nOur mission at OpenAI is to discover and enact the path to safe, beneficial AGI. To do this, we believe that many technical breakthroughs are needed in generative modeling, reinforcement learning, large-scale optimization, active learning, and other areas.\n\nThe team builds the perfor...",
     "requirements": [
-      "PyTorch",
-      "AWS",
       "Triton",
-      "JAX"
+      "AWS",
+      "JAX",
+      "PyTorch"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5753,11 +5755,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/7be58f3a-6005-42ed-86fa-77773ebfb294/application",
     "description": "About the Team\n\nOpenAI\u2019s Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineering teams, security leaders, and transformation teams to identify valuable opportuniti...",
     "requirements": [
-      "Python",
-      "Go",
+      "JavaScript",
       "Golang",
+      "Python",
       "TypeScript",
-      "JavaScript"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5797,11 +5799,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/ec317080-e2d2-4a73-93e6-e0a9ae6fdf96/application",
     "description": "About the Team\n\nOpenAI\u2019s Hardware organization develops AI-native silicon and system-level solutions for the unique demands of advanced AI workloads. Building on efforts like Jalape\u00f1o, the team is developing future generations of AI-native silicon and tightly integrated systems to power the next gen...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "vLLM",
       "Rust",
-      "C"
+      "Python",
+      "Distributed Systems",
+      "C",
+      "vLLM"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5860,10 +5862,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/b28b990c-54e4-4be4-a33a-d5518dc3e117/application",
     "description": "ABOUT THE TEAM\n\nThe Applied AI Engineering team is responsible for helping customers turn frontier AI capabilities into real products, workflows, and business impact. We act as trusted technical partners across solution design, architecture, implementation, evaluation, and adoption, working alongsid...",
     "requirements": [
+      "JavaScript",
       "Go",
-      "Python",
       "Golang",
-      "JavaScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -5884,6 +5886,50 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/openai/98064a4f-5c20-4a68-8197-555f7e21d088/application",
     "description": "About the Team\n\nOpenAI\u2019s mission is to ensure that general-purpose artificial intelligence benefits all of humanity. We believe that achieving our goal requires effective engagement with public policy stakeholders and the broader community impacted by AI. Accordingly, our Global Affairs team builds ...",
     "requirements": [],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
+    "logoUrl": "https://logo.clearbit.com/openai.com"
+  },
+  {
+    "id": "openai-bfd27251-5a50-4050-aa66-596a8db9a7a8",
+    "company": "OpenAI",
+    "title": "Solutions Engineering, Ads Solutions (Singapore) ",
+    "category": "SWE",
+    "domain": "Distributed Systems",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Singapore (Hybrid)",
+    "salary": "$200,000 - $330,000 + equity",
+    "applyUrl": "https://jobs.ashbyhq.com/openai/bfd27251-5a50-4050-aa66-596a8db9a7a8/application",
+    "description": "About the Team\n\nOpenAI\u2019s mission is to ensure the responsible and widespread adoption of artificial intelligence. In support of that mission, the Ads Solutions team partners closely with advertisers to deeply understand their businesses and needs, helping inform the development of products and solut...",
+    "requirements": [
+      "Go",
+      "Golang"
+    ],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #10a37f, #000000)",
+    "logoUrl": "https://logo.clearbit.com/openai.com"
+  },
+  {
+    "id": "openai-00205d4e-9933-4057-8115-50b08d112ad1",
+    "company": "OpenAI",
+    "title": "Software Engineer, Astral",
+    "category": "SWE",
+    "domain": "Distributed Systems",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "New York City (Hybrid)",
+    "salary": "$200,000 - $330,000 + equity",
+    "applyUrl": "https://jobs.ashbyhq.com/openai/00205d4e-9933-4057-8115-50b08d112ad1/application",
+    "description": "About the Team\n\nThe Astral team builds high-performance developer tools to power the future of programming, at OpenAI and beyond, including Ruff, uv, and ty. The Astral toolchain sees hundreds of millions of installs per month and powers hundreds of millions of package downloads per day for the Pyth...",
+    "requirements": [
+      "Rust",
+      "Python"
+    ],
     "preferred": [
       "High performance distributed processing"
     ],
@@ -5946,10 +5992,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/b7d1dbcd-ca72-472f-b15e-5b4b0f886be0/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -5971,10 +6017,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/e9f5fdb6-91ee-4c55-9230-41ec8865650e/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -5996,9 +6042,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/b3829801-8e0b-4047-8cd8-8a51c87028fd/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Golang",
+      "TypeScript",
       "Go",
-      "TypeScript"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6040,10 +6086,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/9ebc3a79-82bf-478d-bd98-d473d41bdeaf/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6065,10 +6111,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/9d9e7d4a-2a27-4f64-9b1f-d79c5d3f129a/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6090,35 +6136,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/aadfc0a0-93f6-454b-9767-c24793fa3eff/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
-      "RAG"
-    ],
-    "preferred": [
-      "High performance distributed processing"
-    ],
-    "companyColor": "linear-gradient(135deg, #ff4500, #ff8c00)",
-    "logoUrl": "https://logo.clearbit.com/sierra.ai"
-  },
-  {
-    "id": "sierra-43e6eda7-6e46-43e8-82a5-6e5035f063bb",
-    "company": "Sierra",
-    "title": "Software Engineer, Agent",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Singapore (Hybrid)",
-    "salary": "$200,000 - $330,000 + equity",
-    "applyUrl": "https://jobs.ashbyhq.com/sierra/43e6eda7-6e46-43e8-82a5-6e5035f063bb/application",
-    "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
-    "requirements": [
+      "Go",
       "React",
-      "Golang",
-      "Go",
-      "TypeScript",
       "RAG"
     ],
     "preferred": [
@@ -6161,10 +6182,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/2dee25a0-a0c1-425e-b67a-9d49fc821369/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6186,10 +6207,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/df431e56-56f5-42ed-bc62-7d6f7041bd27/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6211,10 +6232,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/6207b02d-d334-4000-b84e-2af779171838/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6236,10 +6257,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/b89816c1-80b2-449b-b69e-2c261b8e9e23/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6261,10 +6282,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/ce463311-0c6c-43d9-ab79-dd751743104f/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6286,10 +6307,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/8646493c-93a6-482e-a810-4a0aa6e3438f/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6311,10 +6332,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/1a0a0334-41f8-4c15-9ed8-615336855e5e/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6355,10 +6376,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/eb3ee157-3d2a-412a-88a2-e2cfc5647a66/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6380,10 +6401,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/631848ec-1a74-4067-8b9f-cd04a71aab6d/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6405,10 +6426,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/787c1efd-2327-46e7-9335-59a20ad4be18/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6430,10 +6451,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/b8a89b9a-70a1-4e47-874c-41542d1bc60a/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6455,10 +6476,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/1162dcd2-b181-49d5-9316-342cd68acbed/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6480,10 +6501,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/d9c0aa93-e35d-4752-9cef-4c39dcad5365/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
+      "Distributed Systems",
       "AWS",
       "Go",
-      "Golang",
-      "Distributed Systems"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6504,10 +6525,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/97ca0c70-f371-4167-9908-2adca3464b8d/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6553,14 +6574,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/78c5dce4-3670-4c9b-a666-98f435c56324/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
-      "Python",
-      "Go",
-      "TypeScript",
-      "React",
       "Golang",
-      "Kafka"
+      "Python",
+      "Kafka",
+      "API Design",
+      "TypeScript",
+      "Distributed Systems",
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6581,13 +6602,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/802d17c5-fe47-4b44-90e5-65e5e731ff88/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Distributed Systems",
-      "Kubernetes",
-      "AWS",
-      "Machine Learning",
-      "LLMs",
-      "GCP",
       "Azure",
+      "Kubernetes",
+      "LLMs",
+      "Machine Learning",
+      "Distributed Systems",
+      "AWS",
+      "GCP",
       "Docker"
     ],
     "preferred": [
@@ -6609,9 +6630,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/5ae78769-a3a1-491c-8b4b-95472f1fb36c/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
+      "TypeScript",
       "LLMs",
       "Go",
-      "TypeScript",
       "Golang"
     ],
     "preferred": [
@@ -6633,9 +6654,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/9b70b937-9634-4bcd-a10e-2671145f3a07/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Golang",
+      "TypeScript",
       "Go",
-      "TypeScript"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6656,9 +6677,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/8cca0a0d-7359-410b-81ed-331a0bb4667f/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Golang",
+      "TypeScript",
       "Go",
-      "TypeScript"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6679,9 +6700,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/032c8ab4-1911-4477-bc39-9cfcd701d5a9/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "Golang",
+      "TypeScript",
       "Go",
-      "TypeScript"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -6702,10 +6723,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/ae8840cd-f46e-4c96-87b1-53fedf40f94d/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6727,10 +6748,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/b37a6f9e-53c7-4c47-beb5-1ab4451f3001/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6752,10 +6773,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/f51d6c09-d767-4e86-bc62-216b2051e318/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6777,10 +6798,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/ab98160c-9918-483c-af74-310535448972/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6802,10 +6823,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/000618f7-e0d0-43dc-ae15-2b20d948852f/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6865,10 +6886,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/e2d3e1f5-03cb-4e18-9f3d-a32f0bb6ff91/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6890,10 +6911,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/3cdeb98c-a25c-4f3b-a704-1418556454bc/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6915,10 +6936,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/93fea91f-a8a2-4084-8113-1cde73344e33/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6940,10 +6961,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/sierra/4472e6c2-fe4e-4540-a37c-68b9367fe02a/application",
     "description": "ABOUT US\n\nAt Sierra, we\u2019re building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with ...",
     "requirements": [
-      "React",
       "Golang",
-      "Go",
       "TypeScript",
+      "Go",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -6984,11 +7005,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/c7d59014-b918-4c15-ae33-79f5c9f2cf9f/application",
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like...",
     "requirements": [
-      "System Design",
-      "Python",
-      "Kubernetes",
       "GitHub",
-      "Design Patterns"
+      "Python",
+      "Design Patterns",
+      "Kubernetes",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7009,12 +7030,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/6a530871-b6c6-4783-ac6b-69cc3b084192/application",
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like...",
     "requirements": [
-      "System Design",
-      "Python",
-      "React",
-      "TypeScript",
       "GitHub",
-      "Design Patterns"
+      "Python",
+      "Design Patterns",
+      "TypeScript",
+      "React",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7054,13 +7075,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/a3097257-a07a-4a7e-b9fe-b8555c1a0fa7/application",
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like...",
     "requirements": [
-      "System Design",
+      "Golang",
       "Python",
+      "System Design",
+      "Design Patterns",
       "Kubernetes",
       "Go",
-      "Golang",
       "RAG",
-      "Design Patterns",
       "GCP"
     ],
     "preferred": [
@@ -7082,12 +7103,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/3b57cc5c-f019-4a0b-a5ff-e1046e4f1fa1/application",
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like...",
     "requirements": [
-      "Distributed Systems",
       "Python",
-      "React",
-      "AWS",
       "Kafka",
+      "Distributed Systems",
+      "AWS",
       "Redis",
+      "React",
       "GCP",
       "Docker"
     ],
@@ -7211,9 +7232,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/5bcd3475-8e38-42f1-897a-fa010ee6f9bd/application",
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like...",
     "requirements": [
+      "JavaScript",
       "LLMs",
-      "Python",
-      "JavaScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7294,8 +7315,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/d72d584c-bb11-4b6a-b043-d81425ea884a/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7316,9 +7337,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/439404bb-3185-4d22-b6df-4a5e39a510d6/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
+      "TypeScript",
       "React",
-      "Python",
-      "TypeScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7339,8 +7360,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/818e3c35-d25b-4aec-a9e1-23cc8328d19c/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7362,10 +7383,10 @@ const seedJobs = [
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
       "Python",
+      "Azure",
       "Kubernetes",
       "AWS",
-      "GCP",
-      "Azure"
+      "GCP"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7386,11 +7407,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/e8086415-62bc-4cc0-96a4-84bb56182d35/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
       "Golang",
-      "LLMs"
+      "Python",
+      "LLMs",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7411,9 +7432,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/811c3f5a-b26d-4162-b49b-93890a91794d/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
       "TypeScript",
-      "JavaScript"
+      "JavaScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7453,8 +7474,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/f1430967-f367-4afe-9107-e58da423633c/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7475,9 +7496,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/589326d3-9dc0-447e-ae0c-972b808f831d/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
+      "TypeScript",
       "Distributed Systems",
-      "Python",
-      "TypeScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7517,8 +7538,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/e6f55fdf-151d-4282-a600-b92e4124732f/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7558,10 +7579,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/d50d94b0-60c8-4dae-9c36-234f072ee4e3/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "AWS",
-      "Kubernetes",
       "GCP",
-      "Azure"
+      "Kubernetes",
+      "Azure",
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7582,8 +7603,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/8139c589-494a-449a-b608-b11a689e7b2e/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7623,8 +7644,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/09fa3cff-f57d-41dd-a56b-cb323c927ce6/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7645,8 +7666,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/aed2d6fc-925f-4f6a-820b-008ffa024026/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
-      "TypeScript"
+      "TypeScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7686,9 +7707,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/12250aa8-c371-440c-8189-04872fd43eeb/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
       "TypeScript",
-      "JavaScript"
+      "JavaScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7709,9 +7730,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cognition/8e4c141b-ca44-459d-a842-474f6e090da1/application",
     "description": "WE ARE AN APPLIED AI LAB BUILDING END-TO-END SOFTWARE AGENTS.\n\nWe're the makers of Devin, the first AI software engineer. \n\nOur team is extremely talent-dense. Among our founding team, we have world-class competitive programmers, former founders, and leaders from companies at the cutting edge of AI ...",
     "requirements": [
-      "Python",
       "TypeScript",
-      "JavaScript"
+      "JavaScript",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7732,17 +7753,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/043d6a58-87a1-4e3c-bf47-4dc351b94cf4/application",
     "description": "In 2026, we launched Computer, the defining product for the new era of agentic AI. Millions of people now use Perplexity to transform knowledge into action, and every action an agent takes is metered, budgeted, and settled through the billing platform this role owns.\n\nAs a monetization engineer at P...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Next.js",
-      "Go",
-      "TypeScript",
-      "React",
       "Golang",
-      "AWS"
+      "Python",
+      "PostgreSQL",
+      "TypeScript",
+      "Distributed Systems",
+      "AWS",
+      "Next.js",
+      "Go"
     ],
     "preferred": [
-      "PostgreSQL",
+      "React",
       "Docker"
     ],
     "companyColor": "linear-gradient(135deg, #13c2c2, #006d75)",
@@ -7761,19 +7782,19 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/8a976851-9bef-4b07-8d36-567fa9540aef/application",
     "description": "We build and run the inference engine behind every Perplexity query and deploy dozens of model architectures at scale with tight latency and cost budgets. Our stack is Rust, Python, CUDA, and CuTe DSL - and we need another engineer to join us.\n\n\n\n\nWHAT YOU WILL WORK ON\n\nExamples of real work the tea...",
     "requirements": [
-      "Triton",
-      "Distributed Systems",
-      "CUDA",
+      "Quantization",
+      "Rust",
+      "Deep Learning",
       "Python",
       "Kubernetes",
-      "Deep Learning",
-      "PyTorch",
-      "JAX"
+      "Distributed Systems",
+      "JAX",
+      "PyTorch"
     ],
     "preferred": [
-      "Rust",
-      "Quantization",
-      "TensorFlow"
+      "Triton",
+      "TensorFlow",
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #13c2c2, #006d75)",
     "logoUrl": "https://logo.clearbit.com/perplexity.ai"
@@ -7791,14 +7812,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315/application",
     "description": "We are looking for an AI Infra engineer to join our growing team. We work with Kubernetes, Slurm, Python, C++, PyTorch, and primarily on AWS. As an AI Infrastructure Engineer, you will be partnering closely with our Inference and Research teams to build, deploy, and optimize our large-scale AI train...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
       "Python",
       "Kubernetes",
-      "PyTorch",
-      "AWS",
+      "Distributed Systems",
       "C",
-      "TensorFlow"
+      "AWS",
+      "PyTorch",
+      "TensorFlow",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7819,13 +7840,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/dd80ab52-34bd-42af-aa5e-6283b7e6c194/application",
     "description": "Perplexity is looking for an Infrastructure Engineer to own and improve the backend systems behind our latency-sensitive search stack. You\u2019ll work across high-QPS Rust and Go services, distributed retrieval systems, cloud infrastructure, observability, and deployment tooling.\n\nThis role combines inf...",
     "requirements": [
-      "Distributed Systems",
-      "Kubernetes",
-      "Go",
-      "Golang",
-      "AWS",
       "Rust",
-      "C"
+      "Golang",
+      "Kubernetes",
+      "Distributed Systems",
+      "C",
+      "AWS",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7846,9 +7867,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/0190699f-010b-44f2-8399-278899fef018/application",
     "description": "Perplexity is seeking an experienced Machine Learning Engineer to help build the next generation of advanced search technologies, with a focus on retrieval and ranking.\n\nResponsibilities\n\n - Relentlessly push search quality forward\u2014through models, data, tools, or any other leverage available\n\n - Arc...",
     "requirements": [
-      "Machine Learning",
       "LLMs",
-      "RAG"
+      "RAG",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7869,11 +7890,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/27aa1a14-bc59-4613-a65a-38598695076f/application",
     "description": "Perplexity is looking for a highly skilled Senior or Expert Systems Engineer to join our Search Core team. This role is critical to building next-generation search products and technologies. You will help drive key decisions around the architecture, design, and implementation of foundational compone...",
     "requirements": [
+      "Rust",
       "Python",
       "Kubernetes",
-      "AWS",
-      "Rust",
-      "C"
+      "C",
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7894,14 +7915,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/94ccf41e-d3e1-41aa-9569-c3bcbffc4184/application",
     "description": "We are seeking an experienced Backend Software Engineer to join our Crawler team. In this role, you will design, develop, and operate systems that ingest, process, and manage web-scale data in support of our next generation of advanced search technologies. This is a critical, high-impact engineering...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
+      "Distributed Systems",
+      "C",
       "AWS",
-      "Rust",
-      "C"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -7965,19 +7986,19 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/e4777627-ff8f-4257-8612-3a016bb58592/application",
     "description": "We are looking for an AI Inference Engineer to join our growing team. We build and run the inference engine behind every Perplexity query and deploy dozens of model architectures at scale with tight latency and cost budgets. Our stack is Rust, Python, CUDA, and CuTe DSL.\n\n\n\n\n\nRESPONSIBILITIES: \n\n - ...",
     "requirements": [
-      "Triton",
-      "Distributed Systems",
-      "CUDA",
+      "Quantization",
+      "Rust",
+      "Deep Learning",
       "Python",
       "Kubernetes",
-      "Deep Learning",
-      "PyTorch",
-      "JAX"
+      "Distributed Systems",
+      "JAX",
+      "PyTorch"
     ],
     "preferred": [
-      "Rust",
-      "Quantization",
-      "TensorFlow"
+      "Triton",
+      "TensorFlow",
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #13c2c2, #006d75)",
     "logoUrl": "https://logo.clearbit.com/perplexity.ai"
@@ -7995,13 +8016,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/daafcaba-cc39-487a-b941-d7a407753788/application",
     "description": "ABOUT THE ROLE\n\nThe Connector Platform team builds the data layer that lets Perplexity's agents reach into the world's software. This team owns the systems that turn hundreds of heterogeneous integrations (native, MCP, CLI, first-party, and third-party APIs) into one unified, reliable, well-typed su...",
     "requirements": [
-      "System Design",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
       "AWS",
-      "Rust"
+      "Go",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8041,12 +8062,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/29625b7a-5470-463b-8446-21fac84e80b9/application",
     "description": "PERPLEXITY API PLATFORM\n\nPerplexity innovates at the frontier of AI infrastructure, search, and orchestration to serve the world's most discerning users. The Perplexity API Platform brings our technology to the world's most discerning developers.\n\nFrom exabyte-scale knowledge indexes to codegen-firs...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "API Design",
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8067,14 +8088,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/60deb376-51b5-46c6-9e17-55377a5ef34e/application",
     "description": "We are looking for an AI Infra engineer to join our growing team. We work with Kubernetes, Slurm, Python, C++, PyTorch, and primarily on AWS. As an AI Infrastructure Engineer, you will be partnering closely with our Inference and Research teams to build, deploy, and optimize our large-scale AI train...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
       "Python",
       "Kubernetes",
-      "PyTorch",
-      "AWS",
+      "Distributed Systems",
       "C",
-      "TensorFlow"
+      "AWS",
+      "PyTorch",
+      "TensorFlow",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8095,14 +8116,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/4c0ac8bb-55bf-4fb0-b7d7-36d69f55e6c8/application",
     "description": "By applying to this role, you will be considered for engineering roles across all teams at Perplexity.\n\n\n\n\nWE ARE HIRING BUILDERS TO JOIN OUR HIGHLY LEVERAGED ENGINEERING TEAM FOR CREATING NEW PRODUCTS THAT INNOVATE AND ACCELERATE HUMAN PRODUCTIVITY\n\n\n\nIn 2026, we launched Computer, the defining pro...",
     "requirements": [
-      "Python",
-      "Go",
-      "TypeScript",
       "JavaScript",
-      "Golang",
-      "LLMs",
       "Rust",
-      "C"
+      "Golang",
+      "Python",
+      "LLMs",
+      "TypeScript",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8123,8 +8144,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/78675022-c4a7-41d2-9259-7c59be4de93c/application",
     "description": "Perplexity is looking for a frontend engineer to build the design system behind every Perplexity product. It is the component library and design language shared across web, iOS, Android, macOS, and Windows \u2013 the primitives, tokens, and interaction patterns that every product team builds on top of.\n\n...",
     "requirements": [
-      "React",
-      "TypeScript"
+      "TypeScript",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8145,13 +8166,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/e028e104-e070-4a62-85f2-ebcf982889ea/application",
     "description": "ABOUT PERPLEXITY AI\n\nPerplexity is an AI-powered answer engine built to serve the world\u2019s curiosity with fast, trustworthy answers grounded in the live web and backed by clear citations. It combines multiple leading models with real-time search to synthesize up-to-date, source-linked responses inste...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
+      "Distributed Systems",
       "AWS",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8172,12 +8193,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/f45ba174-7e99-4743-9d19-6e4d3e196458/application",
     "description": "ABOUT PERPLEXITY AI\n\nPerplexity is an AI-powered answer engine built to serve the world\u2019s curiosity with fast, trustworthy answers grounded in the live web and backed by clear citations. It combines multiple leading models with real-time search to synthesize up-to-date, source-linked responses inste...",
     "requirements": [
-      "CUDA",
-      "Python",
-      "Go",
-      "TypeScript",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "TypeScript",
+      "Go",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8198,13 +8219,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/0d722589-0f8c-4500-ae79-d3bba5c8a0ea/application",
     "description": "ABOUT THE ROLE\n\nThe Cloud Infrastructure team owns the foundational cloud primitives and deployment models that power Perplexity's products, from multi-tenant public cloud to single-tenant and on-premises solutions for enterprise customers.\n\nAs Perplexity grows its Computer and Enterprise products, ...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
+      "Distributed Systems",
       "AWS",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8225,11 +8246,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/2e73bc78-684c-47c5-95df-e9973a10e0b6/application",
     "description": "ABOUT THE ROLE\n\nThe Data Platform team owns the end-to-end data lifecycle at Perplexity, from ingestion through processing, storage, and serving, powering product features, analytics, experimentation, AI workloads, and the company\u2019s data lake.\n\nThe team defines the architecture for batch and streami...",
     "requirements": [
-      "Python",
-      "Go",
       "Golang",
+      "Python",
+      "Kafka",
       "TypeScript",
-      "Kafka"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8250,13 +8271,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/7795683f-6c5f-40cd-af2d-51294edddd4b/application",
     "description": "ABOUT THE ROLE\n\nThe Backend Platform team is the backbone of Perplexity\u2019s product reliability, scalability, and performance, enabling every product and AI team to build with confidence.\n\nThis high\u2011impact group builds and maintains critical infrastructure, including backend systems for authentication...",
     "requirements": [
-      "System Design",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
       "AWS",
-      "Rust"
+      "Go",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8277,12 +8298,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/b404e73c-5aff-4151-a1a8-6593fb6ccabf/application",
     "description": "About the Role\n\nThe Storage Platform team owns the infrastructure that powers how Perplexity persists, retrieves, and manages data across all systems, ensuring high availability, performance, and cost-efficiency for every product and AI workload.\n\nThis foundational, high-impact group is responsible ...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "MySQL",
-      "Go",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "Distributed Systems",
+      "MySQL",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8303,14 +8324,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/6e328b72-9f57-49e0-a1a8-4428abf8ff81/application",
     "description": "We are hiring builders to define how people talk to, show things to, and hear from AI\n\nIn 2026, we launched Computer, the defining product for the new era of agentic AI. We've scaled beyond the millions of people using Perplexity every day for research, shopping, investing and curiosity into a new p...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
-      "AWS",
-      "Computer Vision",
+      "Python",
       "LLMs",
-      "Rust"
+      "Computer Vision",
+      "Distributed Systems",
+      "AWS",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8352,14 +8373,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/3f800e42-7c48-4f9a-9b12-43ee23e52516/application",
     "description": "PERPLEXITY API PLATFORM\n\nPerplexity innovates at the frontier of AI infrastructure, search, and orchestration to serve the world's most discerning users. The Perplexity API Platform brings our technology to the world's most discerning developers.\n\nFrom exabyte-scale knowledge indexes to codegen-firs...",
     "requirements": [
-      "Distributed Systems",
-      "API Design",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
+      "API Design",
+      "Distributed Systems",
       "AWS",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8380,14 +8401,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/7f2b3619-5ffa-467b-be6f-7a6b7d487892/application",
     "description": "In 2026, we launched Computer, the defining product for the new era of agentic AI. Millions of people now use Perplexity to transform knowledge into action, and every action an agent takes is metered, budgeted, and settled through the billing platform this role owns.\n\nPerplexity Computer is one of t...",
     "requirements": [
-      "Distributed Systems",
-      "Python",
-      "Go",
-      "TypeScript",
-      "React",
       "Golang",
+      "Python",
+      "PostgreSQL",
+      "TypeScript",
+      "Distributed Systems",
       "AWS",
-      "PostgreSQL"
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8408,9 +8429,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/b00cbb00-f672-4909-a7be-bbd02c7d7b5f/application",
     "description": "Perplexity AI is looking for experienced Generalist Software Engineers to join our Perplexity and Comet application teams. Our team is reshaping knowledge work through our high-impact desktop and Comet apps. The ideal candidate should have strong programming skills and multiple years of experience s...",
     "requirements": [
-      "Machine Learning",
       "TypeScript",
-      "Rust"
+      "Rust",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8432,11 +8453,11 @@ const seedJobs = [
     "description": "Description\n\nIn 2026, we launched Computer, the defining product for the new era of agentic AI. Millions of people now use Perplexity to transform knowledge into action, and the Integrations team builds the systems and products that let Perplexity connect to user data and workflows across multiple v...",
     "requirements": [
       "Python",
-      "Next.js",
-      "React",
+      "PostgreSQL",
       "TypeScript",
       "AWS",
-      "PostgreSQL"
+      "Next.js",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8457,10 +8478,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/2c5fdd71-472a-4c62-bc53-deafb66e7941/application",
     "description": "Perplexity is seeking creative, AI native engineers to join our Enterprise Adoption team. Our company is reshaping the way people interact with AI agents within organizations. The Enterprise Adoption team's mandate is to continually uplevel the way our company and our customers use Perplexity Comput...",
     "requirements": [
+      "TypeScript",
       "Go",
       "Golang",
-      "Python",
-      "TypeScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8503,11 +8524,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/6829d54e-570b-4001-a822-3c1e85a34371/application",
     "description": "Perplexity is seeking a TLM (Tech Lead Manager) to lead and grow our highly driven Agents engineering team. The Agents team consists of AI/ML, backend, and full-stack engineers who collaborate to build delightful agentic experiences within our Comet ecosystem https://www.perplexity.ai/comet. Our vis...",
     "requirements": [
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
+      "Python",
       "TypeScript",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8528,11 +8549,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/32a36cae-ad73-4198-9354-a72b141ff055/application",
     "description": "Perplexity is seeking energetic researchers and engineers to join our Secure Intelligence Institute (SII), Perplexity's flagship research center for advancing security, privacy, and trust in frontier intelligence. SII\u2019s goals are to advance frontier AI security research, translate those advances int...",
     "requirements": [
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
+      "Python",
       "TypeScript",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8572,11 +8593,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/c6c857f3-c0db-4d93-aeed-638b9f9d4eb6/application",
     "description": "Perplexity is revolutionizing how people discover and interact with information through AI-powered search and knowledge tools. As we expand our global footprint, we're establishing a strategic presence in London to drive innovation and growth across Europe.\n\nThe Role:\n\nWe're seeking an exceptional S...",
     "requirements": [
-      "Distributed Systems",
+      "Azure",
       "Kubernetes",
+      "Distributed Systems",
       "AWS",
-      "GCP",
-      "Azure"
+      "GCP"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8618,14 +8639,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/7dedcdea-42be-4bb0-b603-791146ff73f0/application",
     "description": "ABOUT PERPLEXITY AI\n\nIn 2026, we launched Computer, the defining product for the new era of agentic AI. We\u2019ve scaled beyond the millions of people using Perplexity every day for research, shopping, investing and curiosity into a new paradigm of using AI to transform knowledge into action.\n\n\n\nAs an e...",
     "requirements": [
-      "Distributed Systems",
+      "Rust",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
+      "Distributed Systems",
+      "C",
       "AWS",
-      "Rust",
-      "C"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8646,11 +8667,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/perplexity/50a2def5-adeb-4f13-99c1-88c32482b772/application",
     "description": "Perplexity is seeking energetic engineers to join our highly driven Agents engineering team. The Agents team consists of backend, full-stack, and AI/ML engineers who collaborate to build harnesses and AI systems powering delightful agentic experiences. These experiences include Perplexity Computer h...",
     "requirements": [
-      "Python",
-      "Go",
+      "Rust",
       "Golang",
+      "Python",
       "TypeScript",
-      "Rust"
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8671,11 +8692,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/3136a5a5-06fd-4c82-8b72-a43467e6b128/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "CUDA",
+      "Transformers",
       "Python",
       "JAX",
-      "Transformers",
-      "TensorFlow"
+      "TensorFlow",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8696,13 +8717,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/443368a3-6276-4b90-9671-27fed40fd6d2/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "CUDA",
-      "Python",
       "Deep Learning",
-      "PyTorch",
-      "JAX",
+      "Python",
       "Machine Learning",
-      "TensorFlow"
+      "JAX",
+      "PyTorch",
+      "TensorFlow",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8723,13 +8744,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/d42f5fd4-1ffc-45b9-957c-f09862db6af6/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Triton",
-      "CUDA",
+      "Transformers",
       "Python",
-      "PyTorch",
-      "JAX",
       "Machine Learning",
-      "Transformers"
+      "JAX",
+      "PyTorch",
+      "Triton",
+      "CUDA"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -8774,12 +8795,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/d5cc437c-2397-4c1a-9d12-3a2bf64d98ea/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Python",
-      "Go",
       "Golang",
-      "PyTorch",
-      "JAX",
+      "Python",
       "C",
+      "JAX",
+      "Go",
+      "PyTorch",
       "TensorFlow"
     ],
     "preferred": [
@@ -8826,10 +8847,10 @@ const seedJobs = [
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
       "Python",
-      "PyTorch",
-      "JAX",
-      "Machine Learning",
       "LLMs",
+      "Machine Learning",
+      "JAX",
+      "PyTorch",
       "TensorFlow"
     ],
     "preferred": [
@@ -8895,11 +8916,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/70a8dc77-ac84-4790-aff6-13b4dcd4554a/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
       "Python",
-      "PyTorch",
-      "Machine Learning",
       "LLMs",
+      "Machine Learning",
+      "Distributed Systems",
+      "PyTorch",
       "TensorFlow"
     ],
     "preferred": [
@@ -8921,9 +8942,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/876a2d31-e6c3-497b-9c8e-0b7d111fb4cd/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
+      "TensorFlow",
       "JAX",
       "Machine Learning",
-      "TensorFlow",
       "Python"
     ],
     "preferred": [
@@ -8967,18 +8988,18 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/2a989030-6d14-4924-88c1-d878911e26fa/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
-      "MoE",
-      "CUDA",
-      "Python",
-      "vLLM",
-      "Go",
+      "Transformers",
+      "Rust",
       "Golang",
-      "Rust"
+      "Python",
+      "MoE",
+      "Distributed Systems",
+      "C",
+      "Go"
     ],
     "preferred": [
-      "C",
-      "Transformers"
+      "vLLM",
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #9b59b6, #8e44ad)",
     "logoUrl": "https://logo.clearbit.com/cohere.com"
@@ -8996,13 +9017,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/e912d84c-8399-422d-8a7d-918422a3e4b1/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Python",
       "vLLM",
-      "Deep Learning",
-      "PyTorch",
-      "Machine Learning",
       "Transformers",
+      "Deep Learning",
+      "Python",
+      "Machine Learning",
       "C",
+      "PyTorch",
       "TensorFlow"
     ],
     "preferred": [
@@ -9024,12 +9045,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/ef9b939d-da66-464c-a878-ef45616c0473/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
+      "Golang",
       "Python",
       "Kubernetes",
       "Go",
-      "Golang",
-      "PyTorch",
       "JAX",
+      "PyTorch",
       "TensorFlow"
     ],
     "preferred": [
@@ -9051,17 +9072,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/c99e61c9-ed92-426d-9711-188dfc0f729f/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
-      "CUDA",
-      "vLLM",
       "TensorRT-LLM",
       "Kubernetes",
-      "PyTorch",
+      "LLMs",
+      "Distributed Systems",
       "JAX",
-      "LLMs"
+      "PyTorch",
+      "vLLM",
+      "Docker"
     ],
     "preferred": [
-      "Docker"
+      "CUDA"
     ],
     "companyColor": "linear-gradient(135deg, #9b59b6, #8e44ad)",
     "logoUrl": "https://logo.clearbit.com/cohere.com"
@@ -9079,10 +9100,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/2df2da3c-fb69-4d4d-b3c9-077b3df2ba3d/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Machine Learning",
+      "vLLM",
       "LLMs",
-      "Python",
-      "vLLM"
+      "Machine Learning",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9103,17 +9124,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/41f23dad-9da2-451a-bd1e-a1800437cb64/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
-      "NLP",
-      "Kubernetes",
-      "Go",
       "Golang",
-      "AWS",
+      "GCP",
+      "Kubernetes",
       "Machine Learning",
-      "C"
+      "Distributed Systems",
+      "C",
+      "AWS",
+      "Go"
     ],
     "preferred": [
-      "GCP",
+      "NLP",
       "Azure"
     ],
     "companyColor": "linear-gradient(135deg, #9b59b6, #8e44ad)",
@@ -9132,17 +9153,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/8b6696e1-f1c4-4010-bde9-3cec1340a2a6/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
-      "NLP",
-      "Kubernetes",
-      "Go",
       "Golang",
-      "AWS",
+      "GCP",
+      "Kubernetes",
       "Machine Learning",
-      "C"
+      "Distributed Systems",
+      "C",
+      "AWS",
+      "Go"
     ],
     "preferred": [
-      "GCP",
+      "NLP",
       "Azure"
     ],
     "companyColor": "linear-gradient(135deg, #9b59b6, #8e44ad)",
@@ -9183,10 +9204,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/9bdbb821-6536-4090-8faa-a2b04a70bbf1/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "AWS",
-      "Kubernetes",
       "GCP",
-      "Azure"
+      "Kubernetes",
+      "Azure",
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9207,17 +9228,17 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/5806a521-8584-4bbe-b60a-49031b919251/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "Distributed Systems",
-      "NLP",
-      "Kubernetes",
-      "Go",
       "Golang",
-      "AWS",
+      "GCP",
+      "Kubernetes",
       "Machine Learning",
-      "C"
+      "Distributed Systems",
+      "C",
+      "AWS",
+      "Go"
     ],
     "preferred": [
-      "GCP",
+      "NLP",
       "Azure"
     ],
     "companyColor": "linear-gradient(135deg, #9b59b6, #8e44ad)",
@@ -9279,10 +9300,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/5d31ba60-683a-4d59-8059-3f728b772a9e/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
+      "JavaScript",
       "Go",
-      "Python",
       "Golang",
-      "JavaScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9299,14 +9320,14 @@ const seedJobs = [
     "seniority": "Mid / General",
     "employmentType": "Full-time",
     "location": "Canada (Hybrid)",
-    "salary": "$200,000 - $330,000 + equity",
+    "salary": "$140,000 - $325,000",
     "applyUrl": "https://jobs.ashbyhq.com/cohere/6a6120d5-5e02-4811-99d9-6baf0b910e37/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
-      "AWS",
-      "Kubernetes",
       "GCP",
-      "Azure"
+      "Kubernetes",
+      "Azure",
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9327,10 +9348,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/4a3c3eb2-ae2e-4a86-a677-7bdecbc7d76e/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
+      "TypeScript",
       "React",
       "Kubernetes",
-      "Python",
-      "TypeScript"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9370,11 +9391,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/cohere/732c05f5-a9ec-43a3-9ae4-3ec7f7630fff/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
+      "GitHub",
       "Python",
       "Kubernetes",
-      "React",
       "TypeScript",
-      "GitHub",
+      "React",
       "RAG"
     ],
     "preferred": [
@@ -9457,7 +9478,7 @@ const seedJobs = [
     "seniority": "Mid / General",
     "employmentType": "Full-time",
     "location": "Toronto (Hybrid)",
-    "salary": "$200,000 - $330,000 + equity",
+    "salary": "$320,000 - $385,000",
     "applyUrl": "https://jobs.ashbyhq.com/cohere/e906188a-e089-4b86-85b9-aad0d4413c68/application",
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [],
@@ -9500,9 +9521,9 @@ const seedJobs = [
     "description": "Who are we?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe\u2019re training and deploying frontier models for enterprises who are building AI systems. We believe ...",
     "requirements": [
       "React",
+      "RAG",
       "API Design",
-      "Python",
-      "RAG"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9602,14 +9623,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/7662c253-27bf-4a64-a52a-ecd221887993/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
-      "Python",
+      "Transformers",
       "Deep Learning",
-      "Fine-tuning",
-      "PyTorch",
-      "JAX",
-      "Machine Learning",
+      "Python",
       "LLMs",
-      "Transformers"
+      "Machine Learning",
+      "Fine-tuning",
+      "JAX",
+      "PyTorch"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9652,11 +9673,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/ade02c95-890f-4f1d-9ca6-05076b6fe687/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
-      "AWS"
+      "AWS",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9677,12 +9698,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/df54a608-9fd9-4c09-aad1-7de71a0d487e/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
-      "Distributed Systems",
       "Python",
-      "AWS",
+      "Azure",
       "Kafka",
-      "GCP",
-      "Azure"
+      "Distributed Systems",
+      "AWS",
+      "GCP"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9703,13 +9724,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/9a4f25e5-d387-46b6-8c0f-ebc8b8837de6/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
-      "Distributed Systems",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang",
-      "AWS",
       "Machine Learning",
+      "Distributed Systems",
+      "AWS",
+      "Go",
       "GCP"
     ],
     "preferred": [
@@ -9733,8 +9754,8 @@ const seedJobs = [
     "requirements": [
       "Distributed Systems",
       "Go",
-      "Python",
-      "Golang"
+      "Golang",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9779,11 +9800,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/5d8b4edb-7e50-4b54-b847-ef8c28dced1f/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
-      "Distributed Systems",
+      "Golang",
       "Python",
       "Kubernetes",
-      "Go",
-      "Golang"
+      "Distributed Systems",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9804,8 +9825,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/poolside/9a4d844a-f251-4ae1-af4b-dbce126c542a/application",
     "description": "ABOUT POOLSIDE\n\nIn this decade, the world will create Artificial General Intelligence. There will only be a small number of companies who will achieve this. Their ability to stack advantages and pull ahead will define the winners. These companies will move faster than anyone else. They will attract ...",
     "requirements": [
-      "React",
-      "TypeScript"
+      "TypeScript",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9872,8 +9893,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/reflectionai/5c614820-83b4-49ad-bb6d-0d49f09c078b/application",
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\nABOUT THE ROLE...",
     "requirements": [
-      "Machine Learning",
-      "RLHF"
+      "RLHF",
+      "Machine Learning"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -9979,12 +10000,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/reflectionai/8b05b1e6-0286-464b-9fff-c6ac44c35b8c/application",
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\nFOUNDATIONS\n\n\n...",
     "requirements": [
-      "Distributed Systems",
-      "Kubernetes",
-      "Go",
-      "Golang",
       "Rust",
-      "C"
+      "Golang",
+      "Kubernetes",
+      "Distributed Systems",
+      "C",
+      "Go"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10005,9 +10026,9 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/reflectionai/99cd3069-dd01-4008-9a0f-a36aee1e45fc/application",
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\n\n\nFOUNDATIONS\n...",
     "requirements": [
-      "AWS",
       "Kubernetes",
-      "GCP"
+      "GCP",
+      "AWS"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10028,11 +10049,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/reflectionai/62c12b7c-781a-4178-bc8a-7b43c7ec2338/application",
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\n\n\nFOUNDATIONS\n...",
     "requirements": [
+      "Golang",
       "API Design",
-      "React",
-      "Go",
       "TypeScript",
-      "Golang"
+      "Go",
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10181,10 +10202,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/reflectionai/5d2153dc-fe9a-473d-8047-c3b81786844a/application",
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\nABOUT THE ROLE...",
     "requirements": [
+      "TypeScript",
       "React",
-      "Golang",
       "Go",
-      "TypeScript"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10256,27 +10277,6 @@ const seedJobs = [
     "logoUrl": "https://logo.clearbit.com/reflection.ai"
   },
   {
-    "id": "reflectionai-3fbaa1d2-b0a0-4e99-adba-7195bdc2e08a",
-    "company": "Reflection AI",
-    "title": "Subject Matter Expert - Child Safety ",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "New York, NY (Hybrid)",
-    "salary": "$200,000 - $330,000 + equity",
-    "applyUrl": "https://jobs.ashbyhq.com/reflectionai/3fbaa1d2-b0a0-4e99-adba-7195bdc2e08a/application",
-    "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\n\n\nROLE OVERVIE...",
-    "requirements": [
-      "Python"
-    ],
-    "preferred": [
-      "High performance distributed processing"
-    ],
-    "companyColor": "linear-gradient(135deg, #6366f1, #0f172a)",
-    "logoUrl": "https://logo.clearbit.com/reflection.ai"
-  },
-  {
     "id": "reflectionai-266c76bf-7353-40e1-a2e6-8dd3187ec52c",
     "company": "Reflection AI",
     "title": "Member of Technical Staff, Data Flywheel",
@@ -10290,6 +10290,28 @@ const seedJobs = [
     "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\n\n\nROLE OVERVIE...",
     "requirements": [
       "Machine Learning"
+    ],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #6366f1, #0f172a)",
+    "logoUrl": "https://logo.clearbit.com/reflection.ai"
+  },
+  {
+    "id": "reflectionai-1d256249-5bae-42de-9238-368e8f2ad864",
+    "company": "Reflection AI",
+    "title": "Sovereign Deal Lead",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "San Francisco, CA (Hybrid)",
+    "salary": "$200,000 - $330,000 + equity",
+    "applyUrl": "https://jobs.ashbyhq.com/reflectionai/1d256249-5bae-42de-9238-368e8f2ad864/application",
+    "description": "OUR MISSION\n\nReflection is a research lab making intelligence open and accessible for everyone to use, customize, and build on. We build open models that let anyone control their intelligence and help shape the future of AI. Our mission: make intelligence open and accessible to all.\n\n\n\n\nEXECUTIVE SU...",
+    "requirements": [
+      "C",
+      "LLMs"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10312,8 +10334,8 @@ const seedJobs = [
     "requirements": [
       "React",
       "Go",
-      "Python",
-      "Golang"
+      "Golang",
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10335,9 +10357,9 @@ const seedJobs = [
     "description": "Synthesia is the world\u2019s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. \n\nAs AI continues to shape the way we live and work, Synthesia develops products to enhance ...",
     "requirements": [
       "Distributed Systems",
+      "GitHub",
       "Kubernetes",
-      "Python",
-      "GitHub"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10358,13 +10380,13 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/synthesia/6afd3236-71d3-4f67-92e6-b99a868a3260/application",
     "description": "Synthesia is the world\u2019s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. \n\nAs AI continues to shape the way we live and work, Synthesia develops products to enhance ...",
     "requirements": [
-      "System Design",
+      "Golang",
       "Python",
+      "AWS",
+      "Operating Systems",
       "Go",
       "React",
-      "Golang",
-      "Operating Systems",
-      "AWS"
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10386,9 +10408,9 @@ const seedJobs = [
     "description": "Synthesia is the world\u2019s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. \n\nAs AI continues to shape the way we live and work, Synthesia develops products to enhance ...",
     "requirements": [
       "Distributed Systems",
+      "GitHub",
       "Kubernetes",
-      "Python",
-      "GitHub"
+      "Python"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10409,11 +10431,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/granola/ed52eb55-cb81-4ed8-b97b-92b477876f9e/application",
     "description": "Hey! We're team Granola \ud83d\udc4b \u00a0\n\nIf you haven't already, you should check out what we're building https://www.granola.ai/, and why you should work here https://www.granola.ai/jobs.\n\nWe are looking for a self-starting engineer, passionate about applying the latest advancements in LLMs to create user-cent...",
     "requirements": [
-      "React",
-      "TypeScript",
+      "LLMs",
       "RAG",
-      "Node.js",
-      "LLMs"
+      "TypeScript",
+      "React",
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10434,10 +10456,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/granola/f928eaec-2215-4811-9593-eb084eddef6c/application",
     "description": "Hey! We're team Granola \ud83d\udc4b \u00a0\n\nIf you haven't already, you should check out what we're building https://www.granola.ai/, and why you should work here https://www.granola.ai/jobs.\n\nWe're looking for an Product Engineer focussed on the Backend to help us scale our systems to unlock Granola for the next ...",
     "requirements": [
-      "AWS",
-      "PostgreSQL",
       "TypeScript",
-      "Node.js"
+      "AWS",
+      "Node.js",
+      "PostgreSQL"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10458,11 +10480,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/granola/beb98f7b-a6c8-4949-a0c1-1ac963dfa449/application",
     "description": "Hey! We're team Granola \ud83d\udc4b \u00a0\n\nIf you haven't already, you should check out what we're building https://www.granola.ai/, and why you should work here https://www.granola.ai/jobs.\n\nWe\u2019re looking for an engineer who loves building products in a fast-paced, iterative environment.\n\nIn this role, you will ...",
     "requirements": [
-      "React",
+      "LLMs",
       "TypeScript",
-      "Node.js",
       "AWS",
-      "LLMs"
+      "React",
+      "Node.js"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10483,8 +10505,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/granola/90f7c57c-14a3-4be4-9f7b-05387030feea/application",
     "description": "Product Engineer (Windows) \u2014 Granola\n\nLocation: London\n\nHey! We're team Granola \ud83d\udc4b\n\nWe're looking for a Product Engineer who loves Windows and loves building products in a fast-paced, iterative environment.\n\nGranola is an Electron app with deep OS integrations: system audio capture, accessibility API...",
     "requirements": [
-      "React",
       "TypeScript",
+      "React",
       "Node.js"
     ],
     "preferred": [
@@ -10506,10 +10528,10 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/granola/31cd18b8-f208-4a48-b287-11f32c0e32dd/application",
     "description": "Product Engineer (Transcription) \u2014 Granola\n\nLocation: London\n\nHey! We're team Granola \ud83d\udc4b\n\nWe're looking for an engineer who loves audio and transcription, and loves building products in a fast-paced, iterative environment.\n\nIn this role, you will make Granola the best desktop transcription app that e...",
     "requirements": [
-      "UI/UX",
-      "React",
       "TypeScript",
-      "Node.js"
+      "React",
+      "Node.js",
+      "UI/UX"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10530,8 +10552,8 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/recraft/676f578f-66f5-4d40-9164-0a3b9cca77cc/application",
     "description": "ABOUT US\n\nFounded in the US in 2022 and now based in London, UK, Recraft is an AI tool for professional designers, illustrators, and marketers, setting a new standard for excellence in image generation.\n\nWe designed a tool that lets creators quickly generate and iterate original images, vector art, ...",
     "requirements": [
-      "PyTorch",
-      "Machine Learning"
+      "Machine Learning",
+      "PyTorch"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10563,6 +10585,29 @@ const seedJobs = [
     "logoUrl": "https://logo.clearbit.com/basecamp-research.ai"
   },
   {
+    "id": "basecamp-research-4e5db84c-8629-4050-8df9-9e4d122f10d6",
+    "company": "Basecamp Research",
+    "title": "Laboratory Technician",
+    "category": "SWE",
+    "domain": "Backend & Platform",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "London (Hybrid)",
+    "salary": "$200,000 - $330,000 + equity",
+    "applyUrl": "https://jobs.ashbyhq.com/basecamp-research/4e5db84c-8629-4050-8df9-9e4d122f10d6/application",
+    "description": "ABOUT US\n\nBasecamp Research is dedicated to solving major challenges in the life sciences by exploring Beyond Known Biology.  Our teams build frontier AI models using BaseData, the world's largest ethically-sourced and globally representative biological dataset.  Our Global Research Team collects an...",
+    "requirements": [
+      "C",
+      "Go",
+      "Golang"
+    ],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #14b8a6, #0f766e)",
+    "logoUrl": "https://logo.clearbit.com/basecamp-research.ai"
+  },
+  {
     "id": "omnea-ca072747-4d30-4ed6-9ba5-a4aa81886709",
     "company": "Omnea",
     "title": "Engineering Manager",
@@ -10575,12 +10620,12 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/omnea/ca072747-4d30-4ed6-9ba5-a4aa81886709/application",
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
-      "Distributed Systems",
-      "React",
       "TypeScript",
+      "Distributed Systems",
+      "C",
       "AWS",
       "MongoDB",
-      "C"
+      "React"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10602,9 +10647,9 @@ const seedJobs = [
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
       "C",
+      "MongoDB",
       "Go",
-      "Golang",
-      "MongoDB"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10625,14 +10670,14 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/omnea/1adfb275-0882-4b2e-9044-2b735a5d2e2d/application",
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
-      "System Design",
-      "Python",
-      "React",
-      "TypeScript",
       "GitHub",
+      "Python",
+      "TypeScript",
+      "C",
       "AWS",
       "MongoDB",
-      "C"
+      "React",
+      "System Design"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10653,11 +10698,11 @@ const seedJobs = [
     "applyUrl": "https://jobs.ashbyhq.com/omnea/6c290ba5-c6f1-4bd5-aa3e-ceb5cf738b7b/application",
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
-      "TypeScript",
       "GitHub",
+      "TypeScript",
+      "C",
       "AWS",
-      "MongoDB",
-      "C"
+      "MongoDB"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10679,9 +10724,9 @@ const seedJobs = [
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
       "C",
+      "MongoDB",
       "Go",
-      "Golang",
-      "MongoDB"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10703,9 +10748,9 @@ const seedJobs = [
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
       "C",
+      "MongoDB",
       "Go",
-      "Golang",
-      "MongoDB"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -10727,9 +10772,9 @@ const seedJobs = [
     "description": "OUR MISSION\n\nAt Omnea, we\u2019re reinventing how enterprise businesses operate, starting with the most painful parts: procurement \u2013 where a single purchase can drag on for months, trigger 50+ emails, and pull in Finance, Legal, Security, and IT just to get something approved.\n\nWe\u2019ve raised $75M from Kho...",
     "requirements": [
       "C",
+      "MongoDB",
       "Go",
-      "Golang",
-      "MongoDB"
+      "Golang"
     ],
     "preferred": [
       "High performance distributed processing"
@@ -11112,7 +11157,7 @@ const seedJobs = [
 
 if (typeof window !== "undefined") {
   window.seedJobs = seedJobs;
-  window.lastSyncedJobs = "2026-08-28 07:15 AM";
+  window.lastSyncedJobs = "2026-08-29 04:27 AM";
 }
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
