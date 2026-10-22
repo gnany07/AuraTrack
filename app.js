@@ -181,9 +181,15 @@ window.setCurrency = function(currencyCode) {
   } catch (e) {}
 
   updateCurrencyUI();
+  renderWorkspaceQuickStats();
   if (state.currentTab === "discover") renderJobDiscovery();
+  if (state.currentTab === "resume") renderResumePortal();
   if (state.currentTab === "tracker") renderKanbanBoard();
-  if (state.selectedJobId) openJobDetails(state.selectedJobId);
+  if (state.currentTab === "analytics") renderAnalytics();
+  if (state.selectedJobId) {
+    const isModalOpen = document.getElementById("details-modal")?.classList.contains("active");
+    openJobDetails(state.selectedJobId, isModalOpen);
+  }
 
   const cfg = CURRENCY_CONFIG[currencyCode];
   showToast(`Currency updated to ${cfg.flag} ${cfg.label} — all salaries converted!`);
@@ -843,6 +849,54 @@ function getTabFromHash() {
   return null;
 }
 
+function renderWorkspaceQuickStats(customRolesList = null, customCompaniesCount = null) {
+  const container = document.getElementById("workspace-quick-stats");
+  if (!container) return;
+
+  const allJobs = getAllJobs();
+  const roles = customRolesList || allJobs.map(j => ({
+    job: j,
+    score: calculateMatchScore(j, state.parsedResume).score,
+    salData: parseJobSalaryData(j)
+  }));
+
+  const highMatches = roles.filter(r => r.score >= 75).length;
+  const companiesCount = customCompaniesCount !== null
+    ? customCompaniesCount
+    : new Set(roles.map(r => r.job.company)).size;
+
+  // Compute median compensation in active currency
+  const curr = state.currency || "GBP";
+  const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
+  let avgMinUSD = 195000;
+  let avgMaxUSD = 295000;
+  if (roles.length > 0) {
+    avgMinUSD = Math.round(roles.reduce((acc, r) => acc + (r.salData?.minUSD || 195000), 0) / roles.length);
+    avgMaxUSD = Math.round(roles.reduce((acc, r) => acc + (r.salData?.maxUSD || 295000), 0) / roles.length);
+  }
+  const minFormatted = formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true);
+  const maxFormatted = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
+
+  container.innerHTML = `
+    <div class="quick-stat-pill">
+      <span class="quick-stat-label">Matching Roles</span>
+      <span class="quick-stat-value">${roles.length.toLocaleString()}</span>
+    </div>
+    <div class="quick-stat-pill">
+      <span class="quick-stat-label">Avg Band (${curr})</span>
+      <span class="quick-stat-value emerald">${minFormatted}–${maxFormatted}</span>
+    </div>
+    <div class="quick-stat-pill">
+      <span class="quick-stat-label">75%+ Fit</span>
+      <span class="quick-stat-value indigo">${highMatches}</span>
+    </div>
+    <div class="quick-stat-pill">
+      <span class="quick-stat-label">Hiring Labs</span>
+      <span class="quick-stat-value">${companiesCount}</span>
+    </div>
+  `;
+}
+
 function switchTab(tabId, updateHash = true) {
   if (!VALID_TABS.has(tabId)) tabId = "discover";
   state.currentTab = tabId;
@@ -870,17 +924,18 @@ function switchTab(tabId, updateHash = true) {
       titleEl.textContent = "Frontier AI Job Discovery";
       subEl.textContent = `Explore ${allCount} verified engineering roles with direct job links and live currency conversion.`;
     } else if (tabId === "resume") {
-      titleEl.textContent = "Resume Profile & AI Matcher";
-      subEl.textContent = "Upload your technical resume to calibrate compatibility scores across all open roles.";
+      titleEl.textContent = "Resume Studio & AI Matcher";
+      subEl.textContent = "Calibrate semantic compatibility scores across 1,121 frontier AI roles and tailor resume bullets.";
     } else if (tabId === "tracker") {
       titleEl.textContent = "Kanban Application Pipeline";
-      subEl.textContent = "Track your applications from discovery through offer negotiation.";
+      subEl.textContent = "Track your applications from discovery through technical loops and offer negotiation.";
     } else if (tabId === "analytics") {
-      titleEl.textContent = "Career Analytics & Skill Gaps";
-      subEl.textContent = "Analyze your match distribution and technical preparation priorities.";
+      titleEl.textContent = "Market Intelligence & Compensation Benchmarks";
+      subEl.textContent = "Compare frontier AI lab compensation bands, in-demand technical skills, and high-ROI skill gaps.";
     }
   }
 
+  renderWorkspaceQuickStats();
   if (tabId === "discover") renderJobDiscovery();
   else if (tabId === "tracker") renderKanbanBoard();
   else if (tabId === "analytics") renderAnalytics();
@@ -889,7 +944,7 @@ function switchTab(tabId, updateHash = true) {
 window.switchTab = switchTab;
 
 // ============================================================================
-// Resume Portal Rendering
+// Resume Portal Rendering (v3.0 Studio)
 // ============================================================================
 function renderResumePortal() {
   const container = document.getElementById("section-resume");
@@ -910,6 +965,53 @@ function renderResumePortal() {
   const textPasteArea = document.getElementById("text-paste-area");
   if (textPasteArea) textPasteArea.value = state.resumeText || "";
 
+  // Evaluate top matches across all jobs for instant preview
+  const allJobs = getAllJobs();
+  const scoredJobs = allJobs.map(j => ({
+    job: j,
+    analysis: calculateMatchScore(j, state.parsedResume)
+  })).sort((a, b) => b.analysis.score - a.analysis.score);
+
+  const highMatchCount = scoredJobs.filter(x => x.analysis.score >= 75).length;
+  const topScore = scoredJobs.length > 0 ? scoredJobs[0].analysis.score : 0;
+
+  // Populate Candidate Readiness Banner
+  const bannerEl = document.getElementById("resume-studio-banner");
+  if (bannerEl) {
+    if (isLoaded) {
+      bannerEl.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">🧬</div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap;">
+              <span style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: #ffffff;">${state.parsedResume.name || "Active Engineer Profile"}</span>
+              <span class="pill pill-primary" style="font-size: 0.7rem;">${state.parsedResume.experienceLevel}</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #34d399; font-weight: 700;">● Live Calibration Active</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.15rem;">
+              Extracted <strong>${state.parsedResume.skills.length} technical skills</strong> • Unlocked <strong>${highMatchCount} high-fit roles (75%+ match)</strong> across ${allJobs.length} open positions.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="clearResume()">Reset Profile</button>
+          <button class="btn btn-sm" onclick="switchTab('discover')">Explore ${highMatchCount} Top Matches →</button>
+        </div>
+      `;
+    } else {
+      bannerEl.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">⚡</div>
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 700; color: #ffffff;">Calibrate Your AI Engineering Match Engine</h3>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">Upload a PDF/TXT resume, paste your experience, or load our sample Senior AI Systems profile to rank all ${allJobs.length} roles.</p>
+          </div>
+        </div>
+        <button class="btn btn-sm" onclick="loadSampleResume()">⚡ Load Sample Senior AI Resume</button>
+      `;
+    }
+  }
+
   const resultsBox = document.getElementById("resume-results-panel");
   if (!resultsBox) return;
 
@@ -920,9 +1022,29 @@ function renderResumePortal() {
 
     const seniorityHtml = (state.parsedResume.seniorityKeywords || []).map(k => `<span class="pill">${k}</span>`).join("");
 
+    const top5Html = scoredJobs.slice(0, 4).map(({ job, analysis }) => {
+      const sal = formatJobSalary(job, state.currency, { compact: true, includeEquity: false });
+      const exactUrl = getExactJobUrl(job);
+      return `
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.65rem; padding: 0.55rem 0.7rem; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px;">
+          <div style="min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #a5b4fc;">${job.company}</span>
+              <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #34d399; font-weight: 700;">${sal}</span>
+            </div>
+            <div style="font-size: 0.82rem; font-weight: 600; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${job.title}</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.45rem; flex-shrink: 0;">
+            <span class="match-pill-high" style="font-size: 0.7rem; padding: 0.15rem 0.45rem;">${analysis.score}%</span>
+            <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;">Role ↗</a>
+          </div>
+        </div>
+      `;
+    }).join("");
+
     resultsBox.innerHTML = `
       <div class="results-header">
-        <span>Parsed Candidate Profile</span>
+        <span>Parsed Candidate DNA</span>
         <button class="btn btn-secondary btn-danger btn-sm" onclick="clearResume()">Reset Profile</button>
       </div>
       <div class="stat-item">
@@ -938,34 +1060,72 @@ function renderResumePortal() {
         <span class="stat-value" style="color: var(--primary)">${state.parsedResume.experienceLevel} ${seniorityHtml}</span>
       </div>
       <div>
-        <span class="stat-label">Extracted Technical Skills (${state.parsedResume.skills.length}):</span>
+        <span class="stat-label">Extracted Technical Stack (${state.parsedResume.skills.length}):</span>
         <div class="pill-container">${skillsHtml}</div>
       </div>
-      <div style="margin-top: auto; padding: 1.15rem; border-radius: 12px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(16, 185, 129, 0.12)); border: 1px solid rgba(99, 102, 241, 0.32);">
-        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
-          <div>
-            <h4 style="font-family: var(--font-display); color: #ffffff; font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;">✓ Profile Synced with Job Discovery</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Match scores are live across all ${getAllJobs().length} roles.</p>
-          </div>
-          <button class="btn btn-sm" onclick="switchTab('discover')">Explore Matched Roles →</button>
+      <div style="margin-top: 0.35rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+          <span class="stat-label" style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px;">🔥 Instant Top Matched Roles (Peak: ${topScore}%)</span>
+          <button class="btn-text-link" onclick="switchTab('discover')">See all ${allJobs.length} →</button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+          ${top5Html}
         </div>
       </div>
     `;
   } else {
     resultsBox.innerHTML = `
-      <div class="results-header">Resume Analysis</div>
-      <div style="text-align: center; color: var(--text-muted); padding: 3.5rem 1rem;">
+      <div class="results-header">Candidate Profile Analysis</div>
+      <div style="text-align: center; color: var(--text-muted); padding: 2.75rem 1rem;">
         <svg class="dropzone-icon" style="color: var(--text-muted); margin-bottom: 0.75rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
         <p style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.25rem;">No Resume Loaded Yet</p>
         <p style="font-size: 0.82rem; margin-bottom: 1.25rem;">Upload a PDF/TXT resume or paste your experience on the left to unlock tailored match scores.</p>
-        <button class="btn btn-secondary btn-sm" onclick="switchTab('discover')">Browse All Jobs Without Resume →</button>
+        <div style="display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-sm" onclick="loadSampleResume()">⚡ Load Sample Resume</button>
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('discover')">Browse All Jobs →</button>
+        </div>
       </div>
     `;
   }
+
+  // Render clickable bullet chips extracted from resume text for the AI Bullet Optimizer
+  const bulletsChipsEl = document.getElementById("extracted-bullets-chips");
+  if (bulletsChipsEl) {
+    const rawLines = (state.resumeText || DEFAULT_RESUME_TEXT)
+      .split("\n")
+      .map(l => l.trim())
+      .filter(l => (l.startsWith("-") || l.startsWith("•")) && l.length > 35 && !l.includes("Georgia Institute") && !l.includes("Indian Institute"));
+    if (rawLines.length > 0) {
+      bulletsChipsEl.innerHTML = `
+        <div style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem;">Click a bullet from your resume to load it into the optimizer:</div>
+        <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+          ${rawLines.slice(0, 3).map(line => {
+            const cleanBullet = line.replace(/^[-•]\s*/, "").trim();
+            const safeAttr = cleanBullet.replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+            return `<button type="button" style="text-align: left; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 0.4rem 0.6rem; color: var(--text-secondary); font-size: 0.75rem; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" onclick="document.getElementById('opt-bullet-input').value = this.dataset.bullet" data-bullet="${safeAttr}">↳ ${cleanBullet}</button>`;
+          }).join("")}
+        </div>
+      `;
+    } else {
+      bulletsChipsEl.innerHTML = "";
+    }
+  }
+
   populateOptimizerJobs();
 }
+
+window.loadSampleResume = function() {
+  state.resumeText = DEFAULT_RESUME_TEXT;
+  state.parsedResume = parseResumeText(DEFAULT_RESUME_TEXT);
+  const area = document.getElementById("text-paste-area");
+  if (area) area.value = DEFAULT_RESUME_TEXT;
+  saveState();
+  renderResumePortal();
+  renderJobDiscovery();
+  showToast("Loaded sample Senior AI Engineer resume & calibrated all 1,121 roles!");
+};
 
 window.clearResume = function() {
   state.resumeText = "";
@@ -1371,6 +1531,8 @@ function renderJobDiscovery() {
   const countEl = document.getElementById("matching-jobs-count");
   if (countEl) countEl.textContent = totalMatching.toString();
 
+  renderWorkspaceQuickStats(filteredJobs, sortedCompanyEntries.length);
+
   // Pagination calculation
   const totalPages = Math.ceil(totalMatching / 20) || 1;
   let currentPage = state.discoveryPage || 1;
@@ -1413,9 +1575,10 @@ function renderJobDiscovery() {
     else if (exactUrl.includes("greenhouse.io")) boardBadge = "Greenhouse Direct Link";
 
     const card = document.createElement("div");
-    card.className = "glass job-row-card";
+    card.className = "glass job-row-card" + (state.selectedJobId === job.id ? " selected-row" : "");
+    card.dataset.jobId = job.id;
     card.style.borderLeftColor = (job.companyColor && !job.companyColor.includes("gradient")) ? job.companyColor : "#6366f1";
-    card.onclick = () => openJobDetails(job.id);
+    card.onclick = () => openJobDetails(job.id, false);
 
     card.innerHTML = `
       <!-- Column 1: Company, Title, Location, Converted Salary & Role Preview -->
@@ -1429,9 +1592,9 @@ function renderJobDiscovery() {
           <span class="seniority-tag">${job.seniority || 'Senior'}</span>
         </div>
 
-        <h3 style="font-family: var(--font-display); font-size: 1.12rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">${job.title}</h3>
+        <h3 style="font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">${job.title}</h3>
 
-        <div style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.82rem; color: var(--text-secondary); flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap;">
           <span>📍 ${job.location}</span>
           <span class="salary-pill-converted">💰 ${convertedSalary}</span>
           <span class="exact-url-hint">🔗 ${boardBadge}</span>
@@ -1442,7 +1605,7 @@ function renderJobDiscovery() {
 
       <!-- Column 2: Skills Alignment -->
       <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-        <span style="font-size: 0.68rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Skills & Stack</span>
+        <span style="font-size: 0.66rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Skills & Stack</span>
         <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
           ${matchedSkillTags || '<span class="skill-tag-gap">Systems Engineering</span>'}
           ${gapSkillTags}
@@ -1450,9 +1613,9 @@ function renderJobDiscovery() {
       </div>
 
       <!-- Column 3: Match Score & Direct Actions -->
-      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.65rem;">
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;">
         <div class="${scorePillClass}">${scoreLabel}</div>
-        <div style="display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; justify-content: flex-end;" onclick="event.stopPropagation();">
+        <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; justify-content: flex-end;" onclick="event.stopPropagation();">
           ${(() => {
             let trackedStage = null;
             Object.keys(state.tracker || {}).forEach(stg => {
@@ -1464,7 +1627,7 @@ function renderJobDiscovery() {
             }
             return `<button class="btn btn-secondary btn-sm" onclick="toggleTrackJob('${job.id}')">+ Track</button>`;
           })()}
-          <button class="btn btn-secondary btn-sm" onclick="openJobDetails('${job.id}')">Know More</button>
+          <button class="btn btn-secondary btn-sm" onclick="openJobDetails('${job.id}', false)">Know More</button>
           <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm" title="Open exact job posting page on ${job.company}'s board">Exact Job Link ↗</a>
         </div>
       </div>
@@ -1487,6 +1650,14 @@ function renderJobDiscovery() {
   }
 
   renderPaginationControls(totalMatching, totalPages, currentPage);
+
+  // Auto-populate the live right-hand Role Inspector with the first matching job on desktop if inspector is open or not explicitly closed
+  if (pageJobs.length > 0 && !state.inspectorClosedByUser) {
+    const targetId = (state.selectedJobId && pageJobs.some(p => p.job.id === state.selectedJobId))
+      ? state.selectedJobId
+      : pageJobs[0].job.id;
+    renderInlineRoleInspector(targetId);
+  }
 }
 
 // Render Dynamic Company Chips based on matching results
@@ -1596,7 +1767,7 @@ function setupDiscoveryFilters() {
 }
 
 // ============================================================================
-// Kanban Application Tracker
+// Kanban Application Tracker (v3.0 Executive Pipeline)
 // ============================================================================
 function renderKanbanBoard() {
   ensureTrackerStages();
@@ -1605,6 +1776,43 @@ function renderKanbanBoard() {
 
   const allJobs = getAllJobs();
   const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
+  const filterQuery = (document.getElementById("kanban-filter-input")?.value || "").toLowerCase().trim();
+
+  // Compute Pipeline Executive KPIs
+  const kpiBar = document.getElementById("pipeline-kpis-bar");
+  if (kpiBar) {
+    const allTrackedIds = stages.flatMap(s => state.tracker[s] || []);
+    const allTrackedJobs = allTrackedIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
+    const activeCount = (state.tracker.applied?.length || 0) + (state.tracker.interviewing?.length || 0);
+    const offerCount = state.tracker.offer?.length || 0;
+
+    const curr = state.currency || "GBP";
+    const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
+    let avgPipelineCompStr = "—";
+    if (allTrackedJobs.length > 0) {
+      const avgMaxUSD = Math.round(allTrackedJobs.reduce((acc, j) => acc + parseJobSalaryData(j).maxUSD, 0) / allTrackedJobs.length);
+      avgPipelineCompStr = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
+    }
+
+    kpiBar.innerHTML = `
+      <div class="pipeline-kpi-chip">
+        <span class="kpi-label">Total Tracked</span>
+        <span class="kpi-num">${allTrackedJobs.length}</span>
+      </div>
+      <div class="pipeline-kpi-chip">
+        <span class="kpi-label">Active Loops</span>
+        <span class="kpi-num" style="color: #818cf8;">${activeCount}</span>
+      </div>
+      <div class="pipeline-kpi-chip">
+        <span class="kpi-label">Offers</span>
+        <span class="kpi-num" style="color: #34d399;">${offerCount}</span>
+      </div>
+      <div class="pipeline-kpi-chip">
+        <span class="kpi-label">Avg Target (${curr})</span>
+        <span class="kpi-num" style="color: #34d399;">${avgPipelineCompStr}</span>
+      </div>
+    `;
+  }
 
   stages.forEach(stage => {
     const listEl = document.getElementById(`kanban-list-${stage}`);
@@ -1613,14 +1821,22 @@ function renderKanbanBoard() {
 
     listEl.innerHTML = "";
     const stageJobIds = state.tracker[stage] || [];
-    const stageJobs = stageJobIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
-    countEl.textContent = stageJobs.length;
+    const stageJobsAll = stageJobIds.map(id => allJobs.find(j => j.id === id)).filter(Boolean);
+    countEl.textContent = stageJobsAll.length;
+
+    const stageJobs = filterQuery
+      ? stageJobsAll.filter(j =>
+          j.title.toLowerCase().includes(filterQuery) ||
+          j.company.toLowerCase().includes(filterQuery) ||
+          (j.location || "").toLowerCase().includes(filterQuery)
+        )
+      : stageJobsAll;
 
     if (stageJobs.length === 0) {
       const emptyMsg = document.createElement("div");
       emptyMsg.className = "kanban-empty-placeholder";
-      emptyMsg.style.cssText = "padding: 1.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 10px; margin-top: 0.4rem;";
-      emptyMsg.textContent = "No roles in stage";
+      emptyMsg.style.cssText = "padding: 1.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.78rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 10px; margin-top: 0.4rem;";
+      emptyMsg.textContent = filterQuery ? "No matching roles in stage" : "Drop roles here";
       listEl.appendChild(emptyMsg);
     } else {
       stageJobs.forEach(job => {
@@ -1642,10 +1858,10 @@ function renderKanbanBoard() {
             <div class="kanban-card-company">${job.company}</div>
             <span class="kanban-match-badge ${matchBadgeClass}" style="font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 5px; font-weight: 700;">${matchAnalysis.score}%</span>
           </div>
-          <div class="kanban-card-title" style="font-size: 0.9rem; font-weight: 700; color: white; margin-bottom: 0.45rem; line-height: 1.3;">${job.title}</div>
-          <div class="kanban-card-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-secondary); gap: 0.4rem; flex-wrap: wrap;">
+          <div class="kanban-card-title" style="font-size: 0.88rem; font-weight: 700; color: white; margin-bottom: 0.45rem; line-height: 1.3;">${job.title}</div>
+          <div class="kanban-card-meta" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: var(--text-secondary); gap: 0.4rem; flex-wrap: wrap;">
             <span>📍 ${(job.location || "").split(',')[0]}</span>
-            <span style="color: #34d399; font-weight: 700;">${compactSalary}</span>
+            <span style="color: #34d399; font-weight: 700; font-family: var(--font-mono);">${compactSalary}</span>
           </div>
           <div style="margin-top: 0.65rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; gap: 0.35rem;" onclick="event.stopPropagation();">
             <select class="kanban-stage-select" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 0.72rem; padding: 0.18rem 0.35rem; cursor: pointer;" onchange="moveJobToStage('${job.id}', this.value)">
@@ -1664,7 +1880,7 @@ function renderKanbanBoard() {
 
         card.addEventListener("click", () => {
           if (card.classList.contains("dragging")) return;
-          openJobDetails(job.id);
+          openJobDetails(job.id, true);
         });
         card.addEventListener("dragstart", (e) => {
           card.classList.add("dragging");
@@ -1678,6 +1894,32 @@ function renderKanbanBoard() {
 
   initKanbanDragDrop();
 }
+
+window.seedTopMatchesToKanban = function() {
+  ensureTrackerStages();
+  const allJobs = getAllJobs();
+  const stages = ["discovered", "applied", "interviewing", "offer", "archived"];
+  const alreadyTracked = new Set(stages.flatMap(s => state.tracker[s] || []));
+
+  const untrackHighMatches = allJobs
+    .filter(j => !alreadyTracked.has(j.id))
+    .map(j => ({ job: j, score: calculateMatchScore(j, state.parsedResume).score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5);
+
+  if (untrackHighMatches.length === 0) {
+    showToast("Top matched roles are already in your Kanban pipeline!", "info");
+    return;
+  }
+
+  untrackHighMatches.forEach(({ job }) => {
+    state.tracker.discovered.push(job.id);
+  });
+
+  saveState();
+  renderKanbanBoard();
+  showToast(`Seeded ${untrackHighMatches.length} top-matching AI roles into Discovered!`);
+};
 
 function initKanbanDragDrop() {
   const containers = document.querySelectorAll(".column-cards-container");
@@ -1751,21 +1993,11 @@ window.toggleTrackJob = function(jobId) {
 };
 
 // ============================================================================
-// Upgraded "Know More" Role Details Modal (With Exact Job Links & Live Currency)
+// Master-Detail Live Role Inspector & Full Role Details Modal
 // ============================================================================
-function openJobDetails(jobId) {
-  const allJobs = getAllJobs();
-  const job = allJobs.find(j => j.id === jobId);
-  if (!job) return;
-
-  state.selectedJobId = jobId;
-  const overlay = document.getElementById("details-modal");
-  const modalBody = document.getElementById("modal-body-content");
-  if (!overlay || !modalBody) return;
-
+function buildRoleDetailsHtml(job, isInlineDrawer = false) {
   const match = calculateMatchScore(job, state.parsedResume);
   const convertedSalary = formatJobSalary(job, state.currency);
-  const salData = parseJobSalaryData(job);
   const exactUrl = getExactJobUrl(job);
   const directApplyUrl = getDirectApplyUrl(job);
 
@@ -1777,27 +2009,26 @@ function openJobDetails(jobId) {
   const missingPills = match.missingSkills.map(s => `<span class="pill" style="border-color: rgba(245, 158, 11, 0.3); color: var(--warning); background: rgba(245, 158, 11, 0.06);">+ ${s}</span>`).join("");
   const bd = match.breakdown || { domain: 0, seniority: 0, tech: 0, company: 0 };
 
-  // Format role description paragraphs cleanly
   const rawDesc = (job.description || "Click 'Open Exact Job Posting' above to read the complete role specification on the company's official career board.").trim();
   const paragraphs = rawDesc.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
   const formattedDescHtml = paragraphs.map(p =>
-    `<p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.85rem;">${p}</p>`
+    `<p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.75rem;">${p}</p>`
   ).join("");
 
   const isTruncatedInSeed = rawDesc.endsWith("...");
 
-  modalBody.innerHTML = `
-    <!-- Modal Header with Prominent Exact Job Links -->
-    <div style="background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 1.35rem; margin-bottom: 1.25rem;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding-right: 2rem;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-            <span style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.5px;">${job.company}</span>
+  return `
+    <!-- Header with Prominent Exact Job Links -->
+    <div style="background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 1.15rem; margin-bottom: 1rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.85rem; ${isInlineDrawer ? "" : "padding-right: 2rem;"}">
+        <div style="min-width: 0;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
+            <span style="font-family: var(--font-display); font-size: 0.92rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.5px;">${job.company}</span>
             <span class="domain-tag">${job.domain || job.category}</span>
             <span class="seniority-tag">${job.seniority || 'Senior'}</span>
           </div>
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 0.65rem;">${job.title}</h2>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.85rem; color: var(--text-secondary);">
+          <h2 style="font-family: var(--font-display); font-size: ${isInlineDrawer ? "1.18rem" : "1.4rem"}; font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 0.55rem;">${job.title}</h2>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; font-size: 0.8rem; color: var(--text-secondary);">
             <span>📍 ${job.location}</span>
             <span class="salary-pill-converted">💰 ${convertedSalary} (${state.currency})</span>
           </div>
@@ -1805,77 +2036,61 @@ function openJobDetails(jobId) {
         <div class="match-circle ${matchClass}" title="Candidate Compatibility Score">${match.score}%</div>
       </div>
 
-      <!-- Direct Action Bar right at the top of the modal -->
-      <div style="margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
-        <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+      <!-- Direct Action Bar right at the top -->
+      <div style="margin-top: 0.95rem; padding-top: 0.85rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 0.55rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
           <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm" style="font-weight: 700;">
             🔗 Open Exact Job Posting ↗
           </a>
           ${directApplyUrl !== exactUrl ? `
             <a href="${directApplyUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-              📝 Direct Application Form ↗
+              📝 Direct Application ↗
             </a>
           ` : ""}
-          <button class="btn btn-secondary btn-sm" onclick="toggleTrackJob('${job.id}')">+ Track in Kanban</button>
+          <button class="btn btn-secondary btn-sm" onclick="toggleTrackJob('${job.id}')">+ Track</button>
+          ${isInlineDrawer ? `<button class="btn btn-secondary btn-sm" onclick="openJobDetails('${job.id}', true)" title="Expand in full-screen modal">⤢ Expand</button>` : ""}
         </div>
-        <div style="font-size: 0.72rem; color: var(--text-muted); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${exactUrl}">
+        <div style="font-size: 0.7rem; color: var(--text-muted); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${exactUrl}">
           Exact URL: <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; text-decoration: underline;">${exactUrl}</a>
         </div>
       </div>
     </div>
 
-    <!-- Role Overview & Description -->
-    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-        <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #ffffff;">📋 Role Summary & Engineering Scope</h4>
-        <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; font-weight: 600; color: #34d399; text-decoration: none;">
-          Read full specification on ${job.company}'s board ↗
-        </a>
-      </div>
-      ${formattedDescHtml}
-      ${isTruncatedInSeed ? `
-        <div style="margin-top: 0.75rem; padding: 0.75rem 1rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-          <span style="font-size: 0.82rem; color: var(--text-primary);">Want to read the complete, un-truncated job description & team breakdown?</span>
-          <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm">Read Full Role on ${job.company} ↗</a>
-        </div>
-      ` : ""}
-    </div>
-
     <!-- Skills & Compatibility Breakdown -->
-    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem;">
-      <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.85rem;">🎯 Compatibility & Technical Stack Alignment</h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.65rem; margin-bottom: 1rem;">
-        <div style="background: rgba(255,255,255,0.03); padding: 0.65rem; border-radius: 8px;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.76rem; margin-bottom: 0.3rem;">
+    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.05rem; margin-bottom: 1rem;">
+      <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">🎯 Compatibility & Stack Alignment</h4>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
+        <div style="background: rgba(255,255,255,0.03); padding: 0.55rem; border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 0.25rem;">
             <span style="color: var(--text-secondary)">Domain Fit</span>
-            <span style="font-weight: 700; color: var(--primary);">${bd.domain}/35</span>
+            <span style="font-weight: 700; color: var(--primary); font-family: var(--font-mono);">${bd.domain}/35</span>
           </div>
           <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
             <div style="height: 100%; width: ${(bd.domain/35)*100}%; background: var(--primary);"></div>
           </div>
         </div>
-        <div style="background: rgba(255,255,255,0.03); padding: 0.65rem; border-radius: 8px;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.76rem; margin-bottom: 0.3rem;">
+        <div style="background: rgba(255,255,255,0.03); padding: 0.55rem; border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 0.25rem;">
             <span style="color: var(--text-secondary)">Seniority Fit</span>
-            <span style="font-weight: 700; color: #38bdf8;">${bd.seniority}/25</span>
+            <span style="font-weight: 700; color: #38bdf8; font-family: var(--font-mono);">${bd.seniority}/25</span>
           </div>
           <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
             <div style="height: 100%; width: ${(bd.seniority/25)*100}%; background: #38bdf8;"></div>
           </div>
         </div>
-        <div style="background: rgba(255,255,255,0.03); padding: 0.65rem; border-radius: 8px;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.76rem; margin-bottom: 0.3rem;">
+        <div style="background: rgba(255,255,255,0.03); padding: 0.55rem; border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 0.25rem;">
             <span style="color: var(--text-secondary)">Stack Overlap</span>
-            <span style="font-weight: 700; color: var(--success);">${bd.tech}/25</span>
+            <span style="font-weight: 700; color: var(--success); font-family: var(--font-mono);">${bd.tech}/25</span>
           </div>
           <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
             <div style="height: 100%; width: ${(bd.tech/25)*100}%; background: var(--success);"></div>
           </div>
         </div>
-        <div style="background: rgba(255,255,255,0.03); padding: 0.65rem; border-radius: 8px;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.76rem; margin-bottom: 0.3rem;">
+        <div style="background: rgba(255,255,255,0.03); padding: 0.55rem; border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 0.25rem;">
             <span style="color: var(--text-secondary)">AI Lab Tier</span>
-            <span style="font-weight: 700; color: #a855f7;">${bd.company}/15</span>
+            <span style="font-weight: 700; color: #a855f7; font-family: var(--font-mono);">${bd.company}/15</span>
           </div>
           <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
             <div style="height: 100%; width: ${(bd.company/15)*100}%; background: #a855f7;"></div>
@@ -1883,26 +2098,43 @@ function openJobDetails(jobId) {
         </div>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+      <div style="display: flex; flex-direction: column; gap: 0.55rem;">
         <div>
-          <span style="font-size: 0.78rem; color: var(--text-secondary);">Matched Skills (${match.matchedSkills.length}):</span>
-          <div class="pill-container">${matchedPills || '<span style="color: var(--text-muted); font-size: 0.8rem;">Core Software Engineering</span>'}</div>
+          <span style="font-size: 0.74rem; color: var(--text-secondary);">Matched Skills (${match.matchedSkills.length}):</span>
+          <div class="pill-container">${matchedPills || '<span style="color: var(--text-muted); font-size: 0.78rem;">Core Software Engineering</span>'}</div>
         </div>
         ${match.missingSkills.length > 0 ? `
         <div>
-          <span style="font-size: 0.78rem; color: var(--warning);">Additional Role Keywords (${match.missingSkills.length}):</span>
+          <span style="font-size: 0.74rem; color: var(--warning);">Additional Role Keywords (${match.missingSkills.length}):</span>
           <div class="pill-container">${missingPills}</div>
         </div>
         ` : ""}
       </div>
     </div>
 
+    <!-- Role Overview & Description -->
+    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 1.05rem; margin-bottom: 1rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: #ffffff;">📋 Role Summary & Engineering Scope</h4>
+        <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #34d399; text-decoration: none;">
+          Full spec on ${job.company} ↗
+        </a>
+      </div>
+      ${formattedDescHtml}
+      ${isTruncatedInSeed ? `
+        <div style="margin-top: 0.65rem; padding: 0.65rem 0.85rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
+          <span style="font-size: 0.78rem; color: var(--text-primary);">Read complete specification on ${job.company}'s board:</span>
+          <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm">Read Full Role ↗</a>
+        </div>
+      ` : ""}
+    </div>
+
     <!-- AI Cover Letter Generator -->
-    <div style="border-top: 1px solid var(--border-color); padding-top: 1.15rem; margin-bottom: 1.15rem;">
-      <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: #ffffff;">✨ Tailored AI Cover Letter Generator</h4>
+    <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-bottom: 1rem;">
+      <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: #ffffff;">✨ Tailored AI Cover Letter Generator</h4>
       <div class="cover-letter-container">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-          <p style="font-size: 0.82rem; color: var(--text-secondary);">Generate a custom cover letter aligning your profile with ${job.company}'s ${job.title} role.</p>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
+          <p style="font-size: 0.78rem; color: var(--text-secondary);">Draft a custom cover letter aligning your profile with ${job.company}'s ${job.title} role.</p>
           <button class="btn btn-sm" id="btn-generate-cl" onclick="generateCoverLetter('${job.id}')">Generate Cover Letter</button>
         </div>
         <div id="cover-letter-result-box" style="display: none;">
@@ -1913,36 +2145,95 @@ function openJobDetails(jobId) {
     </div>
 
     <!-- Pipeline Stage Controls -->
-    <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
-      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+    <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem;">
+      <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
         <button class="btn btn-secondary btn-sm" onclick="moveJobToStage('${job.id}', 'discovered')">Discovered</button>
         <button class="btn btn-secondary btn-sm" onclick="moveJobToStage('${job.id}', 'applied')">Applied</button>
         <button class="btn btn-secondary btn-sm" onclick="moveJobToStage('${job.id}', 'interviewing')">Interviewing</button>
         <button class="btn btn-secondary btn-sm" onclick="moveJobToStage('${job.id}', 'offer')">Offer</button>
       </div>
-      <div style="display: flex; gap: 0.6rem;">
-        <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm">Open Exact Job Posting ↗</a>
-        <button class="btn btn-secondary btn-sm" onclick="closeModal()">Close</button>
-      </div>
+      ${!isInlineDrawer ? `
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="${exactUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-exact-link btn-sm">Open Exact Job Posting ↗</a>
+          <button class="btn btn-secondary btn-sm" onclick="closeModal()">Close</button>
+        </div>
+      ` : ""}
     </div>
   `;
+}
 
-  overlay.classList.add("active");
+function renderInlineRoleInspector(jobId) {
+  const allJobs = getAllJobs();
+  const job = allJobs.find(j => j.id === jobId);
+  if (!job) return;
+
+  state.selectedJobId = jobId;
+
+  // Highlight selected row in #jobs-grid
+  document.querySelectorAll(".job-row-card").forEach(row => {
+    row.classList.toggle("selected-row", row.dataset.jobId === jobId);
+  });
+
+  const workspace = document.getElementById("discovery-workspace");
+  const inspector = document.getElementById("inline-role-inspector");
+  const inspectorContent = document.getElementById("inline-inspector-content");
+
+  if (workspace && inspector && inspectorContent) {
+    inspectorContent.innerHTML = buildRoleDetailsHtml(job, true);
+    inspector.style.display = "block";
+    workspace.classList.add("inspector-open");
+  }
+}
+
+window.closeInlineInspector = function() {
+  state.inspectorClosedByUser = true;
+  const workspace = document.getElementById("discovery-workspace");
+  const inspector = document.getElementById("inline-role-inspector");
+  if (inspector) inspector.style.display = "none";
+  if (workspace) workspace.classList.remove("inspector-open");
+  document.querySelectorAll(".job-row-card").forEach(row => row.classList.remove("selected-row"));
+};
+
+function openJobDetails(jobId, forceModal = false) {
+  const allJobs = getAllJobs();
+  const job = allJobs.find(j => j.id === jobId);
+  if (!job) return;
+
+  state.selectedJobId = jobId;
+  state.inspectorClosedByUser = false;
+
+  // Always populate both the inline inspector and the modal body so both stay in sync
+  renderInlineRoleInspector(jobId);
+
+  const overlay = document.getElementById("details-modal");
+  const modalBody = document.getElementById("modal-body-content");
+  if (modalBody) {
+    modalBody.innerHTML = buildRoleDetailsHtml(job, false);
+  }
+
+  const isNarrowScreen = typeof window !== "undefined" && window.innerWidth && window.innerWidth <= 1120;
+  if (overlay && (forceModal || state.currentTab !== "discover" || isNarrowScreen)) {
+    overlay.classList.add("active");
+  }
 }
 window.openJobDetails = openJobDetails;
 
 window.closeModal = function() {
   const overlay = document.getElementById("details-modal");
   if (overlay) overlay.classList.remove("active");
-  state.selectedJobId = null;
 };
 
-// Close modals on Escape key
+// Keyboard shortcuts: Escape to close modals, '/' to focus search
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     window.closeModal();
     window.closeAddJobModal();
     window.closeAuthModal();
+  } else if (e.key === "/" && !["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName || "")) {
+    if (state.currentTab === "discover") {
+      e.preventDefault();
+      document.getElementById("job-search")?.focus();
+    }
   }
 });
 
@@ -2119,49 +2410,162 @@ window.submitCustomJob = function(e) {
 };
 
 // ============================================================================
-// Analytics Dashboard
+// Analytics & Market Intelligence Dashboard (v3.0 Bento Suite)
 // ============================================================================
 function renderAnalytics() {
   const funnelContainer = document.getElementById("funnel-chart");
   const gapContainer = document.getElementById("skills-gap-feed");
+  const kpiRow = document.getElementById("analytics-kpi-row");
+  const compChart = document.getElementById("company-salary-chart");
+  const marketSkillsChart = document.getElementById("market-skills-chart");
   if (!funnelContainer || !gapContainer) return;
 
   const allJobs = getAllJobs();
+  const curr = state.currency || "GBP";
+  const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
+
   let highMatch = 0, mediumMatch = 0, aiInfra = 0, postTraining = 0, distSystems = 0;
+  const companyStats = new Map();
+  const marketSkillFreq = new Map();
 
   allJobs.forEach(job => {
     const score = calculateMatchScore(job, state.parsedResume).score;
+    const sal = parseJobSalaryData(job);
     if (score >= 75) highMatch++;
     else if (score >= 50) mediumMatch++;
     const text = `${job.title} ${job.domain || ""} ${job.category}`.toLowerCase();
     if (text.includes("infra") || text.includes("platform") || text.includes("gpu")) aiInfra++;
     if (text.includes("post-training") || text.includes("rl") || text.includes("eval")) postTraining++;
     if (text.includes("distributed") || text.includes("backend") || text.includes("systems")) distSystems++;
+
+    // Aggregate per company
+    if (!companyStats.has(job.company)) {
+      companyStats.set(job.company, { count: 0, sumMinUSD: 0, sumMaxUSD: 0 });
+    }
+    const cs = companyStats.get(job.company);
+    cs.count++;
+    cs.sumMinUSD += sal.minUSD;
+    cs.sumMaxUSD += sal.maxUSD;
+
+    // Aggregate market skill demand
+    (job.requirements || []).forEach(req => {
+      marketSkillFreq.set(req, (marketSkillFreq.get(req) || 0) + 1);
+    });
   });
 
-  const stages = ["high", "medium", "infra", "post_training", "systems"];
+  // 1. Render Top KPI Cards Row
+  if (kpiRow) {
+    const avgMaxUSDAll = allJobs.length > 0
+      ? Math.round(allJobs.reduce((acc, j) => acc + parseJobSalaryData(j).maxUSD, 0) / allJobs.length)
+      : 295000;
+    const topBandStr = formatSingleCurrencyAmount(avgMaxUSDAll * cfg.rateFromUSD, curr, true);
+
+    const top12MarketSkills = Array.from(marketSkillFreq.entries()).sort((a, b) => b[1] - a[1]).slice(0, 12);
+    const userSkillsLower = new Set((state.parsedResume?.skills || []).map(s => s.toLowerCase()));
+    const coveredTopSkills = top12MarketSkills.filter(([sk]) => userSkillsLower.has(sk.toLowerCase())).length;
+    const coveragePct = top12MarketSkills.length > 0 ? Math.round((coveredTopSkills / top12MarketSkills.length) * 100) : 75;
+
+    kpiRow.innerHTML = `
+      <div class="glass analytics-kpi-card">
+        <span class="kpi-title">Verified Engineering Catalog</span>
+        <span class="kpi-value">${allJobs.length.toLocaleString()}</span>
+        <span class="kpi-sub">Across ${companyStats.size} frontier AI labs</span>
+      </div>
+      <div class="glass analytics-kpi-card">
+        <span class="kpi-title">High-Fit Roles (75%+ Match)</span>
+        <span class="kpi-value" style="color: #34d399;">${highMatch}</span>
+        <span class="kpi-sub">${Math.round((highMatch / Math.max(allJobs.length, 1)) * 100)}% of total market catalog</span>
+      </div>
+      <div class="glass analytics-kpi-card">
+        <span class="kpi-title">Market Avg Upper Band (${curr})</span>
+        <span class="kpi-value" style="color: #818cf8;">${topBandStr}</span>
+        <span class="kpi-sub">Base + target equity benchmark</span>
+      </div>
+      <div class="glass analytics-kpi-card">
+        <span class="kpi-title">Core AI Stack Coverage</span>
+        <span class="kpi-value" style="color: #38bdf8;">${coveragePct}%</span>
+        <span class="kpi-sub">${coveredTopSkills} of top ${top12MarketSkills.length} in-demand skills</span>
+      </div>
+    `;
+  }
+
+  // 2. Render Role Distribution & Track Breakdown
   const labels = ["🌟 High Match (75%+)", "⚡ Strong Match (50-74%)", "🤖 AI & LLM Infra", "🚀 Post-Training & RL", "⚙️ Distributed Systems"];
   const counts = [highMatch, mediumMatch, aiInfra, postTraining, distSystems];
   const maxCount = Math.max(...counts, 1);
 
-  let svgContent = `<svg class="svg-chart" viewBox="0 0 420 240">`;
+  let svgContent = `<svg class="svg-chart" viewBox="0 0 420 230">`;
   const colors = ["#10b981", "#6366f1", "#3b82f6", "#a855f7", "#f59e0b"];
 
   labels.forEach((label, idx) => {
-    const y = 18 + idx * 42;
+    const y = 16 + idx * 42;
     const count = counts[idx];
-    const width = Math.round((count / maxCount) * 210) || 8;
+    const width = Math.round((count / maxCount) * 205) || 8;
     svgContent += `
-      <text x="8" y="${y + 16}" fill="#94a3b8" font-family="Outfit" font-size="11.5" font-weight="600">${label}</text>
-      <rect x="155" y="${y}" width="210" height="24" rx="5" fill="rgba(255,255,255,0.04)" />
-      <rect x="155" y="${y}" width="${width}" height="24" rx="5" fill="${colors[idx]}" onclick="switchTab('discover')" style="cursor: pointer;" />
-      <text x="${155 + width + 8}" y="${y + 16}" fill="#f8fafc" font-family="Outfit" font-size="12" font-weight="700">${count}</text>
+      <text x="6" y="${y + 16}" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11.5" font-weight="600">${label}</text>
+      <rect x="160" y="${y}" width="205" height="22" rx="5" fill="rgba(255,255,255,0.04)" />
+      <rect x="160" y="${y}" width="${width}" height="22" rx="5" fill="${colors[idx]}" onclick="switchTab('discover')" style="cursor: pointer;" />
+      <text x="${160 + width + 8}" y="${y + 15}" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700">${count}</text>
     `;
   });
   svgContent += `</svg>`;
   funnelContainer.innerHTML = svgContent;
 
-  const sortedJobs = [...allJobs].sort((a, b) => calculateMatchScore(b, state.parsedResume).score - calculateMatchScore(a, state.parsedResume).score).slice(0, 20);
+  // 3. Render Live Compensation Benchmarks by Frontier Lab
+  if (compChart) {
+    const topCompanies = Array.from(companyStats.entries())
+      .sort((a, b) => b[1].count - a[1].count)
+      .slice(0, 7);
+
+    compChart.innerHTML = topCompanies.map(([comp, st]) => {
+      const avgMinUSD = Math.round(st.sumMinUSD / st.count);
+      const avgMaxUSD = Math.round(st.sumMaxUSD / st.count);
+      const minStr = formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true);
+      const maxStr = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
+      const leftPct = Math.max(5, Math.min(55, Math.round(((avgMinUSD - 120000) / 300000) * 100)));
+      const widthPct = Math.max(18, Math.min(95 - leftPct, Math.round(((avgMaxUSD - avgMinUSD) / 300000) * 100) + 12));
+      const safeComp = comp.replace(/'/g, "\\'");
+
+      return `
+        <div class="comp-bar-row" style="cursor: pointer;" onclick="state.activeFilters.company.clear(); state.activeFilters.company.add('${safeComp}'); switchTab('discover');" title="Click to view ${st.count} roles at ${comp}">
+          <span class="comp-company-name">${comp} <span style="color: var(--text-muted); font-size: 0.7rem; font-weight: 500;">(${st.count})</span></span>
+          <div class="comp-bar-track">
+            <div class="comp-bar-fill" style="left: ${leftPct}%; width: ${widthPct}%;"></div>
+          </div>
+          <span class="comp-range-val">${minStr} – ${maxStr}</span>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // 4. Render Most In-Demand Engineering Skills vs Candidate Profile
+  if (marketSkillsChart) {
+    const topSkills = Array.from(marketSkillFreq.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 7);
+    const maxSkillCount = topSkills.length > 0 ? topSkills[0][1] : 1;
+    const userSkillsLower = new Set((state.parsedResume?.skills || []).map(s => s.toLowerCase()));
+
+    marketSkillsChart.innerHTML = topSkills.map(([skill, count]) => {
+      const inProfile = userSkillsLower.has(skill.toLowerCase());
+      const barPct = Math.max(8, Math.round((count / maxSkillCount) * 100));
+      return `
+        <div class="skill-demand-row">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.35rem;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #ffffff;">${skill}</span>
+            <span style="font-size: 0.65rem; padding: 0.1rem 0.38rem; border-radius: 4px; font-weight: 700; ${inProfile ? 'background: rgba(16,185,129,0.14); color: #34d399;' : 'background: rgba(245,158,11,0.14); color: #fbbf24;'}">${inProfile ? '✓ Profile' : '+ Gap'}</span>
+          </div>
+          <div class="skill-demand-bar-track">
+            <div class="skill-demand-bar-fill" style="width: ${barPct}%; background: ${inProfile ? 'linear-gradient(90deg, #10b981, #34d399)' : 'linear-gradient(90deg, #f59e0b, #fbbf24)'};"></div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--text-secondary); text-align: right;">${count} roles</span>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // 5. Render Actionable Skill Gap Roadmap
+  const sortedJobs = [...allJobs].sort((a, b) => calculateMatchScore(b, state.parsedResume).score - calculateMatchScore(a, state.parsedResume).score).slice(0, 40);
   const gapWeights = {};
   sortedJobs.forEach(job => {
     const analysis = calculateMatchScore(job, state.parsedResume);
@@ -2175,20 +2579,20 @@ function renderAnalytics() {
     gapContainer.innerHTML = `
       <div style="padding: 1.5rem; text-align: center; color: var(--success); background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 10px;">
         <h4 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 0.25rem;">✓ Strong Core Stack Coverage</h4>
-        <p style="font-size: 0.85rem; color: var(--text-secondary);">Your profile aligns well with the top matching roles.</p>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Your profile aligns with the highest-scoring frontier AI roles.</p>
       </div>
     `;
     return;
   }
 
-  gapContainer.innerHTML = `<div style="display: flex; flex-direction: column; gap: 0.75rem;">` +
+  gapContainer.innerHTML = `<div style="display: flex; flex-direction: column; gap: 0.65rem;">` +
     sortedGaps.map(([skill, freq]) => `
       <div class="gap-item">
         <div class="gap-skill-header">
-          <span class="gap-skill-name">${skill}</span>
-          <span style="font-size: 0.75rem; color: var(--warning); font-weight: 600;">Appears in ${freq} top roles</span>
+          <span class="gap-skill-name">⚡ ${skill}</span>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--warning); font-weight: 700;">In ${freq} of your top 40 roles</span>
         </div>
-        <p class="gap-recommendation">Highlighting hands-on architecture or benchmark work with <strong>${skill}</strong> will boost match scores across frontier labs.</p>
+        <p class="gap-recommendation">Adding concrete production metrics or benchmark experience with <strong>${skill}</strong> in your resume bullets can boost compatibility by +6–9%.</p>
       </div>
     `).join("") + `</div>`;
 }

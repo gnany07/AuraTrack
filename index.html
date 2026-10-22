@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AuraTrack AI — Frontier AI Job Discovery & Resume Matcher</title>
-  <meta name="description" content="Discover exact engineering roles at OpenAI, Anthropic, DeepMind, Perplexity, Wayve, and top AI labs with live currency conversion and resume matching.">
+  <title>AuraTrack AI — Frontier AI Careers, Compensation & Resume Intelligence</title>
+  <meta name="description" content="Explore 1,100+ verified software & AI engineering roles at OpenAI, Anthropic, xAI, Perplexity, Scale AI, and frontier labs with live currency conversion and resume matching.">
   <link rel="stylesheet" href="style.css">
   <!-- Load PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
@@ -18,77 +18,57 @@
   <!-- Toast Notification System -->
   <div id="toast-container" class="toast-container"></div>
 
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="logo" onclick="switchTab('discover')" style="cursor: pointer;">
-      <div class="logo-icon">A</div>
-      <div>
-        <span class="logo-text">AuraTrack AI</span>
-        <span class="logo-sub">Frontier Careers</span>
-      </div>
-    </div>
-    
-    <nav style="flex-grow: 1;">
-      <ul class="nav-links">
-        <li class="nav-item" id="nav-discover">
-          <a href="#discover" onclick="event.preventDefault(); switchTab('discover');">
-            <svg class="nav-icon" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
-            <span>Job Discovery</span>
-            <span class="nav-badge" id="nav-jobs-count-badge">467</span>
-          </a>
-        </li>
-        <li class="nav-item active" id="nav-resume">
-          <a href="#resume" onclick="event.preventDefault(); switchTab('resume');">
-            <svg class="nav-icon" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-            </svg>
-            <span>Resume Profile</span>
-          </a>
-        </li>
-        <li class="nav-item" id="nav-tracker">
-          <a href="#tracker" onclick="event.preventDefault(); switchTab('tracker');">
-            <svg class="nav-icon" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-            </svg>
-            <span>Kanban Pipeline</span>
-            <span class="nav-badge subtle" id="nav-tracker-count-badge">0</span>
-          </a>
-        </li>
-        <li class="nav-item" id="nav-analytics">
-          <a href="#analytics" onclick="event.preventDefault(); switchTab('analytics');">
-            <svg class="nav-icon" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-            <span>Analytics & Gaps</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    
-    <div class="sidebar-footer">
-      <div class="sidebar-footer-row">
-        <span class="status-dot online"></span>
-        <span>Exact Direct Job Links</span>
-      </div>
-      <p>AuraTrack v2.0 • Private Session</p>
-    </div>
-  </aside>
-
-  <!-- Main Content Wrapper -->
-  <main class="main-content">
-    
-    <!-- Top Header Bar with Global Currency Selector -->
-    <header class="header">
-      <div class="header-title-block">
-        <h1 class="page-title" id="header-page-title">Frontier AI Careers</h1>
-        <p class="page-subtitle" id="header-page-subtitle">Direct links to exact engineering roles with live salary conversion.</p>
+  <!-- Top Navigation & Global Controls Bar (Linear / Vercel Inspired) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <!-- Brand Logo -->
+      <div class="brand" onclick="switchTab('discover')" style="cursor: pointer;">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="logo-text">AuraTrack</span>
+          <span class="brand-tag">FRONTIER AI</span>
+        </div>
       </div>
 
+      <!-- Primary Navigation Tabs -->
+      <nav class="topnav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item" id="nav-discover">
+            <a href="#discover" onclick="event.preventDefault(); switchTab('discover');">
+              <svg class="nav-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span>Discover Jobs</span>
+              <span class="nav-badge" id="nav-jobs-count-badge">1121</span>
+            </a>
+          </li>
+          <li class="nav-item" id="nav-resume">
+            <a href="#resume" onclick="event.preventDefault(); switchTab('resume');">
+              <svg class="nav-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Resume Studio</span>
+            </a>
+          </li>
+          <li class="nav-item" id="nav-tracker">
+            <a href="#tracker" onclick="event.preventDefault(); switchTab('tracker');">
+              <svg class="nav-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+              <span>Pipeline Board</span>
+              <span class="nav-badge subtle" id="nav-tracker-count-badge">0</span>
+            </a>
+          </li>
+          <li class="nav-item" id="nav-analytics">
+            <a href="#analytics" onclick="event.preventDefault(); switchTab('analytics');">
+              <svg class="nav-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <span>Market & Gaps</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls: Global Currency Switcher + Resume Status + Account -->
       <div class="header-controls">
-        <!-- Global Currency Switcher at the Top -->
-        <div class="currency-switcher-top" title="Select display currency for all salaries">
+        <div class="currency-switcher-top" title="Convert all salaries into your preferred currency">
           <span class="currency-label">Currency</span>
           <div class="currency-Quick-pills" id="header-currency-pills">
             <button type="button" class="currency-pill-btn" data-currency="GBP" onclick="setCurrency('GBP')">£ GBP</button>
@@ -108,24 +88,23 @@
           </select>
         </div>
 
-        <div id="resume-badge" class="resume-status-badge" onclick="switchTab('resume')" style="cursor: pointer;" title="Click to manage resume">No Resume Loaded</div>
+        <div id="resume-badge" class="resume-status-badge" onclick="switchTab('resume')" style="cursor: pointer;" title="Click to manage resume profile">No Resume Loaded</div>
 
         <div class="account-widget-container" style="position: relative;">
           <button id="account-pill-btn" class="account-pill-btn" onclick="toggleAccountMenu(event)" title="Account Profile">
             <span class="user-avatar" id="active-user-avatar">👤</span>
             <span class="user-name-label" id="active-user-name">Sign In / Register</span>
-            <svg id="account-chevron" style="width: 14px; height: 14px; margin-left: 2px;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <svg id="account-chevron" style="width: 13px; height: 13px; opacity: 0.7;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          
+
           <div id="account-dropdown-menu" class="account-dropdown glass" style="display: none;">
             <div class="account-menu-header" id="account-auth-header">
               <div style="font-weight: 700; color: #ffffff;" id="menu-user-name">Guest User</div>
               <div style="font-size: 0.75rem; color: var(--text-muted);" id="menu-user-email">Not signed in</div>
             </div>
-            
             <div class="account-menu-divider"></div>
             <button class="account-menu-item" onclick="switchTab('resume'); toggleAccountMenu();">
-              <span>📄 My Resume Profile</span>
+              <span>📄 Resume Studio</span>
             </button>
             <button class="account-menu-item" id="btn-menu-switch-account" onclick="openAuthModal('login')">
               <span>🔑 Sign In with Email</span>
@@ -140,189 +119,116 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Tab 1: Resume Upload Portal -->
-    <section id="section-resume" class="dashboard-section active">
-      <div class="resume-grid">
-        
-        <!-- Left: Upload Box -->
-        <div class="glass resume-box">
-          <div style="margin-bottom: 0.25rem;">
-            <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; margin-bottom: 0.25rem;">Analyze Technical Resume</h2>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Upload or paste your resume to compute semantic match scores across every role.</p>
-          </div>
-          
-          <!-- Dropzone -->
-          <label id="dropzone" for="resume-file-input" class="dropzone-container" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
-            <input type="file" id="resume-file-input" accept=".pdf,.txt,.md" style="display: none;" onchange="handleFileInputChange(event)">
-            <svg class="dropzone-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="pointer-events: none;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
-            <div style="text-align: center; pointer-events: none;">
-              <p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; color: #ffffff;">Drag & drop resume (.pdf, .txt, .md) here</p>
-              <p style="font-size: 0.8rem; color: var(--primary); text-decoration: underline; font-weight: 600;">or click anywhere here to browse files</p>
-            </div>
-          </label>
-          
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--text-muted); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">
-            <span style="height: 1px; background: var(--border-color); flex-grow: 1;"></span>
-            <span>OR PASTE RESUME TEXT</span>
-            <span style="height: 1px; background: var(--border-color); flex-grow: 1;"></span>
-          </div>
-          
-          <!-- Paste Area -->
-          <textarea id="text-paste-area" class="text-paste-area" placeholder="Paste your resume markdown, plain text, or summary text here..."></textarea>
-          
-          <!-- Action Row -->
-          <div style="display: flex; gap: 0.75rem;">
-            <button class="btn" style="flex: 1;" onclick="submitResumeText()">Parse & Match Jobs →</button>
-          </div>
-        </div>
-        
-        <!-- Right: Analysis Panel -->
-        <div id="resume-results-panel" class="glass analysis-results-box">
-          <!-- Populated by JS -->
-        </div>
-        
+  <!-- Main Workspace Container -->
+  <main class="main-content">
+
+    <!-- Dynamic Page Header Strip -->
+    <div class="workspace-subbar">
+      <div class="workspace-title-group">
+        <h1 class="page-title" id="header-page-title">Frontier AI Job Discovery</h1>
+        <p class="page-subtitle" id="header-page-subtitle">Direct links to exact engineering roles with live currency conversion.</p>
       </div>
-
-      <!-- AI Resume Bullet Optimizer Card -->
-      <div class="glass optimizer-box" style="margin-top: 1.5rem; padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-        <div>
-          <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem;">
-            <svg style="width: 22px; height: 22px; fill: none; stroke: var(--primary); stroke-width: 2;" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
-            AI Resume Bullet Optimizer
-          </h2>
-          <p style="font-size: 0.85rem; color: var(--text-secondary);">Select a target job and enter a bullet point from your resume to align it with the role's technical requirements.</p>
-        </div>
-        
-        <div class="optimizer-form" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div>
-            <label class="form-label" for="opt-job-select">Target Job Opportunity</label>
-            <select id="opt-job-select" class="form-input" style="width: 100%; background: rgba(0, 0, 0, 0.35);">
-              <option value="">-- Select a Job Opportunity --</option>
-            </select>
-          </div>
-          
-          <div>
-            <label class="form-label" for="opt-bullet-input">Your Original Resume Bullet Point</label>
-            <textarea id="opt-bullet-input" class="form-input" style="width: 100%; height: 80px; resize: vertical;" placeholder="e.g. Led a team of engineers to build a distributed inference service in Python and C++."></textarea>
-          </div>
-          
-          <div style="display: flex; align-items: center; gap: 1.25rem;">
-            <button class="btn" onclick="optimizeBulletPoint()">Optimize Bullet Point</button>
-            <div id="ollama-status" class="ollama-status-badge">
-              <span class="status-dot online"></span>
-              Gemini 2.5 Flash Active
-            </div>
-          </div>
-        </div>
-        
-        <!-- Result Suggestion Panel -->
-        <div id="optimizer-result-container" class="optimizer-result" style="display: none; margin-top: 0.75rem; padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
-          <h4 style="font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.6rem; color: var(--primary);">Optimized Bullet Suggestions</h4>
-          <div id="optimizer-result-text" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-primary); white-space: pre-wrap;"></div>
-        </div>
+      <div class="workspace-quick-stats" id="workspace-quick-stats">
+        <!-- Populated dynamically by JS -->
       </div>
-    </section>
+    </div>
 
-    <!-- Tab 2: Job Discovery Feed -->
+    <!-- ======================================================================
+         PAGE 1: JOB DISCOVERY (#discover)
+         ====================================================================== -->
     <section id="section-discover" class="dashboard-section">
-      <!-- Modern Compact Command Filter Bar -->
-      <div class="glass discovery-command-bar">
-        
-        <!-- Row 1: Search + Sort + Quick Actions -->
-        <div class="command-top-row">
+
+      <!-- Command Filter Console -->
+      <div class="discovery-console">
+
+        <!-- Top Search & Action Bar -->
+        <div class="console-search-row">
           <div class="search-input-wrapper">
             <svg class="search-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" id="job-search" class="search-input" placeholder="Search role title, skill (CUDA, PyTorch, C++, Go, Rust), company, or city...">
+            <input type="text" id="job-search" class="search-input" placeholder="Search by role title, technical skill (C++, CUDA, PyTorch, Go, Rust, Triton), company, or city... (Press '/' to focus)">
             <button type="button" id="clear-search-btn" class="search-clear-btn" style="display: none;" onclick="clearSearchInput()" title="Clear search">×</button>
           </div>
 
-          <div class="command-actions-group">
+          <div class="console-actions">
             <div class="sort-control-wrapper">
-              <label for="job-sort-select" class="sort-label">Sort:</label>
+              <label for="job-sort-select" class="sort-label">Sort</label>
               <select id="job-sort-select" class="sort-select" onchange="setDiscoverySort(this.value)">
-                <option value="match">🎯 Best Match</option>
-                <option value="salary_desc">💰 Highest Salary</option>
-                <option value="uk_first">🇬🇧 UK / London First</option>
-                <option value="company_asc">🏢 Company (A–Z)</option>
+                <option value="match">Best Match Score</option>
+                <option value="salary_desc">Highest Salary</option>
+                <option value="uk_first">UK / London First</option>
+                <option value="company_asc">Company (A–Z)</option>
               </select>
             </div>
 
-            <button id="sync-jobs-btn" class="btn btn-secondary btn-sm" onclick="syncLiveJobs()" title="Sync live job postings">
-              <svg id="sync-icon-svg" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
+            <button id="sync-jobs-btn" class="btn btn-secondary btn-sm" onclick="syncLiveJobs()" title="Refresh live job postings">
+              <svg id="sync-icon-svg" style="width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6H16" />
               </svg>
               <span id="sync-btn-text">Sync Live</span>
             </button>
-            <button class="btn btn-secondary btn-sm" onclick="promptImportCompanyJobs()" title="Import any Ashby or Greenhouse board">🔗 Import Board</button>
+            <button class="btn btn-secondary btn-sm" onclick="promptImportCompanyJobs()" title="Import any Ashby or Greenhouse board">Import Board</button>
             <button class="btn btn-sm" onclick="openAddJobModal()">+ Add Role</button>
           </div>
         </div>
 
-        <!-- Row 2: Compact Multi-Dimension Pill Filters -->
-        <div class="compact-filters-grid">
-          <!-- Location -->
-          <div class="filter-cluster">
-            <span class="filter-section-title">Location</span>
+        <!-- Faceted Pill Filters Grid -->
+        <div class="console-facets-row">
+          <div class="facet-group">
+            <span class="filter-section-title">Region</span>
             <div class="filter-pill-group" id="location-pill-group">
-              <button class="filter-pill" data-type="location" data-val="London" onclick="togglePillFilter('location', 'London', this)">🇬🇧 London / UK</button>
+              <button class="filter-pill" data-type="location" data-val="London" onclick="togglePillFilter('location', 'London', this)">🇬🇧 UK / London</button>
               <button class="filter-pill" data-type="location" data-val="San Francisco" onclick="togglePillFilter('location', 'San Francisco', this)">🇺🇸 SF / US</button>
               <button class="filter-pill" data-type="location" data-val="Europe" onclick="togglePillFilter('location', 'Europe', this)">🇪🇺 Europe</button>
               <button class="filter-pill" data-type="location" data-val="Remote" onclick="togglePillFilter('location', 'Remote', this)">🌐 Remote</button>
             </div>
           </div>
 
-          <!-- Technical Domain -->
-          <div class="filter-cluster">
-            <span class="filter-section-title">Domain Track</span>
+          <div class="facet-group">
+            <span class="filter-section-title">Engineering Track</span>
             <div class="filter-pill-group" id="domain-pill-group">
-              <button class="filter-pill" data-type="domain" data-val="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">🚀 AI / LLM Infra</button>
-              <button class="filter-pill" data-type="domain" data-val="Distributed Systems" onclick="togglePillFilter('domain', 'Distributed Systems', this)">⚙️ Distributed Systems</button>
-              <button class="filter-pill" data-type="domain" data-val="Systems & Low-Level" onclick="togglePillFilter('domain', 'Systems & Low-Level', this)">💻 Systems & C++</button>
-              <button class="filter-pill" data-type="domain" data-val="ML Engineering" onclick="togglePillFilter('domain', 'ML Engineering', this)">🧠 ML Eng</button>
-              <button class="filter-pill" data-type="domain" data-val="Backend & Platform" onclick="togglePillFilter('domain', 'Backend & Platform', this)">🔧 Backend / Platform</button>
+              <button class="filter-pill" data-type="domain" data-val="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">AI / LLM Infra</button>
+              <button class="filter-pill" data-type="domain" data-val="Distributed Systems" onclick="togglePillFilter('domain', 'Distributed Systems', this)">Distributed Systems</button>
+              <button class="filter-pill" data-type="domain" data-val="Systems & Low-Level" onclick="togglePillFilter('domain', 'Systems & Low-Level', this)">Systems & C++</button>
+              <button class="filter-pill" data-type="domain" data-val="ML Engineering" onclick="togglePillFilter('domain', 'ML Engineering', this)">ML Engineering</button>
+              <button class="filter-pill" data-type="domain" data-val="Backend & Platform" onclick="togglePillFilter('domain', 'Backend & Platform', this)">Backend & Platform</button>
             </div>
           </div>
 
-          <!-- Seniority -->
-          <div class="filter-cluster">
-            <span class="filter-section-title">Level</span>
+          <div class="facet-group">
+            <span class="filter-section-title">Seniority</span>
             <div class="filter-pill-group" id="seniority-pill-group">
-              <button class="filter-pill" data-type="seniority" data-val="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">👑 Staff / Lead</button>
-              <button class="filter-pill" data-type="seniority" data-val="Senior" onclick="togglePillFilter('seniority', 'Senior', this)">⭐ Senior / MTS</button>
-              <button class="filter-pill" data-type="seniority" data-val="Mid / General" onclick="togglePillFilter('seniority', 'Mid / General', this)">⚡ Mid-Level</button>
+              <button class="filter-pill" data-type="seniority" data-val="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">Staff / Lead</button>
+              <button class="filter-pill" data-type="seniority" data-val="Senior" onclick="togglePillFilter('seniority', 'Senior', this)">Senior / MTS</button>
+              <button class="filter-pill" data-type="seniority" data-val="Mid / General" onclick="togglePillFilter('seniority', 'Mid / General', this)">Mid-Level</button>
             </div>
           </div>
 
-          <!-- Match & Compensation -->
-          <div class="filter-cluster">
-            <span class="filter-section-title">Match & Min Base</span>
+          <div class="facet-group">
+            <span class="filter-section-title">Match & Compensation</span>
             <div class="filter-pill-group" id="match-pill-group">
-              <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">🎯 75%+ Match</button>
-              <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">👍 50%+ Match</button>
+              <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">75%+ Match</button>
+              <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">50%+ Match</button>
               <button class="filter-pill" id="salary-pill-200k" data-type="salary" data-val="200k" onclick="togglePillFilter('salary', '200k', this)">💎 $200k+</button>
               <button class="filter-pill" id="salary-pill-150k" data-type="salary" data-val="150k" onclick="togglePillFilter('salary', '150k', this)">💵 $150k+</button>
             </div>
           </div>
         </div>
 
-        <!-- Row 3: Dynamic Companies Filter Based on Matching Results -->
-        <div class="company-results-filter-box">
-          <div class="company-filter-header">
-            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-              <span class="filter-section-title" style="margin-bottom: 0; color: #c7d2fe;">🏢 Filter by Companies in Results</span>
-              <span id="company-filter-subtitle" class="company-filter-hint">(Click companies below to view only your interested companies from current results)</span>
+        <!-- Dynamic Companies in Results Filter Bar -->
+        <div class="company-results-panel">
+          <div class="company-panel-top">
+            <div class="company-panel-title-wrap">
+              <span class="company-panel-label">Companies in Results</span>
+              <span id="company-filter-subtitle" class="company-filter-hint">Select one or more companies from current results</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 0.65rem;">
-              <input type="text" id="company-chip-search" class="company-mini-search" placeholder="Filter company list..." oninput="renderJobDiscovery()">
-              <button type="button" id="clear-companies-btn" class="btn-text-mini" style="display: none;" onclick="clearCompanySelection()">Show All Companies</button>
+            <div class="company-panel-controls">
+              <input type="text" id="company-chip-search" class="company-mini-search" placeholder="Filter companies..." oninput="renderJobDiscovery()">
+              <button type="button" id="clear-companies-btn" class="btn-text-mini" style="display: none;" onclick="clearCompanySelection()">All Companies</button>
             </div>
           </div>
           <div id="company-pill-group" class="company-chips-scroll">
@@ -330,84 +236,200 @@
           </div>
         </div>
 
-        <!-- Row 4: Active Filter Summary & Result Counter -->
-        <div class="active-filter-row">
-          <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Active Filters:</span>
-            <div id="active-tags-container" style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">None (Showing all roles)</span>
+        <!-- Active Filter Summary Strip -->
+        <div class="console-footer-row">
+          <div class="active-filters-wrap">
+            <span class="active-filters-label">Active:</span>
+            <div id="active-tags-container" class="active-tags-list">
+              <span style="font-size: 0.78rem; color: var(--text-muted);">All Roles</span>
             </div>
           </div>
-          
-          <div style="display: flex; align-items: center; gap: 1.25rem;">
-            <span id="results-count-badge" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">
-              Showing <strong id="matching-jobs-count" style="color: var(--primary);">0</strong> matching roles
+          <div class="results-meta-wrap">
+            <span id="results-count-badge" class="results-counter-text">
+              <strong id="matching-jobs-count" style="color: #ffffff;">0</strong> roles
               <span id="active-currency-indicator" class="currency-inline-badge">in USD ($)</span>
             </span>
-            <button class="btn-text-link" onclick="resetAllPillFilters()" style="background: none; border: none; color: #fb7185; font-size: 0.825rem; font-weight: 600; cursor: pointer;">Reset All Filters</button>
+            <button class="btn-reset-filters" onclick="resetAllPillFilters()">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master-Detail Discovery Split View: Job List + Live Role Inspector -->
+      <div class="discovery-workspace" id="discovery-workspace">
+        <div class="discovery-list-column">
+          <div id="jobs-grid" class="jobs-list-container">
+            <!-- Rendered by JS -->
+          </div>
+          <div id="pagination-container"></div>
+        </div>
+
+        <!-- Sticky Side Inspector Panel (Opens when inspecting a role on desktop) -->
+        <aside id="inline-role-inspector" class="role-inspector-drawer" style="display: none;">
+          <div id="inline-inspector-content"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 2: RESUME STUDIO & ATS CALIBRATION (#resume)
+         ====================================================================== -->
+    <section id="section-resume" class="dashboard-section active">
+
+      <!-- Candidate Readiness & Quick Actions Banner -->
+      <div class="studio-banner" id="resume-studio-banner">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <div class="studio-bento-grid">
+        <!-- Column 1: Resume Upload & Live Markdown/Text Editor -->
+        <div class="studio-card">
+          <div class="studio-card-header">
+            <div>
+              <h2 class="studio-card-title">1. Resume Source & Parser</h2>
+              <p class="studio-card-sub">Drop a PDF/TXT file or edit your technical profile text directly below.</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="loadSampleResume()">Load Sample Senior SWE Resume</button>
+          </div>
+
+          <label id="dropzone" for="resume-file-input" class="dropzone-modern">
+            <input type="file" id="resume-file-input" accept=".pdf,.txt,.md" style="display: none;" onchange="handleFileInputChange(event)">
+            <div class="dropzone-icon-circle">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+            </div>
+            <div class="dropzone-copy">
+              <span class="dropzone-main-text">Drop resume file (.pdf, .txt, .md) or <u style="color: var(--primary);">browse computer</u></span>
+              <span class="dropzone-sub-text">100% client-side extraction • Instant skill & seniority calibration</span>
+            </div>
+          </label>
+
+          <textarea id="text-paste-area" class="text-paste-area" placeholder="Paste your resume markdown, plain text, or technical summary here..."></textarea>
+
+          <div style="display: flex; gap: 0.65rem; align-items: center;">
+            <button class="btn" style="flex: 1;" onclick="submitResumeText()">Sync Profile & Score All Roles →</button>
+            <button class="btn btn-secondary btn-danger" onclick="clearResume()">Clear</button>
           </div>
         </div>
 
-      </div>
-      
-      <!-- Jobs List -->
-      <div id="jobs-grid" class="jobs-list-container">
-        <!-- Rendered by JS -->
+        <!-- Column 2: Extracted Technical DNA & Instant Top Role Matches -->
+        <div id="resume-results-panel" class="studio-card">
+          <!-- Populated dynamically by JS -->
+        </div>
       </div>
 
-      <!-- Pagination Bar -->
-      <div id="pagination-container"></div>
+      <!-- Bottom Full-Width Card: AI Resume Bullet Point Rewriter & ATS Studio -->
+      <div class="studio-card" style="margin-top: 1.25rem;">
+        <div class="studio-card-header">
+          <div>
+            <h2 class="studio-card-title">3. AI Resume Bullet Optimizer & ATS Keyword Aligner</h2>
+            <p class="studio-card-sub">Select a target role and click any of your resume bullets (or type one) to generate 3 high-impact, role-calibrated rewrites.</p>
+          </div>
+          <div id="ollama-status" class="ollama-status-badge">
+            <span class="status-dot online"></span>
+            Gemini 2.5 Flash Active
+          </div>
+        </div>
+
+        <div class="optimizer-studio-grid">
+          <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <div>
+              <label class="form-label" for="opt-job-select">Target Engineering Role</label>
+              <select id="opt-job-select" class="form-input">
+                <option value="">-- Select a Target Job Opportunity --</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label" for="opt-bullet-input">Resume Bullet Point to Optimize</label>
+              <textarea id="opt-bullet-input" class="form-input" style="height: 88px; resize: vertical;" placeholder="e.g. Built distributed backend services in C++ and Python to serve ML models at low latency."></textarea>
+            </div>
+
+            <div id="extracted-bullets-chips" class="extracted-bullets-wrap">
+              <!-- Populated with 1-click bullets from user's resume -->
+            </div>
+
+            <div>
+              <button class="btn" onclick="optimizeBulletPoint()">Generate 3 Role-Aligned Rewrites ✨</button>
+            </div>
+          </div>
+
+          <div id="optimizer-result-container" class="optimizer-output-panel">
+            <div class="optimizer-output-header">Optimized ATS Bullet Suggestions</div>
+            <div id="optimizer-result-text" class="optimizer-output-body">Select a target job on the left and click "Generate 3 Role-Aligned Rewrites" to see tailored technical bullets with strong action verbs and metrics.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Tab 3: Kanban Application Tracker -->
+    <!-- ======================================================================
+         PAGE 3: KANBAN APPLICATION PIPELINE (#tracker)
+         ====================================================================== -->
     <section id="section-tracker" class="dashboard-section">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
-        <div>
-          <h2 style="font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; margin-bottom: 0.2rem;">Application Tracker Pipeline</h2>
-          <p style="font-size: 0.85rem; color: var(--text-secondary);">Drag roles between stages or use quick-move dropdowns. Salaries shown in your selected currency.</p>
+
+      <!-- Pipeline KPI & Action Header -->
+      <div class="pipeline-toolbar">
+        <div class="pipeline-kpis" id="pipeline-kpis-bar">
+          <!-- Populated dynamically by JS -->
         </div>
-        <div style="display: flex; gap: 0.75rem;">
-          <button class="btn btn-sm" onclick="openAddJobModal()">+ Add Custom Job</button>
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('discover')">Browse Open Roles →</button>
+        <div class="pipeline-actions">
+          <input type="text" id="kanban-filter-input" class="company-mini-search" style="width: 210px; padding: 0.42rem 0.75rem;" placeholder="Filter board by company or title..." oninput="renderKanbanBoard()">
+          <button class="btn btn-secondary btn-sm" onclick="seedTopMatchesToKanban()">Auto-Populate Top 5 Matches</button>
+          <button class="btn btn-sm" onclick="openAddJobModal()">+ Add Custom Role</button>
         </div>
       </div>
-      
+
       <div class="kanban-board" id="kanban-board-container">
         <div class="kanban-column" id="kanban-col-discovered">
           <div class="column-header discovered">
-            <span class="column-title">Discovered</span>
+            <div class="column-title-group">
+              <span class="stage-dot discovered"></span>
+              <span class="column-title">Discovered</span>
+            </div>
             <span class="column-count" id="kanban-count-discovered">0</span>
           </div>
           <div class="column-cards-container" id="kanban-list-discovered"></div>
         </div>
-        
+
         <div class="kanban-column" id="kanban-col-applied">
           <div class="column-header applied">
-            <span class="column-title">Applied</span>
+            <div class="column-title-group">
+              <span class="stage-dot applied"></span>
+              <span class="column-title">Applied</span>
+            </div>
             <span class="column-count" id="kanban-count-applied">0</span>
           </div>
           <div class="column-cards-container" id="kanban-list-applied"></div>
         </div>
-        
+
         <div class="kanban-column" id="kanban-col-interviewing">
           <div class="column-header interviewing">
-            <span class="column-title">Interviewing</span>
+            <div class="column-title-group">
+              <span class="stage-dot interviewing"></span>
+              <span class="column-title">Interviewing</span>
+            </div>
             <span class="column-count" id="kanban-count-interviewing">0</span>
           </div>
           <div class="column-cards-container" id="kanban-list-interviewing"></div>
         </div>
-        
+
         <div class="kanban-column" id="kanban-col-offer">
           <div class="column-header offer">
-            <span class="column-title">Offers</span>
+            <div class="column-title-group">
+              <span class="stage-dot offer"></span>
+              <span class="column-title">Offers</span>
+            </div>
             <span class="column-count" id="kanban-count-offer">0</span>
           </div>
           <div class="column-cards-container" id="kanban-list-offer"></div>
         </div>
-        
+
         <div class="kanban-column" id="kanban-col-archived">
           <div class="column-header archived">
-            <span class="column-title">Archived</span>
+            <div class="column-title-group">
+              <span class="stage-dot archived"></span>
+              <span class="column-title">Archived</span>
+            </div>
             <span class="column-count" id="kanban-count-archived">0</span>
           </div>
           <div class="column-cards-container" id="kanban-list-archived"></div>
@@ -415,15 +437,59 @@
       </div>
     </section>
 
-    <!-- Tab 4: Analytics Dashboard -->
+    <!-- ======================================================================
+         PAGE 4: MARKET BENCHMARKS, COMPENSATION & SKILL GAPS (#analytics)
+         ====================================================================== -->
     <section id="section-analytics" class="dashboard-section">
-      <div class="analytics-grid">
-        <div class="glass analytics-card">
-          <h3 class="analytics-card-title">Role Distribution & Match Metrics</h3>
+
+      <!-- Top 4 Market KPI Cards -->
+      <div class="analytics-kpi-row" id="analytics-kpi-row">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- 2x2 Bento Grid of Deep Analytics -->
+      <div class="analytics-bento-grid">
+        <!-- Card 1: Match & Domain Funnel -->
+        <div class="studio-card">
+          <div class="studio-card-header">
+            <div>
+              <h3 class="studio-card-title">Role Distribution & Match Breakdown</h3>
+              <p class="studio-card-sub">Click any bar to filter Job Discovery by that segment.</p>
+            </div>
+          </div>
           <div id="funnel-chart" class="chart-container"></div>
         </div>
-        <div class="glass analytics-card">
-          <h3 class="analytics-card-title">Pre-Interview Preparation Hub</h3>
+
+        <!-- Card 2: Compensation Benchmarks by Company (Live Currency) -->
+        <div class="studio-card">
+          <div class="studio-card-header">
+            <div>
+              <h3 class="studio-card-title">Frontier Lab Compensation Benchmarks</h3>
+              <p class="studio-card-sub" id="comp-chart-subtitle">Min–Max base salary ranges in your selected currency.</p>
+            </div>
+          </div>
+          <div id="company-salary-chart" class="comp-benchmark-list"></div>
+        </div>
+
+        <!-- Card 3: Most In-Demand Technical Skills Across Labs -->
+        <div class="studio-card">
+          <div class="studio-card-header">
+            <div>
+              <h3 class="studio-card-title">Most Requested Engineering Skills</h3>
+              <p class="studio-card-sub">Frequency across all live roles — green indicates skills already in your profile.</p>
+            </div>
+          </div>
+          <div id="market-skills-chart" class="market-skills-list"></div>
+        </div>
+
+        <!-- Card 4: Actionable Pre-Interview & Skill Gap Roadmap -->
+        <div class="studio-card">
+          <div class="studio-card-header">
+            <div>
+              <h3 class="studio-card-title">High-ROI Skill Gap & Interview Roadmap</h3>
+              <p class="studio-card-sub">Targeted preparation priorities based on your highest-matching frontier roles.</p>
+            </div>
+          </div>
           <div id="skills-gap-feed"></div>
         </div>
       </div>
@@ -453,13 +519,13 @@
           <path d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
-      
-      <div class="modal-job-header" style="border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0;">
-        <h2 class="modal-job-title" style="font-size: 1.5rem;">Add External Job Opportunity</h2>
-        <p style="color: var(--text-secondary); font-size: 0.85rem;">Paste an exact job link and details to track it alongside frontier AI roles.</p>
+
+      <div style="margin-bottom: 1rem;">
+        <h2 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #ffffff;">Add External Job Opportunity</h2>
+        <p style="color: var(--text-secondary); font-size: 0.84rem;">Paste an exact job link and details to track it alongside frontier AI roles.</p>
       </div>
-      
-      <form id="add-job-form" onsubmit="submitCustomJob(event)" style="margin-top: 1.25rem;">
+
+      <form id="add-job-form" onsubmit="submitCustomJob(event)">
         <div class="form-grid">
           <div>
             <label class="form-label" for="job-tit">Role Title *</label>
@@ -492,20 +558,20 @@
             <input type="url" id="job-url" class="form-input" placeholder="https://jobs.ashbyhq.com/..." required>
           </div>
           <div class="form-group-full">
-            <label class="form-label" for="job-reqs">Core Requirements * <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated list for skill matching)</span></label>
+            <label class="form-label" for="job-reqs">Core Requirements * <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated)</span></label>
             <input type="text" id="job-reqs" class="form-input" placeholder="e.g. Python, PyTorch, C++, Distributed Systems" required>
           </div>
           <div class="form-group-full">
-            <label class="form-label" for="job-prefs">Preferred Qualifications <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated list)</span></label>
+            <label class="form-label" for="job-prefs">Preferred Qualifications <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(comma-separated)</span></label>
             <input type="text" id="job-prefs" class="form-input" placeholder="e.g. CUDA, Triton, Kubernetes">
           </div>
           <div class="form-group-full">
             <label class="form-label" for="job-desc">Job Description *</label>
-            <textarea id="job-desc" class="form-input" style="height: 100px; resize: vertical;" placeholder="Paste the full role overview and responsibilities here..." required></textarea>
+            <textarea id="job-desc" class="form-input" style="height: 96px; resize: vertical;" placeholder="Paste the full role overview and responsibilities here..." required></textarea>
           </div>
         </div>
-        
-        <div class="modal-action-row" style="margin-top: 1.25rem; padding-top: 1rem;">
+
+        <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end; gap: 0.75rem;">
           <button type="button" class="btn btn-secondary" onclick="closeAddJobModal()">Cancel</button>
           <button type="submit" class="btn">Add to Discovery Pipeline</button>
         </div>
@@ -515,36 +581,36 @@
 
   <!-- Auth Modal -->
   <div id="auth-modal" class="modal-overlay" onclick="if(event.target === this) closeAuthModal()">
-    <div class="glass modal-card" style="max-width: 460px; width: 92%; padding: 2rem; border-radius: 18px;">
-      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-        <h3 id="auth-modal-title" style="font-size: 1.35rem; font-weight: 700; color: #ffffff;">Create AuraTrack Account</h3>
+    <div class="glass modal-card" style="max-width: 440px; width: 92%; padding: 1.85rem; border-radius: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.15rem;">
+        <h3 id="auth-modal-title" style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">Create AuraTrack Account</h3>
         <button class="modal-close" style="position: static;" onclick="closeAuthModal()">&times;</button>
       </div>
 
-      <div style="display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem;">
+      <div style="display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.25rem;">
         <button id="auth-tab-signup" class="auth-tab active" onclick="switchAuthTab('signup')">Create Account</button>
         <button id="auth-tab-login" class="auth-tab" onclick="switchAuthTab('login')">Sign In</button>
       </div>
 
       <form id="auth-form" onsubmit="handleAuthSubmit(event)">
-        <div id="auth-name-group" class="form-group" style="margin-bottom: 1rem;">
+        <div id="auth-name-group" class="form-group" style="margin-bottom: 0.9rem;">
           <label class="form-label" for="auth-name">Your Full Name *</label>
           <input type="text" id="auth-name" class="form-input" placeholder="e.g. Alex Mercer" required>
         </div>
 
-        <div class="form-group" style="margin-bottom: 1rem;">
+        <div class="form-group" style="margin-bottom: 0.9rem;">
           <label class="form-label" for="auth-email">Email Address *</label>
           <input type="email" id="auth-email" class="form-input" placeholder="e.g. alex@example.com" required>
         </div>
 
-        <div class="form-group" style="margin-bottom: 1.5rem;">
+        <div class="form-group" style="margin-bottom: 1.25rem;">
           <label class="form-label" for="auth-password">Password *</label>
           <input type="password" id="auth-password" class="form-input" placeholder="••••••••" required minlength="4">
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="display: flex; flex-direction: column; gap: 0.65rem;">
           <button type="submit" id="auth-submit-btn" class="btn" style="width: 100%;">Create Account & Get Started</button>
-          <button type="button" class="btn btn-secondary" style="width: 100%; font-size: 0.85rem;" onclick="createQuickLocalProfile()">Continue as Local Guest Profile</button>
+          <button type="button" class="btn btn-secondary" style="width: 100%; font-size: 0.82rem;" onclick="createQuickLocalProfile()">Continue as Local Guest Profile</button>
         </div>
       </form>
     </div>
