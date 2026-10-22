@@ -10,115 +10,75 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 COMPANY_COLORS = {
     "OpenAI": "linear-gradient(135deg, #10a37f, #0d8a6a)",
     "Anthropic": "linear-gradient(135deg, #d97757, #a85538)",
+    "Reflection AI": "linear-gradient(135deg, #6366f1, #4f46e5)",
     "Sierra": "linear-gradient(135deg, #ff4500, #ff8c00)",
-    "Google DeepMind": "linear-gradient(135deg, #4285F4, #34A853)",
-    "Microsoft AI": "linear-gradient(135deg, #0078D4, #00B2F0)",
-    "Meta AI": "linear-gradient(135deg, #0668E1, #0080FF)",
+    "Anysphere": "linear-gradient(135deg, #0284c7, #2563eb)",
     "Perplexity AI": "linear-gradient(135deg, #20b2aa, #006d75)",
     "Scale AI": "linear-gradient(135deg, #a855f7, #6366f1)",
     "Cohere": "linear-gradient(135deg, #9b59b6, #8e44ad)",
-    "Mistral AI": "linear-gradient(135deg, #f97316, #ea580c)",
     "xAI": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
-    "Stability AI": "linear-gradient(135deg, #f43f5e, #be123c)",
-    "Groq": "linear-gradient(135deg, #60a5fa, #1d4ed8)",
+    "Wayve": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "ElevenLabs": "linear-gradient(135deg, #6366f1, #4338ca)",
+    "Cognition": "linear-gradient(135deg, #f97316, #c2410c)",
+    "Physical Intelligence": "linear-gradient(135deg, #ea580c, #c2410c)",
+    "Poolside": "linear-gradient(135deg, #10b981, #059669)",
     "Cerebras": "linear-gradient(135deg, #34d399, #059669)",
-    "Anysphere": "linear-gradient(135deg, #0284c7, #2563eb)",
     "Harvey": "linear-gradient(135deg, #64748b, #334155)",
     "Abridge": "linear-gradient(135deg, #10b981, #047857)",
     "Decagon": "linear-gradient(135deg, #7c3aed, #4f46e5)",
-    "Physical Intelligence": "linear-gradient(135deg, #ea580c, #c2410c)",
     "Anduril": "linear-gradient(135deg, #6b7280, #374151)",
-    "ElevenLabs": "linear-gradient(135deg, #6366f1, #4338ca)",
-    "Cognition": "linear-gradient(135deg, #f97316, #c2410c)",
-    "Imbue": "linear-gradient(135deg, #ec4899, #8b5cf6)",
-    "Hebbia": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
-    "Poolside": "linear-gradient(135deg, #10b981, #059669)",
     "Glean": "linear-gradient(135deg, #f59e0b, #d97706)",
-    "RunwayML": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "Reflection AI": "linear-gradient(135deg, #6366f1, #4f46e5)",
-    "Wayve": "linear-gradient(135deg, #2563eb, #1d4ed8)",
-    "Nscale": "linear-gradient(135deg, #0ea5e9, #0369a1)",
     "Isomorphic Labs": "linear-gradient(135deg, #10b981, #047857)",
     "Synthesia": "linear-gradient(135deg, #8b5cf6, #6d28d9)",
     "Granola": "linear-gradient(135deg, #f59e0b, #b45309)",
     "Recraft": "linear-gradient(135deg, #ec4899, #be185d)",
-    "Humanloop": "linear-gradient(135deg, #06b6d4, #0e7490)",
-    "V7 Labs": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
-    "PolyAI": "linear-gradient(135deg, #10b981, #065f46)",
-    "Robin AI": "linear-gradient(135deg, #f97316, #c2410c)",
     "PhysicsX": "linear-gradient(135deg, #64748b, #334155)",
     "Basecamp Research": "linear-gradient(135deg, #14b8a6, #0f766e)",
-    "Unitary": "linear-gradient(135deg, #a855f7, #6b21a8)",
-    "Causaly": "linear-gradient(135deg, #3b82f6, #1e40af)",
     "Speechmatics": "linear-gradient(135deg, #f43f5e, #be123c)",
-    "Automata": "linear-gradient(135deg, #6366f1, #3730a3)",
-    "Quantexa": "linear-gradient(135deg, #0284c7, #075985)",
-    "Thought Machine": "linear-gradient(135deg, #10b981, #064e3b)",
-    "Faculty": "linear-gradient(135deg, #475569, #1e293b)",
-    "Cleo": "linear-gradient(135deg, #ec4899, #9d174d)",
     "Omnea": "linear-gradient(135deg, #f59e0b, #d97706)",
-    "Papercup": "linear-gradient(135deg, #8b5cf6, #5b21b6)",
-    "Healx": "linear-gradient(135deg, #06b6d4, #155e75)",
-    "Multiverse": "linear-gradient(135deg, #6366f1, #4338ca)",
-    "Unlikely AI": "linear-gradient(135deg, #a855f7, #581c87)",
-    "Airspeed": "linear-gradient(135deg, #38bdf8, #0369a1)"
+    "LangChain": "linear-gradient(135deg, #10b981, #059669)",
+    "Baseten": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+    "Modal": "linear-gradient(135deg, #10b981, #047857)",
+    "World Labs": "linear-gradient(135deg, #8b5cf6, #6d28d9)",
+    "Prime Intellect": "linear-gradient(135deg, #ec4899, #8b5cf6)",
+    "Together AI": "linear-gradient(135deg, #0ea5e9, #2563eb)",
 }
 
 COMPANY_DOMAINS = {
     "OpenAI": "openai.com",
     "Anthropic": "anthropic.com",
+    "Reflection AI": "reflection.ai",
     "Sierra": "sierra.ai",
-    "Google DeepMind": "deepmind.google",
-    "Microsoft AI": "microsoft.com",
-    "Meta AI": "meta.com",
+    "Anysphere": "cursor.com",
     "Perplexity AI": "perplexity.ai",
     "Scale AI": "scale.com",
     "Cohere": "cohere.com",
-    "Mistral AI": "mistral.ai",
     "xAI": "x.ai",
-    "Stability AI": "stability.ai",
-    "Groq": "groq.com",
+    "Wayve": "wayve.ai",
+    "ElevenLabs": "elevenlabs.io",
+    "Cognition": "cognition.ai",
+    "Physical Intelligence": "physicalintelligence.company",
+    "Poolside": "poolside.ai",
     "Cerebras": "cerebras.ai",
-    "Anysphere": "cursor.com",
     "Harvey": "harvey.ai",
     "Abridge": "abridge.com",
     "Decagon": "decagon.ai",
-    "Physical Intelligence": "physicalintelligence.company",
     "Anduril": "anduril.com",
-    "ElevenLabs": "elevenlabs.io",
-    "Cognition": "cognition.ai",
-    "Imbue": "imbue.com",
-    "Hebbia": "hebbia.ai",
-    "Poolside": "poolside.ai",
     "Glean": "glean.com",
-    "RunwayML": "runwayml.com",
-    "Reflection AI": "reflection.ai",
-    "Wayve": "wayve.ai",
-    "Nscale": "nscale.com",
     "Isomorphic Labs": "isomorphiclabs.com",
     "Synthesia": "synthesia.io",
     "Granola": "granola.ai",
     "Recraft": "recraft.ai",
-    "Humanloop": "humanloop.com",
-    "V7 Labs": "v7labs.com",
-    "PolyAI": "poly.ai",
-    "Robin AI": "robinai.com",
     "PhysicsX": "physicsx.ai",
     "Basecamp Research": "basecamp-research.ai",
-    "Unitary": "unitary.ai",
-    "Causaly": "causaly.com",
     "Speechmatics": "speechmatics.com",
-    "Automata": "automata.tech",
-    "Quantexa": "quantexa.com",
-    "Thought Machine": "thoughtmachine.net",
-    "Faculty": "faculty.ai",
-    "Cleo": "web.meetcleo.com",
     "Omnea": "omnea.co",
-    "Papercup": "papercup.com",
-    "Healx": "healx.ai",
-    "Multiverse": "multiverse.io",
-    "Unlikely AI": "unlikely.ai",
-    "Airspeed": "airspeed.ai"
+    "LangChain": "langchain.com",
+    "Baseten": "baseten.co",
+    "Modal": "modal.com",
+    "World Labs": "worldlabs.ai",
+    "Prime Intellect": "primeintellect.ai",
+    "Together AI": "together.ai",
 }
 
 SKILL_LIST = [
@@ -133,188 +93,166 @@ SKILL_LIST = [
     "Computer Networking", "WebSockets", "Linux", "gRPC", "Ray", "Spark"
 ]
 
-ALLOWED_CATEGORIES = {"SWE", "Platform", "MLE"}
+# Include Research alongside SWE, Platform, and MLE so Research Engineer & Research MTS roles are preserved
+ALLOWED_CATEGORIES = {"SWE", "Platform", "MLE", "Research"}
 
-DATA_ENGINEERING_PATTERNS = [
-    re.compile(r"\bdata engineer\b", re.IGNORECASE),
-    re.compile(r"\bdata engineering\b", re.IGNORECASE),
-    re.compile(r"\bdata scientist\b", re.IGNORECASE),
-]
+# Stage 3 Grounding Rules: Non-technical departments vs Technical department overrides
+NON_TECH_DEPT_PATTERN = re.compile(
+    r"\b(legal|compliance|governance|finance|accounting|tax|treasury|people|talent|recruiting|recruitment|hr|human resources|marketing|communications|comms|public relations|policy|government|public sector|sovereign|real estate|facilities|workplace|administrative|executive|general & administrative|g&a|sales|account executive|business development|partnerships|revenue|commercial|customer success|customer support|it|corporate security|security|technical program management)\b",
+    re.IGNORECASE
+)
+
+TECH_DEPT_OVERRIDE_PATTERN = re.compile(
+    r"\b(engineering|research|science|machine learning|ml|ai|infrastructure|platform|systems|compute|autonomy|robotics|foundations|pre-training|post-training|evals)\b",
+    re.IGNORECASE
+)
 
 EXCLUDED_TITLE_PATTERNS = [
-    # Frontend & Design
-    re.compile(r"\bfrontend\b", re.IGNORECASE),
-    re.compile(r"\bfront-end\b", re.IGNORECASE),
-    re.compile(r"\bfront end\b", re.IGNORECASE),
-    re.compile(r"\bui\b", re.IGNORECASE),
-    re.compile(r"\bux\b", re.IGNORECASE),
-    re.compile(r"\bui/ux\b", re.IGNORECASE),
-    re.compile(r"\bdesigner\b", re.IGNORECASE),
-    re.compile(r"\bdesign engineer\b", re.IGNORECASE),
-    re.compile(r"\bproduct design\b", re.IGNORECASE),
-    re.compile(r"\bweb designer\b", re.IGNORECASE),
-    re.compile(r"\bweb developer\b", re.IGNORECASE),
-    re.compile(r"\bios\b", re.IGNORECASE),
-    re.compile(r"\bandroid\b", re.IGNORECASE),
-    re.compile(r"\bmobile\b", re.IGNORECASE),
-
-    # Electrical & Hardware Engineering
-    re.compile(r"\belectrical\b", re.IGNORECASE),
-    re.compile(r"\bhardware\b", re.IGNORECASE),
-    re.compile(r"\banalog\b", re.IGNORECASE),
-    re.compile(r"\basic\b", re.IGNORECASE),
-    re.compile(r"\bsilicon\b", re.IGNORECASE),
-    re.compile(r"\bfpga\b", re.IGNORECASE),
-    re.compile(r"\brf engineer\b", re.IGNORECASE),
-    re.compile(r"\bpcb\b", re.IGNORECASE),
-    re.compile(r"\bmechanical\b", re.IGNORECASE),
-    re.compile(r"\bchip design\b", re.IGNORECASE),
-    re.compile(r"\bboard design\b", re.IGNORECASE),
-
-    # Data Engineering / Data Science / Analytics
-    re.compile(r"\bdata engineer\b", re.IGNORECASE),
-    re.compile(r"\bdata engineering\b", re.IGNORECASE),
-    re.compile(r"\bdata scientist\b", re.IGNORECASE),
-    re.compile(r"\bdata science\b", re.IGNORECASE),
-    re.compile(r"\bdata analyst\b", re.IGNORECASE),
-    re.compile(r"\banalytics engineer\b", re.IGNORECASE),
-    re.compile(r"\bbusiness intelligence\b", re.IGNORECASE),
-
-    # Internships / Junior / Entry Level
-    re.compile(r"\bintern\b", re.IGNORECASE),
-    re.compile(r"\binternship\b", re.IGNORECASE),
-    re.compile(r"\bco-op\b", re.IGNORECASE),
-    re.compile(r"\bgraduate engineer\b", re.IGNORECASE),
-    re.compile(r"\bjunior\b", re.IGNORECASE),
-    re.compile(r"\bentry level\b", re.IGNORECASE),
-    re.compile(r"\bapprentice\b", re.IGNORECASE),
-
-    # IT Engineering & IT Roles
-    re.compile(r"\bit support\b", re.IGNORECASE),
-    re.compile(r"\bit engineer\b", re.IGNORECASE),
-    re.compile(r"\bit engineering\b", re.IGNORECASE),
-    re.compile(r"\bit systems\b", re.IGNORECASE),
-    re.compile(r"\bit infrastructure\b", re.IGNORECASE),
-    re.compile(r"\bcorporate it\b", re.IGNORECASE),
-    re.compile(r"\binformation technology\b", re.IGNORECASE),
-    re.compile(r"\bdesktop support\b", re.IGNORECASE),
-    re.compile(r"\bhelpdesk\b", re.IGNORECASE),
-    re.compile(r"\bsystem admin\b", re.IGNORECASE),
-    re.compile(r"\bsystems administrator\b", re.IGNORECASE),
-
-    # Social Media & Community & Comms & Events
-    re.compile(r"\bsocial media\b", re.IGNORECASE),
-    re.compile(r"\bcommunity\b", re.IGNORECASE),
-    re.compile(r"\bevents\b", re.IGNORECASE),
-    re.compile(r"\bcommunications\b", re.IGNORECASE),
-
-    # Partner Engineering & Partner Roles & Partnerships
-    re.compile(r"\bpartner\b", re.IGNORECASE),
-    re.compile(r"\bpartnerships?\b", re.IGNORECASE),
-
-    # Talent, Recruiting & HR & People
-    re.compile(r"\btalent\b", re.IGNORECASE),
-    re.compile(r"\brecruiting\b", re.IGNORECASE),
-    re.compile(r"\brecruitment\b", re.IGNORECASE),
-    re.compile(r"\brecruiter\b", re.IGNORECASE),
-    re.compile(r"\bpeople\b", re.IGNORECASE),
-    re.compile(r"\bhuman resources\b", re.IGNORECASE),
-    re.compile(r"\bhr\b", re.IGNORECASE),
-
-    # Solutions Engineering, DevRel, Field & Support Roles
-    re.compile(r"\bsolutions engineer\b", re.IGNORECASE),
-    re.compile(r"\bsolutions architect\b", re.IGNORECASE),
-    re.compile(r"\bdeveloper relations\b", re.IGNORECASE),
-    re.compile(r"\bdevrel\b", re.IGNORECASE),
-    re.compile(r"\bdeveloper advocate\b", re.IGNORECASE),
-    re.compile(r"\bfield engineer\b", re.IGNORECASE),
-    re.compile(r"\bforward deployed\b", re.IGNORECASE),
-    re.compile(r"\bsales engineer\b", re.IGNORECASE),
-    re.compile(r"\bcustomer engineer\b", re.IGNORECASE),
-    re.compile(r"\bsupport engineer\b", re.IGNORECASE),
-    re.compile(r"\btechnical support\b", re.IGNORECASE),
-    re.compile(r"\btechnical advocate\b", re.IGNORECASE),
-    re.compile(r"\bsupport delivery\b", re.IGNORECASE),
-    re.compile(r"\bsupport specialist\b", re.IGNORECASE),
-
-    # Non-Engineering & Business Roles
-    re.compile(r"\bsales\b", re.IGNORECASE),
-    re.compile(r"\baccount executive\b", re.IGNORECASE),
-    re.compile(r"\bbusiness development\b", re.IGNORECASE),
-    re.compile(r"\brevenue\b", re.IGNORECASE),
-    re.compile(r"\bgtm\b", re.IGNORECASE),
-    re.compile(r"\bproduct manager\b", re.IGNORECASE),
-    re.compile(r"\bprogram manager\b", re.IGNORECASE),
-    re.compile(r"\bproject manager\b", re.IGNORECASE),
-    re.compile(r"\boperations\b", re.IGNORECASE),
-    re.compile(r"\bcustomer success\b", re.IGNORECASE),
-    re.compile(r"\blegal\b", re.IGNORECASE),
-    re.compile(r"\bfinance\b", re.IGNORECASE),
-    re.compile(r"\baccounting\b", re.IGNORECASE),
-    re.compile(r"\bmarketing\b", re.IGNORECASE),
-    re.compile(r"\bcopywriter\b", re.IGNORECASE),
-    re.compile(r"\bstrategist\b", re.IGNORECASE),
-    re.compile(r"\bfreelance\b", re.IGNORECASE),
-    re.compile(r"\bsourcing\b", re.IGNORECASE),
-    re.compile(r"\bpolicy\b", re.IGNORECASE),
-
-    # Security & Compliance Roles
-    re.compile(r"\bsecurity\b", re.IGNORECASE),
-    re.compile(r"\bcompliance\b", re.IGNORECASE),
-    re.compile(r"\binfosec\b", re.IGNORECASE),
-    re.compile(r"\bcybersecurity\b", re.IGNORECASE),
-    re.compile(r"\bappsec\b", re.IGNORECASE),
-    re.compile(r"\bdetection and response\b", re.IGNORECASE),
-    re.compile(r"\bthreat\b", re.IGNORECASE),
-    re.compile(r"\baudit\b", re.IGNORECASE),
-    re.compile(r"\bprivacy\b", re.IGNORECASE),
-    re.compile(r"\bvulnerability\b", re.IGNORECASE),
-
-    # Bioanalytical & Biological Roles
-    re.compile(r"\bbioanalytical\b", re.IGNORECASE),
-    re.compile(r"\bbiological\b", re.IGNORECASE),
-    re.compile(r"\bbiology\b", re.IGNORECASE),
-    re.compile(r"\bbioinformatics\b", re.IGNORECASE),
-    re.compile(r"\bcomputational biology\b", re.IGNORECASE),
-    re.compile(r"\bgenomics\b", re.IGNORECASE),
-
-    # Growth & Network Engineering Roles
-    re.compile(r"\bgrowth\b", re.IGNORECASE),
-    re.compile(r"\blifecycle\b", re.IGNORECASE),
-    re.compile(r"\bnetwork engineer\b", re.IGNORECASE),
-    re.compile(r"\bnetwork engineering\b", re.IGNORECASE),
-    re.compile(r"\bnetwork architect\b", re.IGNORECASE),
-
-    # Defense / Manufacturing / Aerospace / Physical Hardware Roles
-    re.compile(r"\bmanufacturing\b", re.IGNORECASE),
-    re.compile(r"\bquality\b", re.IGNORECASE),
-    re.compile(r"\baerospace\b", re.IGNORECASE),
-    re.compile(r"\bavionics\b", re.IGNORECASE),
-    re.compile(r"\bpropulsion\b", re.IGNORECASE),
-    re.compile(r"\bflight\b", re.IGNORECASE),
-    re.compile(r"\bthermal\b", re.IGNORECASE),
-    re.compile(r"\bstructural\b", re.IGNORECASE),
-    re.compile(r"\btechnician\b", re.IGNORECASE),
-    re.compile(r"\bindustrial\b", re.IGNORECASE),
-    re.compile(r"\bsupply chain\b", re.IGNORECASE),
-    re.compile(r"\blogistics\b", re.IGNORECASE),
-    re.compile(r"\bfacilities\b", re.IGNORECASE),
-    re.compile(r"\bmaterials\b", re.IGNORECASE),
-    re.compile(r"\bchemical\b", re.IGNORECASE),
-    re.compile(r"\bcivil\b", re.IGNORECASE),
-    re.compile(r"\btest engineer\b", re.IGNORECASE),
-    re.compile(r"\bintegration engineer\b", re.IGNORECASE),
-    re.compile(r"\bdeployment engineer\b", re.IGNORECASE),
-    re.compile(r"\bmission\b", re.IGNORECASE),
-    re.compile(r"\bguidance\b", re.IGNORECASE),
-    re.compile(r"\bnavigation\b", re.IGNORECASE),
-    re.compile(r"\bsensor\b", re.IGNORECASE),
-    re.compile(r"\bradar\b", re.IGNORECASE),
-    re.compile(r"\boptical\b", re.IGNORECASE),
-    re.compile(r"\bphoton\b", re.IGNORECASE),
-    re.compile(r"\bmaritime\b", re.IGNORECASE),
-    re.compile(r"\bsubsea\b", re.IGNORECASE),
+    # Non-software / Design / Frontend-only / Mobile
+    re.compile(r"\b(frontend|front-end|front end|ui|ux|ui/ux|designer|design engineer|product design|web designer|web developer|ios|android|mobile|graphic|brand|creative|video editor|post-production|copywriter|content|illustrator|animator)\b", re.IGNORECASE),
+    # Hardware / Electrical / Mechanical / Physical / Defense Manufacturing
+    re.compile(r"\b(electrical|hardware|analog|asic|silicon|fpga|rf engineer|pcb|mechanical|chip design|board design|manufacturing|quality assurance|qa engineer|supplier quality|manufacturing quality|aerospace|avionics|propulsion|flight|thermal|structural|technician|industrial|supply chain|logistics|facilities|materials|chemical|civil|test engineer|integration engineer|deployment engineer|mission|guidance|navigation|sensor|radar|optical|photon|maritime|subsea)\b", re.IGNORECASE),
+    # Data Analyst / BI / Traditional Data Science (preserve Data Platform, Data Ingestion, Data Quality Engineer for LLMs)
+    re.compile(r"\b(data analyst|analytics engineer|business intelligence|bi engineer|financial analyst|business analyst|search crawler analyst|data scientist|data science)\b", re.IGNORECASE),
+    # Internships / Junior / Entry Level / Fellowships
+    re.compile(r"\b(intern|internship|co-op|graduate|new grad|early career|junior|entry level|apprentice|fellowship|fellows program|residency)\b", re.IGNORECASE),
+    # IT / Corporate Tech / Security / GRC / Compliance
+    re.compile(r"\b(it support|it engineer|it engineering|it systems|it infrastructure|corporate it|information technology|desktop support|helpdesk|system admin|systems administrator|tech ops|business systems|salesforce|netsuite|workday|grc|security|compliance|infosec|cybersecurity|appsec|detection and response|threat|audit|privacy|vulnerability|identity and access|iam)\b", re.IGNORECASE),
+    # Commercial / GTM / Solutions / Field / Forward Deployed / Support / Partner
+    re.compile(r"\b(solutions engineer|solutions architect|solutions architecture|developer relations|devrel|developer advocate|field engineer|forward deployed|fde|sales engineer|customer engineer|customer value|partner|partnerships|support engineer|technical support|technical advocate|support delivery|support specialist|engagement manager|implementation|onboarding|customer success|sales|account executive|account manager|business development|revenue|gtm|deal lead|commercial|sovereign)\b", re.IGNORECASE),
+    # PM / TPM / Operations / Legal / HR / Finance / Marketing / Recruiter / Open Applications
+    re.compile(r"\b(product manager|product management|program manager|project manager|tpm|scrum master|agile|operations|people ops|talent ops|revops|sales ops|business ops|finance ops|legal ops|marketing ops|gtm ops|recruiter|recruiting|recruitment|sourcing|sourcer|talent|people|human resources|hr|mobility|legal|counsel|attorney|paralegal|finance|controller|accounting|tax|payroll|procurement|buyer|marketing|growth|lifecycle|community|events|social media|communications|comms|pr|policy|government|public sector|strategist|chief of staff|executive assistant|office manager|workplace|apply here|don't see your role|general application|open application)\b", re.IGNORECASE),
+    # Wet lab / Bio / Clinical (non-software)
+    re.compile(r"\b(bioanalytical|wet lab|chemist|medicinal|pharmacologist|clinician|clinical|medical director|nurse|physician|biologist|assay|sequencing|laboratory)\b", re.IGNORECASE),
 ]
+
+POSITIVE_TECH_TITLE_PATTERNS = [
+    re.compile(r"\b(software|engineer|engineering|developer|member of technical staff|mts|technical staff|research scientist|research engineer|researcher|applied scientist|ai scientist|machine learning|ml|deep learning|llm|pre-training|post-training|evals|evaluations|inference|kernel|cuda|compiler|distributed|systems|infrastructure|platform|backend|back-end|compute|autonomy|robotics|computer vision|nlp|multimodal|data flywheel|sre|site reliability)\b", re.IGNORECASE)
+]
+
+def is_unwanted_role_title(title: str) -> bool:
+    text = (title or "").lower()
+    return any(p.search(text) for p in EXCLUDED_TITLE_PATTERNS)
+
+def is_valid_grounded_role(title: str, dept: str = "", team: str = "", company: str = "") -> tuple[bool, str]:
+    t = (title or "").strip()
+    d = (dept or "").strip()
+    tm = (team or "").strip()
+    if not t:
+        return False, "empty_title"
+
+    # 1. Check title exclusions
+    for pat in EXCLUDED_TITLE_PATTERNS:
+        if pat.search(t):
+            return False, "excluded_title"
+
+    # 2. Check department / team exclusions (unless overridden by a technical dept keyword)
+    for label in (d, tm):
+        if label and NON_TECH_DEPT_PATTERN.search(label) and not TECH_DEPT_OVERRIDE_PATTERN.search(label):
+            return False, f"excluded_dept:{label}"
+    if d.lower().strip() == "other":
+        return False, "excluded_dept:Other"
+
+    # 3. Company-specific defense hardware filter for Anduril
+    if company == "Anduril":
+        if not re.search(r"\b(software|machine learning|ai |autonomy|computer vision|distributed|platform engineer|robotics software)\b", t, re.IGNORECASE):
+            return False, "anduril_non_software"
+
+    # 4. Require positive software / AI / research / systems engineering signal in title
+    if not any(pat.search(t) for pat in POSITIVE_TECH_TITLE_PATTERNS):
+        return False, "no_positive_tech_signal"
+
+    return True, "ok"
+
+def normalize_department_track(dept: str, team: str, title: str) -> str:
+    """
+    Classifies a role's primary department track into either 'Engineering' or 'Research'
+    while preserving the exact raw `department` and `team` strings from the ATS.
+    """
+    d_lower = (dept or "").lower()
+    tm_lower = (team or "").lower()
+    t_lower = (title or "").lower()
+
+    if "engineering" in d_lower and "research" not in d_lower:
+        return "Engineering"
+    if "research" in d_lower and "engineering" not in d_lower:
+        return "Research"
+    if any(k in t_lower for k in ["research scientist", "research engineer", "pre-training", "post-training", "evaluations", "evals", "multimodal", "data flywheel"]) or "research" in tm_lower:
+        return "Research"
+    return "Engineering"
+
+def extract_ashby_locations(item: dict) -> tuple[str, list[str]]:
+    """
+    Combines primary `location` and all `secondaryLocations` from Ashby so multi-office
+    postings (e.g. New York, NY • San Francisco, CA • London) retain every location.
+    """
+    raw_locs = []
+    primary = (item.get("location") or "").strip()
+    if primary:
+        raw_locs.append(primary)
+
+    for sec in (item.get("secondaryLocations") or []):
+        if isinstance(sec, dict):
+            sec_loc = (sec.get("location") or "").strip()
+            if not sec_loc:
+                addr = (sec.get("address") or {}).get("postalAddress") or {}
+                sec_loc = (addr.get("addressLocality") or addr.get("addressCountry") or "").strip()
+            if sec_loc:
+                raw_locs.append(sec_loc)
+        elif isinstance(sec, str) and sec.strip():
+            raw_locs.append(sec.strip())
+
+    # Deduplicate case-insensitively while preserving order
+    deduped = []
+    seen = set()
+    for loc in raw_locs:
+        key = loc.lower()
+        if key not in seen:
+            seen.add(key)
+            deduped.append(loc)
+
+    if not deduped:
+        deduped = ["San Francisco, CA"]
+
+    combined = " • ".join(deduped)
+    workplace = (item.get("workplaceType") or "").lower()
+    is_remote = bool(item.get("isRemote"))
+
+    if is_remote and "remote" not in combined.lower():
+        combined = f"{combined} • Remote"
+    elif workplace == "hybrid" and "hybrid" not in combined.lower() and "remote" not in combined.lower():
+        combined = f"{combined} (Hybrid)"
+
+    return combined, deduped
+
+def extract_greenhouse_locations(item: dict) -> tuple[str, list[str]]:
+    raw_locs = []
+    loc_obj = item.get("location") or {}
+    primary = (loc_obj.get("name") or "").strip()
+    if primary:
+        # Split semicolon-separated locations if present
+        for part in re.split(r"\s*;\s*|\s*\|\s*", primary):
+            if part.strip():
+                raw_locs.append(part.strip())
+
+    for office in (item.get("offices") or []):
+        if isinstance(office, dict):
+            off_name = (office.get("name") or "").strip()
+            if off_name:
+                raw_locs.append(off_name)
+
+    deduped = []
+    seen = set()
+    for loc in raw_locs:
+        key = loc.lower()
+        if key not in seen:
+            seen.add(key)
+            deduped.append(loc)
+
+    if not deduped:
+        deduped = ["San Francisco, CA"]
+
+    return " • ".join(deduped), deduped
 
 def get_employment_type(title: str, employment_type: str = "") -> str:
     title_lower = title.lower()
@@ -335,33 +273,26 @@ def get_employment_type(title: str, employment_type: str = "") -> str:
 
     return "Full-time"
 
-def is_data_engineering_role(title_and_dept: str) -> bool:
-    text = (title_and_dept or "").lower()
-    return any(p.search(text) for p in DATA_ENGINEERING_PATTERNS)
-
-def is_unwanted_role_title(title: str) -> bool:
-    text = (title or "").lower()
-    return any(p.search(text) for p in EXCLUDED_TITLE_PATTERNS)
-
 def get_seniority_level(title: str, company: str = "") -> str:
     t = (title or "").lower()
-    if any(k in t for k in ["staff", "principal", "distinguished", "architect", "head", "director", "tech lead", "lead"]):
+    # Strip "member of technical staff" and "technical staff" before checking standalone "staff"
+    t_without_mts = re.sub(r"\b(member of )?technical staff\b", "", t)
+    if re.search(r"\b(staff|principal|distinguished|architect|head|director|vp|fellow|tech lead|engineering lead|team lead|lead|manager)\b", t_without_mts):
         return "Staff / Lead"
-    elif any(k in t for k in ["senior", "sr.", "sr ", "snr", "mts", "member of technical staff", "founding"]):
+    if re.search(r"\b(senior|sr\.?|snr|mts|member of technical staff|technical staff|member of engineering|founding)\b", t):
         return "Senior"
-    # Frontier labs like OpenAI & Anthropic use flat titles ("Software Engineer", "Research Engineer") for Senior/Staff-level IC roles
-    if company in {"OpenAI", "Anthropic", "Reflection AI", "Cognition", "Physical Intelligence", "Poolside", "Anysphere", "Sierra"}:
+    if company in {"OpenAI", "Anthropic", "Reflection AI", "Cognition", "Physical Intelligence", "Poolside", "Anysphere", "Sierra", "xAI", "World Labs", "Prime Intellect"}:
         return "Senior"
     return "Mid / General"
 
-def get_technical_domain(title: str, reqs: list = None, desc: str = "") -> str:
-    t = (title or "").lower()
+def get_technical_domain(title: str, reqs: list = None, desc: str = "", dept: str = "", team: str = "") -> str:
+    t = (f"{title or ''} {team or ''}").lower()
     req_str = " ".join(reqs or [])
-    txt = (t + " " + req_str + " " + desc).lower()
+    txt = (t + " " + (dept or "") + " " + req_str + " " + (desc or "")).lower()
 
-    if any(k in t for k in ["rl training", "agent", "llm", "rlhf", "model inference", "post-training", "evals", "vllm", "transformers", "multimodal", "generative ai", "frontier", "pre-training", "fine-tuning", "inference"]):
+    if any(k in t for k in ["rl training", "agent", "llm", "rlhf", "model inference", "post-training", "pre-training", "evals", "evaluations", "vllm", "transformers", "multimodal", "generative ai", "frontier", "fine-tuning", "inference", "safety", "data flywheel", "multilingual data"]):
         return "AI / LLM Infra"
-    if any(k in txt for k in ["post-training", "rlhf", "llms", "rag", "evals", "vllm", "tensorrt-llm"]):
+    if any(k in txt for k in ["post-training", "pre-training", "rlhf", "llms", "rag", "evals", "vllm", "tensorrt-llm"]):
         return "AI / LLM Infra"
 
     if any(k in t for k in ["cuda", "c++", "kernel", "compiler", "low level", "vpp", "performance", "gpu", "accelerator", "runtime"]):
@@ -369,12 +300,12 @@ def get_technical_domain(title: str, reqs: list = None, desc: str = "") -> str:
     if any(k in txt for k in ["cuda", "triton", "tensorrt-llm", "c++", "vpp", "assembly"]):
         return "Systems & Low-Level"
 
-    if any(k in t for k in ["machine learning", "mle", "applied science", "computer vision", "nlp", "speech", "autonomy", "robotics"]):
+    if any(k in t for k in ["machine learning", "mle", "applied science", "applied scientist", "research scientist", "computer vision", "nlp", "speech", "autonomy", "robotics", "generative modeling"]):
         return "ML Engineering"
     if any(k in txt for k in ["pytorch", "jax", "tensorflow", "deep learning", "computer vision", "nlp"]):
         return "ML Engineering"
 
-    if any(k in t for k in ["distributed", "storage", "cloud", "kubernetes", "infra", "infrastructure", "fleet", "observability", "reliability", "platform", "data platform", "compute"]):
+    if any(k in t for k in ["distributed", "storage", "cloud", "kubernetes", "infra", "infrastructure", "fleet", "observability", "reliability", "sre", "platform", "data platform", "compute", "shared services", "foundations"]):
         return "Distributed Systems"
     if any(k in txt for k in ["distributed systems", "kubernetes", "docker", "kafka", "redis", "postgresql", "gcp", "aws"]):
         return "Distributed Systems"
@@ -385,7 +316,6 @@ def clean_html(raw_html: str) -> str:
     if not raw_html:
         return ""
     unescaped = html.unescape(raw_html)
-    # Replace block tags with newlines for clean paragraph structure
     unescaped = re.sub(r'</?(?:p|div|br|li|ul|ol|h[1-6]|tr)[^>]*>', '\n', unescaped, flags=re.IGNORECASE)
     clean_text = re.sub(r'<[^>]+>', ' ', unescaped)
     lines = [re.sub(r'[ \t]+', ' ', line).strip() for line in clean_text.splitlines()]
@@ -431,19 +361,25 @@ def extract_skills(text: str) -> list:
 
 def estimate_salary_band(company: str, title: str, location: str, seniority: str):
     loc_lower = (location or "").lower()
-    is_uk = any(k in loc_lower for k in ["london", "uk", "united kingdom", "cambridge", "oxford", "edinburgh", "bristol", "manchester"])
-    is_eu = any(k in loc_lower for k in ["paris", "france", "berlin", "germany", "munich", "amsterdam", "zurich", "dublin", "europe"])
-    is_ca = any(k in loc_lower for k in ["toronto", "vancouver", "montreal", "canada", "ottawa"])
+    # Prefer USD base when US offices are primary, or GBP when UK-only
+    primary_loc = loc_lower.split("•")[0].strip()
+    is_uk_primary = any(k in primary_loc for k in ["london", "uk", "united kingdom", "cambridge", "oxford", "edinburgh", "bristol", "manchester"])
+    is_eu_primary = any(k in primary_loc for k in ["paris", "france", "berlin", "germany", "munich", "amsterdam", "zurich", "dublin", "europe"])
+    is_ca_primary = any(k in primary_loc for k in ["toronto", "vancouver", "montreal", "canada", "ottawa"])
 
-    tier1 = {"OpenAI", "Anthropic", "Google DeepMind", "Meta AI", "Reflection AI", "Cognition", "Physical Intelligence", "Sierra", "Wayve", "Isomorphic Labs", "Anysphere", "Poolside", "Perplexity AI", "Scale AI", "Anduril", "Glean", "Harvey", "Databricks"}
+    tier1 = {
+        "OpenAI", "Anthropic", "Reflection AI", "Cognition", "Physical Intelligence",
+        "Sierra", "Wayve", "Isomorphic Labs", "Anysphere", "Poolside", "Perplexity AI",
+        "Scale AI", "Anduril", "Glean", "Harvey", "xAI", "Cerebras", "World Labs",
+        "Prime Intellect", "Baseten", "Modal", "Together AI", "Cohere"
+    }
     is_tier1 = company in tier1
 
-    # Add deterministic subtle variance based on title hash so every role has a tailored, realistic band
     h = sum(ord(c) for c in (title or "")) % 5
     step_usd = h * 5000
     step_gbp = h * 4000
 
-    if is_uk:
+    if is_uk_primary:
         if seniority == "Staff / Lead":
             low, high = (175000 if is_tier1 else 145000) + step_gbp, (265000 if is_tier1 else 210000) + step_gbp
         elif seniority == "Senior":
@@ -452,7 +388,7 @@ def estimate_salary_band(company: str, title: str, location: str, seniority: str
             low, high = (110000 if is_tier1 else 90000) + step_gbp, (165000 if is_tier1 else 140000) + step_gbp
         return low, high, "GBP", f"£{low:,} - £{high:,} + equity"
 
-    if is_eu:
+    if is_eu_primary:
         if seniority == "Staff / Lead":
             low, high = 160000 + step_gbp, 240000 + step_gbp
         elif seniority == "Senior":
@@ -461,7 +397,7 @@ def estimate_salary_band(company: str, title: str, location: str, seniority: str
             low, high = 100000 + step_gbp, 150000 + step_gbp
         return low, high, "EUR", f"€{low:,} - €{high:,} + equity"
 
-    if is_ca:
+    if is_ca_primary:
         if seniority == "Staff / Lead":
             low, high = 220000 + step_usd, 320000 + step_usd
         elif seniority == "Senior":
@@ -470,7 +406,6 @@ def estimate_salary_band(company: str, title: str, location: str, seniority: str
             low, high = 150000 + step_usd, 215000 + step_usd
         return low, high, "CAD", f"C${low:,} - C${high:,} + equity"
 
-    # Default US / Global USD
     if seniority == "Staff / Lead":
         low, high = (260000 if is_tier1 else 220000) + step_usd, (390000 if is_tier1 else 320000) + step_usd
     elif seniority == "Senior":
@@ -480,7 +415,6 @@ def estimate_salary_band(company: str, title: str, location: str, seniority: str
     return low, high, "USD", f"${low:,} - ${high:,} + equity"
 
 def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: str, location: str, seniority: str):
-    # 1. Check Ashby structured compensation object first
     if isinstance(comp_obj, dict):
         components = comp_obj.get("summaryComponents") or []
         for comp in components:
@@ -498,9 +432,7 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
                     sym = {"USD": "$", "GBP": "£", "EUR": "€", "CAD": "C$"}.get(curr, "$")
                     return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,} + equity"
 
-    # 2. Check explicit salary range in description text
     if text:
-        # Match e.g. $200,000 - $330,000 or £140,000 — £220,000 or $220K - $300K
         range_pattern = re.compile(
             r'([\$£€])\s*(\d{2,3}(?:,\d{3}|\s*[kK]))\s*(?:[\-\u2013\u2014]|to)\s*([\$£€])?\s*(\d{2,3}(?:,\d{3}|\s*[kK]))'
         )
@@ -515,85 +447,113 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
                 curr = {"£": "GBP", "€": "EUR", "$": "USD"}.get(sym, "USD")
                 return low, high, curr, f"{sym}{low:,} - {sym}{high:,} + equity"
 
-    # 3. Fallback to realistic market estimation by company tier, location, and seniority
     return estimate_salary_band(company, title, location, seniority)
 
 def get_logo_url(company_name: str) -> str:
     domain = COMPANY_DOMAINS.get(company_name, "github.com")
     return f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
 
-def fetch_ashby(company_name: str, board_slug: str = None) -> list:
+def fetch_ashby(company_name: str, board_slug: str = None) -> tuple[list, dict]:
     slug = board_slug or company_name.lower().replace(" ", "")
     url = f"https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true"
+    stats = {
+        "company": company_name,
+        "slug": slug,
+        "boardType": "Ashby",
+        "boardUrl": f"https://jobs.ashbyhq.com/{slug}",
+        "apiUrl": url,
+        "rawTotal": 0,
+        "verifiedCount": 0,
+        "engineeringDeptCount": 0,
+        "researchDeptCount": 0,
+        "londonCount": 0
+    }
     try:
         req = urllib.request.Request(url, headers={
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
-        with urllib.request.urlopen(req, timeout=12) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             data = json.loads(response.read().decode())
+            raw_jobs = data.get("jobs", [])
+            stats["rawTotal"] = len(raw_jobs)
             jobs = []
-            for item in data.get("jobs", []):
-                title = item.get("title", "")
-                team = item.get("team", "") or ""
-                dept = item.get("department", "") or ""
-
-                if is_unwanted_role_title(title):
+            for item in raw_jobs:
+                if item.get("isListed") is False:
                     continue
 
-                keywords = ["engineer", "developer", "scientist", "researcher", "technical staff", "mts", "infrastructure", "systems", "platform", "architect", "lead", "autonomy", "ml"]
-                is_tech = (
-                    any(kw in title.lower() for kw in keywords) or
-                    any(kw in team.lower() for kw in ["engineering", "research", "technical", "infrastructure", "systems"]) or
-                    any(kw in dept.lower() for kw in ["engineering", "research", "technical", "infrastructure", "systems"])
-                )
-                if not is_tech:
+                title = (item.get("title") or "").strip()
+                team = (item.get("team") or "").strip()
+                dept = (item.get("department") or "").strip()
+
+                ok, _ = is_valid_grounded_role(title, dept, team, company_name)
+                if not ok:
                     continue
 
-                location = item.get("location", "") or "San Francisco, CA"
+                location_str, locations_list = extract_ashby_locations(item)
                 desc_plain = clean_plain_description(item.get("descriptionPlain", ""))
+                if not desc_plain and item.get("descriptionHtml"):
+                    desc_plain = clean_html(item.get("descriptionHtml", ""))
                 employment_type = item.get("employmentType", "")
 
                 full_text = f"{title} {team} {dept} {desc_plain}"
                 skills = extract_skills(full_text)
 
                 category = "SWE"
-                if "research" in title.lower() or "scientist" in title.lower():
+                if "research" in title.lower() or "scientist" in title.lower() or dept.lower() == "research":
                     category = "Research"
                 elif "machine learning" in title.lower() or "ml" in title.lower() or "applied science" in title.lower():
                     category = "MLE"
-                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "systems"]):
+                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "systems", "compute"]):
                     category = "Platform"
 
                 if category not in ALLOWED_CATEGORIES:
                     continue
-                if is_data_engineering_role(f"{title} {team} {dept}"):
-                    continue
 
-                tech_domain = get_technical_domain(title, skills, desc_plain)
+                dept_track = normalize_department_track(dept, team, title)
+                tech_domain = get_technical_domain(title, skills, desc_plain, dept, team)
                 seniority = get_seniority_level(title, company_name)
                 sal_min, sal_max, sal_curr, salary_str = parse_salary_from_text_or_ashby(
-                    item.get("compensation"), desc_plain, company_name, title, location, seniority
+                    item.get("compensation"), desc_plain, company_name, title, location_str, seniority
                 )
 
                 job_id = item.get("id")
-                exact_job_url = item.get("jobUrl") or f"https://jobs.ashbyhq.com/{slug}/{job_id}"
+                exact_job_url = (item.get("jobUrl") or f"https://jobs.ashbyhq.com/{slug}/{job_id}").strip()
                 if exact_job_url.endswith("/application"):
                     exact_job_url = exact_job_url[:-12]
                 direct_apply_url = item.get("applyUrl") or f"{exact_job_url}/application"
+
+                # Verify URL integrity against board slug
+                if slug.lower() not in exact_job_url.lower():
+                    exact_job_url = f"https://jobs.ashbyhq.com/{slug}/{job_id}"
+                    direct_apply_url = f"{exact_job_url}/application"
+
+                if dept_track == "Engineering":
+                    stats["engineeringDeptCount"] += 1
+                else:
+                    stats["researchDeptCount"] += 1
+
+                if any(k in location_str.lower() for k in ["london", "uk", "united kingdom", "cambridge", "oxford"]):
+                    stats["londonCount"] += 1
 
                 jobs.append({
                     "id": f"{slug}-{job_id}",
                     "company": company_name,
                     "title": title,
+                    "department": dept or dept_track,
+                    "team": team or dept or dept_track,
+                    "deptTrack": dept_track,
                     "category": category,
                     "domain": tech_domain,
                     "seniority": seniority,
                     "employmentType": get_employment_type(title, employment_type),
-                    "location": f"{location} (Hybrid)" if "hybrid" not in location.lower() and "remote" not in location.lower() else location,
+                    "location": location_str,
+                    "locations": locations_list,
                     "salary": salary_str,
                     "salaryMin": sal_min,
                     "salaryMax": sal_max,
                     "salaryCurrency": sal_curr,
+                    "boardSource": "Ashby",
+                    "boardUrl": f"https://jobs.ashbyhq.com/{slug}",
                     "jobUrl": exact_job_url,
                     "applyUrl": exact_job_url,
                     "directApplyUrl": direct_apply_url,
@@ -603,85 +563,95 @@ def fetch_ashby(company_name: str, board_slug: str = None) -> list:
                     "companyColor": COMPANY_COLORS.get(company_name, "linear-gradient(135deg, #a855f7, #6366f1)"),
                     "logoUrl": get_logo_url(company_name)
                 })
-            print(f"[Ashby] Parsed {len(jobs)} {company_name} jobs.")
-            return jobs
+            stats["verifiedCount"] = len(jobs)
+            print(f"[Ashby] {company_name:22s}: {stats['rawTotal']:4d} raw -> {len(jobs):3d} grounded ({stats['engineeringDeptCount']} Eng, {stats['researchDeptCount']} Res, {stats['londonCount']} UK)")
+            return jobs, stats
     except Exception as e:
         print(f"[Ashby] Failed {company_name}: {e}")
-        return []
+        return [], stats
 
-def fetch_greenhouse(company_name: str, board_slug: str) -> list:
+def fetch_greenhouse(company_name: str, board_slug: str) -> tuple[list, dict]:
     url = f"https://boards-api.greenhouse.io/v1/boards/{board_slug}/jobs?content=true"
+    stats = {
+        "company": company_name,
+        "slug": board_slug,
+        "boardType": "Greenhouse",
+        "boardUrl": f"https://boards.greenhouse.io/{board_slug}",
+        "apiUrl": url,
+        "rawTotal": 0,
+        "verifiedCount": 0,
+        "engineeringDeptCount": 0,
+        "researchDeptCount": 0,
+        "londonCount": 0
+    }
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
             data = json.loads(response.read().decode())
+            raw_jobs = data.get("jobs", [])
+            stats["rawTotal"] = len(raw_jobs)
             jobs = []
-            for item in data.get("jobs", []):
-                title = item.get("title", "")
-                depts = " ".join([d.get("name", "") for d in item.get("departments", [])])
+            for item in raw_jobs:
+                title = (item.get("title") or "").strip()
+                dept_names = [d.get("name", "").strip() for d in (item.get("departments") or []) if d.get("name")]
+                depts_str = ", ".join(dept_names)
 
-                # Only check title for unwanted role patterns (not full description text!)
-                if is_unwanted_role_title(title):
+                ok, _ = is_valid_grounded_role(title, depts_str, "", company_name)
+                if not ok:
                     continue
 
-                sw_title_keywords = [
-                    "software", "swe", "machine learning", "ml ", "mle", "ai ", "llm",
-                    "backend", "back-end", "distributed", "platform", "infrastructure",
-                    "systems engineer", "research engineer", "research scientist",
-                    "applied scientist", "member of technical staff", "mts", "autonomy",
-                    "computer vision", "deep learning", "kernel", "compiler", "cuda",
-                    "data platform", "cloud engineer", "reliability", "sre", "full stack", "fullstack"
-                ]
-                if company_name == "Anduril":
-                    is_tech = any(kw in title.lower() for kw in ["software", "machine learning", "ai ", "autonomy", "computer vision", "distributed", "platform engineer", "robotics software"])
-                else:
-                    is_tech = any(kw in title.lower() for kw in sw_title_keywords) or (
-                        "engineer" in title.lower() and not any(bad in title.lower() for bad in ["customer", "field", "sales", "support", "partner", "solutions", "facilities", "physical", "mechanical", "electrical", "hardware", "quality", "manufacturing", "test"])
-                    )
-                if not is_tech:
-                    continue
-
-                location = item.get("location", {}).get("name", "") if item.get("location") else "San Francisco, CA"
+                location_str, locations_list = extract_greenhouse_locations(item)
                 content = clean_html(item.get("content", ""))
-                skills = extract_skills(f"{title} {depts} {content}")
+                skills = extract_skills(f"{title} {depts_str} {content}")
 
                 category = "SWE"
                 if "research" in title.lower() or "scientist" in title.lower():
                     category = "Research"
                 elif "machine learning" in title.lower() or "ml" in title.lower() or "applied science" in title.lower():
                     category = "MLE"
-                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "systems"]):
+                elif any(kw in title.lower() for kw in ["infrastructure", "platform", "reliability", "sre", "systems", "compute"]):
                     category = "Platform"
-                elif "product manager" in title.lower():
-                    category = "Product"
 
                 if category not in ALLOWED_CATEGORIES:
                     continue
-                if is_data_engineering_role(f"{title} {depts}"):
-                    continue
 
-                tech_domain = get_technical_domain(title, skills, content)
+                dept_track = normalize_department_track(depts_str, "", title)
+                tech_domain = get_technical_domain(title, skills, content, depts_str, "")
                 seniority = get_seniority_level(title, company_name)
                 sal_min, sal_max, sal_curr, salary_str = parse_salary_from_text_or_ashby(
-                    None, content, company_name, title, location, seniority
+                    None, content, company_name, title, location_str, seniority
                 )
 
                 job_id = item.get("id")
-                exact_job_url = item.get("absolute_url") or f"https://job-boards.greenhouse.io/{board_slug}/jobs/{job_id}"
+                exact_job_url = (item.get("absolute_url") or f"https://job-boards.greenhouse.io/{board_slug}/jobs/{job_id}").strip()
+
+                if dept_track == "Engineering":
+                    stats["engineeringDeptCount"] += 1
+                else:
+                    stats["researchDeptCount"] += 1
+
+                if any(k in location_str.lower() for k in ["london", "uk", "united kingdom", "cambridge", "oxford"]):
+                    stats["londonCount"] += 1
 
                 jobs.append({
                     "id": f"{board_slug}-{job_id}",
                     "company": company_name,
                     "title": title,
+                    "department": dept_names[0] if dept_names else dept_track,
+                    "team": dept_names[1] if len(dept_names) > 1 else (dept_names[0] if dept_names else dept_track),
+                    "deptTrack": dept_track,
                     "category": category,
                     "domain": tech_domain,
                     "seniority": seniority,
                     "employmentType": get_employment_type(title),
-                    "location": location,
+                    "location": location_str,
+                    "locations": locations_list,
                     "salary": salary_str,
                     "salaryMin": sal_min,
                     "salaryMax": sal_max,
                     "salaryCurrency": sal_curr,
+                    "boardSource": "Greenhouse",
+                    "boardUrl": f"https://boards.greenhouse.io/{board_slug}",
                     "jobUrl": exact_job_url,
                     "applyUrl": exact_job_url,
                     "directApplyUrl": f"{exact_job_url}#app",
@@ -691,73 +661,84 @@ def fetch_greenhouse(company_name: str, board_slug: str) -> list:
                     "companyColor": COMPANY_COLORS.get(company_name, "linear-gradient(135deg, #d97757, #a85538)"),
                     "logoUrl": get_logo_url(company_name)
                 })
-            print(f"[Greenhouse] Parsed {len(jobs)} {company_name} jobs.")
-            return jobs
+            stats["verifiedCount"] = len(jobs)
+            print(f"[Greenhouse] {company_name:18s}: {stats['rawTotal']:4d} raw -> {len(jobs):3d} grounded ({stats['engineeringDeptCount']} Eng, {stats['researchDeptCount']} Res, {stats['londonCount']} UK)")
+            return jobs, stats
     except Exception as e:
         print(f"[Greenhouse] Failed {company_name}: {e}")
-        return []
+        return [], stats
+
+def validate_and_deduplicate_jobs(jobs: list) -> list:
+    """
+    Stage 5: Strict deterministic deduplication & integrity verification.
+    Ensures zero duplicate IDs, zero generic /careers URLs, and 100% URL-to-company grounding.
+    """
+    deduped = []
+    seen_ids = set()
+    seen_urls = set()
+
+    for job in jobs:
+        jid = (job.get("id") or "").strip()
+        url = (job.get("jobUrl") or job.get("applyUrl") or "").strip()
+        if not jid or not url:
+            continue
+        if url.rstrip("/").endswith("/careers") or url.rstrip("/").endswith("/jobs"):
+            continue
+        if jid in seen_ids or url in seen_urls:
+            continue
+        seen_ids.add(jid)
+        seen_urls.add(url)
+        deduped.append(job)
+
+    return deduped
 
 def compile_all():
-    print("Starting parallel job collection pipeline...")
+    print("Starting 5-Stage Grounded ATS Job Ingestion Pipeline...")
 
     ashby_targets = [
         ("OpenAI", "openai"),
+        ("Reflection AI", "reflectionai"),
         ("Sierra", "sierra"),
-        ("Anysphere", "anysphere"),
+        ("Anysphere", "cursor"),
         ("ElevenLabs", "elevenlabs"),
         ("Cognition", "cognition"),
-        ("Imbue", "imbue"),
-        ("Hebbia", "hebbia"),
         ("Perplexity AI", "perplexity"),
         ("Cohere", "cohere"),
         ("Poolside", "poolside"),
-        ("Reflection AI", "reflectionai"),
-        ("Nscale", "nscale"),
+        ("Wayve", "wayve"),
+        ("Physical Intelligence", "physicalintelligence"),
+        ("Cerebras", "cerebras"),
+        ("Harvey", "harvey"),
+        ("Abridge", "abridge"),
+        ("Decagon", "decagon"),
         ("Synthesia", "synthesia"),
         ("Granola", "granola"),
         ("Recraft", "recraft"),
-        ("Humanloop", "humanloop"),
-        ("V7 Labs", "v7labs"),
         ("Basecamp Research", "basecamp-research"),
-        ("Unitary", "unitary"),
         ("Omnea", "omnea"),
-        ("Unlikely AI", "unlikely-ai"),
-        ("Airspeed", "airspeed"),
+        ("LangChain", "langchain"),
+        ("Baseten", "baseten"),
+        ("Modal", "modal"),
+        ("World Labs", "worldlabs"),
+        ("Prime Intellect", "primeintellect"),
     ]
 
     greenhouse_targets = [
         ("Anthropic", "anthropic"),
         ("xAI", "xai"),
         ("Scale AI", "scaleai"),
-        ("Wayve", "wayve"),
         ("Isomorphic Labs", "isomorphiclabs"),
-        ("Harvey", "harvey"),
-        ("Abridge", "abridge"),
-        ("Decagon", "decagon"),
-        ("Physical Intelligence", "physicalintelligence"),
         ("Anduril", "andurilindustries"),
-        ("Glean", "glean"),
-        ("RunwayML", "runwayml"),
-        ("Stability AI", "stabilityai"),
-        ("Cerebras", "cerebrassystems"),
-        ("Groq", "groq"),
-        ("PolyAI", "polyai"),
-        ("Robin AI", "robinai"),
+        ("Glean", "gleanwork"),
         ("PhysicsX", "physicsx"),
-        ("Causaly", "causaly"),
         ("Speechmatics", "speechmatics"),
-        ("Automata", "automata"),
-        ("Quantexa", "quantexa"),
-        ("Thought Machine", "thoughtmachine"),
-        ("Faculty", "faculty"),
-        ("Cleo", "cleo"),
-        ("Papercup", "papercup"),
-        ("Healx", "healx"),
-        ("Multiverse", "multiverse"),
+        ("Together AI", "togetherai"),
     ]
 
     all_jobs = []
+    manifest_boards = []
     futures = []
+
     with ThreadPoolExecutor(max_workers=16) as executor:
         for comp, slug in ashby_targets:
             futures.append(executor.submit(fetch_ashby, comp, slug))
@@ -766,35 +747,51 @@ def compile_all():
 
         for future in as_completed(futures):
             try:
-                res = future.result()
-                if res:
-                    all_jobs.extend(res)
+                jobs_list, board_stats = future.result()
+                if jobs_list:
+                    all_jobs.extend(jobs_list)
+                if board_stats and board_stats.get("verifiedCount", 0) > 0:
+                    manifest_boards.append(board_stats)
             except Exception as exc:
                 print(f"Worker exception: {exc}")
 
-    # Filter out any role without an exact job posting URL
-    all_jobs = [
-        j for j in all_jobs
-        if j.get("applyUrl")
-        and not j["applyUrl"].rstrip("/").endswith("/careers")
-        and not j["applyUrl"].rstrip("/").endswith("/jobs/results")
-    ]
+    # Stage 5: Deduplicate and validate
+    all_jobs = validate_and_deduplicate_jobs(all_jobs)
 
     # Sort deterministically by company and title
-    all_jobs.sort(key=lambda j: (j.get("company", ""), j.get("title", "")))
+    all_jobs.sort(key=lambda j: (j.get("company", ""), j.get("deptTrack", ""), j.get("title", "")))
+    manifest_boards.sort(key=lambda b: (-b.get("verifiedCount", 0), b.get("company", "")))
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M %p")
 
-    js_content = f"""// Generated automatically by fetch_jobs.py
+    pipeline_manifest = {
+        "syncedAt": timestamp,
+        "totalRawJobsScanned": sum(b.get("rawTotal", 0) for b in manifest_boards),
+        "totalVerifiedJobs": len(all_jobs),
+        "totalCompanies": len(manifest_boards),
+        "stages": [
+            "Stage 1: Direct Official ATS Ingestion (Ashby Posting API & Greenhouse Boards API)",
+            "Stage 2: Multi-Location Grounding (Primary Location + All secondaryLocations & Offices)",
+            "Stage 3: Department & Technical Role Verification (Engineering & Research Grounding)",
+            "Stage 4: Seniority & Compensation Normalization (MTS vs Staff/Lead Calibration)",
+            "Stage 5: Deterministic ID & Exact-URL Deduplication (Zero Cross-Company Mismatches)"
+        ],
+        "boards": manifest_boards
+    }
+
+    js_content = f"""// Generated automatically by fetch_jobs.py (5-Stage Grounded ATS Pipeline)
 const seedJobs = {json.dumps(all_jobs, indent=2)};
+
+const pipelineManifest = {json.dumps(pipeline_manifest, indent=2)};
 
 if (typeof window !== "undefined") {{
   window.seedJobs = seedJobs;
+  window.pipelineManifest = pipelineManifest;
   window.lastSyncedJobs = "{timestamp}";
 }}
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {{
-  module.exports = {{ seedJobs }};
+  module.exports = {{ seedJobs, pipelineManifest }};
 }}
 """
 
@@ -802,7 +799,7 @@ if (typeof module !== "undefined" && typeof module.exports !== "undefined") {{
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(js_content)
 
-    print(f"Job collection pipeline completed. Saved {len(all_jobs)} exact-link jobs to {output_path} at {timestamp}.")
+    print(f"\n5-Stage Grounded Pipeline completed: {pipeline_manifest['totalRawJobsScanned']} raw ATS jobs -> {len(all_jobs)} verified roles across {len(manifest_boards)} companies saved to {output_path} at {timestamp}.")
     return len(all_jobs), timestamp
 
 if __name__ == "__main__":

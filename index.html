@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AuraTrack AI — Frontier AI Careers, Compensation & Resume Intelligence</title>
   <meta name="description" content="Explore 1,100+ verified software & AI engineering roles at OpenAI, Anthropic, xAI, Perplexity, Scale AI, and frontier labs with live currency conversion and resume matching.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4.0">
   <!-- Load PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
   <!-- Load job catalog first -->
-  <script src="jobs.js" defer></script>
+  <script src="jobs.js?v=4.0" defer></script>
   <!-- Load app logic -->
-  <script src="app.js" defer></script>
+  <script src="app.js?v=4.0" defer></script>
 </head>
 <body>
 
@@ -41,7 +41,7 @@
             <a href="#discover" onclick="event.preventDefault(); switchTab('discover');">
               <svg class="nav-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
               <span>Discover Jobs</span>
-              <span class="nav-badge" id="nav-jobs-count-badge">1121</span>
+              <span class="nav-badge" id="nav-jobs-count-badge">1483</span>
             </a>
           </li>
           <li class="nav-item" id="nav-resume">
@@ -165,6 +165,9 @@
               </select>
             </div>
 
+            <button class="btn btn-secondary btn-sm" onclick="openPipelineModal()" title="View 5-Stage Grounded ATS Pipeline & Per-Company Verification Manifest" style="border-color: rgba(16, 185, 129, 0.35); color: #34d399; background: rgba(16, 185, 129, 0.08);">
+              ✓ Grounded Pipeline
+            </button>
             <button id="sync-jobs-btn" class="btn btn-secondary btn-sm" onclick="syncLiveJobs()" title="Refresh live job postings">
               <svg id="sync-icon-svg" style="width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6H16" />
@@ -189,6 +192,14 @@
           </div>
 
           <div class="facet-group">
+            <span class="filter-section-title">ATS Department</span>
+            <div class="filter-pill-group" id="dept-pill-group">
+              <button class="filter-pill" data-type="deptTrack" data-val="Engineering" onclick="togglePillFilter('deptTrack', 'Engineering', this)" title="Filter strictly to Engineering department roles (e.g. Reflection AI's 9 Engineering roles)">⚙️ Engineering</button>
+              <button class="filter-pill" data-type="deptTrack" data-val="Research" onclick="togglePillFilter('deptTrack', 'Research', this)" title="Filter strictly to Research & Science department roles">🔬 Research</button>
+            </div>
+          </div>
+
+          <div class="facet-group">
             <span class="filter-section-title">Engineering Track</span>
             <div class="filter-pill-group" id="domain-pill-group">
               <button class="filter-pill" data-type="domain" data-val="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">AI / LLM Infra</button>
@@ -200,21 +211,26 @@
           </div>
 
           <div class="facet-group">
-            <span class="filter-section-title">Seniority</span>
+            <span class="filter-section-title">Seniority & Match</span>
             <div class="filter-pill-group" id="seniority-pill-group">
               <button class="filter-pill" data-type="seniority" data-val="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">Staff / Lead</button>
               <button class="filter-pill" data-type="seniority" data-val="Senior" onclick="togglePillFilter('seniority', 'Senior', this)">Senior / MTS</button>
               <button class="filter-pill" data-type="seniority" data-val="Mid / General" onclick="togglePillFilter('seniority', 'Mid / General', this)">Mid-Level</button>
+              <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">🎯 75%+ Fit</button>
+              <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">👍 50%+ Fit</button>
             </div>
           </div>
 
-          <div class="facet-group">
-            <span class="filter-section-title">Match & Compensation</span>
-            <div class="filter-pill-group" id="match-pill-group">
-              <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">75%+ Match</button>
-              <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">50%+ Match</button>
-              <button class="filter-pill" id="salary-pill-200k" data-type="salary" data-val="200k" onclick="togglePillFilter('salary', '200k', this)">💎 $200k+</button>
-              <button class="filter-pill" id="salary-pill-150k" data-type="salary" data-val="150k" onclick="togglePillFilter('salary', '150k', this)">💵 $150k+</button>
+          <div class="facet-group" style="grid-column: 1 / -1;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="filter-section-title">Compensation Ranges in Results</span>
+                <span id="salary-range-subtitle" style="font-size: 0.73rem; color: var(--text-muted);">Dynamic salary brackets calibrated from current matching roles</span>
+              </div>
+              <button type="button" id="clear-salary-ranges-btn" class="btn-text-mini" style="display: none;" onclick="clearSalarySelection()">All Salary Ranges</button>
+            </div>
+            <div class="filter-pill-group" id="salary-pill-group">
+              <!-- Dynamically populated by JS based on current filtered results & selected currency -->
             </div>
           </div>
         </div>
@@ -613,6 +629,20 @@
           <button type="button" class="btn btn-secondary" style="width: 100%; font-size: 0.82rem;" onclick="createQuickLocalProfile()">Continue as Local Guest Profile</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Grounded ATS Pipeline & Verification Manifest Modal -->
+  <div id="pipeline-modal" class="modal-overlay" onclick="if(event.target === this) closePipelineModal()">
+    <div class="glass modal-container" style="max-width: 920px;">
+      <button class="modal-close" onclick="closePipelineModal()" title="Close (Esc)">
+        <svg class="modal-close-svg" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="pipeline-modal-body">
+        <!-- Rendered dynamically by JS from window.pipelineManifest -->
+      </div>
     </div>
   </div>
 
