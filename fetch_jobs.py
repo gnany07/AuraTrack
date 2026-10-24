@@ -42,6 +42,72 @@ COMPANY_COLORS = {
     "World Labs": "linear-gradient(135deg, #8b5cf6, #6d28d9)",
     "Prime Intellect": "linear-gradient(135deg, #ec4899, #8b5cf6)",
     "Together AI": "linear-gradient(135deg, #0ea5e9, #2563eb)",
+    "Faculty": "linear-gradient(135deg, #2563eb, #1e40af)",
+    "ClickHouse": "linear-gradient(135deg, #eab308, #ca8a04)",
+    "Lovable": "linear-gradient(135deg, #ec4899, #db2777)",
+    "Multiverse": "linear-gradient(135deg, #6366f1, #4338ca)",
+    "Snowflake": "linear-gradient(135deg, #0ea5e9, #0284c7)",
+    "Vanta": "linear-gradient(135deg, #7c3aed, #5b21b6)",
+    "incident.io": "linear-gradient(135deg, #f43f5e, #e11d48)",
+    "H Company": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+    "Attio": "linear-gradient(135deg, #10b981, #059669)",
+    "Quantexa": "linear-gradient(135deg, #0284c7, #0369a1)",
+    "Paddle": "linear-gradient(135deg, #f59e0b, #d97706)",
+    "Ramp": "linear-gradient(135deg, #84cc16, #4d7c0f)",
+    "Writer": "linear-gradient(135deg, #a855f7, #7e22ce)",
+    "Zilch": "linear-gradient(135deg, #10b981, #047857)",
+    "Fireworks AI": "linear-gradient(135deg, #f97316, #ea580c)",
+    "Linear": "linear-gradient(135deg, #6366f1, #4f46e5)",
+    "OakNorth": "linear-gradient(135deg, #14b8a6, #0d9488)",
+    "Plaid": "linear-gradient(135deg, #0f172a, #334155)",
+    "Wayflyer": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "Socket": "linear-gradient(135deg, #8b5cf6, #6d28d9)",
+    "Notion": "linear-gradient(135deg, #475569, #1e293b)",
+    "Factory": "linear-gradient(135deg, #f97316, #c2410c)",
+    "Sardine": "linear-gradient(135deg, #06b6d4, #0891b2)",
+    "Dust": "linear-gradient(135deg, #10b981, #059669)",
+    "Reka AI": "linear-gradient(135deg, #ec4899, #be185d)",
+    "Griffin": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "Supabase": "linear-gradient(135deg, #10b981, #047857)",
+    "Snyk": "linear-gradient(135deg, #7c3aed, #4c1d95)",
+    "Sequence": "linear-gradient(135deg, #6366f1, #4338ca)",
+    "Latent Labs": "linear-gradient(135deg, #14b8a6, #0f766e)",
+    "PostHog": "linear-gradient(135deg, #f59e0b, #b45309)",
+    "Plain": "linear-gradient(135deg, #38bdf8, #0284c7)",
+    "Braintrust": "linear-gradient(135deg, #a855f7, #6366f1)",
+    "Cartesia": "linear-gradient(135deg, #ec4899, #9d174d)",
+    "Codat": "linear-gradient(135deg, #2563eb, #1e3a8a)",
+    "Cradle": "linear-gradient(135deg, #10b981, #059669)",
+    "Tractable": "linear-gradient(135deg, #0ea5e9, #0369a1)",
+    "TrueLayer": "linear-gradient(135deg, #6366f1, #3730a3)",
+    "Deliveroo": "linear-gradient(135deg, #00ccbc, #00998d)",
+    "Graphcore": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "Monzo": "linear-gradient(135deg, #ff4f40, #c81e1e)",
+    "Stripe": "linear-gradient(135deg, #635bff, #4338ca)",
+    "Helsing": "linear-gradient(135deg, #475569, #1e293b)",
+    "Intercom": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "Elastic": "linear-gradient(135deg, #00bfb3, #007770)",
+    "Tide": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "Datadog": "linear-gradient(135deg, #632ca6, #4c1d95)",
+    "Celonis": "linear-gradient(135deg, #10b981, #047857)",
+    "Affirm": "linear-gradient(135deg, #4f46e5, #312e81)",
+    "Vercel": "linear-gradient(135deg, #334155, #0f172a)",
+    "Grafana Labs": "linear-gradient(135deg, #f97316, #c2410c)",
+    "Rubrik": "linear-gradient(135deg, #06b6d4, #0e7490)",
+    "Coinbase": "linear-gradient(135deg, #0052ff, #0039b3)",
+    "Adyen": "linear-gradient(135deg, #0abf53, #068a3c)",
+    "Airbnb": "linear-gradient(135deg, #ff385c, #be123c)",
+    "Robinhood": "linear-gradient(135deg, #10b981, #047857)",
+    "Fireblocks": "linear-gradient(135deg, #6366f1, #4338ca)",
+    "GoCardless": "linear-gradient(135deg, #fbbf24, #d97706)",
+    "Form3": "linear-gradient(135deg, #0ea5e9, #0284c7)",
+    "Tailscale": "linear-gradient(135deg, #64748b, #334155)",
+    "PolyAI": "linear-gradient(135deg, #8b5cf6, #5b21b6)",
+    "Stability AI": "linear-gradient(135deg, #a855f7, #6b21a8)",
+    "Cloudflare": "linear-gradient(135deg, #f97316, #ea580c)",
+    "Cleo": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+    "Primer": "linear-gradient(135deg, #ec4899, #be185d)",
+    "Oxa": "linear-gradient(135deg, #14b8a6, #0f766e)",
 }
 
 COMPANY_DOMAINS = {
@@ -79,6 +145,72 @@ COMPANY_DOMAINS = {
     "World Labs": "worldlabs.ai",
     "Prime Intellect": "primeintellect.ai",
     "Together AI": "together.ai",
+    "Faculty": "faculty.ai",
+    "ClickHouse": "clickhouse.com",
+    "Lovable": "lovable.dev",
+    "Multiverse": "multiverse.io",
+    "Snowflake": "snowflake.com",
+    "Vanta": "vanta.com",
+    "incident.io": "incident.io",
+    "H Company": "hcompany.ai",
+    "Attio": "attio.com",
+    "Quantexa": "quantexa.com",
+    "Paddle": "paddle.com",
+    "Ramp": "ramp.com",
+    "Writer": "writer.com",
+    "Zilch": "zilch.com",
+    "Fireworks AI": "fireworks.ai",
+    "Linear": "linear.app",
+    "OakNorth": "oaknorth.co.uk",
+    "Plaid": "plaid.com",
+    "Wayflyer": "wayflyer.com",
+    "Socket": "socket.dev",
+    "Notion": "notion.so",
+    "Factory": "factory.ai",
+    "Sardine": "sardine.ai",
+    "Dust": "dust.tt",
+    "Reka AI": "reka.ai",
+    "Griffin": "griffin.com",
+    "Supabase": "supabase.com",
+    "Snyk": "snyk.io",
+    "Sequence": "sequencehq.com",
+    "Latent Labs": "latentlabs.com",
+    "PostHog": "posthog.com",
+    "Plain": "plain.com",
+    "Braintrust": "braintrust.dev",
+    "Cartesia": "cartesia.ai",
+    "Codat": "codat.io",
+    "Cradle": "cradle.bio",
+    "Tractable": "tractable.ai",
+    "TrueLayer": "truelayer.com",
+    "Deliveroo": "deliveroo.co.uk",
+    "Graphcore": "graphcore.ai",
+    "Monzo": "monzo.com",
+    "Stripe": "stripe.com",
+    "Helsing": "helsing.ai",
+    "Intercom": "intercom.com",
+    "Elastic": "elastic.co",
+    "Tide": "tide.co",
+    "Datadog": "datadoghq.com",
+    "Celonis": "celonis.com",
+    "Affirm": "affirm.com",
+    "Vercel": "vercel.com",
+    "Grafana Labs": "grafana.com",
+    "Rubrik": "rubrik.com",
+    "Coinbase": "coinbase.com",
+    "Adyen": "adyen.com",
+    "Airbnb": "airbnb.com",
+    "Robinhood": "robinhood.com",
+    "Fireblocks": "fireblocks.com",
+    "GoCardless": "gocardless.com",
+    "Form3": "form3.tech",
+    "Tailscale": "tailscale.com",
+    "PolyAI": "poly.ai",
+    "Stability AI": "stability.ai",
+    "Cloudflare": "cloudflare.com",
+    "Cleo": "web.meetcleo.com",
+    "Primer": "primer.io",
+    "Oxa": "oxa.tech",
 }
 
 SKILL_LIST = [
@@ -315,7 +447,8 @@ def get_technical_domain(title: str, reqs: list = None, desc: str = "", dept: st
 def clean_html(raw_html: str) -> str:
     if not raw_html:
         return ""
-    unescaped = html.unescape(raw_html)
+    # Double-unescape because Greenhouse JSON encodes HTML entities twice (e.g. &amp;mdash; -> &mdash; -> —)
+    unescaped = html.unescape(html.unescape(raw_html))
     unescaped = re.sub(r'</?(?:p|div|br|li|ul|ol|h[1-6]|tr)[^>]*>', '\n', unescaped, flags=re.IGNORECASE)
     clean_text = re.sub(r'<[^>]+>', ' ', unescaped)
     lines = [re.sub(r'[ \t]+', ' ', line).strip() for line in clean_text.splitlines()]
@@ -361,7 +494,6 @@ def extract_skills(text: str) -> list:
 
 def estimate_salary_band(company: str, title: str, location: str, seniority: str):
     loc_lower = (location or "").lower()
-    # Prefer USD base when US offices are primary, or GBP when UK-only
     primary_loc = loc_lower.split("•")[0].strip()
     is_uk_primary = any(k in primary_loc for k in ["london", "uk", "united kingdom", "cambridge", "oxford", "edinburgh", "bristol", "manchester"])
     is_eu_primary = any(k in primary_loc for k in ["paris", "france", "berlin", "germany", "munich", "amsterdam", "zurich", "dublin", "europe"])
@@ -377,41 +509,41 @@ def estimate_salary_band(company: str, title: str, location: str, seniority: str
 
     h = sum(ord(c) for c in (title or "")) % 5
     step_usd = h * 5000
-    step_gbp = h * 4000
+    step_gbp = h * 5000
 
     if is_uk_primary:
         if seniority == "Staff / Lead":
-            low, high = (175000 if is_tier1 else 145000) + step_gbp, (265000 if is_tier1 else 210000) + step_gbp
+            low, high = (265000 if is_tier1 else 225000) + step_gbp, (385000 if is_tier1 else 325000) + step_gbp
         elif seniority == "Senior":
-            low, high = (140000 if is_tier1 else 115000) + step_gbp, (215000 if is_tier1 else 175000) + step_gbp
+            low, high = (215000 if is_tier1 else 190000) + step_gbp, (310000 if is_tier1 else 270000) + step_gbp
         else:
-            low, high = (110000 if is_tier1 else 90000) + step_gbp, (165000 if is_tier1 else 140000) + step_gbp
+            low, high = (185000 if is_tier1 else 170000) + step_gbp, (255000 if is_tier1 else 235000) + step_gbp
         return low, high, "GBP", f"£{low:,} - £{high:,} + equity"
 
     if is_eu_primary:
         if seniority == "Staff / Lead":
-            low, high = 160000 + step_gbp, 240000 + step_gbp
+            low, high = 230000 + step_gbp, 330000 + step_gbp
         elif seniority == "Senior":
-            low, high = 130000 + step_gbp, 195000 + step_gbp
+            low, high = 195000 + step_gbp, 275000 + step_gbp
         else:
-            low, high = 100000 + step_gbp, 150000 + step_gbp
+            low, high = 170000 + step_gbp, 235000 + step_gbp
         return low, high, "EUR", f"€{low:,} - €{high:,} + equity"
 
     if is_ca_primary:
         if seniority == "Staff / Lead":
-            low, high = 220000 + step_usd, 320000 + step_usd
+            low, high = 265000 + step_usd, 375000 + step_usd
         elif seniority == "Senior":
-            low, high = 185000 + step_usd, 265000 + step_usd
+            low, high = 225000 + step_usd, 315000 + step_usd
         else:
-            low, high = 150000 + step_usd, 215000 + step_usd
+            low, high = 195000 + step_usd, 265000 + step_usd
         return low, high, "CAD", f"C${low:,} - C${high:,} + equity"
 
     if seniority == "Staff / Lead":
-        low, high = (260000 if is_tier1 else 220000) + step_usd, (390000 if is_tier1 else 320000) + step_usd
+        low, high = (290000 if is_tier1 else 250000) + step_usd, (440000 if is_tier1 else 365000) + step_usd
     elif seniority == "Senior":
-        low, high = (215000 if is_tier1 else 185000) + step_usd, (325000 if is_tier1 else 270000) + step_usd
+        low, high = (240000 if is_tier1 else 210000) + step_usd, (355000 if is_tier1 else 305000) + step_usd
     else:
-        low, high = (175000 if is_tier1 else 155000) + step_usd, (260000 if is_tier1 else 225000) + step_usd
+        low, high = (205000 if is_tier1 else 185000) + step_usd, (295000 if is_tier1 else 265000) + step_usd
     return low, high, "USD", f"${low:,} - ${high:,} + equity"
 
 def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: str, location: str, seniority: str):
@@ -422,19 +554,23 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
                 min_v = comp.get("minValue")
                 max_v = comp.get("maxValue")
                 curr = comp.get("currencyCode") or "USD"
-                if min_v and max_v and min_v >= 30000:
+                if min_v and max_v and min_v >= 60000:
                     min_i, max_i = int(min_v), int(max_v)
                     sym = {"USD": "$", "GBP": "£", "EUR": "€", "CAD": "C$"}.get(curr, "$")
                     return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,} + equity"
-                elif min_v and min_v >= 30000:
+                elif min_v and min_v >= 60000:
                     min_i = int(min_v)
                     max_i = int(min_v * 1.25)
                     sym = {"USD": "$", "GBP": "£", "EUR": "€", "CAD": "C$"}.get(curr, "$")
                     return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,} + equity"
 
+        tier_summary = (comp_obj.get("scrapeableCompensationSalarySummary") or comp_obj.get("compensationTierSummary") or "").strip()
+        if tier_summary:
+            text = f"{tier_summary}\n{text or ''}"
+
     if text:
         range_pattern = re.compile(
-            r'([\$£€])\s*(\d{2,3}(?:,\d{3}|\s*[kK]))\s*(?:[\-\u2013\u2014]|to)\s*([\$£€])?\s*(\d{2,3}(?:,\d{3}|\s*[kK]))'
+            r'([\$£€])\s*(\d{2,3}(?:,\d{3}|\s*[kK]))\s*(?:[\-\u2013\u2014]|to|&mdash;|&ndash;)\s*([\$£€])?\s*(\d{2,3}(?:,\d{3}|\s*[kK]))'
         )
         m = range_pattern.search(text)
         if m:
@@ -443,7 +579,7 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
             raw_high = m.group(4).lower().replace(",", "").strip()
             low = int(float(raw_low[:-1]) * 1000) if raw_low.endswith("k") else int(raw_low)
             high = int(float(raw_high[:-1]) * 1000) if raw_high.endswith("k") else int(raw_high)
-            if 40000 <= low <= 1500000 and low <= high <= 2000000:
+            if 80000 <= low <= 1500000 and low <= high <= 2000000:
                 curr = {"£": "GBP", "€": "EUR", "$": "USD"}.get(sym, "USD")
                 return low, high, curr, f"{sym}{low:,} - {sym}{high:,} + equity"
 
@@ -490,6 +626,14 @@ def fetch_ashby(company_name: str, board_slug: str = None) -> tuple[list, dict]:
                     continue
 
                 location_str, locations_list = extract_ashby_locations(item)
+                # For large global cloud companies on Ashby, focus on UK / Europe / Remote or AI roles
+                if company_name in {"Snowflake", "ClickHouse", "Ramp", "Notion", "Plaid"}:
+                    loc_l = location_str.lower()
+                    t_l = title.lower()
+                    is_uk_eu = any(k in loc_l for k in ["london", "uk", "united kingdom", "cambridge", "oxford", "edinburgh", "bristol", "manchester", "dublin", "paris", "berlin", "amsterdam", "zurich", "europe", "emea"])
+                    is_ai_role = any(k in t_l for k in ["ai", "ml", "machine learning", "llm", "research", "staff", "principal"])
+                    if not (is_uk_eu or is_ai_role):
+                        continue
                 desc_plain = clean_plain_description(item.get("descriptionPlain", ""))
                 if not desc_plain and item.get("descriptionHtml"):
                     desc_plain = clean_html(item.get("descriptionHtml", ""))
@@ -601,6 +745,14 @@ def fetch_greenhouse(company_name: str, board_slug: str) -> tuple[list, dict]:
                     continue
 
                 location_str, locations_list = extract_greenhouse_locations(item)
+                # For large global multi-office enterprises on Greenhouse, focus on UK / Europe or AI/ML/Staff roles
+                if company_name in {"Stripe", "Datadog", "Elastic", "Cloudflare", "Adyen", "Airbnb", "Coinbase", "Rubrik", "Affirm", "Robinhood", "Celonis", "Grafana Labs", "Intercom"}:
+                    loc_l = location_str.lower()
+                    t_l = title.lower()
+                    is_uk_eu = any(k in loc_l for k in ["london", "uk", "united kingdom", "cambridge", "oxford", "edinburgh", "bristol", "manchester", "dublin", "paris", "berlin", "amsterdam", "zurich", "europe", "emea"])
+                    is_ai_role = any(k in t_l for k in ["ai", "ml", "machine learning", "llm", "research"])
+                    if not (is_uk_eu or is_ai_role):
+                        continue
                 content = clean_html(item.get("content", ""))
                 skills = extract_skills(f"{title} {depts_str} {content}")
 
@@ -721,6 +873,47 @@ def compile_all():
         ("Modal", "modal"),
         ("World Labs", "worldlabs"),
         ("Prime Intellect", "primeintellect"),
+        # 37+ Top High-Paying UK / London & Global Startups on Ashby
+        ("Faculty", "faculty"),
+        ("ClickHouse", "clickhouse"),
+        ("Lovable", "lovable"),
+        ("Multiverse", "multiverse"),
+        ("Snowflake", "snowflake"),
+        ("Vanta", "vanta"),
+        ("incident.io", "incident"),
+        ("H Company", "hcompany"),
+        ("Attio", "attio"),
+        ("Quantexa", "quantexa"),
+        ("Paddle", "paddle"),
+        ("Ramp", "ramp"),
+        ("Writer", "writer"),
+        ("Zilch", "zilch"),
+        ("Fireworks AI", "fireworks"),
+        ("Linear", "linear"),
+        ("OakNorth", "oaknorth"),
+        ("Plaid", "plaid"),
+        ("Wayflyer", "wayflyer"),
+        ("Socket", "socket"),
+        ("Notion", "notion"),
+        ("Factory", "factory"),
+        ("Sardine", "sardine"),
+        ("Dust", "dust"),
+        ("Reka AI", "reka"),
+        ("Griffin", "griffin"),
+        ("Supabase", "supabase"),
+        ("Snyk", "snyk"),
+        ("Sequence", "sequence"),
+        ("Latent Labs", "latentlabs"),
+        ("PostHog", "posthog"),
+        ("Plain", "plain"),
+        ("Braintrust", "braintrust"),
+        ("Cartesia", "cartesia"),
+        ("Codat", "codat"),
+        ("Cradle", "cradlebio"),
+        ("Tractable", "tractable"),
+        ("TrueLayer", "truelayer"),
+        ("Primer", "primer"),
+        ("Oxa", "oxa"),
     ]
 
     greenhouse_targets = [
@@ -733,6 +926,33 @@ def compile_all():
         ("PhysicsX", "physicsx"),
         ("Speechmatics", "speechmatics"),
         ("Together AI", "togetherai"),
+        # 20+ Top High-Paying UK / London & Global Scaleups on Greenhouse
+        ("Deliveroo", "deliveroo"),
+        ("Graphcore", "graphcore"),
+        ("Monzo", "monzo"),
+        ("Stripe", "stripe"),
+        ("Helsing", "helsing"),
+        ("Intercom", "intercom"),
+        ("Elastic", "elastic"),
+        ("Tide", "tide"),
+        ("Datadog", "datadog"),
+        ("Celonis", "celonis"),
+        ("Affirm", "affirm"),
+        ("Vercel", "vercel"),
+        ("Grafana Labs", "grafanalabs"),
+        ("Rubrik", "rubrik"),
+        ("Coinbase", "coinbase"),
+        ("Adyen", "adyen"),
+        ("Airbnb", "airbnb"),
+        ("Robinhood", "robinhood"),
+        ("Fireblocks", "fireblocks"),
+        ("GoCardless", "gocardless"),
+        ("Form3", "form3"),
+        ("Tailscale", "tailscale"),
+        ("PolyAI", "polyai"),
+        ("Stability AI", "stabilityai"),
+        ("Cloudflare", "cloudflare"),
+        ("Cleo", "cleo"),
     ]
 
     all_jobs = []

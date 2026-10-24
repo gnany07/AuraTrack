@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AuraTrack AI — Frontier AI Careers, Compensation & Resume Intelligence</title>
   <meta name="description" content="Explore 1,100+ verified software & AI engineering roles at OpenAI, Anthropic, xAI, Perplexity, Scale AI, and frontier labs with live currency conversion and resume matching.">
-  <link rel="stylesheet" href="style.css?v=4.0">
+  <link rel="stylesheet" href="style.css?v=5.0">
   <!-- Load PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
   <!-- Load job catalog first -->
-  <script src="jobs.js?v=4.0" defer></script>
+  <script src="jobs.js?v=5.0" defer></script>
   <!-- Load app logic -->
-  <script src="app.js?v=4.0" defer></script>
+  <script src="app.js?v=5.0" defer></script>
 </head>
 <body>
 
@@ -179,45 +179,46 @@
           </div>
         </div>
 
-        <!-- Faceted Pill Filters Grid -->
+        <!-- Faceted Pill Filters Grid (Multi-Select Enabled Across All Categories) -->
         <div class="console-facets-row">
           <div class="facet-group">
-            <span class="filter-section-title">Region</span>
+            <span class="filter-section-title">Country / Region (Multi-Select)</span>
             <div class="filter-pill-group" id="location-pill-group">
-              <button class="filter-pill" data-type="location" data-val="London" onclick="togglePillFilter('location', 'London', this)">🇬🇧 UK / London</button>
-              <button class="filter-pill" data-type="location" data-val="San Francisco" onclick="togglePillFilter('location', 'San Francisco', this)">🇺🇸 SF / US</button>
-              <button class="filter-pill" data-type="location" data-val="Europe" onclick="togglePillFilter('location', 'Europe', this)">🇪🇺 Europe</button>
-              <button class="filter-pill" data-type="location" data-val="Remote" onclick="togglePillFilter('location', 'Remote', this)">🌐 Remote</button>
+              <button type="button" class="filter-pill" data-type="location" data-val="London" data-label="🇬🇧 UK / London" onclick="togglePillFilter('location', 'London', this)">🇬🇧 UK / London</button>
+              <button type="button" class="filter-pill" data-type="location" data-val="San Francisco" data-label="🇺🇸 SF / US" onclick="togglePillFilter('location', 'San Francisco', this)">🇺🇸 SF / US</button>
+              <button type="button" class="filter-pill" data-type="location" data-val="Europe" data-label="🇪🇺 Europe" onclick="togglePillFilter('location', 'Europe', this)">🇪🇺 Europe</button>
+              <button type="button" class="filter-pill" data-type="location" data-val="Canada" data-label="🇨🇦 Canada" onclick="togglePillFilter('location', 'Canada', this)">🇨🇦 Canada</button>
+              <button type="button" class="filter-pill" data-type="location" data-val="Remote" data-label="🌐 Remote" onclick="togglePillFilter('location', 'Remote', this)">🌐 Remote</button>
             </div>
           </div>
 
           <div class="facet-group">
-            <span class="filter-section-title">ATS Department</span>
+            <span class="filter-section-title">ATS Department (Multi-Select)</span>
             <div class="filter-pill-group" id="dept-pill-group">
-              <button class="filter-pill" data-type="deptTrack" data-val="Engineering" onclick="togglePillFilter('deptTrack', 'Engineering', this)" title="Filter strictly to Engineering department roles (e.g. Reflection AI's 9 Engineering roles)">⚙️ Engineering</button>
-              <button class="filter-pill" data-type="deptTrack" data-val="Research" onclick="togglePillFilter('deptTrack', 'Research', this)" title="Filter strictly to Research & Science department roles">🔬 Research</button>
+              <button type="button" class="filter-pill" data-type="deptTrack" data-val="Engineering" data-label="⚙️ Engineering" onclick="togglePillFilter('deptTrack', 'Engineering', this)" title="Filter to Engineering department roles (multi-select)">⚙️ Engineering</button>
+              <button type="button" class="filter-pill" data-type="deptTrack" data-val="Research" data-label="🔬 Research" onclick="togglePillFilter('deptTrack', 'Research', this)" title="Filter to Research & Science department roles (multi-select)">🔬 Research</button>
             </div>
           </div>
 
           <div class="facet-group">
-            <span class="filter-section-title">Engineering Track</span>
+            <span class="filter-section-title">Engineering Track (Multi-Select)</span>
             <div class="filter-pill-group" id="domain-pill-group">
-              <button class="filter-pill" data-type="domain" data-val="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">AI / LLM Infra</button>
-              <button class="filter-pill" data-type="domain" data-val="Distributed Systems" onclick="togglePillFilter('domain', 'Distributed Systems', this)">Distributed Systems</button>
-              <button class="filter-pill" data-type="domain" data-val="Systems & Low-Level" onclick="togglePillFilter('domain', 'Systems & Low-Level', this)">Systems & C++</button>
-              <button class="filter-pill" data-type="domain" data-val="ML Engineering" onclick="togglePillFilter('domain', 'ML Engineering', this)">ML Engineering</button>
-              <button class="filter-pill" data-type="domain" data-val="Backend & Platform" onclick="togglePillFilter('domain', 'Backend & Platform', this)">Backend & Platform</button>
+              <button type="button" class="filter-pill" data-type="domain" data-val="AI / LLM Infra" data-label="AI / LLM Infra" onclick="togglePillFilter('domain', 'AI / LLM Infra', this)">AI / LLM Infra</button>
+              <button type="button" class="filter-pill" data-type="domain" data-val="Distributed Systems" data-label="Distributed Systems" onclick="togglePillFilter('domain', 'Distributed Systems', this)">Distributed Systems</button>
+              <button type="button" class="filter-pill" data-type="domain" data-val="Systems & Low-Level" data-label="Systems & C++" onclick="togglePillFilter('domain', 'Systems & Low-Level', this)">Systems & C++</button>
+              <button type="button" class="filter-pill" data-type="domain" data-val="ML Engineering" data-label="ML Engineering" onclick="togglePillFilter('domain', 'ML Engineering', this)">ML Engineering</button>
+              <button type="button" class="filter-pill" data-type="domain" data-val="Backend & Platform" data-label="Backend & Platform" onclick="togglePillFilter('domain', 'Backend & Platform', this)">Backend & Platform</button>
             </div>
           </div>
 
           <div class="facet-group">
-            <span class="filter-section-title">Seniority & Match</span>
+            <span class="filter-section-title">Seniority & Match (Multi-Select)</span>
             <div class="filter-pill-group" id="seniority-pill-group">
-              <button class="filter-pill" data-type="seniority" data-val="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">Staff / Lead</button>
-              <button class="filter-pill" data-type="seniority" data-val="Senior" onclick="togglePillFilter('seniority', 'Senior', this)">Senior / MTS</button>
-              <button class="filter-pill" data-type="seniority" data-val="Mid / General" onclick="togglePillFilter('seniority', 'Mid / General', this)">Mid-Level</button>
-              <button class="filter-pill" data-type="match" data-val="high" onclick="togglePillFilter('match', 'high', this)">🎯 75%+ Fit</button>
-              <button class="filter-pill" data-type="match" data-val="medium" onclick="togglePillFilter('match', 'medium', this)">👍 50%+ Fit</button>
+              <button type="button" class="filter-pill" data-type="seniority" data-val="Staff / Lead" data-label="Staff / Lead" onclick="togglePillFilter('seniority', 'Staff / Lead', this)">Staff / Lead</button>
+              <button type="button" class="filter-pill" data-type="seniority" data-val="Senior" data-label="Senior / MTS" onclick="togglePillFilter('seniority', 'Senior', this)">Senior / MTS</button>
+              <button type="button" class="filter-pill" data-type="seniority" data-val="Mid / General" data-label="Mid-Level" onclick="togglePillFilter('seniority', 'Mid / General', this)">Mid-Level</button>
+              <button type="button" class="filter-pill" data-type="match" data-val="high" data-label="🎯 75%+ Fit" onclick="togglePillFilter('match', 'high', this)">🎯 75%+ Fit</button>
+              <button type="button" class="filter-pill" data-type="match" data-val="medium" data-label="👍 50%+ Fit" onclick="togglePillFilter('match', 'medium', this)">👍 50%+ Fit</button>
             </div>
           </div>
 
@@ -458,9 +459,31 @@
          ====================================================================== -->
     <section id="section-analytics" class="dashboard-section">
 
+      <!-- Country / Region Filter Bar for Market & Gaps (Multi-Select Enabled) -->
+      <div class="glass" style="padding: 1rem 1.25rem; border-radius: 14px; margin-bottom: 1.15rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+          <span class="filter-section-title" style="margin: 0;">Market &amp; Gaps Country Filter (Multi-Select)</span>
+          <span id="analytics-country-subtitle" style="font-size: 0.76rem; color: var(--text-muted);">Select one or more countries/hubs to filter compensation bands, hiring companies, and skill gaps</span>
+        </div>
+        <div id="analytics-country-pill-group" class="company-chips-scroll" style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+          <!-- Populated dynamically by renderAnalytics() -->
+        </div>
+      </div>
+
       <!-- Top 4 Market KPI Cards -->
       <div class="analytics-kpi-row" id="analytics-kpi-row">
         <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Full-Width Country & Tech Hub Market Breakdown Card -->
+      <div class="studio-card" style="margin-bottom: 1.15rem;">
+        <div class="studio-card-header">
+          <div>
+            <h3 class="studio-card-title">Country &amp; Tech Hub Compensation &amp; Hiring Breakdown</h3>
+            <p class="studio-card-sub">Live engineering role counts, hiring startup/lab counts, and average compensation bands across countries — click any country row to filter.</p>
+          </div>
+        </div>
+        <div id="country-breakdown-chart" class="comp-benchmark-list"></div>
       </div>
 
       <!-- 2x2 Bento Grid of Deep Analytics -->
@@ -469,7 +492,7 @@
         <div class="studio-card">
           <div class="studio-card-header">
             <div>
-              <h3 class="studio-card-title">Role Distribution & Match Breakdown</h3>
+              <h3 class="studio-card-title">Role Distribution &amp; Match Breakdown</h3>
               <p class="studio-card-sub">Click any bar to filter Job Discovery by that segment.</p>
             </div>
           </div>
@@ -480,7 +503,7 @@
         <div class="studio-card">
           <div class="studio-card-header">
             <div>
-              <h3 class="studio-card-title">Frontier Lab Compensation Benchmarks</h3>
+              <h3 class="studio-card-title">Frontier Lab &amp; UK Startup Compensation Benchmarks</h3>
               <p class="studio-card-sub" id="comp-chart-subtitle">Min–Max base salary ranges in your selected currency.</p>
             </div>
           </div>
@@ -492,7 +515,7 @@
           <div class="studio-card-header">
             <div>
               <h3 class="studio-card-title">Most Requested Engineering Skills</h3>
-              <p class="studio-card-sub">Frequency across all live roles — green indicates skills already in your profile.</p>
+              <p class="studio-card-sub">Frequency across matching roles — green indicates skills already in your profile.</p>
             </div>
           </div>
           <div id="market-skills-chart" class="market-skills-list"></div>
@@ -502,7 +525,7 @@
         <div class="studio-card">
           <div class="studio-card-header">
             <div>
-              <h3 class="studio-card-title">High-ROI Skill Gap & Interview Roadmap</h3>
+              <h3 class="studio-card-title">High-ROI Skill Gap &amp; Interview Roadmap</h3>
               <p class="studio-card-sub">Targeted preparation priorities based on your highest-matching frontier roles.</p>
             </div>
           </div>
@@ -557,7 +580,7 @@
           </div>
           <div>
             <label class="form-label" for="job-sal">Salary Package</label>
-            <input type="text" id="job-sal" class="form-input" placeholder="e.g. £160,000 - £230,000 + equity">
+            <input type="text" id="job-sal" class="form-input" placeholder="e.g. £240,000 - £320,000 + equity">
           </div>
           <div>
             <label class="form-label" for="job-cat">Category *</label>

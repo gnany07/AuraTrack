@@ -18,14 +18,14 @@ Object.values(skillKeywords).forEach(group => {
 // Live Currency Conversion Engine
 // ============================================================================
 const CURRENCY_CONFIG = {
-  USD: { code: "USD", symbol: "$", rateFromUSD: 1.0, label: "USD ($)", flag: "🇺🇸", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 $200k+", pillMid: "💵 $150k+" },
-  GBP: { code: "GBP", symbol: "£", rateFromUSD: 0.79, label: "GBP (£)", flag: "🇬🇧", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 £160k+", pillMid: "💵 £120k+" },
-  EUR: { code: "EUR", symbol: "€", rateFromUSD: 0.92, label: "EUR (€)", flag: "🇪🇺", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 €185k+", pillMid: "💵 €140k+" },
-  INR: { code: "INR", symbol: "₹", rateFromUSD: 84.0, label: "INR (₹)", flag: "🇮🇳", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 ₹1.68Cr+", pillMid: "💵 ₹1.26Cr+" },
-  CAD: { code: "CAD", symbol: "C$", rateFromUSD: 1.38, label: "CAD (C$)", flag: "🇨🇦", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 C$275k+", pillMid: "💵 C$205k+" },
-  CHF: { code: "CHF", symbol: "CHF ", rateFromUSD: 0.88, label: "CHF (Fr)", flag: "🇨🇭", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 CHF 175k+", pillMid: "💵 CHF 130k+" },
-  SGD: { code: "SGD", symbol: "S$", rateFromUSD: 1.34, label: "SGD (S$)", flag: "🇸🇬", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 S$270k+", pillMid: "💵 S$200k+" },
-  AUD: { code: "AUD", symbol: "A$", rateFromUSD: 1.52, label: "AUD (A$)", flag: "🇦🇺", highThresholdUSD: 200000, midThresholdUSD: 150000, pillHigh: "💎 A$300k+", pillMid: "💵 A$230k+" }
+  USD: { code: "USD", symbol: "$", rateFromUSD: 1.0, label: "USD ($)", flag: "🇺🇸" },
+  GBP: { code: "GBP", symbol: "£", rateFromUSD: 0.79, label: "GBP (£)", flag: "🇬🇧" },
+  EUR: { code: "EUR", symbol: "€", rateFromUSD: 0.92, label: "EUR (€)", flag: "🇪🇺" },
+  INR: { code: "INR", symbol: "₹", rateFromUSD: 84.0, label: "INR (₹)", flag: "🇮🇳" },
+  CAD: { code: "CAD", symbol: "C$", rateFromUSD: 1.38, label: "CAD (C$)", flag: "🇨🇦" },
+  CHF: { code: "CHF", symbol: "CHF ", rateFromUSD: 0.88, label: "CHF (Fr)", flag: "🇨🇭" },
+  SGD: { code: "SGD", symbol: "S$", rateFromUSD: 1.34, label: "SGD (S$)", flag: "🇸🇬" },
+  AUD: { code: "AUD", symbol: "A$", rateFromUSD: 1.52, label: "AUD (A$)", flag: "🇦🇺" }
 };
 
 function getSavedCurrency() {
@@ -111,14 +111,14 @@ function parseJobSalaryData(job) {
   let maxUSD = 295000;
 
   if (seniority === "Staff / Lead") {
-    minUSD = (isUK ? 215000 : isEU ? 185000 : 265000) + stepUSD;
-    maxUSD = (isUK ? 325000 : isEU ? 275000 : 395000) + stepUSD;
+    minUSD = (isUK ? 280000 : isEU ? 245000 : 290000) + stepUSD;
+    maxUSD = (isUK ? 410000 : isEU ? 355000 : 440000) + stepUSD;
   } else if (seniority === "Senior") {
-    minUSD = (isUK ? 175000 : isEU ? 150000 : 220000) + stepUSD;
-    maxUSD = (isUK ? 265000 : isEU ? 225000 : 335000) + stepUSD;
+    minUSD = (isUK ? 240000 : isEU ? 210000 : 245000) + stepUSD;
+    maxUSD = (isUK ? 350000 : isEU ? 300000 : 365000) + stepUSD;
   } else {
-    minUSD = (isUK ? 135000 : isEU ? 120000 : 180000) + stepUSD;
-    maxUSD = (isUK ? 205000 : isEU ? 175000 : 265000) + stepUSD;
+    minUSD = (isUK ? 210000 : isEU ? 185000 : 205000) + stepUSD;
+    maxUSD = (isUK ? 295000 : isEU ? 260000 : 295000) + stepUSD;
   }
 
   return {
@@ -273,7 +273,68 @@ const COMPANY_DOMAIN_MAP = {
   "Modal": "modal.com",
   "World Labs": "worldlabs.ai",
   "Prime Intellect": "primeintellect.ai",
-  "Together AI": "together.ai"
+  "Together AI": "together.ai",
+  "ClickHouse": "clickhouse.com",
+  "Lovable": "lovable.dev",
+  "Multiverse": "multiverse.io",
+  "Snowflake": "snowflake.com",
+  "Vanta": "vanta.com",
+  "incident.io": "incident.io",
+  "H Company": "hcompany.ai",
+  "Attio": "attio.com",
+  "Paddle": "paddle.com",
+  "Ramp": "ramp.com",
+  "Writer": "writer.com",
+  "Zilch": "zilch.com",
+  "Fireworks AI": "fireworks.ai",
+  "Linear": "linear.app",
+  "OakNorth": "oaknorth.co.uk",
+  "Plaid": "plaid.com",
+  "Wayflyer": "wayflyer.com",
+  "Socket": "socket.dev",
+  "Notion": "notion.so",
+  "Factory": "factory.ai",
+  "Sardine": "sardine.ai",
+  "Dust": "dust.tt",
+  "Reka AI": "reka.ai",
+  "Griffin": "griffin.com",
+  "Supabase": "supabase.com",
+  "Snyk": "snyk.io",
+  "Sequence": "sequencehq.com",
+  "Latent Labs": "latentlabs.com",
+  "PostHog": "posthog.com",
+  "Plain": "plain.com",
+  "Braintrust": "braintrust.dev",
+  "Cartesia": "cartesia.ai",
+  "Codat": "codat.io",
+  "Cradle": "cradle.bio",
+  "Tractable": "tractable.ai",
+  "TrueLayer": "truelayer.com",
+  "Primer": "primer.io",
+  "Oxa": "oxa.tech",
+  "Deliveroo": "deliveroo.co.uk",
+  "Graphcore": "graphcore.ai",
+  "Monzo": "monzo.com",
+  "Stripe": "stripe.com",
+  "Helsing": "helsing.ai",
+  "Intercom": "intercom.com",
+  "Elastic": "elastic.co",
+  "Tide": "tide.co",
+  "Datadog": "datadoghq.com",
+  "Celonis": "celonis.com",
+  "Affirm": "affirm.com",
+  "Vercel": "vercel.com",
+  "Grafana Labs": "grafana.com",
+  "Rubrik": "rubrik.com",
+  "Coinbase": "coinbase.com",
+  "Adyen": "adyen.com",
+  "Airbnb": "airbnb.com",
+  "Robinhood": "robinhood.com",
+  "Fireblocks": "fireblocks.com",
+  "GoCardless": "gocardless.com",
+  "Form3": "form3.tech",
+  "Tailscale": "tailscale.com",
+  "Cloudflare": "cloudflare.com"
 };
 
 const COMPANY_BOARD_SLUG_MAP = {
@@ -302,6 +363,46 @@ const COMPANY_BOARD_SLUG_MAP = {
   "Modal": { type: "ashby", slug: "modal" },
   "World Labs": { type: "ashby", slug: "worldlabs" },
   "Prime Intellect": { type: "ashby", slug: "primeintellect" },
+  "Faculty": { type: "ashby", slug: "faculty" },
+  "ClickHouse": { type: "ashby", slug: "clickhouse" },
+  "Lovable": { type: "ashby", slug: "lovable" },
+  "Multiverse": { type: "ashby", slug: "multiverse" },
+  "Snowflake": { type: "ashby", slug: "snowflake" },
+  "Vanta": { type: "ashby", slug: "vanta" },
+  "incident.io": { type: "ashby", slug: "incident" },
+  "H Company": { type: "ashby", slug: "hcompany" },
+  "Attio": { type: "ashby", slug: "attio" },
+  "Quantexa": { type: "ashby", slug: "quantexa" },
+  "Paddle": { type: "ashby", slug: "paddle" },
+  "Ramp": { type: "ashby", slug: "ramp" },
+  "Writer": { type: "ashby", slug: "writer" },
+  "Zilch": { type: "ashby", slug: "zilch" },
+  "Fireworks AI": { type: "ashby", slug: "fireworks" },
+  "Linear": { type: "ashby", slug: "linear" },
+  "OakNorth": { type: "ashby", slug: "oaknorth" },
+  "Plaid": { type: "ashby", slug: "plaid" },
+  "Wayflyer": { type: "ashby", slug: "wayflyer" },
+  "Socket": { type: "ashby", slug: "socket" },
+  "Notion": { type: "ashby", slug: "notion" },
+  "Factory": { type: "ashby", slug: "factory" },
+  "Sardine": { type: "ashby", slug: "sardine" },
+  "Dust": { type: "ashby", slug: "dust" },
+  "Reka AI": { type: "ashby", slug: "reka" },
+  "Griffin": { type: "ashby", slug: "griffin" },
+  "Supabase": { type: "ashby", slug: "supabase" },
+  "Snyk": { type: "ashby", slug: "snyk" },
+  "Sequence": { type: "ashby", slug: "sequence" },
+  "Latent Labs": { type: "ashby", slug: "latentlabs" },
+  "PostHog": { type: "ashby", slug: "posthog" },
+  "Plain": { type: "ashby", slug: "plain" },
+  "Braintrust": { type: "ashby", slug: "braintrust" },
+  "Cartesia": { type: "ashby", slug: "cartesia" },
+  "Codat": { type: "ashby", slug: "codat" },
+  "Cradle": { type: "ashby", slug: "cradlebio" },
+  "Tractable": { type: "ashby", slug: "tractable" },
+  "TrueLayer": { type: "ashby", slug: "truelayer" },
+  "Primer": { type: "ashby", slug: "primer" },
+  "Oxa": { type: "ashby", slug: "oxa" },
   "Anthropic": { type: "greenhouse", slug: "anthropic" },
   "xAI": { type: "greenhouse", slug: "xai" },
   "Scale AI": { type: "greenhouse", slug: "scaleai" },
@@ -310,7 +411,33 @@ const COMPANY_BOARD_SLUG_MAP = {
   "Glean": { type: "greenhouse", slug: "gleanwork" },
   "PhysicsX": { type: "greenhouse", slug: "physicsx" },
   "Speechmatics": { type: "greenhouse", slug: "speechmatics" },
-  "Together AI": { type: "greenhouse", slug: "togetherai" }
+  "Together AI": { type: "greenhouse", slug: "togetherai" },
+  "Deliveroo": { type: "greenhouse", slug: "deliveroo" },
+  "Graphcore": { type: "greenhouse", slug: "graphcore" },
+  "Monzo": { type: "greenhouse", slug: "monzo" },
+  "Stripe": { type: "greenhouse", slug: "stripe" },
+  "Helsing": { type: "greenhouse", slug: "helsing" },
+  "Intercom": { type: "greenhouse", slug: "intercom" },
+  "Elastic": { type: "greenhouse", slug: "elastic" },
+  "Tide": { type: "greenhouse", slug: "tide" },
+  "Datadog": { type: "greenhouse", slug: "datadog" },
+  "Celonis": { type: "greenhouse", slug: "celonis" },
+  "Affirm": { type: "greenhouse", slug: "affirm" },
+  "Vercel": { type: "greenhouse", slug: "vercel" },
+  "Grafana Labs": { type: "greenhouse", slug: "grafanalabs" },
+  "Rubrik": { type: "greenhouse", slug: "rubrik" },
+  "Coinbase": { type: "greenhouse", slug: "coinbase" },
+  "Adyen": { type: "greenhouse", slug: "adyen" },
+  "Airbnb": { type: "greenhouse", slug: "airbnb" },
+  "Robinhood": { type: "greenhouse", slug: "robinhood" },
+  "Fireblocks": { type: "greenhouse", slug: "fireblocks" },
+  "GoCardless": { type: "greenhouse", slug: "gocardless" },
+  "Form3": { type: "greenhouse", slug: "form3" },
+  "Tailscale": { type: "greenhouse", slug: "tailscale" },
+  "PolyAI": { type: "greenhouse", slug: "polyai" },
+  "Stability AI": { type: "greenhouse", slug: "stabilityai" },
+  "Cloudflare": { type: "greenhouse", slug: "cloudflare" },
+  "Cleo": { type: "greenhouse", slug: "cleo" }
 };
 
 function isGenericCareerUrl(url) {
@@ -583,13 +710,17 @@ function ensureFilterSets() {
     return;
   }
   const f = state.activeFilters;
+  const rawSalary = f.salary instanceof Set ? Array.from(f.salary) : (Array.isArray(f.salary) ? f.salary : []);
+  // Strip any legacy fixed salary filter keys ("200k", "150k", "competitive") from localStorage
+  const validSalaryRanges = rawSalary.filter(k => /^\d+-\d+$/.test(String(k)));
+
   state.activeFilters = {
     deptTrack: f.deptTrack instanceof Set ? f.deptTrack : new Set(Array.isArray(f.deptTrack) ? f.deptTrack : []),
     domain: f.domain instanceof Set ? f.domain : new Set(Array.isArray(f.domain) ? f.domain : []),
     seniority: f.seniority instanceof Set ? f.seniority : new Set(Array.isArray(f.seniority) ? f.seniority : []),
     location: f.location instanceof Set ? f.location : new Set(Array.isArray(f.location) ? f.location : []),
     match: f.match instanceof Set ? f.match : new Set(Array.isArray(f.match) ? f.match : []),
-    salary: f.salary instanceof Set ? f.salary : new Set(Array.isArray(f.salary) ? f.salary : []),
+    salary: new Set(validSalaryRanges),
     company: f.company instanceof Set ? f.company : new Set(Array.isArray(f.company) ? f.company : [])
   };
 }
@@ -636,7 +767,8 @@ async function syncStateFromDB() {
     if (res.ok) {
       const data = await res.json();
       if (data && data.state && typeof data.state === "object") {
-        state = { ...state, ...data.state, currentUser: activeUser, currency: state.currency || getSavedCurrency() };
+        const preservedFilters = window.__localFiltersModified ? state.activeFilters : (data.state.activeFilters || state.activeFilters);
+        state = { ...state, ...data.state, activeFilters: preservedFilters, currentUser: activeUser, currency: state.currency || getSavedCurrency() };
         window.state = state;
         ensureFilterSets();
         ensureTrackerStages();
@@ -1350,9 +1482,30 @@ async function parsePdfFile(file) {
 }
 
 // ============================================================================
-// Interactive Filter System + Results-Based Dynamic Company Filter
+// Interactive Multi-Select Filter System + Results-Based Dynamic Filters
 // ============================================================================
+function matchesJobLocationFilter(jobLocLower, locVal) {
+  const l = (locVal || "").toLowerCase();
+  if (l.includes("london") || l === "uk" || l.includes("united kingdom")) {
+    return /\b(london|uk|united kingdom|england|cambridge|oxford|edinburgh|bristol|manchester)\b/i.test(jobLocLower);
+  }
+  if (l.includes("san francisco") || l === "us" || l.includes("united states")) {
+    return /\b(san francisco|sf|bay area|ca|california|us|united states|seattle|new york|nyc|austin|palo alto|mountain view|menlo park|boston|washington|chicago|denver|atlanta|pittsburgh)\b/i.test(jobLocLower);
+  }
+  if (l.includes("europe")) {
+    return /\b(paris|france|berlin|germany|munich|amsterdam|netherlands|zurich|switzerland|dublin|ireland|europe|warsaw|poland|madrid|spain|milan|italy|stockholm|sweden|london|uk)\b/i.test(jobLocLower);
+  }
+  if (l.includes("canada")) {
+    return /\b(toronto|vancouver|montreal|ottawa|waterloo|canada|ontario|bc)\b/i.test(jobLocLower);
+  }
+  if (l.includes("remote")) {
+    return /\b(remote|emea|worldwide|anywhere|distributed)\b/i.test(jobLocLower);
+  }
+  return jobLocLower.includes(l);
+}
+
 window.togglePillFilter = function(category, val, btnEl) {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   if (!state.activeFilters[category]) {
     state.activeFilters[category] = new Set();
@@ -1368,9 +1521,11 @@ window.togglePillFilter = function(category, val, btnEl) {
   state.discoveryPage = 1;
   saveState();
   renderJobDiscovery();
+  if (state.currentTab === "analytics") renderAnalytics();
 };
 
 window.toggleSalaryRange = function(rangeKey) {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   const set = state.activeFilters.salary;
   if (set.has(rangeKey)) {
@@ -1384,6 +1539,7 @@ window.toggleSalaryRange = function(rangeKey) {
 };
 
 window.clearSalarySelection = function() {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   state.activeFilters.salary.clear();
   state.discoveryPage = 1;
@@ -1392,6 +1548,7 @@ window.clearSalarySelection = function() {
 };
 
 window.toggleCompanyFilter = function(companyName) {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   const set = state.activeFilters.company;
   if (set.has(companyName)) {
@@ -1405,6 +1562,7 @@ window.toggleCompanyFilter = function(companyName) {
 };
 
 window.filterByCompanyAndDept = function(companyName, deptTrack = null) {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   state.activeFilters.company.clear();
   if (companyName) state.activeFilters.company.add(companyName);
@@ -1418,6 +1576,7 @@ window.filterByCompanyAndDept = function(companyName, deptTrack = null) {
 };
 
 window.clearCompanySelection = function() {
+  window.__localFiltersModified = true;
   ensureFilterSets();
   state.activeFilters.company.clear();
   const compSearch = document.getElementById("company-chip-search");
@@ -1441,6 +1600,7 @@ window.setDiscoverySort = function(sortValue) {
 };
 
 window.resetAllPillFilters = function() {
+  window.__localFiltersModified = true;
   state.activeFilters = {
     deptTrack: new Set(),
     domain: new Set(),
@@ -1458,6 +1618,7 @@ window.resetAllPillFilters = function() {
   state.discoveryPage = 1;
   saveState();
   renderJobDiscovery();
+  if (state.currentTab === "analytics") renderAnalytics();
   showToast("Reset all active filters");
 };
 
@@ -1470,8 +1631,6 @@ function getRepSalaryUSD(salData) {
 function formatSalaryRangeKeyLabel(rangeKey, currencyCode) {
   const curr = currencyCode || state.currency || "GBP";
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
-  if (rangeKey === "200k") return cfg.pillHigh;
-  if (rangeKey === "150k") return cfg.pillMid;
   const parts = String(rangeKey).split("-").map(Number);
   if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
     const lowStr = formatSingleCurrencyAmount(parts[0] * cfg.rateFromUSD, curr, true);
@@ -1482,9 +1641,6 @@ function formatSalaryRangeKeyLabel(rangeKey, currencyCode) {
 }
 
 function matchesSalaryRangeKey(salData, rangeKey) {
-  if (rangeKey === "200k") return salData.maxUSD >= 200000;
-  if (rangeKey === "150k") return salData.maxUSD >= 150000;
-  if (rangeKey === "competitive") return salData.hasEquity;
   const parts = String(rangeKey).split("-").map(Number);
   if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
     const rep = getRepSalaryUSD(salData);
@@ -1500,16 +1656,16 @@ function computeDynamicSalaryBrackets(items, activeSalarySet) {
 
   if (reps.length === 0) return [];
 
-  const minRep = Math.floor(reps[0] / 5000) * 5000;
-  const maxRep = Math.ceil(reps[reps.length - 1] / 5000) * 5000;
+  const minRep = Math.floor(reps[0] / 10000) * 10000;
+  const maxRep = Math.ceil(reps[reps.length - 1] / 10000) * 10000;
 
   let bounds = [];
   if (maxRep - minRep <= 25000) {
-    bounds = [minRep, Math.max(minRep + 15000, maxRep)];
+    bounds = [minRep, Math.max(minRep + 20000, maxRep)];
   } else {
-    const q1 = Math.round(reps[Math.floor(reps.length * 0.25)] / 5000) * 5000;
-    const q2 = Math.round(reps[Math.floor(reps.length * 0.50)] / 5000) * 5000;
-    const q3 = Math.round(reps[Math.floor(reps.length * 0.75)] / 5000) * 5000;
+    const q1 = Math.round(reps[Math.floor(reps.length * 0.25)] / 10000) * 10000;
+    const q2 = Math.round(reps[Math.floor(reps.length * 0.50)] / 10000) * 10000;
+    const q3 = Math.round(reps[Math.floor(reps.length * 0.75)] / 10000) * 10000;
     const rawBounds = [minRep, q1, q2, q3, Math.max(maxRep, q3 + 10000)];
     rawBounds.forEach(b => {
       if (bounds.length === 0 || b > bounds[bounds.length - 1]) {
@@ -1632,15 +1788,6 @@ function renderJobDiscovery() {
   const activeSalaries = state.activeFilters.salary;
   const activeCompanies = state.activeFilters.company;
 
-  // Sync pill button active states in DOM
-  document.querySelectorAll(".filter-pill").forEach(btn => {
-    const type = btn.dataset.type;
-    const val = btn.dataset.val;
-    if (type && val && state.activeFilters[type]) {
-      btn.classList.toggle("active", state.activeFilters[type].has(val));
-    }
-  });
-
   const allJobs = getAllJobs();
 
   // Evaluate match scores & salary data for all verified jobs (no silent hiding!)
@@ -1648,6 +1795,29 @@ function renderJobDiscovery() {
     const matchAnalysis = calculateMatchScore(job, state.parsedResume);
     const salData = parseJobSalaryData(job);
     return { job, score: matchAnalysis.score, matchAnalysis, salData };
+  });
+
+  // Update each .filter-pill button active state, checkmark, and live count for multi-select feedback
+  document.querySelectorAll(".filter-pill").forEach(btn => {
+    const type = btn.dataset.type;
+    const val = btn.dataset.val;
+    if (!btn.dataset.label) {
+      btn.dataset.label = btn.textContent.replace(/^✓\s*/, "").replace(/\s*\(\d+\)$/, "").trim();
+    }
+    const baseLabel = btn.dataset.label;
+    if (type && val && state.activeFilters[type]) {
+      const isActive = state.activeFilters[type].has(val);
+      btn.classList.toggle("active", isActive);
+      let facetCount = 0;
+      evaluatedJobs.forEach(({ job, score }) => {
+        if (type === "location" && matchesJobLocationFilter((job.location || "").toLowerCase(), val)) facetCount++;
+        else if (type === "deptTrack" && (job.deptTrack || "Engineering") === val) facetCount++;
+        else if (type === "domain" && job.domain === val) facetCount++;
+        else if (type === "seniority" && job.seniority === val) facetCount++;
+        else if (type === "match" && ((val === "high" && score >= 75) || (val === "medium" && score >= 50))) facetCount++;
+      });
+      btn.textContent = `${isActive ? "✓ " : ""}${baseLabel} (${facetCount})`;
+    }
   });
 
   // Base filter (all facets EXCEPT salary and company)
@@ -1668,38 +1838,23 @@ function renderJobDiscovery() {
       (job.description || "").toLowerCase().includes(searchVal) ||
       (job.requirements || []).some(req => req.toLowerCase().includes(searchVal));
 
-    // ATS Department Track filter (Engineering vs Research)
+    // ATS Department Track filter (Engineering vs Research, OR multi-select)
     const deptMatches = activeDeptTracks.size === 0 || activeDeptTracks.has(job.deptTrack || "Engineering");
 
-    // Domain filter
+    // Domain filter (OR multi-select)
     const domainMatches = activeDomains.size === 0 || activeDomains.has(job.domain);
 
-    // Seniority filter
+    // Seniority filter (OR multi-select)
     const seniorityMatches = activeSeniorities.size === 0 || activeSeniorities.has(job.seniority);
 
-    // Location filter (grounded against all primary + secondaryLocations)
+    // Location filter (grounded against all primary + secondaryLocations, OR multi-select)
     let locationMatches = activeLocations.size === 0;
     if (!locationMatches) {
       const jobLocLower = (job.location || "").toLowerCase();
-      locationMatches = [...activeLocations].some(loc => {
-        const l = loc.toLowerCase();
-        if (l.includes("london") || l.includes("uk")) {
-          return /\b(london|uk|united kingdom|england|cambridge|oxford|edinburgh|bristol|manchester)\b/i.test(jobLocLower);
-        }
-        if (l.includes("san francisco") || l.includes("us")) {
-          return /\b(san francisco|sf|bay area|ca|california|us|united states|seattle|new york|nyc|austin|palo alto|mountain view|menlo park|boston|washington)\b/i.test(jobLocLower);
-        }
-        if (l.includes("europe")) {
-          return /\b(paris|france|berlin|germany|munich|amsterdam|zurich|dublin|europe|warsaw|madrid|milan|stockholm|london|uk)\b/i.test(jobLocLower);
-        }
-        if (l.includes("remote")) {
-          return /\b(remote|emea|worldwide|anywhere|distributed)\b/i.test(jobLocLower);
-        }
-        return jobLocLower.includes(l);
-      });
+      locationMatches = [...activeLocations].some(loc => matchesJobLocationFilter(jobLocLower, loc));
     }
 
-    // Match score filter
+    // Match score filter (OR multi-select)
     let scoreMatches = true;
     if (activeMatches.size > 0) {
       const isHigh = score >= 75;
@@ -1712,22 +1867,28 @@ function renderJobDiscovery() {
     }
   });
 
-  // Step 1A: Compute Dynamic Compensation Ranges from `preSalaryFiltered` (baseFiltered + activeCompanies)
+  // Step 1A: Compute stable Dynamic Compensation Ranges from `baseFiltered` and recount against `preSalaryFiltered`
   const preSalaryFiltered = activeCompanies.size === 0
     ? baseFiltered
     : baseFiltered.filter(item => activeCompanies.has(item.job.company));
 
-  const dynamicBrackets = computeDynamicSalaryBrackets(preSalaryFiltered, activeSalaries);
+  const dynamicBrackets = computeDynamicSalaryBrackets(baseFiltered, activeSalaries).map(b => {
+    const liveCount = preSalaryFiltered.filter(x => {
+      if (b.lowUSD === 0 && b.highUSD === 999999) return matchesSalaryRangeKey(x.salData, b.key);
+      const rep = getRepSalaryUSD(x.salData);
+      return b.isLast ? (rep >= b.lowUSD && rep <= b.highUSD) : (rep >= b.lowUSD && rep < b.highUSD);
+    }).length;
+    return { ...b, count: liveCount };
+  });
   renderDynamicSalaryRanges(dynamicBrackets, preSalaryFiltered.length, activeSalaries);
 
   // Step 1B: Apply active Salary Range filter to `baseFiltered` to get `preCompanyFiltered`
   const preCompanyFiltered = activeSalaries.size === 0
     ? baseFiltered
     : baseFiltered.filter(item => {
-        // Match against dynamic brackets or custom range keys
         return [...activeSalaries].some(rangeKey => {
           const matchingBracket = dynamicBrackets.find(b => b.key === rangeKey);
-          if (matchingBracket) {
+          if (matchingBracket && !(matchingBracket.lowUSD === 0 && matchingBracket.highUSD === 999999)) {
             const rep = getRepSalaryUSD(item.salData);
             return matchingBracket.isLast
               ? (rep >= matchingBracket.lowUSD && rep <= matchingBracket.highUSD)
@@ -2827,17 +2988,133 @@ window.submitCustomJob = function(e) {
 // ============================================================================
 // Analytics & Market Intelligence Dashboard (v3.0 Bento Suite)
 // ============================================================================
+window.toggleAnalyticsCountry = function(countryVal) {
+  window.__localFiltersModified = true;
+  ensureFilterSets();
+  const set = state.activeFilters.location;
+  if (set.has(countryVal)) {
+    set.delete(countryVal);
+  } else {
+    set.add(countryVal);
+  }
+  saveState();
+  renderAnalytics();
+  renderJobDiscovery();
+};
+
+window.clearAnalyticsCountries = function() {
+  window.__localFiltersModified = true;
+  ensureFilterSets();
+  state.activeFilters.location.clear();
+  saveState();
+  renderAnalytics();
+  renderJobDiscovery();
+};
+
 function renderAnalytics() {
+  ensureFilterSets();
   const funnelContainer = document.getElementById("funnel-chart");
   const gapContainer = document.getElementById("skills-gap-feed");
   const kpiRow = document.getElementById("analytics-kpi-row");
   const compChart = document.getElementById("company-salary-chart");
   const marketSkillsChart = document.getElementById("market-skills-chart");
+  const countryPillGroup = document.getElementById("analytics-country-pill-group");
+  const countrySubtitle = document.getElementById("analytics-country-subtitle");
+  const countryBreakdownChart = document.getElementById("country-breakdown-chart");
   if (!funnelContainer || !gapContainer) return;
 
-  const allJobs = getAllJobs();
+  const rawAllJobs = getAllJobs();
   const curr = state.currency || "GBP";
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
+  const activeCountries = state.activeFilters.location;
+
+  const COUNTRY_HUBS = [
+    { key: "London", label: "🇬🇧 United Kingdom", hubs: "London • Cambridge • Oxford • Bristol" },
+    { key: "San Francisco", label: "🇺🇸 United States", hubs: "San Francisco • New York • Seattle" },
+    { key: "Europe", label: "🇪🇺 Europe", hubs: "Paris • Berlin • Munich • Amsterdam • Dublin" },
+    { key: "Canada", label: "🇨🇦 Canada", hubs: "Toronto • Vancouver • Montreal" },
+    { key: "Remote", label: "🌐 Global Remote", hubs: "Remote • EMEA • Distributed" }
+  ];
+
+  // Compute global country stats across rawAllJobs
+  const countryHubStats = COUNTRY_HUBS.map(hub => {
+    const matching = rawAllJobs.filter(j => matchesJobLocationFilter((j.location || "").toLowerCase(), hub.key));
+    const companies = new Set(matching.map(j => j.company)).size;
+    let sumMinUSD = 0, sumMaxUSD = 0;
+    matching.forEach(j => {
+      const s = parseJobSalaryData(j);
+      sumMinUSD += s.minUSD;
+      sumMaxUSD += s.maxUSD;
+    });
+    const avgMinUSD = matching.length > 0 ? Math.round(sumMinUSD / matching.length) : 220000;
+    const avgMaxUSD = matching.length > 0 ? Math.round(sumMaxUSD / matching.length) : 330000;
+    return {
+      ...hub,
+      count: matching.length,
+      companies,
+      avgMinUSD,
+      avgMaxUSD
+    };
+  });
+
+  // Render Country Multi-Select Bar on Market & Gaps
+  if (countryPillGroup) {
+    const allActive = activeCountries.size === 0 ? "active" : "";
+    let pillsHtml = `
+      <button type="button" class="company-chip ${allActive}" onclick="clearAnalyticsCountries()">
+        <span>🌍 All Countries</span>
+        <span class="company-chip-count">${rawAllJobs.length}</span>
+      </button>
+    `;
+    countryHubStats.forEach(st => {
+      const isAct = activeCountries.has(st.key);
+      pillsHtml += `
+        <button type="button" class="company-chip analytics-country-chip ${isAct ? 'active' : ''}" data-country="${st.key}" onclick="toggleAnalyticsCountry('${st.key}')">
+          <span>${isAct ? '✓ ' : ''}${st.label}</span>
+          <span class="company-chip-count">${st.count}</span>
+        </button>
+      `;
+    });
+    countryPillGroup.innerHTML = pillsHtml;
+  }
+
+  if (countrySubtitle) {
+    if (activeCountries.size > 0) {
+      countrySubtitle.textContent = `Filtering Market & Gaps by ${activeCountries.size} selected ${activeCountries.size === 1 ? "country/region" : "countries/regions"} (${[...activeCountries].join(" + ")})`;
+      countrySubtitle.style.color = "#34d399";
+    } else {
+      countrySubtitle.textContent = `Showing global market across ${rawAllJobs.length} grounded roles — click one or more countries to filter benchmarks & skill gaps`;
+      countrySubtitle.style.color = "var(--text-muted)";
+    }
+  }
+
+  // Render Country & Tech Hub Breakdown Card
+  if (countryBreakdownChart) {
+    const maxCountryRoles = Math.max(...countryHubStats.map(s => s.count), 1);
+    countryBreakdownChart.innerHTML = countryHubStats.map(st => {
+      const isAct = activeCountries.has(st.key);
+      const minStr = formatSingleCurrencyAmount(st.avgMinUSD * cfg.rateFromUSD, curr, true);
+      const maxStr = formatSingleCurrencyAmount(st.avgMaxUSD * cfg.rateFromUSD, curr, true);
+      const barWidth = Math.max(10, Math.round((st.count / maxCountryRoles) * 100));
+      return `
+        <div class="comp-bar-row" style="cursor: pointer; ${isAct ? 'background: rgba(16, 185, 129, 0.08); border-radius: 8px; padding: 0.35rem 0.5rem;' : ''}" onclick="toggleAnalyticsCountry('${st.key}')" title="Click to toggle ${st.label} filter">
+          <span class="comp-company-name">
+            ${isAct ? '✓ ' : ''}${st.label}
+            <span style="color: var(--text-muted); font-size: 0.7rem; font-weight: 500;">(${st.count} roles • ${st.companies} companies)</span>
+          </span>
+          <div class="comp-bar-track">
+            <div class="comp-bar-fill" style="left: 0%; width: ${barWidth}%;"></div>
+          </div>
+          <span class="comp-range-val">${minStr} – ${maxStr}</span>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // Filter `allJobs` by selected countries (multi-select OR) for all KPI cards & charts below
+  const allJobs = activeCountries.size === 0
+    ? rawAllJobs
+    : rawAllJobs.filter(j => [...activeCountries].some(c => matchesJobLocationFilter((j.location || "").toLowerCase(), c)));
 
   let highMatch = 0, mediumMatch = 0, aiInfra = 0, postTraining = 0, distSystems = 0;
   const companyStats = new Map();
@@ -2879,17 +3156,18 @@ function renderAnalytics() {
     const userSkillsLower = new Set((state.parsedResume?.skills || []).map(s => s.toLowerCase()));
     const coveredTopSkills = top12MarketSkills.filter(([sk]) => userSkillsLower.has(sk.toLowerCase())).length;
     const coveragePct = top12MarketSkills.length > 0 ? Math.round((coveredTopSkills / top12MarketSkills.length) * 100) : 75;
+    const scopeLabel = activeCountries.size > 0 ? [...activeCountries].join(" + ") : "All Countries";
 
     kpiRow.innerHTML = `
       <div class="glass analytics-kpi-card">
-        <span class="kpi-title">Verified Engineering Catalog</span>
+        <span class="kpi-title">Verified Engineering Catalog (${scopeLabel})</span>
         <span class="kpi-value">${allJobs.length.toLocaleString()}</span>
-        <span class="kpi-sub">Across ${companyStats.size} frontier AI labs</span>
+        <span class="kpi-sub">Across ${companyStats.size} hiring startups &amp; AI labs</span>
       </div>
       <div class="glass analytics-kpi-card">
         <span class="kpi-title">High-Fit Roles (75%+ Match)</span>
         <span class="kpi-value" style="color: #34d399;">${highMatch}</span>
-        <span class="kpi-sub">${Math.round((highMatch / Math.max(allJobs.length, 1)) * 100)}% of total market catalog</span>
+        <span class="kpi-sub">${Math.round((highMatch / Math.max(allJobs.length, 1)) * 100)}% of selected country catalog</span>
       </div>
       <div class="glass analytics-kpi-card">
         <span class="kpi-title">Market Avg Upper Band (${curr})</span>
@@ -2926,23 +3204,23 @@ function renderAnalytics() {
   svgContent += `</svg>`;
   funnelContainer.innerHTML = svgContent;
 
-  // 3. Render Live Compensation Benchmarks by Frontier Lab
+  // 3. Render Live Compensation Benchmarks by Frontier Lab & UK Startups
   if (compChart) {
     const topCompanies = Array.from(companyStats.entries())
       .sort((a, b) => b[1].count - a[1].count)
-      .slice(0, 7);
+      .slice(0, 8);
 
     compChart.innerHTML = topCompanies.map(([comp, st]) => {
       const avgMinUSD = Math.round(st.sumMinUSD / st.count);
       const avgMaxUSD = Math.round(st.sumMaxUSD / st.count);
       const minStr = formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true);
       const maxStr = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
-      const leftPct = Math.max(5, Math.min(55, Math.round(((avgMinUSD - 120000) / 300000) * 100)));
+      const leftPct = Math.max(5, Math.min(55, Math.round(((avgMinUSD - 150000) / 300000) * 100)));
       const widthPct = Math.max(18, Math.min(95 - leftPct, Math.round(((avgMaxUSD - avgMinUSD) / 300000) * 100) + 12));
       const safeComp = comp.replace(/'/g, "\\'");
 
       return `
-        <div class="comp-bar-row" style="cursor: pointer;" onclick="state.activeFilters.company.clear(); state.activeFilters.company.add('${safeComp}'); switchTab('discover');" title="Click to view ${st.count} roles at ${comp}">
+        <div class="comp-bar-row" style="cursor: pointer;" onclick="toggleCompanyFilter('${safeComp}'); switchTab('discover');" title="Click to filter Job Discovery by ${comp} (${st.count} roles)">
           <span class="comp-company-name">${comp} <span style="color: var(--text-muted); font-size: 0.7rem; font-weight: 500;">(${st.count})</span></span>
           <div class="comp-bar-track">
             <div class="comp-bar-fill" style="left: ${leftPct}%; width: ${widthPct}%;"></div>
