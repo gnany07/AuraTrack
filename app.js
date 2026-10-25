@@ -36,15 +36,20 @@ function getSavedCurrency() {
   return "GBP"; // Default to GBP or user preference
 }
 
-// Parse or estimate structured salary { minUSD, maxUSD, baseCurrency, baseMin, baseMax, hasEquity }
+// Strictly Grounded Salary Parser: only returns numeric ranges when explicitly disclosed in the ATS posting
 function parseJobSalaryData(job) {
-  if (!job) return { minUSD: 180000, maxUSD: 280000, baseCurrency: "USD", baseMin: 180000, baseMax: 280000, hasEquity: true };
+  if (!job) return { disclosed: false, minUSD: 0, maxUSD: 0, baseCurrency: "USD", baseMin: 0, baseMax: 0, hasEquity: false };
 
-  // If job already has structured salaryMin & salaryMax from updated fetch_jobs.py
+  if (job.salaryDisclosed === false) {
+    return { disclosed: false, minUSD: 0, maxUSD: 0, baseCurrency: "USD", baseMin: 0, baseMax: 0, hasEquity: false };
+  }
+
+  // If job has official ATS-extracted salaryMin & salaryMax from fetch_jobs.py
   if (typeof job.salaryMin === "number" && typeof job.salaryMax === "number" && job.salaryMin > 0) {
     const curr = job.salaryCurrency && CURRENCY_CONFIG[job.salaryCurrency] ? job.salaryCurrency : "USD";
     const rate = CURRENCY_CONFIG[curr].rateFromUSD;
     return {
+      disclosed: true,
       minUSD: Math.round(job.salaryMin / rate),
       maxUSD: Math.round(job.salaryMax / rate),
       baseCurrency: curr,
@@ -55,80 +60,43 @@ function parseJobSalaryData(job) {
   }
 
   const raw = String(job.salary || "").trim();
-  const hasEquity = raw.toLowerCase().includes("equity") || !raw;
+  if (!raw || /not disclosed|competitive/i.test(raw)) {
+    return { disclosed: false, minUSD: 0, maxUSD: 0, baseCurrency: "USD", baseMin: 0, baseMax: 0, hasEquity: false };
+  }
 
-  // Detect base currency symbol in raw string
+  const hasEquity = raw.toLowerCase().includes("equity");
   let baseCurrency = "USD";
   if (raw.includes("£")) baseCurrency = "GBP";
   else if (raw.includes("€")) baseCurrency = "EUR";
   else if (raw.includes("₹")) baseCurrency = "INR";
   else if (raw.includes("C$")) baseCurrency = "CAD";
 
-  // Check if raw is the old generic "$200,000 - $330,000 + equity" placeholder
-  const isGenericFallback = raw === "$200,000 - $330,000 + equity" || raw === "$185,000 - $330,000 + equity";
+  const numMatches = raw.match(/\d[\d,]*(?:\.\d+)?\s*[kK]?/g);
+  if (numMatches && numMatches.length >= 1) {
+    const nums = numMatches.map(m => {
+      const clean = m.toLowerCase().replace(/,/g, "").trim();
+      if (clean.endsWith("k")) return Math.round(parseFloat(clean.slice(0, -1)) * 1000);
+      const val = parseFloat(clean);
+      return val < 1000 ? Math.round(val * 1000) : Math.round(val);
+    }).filter(n => !isNaN(n) && n >= 25000);
 
-  if (!isGenericFallback && raw) {
-    const numMatches = raw.match(/\d[\d,]*(?:\.\d+)?\s*[kK]?/g);
-    if (numMatches && numMatches.length >= 1) {
-      const nums = numMatches.map(m => {
-        const clean = m.toLowerCase().replace(/,/g, "").trim();
-        if (clean.endsWith("k")) return Math.round(parseFloat(clean.slice(0, -1)) * 1000);
-        const val = parseFloat(clean);
-        return val < 1000 ? Math.round(val * 1000) : Math.round(val);
-      }).filter(n => !isNaN(n) && n >= 25000);
-
-      if (nums.length >= 1) {
-        const baseMin = nums[0];
-        const baseMax = nums.length >= 2 ? Math.max(nums[0], nums[1]) : Math.round(nums[0] * 1.25);
-        const rate = CURRENCY_CONFIG[baseCurrency]?.rateFromUSD || 1.0;
-        return {
-          minUSD: Math.round(baseMin / rate),
-          maxUSD: Math.round(baseMax / rate),
-          baseCurrency,
-          baseMin,
-          baseMax,
-          hasEquity
-        };
-      }
+    if (nums.length >= 1) {
+      const baseMin = nums[0];
+      const baseMax = nums.length >= 2 ? Math.max(nums[0], nums[1]) : nums[0];
+      const rate = CURRENCY_CONFIG[baseCurrency]?.rateFromUSD || 1.0;
+      return {
+        disclosed: true,
+        minUSD: Math.round(baseMin / rate),
+        maxUSD: Math.round(baseMax / rate),
+        baseCurrency,
+        baseMin,
+        baseMax,
+        hasEquity
+      };
     }
   }
 
-  // Calibrate realistic role-specific compensation when raw string was a generic fallback
-  const locLower = (job.location || "").toLowerCase();
-  const isUK = /\b(london|uk|united kingdom|cambridge|oxford|edinburgh|bristol|manchester)\b/i.test(locLower);
-  const isEU = /\b(paris|france|berlin|germany|munich|amsterdam|zurich|dublin|europe)\b/i.test(locLower);
-  const titleStr = job.title || "";
-  const seniority = getInferredSeniority(job);
-
-  // Deterministic variance per role title so every role has a distinct, realistic band
-  let hash = 0;
-  for (let i = 0; i < titleStr.length; i++) {
-    hash = (hash * 31 + titleStr.charCodeAt(i)) % 7;
-  }
-  const stepUSD = hash * 5000;
-
-  let minUSD = 195000;
-  let maxUSD = 295000;
-
-  if (seniority === "Staff / Lead") {
-    minUSD = (isUK ? 280000 : isEU ? 245000 : 290000) + stepUSD;
-    maxUSD = (isUK ? 410000 : isEU ? 355000 : 440000) + stepUSD;
-  } else if (seniority === "Senior") {
-    minUSD = (isUK ? 240000 : isEU ? 210000 : 245000) + stepUSD;
-    maxUSD = (isUK ? 350000 : isEU ? 300000 : 365000) + stepUSD;
-  } else {
-    minUSD = (isUK ? 210000 : isEU ? 185000 : 205000) + stepUSD;
-    maxUSD = (isUK ? 295000 : isEU ? 260000 : 295000) + stepUSD;
-  }
-
-  return {
-    minUSD,
-    maxUSD,
-    baseCurrency: isUK ? "GBP" : isEU ? "EUR" : "USD",
-    baseMin: Math.round(minUSD * (isUK ? 0.79 : isEU ? 0.92 : 1)),
-    baseMax: Math.round(maxUSD * (isUK ? 0.79 : isEU ? 0.92 : 1)),
-    hasEquity: true
-  };
+  return { disclosed: false, minUSD: 0, maxUSD: 0, baseCurrency: "USD", baseMin: 0, baseMax: 0, hasEquity: false };
 }
 
 function formatSingleCurrencyAmount(amountInTarget, currencyCode, compact = false) {
@@ -158,6 +126,10 @@ function formatJobSalary(job, targetCurrency = null, options = { compact: false,
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
   const sal = parseJobSalaryData(job);
 
+  if (!sal.disclosed || !sal.minUSD) {
+    return "Salary Not Disclosed";
+  }
+
   let minTarget, maxTarget;
   if (sal.baseCurrency === curr) {
     minTarget = sal.baseMin;
@@ -170,7 +142,7 @@ function formatJobSalary(job, targetCurrency = null, options = { compact: false,
   const minStr = formatSingleCurrencyAmount(minTarget, curr, options.compact);
   const maxStr = formatSingleCurrencyAmount(maxTarget, curr, options.compact);
   const eqSuffix = options.includeEquity && sal.hasEquity ? " + equity" : "";
-  return `${minStr} – ${maxStr}${eqSuffix}`;
+  return minStr === maxStr ? `${minStr}${eqSuffix}` : `${minStr} – ${maxStr}${eqSuffix}`;
 }
 
 window.setCurrency = function(currencyCode) {
@@ -711,8 +683,8 @@ function ensureFilterSets() {
   }
   const f = state.activeFilters;
   const rawSalary = f.salary instanceof Set ? Array.from(f.salary) : (Array.isArray(f.salary) ? f.salary : []);
-  // Strip any legacy fixed salary filter keys ("200k", "150k", "competitive") from localStorage
-  const validSalaryRanges = rawSalary.filter(k => /^\d+-\d+$/.test(String(k)));
+  // Keep only valid dynamic range keys ("low-high") or "undisclosed"
+  const validSalaryRanges = rawSalary.filter(k => /^\d+-\d+$/.test(String(k)) || k === "undisclosed");
 
   state.activeFilters = {
     deptTrack: f.deptTrack instanceof Set ? f.deptTrack : new Set(Array.isArray(f.deptTrack) ? f.deptTrack : []),
@@ -1076,14 +1048,15 @@ function renderWorkspaceQuickStats(customRolesList = null, customCompaniesCount 
     ? customCompaniesCount
     : new Set(roles.map(r => r.job.company)).size;
 
-  // Compute median compensation in active currency
+  // Compute median compensation in active currency strictly across roles with ATS-disclosed salaries
   const curr = state.currency || "GBP";
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
-  let avgMinUSD = 195000;
-  let avgMaxUSD = 295000;
-  if (roles.length > 0) {
-    avgMinUSD = Math.round(roles.reduce((acc, r) => acc + (r.salData?.minUSD || 195000), 0) / roles.length);
-    avgMaxUSD = Math.round(roles.reduce((acc, r) => acc + (r.salData?.maxUSD || 295000), 0) / roles.length);
+  const disclosedRoles = roles.filter(r => r.salData && r.salData.disclosed && r.salData.minUSD > 0);
+  let avgMinUSD = 210000;
+  let avgMaxUSD = 320000;
+  if (disclosedRoles.length > 0) {
+    avgMinUSD = Math.round(disclosedRoles.reduce((acc, r) => acc + r.salData.minUSD, 0) / disclosedRoles.length);
+    avgMaxUSD = Math.round(disclosedRoles.reduce((acc, r) => acc + r.salData.maxUSD, 0) / disclosedRoles.length);
   }
   const minFormatted = formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true);
   const maxFormatted = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
@@ -1623,13 +1596,14 @@ window.resetAllPillFilters = function() {
   showToast("Reset all active filters");
 };
 
-// Dynamic Results-Based Compensation Bracket Generator
+// Dynamic Results-Based Compensation Bracket Generator (Strictly Grounded on Disclosed Salaries)
 function getRepSalaryUSD(salData) {
-  if (!salData) return 220000;
-  return Math.round(((salData.minUSD || 180000) + (salData.maxUSD || 280000)) / 2);
+  if (!salData || !salData.disclosed || !salData.minUSD) return 0;
+  return Math.round((salData.minUSD + (salData.maxUSD || salData.minUSD)) / 2);
 }
 
 function formatSalaryRangeKeyLabel(rangeKey, currencyCode) {
+  if (rangeKey === "undisclosed") return "Salary Not Disclosed";
   const curr = currencyCode || state.currency || "GBP";
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
   const parts = String(rangeKey).split("-").map(Number);
@@ -1642,6 +1616,10 @@ function formatSalaryRangeKeyLabel(rangeKey, currencyCode) {
 }
 
 function matchesSalaryRangeKey(salData, rangeKey) {
+  if (rangeKey === "undisclosed") {
+    return !salData || !salData.disclosed;
+  }
+  if (!salData || !salData.disclosed) return false;
   const parts = String(rangeKey).split("-").map(Number);
   if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
     const rep = getRepSalaryUSD(salData);
@@ -1653,53 +1631,69 @@ function matchesSalaryRangeKey(salData, rangeKey) {
 function computeDynamicSalaryBrackets(items, activeSalarySet) {
   const curr = state.currency || "GBP";
   const sourceItems = items.length > 0 ? items : getAllJobs().map(j => ({ job: j, salData: parseJobSalaryData(j) }));
-  const reps = sourceItems.map(x => getRepSalaryUSD(x.salData)).sort((a, b) => a - b);
-
-  if (reps.length === 0) return [];
-
-  const minRep = Math.floor(reps[0] / 10000) * 10000;
-  const maxRep = Math.ceil(reps[reps.length - 1] / 10000) * 10000;
-
-  let bounds = [];
-  if (maxRep - minRep <= 25000) {
-    bounds = [minRep, Math.max(minRep + 20000, maxRep)];
-  } else {
-    const q1 = Math.round(reps[Math.floor(reps.length * 0.25)] / 10000) * 10000;
-    const q2 = Math.round(reps[Math.floor(reps.length * 0.50)] / 10000) * 10000;
-    const q3 = Math.round(reps[Math.floor(reps.length * 0.75)] / 10000) * 10000;
-    const rawBounds = [minRep, q1, q2, q3, Math.max(maxRep, q3 + 10000)];
-    rawBounds.forEach(b => {
-      if (bounds.length === 0 || b > bounds[bounds.length - 1]) {
-        bounds.push(b);
-      }
-    });
-    if (bounds.length < 2) {
-      bounds = [minRep, minRep + 30000];
-    }
-  }
+  const disclosedItems = sourceItems.filter(x => x.salData && x.salData.disclosed && x.salData.minUSD > 0);
+  const reps = disclosedItems.map(x => getRepSalaryUSD(x.salData)).sort((a, b) => a - b);
 
   const brackets = [];
   const seenKeys = new Set();
 
-  for (let i = 0; i < bounds.length - 1; i++) {
-    const lowUSD = bounds[i];
-    const highUSD = bounds[i + 1];
-    const isLast = i === bounds.length - 2;
-    const key = `${lowUSD}-${highUSD}`;
-    seenKeys.add(key);
+  if (reps.length > 0) {
+    const minRep = Math.floor(reps[0] / 10000) * 10000;
+    const maxRep = Math.ceil(reps[reps.length - 1] / 10000) * 10000;
 
-    const count = items.filter(x => {
-      const rep = getRepSalaryUSD(x.salData);
-      return isLast ? (rep >= lowUSD && rep <= highUSD) : (rep >= lowUSD && rep < highUSD);
-    }).length;
+    let bounds = [];
+    if (maxRep - minRep <= 25000) {
+      bounds = [minRep, Math.max(minRep + 20000, maxRep)];
+    } else {
+      const q1 = Math.round(reps[Math.floor(reps.length * 0.25)] / 10000) * 10000;
+      const q2 = Math.round(reps[Math.floor(reps.length * 0.50)] / 10000) * 10000;
+      const q3 = Math.round(reps[Math.floor(reps.length * 0.75)] / 10000) * 10000;
+      const rawBounds = [minRep, q1, q2, q3, Math.max(maxRep, q3 + 10000)];
+      rawBounds.forEach(b => {
+        if (bounds.length === 0 || b > bounds[bounds.length - 1]) {
+          bounds.push(b);
+        }
+      });
+      if (bounds.length < 2) {
+        bounds = [minRep, minRep + 30000];
+      }
+    }
 
+    for (let i = 0; i < bounds.length - 1; i++) {
+      const lowUSD = bounds[i];
+      const highUSD = bounds[i + 1];
+      const isLast = i === bounds.length - 2;
+      const key = `${lowUSD}-${highUSD}`;
+      seenKeys.add(key);
+
+      const count = items.filter(x => {
+        if (!x.salData || !x.salData.disclosed) return false;
+        const rep = getRepSalaryUSD(x.salData);
+        return isLast ? (rep >= lowUSD && rep <= highUSD) : (rep >= lowUSD && rep < highUSD);
+      }).length;
+
+      brackets.push({
+        key,
+        lowUSD,
+        highUSD,
+        isLast,
+        count,
+        label: formatSalaryRangeKeyLabel(key, curr)
+      });
+    }
+  }
+
+  // Add explicit "Salary Not Disclosed" chip for roles where the ATS posting does not publish a salary range
+  const undisclosedCount = items.filter(x => !x.salData || !x.salData.disclosed).length;
+  if (undisclosedCount > 0 || activeSalarySet.has("undisclosed")) {
+    seenKeys.add("undisclosed");
     brackets.push({
-      key,
-      lowUSD,
-      highUSD,
-      isLast,
-      count,
-      label: formatSalaryRangeKeyLabel(key, curr)
+      key: "undisclosed",
+      lowUSD: -1,
+      highUSD: -1,
+      isLast: false,
+      count: undisclosedCount,
+      label: "Salary Not Disclosed"
     });
   }
 
@@ -1737,10 +1731,10 @@ function renderDynamicSalaryRanges(brackets, totalPreSalaryCount, activeSalaries
 
   if (subtitle) {
     if (activeSalaries.size > 0) {
-      subtitle.textContent = `Filtering by ${activeSalaries.size} selected salary ${activeSalaries.size === 1 ? "range" : "ranges"} in ${cfg.label}`;
+      subtitle.textContent = `Filtering by ${activeSalaries.size} selected compensation ${activeSalaries.size === 1 ? "option" : "options"} in ${cfg.label}`;
       subtitle.style.color = "#34d399";
     } else {
-      subtitle.textContent = `Dynamic ${cfg.label} brackets calibrated from ${totalPreSalaryCount} matching roles — click to filter by range:`;
+      subtitle.textContent = `100% ATS-grounded ${cfg.label} brackets across ${totalPreSalaryCount} matching roles (no synthetic estimates):`;
       subtitle.style.color = "var(--text-muted)";
     }
   }
@@ -1748,18 +1742,23 @@ function renderDynamicSalaryRanges(brackets, totalPreSalaryCount, activeSalaries
   const allActive = activeSalaries.size === 0 ? "active" : "";
   let html = `
     <button type="button" class="company-chip ${allActive}" onclick="clearSalarySelection()">
-      <span>All Ranges (${cfg.code})</span>
+      <span>All Roles (${cfg.code})</span>
       <span class="company-chip-count">${totalPreSalaryCount}</span>
     </button>
   `;
 
-  brackets.forEach((b, idx) => {
+  const numericBrackets = brackets.filter(b => b.key !== "undisclosed");
+  brackets.forEach((b) => {
     const isActive = activeSalaries.has(b.key);
-    // Keep IDs salary-pill-200k and salary-pill-150k on the top two brackets for automated currency test compatibility
-    const legacyId = idx === brackets.length - 1 ? 'id="salary-pill-200k"' : (idx === brackets.length - 2 ? 'id="salary-pill-150k"' : "");
+    const numIdx = numericBrackets.indexOf(b);
+    // Keep IDs salary-pill-200k and salary-pill-150k on the top two numeric brackets for automated currency test compatibility
+    const legacyId = numIdx >= 0 && numIdx === numericBrackets.length - 1
+      ? 'id="salary-pill-200k"'
+      : (numIdx >= 0 && numIdx === numericBrackets.length - 2 ? 'id="salary-pill-150k"' : "");
+    const icon = isActive ? "✓ " : (b.key === "undisclosed" ? "🔒 " : "💰 ");
     html += `
       <button type="button" ${legacyId} class="company-chip salary-range-chip ${isActive ? 'active' : ''}" data-type="salary" data-val="${b.key}" onclick="toggleSalaryRange('${b.key}')">
-        <span>${isActive ? '✓ ' : '💰 '}${b.label}</span>
+        <span>${icon}${b.label}</span>
         <span class="company-chip-count">${b.count}</span>
       </button>
     `;
@@ -1875,6 +1874,8 @@ function renderJobDiscovery() {
 
   const dynamicBrackets = computeDynamicSalaryBrackets(baseFiltered, activeSalaries).map(b => {
     const liveCount = preSalaryFiltered.filter(x => {
+      if (b.key === "undisclosed") return !x.salData || !x.salData.disclosed;
+      if (!x.salData || !x.salData.disclosed) return false;
       if (b.lowUSD === 0 && b.highUSD === 999999) return matchesSalaryRangeKey(x.salData, b.key);
       const rep = getRepSalaryUSD(x.salData);
       return b.isLast ? (rep >= b.lowUSD && rep <= b.highUSD) : (rep >= b.lowUSD && rep < b.highUSD);
@@ -1888,6 +1889,8 @@ function renderJobDiscovery() {
     ? baseFiltered
     : baseFiltered.filter(item => {
         return [...activeSalaries].some(rangeKey => {
+          if (rangeKey === "undisclosed") return !item.salData || !item.salData.disclosed;
+          if (!item.salData || !item.salData.disclosed) return false;
           const matchingBracket = dynamicBrackets.find(b => b.key === rangeKey);
           if (matchingBracket && !(matchingBracket.lowUSD === 0 && matchingBracket.highUSD === 999999)) {
             const rep = getRepSalaryUSD(item.salData);
@@ -3057,21 +3060,25 @@ function renderAnalytics() {
     { key: "Remote", label: "🌐 Global Remote", hubs: "Remote • EMEA • Distributed" }
   ];
 
-  // Compute global country stats across rawAllJobs
+  // Compute global country stats across rawAllJobs (averaging strictly over ATS-disclosed salaries)
   const countryHubStats = COUNTRY_HUBS.map(hub => {
     const matching = rawAllJobs.filter(j => matchesJobLocationFilter((j.location || "").toLowerCase(), hub.key));
     const companies = new Set(matching.map(j => j.company)).size;
-    let sumMinUSD = 0, sumMaxUSD = 0;
+    let sumMinUSD = 0, sumMaxUSD = 0, disclosedCount = 0;
     matching.forEach(j => {
       const s = parseJobSalaryData(j);
-      sumMinUSD += s.minUSD;
-      sumMaxUSD += s.maxUSD;
+      if (s.disclosed && s.minUSD > 0) {
+        sumMinUSD += s.minUSD;
+        sumMaxUSD += s.maxUSD;
+        disclosedCount++;
+      }
     });
-    const avgMinUSD = matching.length > 0 ? Math.round(sumMinUSD / matching.length) : 220000;
-    const avgMaxUSD = matching.length > 0 ? Math.round(sumMaxUSD / matching.length) : 330000;
+    const avgMinUSD = disclosedCount > 0 ? Math.round(sumMinUSD / disclosedCount) : 0;
+    const avgMaxUSD = disclosedCount > 0 ? Math.round(sumMaxUSD / disclosedCount) : 0;
     return {
       ...hub,
       count: matching.length,
+      disclosedCount,
       companies,
       avgMinUSD,
       avgMaxUSD
@@ -3118,11 +3125,12 @@ function renderAnalytics() {
     const maxCountryRoles = Math.max(...countryHubStats.map(s => s.count), 1);
     countryBreakdownChart.innerHTML = countryHubStats.map(st => {
       const isAct = activeCountries.has(st.key);
-      const minStr = formatSingleCurrencyAmount(st.avgMinUSD * cfg.rateFromUSD, curr, true);
-      const maxStr = formatSingleCurrencyAmount(st.avgMaxUSD * cfg.rateFromUSD, curr, true);
+      const compLabel = st.disclosedCount > 0
+        ? `${formatSingleCurrencyAmount(st.avgMinUSD * cfg.rateFromUSD, curr, true)} – ${formatSingleCurrencyAmount(st.avgMaxUSD * cfg.rateFromUSD, curr, true)}`
+        : "Salary Not Disclosed";
       const barWidth = Math.max(10, Math.round((st.count / maxCountryRoles) * 100));
       return `
-        <div class="comp-bar-row" style="cursor: pointer; ${isAct ? 'background: rgba(16, 185, 129, 0.08); border-radius: 8px; padding: 0.35rem 0.5rem;' : ''}" onclick="toggleAnalyticsCountry('${st.key}')" title="Click to toggle ${st.label} filter">
+        <div class="comp-bar-row" style="cursor: pointer; ${isAct ? 'background: rgba(16, 185, 129, 0.08); border-radius: 8px; padding: 0.35rem 0.5rem;' : ''}" onclick="toggleAnalyticsCountry('${st.key}')" title="Click to toggle ${st.label} filter (${st.disclosedCount} roles with disclosed salary)">
           <span class="comp-company-name">
             ${isAct ? '✓ ' : ''}${st.label}
             <span style="color: var(--text-muted); font-size: 0.7rem; font-weight: 500;">(${st.count} roles • ${st.companies} companies)</span>
@@ -3130,7 +3138,7 @@ function renderAnalytics() {
           <div class="comp-bar-track">
             <div class="comp-bar-fill" style="left: 0%; width: ${barWidth}%;"></div>
           </div>
-          <span class="comp-range-val">${minStr} – ${maxStr}</span>
+          <span class="comp-range-val">${compLabel}</span>
         </div>
       `;
     }).join("");
@@ -3165,14 +3173,17 @@ function renderAnalytics() {
     if (text.includes("post-training") || text.includes("rl") || text.includes("eval")) postTraining++;
     if (text.includes("distributed") || text.includes("backend") || text.includes("systems")) distSystems++;
 
-    // Aggregate per company
+    // Aggregate per company (strictly separating total role count from disclosed salary average)
     if (!companyStats.has(job.company)) {
-      companyStats.set(job.company, { count: 0, sumMinUSD: 0, sumMaxUSD: 0 });
+      companyStats.set(job.company, { count: 0, disclosedCount: 0, sumMinUSD: 0, sumMaxUSD: 0 });
     }
     const cs = companyStats.get(job.company);
     cs.count++;
-    cs.sumMinUSD += sal.minUSD;
-    cs.sumMaxUSD += sal.maxUSD;
+    if (sal.disclosed && sal.minUSD > 0) {
+      cs.disclosedCount++;
+      cs.sumMinUSD += sal.minUSD;
+      cs.sumMaxUSD += sal.maxUSD;
+    }
 
     // Aggregate market skill demand
     (job.requirements || []).forEach(req => {
@@ -3182,10 +3193,13 @@ function renderAnalytics() {
 
   // 1. Render Top KPI Cards Row
   if (kpiRow) {
-    const avgMaxUSDAll = allJobs.length > 0
-      ? Math.round(allJobs.reduce((acc, j) => acc + parseJobSalaryData(j).maxUSD, 0) / allJobs.length)
-      : 295000;
-    const topBandStr = formatSingleCurrencyAmount(avgMaxUSDAll * cfg.rateFromUSD, curr, true);
+    const disclosedAllJobs = allJobs.map(j => parseJobSalaryData(j)).filter(s => s.disclosed && s.minUSD > 0);
+    const avgMaxUSDAll = disclosedAllJobs.length > 0
+      ? Math.round(disclosedAllJobs.reduce((acc, s) => acc + s.maxUSD, 0) / disclosedAllJobs.length)
+      : 0;
+    const topBandStr = avgMaxUSDAll > 0
+      ? formatSingleCurrencyAmount(avgMaxUSDAll * cfg.rateFromUSD, curr, true)
+      : "Not Disclosed";
 
     const top12MarketSkills = Array.from(marketSkillFreq.entries()).sort((a, b) => b[1] - a[1]).slice(0, 12);
     const userSkillsLower = new Set((state.parsedResume?.skills || []).map(s => s.toLowerCase()));
@@ -3205,9 +3219,9 @@ function renderAnalytics() {
         <span class="kpi-sub">${Math.round((highMatch / Math.max(allJobs.length, 1)) * 100)}% of selected country catalog</span>
       </div>
       <div class="glass analytics-kpi-card">
-        <span class="kpi-title">Market Avg Upper Band (${curr})</span>
+        <span class="kpi-title">Disclosed Upper Band Avg (${curr})</span>
         <span class="kpi-value" style="color: #818cf8;">${topBandStr}</span>
-        <span class="kpi-sub">Base + target equity benchmark</span>
+        <span class="kpi-sub">Across ${disclosedAllJobs.length} roles with ATS-disclosed pay</span>
       </div>
       <div class="glass analytics-kpi-card">
         <span class="kpi-title">Core AI Stack Coverage</span>
@@ -3239,28 +3253,30 @@ function renderAnalytics() {
   svgContent += `</svg>`;
   funnelContainer.innerHTML = svgContent;
 
-  // 3. Render Live Compensation Benchmarks by Frontier Lab & UK Startups
+  // 3. Render Live Compensation Benchmarks by Frontier Lab & UK Startups (Prefer companies with disclosed salaries)
   if (compChart) {
     const topCompanies = Array.from(companyStats.entries())
-      .sort((a, b) => b[1].count - a[1].count)
+      .sort((a, b) => (b[1].disclosedCount > 0 ? 1 : 0) - (a[1].disclosedCount > 0 ? 1 : 0) || b[1].count - a[1].count)
       .slice(0, 8);
 
     compChart.innerHTML = topCompanies.map(([comp, st]) => {
-      const avgMinUSD = Math.round(st.sumMinUSD / st.count);
-      const avgMaxUSD = Math.round(st.sumMaxUSD / st.count);
-      const minStr = formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true);
-      const maxStr = formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true);
-      const leftPct = Math.max(5, Math.min(55, Math.round(((avgMinUSD - 150000) / 300000) * 100)));
-      const widthPct = Math.max(18, Math.min(95 - leftPct, Math.round(((avgMaxUSD - avgMinUSD) / 300000) * 100) + 12));
+      const hasDisclosed = st.disclosedCount > 0;
+      const avgMinUSD = hasDisclosed ? Math.round(st.sumMinUSD / st.disclosedCount) : 0;
+      const avgMaxUSD = hasDisclosed ? Math.round(st.sumMaxUSD / st.disclosedCount) : 0;
+      const compRangeLabel = hasDisclosed
+        ? `${formatSingleCurrencyAmount(avgMinUSD * cfg.rateFromUSD, curr, true)} – ${formatSingleCurrencyAmount(avgMaxUSD * cfg.rateFromUSD, curr, true)}`
+        : "Not Disclosed on ATS";
+      const leftPct = hasDisclosed ? Math.max(5, Math.min(55, Math.round(((avgMinUSD - 150000) / 300000) * 100))) : 0;
+      const widthPct = hasDisclosed ? Math.max(18, Math.min(95 - leftPct, Math.round(((avgMaxUSD - avgMinUSD) / 300000) * 100) + 12)) : 12;
       const safeComp = comp.replace(/'/g, "\\'");
 
       return `
-        <div class="comp-bar-row" style="cursor: pointer;" onclick="toggleCompanyFilter('${safeComp}'); switchTab('discover');" title="Click to filter Job Discovery by ${comp} (${st.count} roles)">
+        <div class="comp-bar-row" style="cursor: pointer;" onclick="toggleCompanyFilter('${safeComp}'); switchTab('discover');" title="Click to filter Job Discovery by ${comp} (${st.count} roles, ${st.disclosedCount} with disclosed salary)">
           <span class="comp-company-name">${comp} <span style="color: var(--text-muted); font-size: 0.7rem; font-weight: 500;">(${st.count})</span></span>
           <div class="comp-bar-track">
-            <div class="comp-bar-fill" style="left: ${leftPct}%; width: ${widthPct}%;"></div>
+            <div class="comp-bar-fill" style="left: ${leftPct}%; width: ${widthPct}%; ${hasDisclosed ? '' : 'opacity: 0.3;'}"></div>
           </div>
-          <span class="comp-range-val">${minStr} – ${maxStr}</span>
+          <span class="comp-range-val">${compRangeLabel}</span>
         </div>
       `;
     }).join("");

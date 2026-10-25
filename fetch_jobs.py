@@ -554,15 +554,15 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
                 min_v = comp.get("minValue")
                 max_v = comp.get("maxValue")
                 curr = comp.get("currencyCode") or "USD"
-                if min_v and max_v and min_v >= 60000:
+                if min_v and max_v and min_v >= 45000:
                     min_i, max_i = int(min_v), int(max_v)
                     sym = {"USD": "$", "GBP": "£", "EUR": "€", "CAD": "C$"}.get(curr, "$")
-                    return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,} + equity"
-                elif min_v and min_v >= 60000:
+                    return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,}", True
+                elif min_v and min_v >= 45000:
                     min_i = int(min_v)
-                    max_i = int(min_v * 1.25)
+                    max_i = int(min_v)
                     sym = {"USD": "$", "GBP": "£", "EUR": "€", "CAD": "C$"}.get(curr, "$")
-                    return min_i, max_i, curr, f"{sym}{min_i:,} - {sym}{max_i:,} + equity"
+                    return min_i, max_i, curr, f"{sym}{min_i:,}", True
 
         tier_summary = (comp_obj.get("scrapeableCompensationSalarySummary") or comp_obj.get("compensationTierSummary") or "").strip()
         if tier_summary:
@@ -579,11 +579,12 @@ def parse_salary_from_text_or_ashby(comp_obj, text: str, company: str, title: st
             raw_high = m.group(4).lower().replace(",", "").strip()
             low = int(float(raw_low[:-1]) * 1000) if raw_low.endswith("k") else int(raw_low)
             high = int(float(raw_high[:-1]) * 1000) if raw_high.endswith("k") else int(raw_high)
-            if 80000 <= low <= 1500000 and low <= high <= 2000000:
+            if 50000 <= low <= 1500000 and low <= high <= 2000000:
                 curr = {"£": "GBP", "€": "EUR", "$": "USD"}.get(sym, "USD")
-                return low, high, curr, f"{sym}{low:,} - {sym}{high:,} + equity"
+                return low, high, curr, f"{sym}{low:,} - {sym}{high:,}", True
 
-    return estimate_salary_band(company, title, location, seniority)
+    # Strictly grounded: do not fabricate a salary range when the ATS posting does not mention one
+    return None, None, None, "Salary Not Disclosed", False
 
 def get_logo_url(company_name: str) -> str:
     domain = COMPANY_DOMAINS.get(company_name, "github.com")
@@ -656,7 +657,7 @@ def fetch_ashby(company_name: str, board_slug: str = None) -> tuple[list, dict]:
                 dept_track = normalize_department_track(dept, team, title)
                 tech_domain = get_technical_domain(title, skills, desc_plain, dept, team)
                 seniority = get_seniority_level(title, company_name)
-                sal_min, sal_max, sal_curr, salary_str = parse_salary_from_text_or_ashby(
+                sal_min, sal_max, sal_curr, salary_str, sal_disclosed = parse_salary_from_text_or_ashby(
                     item.get("compensation"), desc_plain, company_name, title, location_str, seniority
                 )
 
@@ -696,6 +697,7 @@ def fetch_ashby(company_name: str, board_slug: str = None) -> tuple[list, dict]:
                     "salaryMin": sal_min,
                     "salaryMax": sal_max,
                     "salaryCurrency": sal_curr,
+                    "salaryDisclosed": sal_disclosed,
                     "boardSource": "Ashby",
                     "boardUrl": f"https://jobs.ashbyhq.com/{slug}",
                     "jobUrl": exact_job_url,
@@ -770,7 +772,7 @@ def fetch_greenhouse(company_name: str, board_slug: str) -> tuple[list, dict]:
                 dept_track = normalize_department_track(depts_str, "", title)
                 tech_domain = get_technical_domain(title, skills, content, depts_str, "")
                 seniority = get_seniority_level(title, company_name)
-                sal_min, sal_max, sal_curr, salary_str = parse_salary_from_text_or_ashby(
+                sal_min, sal_max, sal_curr, salary_str, sal_disclosed = parse_salary_from_text_or_ashby(
                     None, content, company_name, title, location_str, seniority
                 )
 
@@ -802,6 +804,7 @@ def fetch_greenhouse(company_name: str, board_slug: str) -> tuple[list, dict]:
                     "salaryMin": sal_min,
                     "salaryMax": sal_max,
                     "salaryCurrency": sal_curr,
+                    "salaryDisclosed": sal_disclosed,
                     "boardSource": "Greenhouse",
                     "boardUrl": f"https://boards.greenhouse.io/{board_slug}",
                     "jobUrl": exact_job_url,
