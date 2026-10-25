@@ -774,6 +774,7 @@ async function syncStateFromDB() {
         ensureTrackerStages();
         if (state.currentTab === "tracker") renderKanbanBoard();
         if (state.currentTab === "discover") renderJobDiscovery();
+        if (state.currentTab === "analytics") renderAnalytics();
       }
     }
   } catch (e) {}
@@ -3002,10 +3003,28 @@ window.toggleAnalyticsCountry = function(countryVal) {
   renderJobDiscovery();
 };
 
+window.setAnalyticsCityFilter = function(cityVal) {
+  window.__localFiltersModified = true;
+  state.analyticsCityFilter = (cityVal || "").toLowerCase().trim();
+  renderAnalytics();
+};
+
+window.setAnalyticsDeptFilter = function(deptVal) {
+  window.__localFiltersModified = true;
+  state.analyticsDeptFilter = (deptVal || "").trim();
+  renderAnalytics();
+};
+
 window.clearAnalyticsCountries = function() {
   window.__localFiltersModified = true;
   ensureFilterSets();
   state.activeFilters.location.clear();
+  state.analyticsCityFilter = "";
+  state.analyticsDeptFilter = "";
+  const citySelect = document.getElementById("analytics-city-select");
+  if (citySelect) citySelect.value = "";
+  const deptSelect = document.getElementById("analytics-dept-select");
+  if (deptSelect) deptSelect.value = "";
   saveState();
   renderAnalytics();
   renderJobDiscovery();
@@ -3027,6 +3046,8 @@ function renderAnalytics() {
   const curr = state.currency || "GBP";
   const cfg = CURRENCY_CONFIG[curr] || CURRENCY_CONFIG.USD;
   const activeCountries = state.activeFilters.location;
+  const cityFilter = (state.analyticsCityFilter || "").toLowerCase().trim();
+  const deptFilter = (state.analyticsDeptFilter || "").trim();
 
   const COUNTRY_HUBS = [
     { key: "London", label: "🇬🇧 United Kingdom", hubs: "London • Cambridge • Oxford • Bristol" },
@@ -3059,7 +3080,7 @@ function renderAnalytics() {
 
   // Render Country Multi-Select Bar on Market & Gaps
   if (countryPillGroup) {
-    const allActive = activeCountries.size === 0 ? "active" : "";
+    const allActive = activeCountries.size === 0 && !cityFilter ? "active" : "";
     let pillsHtml = `
       <button type="button" class="company-chip ${allActive}" onclick="clearAnalyticsCountries()">
         <span>🌍 All Countries</span>
@@ -3079,11 +3100,15 @@ function renderAnalytics() {
   }
 
   if (countrySubtitle) {
-    if (activeCountries.size > 0) {
-      countrySubtitle.textContent = `Filtering Market & Gaps by ${activeCountries.size} selected ${activeCountries.size === 1 ? "country/region" : "countries/regions"} (${[...activeCountries].join(" + ")})`;
+    const activeParts = [];
+    if (activeCountries.size > 0) activeParts.push([...activeCountries].join(" + "));
+    if (cityFilter) activeParts.push(`City: ${cityFilter}`);
+    if (deptFilter) activeParts.push(`Dept: ${deptFilter}`);
+    if (activeParts.length > 0) {
+      countrySubtitle.textContent = `Filtering Market & Gaps by: ${activeParts.join(" • ")}`;
       countrySubtitle.style.color = "#34d399";
     } else {
-      countrySubtitle.textContent = `Showing global market across ${rawAllJobs.length} grounded roles — click one or more countries to filter benchmarks & skill gaps`;
+      countrySubtitle.textContent = `Showing global market across ${rawAllJobs.length} grounded roles — click one or more countries or select a city/hub to filter`;
       countrySubtitle.style.color = "var(--text-muted)";
     }
   }
@@ -3111,10 +3136,20 @@ function renderAnalytics() {
     }).join("");
   }
 
-  // Filter `allJobs` by selected countries (multi-select OR) for all KPI cards & charts below
-  const allJobs = activeCountries.size === 0
-    ? rawAllJobs
-    : rawAllJobs.filter(j => [...activeCountries].some(c => matchesJobLocationFilter((j.location || "").toLowerCase(), c)));
+  // Filter `allJobs` by selected countries, cityFilter, and deptFilter for all KPI cards & charts below
+  const allJobs = rawAllJobs.filter(j => {
+    const locLower = (j.location || "").toLowerCase();
+    const countryOk = activeCountries.size === 0 || [...activeCountries].some(c => matchesJobLocationFilter(locLower, c));
+    let cityOk = true;
+    if (cityFilter) {
+      if (cityFilter === "cambridge") cityOk = /\b(cambridge|oxford)\b/i.test(locLower);
+      else if (cityFilter === "berlin") cityOk = /\b(berlin|munich)\b/i.test(locLower);
+      else if (cityFilter === "toronto") cityOk = /\b(toronto|vancouver|montreal)\b/i.test(locLower);
+      else cityOk = locLower.includes(cityFilter);
+    }
+    const deptOk = !deptFilter || (j.deptTrack || "Engineering") === deptFilter;
+    return countryOk && cityOk && deptOk;
+  });
 
   let highMatch = 0, mediumMatch = 0, aiInfra = 0, postTraining = 0, distSystems = 0;
   const companyStats = new Map();
@@ -3671,6 +3706,10 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.style.display = "none";
     }
   });
+
+  // Pre-render Analytics and Discovery so all Country & Filter views are ready immediately
+  renderAnalytics();
+  renderJobDiscovery();
 
   // Respect URL hash (#discover, #resume, #tracker, #analytics) on initial load!
   const initialHashTab = getTabFromHash();

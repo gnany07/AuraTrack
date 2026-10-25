@@ -1,0 +1,10 @@
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/app.js
+  Cache-Control: no-cache, no-store, must-revalidate
+/jobs.js
+  Cache-Control: no-cache, no-store, must-revalidate
+/style.css
+  Cache-Control: no-cache, no-store, must-revalidate

@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>AuraTrack AI — Frontier AI Careers, Compensation & Resume Intelligence</title>
-  <meta name="description" content="Explore 1,100+ verified software & AI engineering roles at OpenAI, Anthropic, xAI, Perplexity, Scale AI, and frontier labs with live currency conversion and resume matching.">
-  <link rel="stylesheet" href="style.css?v=5.0">
+  <meta name="description" content="Explore 2,400+ verified software & AI engineering roles at OpenAI, Anthropic, Reflection AI, Wayve, Monzo, and 90+ frontier labs & UK startups with live currency conversion and resume matching.">
+  <link rel="stylesheet" href="style.css?v=6.0">
   <!-- Load PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
   <!-- Load job catalog first -->
-  <script src="jobs.js?v=5.0" defer></script>
+  <script src="jobs.js?v=6.0" defer></script>
   <!-- Load app logic -->
-  <script src="app.js?v=5.0" defer></script>
+  <script src="app.js?v=6.0" defer></script>
 </head>
 <body>
 
@@ -459,14 +462,57 @@
          ====================================================================== -->
     <section id="section-analytics" class="dashboard-section">
 
-      <!-- Country / Region Filter Bar for Market & Gaps (Multi-Select Enabled) -->
-      <div class="glass" style="padding: 1rem 1.25rem; border-radius: 14px; margin-bottom: 1.15rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-          <span class="filter-section-title" style="margin: 0;">Market &amp; Gaps Country Filter (Multi-Select)</span>
-          <span id="analytics-country-subtitle" style="font-size: 0.76rem; color: var(--text-muted);">Select one or more countries/hubs to filter compensation bands, hiring companies, and skill gaps</span>
+      <!-- Country, City & Department Filter Console for Market & Gaps -->
+      <div class="glass discovery-console" style="margin-bottom: 1.15rem;">
+        <div class="console-top-row" style="justify-content: space-between; flex-wrap: wrap; gap: 0.85rem;">
+          <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+            <span class="filter-section-title" style="margin: 0; font-size: 0.8rem; color: #f8fafc;">🌍 Country &amp; Location Filter — Market Intelligence &amp; Skill Gaps</span>
+            <span id="analytics-country-subtitle" style="font-size: 0.76rem; color: var(--text-muted);">Multi-select countries or choose a specific city/hub to filter all compensation benchmarks, hiring labs, and skill gaps</span>
+          </div>
+
+          <div class="console-actions-wrap" style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+            <div class="sort-control-wrap">
+              <label for="analytics-city-select" class="sort-label">City / Hub</label>
+              <select id="analytics-city-select" class="sort-select" onchange="setAnalyticsCityFilter(this.value)">
+                <option value="">All Cities &amp; Hubs</option>
+                <option value="london">🇬🇧 London, UK</option>
+                <option value="cambridge">🇬🇧 Cambridge / Oxford, UK</option>
+                <option value="san francisco">🇺🇸 San Francisco / Bay Area</option>
+                <option value="new york">🇺🇸 New York, NY</option>
+                <option value="seattle">🇺🇸 Seattle, WA</option>
+                <option value="paris">🇫🇷 Paris, France</option>
+                <option value="berlin">🇩🇪 Berlin / Munich, Germany</option>
+                <option value="dublin">🇮🇪 Dublin, Ireland</option>
+                <option value="zurich">🇨🇭 Zurich, Switzerland</option>
+                <option value="amsterdam">🇳🇱 Amsterdam, Netherlands</option>
+                <option value="toronto">🇨🇦 Toronto / Vancouver, Canada</option>
+                <option value="remote">🌐 Remote / Distributed</option>
+              </select>
+            </div>
+
+            <div class="sort-control-wrap">
+              <label for="analytics-dept-select" class="sort-label">Department</label>
+              <select id="analytics-dept-select" class="sort-select" onchange="setAnalyticsDeptFilter(this.value)">
+                <option value="">All Departments</option>
+                <option value="Engineering">⚙️ Engineering Dept</option>
+                <option value="Research">🔬 Research Dept</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn-reset-filters" onclick="clearAnalyticsCountries()">Reset Country Filters</button>
+          </div>
         </div>
-        <div id="analytics-country-pill-group" class="company-chips-scroll" style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
-          <!-- Populated dynamically by renderAnalytics() -->
+
+        <div class="facet-group" style="margin-top: 0.65rem;">
+          <span class="filter-section-title">Select Countries / Regions (Multi-Select Enabled)</span>
+          <div id="analytics-country-pill-group" class="filter-pill-group" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <button type="button" class="company-chip active" onclick="clearAnalyticsCountries()"><span>🌍 All Countries</span></button>
+            <button type="button" class="company-chip analytics-country-chip" data-country="London" onclick="toggleAnalyticsCountry('London')"><span>🇬🇧 United Kingdom</span></button>
+            <button type="button" class="company-chip analytics-country-chip" data-country="San Francisco" onclick="toggleAnalyticsCountry('San Francisco')"><span>🇺🇸 United States</span></button>
+            <button type="button" class="company-chip analytics-country-chip" data-country="Europe" onclick="toggleAnalyticsCountry('Europe')"><span>🇪🇺 Europe</span></button>
+            <button type="button" class="company-chip analytics-country-chip" data-country="Canada" onclick="toggleAnalyticsCountry('Canada')"><span>🇨🇦 Canada</span></button>
+            <button type="button" class="company-chip analytics-country-chip" data-country="Remote" onclick="toggleAnalyticsCountry('Remote')"><span>🌐 Global Remote</span></button>
+          </div>
         </div>
       </div>
 
