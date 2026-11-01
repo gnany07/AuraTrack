@@ -1559,46 +1559,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=affirm.com&sz=128"
   },
   {
-    "id": "affirm-8040388003",
-    "company": "Affirm",
-    "title": "Senior Software Engineer, Backend (AI Platform)",
-    "department": "Infrastructure Platform Eng",
-    "team": "Infrastructure Platform Eng",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Remote Canada",
-    "locations": [
-      "Remote Canada"
-    ],
-    "salary": "$153,000 - $213,000",
-    "salaryMin": 153000,
-    "salaryMax": 213000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/affirm",
-    "jobUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003",
-    "applyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003#app",
-    "description": "At Affirm, we exist for the moments that matter\u2014giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.\n\nAffirm's engineering team is building a large-scale, fault-tolerant, and global infrastructure that is shared across multiple financial products, merchants, and vendors. Ensuring that our infrastructure is transparently available to all engineers is critical to the success of the business. We pride ourselves on our culture across engineering of writing blameless postmortems as well as writing detailed tech specs and gathering feedback before large changes to systems.\n\nThe AI Platform team owns Affirm's paved path for building, running, evaluating, and governing AI systems. Our customers are not only Affirm users, but also every engineer and a growing set of production workloads at Affirm. As a team, we are responsible for building and exposing simple, governed interfaces to models, tools, and agents, with identity, cost attribution, reliability, and security built in. Examples of components we own include the LLM Gateway that fronts every approved model (Claude, ChatGPT, and open-weight models across AWS Bedrock and other providers), the MCP Gateway that mediates and audits tool calls, the Agent Runtime that gives agentic workloads bounded execution, and the evals and observability layer that tells teams whether an AI change is better, cheaper, or safe to ship. We are early: the gateway is in daily use across engineering, the first production agent is live, and the next year takes us from developer productivity to production inference and agents.\n\nWhat You'll Do\n\nPlan, execute, and own technical decisions and projects within the AI Platform team, from design through launch and on-call.\n\nDesign and build the gateway, runtime, and evaluation services that take AI workloads at Affirm from pilot to production, securely scaling across millions of users and their transactions.\n\nMake AI spend attributable and governable: build the identity, quota, routing, caching, and failover controls that let teams adopt new models and tools without re-solving the same platform problems.\n\nPartner with security, infrastructure, and product engineering teams to set the guardrails for agentic workloads and the on-behalf-of identity model for tool access.\n\nCreate and monitor metrics for your team's systems",
-    "requirements": [
-      "Python",
-      "Kubernetes",
-      "AWS",
-      "Distributed Systems",
-      "MySQL",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #4f46e5, #312e81)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=affirm.com&sz=128"
-  },
-  {
     "id": "affirm-8040267003",
     "company": "Affirm",
     "title": "Senior Software Engineer, Backend (AI Platform)",
@@ -1640,7 +1600,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=affirm.com&sz=128"
   },
   {
-    "id": "affirm-8040386003",
+    "id": "affirm-8040388003",
     "company": "Affirm",
     "title": "Senior Software Engineer, Backend (AI Platform)",
     "department": "Infrastructure Platform Eng",
@@ -1650,21 +1610,20 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Remote US \u2022 Remote Canada",
+    "location": "Remote Canada",
     "locations": [
-      "Remote US",
       "Remote Canada"
     ],
-    "salary": "$195,000 - $255,000",
-    "salaryMin": 195000,
-    "salaryMax": 255000,
+    "salary": "$153,000 - $213,000",
+    "salaryMin": 153000,
+    "salaryMax": 213000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/affirm",
-    "jobUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040386003",
-    "applyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040386003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040386003#app",
+    "jobUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003",
+    "applyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/affirm/jobs/8040388003#app",
     "description": "At Affirm, we exist for the moments that matter\u2014giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.\n\nAffirm's engineering team is building a large-scale, fault-tolerant, and global infrastructure that is shared across multiple financial products, merchants, and vendors. Ensuring that our infrastructure is transparently available to all engineers is critical to the success of the business. We pride ourselves on our culture across engineering of writing blameless postmortems as well as writing detailed tech specs and gathering feedback before large changes to systems.\n\nThe AI Platform team owns Affirm's paved path for building, running, evaluating, and governing AI systems. Our customers are not only Affirm users, but also every engineer and a growing set of production workloads at Affirm. As a team, we are responsible for building and exposing simple, governed interfaces to models, tools, and agents, with identity, cost attribution, reliability, and security built in. Examples of components we own include the LLM Gateway that fronts every approved model (Claude, ChatGPT, and open-weight models across AWS Bedrock and other providers), the MCP Gateway that mediates and audits tool calls, the Agent Runtime that gives agentic workloads bounded execution, and the evals and observability layer that tells teams whether an AI change is better, cheaper, or safe to ship. We are early: the gateway is in daily use across engineering, the first production agent is live, and the next year takes us from developer productivity to production inference and agents.\n\nWhat You'll Do\n\nPlan, execute, and own technical decisions and projects within the AI Platform team, from design through launch and on-call.\n\nDesign and build the gateway, runtime, and evaluation services that take AI workloads at Affirm from pilot to production, securely scaling across millions of users and their transactions.\n\nMake AI spend attributable and governable: build the identity, quota, routing, caching, and failover controls that let teams adopt new models and tools without re-solving the same platform problems.\n\nPartner with security, infrastructure, and product engineering teams to set the guardrails for agentic workloads and the on-behalf-of identity model for tool access.\n\nCreate and monitor metrics for your team's systems",
     "requirements": [
       "Python",
@@ -2945,47 +2904,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5271233007",
-    "company": "Anduril",
-    "title": "Classified Cloud & Platform Engineer",
-    "department": "Corporate Technology : Classified Systems : Classified IT",
-    "team": "Corporate Technology : Classified Systems : Classified IT",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Washington, District of Columbia, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$142,000 - $188,000",
-    "salaryMin": 142000,
-    "salaryMax": 188000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE ROLE\n\nAnduril is seeking a Classified Cloud & Platform Engineer to design, modernize, secure, and sustain systems and infrastructure supporting classified computing environments. This systems engineering focused role spans government cloud environments, including DoD Impact Level 5 (IL5) and higher where appropriately authorized, classified cloud platforms, and on-premises classified systems. The engineer will develop secure hybrid connectivity, strengthen infrastructure automation, and support mission-critical operations in air-gapped, disconnected, and restricted-connectivity environments.\n\nAs a foundational member of the Cloud Networks team, you will assess inherited infrastructure, remediate architectural and operational deficiencies, and establish repeatable engineering and sustainment practices. You will partner with ISSMs, ISSOs, Cybersecurity, Network Engineering, and Software Engineering to modernize systems while preserving mission availability and meeting applicable authorization requirements.\n\nWHAT YOU'LL DO\n\nAssess, design, modernize, and sustain classified cloud, hybrid, and on-premises infrastructure; identify architectural deficiencies, technical debt, security gaps, and opportunities to improve reliability, scalability, and operational efficiency.\n\nEngineer government cloud infrastructure, including DoD IL5+ environments and appropriately authorized classified cloud platforms; implement secure connectivity, network segmentation, and integration with on-premises systems while respecting classification boundaries.\n\nDevelop Infrastructure as Code (IaC), automation, and configuration management using Terraform, Ansible, Powe",
-    "requirements": [
-      "Python",
-      "Go",
-      "Kubernetes",
-      "AWS",
-      "Computer Vision",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5269017007",
     "company": "Anduril",
     "title": "Classified Cloud & Platform Engineer",
@@ -3011,6 +2929,47 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5269017007?gh_jid=5269017007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5269017007?gh_jid=5269017007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5269017007?gh_jid=5269017007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE ROLE\n\nAnduril is seeking a Classified Cloud & Platform Engineer to design, modernize, secure, and sustain systems and infrastructure supporting classified computing environments. This systems engineering focused role spans government cloud environments, including DoD Impact Level 5 (IL5) and higher where appropriately authorized, classified cloud platforms, and on-premises classified systems. The engineer will develop secure hybrid connectivity, strengthen infrastructure automation, and support mission-critical operations in air-gapped, disconnected, and restricted-connectivity environments.\n\nAs a foundational member of the Cloud Networks team, you will assess inherited infrastructure, remediate architectural and operational deficiencies, and establish repeatable engineering and sustainment practices. You will partner with ISSMs, ISSOs, Cybersecurity, Network Engineering, and Software Engineering to modernize systems while preserving mission availability and meeting applicable authorization requirements.\n\nWHAT YOU'LL DO\n\nAssess, design, modernize, and sustain classified cloud, hybrid, and on-premises infrastructure; identify architectural deficiencies, technical debt, security gaps, and opportunities to improve reliability, scalability, and operational efficiency.\n\nEngineer government cloud infrastructure, including DoD IL5+ environments and appropriately authorized classified cloud platforms; implement secure connectivity, network segmentation, and integration with on-premises systems while respecting classification boundaries.\n\nDevelop Infrastructure as Code (IaC), automation, and configuration management using Terraform, Ansible, Powe",
+    "requirements": [
+      "Python",
+      "Go",
+      "Kubernetes",
+      "AWS",
+      "Computer Vision",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5271233007",
+    "company": "Anduril",
+    "title": "Classified Cloud & Platform Engineer",
+    "department": "Corporate Technology : Classified Systems : Classified IT",
+    "team": "Corporate Technology : Classified Systems : Classified IT",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Washington, District of Columbia, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$142,000 - $188,000",
+    "salaryMin": 142000,
+    "salaryMax": 188000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5271233007?gh_jid=5271233007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE ROLE\n\nAnduril is seeking a Classified Cloud & Platform Engineer to design, modernize, secure, and sustain systems and infrastructure supporting classified computing environments. This systems engineering focused role spans government cloud environments, including DoD Impact Level 5 (IL5) and higher where appropriately authorized, classified cloud platforms, and on-premises classified systems. The engineer will develop secure hybrid connectivity, strengthen infrastructure automation, and support mission-critical operations in air-gapped, disconnected, and restricted-connectivity environments.\n\nAs a foundational member of the Cloud Networks team, you will assess inherited infrastructure, remediate architectural and operational deficiencies, and establish repeatable engineering and sustainment practices. You will partner with ISSMs, ISSOs, Cybersecurity, Network Engineering, and Software Engineering to modernize systems while preserving mission availability and meeting applicable authorization requirements.\n\nWHAT YOU'LL DO\n\nAssess, design, modernize, and sustain classified cloud, hybrid, and on-premises infrastructure; identify architectural deficiencies, technical debt, security gaps, and opportunities to improve reliability, scalability, and operational efficiency.\n\nEngineer government cloud infrastructure, including DoD IL5+ environments and appropriately authorized classified cloud platforms; implement secure connectivity, network segmentation, and integration with on-premises systems while respecting classification boundaries.\n\nDevelop Infrastructure as Code (IaC), automation, and configuration management using Terraform, Ansible, Powe",
     "requirements": [
       "Python",
@@ -3113,50 +3072,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5016001007",
-    "company": "Anduril",
-    "title": "Computer Vision Engineer, Space",
-    "department": "AFS : Space Engineering : GNC & Simulation Engineering",
-    "team": "AFS : Space Engineering : GNC & Simulation Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Reston, VA (NOVA-01) \u2022 Washington, DC (DC-01)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)",
-      "Reston, VA (NOVA-01)",
-      "Washington, DC (DC-01)"
-    ],
-    "salary": "$167,000 - $222,000",
-    "salaryMin": 167000,
-    "salaryMax": 222000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a\u00a0 Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Costa Mesa, CA . In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft systems acr",
-    "requirements": [
-      "Python",
-      "C++",
-      "Go",
-      "C",
-      "Computer Vision",
-      "Machine Learning",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5016334007",
     "company": "Anduril",
     "title": "Computer Vision Engineer, Space",
@@ -3185,6 +3100,50 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016334007?gh_jid=5016334007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016334007?gh_jid=5016334007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a\u00a0 Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Washington DC. \u00a0In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft systems acro",
+    "requirements": [
+      "Python",
+      "C++",
+      "Go",
+      "C",
+      "Computer Vision",
+      "Machine Learning",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5016001007",
+    "company": "Anduril",
+    "title": "Computer Vision Engineer, Space",
+    "department": "AFS : Space Engineering : GNC & Simulation Engineering",
+    "team": "AFS : Space Engineering : GNC & Simulation Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Reston, VA (NOVA-01) \u2022 Washington, DC (DC-01)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)",
+      "Reston, VA (NOVA-01)",
+      "Washington, DC (DC-01)"
+    ],
+    "salary": "$167,000 - $222,000",
+    "salaryMin": 167000,
+    "salaryMax": 222000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016001007?gh_jid=5016001007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a\u00a0 Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Costa Mesa, CA . In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft systems acr",
     "requirements": [
       "Python",
       "C++",
@@ -3452,49 +3411,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-4497427007",
-    "company": "Anduril",
-    "title": "Ground Software Engineer, Space",
-    "department": "AFS : Space Engineering : Mission Software Engineering",
-    "team": "AFS : Space Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$167,000 - $222,000",
-    "salaryMin": 167000,
-    "salaryMax": 222000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrate with legacy ",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Kubernetes",
-      "JavaScript",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5143734007",
     "company": "Anduril",
     "title": "Ground Software Engineer, Space",
@@ -3538,49 +3454,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5199990007",
-    "company": "Anduril",
-    "title": "Ground Software Engineer, Space",
-    "department": "AFS : Space Engineering : Mission Software Engineering",
-    "team": "AFS : Space Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Chantilly, Virginia, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Chantilly, Virginia, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$167,000 - $222,000",
-    "salaryMin": 167000,
-    "salaryMax": 222000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrate with legacy ",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Kubernetes",
-      "JavaScript",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5197127007",
     "company": "Anduril",
     "title": "Ground Software Engineer, Space",
@@ -3606,6 +3479,92 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197127007?gh_jid=5197127007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197127007?gh_jid=5197127007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197127007?gh_jid=5197127007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrate with legacy ",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Kubernetes",
+      "JavaScript",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-4497427007",
+    "company": "Anduril",
+    "title": "Ground Software Engineer, Space",
+    "department": "AFS : Space Engineering : Mission Software Engineering",
+    "team": "AFS : Space Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$167,000 - $222,000",
+    "salaryMin": 167000,
+    "salaryMax": 222000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4497427007?gh_jid=4497427007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrate with legacy ",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Kubernetes",
+      "JavaScript",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5199990007",
+    "company": "Anduril",
+    "title": "Ground Software Engineer, Space",
+    "department": "AFS : Space Engineering : Mission Software Engineering",
+    "team": "AFS : Space Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Chantilly, Virginia, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Chantilly, Virginia, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$167,000 - $222,000",
+    "salaryMin": 167000,
+    "salaryMax": 222000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199990007?gh_jid=5199990007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrate with legacy ",
     "requirements": [
       "Python",
@@ -3954,46 +3913,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5179580007",
-    "company": "Anduril",
-    "title": "Robotics Software Engineer",
-    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
-    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Boston, Massachusetts, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Boston, Massachusetts, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nRobotics Engineers lead the delivery of vehicle perception and planning capability integrated in to our products, acting as technical leads, extremely senior individual contributors, and/or as team leads that are also hands-on contributors. This includes systems analysis, sensor selection and integration, perception architecture and implementation, motion planning, health management, behavior analysis, simulation and test infrastructure, and interfaces with lower- and higher-level systems. We expect Robotics Engineers to demonstrate unparalleled end-to-end outcome ownership, driving the rapid architecting, design, delivery, support, and evolution of safe and effective vehicle autonomy on Anduril\u2019s autonomous platforms through their entire product life-cycle.\n\nWHAT YOU'LL DO\n\nOwn customer success through the design and delivery of a multi-year, multi-stakeholder software roadmap that spans across multiple teams\n\nLeverage internal product and program-specific engineering teams to rapidly deliver capability beyond the scope of current platforms, with a clear path for both architecture and capability evolution over time\n\nPartner with external teams, collaborating on interfacing requirements between diverse systems and technologies\n\nLead teams that architect, design and implement trusted safe navigati",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5248679007",
     "company": "Anduril",
     "title": "Robotics Software Engineer",
@@ -4059,6 +3978,46 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5136146007?gh_jid=5136146007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5136146007?gh_jid=5136146007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5136146007?gh_jid=5136146007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nRobotics Engineers lead the delivery of vehicle perception and planning capability integrated in to our products, acting as technical leads, extremely senior individual contributors, and/or as team leads that are also hands-on contributors. This includes systems analysis, sensor selection and integration, perception architecture and implementation, motion planning, health management, behavior analysis, simulation and test infrastructure, and interfaces with lower- and higher-level systems. We expect Robotics Engineers to demonstrate unparalleled end-to-end outcome ownership, driving the rapid architecting, design, delivery, support, and evolution of safe and effective vehicle autonomy on Anduril\u2019s autonomous platforms through their entire product life-cycle.\n\nWHAT YOU'LL DO\n\nOwn customer success through the design and delivery of a multi-year, multi-stakeholder software roadmap that spans across multiple teams\n\nLeverage internal product and program-specific engineering teams to rapidly deliver capability beyond the scope of current platforms, with a clear path for both architecture and capability evolution over time\n\nPartner with external teams, collaborating on interfacing requirements between diverse systems and technologies\n\nLead teams that architect, design and implement trusted safe navigati",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5179580007",
+    "company": "Anduril",
+    "title": "Robotics Software Engineer",
+    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
+    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Boston, Massachusetts, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Boston, Massachusetts, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5179580007?gh_jid=5179580007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nRobotics Engineers lead the delivery of vehicle perception and planning capability integrated in to our products, acting as technical leads, extremely senior individual contributors, and/or as team leads that are also hands-on contributors. This includes systems analysis, sensor selection and integration, perception architecture and implementation, motion planning, health management, behavior analysis, simulation and test infrastructure, and interfaces with lower- and higher-level systems. We expect Robotics Engineers to demonstrate unparalleled end-to-end outcome ownership, driving the rapid architecting, design, delivery, support, and evolution of safe and effective vehicle autonomy on Anduril\u2019s autonomous platforms through their entire product life-cycle.\n\nWHAT YOU'LL DO\n\nOwn customer success through the design and delivery of a multi-year, multi-stakeholder software roadmap that spans across multiple teams\n\nLeverage internal product and program-specific engineering teams to rapidly deliver capability beyond the scope of current platforms, with a clear path for both architecture and capability evolution over time\n\nPartner with external teams, collaborating on interfacing requirements between diverse systems and technologies\n\nLead teams that architect, design and implement trusted safe navigati",
     "requirements": [
       "Python",
@@ -4666,50 +4625,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5016343007",
-    "company": "Anduril",
-    "title": "Senior Computer Vision Engineer, Space",
-    "department": "AFS : Space Engineering : GNC & Simulation Engineering",
-    "team": "AFS : Space Engineering : GNC & Simulation Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Reston, VA (NOVA-01) \u2022 Washington, DC (DC-01)",
-    "locations": [
-      "Washington, District of Columbia, United States",
-      "Costa Mesa, CA (OC-00)",
-      "Reston, VA (NOVA-01)",
-      "Washington, DC (DC-01)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Senior Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Washington DC. \u00a0In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft system",
-    "requirements": [
-      "Python",
-      "C++",
-      "Go",
-      "C",
-      "Computer Vision",
-      "Machine Learning",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5016340007",
     "company": "Anduril",
     "title": "Senior Computer Vision Engineer, Space",
@@ -4738,6 +4653,50 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016340007?gh_jid=5016340007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016340007?gh_jid=5016340007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Senior Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Costa Mesa, CA . In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft syste",
+    "requirements": [
+      "Python",
+      "C++",
+      "Go",
+      "C",
+      "Computer Vision",
+      "Machine Learning",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5016343007",
+    "company": "Anduril",
+    "title": "Senior Computer Vision Engineer, Space",
+    "department": "AFS : Space Engineering : GNC & Simulation Engineering",
+    "team": "AFS : Space Engineering : GNC & Simulation Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Reston, VA (NOVA-01) \u2022 Washington, DC (DC-01)",
+    "locations": [
+      "Washington, District of Columbia, United States",
+      "Costa Mesa, CA (OC-00)",
+      "Reston, VA (NOVA-01)",
+      "Washington, DC (DC-01)"
+    ],
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5016343007?gh_jid=5016343007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Senior Computer Vision Engineer\u00a0 to join our rapidly growing team in\u00a0 Washington DC. \u00a0In this role, you will be responsible for working on and understand the design of all\u00a0perception subsystems to include but not limited to hardware sensors and advanced processing platforms, navigation algorithms, flight software implementation, subsystem integration & test (I&T), and vehicle I&T. The computer vision engineering team will work closely with related teams, including Sensors, GNC, Avionics, Systems, Flight Software, Mission Operations, and Ground Software. The Computer Vision Engineer will work algorithm design, truth and physics modeling, scene rendering, simulation and analysis for a wide variety of spacecraft and space missions to include but not limited to LEO, MEO, GEO, Reentry, and RPOD (Rendezvous Proximity Operations and Docking). The CV Engineer will help lead successful implementation, validation and CV operations of Anduril\u2019s fleet of space vehicles.\u00a0 This role is directly tied to ongoing, funded programs within Anduril\u2019s Space Business Line. The programs require building and fielding a resilient, software-defined spacecraft system",
     "requirements": [
       "Python",
       "C++",
@@ -5041,49 +5000,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5143736007",
-    "company": "Anduril",
-    "title": "Senior Ground Software Engineer, Space",
-    "department": "AFS : Space Engineering : Mission Software Engineering",
-    "team": "AFS : Space Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Colorado Springs, Colorado, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Colorado Springs, Colorado, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$165,000 - $219,000",
-    "salaryMin": 165000,
-    "salaryMax": 219000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Senior Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Senior Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrat",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Kubernetes",
-      "JavaScript",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-4480975007",
     "company": "Anduril",
     "title": "Senior Ground Software Engineer, Space",
@@ -5195,6 +5111,49 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197128007?gh_jid=5197128007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197128007?gh_jid=5197128007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5197128007?gh_jid=5197128007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Senior Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Senior Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrat",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Kubernetes",
+      "JavaScript",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5143736007",
+    "company": "Anduril",
+    "title": "Senior Ground Software Engineer, Space",
+    "department": "AFS : Space Engineering : Mission Software Engineering",
+    "team": "AFS : Space Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Colorado Springs, Colorado, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Colorado Springs, Colorado, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$165,000 - $219,000",
+    "salaryMin": 165000,
+    "salaryMax": 219000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5143736007?gh_jid=5143736007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested warfighting domain.\n\nABOUT THE JOB\n\nAs a Senior Software Engineer on Space Ground Software, you will own the architecture and deployment of software solutions that support customer missions for space operations and mission management. As a Senior Software Engineer, you will develop modular capabilities to support the DoD and IC customers across the space domain. This will involve the architecture of the Space C2 system based on top of the Anduril Lattice software platform, to include infrastructure, algorithms, and integrations to support both orbital and ground systems. The Anduril Space C2 capability development will involve integration with legacy systems that have been part of our nation\u2019s critical defense for decades as well as new space systems being added to the cache of orbital and ground-based capabilities.\n\nWe work with mission partners and operators to deploy reliable and robust capabilities on operationally-relevant fielding timelines to meet\u00a0 complex challenges across the DOD and IC.\n\nWHAT YOU'LL DO\n\nOwn the software solutions that are deployed to customers\n\nOwn the development of Space C2 and Mission Management capabilities to enable delivery of end-to-end mission systems\n\nIntegrat",
     "requirements": [
       "Python",
@@ -5624,49 +5583,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5175329007",
-    "company": "Anduril",
-    "title": "Senior Robotics Software Engineer, Payload Integration",
-    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
-    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Abu Dhabi, United Arab Emirates \u2022 Abu Dhabi, UAE (UAE-01)",
-    "locations": [
-      "Abu Dhabi, United Arab Emirates",
-      "Abu Dhabi, UAE (UAE-01)"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nWe are seeking a Senior Robotics Software Engineer, Omen Payload Integration to join the Maneuver Dominance team. In this role, you will design, develop, and integrate software that connects autonomous platforms with mission payloads, including stores management systems (SMS), networked devices, and hardware interfaces. You will architect APIs and data transport layers that move information reliably between vehicles, payloads, and ground systems in demanding operational environments.\n\nIf you thrive in a fast-paced environment, enjoy solving complex problems at the intersection of software, networking, and hardware, and are passionate about delivering mission-critical systems, this opportunity is for you.\n\nWhat You\u2019ll Do\n\nDevelop Networked Software: Engineer scalable, robust software that interacts with networking devices, managed networks, and common router or switch hardware.\n\nPayload & SMS Integration: Design and implement software that interfaces with stores management systems (SMS) and other payload subsystems to coordinate the release and control of munitions and mission payloads.\n\nAPI/ICD Design: Architect and implement software APIs and Interface Control Documents (ICDs) using HTTP, REST, and gRPC to connect distributed systems across vehicles, payloads, and ground stations.\n\nData Transpor",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Distributed Systems",
-      "Computer Vision",
-      "Linux"
-    ],
-    "preferred": [
-      "gRPC"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5192153007",
     "company": "Anduril",
     "title": "Senior Robotics Software Engineer, Payload Integration",
@@ -5693,6 +5609,49 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192153007?gh_jid=5192153007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192153007?gh_jid=5192153007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nWe are seeking a Senior Robotics Software Engineer, Omen Payload Integration to join the Maneuver Dominance team in Abu Dhabi (UAE). In this role, you will design, develop, and integrate software that connects autonomous platforms with mission payloads, including stores management systems (SMS), networked devices, and hardware interfaces. You will architect APIs and data transport layers that move information reliably between vehicles, payloads, and ground systems in demanding operational environments.\n\nIf you thrive in a fast-paced environment, enjoy solving complex problems at the intersection of software, networking, and hardware, and are passionate about delivering mission-critical systems, this opportunity is for you.\n\nWhat You\u2019ll Do\n\nDevelop Networked Software: Engineer scalable, robust software that interacts with networking devices, managed networks, and common router or switch hardware.\n\nPayload & SMS Integration: Design and implement software that interfaces with stores management systems (SMS) and other payload subsystems to coordinate the release and control of munitions and mission payloads.\n\nAPI/ICD Design: Architect and implement software APIs and Interface Control Documents (ICDs) using HTTP, REST, and gRPC to connect distributed systems across vehicles, payloads, and ground stati",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Distributed Systems",
+      "Computer Vision",
+      "Linux"
+    ],
+    "preferred": [
+      "gRPC"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5175329007",
+    "company": "Anduril",
+    "title": "Senior Robotics Software Engineer, Payload Integration",
+    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
+    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Robotics Software",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Abu Dhabi, United Arab Emirates \u2022 Abu Dhabi, UAE (UAE-01)",
+    "locations": [
+      "Abu Dhabi, United Arab Emirates",
+      "Abu Dhabi, UAE (UAE-01)"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5175329007?gh_jid=5175329007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Maneuver Dominance team at Anduril develops operationally relevant, multi-asset autonomy. We are focused on making large groups of autonomous systems work effectively together. We leverage existing Anduril drone platforms like Ghost or Altius, in addition to bringing 3rd party platforms into Anduril\u2019s Lattice ecosystem.\n\nABOUT THE JOB\n\nWe are seeking a Senior Robotics Software Engineer, Omen Payload Integration to join the Maneuver Dominance team. In this role, you will design, develop, and integrate software that connects autonomous platforms with mission payloads, including stores management systems (SMS), networked devices, and hardware interfaces. You will architect APIs and data transport layers that move information reliably between vehicles, payloads, and ground systems in demanding operational environments.\n\nIf you thrive in a fast-paced environment, enjoy solving complex problems at the intersection of software, networking, and hardware, and are passionate about delivering mission-critical systems, this opportunity is for you.\n\nWhat You\u2019ll Do\n\nDevelop Networked Software: Engineer scalable, robust software that interacts with networking devices, managed networks, and common router or switch hardware.\n\nPayload & SMS Integration: Design and implement software that interfaces with stores management systems (SMS) and other payload subsystems to coordinate the release and control of munitions and mission payloads.\n\nAPI/ICD Design: Architect and implement software APIs and Interface Control Documents (ICDs) using HTTP, REST, and gRPC to connect distributed systems across vehicles, payloads, and ground stations.\n\nData Transpor",
     "requirements": [
       "Python",
       "C++",
@@ -5918,46 +5877,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5240142007",
-    "company": "Anduril",
-    "title": "Senior Scientific Software Engineer",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Broomfield, CO (CO-02)"
-    ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the-art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don't end once we've written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \"Any sufficiently advanced technology is indistinguishable from magic.\" Anduril is seeking talented \"magicians\" \u2014 experienced engineers who lead by example, mentor others, and stay deeply hands-on in the code \u2014 to join in our mission to expand the boundary of what's possible.\n\nWHAT YOU WILL DO:\n\nHelp shape the technical direction of a small, high-impact team while remaining deeply hands-on in design, implementation, and code review\n\nMentor and uplevel junior and mid-level engineers through pair programming, code reviews, technical guidance, and architectural discussions\n\nLead by example by writing production-quality C++ and Python that powers mission-critical systems, while setting the bar for engineering excellence (CI/CD, unit testing, large-codebase collaboration, git workflows)\n\nPrototype state-of-the-art software solutions in an agile development environment and guide the team through the path from prototype to deployed, tactical implementation\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling a",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Git",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5244795007",
     "company": "Anduril",
     "title": "Senior Scientific Software Engineer",
@@ -6003,6 +5922,46 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
+    "id": "andurilindustries-5240142007",
+    "company": "Anduril",
+    "title": "Senior Scientific Software Engineer",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
+    "locations": [
+      "Broomfield, Colorado, United States",
+      "Broomfield, CO (CO-02)"
+    ],
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240142007?gh_jid=5240142007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the-art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don't end once we've written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \"Any sufficiently advanced technology is indistinguishable from magic.\" Anduril is seeking talented \"magicians\" \u2014 experienced engineers who lead by example, mentor others, and stay deeply hands-on in the code \u2014 to join in our mission to expand the boundary of what's possible.\n\nWHAT YOU WILL DO:\n\nHelp shape the technical direction of a small, high-impact team while remaining deeply hands-on in design, implementation, and code review\n\nMentor and uplevel junior and mid-level engineers through pair programming, code reviews, technical guidance, and architectural discussions\n\nLead by example by writing production-quality C++ and Python that powers mission-critical systems, while setting the bar for engineering excellence (CI/CD, unit testing, large-codebase collaboration, git workflows)\n\nPrototype state-of-the-art software solutions in an agile development environment and guide the team through the path from prototype to deployed, tactical implementation\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling a",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Git",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
     "id": "andurilindustries-5191860007",
     "company": "Anduril",
     "title": "Senior Software Developer in Test, Air Defense",
@@ -6041,49 +6000,6 @@ const seedJobs = [
     ],
     "preferred": [
       "gRPC"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-4950086007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer",
-    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
-    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
-    "locations": [
-      "Sydney, New South Wales, Australia",
-      "Sydney, AUS (SYD-01)"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSenior Software Engineers independently drive the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Senior Software Engineers to demon",
-    "requirements": [
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "System Design",
-      "TypeScript",
-      "React",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
     ],
     "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
@@ -6192,6 +6108,49 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948336007?gh_jid=4948336007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948336007?gh_jid=4948336007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948336007?gh_jid=4948336007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSenior Software Engineers independently drive the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Senior Software Engineers to demon",
+    "requirements": [
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "System Design",
+      "TypeScript",
+      "React",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-4950086007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer",
+    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
+    "locations": [
+      "Sydney, New South Wales, Australia",
+      "Sydney, AUS (SYD-01)"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950086007?gh_jid=4950086007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSenior Software Engineers independently drive the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Senior Software Engineers to demon",
     "requirements": [
       "C++",
@@ -6788,6 +6747,49 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
+    "id": "andurilindustries-5185886007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, AI Platform",
+    "department": "Software : Software Platform : Developer Platform",
+    "team": "Software : Software Platform : Developer Platform",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Seattle, WA (SEA-01)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Seattle, WA (SEA-01)"
+    ],
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform team at Anduril is dedicated to building the products and systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nAnduril's Continuous Integration platform enables every engineering team at Anduril to build, test, and deploy our products globally. When it is slow or unreliable, every team downstream pays for it - but when it's reliable and zippy, life is awesome. In this role you will ensure awesomeness; you will help build and deliver fully automated, faster and more reliable CI pipelines that lets teams ship without breaking the teams next to them. This role directly supports and enables a critical business line, so your first focus is the functional and operational improvements that most directly speed up their build, test, and deployment experience. The work you do will compound across other products as well. You will deliver against a shared roadmap, own concrete epics end to end, and instrument the metrics that show whether the CI experience is actually getting better. You will work across a complex delivery ecosystem, multi-stage release pipelines and ",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "C",
+      "Docker",
+      "Kubernetes",
+      "GitHub",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Linux"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
     "id": "andurilindustries-5185974007",
     "company": "Anduril",
     "title": "Senior Software Engineer, AI Platform",
@@ -6856,49 +6858,6 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185972007?gh_jid=5185972007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185972007?gh_jid=5185972007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185972007?gh_jid=5185972007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform team at Anduril is dedicated to building the products and systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nAnduril's Continuous Integration platform enables every engineering team at Anduril to build, test, and deploy our products globally. When it is slow or unreliable, every team downstream pays for it - but when it's reliable and zippy, life is awesome. In this role you will ensure awesomeness; you will help build and deliver fully automated, faster and more reliable CI pipelines that lets teams ship without breaking the teams next to them. This role directly supports and enables a critical business line, so your first focus is the functional and operational improvements that most directly speed up their build, test, and deployment experience. The work you do will compound across other products as well. You will deliver against a shared roadmap, own concrete epics end to end, and instrument the metrics that show whether the CI experience is actually getting better. You will work across a complex delivery ecosystem, multi-stage release pipelines and ",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "C",
-      "Docker",
-      "Kubernetes",
-      "GitHub",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Linux"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-5185886007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, AI Platform",
-    "department": "Software : Software Platform : Developer Platform",
-    "team": "Software : Software Platform : Developer Platform",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Seattle, WA (SEA-01)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Seattle, WA (SEA-01)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185886007?gh_jid=5185886007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform team at Anduril is dedicated to building the products and systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nAnduril's Continuous Integration platform enables every engineering team at Anduril to build, test, and deploy our products globally. When it is slow or unreliable, every team downstream pays for it - but when it's reliable and zippy, life is awesome. In this role you will ensure awesomeness; you will help build and deliver fully automated, faster and more reliable CI pipelines that lets teams ship without breaking the teams next to them. This role directly supports and enables a critical business line, so your first focus is the functional and operational improvements that most directly speed up their build, test, and deployment experience. The work you do will compound across other products as well. You will deliver against a shared roadmap, own concrete epics end to end, and instrument the metrics that show whether the CI experience is actually getting better. You will work across a complex delivery ecosystem, multi-stage release pipelines and ",
     "requirements": [
       "Python",
@@ -7289,46 +7248,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5236466007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Battlespace Awareness",
-    "department": "Mission Systems : Battlespace Awareness Engineering",
-    "team": "Mission Systems : Battlespace Awareness Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Broomfield, CO (CO-02)"
-    ],
-    "salary": "$165,000 - $219,000",
-    "salaryMin": 165000,
-    "salaryMax": 219000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don\u2019t end once we\u2019ve written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \u201cAny sufficiently advanced technology is indistinguishable from magic.\u201d Anduril is seeking talented \u201cmagicians\u201d to join in our mission to expand the boundary of what\u2019s possible.\n\nWHAT YOU WILL DO:\n\nContribute to the direction of a small team with your expertise and ideas\n\nPrototype state-of-the-art software solutions in an agile development environment\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling and simulation environments, innovative analysis tools, and sound analysis techniques to quantify the benefit of our technology\n\nEngage with our customers, to ensure successful outcomes for their mission-critical needs\n\nWork with all aspects of the software development lifecycle\n\nHelp your colleagues and customers understand what you\u2019re doing and why\n\nREQUIRED QUALIFICATIONS\n\n8+ years of professional software engineering experience\n\nBachelor's degree in mathematics, physics, engineering, or other technical field (advanced degree strongly preferred)\n\nC/C++, Python, and Matlab;\n\nBig data/NoSQL/database te",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5236469007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Battlespace Awareness",
@@ -7354,6 +7273,46 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236469007?gh_jid=5236469007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236469007?gh_jid=5236469007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236469007?gh_jid=5236469007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don\u2019t end once we\u2019ve written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \u201cAny sufficiently advanced technology is indistinguishable from magic.\u201d Anduril is seeking talented \u201cmagicians\u201d to join in our mission to expand the boundary of what\u2019s possible.\n\nWHAT YOU WILL DO:\n\nContribute to the direction of a small team with your expertise and ideas\n\nPrototype state-of-the-art software solutions in an agile development environment\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling and simulation environments, innovative analysis tools, and sound analysis techniques to quantify the benefit of our technology\n\nEngage with our customers, to ensure successful outcomes for their mission-critical needs\n\nWork with all aspects of the software development lifecycle\n\nHelp your colleagues and customers understand what you\u2019re doing and why\n\nREQUIRED QUALIFICATIONS\n\n8+ years of professional software engineering experience\n\nBachelor's degree in mathematics, physics, engineering, or other technical field (advanced degree strongly preferred)\n\nC/C++, Python, and Matlab;\n\nBig data/NoSQL/database te",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5236466007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Battlespace Awareness",
+    "department": "Mission Systems : Battlespace Awareness Engineering",
+    "team": "Mission Systems : Battlespace Awareness Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
+    "locations": [
+      "Broomfield, Colorado, United States",
+      "Broomfield, CO (CO-02)"
+    ],
+    "salary": "$165,000 - $219,000",
+    "salaryMin": 165000,
+    "salaryMax": 219000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236466007?gh_jid=5236466007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don\u2019t end once we\u2019ve written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \u201cAny sufficiently advanced technology is indistinguishable from magic.\u201d Anduril is seeking talented \u201cmagicians\u201d to join in our mission to expand the boundary of what\u2019s possible.\n\nWHAT YOU WILL DO:\n\nContribute to the direction of a small team with your expertise and ideas\n\nPrototype state-of-the-art software solutions in an agile development environment\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling and simulation environments, innovative analysis tools, and sound analysis techniques to quantify the benefit of our technology\n\nEngage with our customers, to ensure successful outcomes for their mission-critical needs\n\nWork with all aspects of the software development lifecycle\n\nHelp your colleagues and customers understand what you\u2019re doing and why\n\nREQUIRED QUALIFICATIONS\n\n8+ years of professional software engineering experience\n\nBachelor's degree in mathematics, physics, engineering, or other technical field (advanced degree strongly preferred)\n\nC/C++, Python, and Matlab;\n\nBig data/NoSQL/database te",
     "requirements": [
       "Python",
@@ -7409,82 +7368,35 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5244796007",
+    "id": "andurilindustries-5009226007",
     "company": "Anduril",
     "title": "Senior Software Engineer, C++",
-    "department": "Mission Systems : Battlespace Awareness Engineering",
-    "team": "Mission Systems : Battlespace Awareness Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Broomfield, CO (CO-02) \u2022 Fort Collins, CO (CO-13)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Fort Collins, Colorado, United States",
-      "Broomfield, CO (CO-02)",
-      "Fort Collins, CO (CO-13)"
-    ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Air & Missile Defense Radar team develops cutting-edge tracking algorithms and software systems that detect, track, and characterize airborne threats in real-time. Working in small, focused teams, our software engineers design and implement sophisticated tracking solutions that protect lives and critical assets. Our work spans the full spectrum\u2014from developing novel multi-target tracking algorithms to building high-performance distributed systems that process massive amounts of sensor data in milliseconds\n\nWe don't just publish papers; we deploy production-grade systems that our government and industry customers depend on for mission-critical operations. If you're passionate about applying mathematics, software engineering, and signal processing to solve complex real-world problems, we want to hear from you.\n\nWHAT YOU WILL DO\n\nDesign and implement advanced tracking algorithms for novel air and missile threats, including multi-target tracking, track fusion, and discrimination techniques\n\nDevelop high-performance, real-time software systems that process radar sensor data and maintain tracks on dozens to hundreds of simultaneous targets\n\nBuild and leverage modeling & simulation environments to validate tracking performance, quantify system capabilities, and identify areas for improvement\n\nCollaborate directly with radar engineers and system architects to integrate tracking solutions into end-to-end defense systems\n\nOptimize tracking software for performance-critical environments where milliseconds matter\n\nCommunicate technical concepts and trade-offs to cross-functional teams, program leadership, and customers to drive infor",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Distributed Systems",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Machine Learning"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-5240147007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, C++",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
+    "department": "Templates: ENG",
+    "team": "Templates: ENG",
     "deptTrack": "Engineering",
     "category": "SWE",
     "domain": "Systems & Low-Level",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Broomfield, Colorado, United States",
-      "Broomfield, CO (CO-02)"
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the-art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don't end once we've written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \"Any sufficiently advanced technology is indistinguishable from magic.\" Anduril is seeking talented \"magicians\" \u2014 experienced engineers who lead by example, mentor others, and stay deeply hands-on in the code \u2014 to join in our mission to expand the boundary of what's possible.\n\nWHAT YOU WILL DO:\n\nHelp shape the technical direction of a small, high-impact team while remaining deeply hands-on in design, implementation, and code review\n\nMentor and uplevel junior and mid-level engineers through pair programming, code reviews, technical guidance, and architectural discussions\n\nLead by example by writing production-quality C++ and Python that powers mission-critical systems, while setting the bar for engineering excellence (CI/CD, unit testing, large-codebase collaboration, git workflows)\n\nPrototype state-of-the-art software solutions in an agile development environment and guide the team through the path from prototype to deployed, tactical implementation\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling a",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented C++ software engineers on several teams to contribute to projects that are shaping the future of defense.\n\nWHAT YOU\u2019LL DO\n\nDesign, develop, and optimize high-performance, low-latency C++ software for critical defense applications, systems, and infrastructure.\n\nEngineer robust, efficient, and scalable solutions, tackling complex algorithmic challenges and memory management critical for real-time operations.\n\nCollaborate closely with hardware engineers, systems engineers, and other software disciplines to integrate C++ components and ensure seamless system functionality.\n\nDebug, test, and profile C++ code to identify and resolve performance bottlenecks and ensure system reliability and stability.\n\nContribute to the full software development lifecycle, from architectural design and implementation to rigorous testing and deployment of advanced C++ systems.\n\nREQUIRED QUALIFICATIONS\n\nDeep Technical Acumen: A robust foundation in Computer Science, Software Engineering, Mathematics, or Physics, enabling a strong understanding of low-level systems and algorithmic complexity.\n\nMastery of C++: Minimum of 5 years of demonstrated professional experience in developing high-performance, complex software solutions using modern C++.\n\nBuilding Performant Systems: Proven ability to design and implement sof",
     "requirements": [
-      "Python",
       "C++",
       "C",
-      "Git",
       "Computer Vision"
     ],
     "preferred": [
@@ -7532,39 +7444,86 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5009226007",
+    "id": "andurilindustries-5240147007",
     "company": "Anduril",
     "title": "Senior Software Engineer, C++",
-    "department": "Templates: ENG",
-    "team": "Templates: ENG",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Air & Missile Defense",
     "deptTrack": "Engineering",
     "category": "SWE",
     "domain": "Systems & Low-Level",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
     "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
+      "Broomfield, Colorado, United States",
+      "Broomfield, CO (CO-02)"
     ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009226007?gh_jid=5009226007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented C++ software engineers on several teams to contribute to projects that are shaping the future of defense.\n\nWHAT YOU\u2019LL DO\n\nDesign, develop, and optimize high-performance, low-latency C++ software for critical defense applications, systems, and infrastructure.\n\nEngineer robust, efficient, and scalable solutions, tackling complex algorithmic challenges and memory management critical for real-time operations.\n\nCollaborate closely with hardware engineers, systems engineers, and other software disciplines to integrate C++ components and ensure seamless system functionality.\n\nDebug, test, and profile C++ code to identify and resolve performance bottlenecks and ensure system reliability and stability.\n\nContribute to the full software development lifecycle, from architectural design and implementation to rigorous testing and deployment of advanced C++ systems.\n\nREQUIRED QUALIFICATIONS\n\nDeep Technical Acumen: A robust foundation in Computer Science, Software Engineering, Mathematics, or Physics, enabling a strong understanding of low-level systems and algorithmic complexity.\n\nMastery of C++: Minimum of 5 years of demonstrated professional experience in developing high-performance, complex software solutions using modern C++.\n\nBuilding Performant Systems: Proven ability to design and implement sof",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5240147007?gh_jid=5240147007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the-art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don't end once we've written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \"Any sufficiently advanced technology is indistinguishable from magic.\" Anduril is seeking talented \"magicians\" \u2014 experienced engineers who lead by example, mentor others, and stay deeply hands-on in the code \u2014 to join in our mission to expand the boundary of what's possible.\n\nWHAT YOU WILL DO:\n\nHelp shape the technical direction of a small, high-impact team while remaining deeply hands-on in design, implementation, and code review\n\nMentor and uplevel junior and mid-level engineers through pair programming, code reviews, technical guidance, and architectural discussions\n\nLead by example by writing production-quality C++ and Python that powers mission-critical systems, while setting the bar for engineering excellence (CI/CD, unit testing, large-codebase collaboration, git workflows)\n\nPrototype state-of-the-art software solutions in an agile development environment and guide the team through the path from prototype to deployed, tactical implementation\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling a",
     "requirements": [
+      "Python",
       "C++",
       "C",
+      "Git",
       "Computer Vision"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5244796007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, C++",
+    "department": "Mission Systems : Battlespace Awareness Engineering",
+    "team": "Mission Systems : Battlespace Awareness Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Broomfield, CO (CO-02) \u2022 Fort Collins, CO (CO-13)",
+    "locations": [
+      "Broomfield, Colorado, United States",
+      "Fort Collins, Colorado, United States",
+      "Broomfield, CO (CO-02)",
+      "Fort Collins, CO (CO-13)"
+    ],
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5244796007?gh_jid=5244796007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Air & Missile Defense Radar team develops cutting-edge tracking algorithms and software systems that detect, track, and characterize airborne threats in real-time. Working in small, focused teams, our software engineers design and implement sophisticated tracking solutions that protect lives and critical assets. Our work spans the full spectrum\u2014from developing novel multi-target tracking algorithms to building high-performance distributed systems that process massive amounts of sensor data in milliseconds\n\nWe don't just publish papers; we deploy production-grade systems that our government and industry customers depend on for mission-critical operations. If you're passionate about applying mathematics, software engineering, and signal processing to solve complex real-world problems, we want to hear from you.\n\nWHAT YOU WILL DO\n\nDesign and implement advanced tracking algorithms for novel air and missile threats, including multi-target tracking, track fusion, and discrimination techniques\n\nDevelop high-performance, real-time software systems that process radar sensor data and maintain tracks on dozens to hundreds of simultaneous targets\n\nBuild and leverage modeling & simulation environments to validate tracking performance, quantify system capabilities, and identify areas for improvement\n\nCollaborate directly with radar engineers and system architects to integrate tracking solutions into end-to-end defense systems\n\nOptimize tracking software for performance-critical environments where milliseconds matter\n\nCommunicate technical concepts and trade-offs to cross-functional teams, program leadership, and customers to drive infor",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Distributed Systems",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Machine Learning"
     ],
     "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
@@ -7913,7 +7872,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5226950007",
+    "id": "andurilindustries-5226949007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Estimation & Filtering",
     "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
@@ -7923,22 +7882,21 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Waltham, MA (WMA-01)",
+    "location": "Washington, District of Columbia, United States \u2022 Waltham, MA (WMA-01)",
     "locations": [
-      "Broomfield, Colorado, United States",
-      "Fort Collins, Colorado, United States",
+      "Washington, District of Columbia, United States",
       "Waltham, MA (WMA-01)"
     ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
     "requirements": [
       "Python",
@@ -7994,7 +7952,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5226949007",
+    "id": "andurilindustries-5226950007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Estimation & Filtering",
     "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
@@ -8004,21 +7962,22 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Washington, District of Columbia, United States \u2022 Waltham, MA (WMA-01)",
+    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Waltham, MA (WMA-01)",
     "locations": [
-      "Washington, District of Columbia, United States",
+      "Broomfield, Colorado, United States",
+      "Fort Collins, Colorado, United States",
       "Waltham, MA (WMA-01)"
     ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226949007?gh_jid=5226949007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226950007?gh_jid=5226950007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
     "requirements": [
       "Python",
@@ -8026,6 +7985,45 @@ const seedJobs = [
       "C",
       "Computer Vision",
       "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5036672007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Full Stack",
+    "department": "Corporate Technology : ArsenalOS",
+    "team": "Corporate Technology : ArsenalOS",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$191,000 - $253,000",
+    "salaryMin": 191000,
+    "salaryMax": 253000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nWe are looking for a Full Stack Senior Software Engineer to join the ArsenalOS team. As a Full Stack Senior Software Engineer on ArsenalOS you will be architecting and implementing mission-critical solutions that enforce lean business process, add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation defense prime.\n\nABOUT THE JOB\n\nAs a member of ArsenalOS you will be an integral part of building out Forge, Anduril\u2019s custom supply chain, manufacturing, and deployment mission execution software. We spend time on the factory floor, then provide solutions for the issues the factory faces.\n\nThe ideal candidate will have expertise in developing custom software solutions that optimize production processes, analyze manufacturing data, and drive industry-changing improvements. They should be proficient in programming languages relevant to web development and industrial applications, have experience with data analytics and visualization, and understand the principles of modern manufacturing. The ability to translate complex manufacturing challenges into elegant software solutions is crucial, as is a passion for pushing the boundaries of what's possible in industrial technology. This role requires a mix of technical prowess, creative problem-solving, and the vision to see how software can reshape manufacturing practices across the industry.\n\nWHAT YOU\u2019LL DO\n\nOwn and deliver features for Forge, Anduril\u2019s production platform.\n\nLevel up our team\u2019s applications through quality code contribution and writing tests.\n\nLeverage frontier AI tooling for development, and contribute to our local Forge harness.\n\nPartner with",
+    "requirements": [
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Computer Vision"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -8064,45 +8062,6 @@ const seedJobs = [
       "Go",
       "Docker",
       "Kubernetes",
-      "React",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-5036672007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Full Stack",
-    "department": "Corporate Technology : ArsenalOS",
-    "team": "Corporate Technology : ArsenalOS",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $253,000",
-    "salaryMin": 191000,
-    "salaryMax": 253000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5036672007?gh_jid=5036672007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nWe are looking for a Full Stack Senior Software Engineer to join the ArsenalOS team. As a Full Stack Senior Software Engineer on ArsenalOS you will be architecting and implementing mission-critical solutions that enforce lean business process, add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation defense prime.\n\nABOUT THE JOB\n\nAs a member of ArsenalOS you will be an integral part of building out Forge, Anduril\u2019s custom supply chain, manufacturing, and deployment mission execution software. We spend time on the factory floor, then provide solutions for the issues the factory faces.\n\nThe ideal candidate will have expertise in developing custom software solutions that optimize production processes, analyze manufacturing data, and drive industry-changing improvements. They should be proficient in programming languages relevant to web development and industrial applications, have experience with data analytics and visualization, and understand the principles of modern manufacturing. The ability to translate complex manufacturing challenges into elegant software solutions is crucial, as is a passion for pushing the boundaries of what's possible in industrial technology. This role requires a mix of technical prowess, creative problem-solving, and the vision to see how software can reshape manufacturing practices across the industry.\n\nWHAT YOU\u2019LL DO\n\nOwn and deliver features for Forge, Anduril\u2019s production platform.\n\nLevel up our team\u2019s applications through quality code contribution and writing tests.\n\nLeverage frontier AI tooling for development, and contribute to our local Forge harness.\n\nPartner with",
-    "requirements": [
-      "TypeScript",
-      "JavaScript",
       "React",
       "Computer Vision"
     ],
@@ -8448,49 +8407,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5199073007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Quality Integration",
-    "department": "Software : Software Platform",
-    "team": "Software : Software Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "ML Engineering",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform Foundations team at Anduril is dedicated to building the foundational systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nEnsuring we deliver high quality, trustable products is table stakes. Every regression you catch, every manual test you automate away, every closed loop you implement to flag and fix issues has material impact on Engineering's ability to build awesome products fast. As the Software Engineer, Quality Integration, you will work within a complex ecosystem (multi-stage release pipelines, Cloud and Robot environments, etc...) where architectural decisions have concrete, measurable consequences and correctness matters. This is how Lattice gets to customers safely, how operators trust the platform in the field - and how every SWP team ships without breaking the teams next to them. This role (and this team), is what makes that possible at scale.\n\nThis role is open to experienced engineers ready to own a major piece of how Software Platform ships. You'll run design reviews, mentor more junior engineers on the team, and drive features from ambig",
-    "requirements": [
-      "Python",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-      "GCP",
-      "GitHub",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5199072007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Quality Integration",
@@ -8577,37 +8493,41 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5009095007",
+    "id": "andurilindustries-5199073007",
     "company": "Anduril",
-    "title": "Senior Software Engineer, Robotics",
-    "department": "Templates: ENG",
-    "team": "Templates: ENG",
+    "title": "Senior Software Engineer, Quality Integration",
+    "department": "Software : Software Platform",
+    "team": "Software : Software Platform",
     "deptTrack": "Engineering",
     "category": "SWE",
-    "domain": "Systems & Low-Level",
+    "domain": "ML Engineering",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Irvine, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Irvine, California, United States",
+      "Costa Mesa, California, United States",
       "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented robotics software engineers on several teams to contribute to projects that are shaping the future of defense. Potential areas of focus include: Artificial Intelligence, Machine Learning, Computer Vision, Sensor Fusion, Perception, and Motion and Behavioral Planning.\n\nWHAT YOU\u2019LL DO\n\nEngineer robust software for autonomous robotics, focusing on perception, planning, and control to drive mission-critical operations.\n\nTackle challenging real-world problems by building scalable and reliable software solutions for our next-generation robotic platforms, directly impacting mission success and technological advancement.\n\nContribute to the full software development lifecycle, from algorithm research and prototyping to implementation, testing, and deployment, in a fast-paced, multidisciplinary environment.\n\nInnovate to enhance processes and systems, driving ongoing excellence while executing rigorous testing and seamless deployment of code.\n\nREQUIRED QUALIFICATIONS\n\nSolid Engineering Fundamentals: A strong academic background in Computer Science, Software Engineering, Mathematics, or Physics, enabling you to tackle complex technical challenges.\n\nProficient C++ Developer: Minimum of 5 years of hands-on experience developing production-ready software solutions in C++.\n\nBuilding Data-Driven Innovati",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199073007?gh_jid=5199073007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform Foundations team at Anduril is dedicated to building the foundational systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nEnsuring we deliver high quality, trustable products is table stakes. Every regression you catch, every manual test you automate away, every closed loop you implement to flag and fix issues has material impact on Engineering's ability to build awesome products fast. As the Software Engineer, Quality Integration, you will work within a complex ecosystem (multi-stage release pipelines, Cloud and Robot environments, etc...) where architectural decisions have concrete, measurable consequences and correctness matters. This is how Lattice gets to customers safely, how operators trust the platform in the field - and how every SWP team ships without breaking the teams next to them. This role (and this team), is what makes that possible at scale.\n\nThis role is open to experienced engineers ready to own a major piece of how Software Platform ships. You'll run design reviews, mentor more junior engineers on the team, and drive features from ambig",
     "requirements": [
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "GCP",
+      "GitHub",
+      "Computer Vision"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -8680,6 +8600,45 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009085007?gh_jid=5009085007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009085007?gh_jid=5009085007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009085007?gh_jid=5009085007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented robotics software engineers on several teams to contribute to projects that are shaping the future of defense. Potential areas of focus include: Artificial Intelligence, Machine Learning, Computer Vision, Sensor Fusion, Perception, and Motion and Behavioral Planning.\n\nWHAT YOU\u2019LL DO\n\nEngineer robust software for autonomous robotics, focusing on perception, planning, and control to drive mission-critical operations.\n\nTackle challenging real-world problems by building scalable and reliable software solutions for our next-generation robotic platforms, directly impacting mission success and technological advancement.\n\nContribute to the full software development lifecycle, from algorithm research and prototyping to implementation, testing, and deployment, in a fast-paced, multidisciplinary environment.\n\nInnovate to enhance processes and systems, driving ongoing excellence while executing rigorous testing and seamless deployment of code.\n\nREQUIRED QUALIFICATIONS\n\nSolid Engineering Fundamentals: A strong academic background in Computer Science, Software Engineering, Mathematics, or Physics, enabling you to tackle complex technical challenges.\n\nProficient C++ Developer: Minimum of 5 years of hands-on experience developing production-ready software solutions in C++.\n\nBuilding Data-Driven Innovati",
+    "requirements": [
+      "C++",
+      "C",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5009095007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Robotics",
+    "department": "Templates: ENG",
+    "team": "Templates: ENG",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Irvine, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Irvine, California, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5009095007?gh_jid=5009095007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented robotics software engineers on several teams to contribute to projects that are shaping the future of defense. Potential areas of focus include: Artificial Intelligence, Machine Learning, Computer Vision, Sensor Fusion, Perception, and Motion and Behavioral Planning.\n\nWHAT YOU\u2019LL DO\n\nEngineer robust software for autonomous robotics, focusing on perception, planning, and control to drive mission-critical operations.\n\nTackle challenging real-world problems by building scalable and reliable software solutions for our next-generation robotic platforms, directly impacting mission success and technological advancement.\n\nContribute to the full software development lifecycle, from algorithm research and prototyping to implementation, testing, and deployment, in a fast-paced, multidisciplinary environment.\n\nInnovate to enhance processes and systems, driving ongoing excellence while executing rigorous testing and seamless deployment of code.\n\nREQUIRED QUALIFICATIONS\n\nSolid Engineering Fundamentals: A strong academic background in Computer Science, Software Engineering, Mathematics, or Physics, enabling you to tackle complex technical challenges.\n\nProficient C++ Developer: Minimum of 5 years of hands-on experience developing production-ready software solutions in C++.\n\nBuilding Data-Driven Innovati",
     "requirements": [
       "C++",
@@ -8823,86 +8782,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5236499007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Robotics Tracking and Fusion",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Washington, District of Columbia, United States \u2022 Waltham, MA (WMA-01)",
-    "locations": [
-      "Washington, District of Columbia, United States",
-      "Waltham, MA (WMA-01)"
-    ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-5236502007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Robotics Tracking and Fusion",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Fort Collins, Colorado, United States \u2022 Waltham, MA (WMA-01)",
-    "locations": [
-      "Fort Collins, Colorado, United States",
-      "Waltham, MA (WMA-01)"
-    ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5236498007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Robotics Tracking and Fusion",
@@ -8943,6 +8822,46 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
+    "id": "andurilindustries-5236499007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Robotics Tracking and Fusion",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Washington, District of Columbia, United States \u2022 Waltham, MA (WMA-01)",
+    "locations": [
+      "Washington, District of Columbia, United States",
+      "Waltham, MA (WMA-01)"
+    ],
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236499007?gh_jid=5236499007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
     "id": "andurilindustries-5213224007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Robotics Tracking and Fusion",
@@ -8968,6 +8887,46 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5213224007?gh_jid=5213224007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5213224007?gh_jid=5213224007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5213224007?gh_jid=5213224007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5236502007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Robotics Tracking and Fusion",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness Robotics Fusion",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Fort Collins, Colorado, United States \u2022 Waltham, MA (WMA-01)",
+    "locations": [
+      "Fort Collins, Colorado, United States",
+      "Waltham, MA (WMA-01)"
+    ],
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236502007?gh_jid=5236502007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAt Anduril, our Software Engineers specialize in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Inspired by Arthur C. Clarke\u2019s vision \u2014 \u201cAny sufficiently advanced technology is indistinguishable from magic\u201d \u2014 we aim to achieve groundbreaking results in target tracking, state estimation, and situational awareness. We are currently seeking highly talented technologists to join our mission and redefine the future of defense technology.\n\nWHAT YOU WILL DO:\n\nDefine and influence the direction of a small team, leveraging your subject-matter expertise in target tracking and state estimation.\n\nPrototype and deploy state-of-the-art algorithms for tracking, multi-sensor data fusion, and state estimation in agile, iterative development environments.\n\nDevelop high-performance software for real-time systems, ranging from tactical implementations to simulation environments and decision support tools.\n\nDesign and implement robust filters, estimators, and probabilistic reasoning systems that enable actionable insights from noisy, ambiguous, or incomplete sensor data.\n\nAnalyze system performance using high-fidelity simulations, innovative modeling tools, and rigorous statistical techniques to validate the benefits of our technology.\n\nDrive customer success by customizing algorithms and so",
     "requirements": [
       "Python",
@@ -9149,47 +9108,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5088646007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Simulation Platform",
-    "department": "Software : Software Platform : Mission Simulation",
-    "team": "Software : Software Platform : Mission Simulation",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Simulation Platform team owns the core architecture and infrastructure of Anduril's high-fidelity, multi-domain military mission simulator. It models hundreds of entities--aircraft, ships, submarines, satellites, ground vehicles--moving, sensing, communicating, and engaging across realistic physical environments. The simulator powers training, mission planning, autonomy development, and hardware-in-the-loop testing across Anduril's product portfolio. It connects to live systems, integrates with Anduril's Lattice platform, and runs inside a GUI for interactive scenario authoring.\u00a0 Mission Sim is a large, mature C++20 codebase with an Entity-Component-System architecture, a stable C ABI plugin system, embedded scripting, and a variety of physics-based models. Keeping this system fast, correct, extensible, and pleasant to develop against at scale, with a growing team of model developers is our job.\n\nWHAT YOU'LL DO\n\nModel authoring tools \u2014 an early effort you will help stand up to extend the Sim frontend with UI for authoring and tuning Mission Sim models. You will negotiate extension APIs with the GUI team and build an ergonomic UI atop them, working alongside Simulation Modeling engineers.\n\nCustom Entity-Component-System architecture that underpins the entire simulator: entity lifecycle, component storage, and the update loop\n\nPlugin and SDK development - maintaining a versioned C ABI, which enables external teams to extend the simulator\n\nPerformance and scale \u2014 keeping the simulation loop fast enough for real-time and faster-than-real-time execution with hundreds of concurrent entities; reasoning about memory layout, cache behav",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Linux",
-      "gRPC"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5265428007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Simulation Platform",
@@ -9215,6 +9133,47 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5265428007?gh_jid=5265428007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5265428007?gh_jid=5265428007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5265428007?gh_jid=5265428007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Simulation Platform team owns the core architecture and infrastructure of Anduril's high-fidelity, multi-domain military mission simulator. It models hundreds of entities--aircraft, ships, submarines, satellites, ground vehicles--moving, sensing, communicating, and engaging across realistic physical environments. The simulator powers training, mission planning, autonomy development, and hardware-in-the-loop testing across Anduril's product portfolio. It connects to live systems, integrates with Anduril's Lattice platform, and runs inside a GUI for interactive scenario authoring.\u00a0 Mission Sim is a large, mature C++20 codebase with an Entity-Component-System architecture, a stable C ABI plugin system, embedded scripting, and a variety of physics-based models. Keeping this system fast, correct, extensible, and pleasant to develop against at scale, with a growing team of model developers is our job.\n\nWHAT YOU'LL DO\n\nModel authoring tools \u2014 an early effort you will help stand up to extend the Sim frontend with UI for authoring and tuning Mission Sim models. You will negotiate extension APIs with the GUI team and build an ergonomic UI atop them, working alongside Simulation Modeling engineers.\n\nCustom Entity-Component-System architecture that underpins the entire simulator: entity lifecycle, component storage, and the update loop\n\nPlugin and SDK development - maintaining a versioned C ABI, which enables external teams to extend the simulator\n\nPerformance and scale \u2014 keeping the simulation loop fast enough for real-time and faster-than-real-time execution with hundreds of concurrent entities; reasoning about memory layout, cache behav",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision",
+      "Linux",
+      "gRPC"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5088646007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Simulation Platform",
+    "department": "Software : Software Platform : Mission Simulation",
+    "team": "Software : Software Platform : Mission Simulation",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Simulation Platform team owns the core architecture and infrastructure of Anduril's high-fidelity, multi-domain military mission simulator. It models hundreds of entities--aircraft, ships, submarines, satellites, ground vehicles--moving, sensing, communicating, and engaging across realistic physical environments. The simulator powers training, mission planning, autonomy development, and hardware-in-the-loop testing across Anduril's product portfolio. It connects to live systems, integrates with Anduril's Lattice platform, and runs inside a GUI for interactive scenario authoring.\u00a0 Mission Sim is a large, mature C++20 codebase with an Entity-Component-System architecture, a stable C ABI plugin system, embedded scripting, and a variety of physics-based models. Keeping this system fast, correct, extensible, and pleasant to develop against at scale, with a growing team of model developers is our job.\n\nWHAT YOU'LL DO\n\nModel authoring tools \u2014 an early effort you will help stand up to extend the Sim frontend with UI for authoring and tuning Mission Sim models. You will negotiate extension APIs with the GUI team and build an ergonomic UI atop them, working alongside Simulation Modeling engineers.\n\nCustom Entity-Component-System architecture that underpins the entire simulator: entity lifecycle, component storage, and the update loop\n\nPlugin and SDK development - maintaining a versioned C ABI, which enables external teams to extend the simulator\n\nPerformance and scale \u2014 keeping the simulation loop fast enough for real-time and faster-than-real-time execution with hundreds of concurrent entities; reasoning about memory layout, cache behav",
     "requirements": [
       "Python",
@@ -9402,47 +9361,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5237960007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Tactical Networking",
-    "department": "Software : Software Platform : Tactical Networking",
-    "team": "Software : Software Platform : Tactical Networking",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Seattle, Washington, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform organization is seeking a Software Engineer to join Anduril\u2019s Tactical Networking Team. We build and operate the Layer 3 networking infrastructure that connects Anduril's autonomous systems and operators across denied, degraded, intermittent, and limited (DDIL) network environments. We own the full network lifecycle \u2014 secure VPN tunnels over tactical radios and satellite links, PKI and cryptographic identity for every node in the mesh, intelligent QoS traffic orchestration, and real-time network observability and management.\n\nSecurity is foundational to everything we build. Every link in the Lattice mesh is authenticated and encrypted, backed by a purpose-built PKI that handles certificate issuance, rotation, and revocation across thousands of intermittently connected nodes. We design to meet rigorous government compliance standards while remaining operationally practical for warfighters in the field.\n\nWHAT YOU'LL DO\n\nDesign and implement Layer 3 networking for DDIL environments \u2014 VPN tunnel management, dynamic routing, and multi-path failover across tactical radios, satellite, and wired transports\n\nBuild radio integration layers that abstract diverse tactical waveforms behind a unified networking interface\n\nDesign QoS scheduling and traffic shaping to ensure mission-critical data flows under severe bandwidth constraints\n\nBuild network management and orchestration systems for real-time topology configuration and adaptation\n\nArchitect PKI infrastructure for the Lattice mesh \u2014 certificate authorities, automated issuance/renewal, revocation (CRL/OCSP), and secure node bootstrapping\n\nDesign certificate lifecycle m",
-    "requirements": [
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Kubernetes",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5118980007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Tactical Networking",
@@ -9468,6 +9386,47 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5118980007?gh_jid=5118980007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5118980007?gh_jid=5118980007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5118980007?gh_jid=5118980007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform organization is seeking a Software Engineer to join Anduril\u2019s Tactical Networking Team. We build and operate the Layer 3 networking infrastructure that connects Anduril's autonomous systems and operators across denied, degraded, intermittent, and limited (DDIL) network environments. We own the full network lifecycle \u2014 secure VPN tunnels over tactical radios and satellite links, PKI and cryptographic identity for every node in the mesh, intelligent QoS traffic orchestration, and real-time network observability and management.\n\nSecurity is foundational to everything we build. Every link in the Lattice mesh is authenticated and encrypted, backed by a purpose-built PKI that handles certificate issuance, rotation, and revocation across thousands of intermittently connected nodes. We design to meet rigorous government compliance standards while remaining operationally practical for warfighters in the field.\n\nWHAT YOU'LL DO\n\nDesign and implement Layer 3 networking for DDIL environments \u2014 VPN tunnel management, dynamic routing, and multi-path failover across tactical radios, satellite, and wired transports\n\nBuild radio integration layers that abstract diverse tactical waveforms behind a unified networking interface\n\nDesign QoS scheduling and traffic shaping to ensure mission-critical data flows under severe bandwidth constraints\n\nBuild network management and orchestration systems for real-time topology configuration and adaptation\n\nArchitect PKI infrastructure for the Lattice mesh \u2014 certificate authorities, automated issuance/renewal, revocation (CRL/OCSP), and secure node bootstrapping\n\nDesign certificate lifecycle m",
+    "requirements": [
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Kubernetes",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5237960007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer, Tactical Networking",
+    "department": "Software : Software Platform : Tactical Networking",
+    "team": "Software : Software Platform : Tactical Networking",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Seattle, Washington, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5237960007?gh_jid=5237960007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform organization is seeking a Software Engineer to join Anduril\u2019s Tactical Networking Team. We build and operate the Layer 3 networking infrastructure that connects Anduril's autonomous systems and operators across denied, degraded, intermittent, and limited (DDIL) network environments. We own the full network lifecycle \u2014 secure VPN tunnels over tactical radios and satellite links, PKI and cryptographic identity for every node in the mesh, intelligent QoS traffic orchestration, and real-time network observability and management.\n\nSecurity is foundational to everything we build. Every link in the Lattice mesh is authenticated and encrypted, backed by a purpose-built PKI that handles certificate issuance, rotation, and revocation across thousands of intermittently connected nodes. We design to meet rigorous government compliance standards while remaining operationally practical for warfighters in the field.\n\nWHAT YOU'LL DO\n\nDesign and implement Layer 3 networking for DDIL environments \u2014 VPN tunnel management, dynamic routing, and multi-path failover across tactical radios, satellite, and wired transports\n\nBuild radio integration layers that abstract diverse tactical waveforms behind a unified networking interface\n\nDesign QoS scheduling and traffic shaping to ensure mission-critical data flows under severe bandwidth constraints\n\nBuild network management and orchestration systems for real-time topology configuration and adaptation\n\nArchitect PKI infrastructure for the Lattice mesh \u2014 certificate authorities, automated issuance/renewal, revocation (CRL/OCSP), and secure node bootstrapping\n\nDesign certificate lifecycle m",
     "requirements": [
       "C++",
@@ -9567,7 +9526,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5252895007",
+    "id": "andurilindustries-5254036007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Vehicle Management Systems",
     "department": "Maritime & Maneuver Dominance : Undersea Reconnaissance & Strike - Engineering & Operations",
@@ -9577,9 +9536,9 @@ const seedJobs = [
     "domain": "ML Engineering",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Quincy, Massachusetts, United States \u2022 Quincy, MA (QCY-01)",
+    "location": "Boston, Massachusetts, United States \u2022 Quincy, MA (QCY-01)",
     "locations": [
-      "Quincy, Massachusetts, United States",
+      "Boston, Massachusetts, United States",
       "Quincy, MA (QCY-01)"
     ],
     "salary": "$191,000 - $253,000",
@@ -9589,9 +9548,9 @@ const seedJobs = [
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defense capability.\n\nAbout the Job\n\nSenior Software Engineers independently drive the delivery of a variety of embedded and/or safety critical software integrated in to our products. This includes device management, drivers, firmware, power management, networking, and contingency management and recovery. We expect Senior So",
     "requirements": [
       "C",
@@ -9644,7 +9603,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5254036007",
+    "id": "andurilindustries-5252895007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Vehicle Management Systems",
     "department": "Maritime & Maneuver Dominance : Undersea Reconnaissance & Strike - Engineering & Operations",
@@ -9654,9 +9613,9 @@ const seedJobs = [
     "domain": "ML Engineering",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Boston, Massachusetts, United States \u2022 Quincy, MA (QCY-01)",
+    "location": "Quincy, Massachusetts, United States \u2022 Quincy, MA (QCY-01)",
     "locations": [
-      "Boston, Massachusetts, United States",
+      "Quincy, Massachusetts, United States",
       "Quincy, MA (QCY-01)"
     ],
     "salary": "$191,000 - $253,000",
@@ -9666,9 +9625,9 @@ const seedJobs = [
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5254036007?gh_jid=5254036007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5252895007?gh_jid=5252895007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defense capability.\n\nAbout the Job\n\nSenior Software Engineers independently drive the delivery of a variety of embedded and/or safety critical software integrated in to our products. This includes device management, drivers, firmware, power management, networking, and contingency management and recovery. We expect Senior So",
     "requirements": [
       "C",
@@ -9721,49 +9680,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5206580007",
-    "company": "Anduril",
-    "title": "Senior Software Engineer, Video",
-    "department": "Software : Software Platform : Video",
-    "team": "Software : Software Platform : Video",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Seattle, Washington, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nWe are on a mission to accelerate the development, deployment, and integration with Lattice. We\u2019re dedicated to building a comprehensive, high-leverage, and foundational platform that offers\u00a0efficient data management, agent orchestration, and system-wide interoperability. We develop the common data, object storage, and identity access management building blocks for Lattice. Our auth system provides secure access control, while our data systems empower our partners with user-friendly APIs and documentation. By combining these diverse yet interconnected areas of expertise, we aim to create a powerful, scalable ecosystem that works across both\u00a0autonomous robots and C2 systems. We aim to empower other developers, our users, to build many innovative applications that will help aid our warfighters\u00a0C2 mass effects\u00a0in the\u00a0distributed fight to come.\n\nABOUT THE JOB\n\nThe role of our video pipeline engineers is to develop real-time and asynchronous video feeds from remote deployments to web, virtual reality clients, computer vision front-end and back-end pipelines. Video pipeline engineers help design the ISR payloads for drones and the camera systems used in our other existing and future products. They also have some computer vision overlap with e.g. object detection.\u00a0 Prior experience with relevant video technologies is required for this role.\n\nREQUIRED QUALIFICATIONS\n\n5+ years of general C++ software experience\n\nBS degree in an engineering discipline\n\nGeneral understanding of camera hardware and video formats\n\nSolid understanding of writing reliable, multi-threaded software\n\nEligible to obtain and maintain an active U.S. Secret security cle",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-      "GCP",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Linux"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5133360007",
     "company": "Anduril",
     "title": "Senior Software Engineer, Video",
@@ -9807,44 +9723,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5248872007",
+    "id": "andurilindustries-5206580007",
     "company": "Anduril",
-    "title": "Senior Software Engineer- Infrastructure",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
+    "title": "Senior Software Engineer, Video",
+    "department": "Software : Software Platform : Video",
+    "team": "Software : Software Platform : Video",
     "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "Systems & Low-Level",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Waltham, Massachusetts, United States \u2022 Broomfield, CO (CO-02)",
+    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Waltham, Massachusetts, United States",
-      "Broomfield, CO (CO-02)"
+      "Seattle, Washington, United States",
+      "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "$142,000 - $188,000",
-    "salaryMin": 142000,
-    "salaryMax": 188000,
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire an Infrastructure / DevOps Engineer to join our growing Battlespace Awareness team. This role own",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5206580007?gh_jid=5206580007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nWe are on a mission to accelerate the development, deployment, and integration with Lattice. We\u2019re dedicated to building a comprehensive, high-leverage, and foundational platform that offers\u00a0efficient data management, agent orchestration, and system-wide interoperability. We develop the common data, object storage, and identity access management building blocks for Lattice. Our auth system provides secure access control, while our data systems empower our partners with user-friendly APIs and documentation. By combining these diverse yet interconnected areas of expertise, we aim to create a powerful, scalable ecosystem that works across both\u00a0autonomous robots and C2 systems. We aim to empower other developers, our users, to build many innovative applications that will help aid our warfighters\u00a0C2 mass effects\u00a0in the\u00a0distributed fight to come.\n\nABOUT THE JOB\n\nThe role of our video pipeline engineers is to develop real-time and asynchronous video feeds from remote deployments to web, virtual reality clients, computer vision front-end and back-end pipelines. Video pipeline engineers help design the ISR payloads for drones and the camera systems used in our other existing and future products. They also have some computer vision overlap with e.g. object detection.\u00a0 Prior experience with relevant video technologies is required for this role.\n\nREQUIRED QUALIFICATIONS\n\n5+ years of general C++ software experience\n\nBS degree in an engineering discipline\n\nGeneral understanding of camera hardware and video formats\n\nSolid understanding of writing reliable, multi-threaded software\n\nEligible to obtain and maintain an active U.S. Secret security cle",
     "requirements": [
       "Python",
       "C++",
-      "Rust",
       "C",
-      "Docker",
       "Kubernetes",
       "AWS",
-      "GitHub"
+      "Azure",
+      "GCP",
+      "Computer Vision"
     ],
     "preferred": [
-      "Computer Vision"
+      "Linux"
     ],
     "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
@@ -9876,6 +9792,49 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5274646007?gh_jid=5274646007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5274646007?gh_jid=5274646007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire a Senior Infrastructure / DevOps Engineer to join our growing Battlespace Awareness team. This ro",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "C",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "GitHub"
+    ],
+    "preferred": [
+      "Computer Vision"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5248872007",
+    "company": "Anduril",
+    "title": "Senior Software Engineer- Infrastructure",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Waltham, Massachusetts, United States \u2022 Broomfield, CO (CO-02)",
+    "locations": [
+      "Waltham, Massachusetts, United States",
+      "Broomfield, CO (CO-02)"
+    ],
+    "salary": "$142,000 - $188,000",
+    "salaryMin": 142000,
+    "salaryMax": 188000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248872007?gh_jid=5248872007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire an Infrastructure / DevOps Engineer to join our growing Battlespace Awareness team. This role own",
     "requirements": [
       "Python",
       "C++",
@@ -10214,48 +10173,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-4948307007",
-    "company": "Anduril",
-    "title": "Software Engineer",
-    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
-    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
-    "locations": [
-      "Sydney, New South Wales, Australia",
-      "Sydney, AUS (SYD-01)"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSoftware Engineers contribute to the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Software Engineers to demonstrate end-to-end ou",
-    "requirements": [
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "TypeScript",
-      "React",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-4948330007",
     "company": "Anduril",
     "title": "Software Engineer",
@@ -10281,6 +10198,48 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948330007?gh_jid=4948330007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948330007?gh_jid=4948330007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948330007?gh_jid=4948330007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSoftware Engineers contribute to the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Software Engineers to demonstrate end-to-end ou",
+    "requirements": [
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "TypeScript",
+      "React",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-4948307007",
+    "company": "Anduril",
+    "title": "Software Engineer",
+    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
+    "locations": [
+      "Sydney, New South Wales, Australia",
+      "Sydney, AUS (SYD-01)"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4948307007?gh_jid=4948307007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nSoftware Engineers contribute to the delivery of a variety of software integrated in to our products. This includes autonomy, simulation, data processing, payload integration, and off-board command and control and decision support. We expect Software Engineers to demonstrate end-to-end ou",
     "requirements": [
       "C++",
@@ -10885,46 +10844,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5236475007",
-    "company": "Anduril",
-    "title": "Software Engineer, Battlespace Awareness",
-    "department": "Mission Systems : Battlespace Awareness Engineering",
-    "team": "Mission Systems : Battlespace Awareness Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Broomfield, CO (CO-02)"
-    ],
-    "salary": "$144,000 - $192,000",
-    "salaryMin": 144000,
-    "salaryMax": 192000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don\u2019t end once we\u2019ve written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \u201cAny sufficiently advanced technology is indistinguishable from magic.\u201d Anduril is seeking talented \u201cmagicians\u201d to join in our mission to expand the boundary of what\u2019s possible.\n\nWHAT YOU WILL DO:\n\nContribute to the direction of a small team with your expertise and ideas\n\nPrototype state-of-the-art software solutions in an agile development environment\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling and simulation environments, innovative analysis tools, and sound analysis techniques to quantify the benefit of our technology\n\nEngage with our customers, to ensure successful outcomes for their mission-critical needs\n\nWork with all aspects of the software development lifecycle\n\nHelp your colleagues and customers understand what you\u2019re doing and why\n\nREQUIRED QUALIFICATIONS\n\n5+ years of professional software engineering experience\n\nBachelor's degree in mathematics, physics, engineering, or other technical field (advanced degree strongly preferred)\n\nC/C++, Python, and Matlab;\n\nBig data/NoSQL/database te",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5236476007",
     "company": "Anduril",
     "title": "Software Engineer, Battlespace Awareness",
@@ -10965,36 +10884,38 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5042843007",
+    "id": "andurilindustries-5236475007",
     "company": "Anduril",
-    "title": "Software Engineer, C++",
-    "department": "Templates: ENG",
-    "team": "Templates: ENG",
+    "title": "Software Engineer, Battlespace Awareness",
+    "department": "Mission Systems : Battlespace Awareness Engineering",
+    "team": "Mission Systems : Battlespace Awareness Engineering",
     "deptTrack": "Engineering",
     "category": "SWE",
     "domain": "Systems & Low-Level",
     "seniority": "Mid / General",
     "employmentType": "Full-time",
-    "location": "Boston, Massachusetts, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Broomfield, Colorado, United States \u2022 Broomfield, CO (CO-02)",
     "locations": [
-      "Boston, Massachusetts, United States",
-      "Costa Mesa, CA (OC-00)"
+      "Broomfield, Colorado, United States",
+      "Broomfield, CO (CO-02)"
     ],
-    "salary": "$167,000 - $222,000",
-    "salaryMin": 167000,
-    "salaryMax": 222000,
+    "salary": "$144,000 - $192,000",
+    "salaryMin": 144000,
+    "salaryMax": 192000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented C++ software engineers on several teams to contribute to projects that are shaping the future of defense.\n\nWHAT YOU\u2019LL DO\n\nDesign, develop, and optimize high-performance, low-latency C++ software for critical defense applications, systems, and infrastructure.\n\nEngineer robust, efficient, and scalable solutions, tackling complex algorithmic challenges and memory management critical for real-time operations.\n\nCollaborate closely with hardware engineers, systems engineers, and other software disciplines to integrate C++ components and ensure seamless system functionality.\n\nDebug, test, and profile C++ code to identify and resolve performance bottlenecks and ensure system reliability and stability.\n\nContribute to the full software development lifecycle, from architectural design and implementation to rigorous testing and deployment of advanced C++ systems.\n\nREQUIRED QUALIFICATIONS\n\nDeep Technical Acumen: A robust foundation in Computer Science, Software Engineering, Mathematics, or Physics, enabling a strong understanding of low-level systems and algorithmic complexity.\n\nMastery of C++: Minimum of 3 years of demonstrated professional experience in developing high-performance, complex software solutions using modern C++.\n\nBuilding Performant Systems: Proven ability to design and implement sof",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5236475007?gh_jid=5236475007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Software Engineers excel at developing state-of-the art algorithms and software that solve scientific problems with real-world applications. Working in small innovative teams, our software engineers build solutions that make a difference. Our research endeavors don\u2019t end once we\u2019ve written a journal or conference paper describing our technology; rather, our work is complete when our technology has been deployed in mission-critical systems and our customers within government and industry are successful. As science fiction writer Arthur Clarke wrote, \u201cAny sufficiently advanced technology is indistinguishable from magic.\u201d Anduril is seeking talented \u201cmagicians\u201d to join in our mission to expand the boundary of what\u2019s possible.\n\nWHAT YOU WILL DO:\n\nContribute to the direction of a small team with your expertise and ideas\n\nPrototype state-of-the-art software solutions in an agile development environment\n\nImplement high-performance software spanning the spectrum from tactical systems to web applications\n\nUse high-fidelity modeling and simulation environments, innovative analysis tools, and sound analysis techniques to quantify the benefit of our technology\n\nEngage with our customers, to ensure successful outcomes for their mission-critical needs\n\nWork with all aspects of the software development lifecycle\n\nHelp your colleagues and customers understand what you\u2019re doing and why\n\nREQUIRED QUALIFICATIONS\n\n5+ years of professional software engineering experience\n\nBachelor's degree in mathematics, physics, engineering, or other technical field (advanced degree strongly preferred)\n\nC/C++, Python, and Matlab;\n\nBig data/NoSQL/database te",
     "requirements": [
+      "Python",
       "C++",
       "C",
-      "Computer Vision"
+      "Computer Vision",
+      "Machine Learning"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -11041,7 +10962,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5100176007",
+    "id": "andurilindustries-5042843007",
     "company": "Anduril",
     "title": "Software Engineer, C++",
     "department": "Templates: ENG",
@@ -11051,9 +10972,9 @@ const seedJobs = [
     "domain": "Systems & Low-Level",
     "seniority": "Mid / General",
     "employmentType": "Full-time",
-    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Boston, Massachusetts, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Washington, District of Columbia, United States",
+      "Boston, Massachusetts, United States",
       "Costa Mesa, CA (OC-00)"
     ],
     "salary": "$167,000 - $222,000",
@@ -11063,9 +10984,9 @@ const seedJobs = [
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5042843007?gh_jid=5042843007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented C++ software engineers on several teams to contribute to projects that are shaping the future of defense.\n\nWHAT YOU\u2019LL DO\n\nDesign, develop, and optimize high-performance, low-latency C++ software for critical defense applications, systems, and infrastructure.\n\nEngineer robust, efficient, and scalable solutions, tackling complex algorithmic challenges and memory management critical for real-time operations.\n\nCollaborate closely with hardware engineers, systems engineers, and other software disciplines to integrate C++ components and ensure seamless system functionality.\n\nDebug, test, and profile C++ code to identify and resolve performance bottlenecks and ensure system reliability and stability.\n\nContribute to the full software development lifecycle, from architectural design and implementation to rigorous testing and deployment of advanced C++ systems.\n\nREQUIRED QUALIFICATIONS\n\nDeep Technical Acumen: A robust foundation in Computer Science, Software Engineering, Mathematics, or Physics, enabling a strong understanding of low-level systems and algorithmic complexity.\n\nMastery of C++: Minimum of 3 years of demonstrated professional experience in developing high-performance, complex software solutions using modern C++.\n\nBuilding Performant Systems: Proven ability to design and implement sof",
     "requirements": [
       "C++",
@@ -11117,51 +11038,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5226943007",
-    "company": "Anduril",
-    "title": "Software Engineer, C++",
-    "department": "Mission Systems : Battlespace Awareness Engineering",
-    "team": "Mission Systems : Battlespace Awareness Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Broomfield, CO (CO-02) \u2022 Fort Collins, CO (CO-13)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Fort Collins, Colorado, United States",
-      "Broomfield, CO (CO-02)",
-      "Fort Collins, CO (CO-13)"
-    ],
-    "salary": "$127,000 - $170,000",
-    "salaryMin": 127000,
-    "salaryMax": 170000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Air & Missile Defense Radar team develops cutting-edge tracking algorithms and software systems that detect, track, and characterize airborne threats in real-time. Working in small, focused teams, our software engineers design and implement sophisticated tracking solutions that protect lives and critical assets. Our work spans the full spectrum\u2014from developing novel multi-target tracking algorithms to building high-performance distributed systems that process massive amounts of sensor data in milliseconds\n\nWe don't just publish papers; we deploy production-grade systems that our government and industry customers depend on for mission-critical operations. If you're passionate about applying mathematics, software engineering, and signal processing to solve complex real-world problems, we want to hear from you.\n\nWHAT YOU WILL DO\n\nDesign and implement advanced tracking algorithms for novel air and missile threats, including multi-target tracking, track fusion, and discrimination techniques\n\nDevelop high-performance, real-time software systems that process radar sensor data and maintain tracks on dozens to hundreds of simultaneous targets\n\nBuild and leverage modeling & simulation environments to validate tracking performance, quantify system capabilities, and identify areas for improvement\n\nCollaborate directly with radar engineers and system architects to integrate tracking solutions into end-to-end defense systems\n\nOptimize tracking software for performance-critical environments where milliseconds matter\n\nCommunicate technical concepts and trade-offs to cross-functional teams, program leadership, and customers to drive infor",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Distributed Systems",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Machine Learning"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5275463007",
     "company": "Anduril",
     "title": "Software Engineer, C++",
@@ -11207,6 +11083,89 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
+    "id": "andurilindustries-5226943007",
+    "company": "Anduril",
+    "title": "Software Engineer, C++",
+    "department": "Mission Systems : Battlespace Awareness Engineering",
+    "team": "Mission Systems : Battlespace Awareness Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Broomfield, Colorado, United States \u2022 Fort Collins, Colorado, United States \u2022 Broomfield, CO (CO-02) \u2022 Fort Collins, CO (CO-13)",
+    "locations": [
+      "Broomfield, Colorado, United States",
+      "Fort Collins, Colorado, United States",
+      "Broomfield, CO (CO-02)",
+      "Fort Collins, CO (CO-13)"
+    ],
+    "salary": "$127,000 - $170,000",
+    "salaryMin": 127000,
+    "salaryMax": 170000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5226943007?gh_jid=5226943007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Air & Missile Defense Radar team develops cutting-edge tracking algorithms and software systems that detect, track, and characterize airborne threats in real-time. Working in small, focused teams, our software engineers design and implement sophisticated tracking solutions that protect lives and critical assets. Our work spans the full spectrum\u2014from developing novel multi-target tracking algorithms to building high-performance distributed systems that process massive amounts of sensor data in milliseconds\n\nWe don't just publish papers; we deploy production-grade systems that our government and industry customers depend on for mission-critical operations. If you're passionate about applying mathematics, software engineering, and signal processing to solve complex real-world problems, we want to hear from you.\n\nWHAT YOU WILL DO\n\nDesign and implement advanced tracking algorithms for novel air and missile threats, including multi-target tracking, track fusion, and discrimination techniques\n\nDevelop high-performance, real-time software systems that process radar sensor data and maintain tracks on dozens to hundreds of simultaneous targets\n\nBuild and leverage modeling & simulation environments to validate tracking performance, quantify system capabilities, and identify areas for improvement\n\nCollaborate directly with radar engineers and system architects to integrate tracking solutions into end-to-end defense systems\n\nOptimize tracking software for performance-critical environments where milliseconds matter\n\nCommunicate technical concepts and trade-offs to cross-functional teams, program leadership, and customers to drive infor",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Distributed Systems",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Machine Learning"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5100176007",
+    "company": "Anduril",
+    "title": "Software Engineer, C++",
+    "department": "Templates: ENG",
+    "team": "Templates: ENG",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Washington, District of Columbia, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Washington, District of Columbia, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$167,000 - $222,000",
+    "salaryMin": 167000,
+    "salaryMax": 222000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5100176007?gh_jid=5100176007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented C++ software engineers on several teams to contribute to projects that are shaping the future of defense.\n\nWHAT YOU\u2019LL DO\n\nDesign, develop, and optimize high-performance, low-latency C++ software for critical defense applications, systems, and infrastructure.\n\nEngineer robust, efficient, and scalable solutions, tackling complex algorithmic challenges and memory management critical for real-time operations.\n\nCollaborate closely with hardware engineers, systems engineers, and other software disciplines to integrate C++ components and ensure seamless system functionality.\n\nDebug, test, and profile C++ code to identify and resolve performance bottlenecks and ensure system reliability and stability.\n\nContribute to the full software development lifecycle, from architectural design and implementation to rigorous testing and deployment of advanced C++ systems.\n\nREQUIRED QUALIFICATIONS\n\nDeep Technical Acumen: A robust foundation in Computer Science, Software Engineering, Mathematics, or Physics, enabling a strong understanding of low-level systems and algorithmic complexity.\n\nMastery of C++: Minimum of 3 years of demonstrated professional experience in developing high-performance, complex software solutions using modern C++.\n\nBuilding Performant Systems: Proven ability to design and implement sof",
+    "requirements": [
+      "C++",
+      "C",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
     "id": "andurilindustries-4596297007",
     "company": "Anduril",
     "title": "Software Engineer, Connected Warfare",
@@ -11234,6 +11193,53 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4596297007?gh_jid=4596297007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4596297007?gh_jid=4596297007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4596297007?gh_jid=4596297007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Connected Warfare division\u2019s Mission Command team builds, deploys, integrates, extends, and scales Anduril's software and hardware to deliver mission-critical capabilities to our customers. As the software engineers closest to Anduril customers and end-users, Mission Software Engineers solve technical challenges of operational scenarios while owning the end-to-end delivery of winning capabilities such as Lattice Mesh, Joint All Domain Command & Control, and Anduril's Menace Family-of-Systems.\n\nAs a Software Engineer on the Mission Command team, you will build the foundation for a first-of-its-kind platform designed for the tactical edge, solving novel problems across networking, autonomy, systems integration, robotics, and next-generation distributed data layers. Powering resilient, machine-speed decision-making for warfighters and allies\u2014even in contested, disconnected environments\u2014your work will ensure Anduril\u2019s products seamlessly work together and with third parties to deliver customer value. Driven by a \u201cWhatever It Takes\u201d mindset, the Mission Command team balances intentional, long-term system design with the pragmatic tradeoffs needed to meet immediate customer needs. By keeping the mission top-of-mind, you will make sound, scalable engineering decisions to deliver high-quality, expedient software that preemptively addresses the national security challenges of the future.\n\nWHAT YOU\u2019LL DO\n\nOwn software solutions spanning core mesh platforms, data interfaces, and release management deployed directly to customers to scale critical mission capabilities.\n\nDeliver well-architected systems using modern software engineering prac",
+    "requirements": [
+      "Python",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "AWS",
+      "Azure",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "System Design",
+      "Computer Vision"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-4263030007",
+    "company": "Anduril",
+    "title": "Software Engineer, Connected Warfare (Active Clearance)",
+    "department": "Connected Warfare : Mission Command Engineering : Mission Software Engineering",
+    "team": "Connected Warfare : Mission Command Engineering : Mission Software Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Honolulu, HI (HI-01) \u2022 Seattle, WA (SEA-01) \u2022 Washington, DC (DC-01)",
+    "locations": [
+      "Seattle, Washington, United States",
+      "Costa Mesa, CA (OC-00)",
+      "Honolulu, HI (HI-01)",
+      "Seattle, WA (SEA-01)",
+      "Washington, DC (DC-01)"
+    ],
+    "salary": "$166,000 - $253,000",
+    "salaryMin": 166000,
+    "salaryMax": 253000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Connected Warfare division\u2019s Mission Command team builds, deploys, integrates, extends, and scales Anduril's software and hardware to deliver mission-critical capabilities to our customers. As the software engineers closest to Anduril customers and end-users, Mission Software Engineers solve technical challenges of operational scenarios while owning the end-to-end delivery of winning capabilities such as Lattice Mesh, Joint All Domain Command & Control, and Anduril's Menace Family-of-Systems.\n\nAs a Software Engineer on the Mission Command team, you will build the foundation for a first-of-its-kind platform designed for the tactical edge, solving novel problems across networking, autonomy, systems integration, robotics, and next-generation distributed data layers. Powering resilient, machine-speed decision-making for warfighters and allies\u2014even in contested, disconnected environments\u2014your work will ensure Anduril\u2019s products seamlessly work together and with third parties to deliver customer value. Driven by a \u201cWhatever It Takes\u201d mindset, the Mission Command team balances intentional, long-term system design with the pragmatic tradeoffs needed to meet immediate customer needs. By keeping the mission top-of-mind, you will make sound, scalable engineering decisions to deliver high-quality, expedient software that preemptively addresses the national security challenges of the future.\n\nWHAT YOU\u2019LL DO\n\nOwn software solutions spanning core mesh platforms, data interfaces, and release management deployed directly to customers to scale critical mission capabilities.\n\nDeliver well-architected systems using modern software engineering prac",
     "requirements": [
       "Python",
@@ -11328,53 +11334,6 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263023007?gh_jid=4263023007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263023007?gh_jid=4263023007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263023007?gh_jid=4263023007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Connected Warfare division\u2019s Mission Command team builds, deploys, integrates, extends, and scales Anduril's software and hardware to deliver mission-critical capabilities to our customers. As the software engineers closest to Anduril customers and end-users, Mission Software Engineers solve technical challenges of operational scenarios while owning the end-to-end delivery of winning capabilities such as Lattice Mesh, Joint All Domain Command & Control, and Anduril's Menace Family-of-Systems.\n\nAs a Software Engineer on the Mission Command team, you will build the foundation for a first-of-its-kind platform designed for the tactical edge, solving novel problems across networking, autonomy, systems integration, robotics, and next-generation distributed data layers. Powering resilient, machine-speed decision-making for warfighters and allies\u2014even in contested, disconnected environments\u2014your work will ensure Anduril\u2019s products seamlessly work together and with third parties to deliver customer value. Driven by a \u201cWhatever It Takes\u201d mindset, the Mission Command team balances intentional, long-term system design with the pragmatic tradeoffs needed to meet immediate customer needs. By keeping the mission top-of-mind, you will make sound, scalable engineering decisions to deliver high-quality, expedient software that preemptively addresses the national security challenges of the future.\n\nWHAT YOU\u2019LL DO\n\nOwn software solutions spanning core mesh platforms, data interfaces, and release management deployed directly to customers to scale critical mission capabilities.\n\nDeliver well-architected systems using modern software engineering prac",
-    "requirements": [
-      "Python",
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "AWS",
-      "Azure",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "System Design",
-      "Computer Vision"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-4263030007",
-    "company": "Anduril",
-    "title": "Software Engineer, Connected Warfare (Active Clearance)",
-    "department": "Connected Warfare : Mission Command Engineering : Mission Software Engineering",
-    "team": "Connected Warfare : Mission Command Engineering : Mission Software Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00) \u2022 Honolulu, HI (HI-01) \u2022 Seattle, WA (SEA-01) \u2022 Washington, DC (DC-01)",
-    "locations": [
-      "Seattle, Washington, United States",
-      "Costa Mesa, CA (OC-00)",
-      "Honolulu, HI (HI-01)",
-      "Seattle, WA (SEA-01)",
-      "Washington, DC (DC-01)"
-    ],
-    "salary": "$166,000 - $253,000",
-    "salaryMin": 166000,
-    "salaryMax": 253000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Connected Warfare division\u2019s Mission Command team builds, deploys, integrates, extends, and scales Anduril's software and hardware to deliver mission-critical capabilities to our customers. As the software engineers closest to Anduril customers and end-users, Mission Software Engineers solve technical challenges of operational scenarios while owning the end-to-end delivery of winning capabilities such as Lattice Mesh, Joint All Domain Command & Control, and Anduril's Menace Family-of-Systems.\n\nAs a Software Engineer on the Mission Command team, you will build the foundation for a first-of-its-kind platform designed for the tactical edge, solving novel problems across networking, autonomy, systems integration, robotics, and next-generation distributed data layers. Powering resilient, machine-speed decision-making for warfighters and allies\u2014even in contested, disconnected environments\u2014your work will ensure Anduril\u2019s products seamlessly work together and with third parties to deliver customer value. Driven by a \u201cWhatever It Takes\u201d mindset, the Mission Command team balances intentional, long-term system design with the pragmatic tradeoffs needed to meet immediate customer needs. By keeping the mission top-of-mind, you will make sound, scalable engineering decisions to deliver high-quality, expedient software that preemptively addresses the national security challenges of the future.\n\nWHAT YOU\u2019LL DO\n\nOwn software solutions spanning core mesh platforms, data interfaces, and release management deployed directly to customers to scale critical mission capabilities.\n\nDeliver well-architected systems using modern software engineering prac",
     "requirements": [
       "Python",
@@ -11817,45 +11776,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-4959625007",
-    "company": "Anduril",
-    "title": "Software Engineer, Robotics",
-    "department": "Templates: ENG",
-    "team": "Templates: ENG",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$191,000 - $254,000",
-    "salaryMin": 191000,
-    "salaryMax": 254000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented robotics software engineers on several teams to contribute to projects that are shaping the future of defense. Potential areas of focus include: Artificial Intelligence, Machine Learning, Computer Vision, Sensor Fusion, Perception, and Motion and Behavioral Planning.\n\nWHAT YOU\u2019LL DO\n\nEngineer robust software for autonomous robotics, focusing on perception, planning, and control to drive mission-critical operations.\n\nTackle challenging real-world problems by building scalable and reliable software solutions for our next-generation robotic platforms, directly impacting mission success and technological advancement.\n\nContribute to the full software development lifecycle, from algorithm research and prototyping to implementation, testing, and deployment, in a fast-paced, multidisciplinary environment.\n\nInnovate to enhance processes and systems, driving ongoing excellence while executing rigorous testing and seamless deployment of code.\n\nREQUIRED QUALIFICATIONS\n\nSolid Engineering Fundamentals: A strong academic background in Computer Science, Software Engineering, Mathematics, or Physics, enabling you to tackle complex technical challenges.\n\nProficient C++ Developer: Minimum of 3 years of hands-on experience developing production-ready software solutions in C++.\n\nBuilding Data-Driven Innovati",
-    "requirements": [
-      "C++",
-      "C",
-      "Computer Vision",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5102393007",
     "company": "Anduril",
     "title": "Software Engineer, Robotics",
@@ -11896,44 +11816,40 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5185965007",
+    "id": "andurilindustries-4959625007",
     "company": "Anduril",
-    "title": "Software Engineer, Robotics Data Foundation (Cloud)",
-    "department": "AFS : Discovery Engineering",
-    "team": "AFS : Discovery Engineering",
+    "title": "Software Engineer, Robotics",
+    "department": "Templates: ENG",
+    "team": "Templates: ENG",
     "deptTrack": "Engineering",
     "category": "SWE",
-    "domain": "AI / LLM Infra",
+    "domain": "Systems & Low-Level",
     "seniority": "Mid / General",
     "employmentType": "Full-time",
-    "location": "Seattle, Washington, United States \u2022 Boston, MA (BOS-01)",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Seattle, Washington, United States",
-      "Boston, MA (BOS-01)"
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "$167,000 - $220,000",
-    "salaryMin": 167000,
-    "salaryMax": 220000,
+    "salary": "$191,000 - $254,000",
+    "salaryMin": 191000,
+    "salaryMax": 254000,
     "salaryCurrency": "USD",
     "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Robotics Data Foundation (RDF) team builds Anduril's vehicle telemetry backbone, from onboard systems to cloud. This includes onboard data recording and backhaul, ingestion into our cloud data platform, normalizing data across flight controllers and vehicle management systems, mission systems, and sensor payloads, and making it available to a range of downstream 1st and 3rd-party analysis tools. Our vehicle telemetry platform powers software and hardware development, T&E workflows, production incident response, and contractual customer reporting today, and underpins new product development, fleet-wide analysis, simulation, and machine learning workflows. Anduril sits on the world's largest defense robotics data asset, and the RDF team is working to operationalize that across the board.\n\nABOUT THE JOB\n\nAs an engineer on the Robotics Data Foundation team, you will design and build the Anduril-wide cloud systems that host our ingestion pipelines, storage systems, and tooling that carry vehicle telemetry from onboard systems to the cloud and make it discoverable, searchable, and analyzable across the fleet. You'll normalize data across flight controllers, vehicle management systems, mission systems, and sensor payloads, and expose it to downstream 1st- and 3rd-party analysis tools, and build infrastructure that supports large-scale batch ingestion of recorded telemetry, as well as low-latency streaming.\n\nBuild reliable and performant cloud data systems : Our software ingests high volumes of telemetry across Anduril, so the systems we ship must be high-availability and stable when processing high-scale vehicle telemetry.\n\nDesign ext",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4959625007?gh_jid=4959625007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE JOB\n\nAt Anduril, our Software Engineers are at the forefront of defense technology, crafting high-impact, cutting-edge solutions that redefine innovation. You'll dive into a diverse range of projects, partnering with brilliant minds across disciplines to engineer robust software systems that empower our mission-critical operations. We're seeking talented robotics software engineers on several teams to contribute to projects that are shaping the future of defense. Potential areas of focus include: Artificial Intelligence, Machine Learning, Computer Vision, Sensor Fusion, Perception, and Motion and Behavioral Planning.\n\nWHAT YOU\u2019LL DO\n\nEngineer robust software for autonomous robotics, focusing on perception, planning, and control to drive mission-critical operations.\n\nTackle challenging real-world problems by building scalable and reliable software solutions for our next-generation robotic platforms, directly impacting mission success and technological advancement.\n\nContribute to the full software development lifecycle, from algorithm research and prototyping to implementation, testing, and deployment, in a fast-paced, multidisciplinary environment.\n\nInnovate to enhance processes and systems, driving ongoing excellence while executing rigorous testing and seamless deployment of code.\n\nREQUIRED QUALIFICATIONS\n\nSolid Engineering Fundamentals: A strong academic background in Computer Science, Software Engineering, Mathematics, or Physics, enabling you to tackle complex technical challenges.\n\nProficient C++ Developer: Minimum of 3 years of hands-on experience developing production-ready software solutions in C++.\n\nBuilding Data-Driven Innovati",
     "requirements": [
-      "Python",
-      "Rust",
-      "Go",
-      "Docker",
-      "Kubernetes",
-      "Kafka",
+      "C++",
+      "C",
       "Computer Vision",
       "Machine Learning"
     ],
     "preferred": [
-      "Spark"
+      "Large-scale distributed systems & AI infrastructure"
     ],
     "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
@@ -11964,6 +11880,49 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5247292007?gh_jid=5247292007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5247292007?gh_jid=5247292007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5247292007?gh_jid=5247292007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Robotics Data Foundation (RDF) team builds Anduril's vehicle telemetry backbone, from onboard systems to cloud. This includes onboard data recording and backhaul, ingestion into our cloud data platform, normalizing data across flight controllers and vehicle management systems, mission systems, and sensor payloads, and making it available to a range of downstream 1st and 3rd-party analysis tools. Our vehicle telemetry platform powers software and hardware development, T&E workflows, production incident response, and contractual customer reporting today, and underpins new product development, fleet-wide analysis, simulation, and machine learning workflows. Anduril sits on the world's largest defense robotics data asset, and the RDF team is working to operationalize that across the board.\n\nABOUT THE JOB\n\nAs an engineer on the Robotics Data Foundation team, you will design and build the Anduril-wide cloud systems that host our ingestion pipelines, storage systems, and tooling that carry vehicle telemetry from onboard systems to the cloud and make it discoverable, searchable, and analyzable across the fleet. You'll normalize data across flight controllers, vehicle management systems, mission systems, and sensor payloads, and expose it to downstream 1st- and 3rd-party analysis tools, and build infrastructure that supports large-scale batch ingestion of recorded telemetry, as well as low-latency streaming.\n\nBuild reliable and performant cloud data systems : Our software ingests high volumes of telemetry across Anduril, so the systems we ship must be high-availability and stable when processing high-scale vehicle telemetry.\n\nDesign ext",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "Kafka",
+      "Computer Vision",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Spark"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5185965007",
+    "company": "Anduril",
+    "title": "Software Engineer, Robotics Data Foundation (Cloud)",
+    "department": "AFS : Discovery Engineering",
+    "team": "AFS : Discovery Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Seattle, Washington, United States \u2022 Boston, MA (BOS-01)",
+    "locations": [
+      "Seattle, Washington, United States",
+      "Boston, MA (BOS-01)"
+    ],
+    "salary": "$167,000 - $220,000",
+    "salaryMin": 167000,
+    "salaryMax": 220000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5185965007?gh_jid=5185965007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Robotics Data Foundation (RDF) team builds Anduril's vehicle telemetry backbone, from onboard systems to cloud. This includes onboard data recording and backhaul, ingestion into our cloud data platform, normalizing data across flight controllers and vehicle management systems, mission systems, and sensor payloads, and making it available to a range of downstream 1st and 3rd-party analysis tools. Our vehicle telemetry platform powers software and hardware development, T&E workflows, production incident response, and contractual customer reporting today, and underpins new product development, fleet-wide analysis, simulation, and machine learning workflows. Anduril sits on the world's largest defense robotics data asset, and the RDF team is working to operationalize that across the board.\n\nABOUT THE JOB\n\nAs an engineer on the Robotics Data Foundation team, you will design and build the Anduril-wide cloud systems that host our ingestion pipelines, storage systems, and tooling that carry vehicle telemetry from onboard systems to the cloud and make it discoverable, searchable, and analyzable across the fleet. You'll normalize data across flight controllers, vehicle management systems, mission systems, and sensor payloads, and expose it to downstream 1st- and 3rd-party analysis tools, and build infrastructure that supports large-scale batch ingestion of recorded telemetry, as well as low-latency streaming.\n\nBuild reliable and performant cloud data systems : Our software ingests high volumes of telemetry across Anduril, so the systems we ship must be high-availability and stable when processing high-scale vehicle telemetry.\n\nDesign ext",
     "requirements": [
       "Python",
@@ -12620,52 +12579,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5124403007",
-    "company": "Anduril",
-    "title": "Software Engineer- Machine Learning",
-    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
-    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
-    "deptTrack": "Engineering",
-    "category": "MLE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Broomfield, Colorado, United States \u2022 Waltham, MA (WMA-01)",
-    "locations": [
-      "Broomfield, Colorado, United States",
-      "Waltham, MA (WMA-01)"
-    ],
-    "salary": "$165,000 - $219,000",
-    "salaryMin": 165000,
-    "salaryMax": 219000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire a Software Engineer to join our growing Battlespace Awareness team. In this role, you'll provide ",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "C++",
-      "Rust",
-      "C",
-      "GitHub",
-      "TypeScript",
-      "JavaScript"
-    ],
-    "preferred": [
-      "React",
-      "Computer Vision",
-      "Machine Learning",
-      "API Design"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5248869007",
     "company": "Anduril",
     "title": "Software Engineer- Machine Learning",
@@ -12691,6 +12604,52 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248869007?gh_jid=5248869007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248869007?gh_jid=5248869007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5248869007?gh_jid=5248869007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire a Software Engineer to join our growing Battlespace Awareness team. In this role, you'll provide ",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "C++",
+      "Rust",
+      "C",
+      "GitHub",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "preferred": [
+      "React",
+      "Computer Vision",
+      "Machine Learning",
+      "API Design"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5124403007",
+    "company": "Anduril",
+    "title": "Software Engineer- Machine Learning",
+    "department": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
+    "team": "Mission Systems : Battlespace Awareness Engineering : Battlespace Awareness C2 Systems",
+    "deptTrack": "Engineering",
+    "category": "MLE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Broomfield, Colorado, United States \u2022 Waltham, MA (WMA-01)",
+    "locations": [
+      "Broomfield, Colorado, United States",
+      "Waltham, MA (WMA-01)"
+    ],
+    "salary": "$165,000 - $219,000",
+    "salaryMin": 165000,
+    "salaryMax": 219000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5124403007?gh_jid=5124403007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAt Anduril, our Battlespace Awareness Command and Control Software team specializes in solving complex, real-world problems through cutting-edge algorithms and intelligent software integrations. Operating in small, innovative teams, we push the boundaries of what's possible to deliver advanced technologies with mission-critical applications. Our commitment doesn't end with academic research or proof-of-concept experiments; we measure our success by the real-world impact of our deployed solutions. Our work involves cutting-edge algorithms and high-performance software for multi-target tracking, data fusion, battle management, autonomous robotic control, and mission planning. We are currently seeking talented technologists to join our mission and redefine the future of defense technology.\n\nAbout the Job\n\nWe are looking to hire a Software Engineer to join our growing Battlespace Awareness team. In this role, you'll provide ",
     "requirements": [
       "Python",
@@ -12802,6 +12761,42 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
+    "id": "andurilindustries-5192828007",
+    "company": "Anduril",
+    "title": "Staff CAD Platform Engineer (NX / Teamcenter)",
+    "department": "Hardware Platform : Hardware Engineering Services",
+    "team": "Hardware Platform : Hardware Engineering Services",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "ML Engineering",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$166,000 - $220,000",
+    "salaryMin": 166000,
+    "salaryMax": 220000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE ROLE\n\nYou will be instrumental in establishing, maintaining, and optimizing the Siemens NX CAD environment that powers our engineering and manufacturing teams. You will lead the configuration, standardization, and continuous improvement of our NX and PLM ecosystem, ensuring that designers and engineers have reliable, performant, and standardized tools to rapidly innovate. Your expertise will directly contribute to our ability to design, iterate, and deliver cutting-edge defense solutions at speed and scale.\n\nWHAT YOU'LL DO\n\nDevelop, implement, monitor, and optimize the Siemens NX CAD environment, including templates, customization files, role-based configurations, and default settings across the organization.\n\nAdminister and support NX installations, license servers, and integration with Teamcenter PLM; manage version upgrades, patches, and deployments to minimize disruption to engineering workflows.\n\nConfigure and maintain standardized part families, product configurators, drawing templates, and reusable component libraries to enforce design consistency and best practices.\n\nLead root cause investigations for recurring CAD/PLM issues; define, implement, and verify corrective and preventative actions and document findings to prevent recurrence.\n\nDevelop and maintain automation tools, scripts, and customizations using NXOpen API, Knowledge Fusion, and related frameworks to streamline repetitive design and data management tasks.\n\nStandards & Templates : Establish, document, and enforce organization-wide standards for CAD modeling and PLM data entry to ensure data consistency and integrity. Create and maintain global drawing templates and cu",
+    "requirements": [
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
     "id": "andurilindustries-5192830007",
     "company": "Anduril",
     "title": "Staff CAD Platform Engineer (NX / Teamcenter)",
@@ -12839,43 +12834,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5192828007",
-    "company": "Anduril",
-    "title": "Staff CAD Platform Engineer (NX / Teamcenter)",
-    "department": "Hardware Platform : Hardware Engineering Services",
-    "team": "Hardware Platform : Hardware Engineering Services",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "ML Engineering",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$166,000 - $220,000",
-    "salaryMin": 166000,
-    "salaryMax": 220000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5192828007?gh_jid=5192828007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE ROLE\n\nYou will be instrumental in establishing, maintaining, and optimizing the Siemens NX CAD environment that powers our engineering and manufacturing teams. You will lead the configuration, standardization, and continuous improvement of our NX and PLM ecosystem, ensuring that designers and engineers have reliable, performant, and standardized tools to rapidly innovate. Your expertise will directly contribute to our ability to design, iterate, and deliver cutting-edge defense solutions at speed and scale.\n\nWHAT YOU'LL DO\n\nDevelop, implement, monitor, and optimize the Siemens NX CAD environment, including templates, customization files, role-based configurations, and default settings across the organization.\n\nAdminister and support NX installations, license servers, and integration with Teamcenter PLM; manage version upgrades, patches, and deployments to minimize disruption to engineering workflows.\n\nConfigure and maintain standardized part families, product configurators, drawing templates, and reusable component libraries to enforce design consistency and best practices.\n\nLead root cause investigations for recurring CAD/PLM issues; define, implement, and verify corrective and preventative actions and document findings to prevent recurrence.\n\nDevelop and maintain automation tools, scripts, and customizations using NXOpen API, Knowledge Fusion, and related frameworks to streamline repetitive design and data management tasks.\n\nStandards & Templates : Establish, document, and enforce organization-wide standards for CAD modeling and PLM data entry to ensure data consistency and integrity. Create and maintain global drawing templates and cu",
-    "requirements": [
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
-    "id": "andurilindustries-5176536007",
+    "id": "andurilindustries-5209999007",
     "company": "Anduril",
     "title": "Staff Software Engineer",
     "department": "Corporate Technology : ArsenalOS",
@@ -12885,21 +12844,21 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Staff / Lead",
     "employmentType": "Full-time",
-    "location": "Atlanta, Georgia, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Atlanta, Georgia, United States",
+      "Costa Mesa, California, United States",
       "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "$190,000 - $252,000",
-    "salaryMin": 190000,
-    "salaryMax": 252000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007#app",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nThis role is a shared software engineering pipeline for the teams building the systems that run Anduril: CorpTech Platform, ArsenalOS, and CorporateOS. You are hired into the pipeline, then placed where your strengths fit best. Both teams do full-stack product work on high-availability systems, both partner directly with the business and the factory, and both contribute directly to Anduril\u2019s ability to be the next generation defense prime.\n\nCorpTech Platform is the internal engineering force multiplier behind Anduril\u2019s corporate systems. It invests in data platforms, software platforms, QA and release excellence, ERP engineering, and AI infrastructure. Platform builds the foundation for both ArsenalOS , our manufacturing and build arm, and CorpOS , the system that lets Finance and Growth operate with speed and precision.\n\nArsenalOS is the digital backbone of Anduril\u2019s hardware enterprise. It is the operational OS for the factory floor, the software that turns designs into high-rate production of Roadrunner, Fury, and other Anduril products, and keeps the line running.\n\nCorporateOS is the arm that supports Anduril\u2019s finance and accounting teams with first class internal tools and enterprise systems. Those products are the invisible backbone that ensures Anduril runs a healthy balance sheet. All work you do here has immediate visible impact on our balance sheet.\n\nWe are also driving Anduril toward becoming an autonomous enterprise. Through initiatives like the Autonomous Software Factory , we are rethinking how software is built, tested, deployed, and evolved by integrating AI directly into the engineering lifecycle.\n\nEnterprise systems are strategi",
     "requirements": [
       "TypeScript",
@@ -12995,7 +12954,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5209999007",
+    "id": "andurilindustries-5176538007",
     "company": "Anduril",
     "title": "Staff Software Engineer",
     "department": "Corporate Technology : ArsenalOS",
@@ -13010,21 +12969,25 @@ const seedJobs = [
       "Costa Mesa, California, United States",
       "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5209999007?gh_jid=5209999007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nThis role is a shared software engineering pipeline for the teams building the systems that run Anduril: CorpTech Platform, ArsenalOS, and CorporateOS. You are hired into the pipeline, then placed where your strengths fit best. Both teams do full-stack product work on high-availability systems, both partner directly with the business and the factory, and both contribute directly to Anduril\u2019s ability to be the next generation defense prime.\n\nCorpTech Platform is the internal engineering force multiplier behind Anduril\u2019s corporate systems. It invests in data platforms, software platforms, QA and release excellence, ERP engineering, and AI infrastructure. Platform builds the foundation for both ArsenalOS , our manufacturing and build arm, and CorpOS , the system that lets Finance and Growth operate with speed and precision.\n\nArsenalOS is the digital backbone of Anduril\u2019s hardware enterprise. It is the operational OS for the factory floor, the software that turns designs into high-rate production of Roadrunner, Fury, and other Anduril products, and keeps the line running.\n\nCorporateOS is the arm that supports Anduril\u2019s finance and accounting teams with first class internal tools and enterprise systems. Those products are the invisible backbone that ensures Anduril runs a healthy balance sheet. All work you do here has immediate visible impact on our balance sheet.\n\nWe are also driving Anduril toward becoming an autonomous enterprise. Through initiatives like the Autonomous Software Factory , we are rethinking how software is built, tested, deployed, and evolved by integrating AI directly into the engineering lifecycle.\n\nEnterprise systems are strategi",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM:\n\nArsenalOS is the digital backbone of Anduril\u2019s hardware enterprise. It connects the full lifecycle, from concept to build to field feedback, into one operating environment built for speed, traceability, autonomy, and continuous improvement. That environment includes not just the software used to design, plan, and execute work, but also the factory-facing infrastructure that connects operators, machines, test systems, and OT networks into the same adaptive Build Chain. It is not a support function, but rather a strategic investment by Anduril that the operating system of the hardware lifecycle is how we win. It will be one of the mechanisms by which Anduril out-builds, out-adapts, and out-scales the traditional defense industrial base.\n\nTo move at the speed of software, our warehouse and material operations must be equally agile. The Senior Software Product Manager, Warehouse Management Systems owns the digital system th",
     "requirements": [
+      "AWS",
+      "Distributed Systems",
+      "System Design",
       "TypeScript",
       "JavaScript",
       "React",
+      "Next.js",
       "Computer Vision"
     ],
     "preferred": [
@@ -13034,39 +12997,35 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-4950085007",
+    "id": "andurilindustries-5176536007",
     "company": "Anduril",
     "title": "Staff Software Engineer",
-    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
-    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "department": "Corporate Technology : ArsenalOS",
+    "team": "Corporate Technology : ArsenalOS",
     "deptTrack": "Engineering",
     "category": "SWE",
     "domain": "AI / LLM Infra",
     "seniority": "Staff / Lead",
     "employmentType": "Full-time",
-    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
+    "location": "Atlanta, Georgia, United States \u2022 Costa Mesa, CA (OC-00)",
     "locations": [
-      "Sydney, New South Wales, Australia",
-      "Sydney, AUS (SYD-01)"
+      "Atlanta, Georgia, United States",
+      "Costa Mesa, CA (OC-00)"
     ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
+    "salary": "$190,000 - $252,000",
+    "salaryMin": 190000,
+    "salaryMax": 252000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nStaff Software Engineers lead the delivery of a variety of software integrated in to our products, acting as technical leads, extremely senior individual contributors, and/or as team leads that are also hands-on contributors. This includes autonomy, simulation, data processing, payload in",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176536007?gh_jid=5176536007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nThis role is a shared software engineering pipeline for the teams building the systems that run Anduril: CorpTech Platform, ArsenalOS, and CorporateOS. You are hired into the pipeline, then placed where your strengths fit best. Both teams do full-stack product work on high-availability systems, both partner directly with the business and the factory, and both contribute directly to Anduril\u2019s ability to be the next generation defense prime.\n\nCorpTech Platform is the internal engineering force multiplier behind Anduril\u2019s corporate systems. It invests in data platforms, software platforms, QA and release excellence, ERP engineering, and AI infrastructure. Platform builds the foundation for both ArsenalOS , our manufacturing and build arm, and CorpOS , the system that lets Finance and Growth operate with speed and precision.\n\nArsenalOS is the digital backbone of Anduril\u2019s hardware enterprise. It is the operational OS for the factory floor, the software that turns designs into high-rate production of Roadrunner, Fury, and other Anduril products, and keeps the line running.\n\nCorporateOS is the arm that supports Anduril\u2019s finance and accounting teams with first class internal tools and enterprise systems. Those products are the invisible backbone that ensures Anduril runs a healthy balance sheet. All work you do here has immediate visible impact on our balance sheet.\n\nWe are also driving Anduril toward becoming an autonomous enterprise. Through initiatives like the Autonomous Software Factory , we are rethinking how software is built, tested, deployed, and evolved by integrating AI directly into the engineering lifecycle.\n\nEnterprise systems are strategi",
     "requirements": [
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "System Design",
       "TypeScript",
+      "JavaScript",
       "React",
       "Computer Vision"
     ],
@@ -13120,40 +13079,40 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5176538007",
+    "id": "andurilindustries-4950085007",
     "company": "Anduril",
     "title": "Staff Software Engineer",
-    "department": "Corporate Technology : ArsenalOS",
-    "team": "Corporate Technology : ArsenalOS",
+    "department": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
+    "team": "Maritime & Maneuver Dominance : Maneuver Dominance Engineering : Mission Software Engineering",
     "deptTrack": "Engineering",
     "category": "SWE",
     "domain": "AI / LLM Infra",
     "seniority": "Staff / Lead",
     "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Costa Mesa, CA (OC-00)",
+    "location": "Sydney, New South Wales, Australia \u2022 Sydney, AUS (SYD-01)",
     "locations": [
-      "Costa Mesa, California, United States",
-      "Costa Mesa, CA (OC-00)"
+      "Sydney, New South Wales, Australia",
+      "Sydney, AUS (SYD-01)"
     ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5176538007?gh_jid=5176538007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAnduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM:\n\nArsenalOS is the digital backbone of Anduril\u2019s hardware enterprise. It connects the full lifecycle, from concept to build to field feedback, into one operating environment built for speed, traceability, autonomy, and continuous improvement. That environment includes not just the software used to design, plan, and execute work, but also the factory-facing infrastructure that connects operators, machines, test systems, and OT networks into the same adaptive Build Chain. It is not a support function, but rather a strategic investment by Anduril that the operating system of the hardware lifecycle is how we win. It will be one of the mechanisms by which Anduril out-builds, out-adapts, and out-scales the traditional defense industrial base.\n\nTo move at the speed of software, our warehouse and material operations must be equally agile. The Senior Software Product Manager, Warehouse Management Systems owns the digital system th",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4950085007?gh_jid=4950085007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nAbout the Team\n\nAnduril\u2019s Maritime Division has assembled a diverse team of experts in software, robotics, artificial intelligence, sensor fusion, and data analysis to create software and hardware solutions that radically evolve the capabilities of our customers. We are fielding the next generation of autonomous systems to tackle the extremely challenging industry demands of maritime operations. Anduril has brought to market a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a completely refreshed maritime vehicle and flexible manufacturing architecture that scales from \"small\" to \"extra-large\" vehicle sizes. Today, Anduril is executing on billion-dollar contracts while simultaneously performing Robot-as-a-Service (RaaS) AUV operations.\n\nWe are seeking to sustain our early successes with deep investment in an expanded product portfolio. These products, including Dive-XL, Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver a coherent system-of-systems, enabling the end-to-end conduct of a variety of autonomous missions in the maritime domain. If you are passionate about solving problems that have real impact and working on systems that directly contribute to achieving national strategic priorities, we want you to join Anduril\u2019s Maritime Division and help us build the future of defence capability.\n\nAbout the Job\n\nStaff Software Engineers lead the delivery of a variety of software integrated in to our products, acting as technical leads, extremely senior individual contributors, and/or as team leads that are also hands-on contributors. This includes autonomy, simulation, data processing, payload in",
     "requirements": [
-      "AWS",
-      "Distributed Systems",
+      "C++",
+      "Rust",
+      "Go",
+      "C",
       "System Design",
       "TypeScript",
-      "JavaScript",
       "React",
-      "Next.js",
       "Computer Vision"
     ],
     "preferred": [
@@ -13204,47 +13163,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-4954897007",
-    "company": "Anduril",
-    "title": "Staff Software Engineer, AI Platform",
-    "department": "Software : Software Platform",
-    "team": "Software : Software Platform",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "ML Engineering",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Costa Mesa, California, United States \u2022 Boston, MA (BOS-01)",
-    "locations": [
-      "Costa Mesa, California, United States",
-      "Boston, MA (BOS-01)"
-    ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Developer Platform team serves as the backbone of Anduril's engineering ecosystem, building critical infrastructure that enables teams to deliver mission-critical defense systems. On this team you would optimize release pipelines and CI/CD workflows powering Anduril's Software Factories across the US, Australia, and UK. You'll develop productivity-enhancing tools like our Golang-based dx CLI and architect data infrastructure for actionable engineering metrics and KPIs. Your work will directly impact the productivity across the entire software engineering ecosystem, creating a foundation that scales with Anduril's growth and supports its mission of solving critical defense challenges through advanced technology.\n\nWHAT YOU\u2019ll DO\n\nLead engineering efforts across release systems, developer tooling, and the broader Anduril Software Factory to optimize release pipelines and development workflows.\n\nArchitect scalable AI-powered automation solutions that increase developer productivity while maintaining the highest standards of quality and security for mission-critical defense systems.\n\nDesign and implement robust data infrastructure to effectively instrument our diverse business lines\n\nPartner with Heads of Mission Engineering to define and track critical KPIs that drive strategic decision-making\n\nREQUIRED QUALIFICATIONS\n\n10+ years in an engineering setting, with platform engineering experience and a deep understanding of development workflows. You have experience working on developer tools, CI/CD pipelines, and infrastructure automation, preferably in environments that reward initiative, creativity, and independent problem-solving wi",
-    "requirements": [
-      "Python",
-      "Golang",
-      "TypeScript",
-      "React",
-      "Computer Vision",
-      "Go"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-4954854007",
     "company": "Anduril",
     "title": "Staff Software Engineer, AI Platform",
@@ -13271,6 +13189,47 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954854007?gh_jid=4954854007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954854007?gh_jid=4954854007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Developer Platform team serves as the backbone of Anduril's engineering ecosystem, building critical infrastructure that enables teams to deliver mission-critical defense systems. On this team you would optimize release pipelines and CI/CD workflows powering Anduril's Software Factories across the US, Australia, and UK. You'll develop productivity-enhancing tools like our Golang-based dx CLI and architect data infrastructure for actionable engineering metrics and KPIs. Your work will directly impact the productivity across the entire software engineering ecosystem, creating a foundation that scales with Anduril's growth and supports its mission of solving critical defense challenges through advanced technology.\n\nWHAT YOU\u2019LL DO\n\nLead engineering efforts across release systems, developer tooling, and the broader Anduril Software Factory to optimize release pipelines and development workflows.\n\nArchitect scalable AI-powered automation solutions that increase developer productivity while maintaining the highest standards of quality and security for mission-critical defense systems.\n\nDesign and implement robust data infrastructure to effectively instrument our diverse business lines\n\nPartner with Heads of Mission Engineering to define and track critical KPIs that drive strategic decision-making\n\nREQUIRED QUALIFICATIONS\n\n10+ years in an engineering setting, with platform engineering experience and a deep understanding of development workflows. You have experience working on developer tools, CI/CD pipelines, and infrastructure automation, preferably in environments that reward initiative, creativity, and independent problem-solving wi",
+    "requirements": [
+      "Python",
+      "Golang",
+      "TypeScript",
+      "React",
+      "Computer Vision",
+      "Go"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-4954897007",
+    "company": "Anduril",
+    "title": "Staff Software Engineer, AI Platform",
+    "department": "Software : Software Platform",
+    "team": "Software : Software Platform",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "ML Engineering",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Costa Mesa, California, United States \u2022 Boston, MA (BOS-01)",
+    "locations": [
+      "Costa Mesa, California, United States",
+      "Boston, MA (BOS-01)"
+    ],
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/4954897007?gh_jid=4954897007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Developer Platform team serves as the backbone of Anduril's engineering ecosystem, building critical infrastructure that enables teams to deliver mission-critical defense systems. On this team you would optimize release pipelines and CI/CD workflows powering Anduril's Software Factories across the US, Australia, and UK. You'll develop productivity-enhancing tools like our Golang-based dx CLI and architect data infrastructure for actionable engineering metrics and KPIs. Your work will directly impact the productivity across the entire software engineering ecosystem, creating a foundation that scales with Anduril's growth and supports its mission of solving critical defense challenges through advanced technology.\n\nWHAT YOU\u2019ll DO\n\nLead engineering efforts across release systems, developer tooling, and the broader Anduril Software Factory to optimize release pipelines and development workflows.\n\nArchitect scalable AI-powered automation solutions that increase developer productivity while maintaining the highest standards of quality and security for mission-critical defense systems.\n\nDesign and implement robust data infrastructure to effectively instrument our diverse business lines\n\nPartner with Heads of Mission Engineering to define and track critical KPIs that drive strategic decision-making\n\nREQUIRED QUALIFICATIONS\n\n10+ years in an engineering setting, with platform engineering experience and a deep understanding of development workflows. You have experience working on developer tools, CI/CD pipelines, and infrastructure automation, preferably in environments that reward initiative, creativity, and independent problem-solving wi",
     "requirements": [
       "Python",
       "Golang",
@@ -13537,49 +13496,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5133683007",
-    "company": "Anduril",
-    "title": "Staff Software Engineer, Quality Integration",
-    "department": "Software : Software Platform",
-    "team": "Software : Software Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "ML Engineering",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
-    "locations": [
-      "Seattle, Washington, United States",
-      "Costa Mesa, CA (OC-00)"
-    ],
-    "salary": "$220,000 - $292,000",
-    "salaryMin": 220000,
-    "salaryMax": 292000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform Foundations team at Anduril is dedicated to building the foundational systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nEnsuring we deliver high quality, trustable products is table stakes. Every regression you catch, every manual test you automate away, every closed loop you implement to flag and fix issues has material impact on Engineering\u2019s ability to build awesome products fast. As the Staff Software Engineer, Quality Integration, you will work within a complex ecosystem system (multi-stage release pipelines, Cloud and Robot environments, etc..) and up and down the entire stack where architectural decisions have concrete, measurable consequences and correctness matters. This is how Lattice gets to customers safely, and how operators trust the platform in the field - and how every SWP team ships without breaking the teams next to them. This role, and this team is what makes that possible at scale.\n\nThis role is open to senior technical leaders ready to own the architecture of how Software Platform ships \u2014 the Integrated Continuous Release (ICR) pipe",
-    "requirements": [
-      "Python",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-      "GCP",
-      "GitHub",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5199078007",
     "company": "Anduril",
     "title": "Staff Software Engineer, Quality Integration",
@@ -13605,6 +13521,49 @@ const seedJobs = [
     "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199078007?gh_jid=5199078007",
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199078007?gh_jid=5199078007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5199078007?gh_jid=5199078007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform Foundations team at Anduril is dedicated to building the foundational systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nEnsuring we deliver high quality, trustable products is table stakes. Every regression you catch, every manual test you automate away, every closed loop you implement to flag and fix issues has material impact on Engineering\u2019s ability to build awesome products fast. As the Staff Software Engineer, Quality Integration, you will work within a complex ecosystem system (multi-stage release pipelines, Cloud and Robot environments, etc..) and up and down the entire stack where architectural decisions have concrete, measurable consequences and correctness matters. This is how Lattice gets to customers safely, and how operators trust the platform in the field - and how every SWP team ships without breaking the teams next to them. This role, and this team is what makes that possible at scale.\n\nThis role is open to senior technical leaders ready to own the architecture of how Software Platform ships \u2014 the Integrated Continuous Release (ICR) pipe",
+    "requirements": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "GCP",
+      "GitHub",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5133683007",
+    "company": "Anduril",
+    "title": "Staff Software Engineer, Quality Integration",
+    "department": "Software : Software Platform",
+    "team": "Software : Software Platform",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "ML Engineering",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Seattle, Washington, United States \u2022 Costa Mesa, CA (OC-00)",
+    "locations": [
+      "Seattle, Washington, United States",
+      "Costa Mesa, CA (OC-00)"
+    ],
+    "salary": "$220,000 - $292,000",
+    "salaryMin": 220000,
+    "salaryMax": 292000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5133683007?gh_jid=5133683007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nThe Software Platform Foundations team at Anduril is dedicated to building the foundational systems that empower our engineering teams to develop, test, and deploy cutting-edge defense technology with unparalleled efficiency and reliability. We design and implement sophisticated automated systems that enhance efficiency, reduce manual labor, and optimize critical processes and control systems across our software development lifecycle and production pipelines. As a Software Engineer on this team, you will be instrumental in ensuring the quality, traceability, and rapid deployment of our software solutions, directly contributing to our mission of delivering advanced autonomous systems.\n\nABOUT THE ROLE\n\nEnsuring we deliver high quality, trustable products is table stakes. Every regression you catch, every manual test you automate away, every closed loop you implement to flag and fix issues has material impact on Engineering\u2019s ability to build awesome products fast. As the Staff Software Engineer, Quality Integration, you will work within a complex ecosystem system (multi-stage release pipelines, Cloud and Robot environments, etc..) and up and down the entire stack where architectural decisions have concrete, measurable consequences and correctness matters. This is how Lattice gets to customers safely, and how operators trust the platform in the field - and how every SWP team ships without breaking the teams next to them. This role, and this team is what makes that possible at scale.\n\nThis role is open to senior technical leaders ready to own the architecture of how Software Platform ships \u2014 the Integrated Continuous Release (ICR) pipe",
     "requirements": [
       "Python",
@@ -13908,46 +13867,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
   },
   {
-    "id": "andurilindustries-5111994007",
-    "company": "Anduril",
-    "title": "Tracking Software Engineer, Space",
-    "department": "AFS : Space Engineering",
-    "team": "AFS : Space Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Foothill Ranch, California, United States \u2022 Foothill Ranch, CA (OC-71) \u2022 Washington, DC (DC-01)",
-    "locations": [
-      "Foothill Ranch, California, United States",
-      "Foothill Ranch, CA (OC-71)",
-      "Washington, DC (DC-01)"
-    ],
-    "salary": "$167,000 - $222,000",
-    "salaryMin": 167000,
-    "salaryMax": 222000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
-    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007",
-    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007",
-    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007#app",
-    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested war-fighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Tracking Software Engineer to join our rapidly growing team in Foothill Ranch, CA. In this role, you will be responsible for developing 2D and 3D tracking algorithms that maintain custody of space objects, processing sensor detections and messages into actionable tracks for space situational awareness missions. You will design and implement multi-target tracking systems using advanced state estimation and data association techniques, develop physics-based models to validate performance, and work closely with software teams to deploy your algorithms into operational systems. This will require deep expertise in tracking algorithms, state estimation (Kalman filtering), data association methods (JPDA, MHT), proficiency in MATLAB, Python, and C++, and experience with modeling and simulation. If you are someone who enjoys solving challenging tracking problems involving clutter, maneuvering targets, contested sensing environments, and real-time mission constraints then this role is for you.\n\nWHAT YOU\u2019LL DO\n\nPerform systems engineering and algorithm development tasks supporting space and missile defense tracking missions\n\nDesign and implement adv",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Computer Vision"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
-  },
-  {
     "id": "andurilindustries-5114861007",
     "company": "Anduril",
     "title": "Tracking Software Engineer, Space",
@@ -13975,6 +13894,46 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5114861007?gh_jid=5114861007",
     "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5114861007?gh_jid=5114861007#app",
     "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested war-fighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Tracking Software Engineer to join our rapidly growing team in Washington DC. In this role, you will be responsible for developing 2D and 3D tracking algorithms that maintain custody of space objects, processing sensor detections and messages into actionable tracks for space situational awareness missions. You will design and implement multi-target tracking systems using advanced state estimation and data association techniques, develop physics-based models to validate performance, and work closely with software teams to deploy your algorithms into operational systems. This will require deep expertise in tracking algorithms, state estimation (Kalman filtering), data association methods (JPDA, MHT), proficiency in MATLAB, Python, and C++, and experience with modeling and simulation. If you are someone who enjoys solving challenging tracking problems involving clutter, maneuvering targets, contested sensing environments, and real-time mission constraints then this role is for you.\n\nWHAT YOU\u2019LL DO\n\nPerform systems engineering and algorithm development tasks supporting space and missile defense tracking missions\n\nDesign and implement advanced",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Computer Vision"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #6b7280, #374151)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anduril.com&sz=128"
+  },
+  {
+    "id": "andurilindustries-5111994007",
+    "company": "Anduril",
+    "title": "Tracking Software Engineer, Space",
+    "department": "AFS : Space Engineering",
+    "team": "AFS : Space Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Foothill Ranch, California, United States \u2022 Foothill Ranch, CA (OC-71) \u2022 Washington, DC (DC-01)",
+    "locations": [
+      "Foothill Ranch, California, United States",
+      "Foothill Ranch, CA (OC-71)",
+      "Washington, DC (DC-01)"
+    ],
+    "salary": "$167,000 - $222,000",
+    "salaryMin": 167000,
+    "salaryMax": 222000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/andurilindustries",
+    "jobUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007",
+    "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007",
+    "directApplyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5111994007?gh_jid=5111994007#app",
+    "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century\u2019s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril\u2019s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nABOUT THE TEAM\n\nAnduril's Space team is dedicated to expanding our AI-powered capabilities into the final frontier, enhancing Space Domain Awareness, Space Control, and Command and Control for U.S. military and allied partners. We're developing fully integrated hardware and software systems, including Lattice for Space Missions and modular payloads, to address growing threats in space and ensure our Guardians maintain a decisive advantage in this contested war-fighting domain.\n\nABOUT THE JOB\n\nWe are looking for a Tracking Software Engineer to join our rapidly growing team in Foothill Ranch, CA. In this role, you will be responsible for developing 2D and 3D tracking algorithms that maintain custody of space objects, processing sensor detections and messages into actionable tracks for space situational awareness missions. You will design and implement multi-target tracking systems using advanced state estimation and data association techniques, develop physics-based models to validate performance, and work closely with software teams to deploy your algorithms into operational systems. This will require deep expertise in tracking algorithms, state estimation (Kalman filtering), data association methods (JPDA, MHT), proficiency in MATLAB, Python, and C++, and experience with modeling and simulation. If you are someone who enjoys solving challenging tracking problems involving clutter, maneuvering targets, contested sensing environments, and real-time mission constraints then this role is for you.\n\nWHAT YOU\u2019LL DO\n\nPerform systems engineering and algorithm development tasks supporting space and missile defense tracking missions\n\nDesign and implement adv",
     "requirements": [
       "Python",
       "C++",
@@ -16579,47 +16538,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
   },
   {
-    "id": "anthropic-5150472008",
-    "company": "Anthropic",
-    "title": "Staff Software Engineer, Inference",
-    "department": "Software Engineering - Infrastructure",
-    "team": "Software Engineering - Infrastructure",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Dublin, IE",
-    "locations": [
-      "Dublin, IE"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/anthropic",
-    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008",
-    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008",
-    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008#app",
-    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role:\n\nOur Inference team is responsible for building and maintaining the critical systems that serve Claude to millions of users worldwide. We bring Claude to life by serving our models via the industry's largest compute-agnostic inference deployments.\u00a0 We are responsible for the entire stack from intelligent request routing to fleet-wide orchestration across diverse AI accelerators.\n\nThe team has a dual mandate: maximizing compute efficiency to serve our explosive customer growth, while enabling breakthrough research by giving our scientists the high-performance inference infrastructure they need to develop next-generation models. We tackle complex, distributed systems challenges across multiple accelerator families and emerging AI hardware running in multiple cloud platforms.\n\nAs a Staff Software Engineer on our Inference team , you will work end to end, identifying and addressing key infrastructure blockers to serve Claude to millions of users while enabling breakthrough AI research. Strong candidates should have familiarity with performance optimization, distributed systems, large-scale service orchestration, and intelligent request routing. Familiarity with LLM inference optimization, batching strategies, and multi-accelerator deployments is highly encouraged but not strictly necessary.\n\nStrong candidates may also have experience with:\n\nHigh-performance, large-scale distributed systems\n\nImplementing and deploying machine learning systems at scale\n\nLoad balancing, request routing, or traffic management systems\n\nLLM inference optimization, batching, and caching strategies\n\nKubernetes and cloud infrastructure (AWS, GCP)\n\nPython or Rust\n\nYou may be a good fit if you:\n\nHave significant software engineering experience, particularly with distributed systems\n\nAre results-oriented, with a bias towards flexibility and impact\n\nPick up slack, even if it goes outside your job description\n\nWant to learn more about machine learning systems and infrastructure\n\nThrive in environments where technical excellence directly drives",
-    "requirements": [
-      "Python",
-      "Rust",
-      "Kubernetes",
-      "AWS",
-      "GCP",
-      "Distributed Systems",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
-  },
-  {
     "id": "anthropic-5097742008",
     "company": "Anthropic",
     "title": "Staff Software Engineer, Inference",
@@ -16651,6 +16569,47 @@ const seedJobs = [
       "Kubernetes",
       "AWS",
       "Azure",
+      "GCP",
+      "Distributed Systems",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
+  },
+  {
+    "id": "anthropic-5150472008",
+    "company": "Anthropic",
+    "title": "Staff Software Engineer, Inference",
+    "department": "Software Engineering - Infrastructure",
+    "team": "Software Engineering - Infrastructure",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Dublin, IE",
+    "locations": [
+      "Dublin, IE"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/anthropic",
+    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008",
+    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008",
+    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5150472008#app",
+    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role:\n\nOur Inference team is responsible for building and maintaining the critical systems that serve Claude to millions of users worldwide. We bring Claude to life by serving our models via the industry's largest compute-agnostic inference deployments.\u00a0 We are responsible for the entire stack from intelligent request routing to fleet-wide orchestration across diverse AI accelerators.\n\nThe team has a dual mandate: maximizing compute efficiency to serve our explosive customer growth, while enabling breakthrough research by giving our scientists the high-performance inference infrastructure they need to develop next-generation models. We tackle complex, distributed systems challenges across multiple accelerator families and emerging AI hardware running in multiple cloud platforms.\n\nAs a Staff Software Engineer on our Inference team , you will work end to end, identifying and addressing key infrastructure blockers to serve Claude to millions of users while enabling breakthrough AI research. Strong candidates should have familiarity with performance optimization, distributed systems, large-scale service orchestration, and intelligent request routing. Familiarity with LLM inference optimization, batching strategies, and multi-accelerator deployments is highly encouraged but not strictly necessary.\n\nStrong candidates may also have experience with:\n\nHigh-performance, large-scale distributed systems\n\nImplementing and deploying machine learning systems at scale\n\nLoad balancing, request routing, or traffic management systems\n\nLLM inference optimization, batching, and caching strategies\n\nKubernetes and cloud infrastructure (AWS, GCP)\n\nPython or Rust\n\nYou may be a good fit if you:\n\nHave significant software engineering experience, particularly with distributed systems\n\nAre results-oriented, with a bias towards flexibility and impact\n\nPick up slack, even if it goes outside your job description\n\nWant to learn more about machine learning systems and infrastructure\n\nThrive in environments where technical excellence directly drives",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Kubernetes",
+      "AWS",
       "GCP",
       "Distributed Systems",
       "Machine Learning"
@@ -19524,44 +19483,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
   },
   {
-    "id": "anthropic-5198074008",
-    "company": "Anthropic",
-    "title": "Research Engineer, Machine Learning (RL Velocity)",
-    "department": "AI Research & Engineering",
-    "team": "AI Research & Engineering",
-    "deptTrack": "Research",
-    "category": "Research",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "London, UK",
-    "locations": [
-      "London, UK"
-    ],
-    "salary": "\u00a3370,000 - \u00a3630,000",
-    "salaryMin": 370000,
-    "salaryMax": 630000,
-    "salaryCurrency": "GBP",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/anthropic",
-    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
-    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
-    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008#app",
-    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nThe RL Velocity team owns the efficiency and reliability of our RL Science stack - the infrastructure, tooling, and systems that let researchers iterate quickly on training runs. As a Research Engineer on the team, you'll build and improve the core platform that underpins how we do RL at Anthropic, removing bottlenecks that slow down research and making it easier for the broader org to ship better models faster. This is high-leverage work: small improvements to velocity compound across every researcher and every run.\n\nResponsibilities\n\nBuild and improve the RL training infrastructure that researchers depend on day-to-day\n\nIdentify and remove bottlenecks across the RL stack: debugging, profiling, and rearchitecting where needed\n\nPartner closely with researchers and with adjacent engineering teams (inference, sandboxing, and many more) to understand pain points and ship tooling that makes them faster\n\nOwn the reliability and performance of research runs end-to-end\n\nContribute to design decisions that shape how Anthropic does RL at scale\n\nYou may be a good fit if you\n\nHave strong software engineering fundamentals and a track record of building performant, reliable systems\n\nHave worked on ML infrastructure, distributed systems, or research tooling\n\nCare about enabling other people's work and find leverage through platforms rather than individual experiments\n\nAre comfortable operating across the stack, from low-level performance work to RL algorithms\n\nHave a bias toward shipping and iterating quickly, with a mix of high agency and low ego\n\nStrong candidates may also have\n\nExperience with large-scale distributed training (RL, pre-training, or post-training)\n\nFamiliarity with JAX, PyTorch, or similar ML frameworks\n\nA track record of operating at the edge of research and infra in a fast-moving environment\n\nDeadline to apply: None. Applications will be reviewed on a rolling basis.\n\nThe annual compensation range for this role is listed below.\n\nFor sales roles, the range provided is the role\u2019s On Target Earnings (\"OTE\")",
-    "requirements": [
-      "PyTorch",
-      "JAX",
-      "Distributed Systems",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
-  },
-  {
     "id": "anthropic-5198108008",
     "company": "Anthropic",
     "title": "Research Engineer, Machine Learning (RL Velocity)",
@@ -19588,6 +19509,44 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
     "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
     "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008#app",
+    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nThe RL Velocity team owns the efficiency and reliability of our RL Science stack - the infrastructure, tooling, and systems that let researchers iterate quickly on training runs. As a Research Engineer on the team, you'll build and improve the core platform that underpins how we do RL at Anthropic, removing bottlenecks that slow down research and making it easier for the broader org to ship better models faster. This is high-leverage work: small improvements to velocity compound across every researcher and every run.\n\nResponsibilities\n\nBuild and improve the RL training infrastructure that researchers depend on day-to-day\n\nIdentify and remove bottlenecks across the RL stack: debugging, profiling, and rearchitecting where needed\n\nPartner closely with researchers and with adjacent engineering teams (inference, sandboxing, and many more) to understand pain points and ship tooling that makes them faster\n\nOwn the reliability and performance of research runs end-to-end\n\nContribute to design decisions that shape how Anthropic does RL at scale\n\nYou may be a good fit if you\n\nHave strong software engineering fundamentals and a track record of building performant, reliable systems\n\nHave worked on ML infrastructure, distributed systems, or research tooling\n\nCare about enabling other people's work and find leverage through platforms rather than individual experiments\n\nAre comfortable operating across the stack, from low-level performance work to RL algorithms\n\nHave a bias toward shipping and iterating quickly, with a mix of high agency and low ego\n\nStrong candidates may also have\n\nExperience with large-scale distributed training (RL, pre-training, or post-training)\n\nFamiliarity with JAX, PyTorch, or similar ML frameworks\n\nA track record of operating at the edge of research and infra in a fast-moving environment\n\nDeadline to apply: None. Applications will be reviewed on a rolling basis.\n\nThe annual compensation range for this role is listed below.\n\nFor sales roles, the range provided is the role\u2019s On Target Earnings (\"OTE\")",
+    "requirements": [
+      "PyTorch",
+      "JAX",
+      "Distributed Systems",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
+  },
+  {
+    "id": "anthropic-5198074008",
+    "company": "Anthropic",
+    "title": "Research Engineer, Machine Learning (RL Velocity)",
+    "department": "AI Research & Engineering",
+    "team": "AI Research & Engineering",
+    "deptTrack": "Research",
+    "category": "Research",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "London, UK",
+    "locations": [
+      "London, UK"
+    ],
+    "salary": "\u00a3370,000 - \u00a3630,000",
+    "salaryMin": 370000,
+    "salaryMax": 630000,
+    "salaryCurrency": "GBP",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/anthropic",
+    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
+    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008",
+    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5198074008#app",
     "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nThe RL Velocity team owns the efficiency and reliability of our RL Science stack - the infrastructure, tooling, and systems that let researchers iterate quickly on training runs. As a Research Engineer on the team, you'll build and improve the core platform that underpins how we do RL at Anthropic, removing bottlenecks that slow down research and making it easier for the broader org to ship better models faster. This is high-leverage work: small improvements to velocity compound across every researcher and every run.\n\nResponsibilities\n\nBuild and improve the RL training infrastructure that researchers depend on day-to-day\n\nIdentify and remove bottlenecks across the RL stack: debugging, profiling, and rearchitecting where needed\n\nPartner closely with researchers and with adjacent engineering teams (inference, sandboxing, and many more) to understand pain points and ship tooling that makes them faster\n\nOwn the reliability and performance of research runs end-to-end\n\nContribute to design decisions that shape how Anthropic does RL at scale\n\nYou may be a good fit if you\n\nHave strong software engineering fundamentals and a track record of building performant, reliable systems\n\nHave worked on ML infrastructure, distributed systems, or research tooling\n\nCare about enabling other people's work and find leverage through platforms rather than individual experiments\n\nAre comfortable operating across the stack, from low-level performance work to RL algorithms\n\nHave a bias toward shipping and iterating quickly, with a mix of high agency and low ego\n\nStrong candidates may also have\n\nExperience with large-scale distributed training (RL, pre-training, or post-training)\n\nFamiliarity with JAX, PyTorch, or similar ML frameworks\n\nA track record of operating at the edge of research and infra in a fast-moving environment\n\nDeadline to apply: None. Applications will be reviewed on a rolling basis.\n\nThe annual compensation range for this role is listed below.\n\nFor sales roles, the range provided is the role\u2019s On Target Earnings (\"OTE\")",
     "requirements": [
       "PyTorch",
@@ -19838,6 +19797,46 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
   },
   {
+    "id": "anthropic-5112018008",
+    "company": "Anthropic",
+    "title": "Research Engineer, Production Model Post-Training",
+    "department": "AI Research & Engineering",
+    "team": "AI Research & Engineering",
+    "deptTrack": "Research",
+    "category": "Research",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Z\u00fcrich, CH",
+    "locations": [
+      "Z\u00fcrich, CH"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/anthropic",
+    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
+    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
+    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008#app",
+    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nAnthropic's production models undergo sophisticated post-training processes to enhance their capabilities, alignment, and safety. As a Research Engineer on our Post-Training team, you'll train our base models through the complete post-training stack to deliver the production Claude models that users interact with.\n\nYou'll work at the intersection of cutting-edge research and production engineering, implementing, scaling, and improving post-training techniques like Constitutional AI, RLHF, and other alignment methodologies. Your work will directly impact the quality, safety, and capabilities of our production models.\n\nNote: For this role, we conduct all interviews in Python. This role may require responding to incidents on short-notice, including on weekends.\n\nResponsibilities:\n\nImplement and optimize post-training techniques at scale on frontier models\n\nConduct research to develop and optimize post-training recipes that directly improve production model quality\n\nDesign, build, and run robust, efficient pipelines for model fine-tuning and evaluation\n\nDevelop tools to measure and improve model performance across various dimensions\n\nCollaborate with research teams to translate emerging techniques into production-ready implementations\n\nDebug complex issues in training pipelines and model behavior\n\nHelp establish best practices for reliable, reproducible model post-training\n\nYou may be a good fit if you:\n\nThrive in controlled chaos and are energised, rather than overwhelmed, when juggling multiple urgent priorities\n\nAdapt quickly to changing priorities\n\nMaintain clarity when debugging complex, time-sensitive issues\n\nHave strong software engineering skills with experience building complex ML systems\n\nAre comfortable working with large-scale distributed systems and high-performance computing\n\nHave experience with training, fine-tuning, or evaluating large language models\n\nCan balance research exploration with engineering rigor and operational reliability\n\nAre adept at analyzing and debugging model training processes",
+    "requirements": [
+      "Python",
+      "Distributed Systems",
+      "LLMs",
+      "RLHF",
+      "Deep Learning",
+      "Fine-tuning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
+  },
+  {
     "id": "anthropic-4613592008",
     "company": "Anthropic",
     "title": "Research Engineer, Production Model Post-Training",
@@ -19865,46 +19864,6 @@ const seedJobs = [
     "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/4613592008",
     "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/4613592008#app",
     "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nAnthropic's production models undergo sophisticated post-training processes to enhance their capabilities, alignment, and safety. As a Research Engineer on our Post-Training team, you'll train our base models through the complete post-training stack to deliver the production Claude models that users interact with.\n\nYou'll work at the intersection of cutting-edge research and production engineering, implementing, scaling, and improving post-training techniques like Constitutional AI, RLHF, and other alignment methodologies. Your work will directly impact the quality, safety, and capabilities of our production models.\n\nNote: For this role, we conduct all interviews in Python. This role may require responding to incidents on short-notice, including on weekends.\n\nResponsibilities:\n\nImplement and optimize post-training techniques at scale on frontier models\n\nConduct research to develop and optimize post-training recipes that directly improve production model quality\n\nDesign, build, and run robust, efficient pipelines for model fine-tuning and evaluation\n\nDevelop tools to measure and improve model performance across various dimensions\n\nCollaborate with research teams to translate emerging techniques into production-ready implementations\n\nDebug complex issues in training pipelines and model behavior\n\nHelp establish best practices for reliable, reproducible model post-training\n\nYou may be a good fit if you:\n\nThrive in controlled chaos and\u00a0are energised, rather than overwhelmed, when juggling multiple urgent priorities\n\nAdapt quickly to changing priorities\n\nMaintain clarity when debugging complex, time-sensitive issues\n\nHave strong software engineering skills with experience building complex ML systems\n\nAre comfortable working with large-scale distributed systems and high-performance computing\n\nHave experience with training, fine-tuning, or evaluating large language models\n\nCan balance research exploration with engineering rigor and operational reliability\n\nAre adept at analyzing and debugging model training processes",
-    "requirements": [
-      "Python",
-      "Distributed Systems",
-      "LLMs",
-      "RLHF",
-      "Deep Learning",
-      "Fine-tuning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #d97757, #a85538)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
-  },
-  {
-    "id": "anthropic-5112018008",
-    "company": "Anthropic",
-    "title": "Research Engineer, Production Model Post-Training",
-    "department": "AI Research & Engineering",
-    "team": "AI Research & Engineering",
-    "deptTrack": "Research",
-    "category": "Research",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Z\u00fcrich, CH",
-    "locations": [
-      "Z\u00fcrich, CH"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/anthropic",
-    "jobUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
-    "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008",
-    "directApplyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5112018008#app",
-    "description": "About Anthropic\n\nAnthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.\n\nAbout the role\n\nAnthropic's production models undergo sophisticated post-training processes to enhance their capabilities, alignment, and safety. As a Research Engineer on our Post-Training team, you'll train our base models through the complete post-training stack to deliver the production Claude models that users interact with.\n\nYou'll work at the intersection of cutting-edge research and production engineering, implementing, scaling, and improving post-training techniques like Constitutional AI, RLHF, and other alignment methodologies. Your work will directly impact the quality, safety, and capabilities of our production models.\n\nNote: For this role, we conduct all interviews in Python. This role may require responding to incidents on short-notice, including on weekends.\n\nResponsibilities:\n\nImplement and optimize post-training techniques at scale on frontier models\n\nConduct research to develop and optimize post-training recipes that directly improve production model quality\n\nDesign, build, and run robust, efficient pipelines for model fine-tuning and evaluation\n\nDevelop tools to measure and improve model performance across various dimensions\n\nCollaborate with research teams to translate emerging techniques into production-ready implementations\n\nDebug complex issues in training pipelines and model behavior\n\nHelp establish best practices for reliable, reproducible model post-training\n\nYou may be a good fit if you:\n\nThrive in controlled chaos and are energised, rather than overwhelmed, when juggling multiple urgent priorities\n\nAdapt quickly to changing priorities\n\nMaintain clarity when debugging complex, time-sensitive issues\n\nHave strong software engineering skills with experience building complex ML systems\n\nAre comfortable working with large-scale distributed systems and high-performance computing\n\nHave experience with training, fine-tuning, or evaluating large language models\n\nCan balance research exploration with engineering rigor and operational reliability\n\nAre adept at analyzing and debugging model training processes",
     "requirements": [
       "Python",
       "Distributed Systems",
@@ -24142,6 +24101,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=celonis.com&sz=128"
   },
   {
+    "id": "celonis-7816927003",
+    "company": "Celonis",
+    "title": "Associate Applied (AI) Value Engineer (DACH) - Orbit Program",
+    "department": "Value Engineering",
+    "team": "Value Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Madrid, Spain",
+    "locations": [
+      "Madrid, Spain"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/celonis",
+    "jobUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003",
+    "applyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003#app",
+    "description": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model \u2014 which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blind spots into operational clarity. World's leading companies trust Celonis and its global ecosystem of partners to make their AI agents, people, systems, and processes work together, achieving transformational outcomes. We believe there's a massive opportunity to unlock global productivity and sustainability by giving AI the context to understand how every business process really works. Join our mission to make processes work for people, companies, and the planet.\n\nLocation: Madrid for an onboarding period of 2 years and a possible relocation to Munich after. Customer base will be in Germany/DACH area, involving travel to meet clients in person.\n\nRole Description\n\nAs an Applied (AI) Value Engineer you are pushing the envelope in solving business-critical problems for our customers. You are part of our Value Engineering team and are the trusted advisor for customers working on the intersection of technology and business. You will be working with our most strategic customers, understanding their objectives and key challenges, and building Celonis solutions using the world\u2019s leading Process Intelligence (PI) platform in combination with the largest AI and ML technology partners, such as Microsoft, OpenAI and Databricks. With Celonis\u2019 Process Intelligence (PI) platform we feed operational context to AI so it understands our customers\u2019 business and enables them to industrialize AI unlocking real ROI on AI deployments and at scale. There is no AI without PI. You will prototype these solutions, demonstrate their value to Executives and ensure successful implementation, adoption and value realization in order to increase the footprint of Celonis at those customers.\n\nLaunch Your Enterprise Software Career - Orbit Graduate program\n\nKickstart your career in enterprise software through our immersive 12-month Orbit Program.\n\nDuring the Orbit Graduate program, you will be joining the Global VE Center of Excellence which is an international, diverse, and dynamic organization at the core of the Celonis Value Engineering team supporting our local field teams. As a team, we enjoy working in a fast-pace",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "RAG",
+      "Fine-tuning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #10b981, #047857)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=celonis.com&sz=128"
+  },
+  {
     "id": "celonis-7819725003",
     "company": "Celonis",
     "title": "Associate Applied (AI) Value Engineer (DACH) - Orbit Program",
@@ -24167,44 +24164,6 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/celonis/jobs/7819725003?gh_jid=7819725003",
     "applyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7819725003?gh_jid=7819725003",
     "directApplyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7819725003?gh_jid=7819725003#app",
-    "description": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model \u2014 which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blind spots into operational clarity. World's leading companies trust Celonis and its global ecosystem of partners to make their AI agents, people, systems, and processes work together, achieving transformational outcomes. We believe there's a massive opportunity to unlock global productivity and sustainability by giving AI the context to understand how every business process really works. Join our mission to make processes work for people, companies, and the planet.\n\nLocation: Madrid for an onboarding period of 2 years and a possible relocation to Munich after. Customer base will be in Germany/DACH area, involving travel to meet clients in person.\n\nRole Description\n\nAs an Applied (AI) Value Engineer you are pushing the envelope in solving business-critical problems for our customers. You are part of our Value Engineering team and are the trusted advisor for customers working on the intersection of technology and business. You will be working with our most strategic customers, understanding their objectives and key challenges, and building Celonis solutions using the world\u2019s leading Process Intelligence (PI) platform in combination with the largest AI and ML technology partners, such as Microsoft, OpenAI and Databricks. With Celonis\u2019 Process Intelligence (PI) platform we feed operational context to AI so it understands our customers\u2019 business and enables them to industrialize AI unlocking real ROI on AI deployments and at scale. There is no AI without PI. You will prototype these solutions, demonstrate their value to Executives and ensure successful implementation, adoption and value realization in order to increase the footprint of Celonis at those customers.\n\nLaunch Your Enterprise Software Career - Orbit Graduate program\n\nKickstart your career in enterprise software through our immersive 12-month Orbit Program.\n\nDuring the Orbit Graduate program, you will be joining the Global VE Center of Excellence which is an international, diverse, and dynamic organization at the core of the Celonis Value Engineering team supporting our local field teams. As a team, we enjoy working in a fast-pace",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "RAG",
-      "Fine-tuning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #10b981, #047857)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=celonis.com&sz=128"
-  },
-  {
-    "id": "celonis-7816927003",
-    "company": "Celonis",
-    "title": "Associate Applied (AI) Value Engineer (DACH) - Orbit Program",
-    "department": "Value Engineering",
-    "team": "Value Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Madrid, Spain",
-    "locations": [
-      "Madrid, Spain"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/celonis",
-    "jobUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003",
-    "applyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/celonis/jobs/7816927003?gh_jid=7816927003#app",
     "description": "Celonis is the trusted platform to industrialize Enterprise AI. At our core is the Celonis Context Model \u2014 which combines process data, business knowledge, and intelligence into a living digital twin of the enterprise that AI can actually understand, turning AI's operational blind spots into operational clarity. World's leading companies trust Celonis and its global ecosystem of partners to make their AI agents, people, systems, and processes work together, achieving transformational outcomes. We believe there's a massive opportunity to unlock global productivity and sustainability by giving AI the context to understand how every business process really works. Join our mission to make processes work for people, companies, and the planet.\n\nLocation: Madrid for an onboarding period of 2 years and a possible relocation to Munich after. Customer base will be in Germany/DACH area, involving travel to meet clients in person.\n\nRole Description\n\nAs an Applied (AI) Value Engineer you are pushing the envelope in solving business-critical problems for our customers. You are part of our Value Engineering team and are the trusted advisor for customers working on the intersection of technology and business. You will be working with our most strategic customers, understanding their objectives and key challenges, and building Celonis solutions using the world\u2019s leading Process Intelligence (PI) platform in combination with the largest AI and ML technology partners, such as Microsoft, OpenAI and Databricks. With Celonis\u2019 Process Intelligence (PI) platform we feed operational context to AI so it understands our customers\u2019 business and enables them to industrialize AI unlocking real ROI on AI deployments and at scale. There is no AI without PI. You will prototype these solutions, demonstrate their value to Executives and ensure successful implementation, adoption and value realization in order to increase the footprint of Celonis at those customers.\n\nLaunch Your Enterprise Software Career - Orbit Graduate program\n\nKickstart your career in enterprise software through our immersive 12-month Orbit Program.\n\nDuring the Orbit Graduate program, you will be joining the Global VE Center of Excellence which is an international, diverse, and dynamic organization at the core of the Celonis Value Engineering team supporting our local field teams. As a team, we enjoy working in a fast-pace",
     "requirements": [
       "Python",
@@ -32611,42 +32570,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=coinbase.com&sz=128"
   },
   {
-    "id": "coinbase-8243517",
-    "company": "Coinbase",
-    "title": "Senior Software Engineer, Backend (Retail DEX)",
-    "department": "Engineering - Backend",
-    "team": "Engineering - Backend",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Remote - Canada",
-    "locations": [
-      "Remote - Canada"
-    ],
-    "salary": "$191,100 - $191,100",
-    "salaryMin": 191100,
-    "salaryMax": 191100,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/coinbase",
-    "jobUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
-    "applyUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
-    "directApplyUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517#app",
-    "description": "Ready to do the most impactful work of your career? At\u00a0 Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d\u00a0 learn more about working at Coinbase .\n\nSenior Software Engineer, Backend (Retail DEX)\n\nWe're hiring a Senior Software Engineer to join the Retail DEX team within the Consumer & Business group. This team runs all the data and trading systems that power onchain (\"DEX\") trading within the main Coinbase app, enabling millions of traders to buy and sell 70M+ tokens on major blockchains including Base and Solana. You'll build software systems that straddle the off-chain and onchain worlds to deliver a seamless, unified trading experience regardless of where an asset settles.\n\nWhat you'll do:\n\nIntegrate new blockchains, decentralized exchanges, and launchpads into the main Coinbase app to unlock more onchain assets for millions of traders\n\nDesign and implement first-party smart contracts for onchain trading primitives such as DEX aggregation and advanced order types to improve execution quality and capability\n\nScale real-time data pipelines to handle 100K+ messages per second, enabling millisecond-latency processing of blockchain market data\n\nOptimize the trading stack end-to-end to deliver the fastest execution, most optimal fills, and most comprehensive asset coverage for DEX traders\n\nDrive iteration on agentic-first development patterns, building self-improving software systems and tooling that accelerate team velocity\n\nRequired Skills and Experience:\n\n5+ years of experience in backend software engineering with demonstrated success building and operating data systems or data pipelines in production\n\nHands-on experience designing data-intensive systems and integrating with large-scale data infrastructure such as Kafka, Clickhouse, Starrocks, Temporal, and Redis\n\nProven experience designing and integrating with onchain smart contracts on EVM (Ethereum, Base) or Solana, with deep understanding of the programming ",
-    "requirements": [
-      "Redis",
-      "Kafka"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #0052ff, #0039b3)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=coinbase.com&sz=128"
-  },
-  {
     "id": "coinbase-8243520",
     "company": "Coinbase",
     "title": "Senior Software Engineer, Backend (Retail DEX)",
@@ -32672,6 +32595,42 @@ const seedJobs = [
     "jobUrl": "https://www.coinbase.com/careers/positions/8243520?gh_jid=8243520",
     "applyUrl": "https://www.coinbase.com/careers/positions/8243520?gh_jid=8243520",
     "directApplyUrl": "https://www.coinbase.com/careers/positions/8243520?gh_jid=8243520#app",
+    "description": "Ready to do the most impactful work of your career? At\u00a0 Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d\u00a0 learn more about working at Coinbase .\n\nSenior Software Engineer, Backend (Retail DEX)\n\nWe're hiring a Senior Software Engineer to join the Retail DEX team within the Consumer & Business group. This team runs all the data and trading systems that power onchain (\"DEX\") trading within the main Coinbase app, enabling millions of traders to buy and sell 70M+ tokens on major blockchains including Base and Solana. You'll build software systems that straddle the off-chain and onchain worlds to deliver a seamless, unified trading experience regardless of where an asset settles.\n\nWhat you'll do:\n\nIntegrate new blockchains, decentralized exchanges, and launchpads into the main Coinbase app to unlock more onchain assets for millions of traders\n\nDesign and implement first-party smart contracts for onchain trading primitives such as DEX aggregation and advanced order types to improve execution quality and capability\n\nScale real-time data pipelines to handle 100K+ messages per second, enabling millisecond-latency processing of blockchain market data\n\nOptimize the trading stack end-to-end to deliver the fastest execution, most optimal fills, and most comprehensive asset coverage for DEX traders\n\nDrive iteration on agentic-first development patterns, building self-improving software systems and tooling that accelerate team velocity\n\nRequired Skills and Experience:\n\n5+ years of experience in backend software engineering with demonstrated success building and operating data systems or data pipelines in production\n\nHands-on experience designing data-intensive systems and integrating with large-scale data infrastructure such as Kafka, Clickhouse, Starrocks, Temporal, and Redis\n\nProven experience designing and integrating with onchain smart contracts on EVM (Ethereum, Base) or Solana, with deep understanding of the programming ",
+    "requirements": [
+      "Redis",
+      "Kafka"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #0052ff, #0039b3)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=coinbase.com&sz=128"
+  },
+  {
+    "id": "coinbase-8243517",
+    "company": "Coinbase",
+    "title": "Senior Software Engineer, Backend (Retail DEX)",
+    "department": "Engineering - Backend",
+    "team": "Engineering - Backend",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Remote - Canada",
+    "locations": [
+      "Remote - Canada"
+    ],
+    "salary": "$191,100 - $191,100",
+    "salaryMin": 191100,
+    "salaryMax": 191100,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/coinbase",
+    "jobUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
+    "applyUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
+    "directApplyUrl": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517#app",
     "description": "Ready to do the most impactful work of your career? At\u00a0 Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d\u00a0 learn more about working at Coinbase .\n\nSenior Software Engineer, Backend (Retail DEX)\n\nWe're hiring a Senior Software Engineer to join the Retail DEX team within the Consumer & Business group. This team runs all the data and trading systems that power onchain (\"DEX\") trading within the main Coinbase app, enabling millions of traders to buy and sell 70M+ tokens on major blockchains including Base and Solana. You'll build software systems that straddle the off-chain and onchain worlds to deliver a seamless, unified trading experience regardless of where an asset settles.\n\nWhat you'll do:\n\nIntegrate new blockchains, decentralized exchanges, and launchpads into the main Coinbase app to unlock more onchain assets for millions of traders\n\nDesign and implement first-party smart contracts for onchain trading primitives such as DEX aggregation and advanced order types to improve execution quality and capability\n\nScale real-time data pipelines to handle 100K+ messages per second, enabling millisecond-latency processing of blockchain market data\n\nOptimize the trading stack end-to-end to deliver the fastest execution, most optimal fills, and most comprehensive asset coverage for DEX traders\n\nDrive iteration on agentic-first development patterns, building self-improving software systems and tooling that accelerate team velocity\n\nRequired Skills and Experience:\n\n5+ years of experience in backend software engineering with demonstrated success building and operating data systems or data pipelines in production\n\nHands-on experience designing data-intensive systems and integrating with large-scale data infrastructure such as Kafka, Clickhouse, Starrocks, Temporal, and Redis\n\nProven experience designing and integrating with onchain smart contracts on EVM (Ethereum, Base) or Solana, with deep understanding of the programming ",
     "requirements": [
       "Redis",
@@ -33044,6 +33003,45 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128"
   },
   {
+    "id": "datadog-8261223",
+    "company": "Datadog",
+    "title": "Manager I, Engineering - Language Platform",
+    "department": "Leadership",
+    "team": "Leadership",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Lisbon, Portugal \u2022 Paris",
+    "locations": [
+      "Lisbon, Portugal",
+      "Paris"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/datadog",
+    "jobUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223",
+    "applyUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223",
+    "directApplyUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223#app",
+    "description": "Application Performance Monitoring (APM) is one of Datadog\u2019s premier products that helps developers see inside complex distributed systems. Our SDKs are both the delivery vehicle for APM and the platform on which all of Datadog\u2019s service and app based products (e.g. Application Security Management, Profiling, Data Stream Monitoring\u2026) are delivered. We believe our SDKs are one of our technical moats and are a key competitive advantage for APM and Datadog more broadly. They\u2019re also open-source.\n\nLeading the evolution of our SDKs is a technically demanding and highly collaborative effort. You\u2019ll work with language experts to deliver cutting-edge observability products across our 9 supported languages, with industry leading performance and a world class developer experience. You\u2019ll rethink our SDKs\u2019 architecture, APIs, data models, and protocol to meet Datadog\u2019s current needs and scale, all while building in the open. And you\u2019ll grow your team\u2019s capacity by fostering a culture focused on customer needs, continuous learning, and innovation.\n\nWe\u2019re looking for an experienced Engineering Manager who cares as much about technical excellence as empowering other engineering teams.\n\nAt Datadog, we place value in our office culture - the relationships that it builds, the creativity it brings to the table, and the collaboration of being together. We operate as a hybrid workplace to ensure our employees can create a work-life harmony that best fits them.\n\nWhat you\u2019ll do\n\nLead, grow, and develop a team of roughly 4-8 library engineers \u2014 coaching, giving direct feedback, and empowering senior ICs as technical leaders owning outcomes\n\nOwn team delivery and productivity: planning, milestones, reviews\n\nCollaborate with Product teams to:\n\nReshape and grow our platform capabilities to enable product teams\n\nDefine and deliver industry leading, open-source, zero-touch APM instrumentation\n\nStay technically close to the work \u2014 apply strong technical judgment, set a high standard for quality, contribute code where it matters most, and keep quality and architecture high\n\nBuild strong relationships and drive alignment across the language teams and product, backend\n\nShape team identity and culture\n\nWho you are\n\nAn experienced Engineering Manager with a track record of shipping\n\nA strong and empathetic leader with the ability to build and lead high-performing teams to deliver high qualit",
+    "requirements": [
+      "Rust",
+      "Go",
+      "C",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #632ca6, #4c1d95)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128"
+  },
+  {
     "id": "datadog-8260933",
     "company": "Datadog",
     "title": "Manager I, Engineering - Language Platform",
@@ -33070,45 +33068,6 @@ const seedJobs = [
     "jobUrl": "https://careers.datadoghq.com/detail/8260933/?gh_jid=8260933",
     "applyUrl": "https://careers.datadoghq.com/detail/8260933/?gh_jid=8260933",
     "directApplyUrl": "https://careers.datadoghq.com/detail/8260933/?gh_jid=8260933#app",
-    "description": "Application Performance Monitoring (APM) is one of Datadog\u2019s premier products that helps developers see inside complex distributed systems. Our SDKs are both the delivery vehicle for APM and the platform on which all of Datadog\u2019s service and app based products (e.g. Application Security Management, Profiling, Data Stream Monitoring\u2026) are delivered. We believe our SDKs are one of our technical moats and are a key competitive advantage for APM and Datadog more broadly. They\u2019re also open-source.\n\nLeading the evolution of our SDKs is a technically demanding and highly collaborative effort. You\u2019ll work with language experts to deliver cutting-edge observability products across our 9 supported languages, with industry leading performance and a world class developer experience. You\u2019ll rethink our SDKs\u2019 architecture, APIs, data models, and protocol to meet Datadog\u2019s current needs and scale, all while building in the open. And you\u2019ll grow your team\u2019s capacity by fostering a culture focused on customer needs, continuous learning, and innovation.\n\nWe\u2019re looking for an experienced Engineering Manager who cares as much about technical excellence as empowering other engineering teams.\n\nAt Datadog, we place value in our office culture - the relationships that it builds, the creativity it brings to the table, and the collaboration of being together. We operate as a hybrid workplace to ensure our employees can create a work-life harmony that best fits them.\n\nWhat you\u2019ll do\n\nLead, grow, and develop a team of roughly 4-8 library engineers \u2014 coaching, giving direct feedback, and empowering senior ICs as technical leaders owning outcomes\n\nOwn team delivery and productivity: planning, milestones, reviews\n\nCollaborate with Product teams to:\n\nReshape and grow our platform capabilities to enable product teams\n\nDefine and deliver industry leading, open-source, zero-touch APM instrumentation\n\nStay technically close to the work \u2014 apply strong technical judgment, set a high standard for quality, contribute code where it matters most, and keep quality and architecture high\n\nBuild strong relationships and drive alignment across the language teams and product, backend\n\nShape team identity and culture\n\nWho you are\n\nAn experienced Engineering Manager with a track record of shipping\n\nA strong and empathetic leader with the ability to build and lead high-performing teams to deliver high qualit",
-    "requirements": [
-      "Rust",
-      "Go",
-      "C",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #632ca6, #4c1d95)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128"
-  },
-  {
-    "id": "datadog-8261223",
-    "company": "Datadog",
-    "title": "Manager I, Engineering - Language Platform",
-    "department": "Leadership",
-    "team": "Leadership",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Lisbon, Portugal \u2022 Paris",
-    "locations": [
-      "Lisbon, Portugal",
-      "Paris"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/datadog",
-    "jobUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223",
-    "applyUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223",
-    "directApplyUrl": "https://careers.datadoghq.com/detail/8261223/?gh_jid=8261223#app",
     "description": "Application Performance Monitoring (APM) is one of Datadog\u2019s premier products that helps developers see inside complex distributed systems. Our SDKs are both the delivery vehicle for APM and the platform on which all of Datadog\u2019s service and app based products (e.g. Application Security Management, Profiling, Data Stream Monitoring\u2026) are delivered. We believe our SDKs are one of our technical moats and are a key competitive advantage for APM and Datadog more broadly. They\u2019re also open-source.\n\nLeading the evolution of our SDKs is a technically demanding and highly collaborative effort. You\u2019ll work with language experts to deliver cutting-edge observability products across our 9 supported languages, with industry leading performance and a world class developer experience. You\u2019ll rethink our SDKs\u2019 architecture, APIs, data models, and protocol to meet Datadog\u2019s current needs and scale, all while building in the open. And you\u2019ll grow your team\u2019s capacity by fostering a culture focused on customer needs, continuous learning, and innovation.\n\nWe\u2019re looking for an experienced Engineering Manager who cares as much about technical excellence as empowering other engineering teams.\n\nAt Datadog, we place value in our office culture - the relationships that it builds, the creativity it brings to the table, and the collaboration of being together. We operate as a hybrid workplace to ensure our employees can create a work-life harmony that best fits them.\n\nWhat you\u2019ll do\n\nLead, grow, and develop a team of roughly 4-8 library engineers \u2014 coaching, giving direct feedback, and empowering senior ICs as technical leaders owning outcomes\n\nOwn team delivery and productivity: planning, milestones, reviews\n\nCollaborate with Product teams to:\n\nReshape and grow our platform capabilities to enable product teams\n\nDefine and deliver industry leading, open-source, zero-touch APM instrumentation\n\nStay technically close to the work \u2014 apply strong technical judgment, set a high standard for quality, contribute code where it matters most, and keep quality and architecture high\n\nBuild strong relationships and drive alignment across the language teams and product, backend\n\nShape team identity and culture\n\nWho you are\n\nAn experienced Engineering Manager with a track record of shipping\n\nA strong and empathetic leader with the ability to build and lead high-performing teams to deliver high qualit",
     "requirements": [
       "Rust",
@@ -36093,81 +36052,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=dust.tt&sz=128"
   },
   {
-    "id": "elastic-8224018",
-    "company": "Elastic",
-    "title": "Principal AI Engineer - Context - Agents and Context",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Spain \u2022 United Kingdom",
-    "locations": [
-      "Spain",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
-    "requirements": [
-      "Python",
-      "ElasticSearch",
-      "TypeScript"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8223681",
-    "company": "Elastic",
-    "title": "Principal AI Engineer - Context - Agents and Context",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "United Kingdom",
-    "locations": [
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
-    "requirements": [
-      "Python",
-      "ElasticSearch",
-      "TypeScript"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
     "id": "elastic-8223682",
     "company": "Elastic",
     "title": "Principal AI Engineer - Context - Agents and Context",
@@ -36193,44 +36077,6 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8223682&gh_jid=8223682",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223682&gh_jid=8223682",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223682&gh_jid=8223682#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
-    "requirements": [
-      "Python",
-      "ElasticSearch",
-      "TypeScript"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8223688",
-    "company": "Elastic",
-    "title": "Principal AI Engineer - Context - Agents and Context",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Canada \u2022 United Kingdom",
-    "locations": [
-      "Canada",
-      "United Kingdom"
-    ],
-    "salary": "$154,000 - $243,600",
-    "salaryMin": 154000,
-    "salaryMax": 243600,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
     "requirements": [
       "Python",
@@ -36282,6 +36128,43 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
+    "id": "elastic-8223681",
+    "company": "Elastic",
+    "title": "Principal AI Engineer - Context - Agents and Context",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "United Kingdom",
+    "locations": [
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223681&gh_jid=8223681#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
+    "requirements": [
+      "Python",
+      "ElasticSearch",
+      "TypeScript"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
     "id": "elastic-8256014",
     "company": "Elastic",
     "title": "Principal AI Engineer - Context - Agents and Context",
@@ -36307,6 +36190,82 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8256014&gh_jid=8256014",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256014&gh_jid=8256014",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256014&gh_jid=8256014#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
+    "requirements": [
+      "Python",
+      "ElasticSearch",
+      "TypeScript"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8223688",
+    "company": "Elastic",
+    "title": "Principal AI Engineer - Context - Agents and Context",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Canada \u2022 United Kingdom",
+    "locations": [
+      "Canada",
+      "United Kingdom"
+    ],
+    "salary": "$154,000 - $243,600",
+    "salaryMin": 154000,
+    "salaryMax": 243600,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8223688&gh_jid=8223688#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
+    "requirements": [
+      "Python",
+      "ElasticSearch",
+      "TypeScript"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8224018",
+    "company": "Elastic",
+    "title": "Principal AI Engineer - Context - Agents and Context",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Spain \u2022 United Kingdom",
+    "locations": [
+      "Spain",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8224018&gh_jid=8224018#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nThe Context Engine team builds the knowledge layer that AI agents use to work with enterprise data in Elasticsearch. We extract knowledge from any data sources into a structured AI Index, serve it to agents through public APIs, MCP tools and framework integrations, and close the loop with agent traces so that what the engine knows improves from real usage. Any agent can use it: Elastic\u2019s own Agent Builder, Claude Code, LangChain and other third-party harnesses.\n\nAs a Principal AI Engineer, you own the improvement loop of this product end to end: how agents, automations and skills behave in production, how we observe them, how we evaluate them, and how we ship changes to them safely. This is a hybrid role at the intersection of engineering, data science, and product. You will write production code, design evaluation and telemetry that product decisions can rest on, and set the technical bar for how the team iterates on agentic behaviour. You will work alongside data scientists, backend engineers, product, and UX, and your work will show up directly in what customers build on top of Elastic.\n\nThe codebase is TypeScript and we build it in the open, so you'll be shipping code, designs and discussions in public alongside the rest of the Elastic Stack.\n\nWhat You Will Be Doing\n\nOwn the production improvement loop for Context Engine: understand how extraction automations, retrieval tools and memory behave, based on offline evaluations and customer conversations and telemetry. You help find the failure modes, fix them, and prove the fix.\n\nDefine how we iterate on agents and skills safely: versioning and rollout of prompts, skills and automations, regression coverage, staged and shadow evaluation, and the guardrails that let us c",
     "requirements": [
       "Python",
@@ -36518,7 +36477,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8232554",
+    "id": "elastic-8232596",
     "company": "Elastic",
     "title": "Senior Java Engineer - Core / Infra - Elasticsearch",
     "department": "Platform - Elasticsearch",
@@ -36528,9 +36487,9 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Portugal \u2022 United Kingdom",
+    "location": "Poland \u2022 United Kingdom",
     "locations": [
-      "Portugal",
+      "Poland",
       "United Kingdom"
     ],
     "salary": "Salary Not Disclosed",
@@ -36540,9 +36499,9 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554#app",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat Is the Role\n\nWe are on the lookout for a Senior Software Engineer to join our Elasticsearch team and focus on ensuring that the shared platform functionalities of Elasticsearch are easy to use, performant, maintainable, and secure.\n\nThe team\u2019s mission is to create foundational infrastructure and shared functionality that enables engineers to develop, extend, and support Elasticsearch. The team owns common functionality such as services, settings, and scripting, and makes Elasticsearch extensible through plugins or the Painless scripting language. The team also makes Elasticsearch observable by providing logging and telemetry information. We also own the orchestration of Elasticsearch in serverless, the CI/CD workflows, and enable Elasticsearch developers to deliver Elasticsearch to customers - serverless, cloud, and on-premise alike.\n\nYou will be a strong individual contributor on the team, but you will also contribute to and lead cross-team projects. We need someone who has great design skills, who can work at a low level of abstraction but can equally drive and communicate technical concepts across a variety of collaborators.\n\nWhat You Will Be Doing\n\nContributing to large, impactful projects that evolve the core infrastructure that underpins Elasticsearch.\n\nMaking Elasticsearch developers more productive by identifying and developing opportunities for automation, and integrating agentic apps into development workflows.\n\nDesigning and implementing new horizontally-scalable features and APIs in Elasticsearch.\n\nSolving difficult issues, including performance or concurrency issues, and proposing solutions.\n\nImproving operation and observability of Elasticsearch cloud systems.\n\nCollaborating in the open with the ES team, Elastic users,",
     "requirements": [
       "Go",
@@ -36593,6 +36552,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
+    "id": "elastic-8232554",
+    "company": "Elastic",
+    "title": "Senior Java Engineer - Core / Infra - Elasticsearch",
+    "department": "Platform - Elasticsearch",
+    "team": "Platform - Elasticsearch",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Portugal \u2022 United Kingdom",
+    "locations": [
+      "Portugal",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232554&gh_jid=8232554#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat Is the Role\n\nWe are on the lookout for a Senior Software Engineer to join our Elasticsearch team and focus on ensuring that the shared platform functionalities of Elasticsearch are easy to use, performant, maintainable, and secure.\n\nThe team\u2019s mission is to create foundational infrastructure and shared functionality that enables engineers to develop, extend, and support Elasticsearch. The team owns common functionality such as services, settings, and scripting, and makes Elasticsearch extensible through plugins or the Painless scripting language. The team also makes Elasticsearch observable by providing logging and telemetry information. We also own the orchestration of Elasticsearch in serverless, the CI/CD workflows, and enable Elasticsearch developers to deliver Elasticsearch to customers - serverless, cloud, and on-premise alike.\n\nYou will be a strong individual contributor on the team, but you will also contribute to and lead cross-team projects. We need someone who has great design skills, who can work at a low level of abstraction but can equally drive and communicate technical concepts across a variety of collaborators.\n\nWhat You Will Be Doing\n\nContributing to large, impactful projects that evolve the core infrastructure that underpins Elasticsearch.\n\nMaking Elasticsearch developers more productive by identifying and developing opportunities for automation, and integrating agentic apps into development workflows.\n\nDesigning and implementing new horizontally-scalable features and APIs in Elasticsearch.\n\nSolving difficult issues, including performance or concurrency issues, and proposing solutions.\n\nImproving operation and observability of Elasticsearch cloud systems.\n\nCollaborating in the open with the ES team, Elastic users,",
+    "requirements": [
+      "Go",
+      "Kubernetes",
+      "ElasticSearch"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
     "id": "elastic-8232557",
     "company": "Elastic",
     "title": "Senior Java Engineer - Core / Infra - Elasticsearch",
@@ -36618,44 +36615,6 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8232557&gh_jid=8232557",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232557&gh_jid=8232557",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232557&gh_jid=8232557#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat Is the Role\n\nWe are on the lookout for a Senior Software Engineer to join our Elasticsearch team and focus on ensuring that the shared platform functionalities of Elasticsearch are easy to use, performant, maintainable, and secure.\n\nThe team\u2019s mission is to create foundational infrastructure and shared functionality that enables engineers to develop, extend, and support Elasticsearch. The team owns common functionality such as services, settings, and scripting, and makes Elasticsearch extensible through plugins or the Painless scripting language. The team also makes Elasticsearch observable by providing logging and telemetry information. We also own the orchestration of Elasticsearch in serverless, the CI/CD workflows, and enable Elasticsearch developers to deliver Elasticsearch to customers - serverless, cloud, and on-premise alike.\n\nYou will be a strong individual contributor on the team, but you will also contribute to and lead cross-team projects. We need someone who has great design skills, who can work at a low level of abstraction but can equally drive and communicate technical concepts across a variety of collaborators.\n\nWhat You Will Be Doing\n\nContributing to large, impactful projects that evolve the core infrastructure that underpins Elasticsearch.\n\nMaking Elasticsearch developers more productive by identifying and developing opportunities for automation, and integrating agentic apps into development workflows.\n\nDesigning and implementing new horizontally-scalable features and APIs in Elasticsearch.\n\nSolving difficult issues, including performance or concurrency issues, and proposing solutions.\n\nImproving operation and observability of Elasticsearch cloud systems.\n\nCollaborating in the open with the ES team, Elastic users,",
-    "requirements": [
-      "Go",
-      "Kubernetes",
-      "ElasticSearch"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8232596",
-    "company": "Elastic",
-    "title": "Senior Java Engineer - Core / Infra - Elasticsearch",
-    "department": "Platform - Elasticsearch",
-    "team": "Platform - Elasticsearch",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Poland \u2022 United Kingdom",
-    "locations": [
-      "Poland",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8232596&gh_jid=8232596#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat Is the Role\n\nWe are on the lookout for a Senior Software Engineer to join our Elasticsearch team and focus on ensuring that the shared platform functionalities of Elasticsearch are easy to use, performant, maintainable, and secure.\n\nThe team\u2019s mission is to create foundational infrastructure and shared functionality that enables engineers to develop, extend, and support Elasticsearch. The team owns common functionality such as services, settings, and scripting, and makes Elasticsearch extensible through plugins or the Painless scripting language. The team also makes Elasticsearch observable by providing logging and telemetry information. We also own the orchestration of Elasticsearch in serverless, the CI/CD workflows, and enable Elasticsearch developers to deliver Elasticsearch to customers - serverless, cloud, and on-premise alike.\n\nYou will be a strong individual contributor on the team, but you will also contribute to and lead cross-team projects. We need someone who has great design skills, who can work at a low level of abstraction but can equally drive and communicate technical concepts across a variety of collaborators.\n\nWhat You Will Be Doing\n\nContributing to large, impactful projects that evolve the core infrastructure that underpins Elasticsearch.\n\nMaking Elasticsearch developers more productive by identifying and developing opportunities for automation, and integrating agentic apps into development workflows.\n\nDesigning and implementing new horizontally-scalable features and APIs in Elasticsearch.\n\nSolving difficult issues, including performance or concurrency issues, and proposing solutions.\n\nImproving operation and observability of Elasticsearch cloud systems.\n\nCollaborating in the open with the ES team, Elastic users,",
     "requirements": [
       "Go",
@@ -36783,7 +36742,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8259063",
+    "id": "elastic-8259062",
     "company": "Elastic",
     "title": "Senior Java Software Engineer - Search Inference - Platform",
     "department": "Enterprise Search - Engineering",
@@ -36793,9 +36752,9 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Greece \u2022 United Kingdom",
+    "location": "Spain \u2022 United Kingdom",
     "locations": [
-      "Greece",
+      "Spain",
       "United Kingdom"
     ],
     "salary": "Salary Not Disclosed",
@@ -36805,9 +36764,9 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063#app",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are on the lookout for a Senior Java Developer to join our Elasticsearch team and drive our work on the Inference API in Elasticsearch.\n\nThe Elasticsearch Inference API is the integration layer between Elasticsearch and external machine learning services including Elastic's own Elastic Inference Service (EIS), third-party providers (Anthropic, OpenAI, Cohere, Google), and self-hosted models. It powers features like semantic search, reranking, and generative AI across Elastic Cloud and in hosted environments.\n\nYou'll maintain and develop the plugin framework and REST API with your work spanning protocol design, streaming, async execution, billing integration, and with a tight collaboration with the wider inference team and the Kibana team.\n\nWhat You Will Be Doing\n\nBuild and maintain integrations with internal systems and external inference providers, including schema negotiation, streaming (SSE), and error normalisation\n\nContribute to the inference plugin's internal architecture: task settings, chunking strategies, rate limiting, and provider-level configuration\n\nReview open source contributions to the codebase and work with third party engineers to ensure their contributions meet our technology standards\n\nParticipate in on-call rotation for inference-related incidents\n\nWrite thorough tests: unit tests using ESTestCase, YAML-based REST integration tests, and rolling-upgrade tests\n\nWhat You Bring\n\n5+ years of production Java experience, with experience contributing to a large, established Java codebase. You know core Java and are conversant in the standard library of data structures and concurrency constructs, as well as newer language features.\n\nExperience crafting ergonomic APIs and the ability to reason through trad",
     "requirements": [
       "ElasticSearch",
@@ -36856,43 +36815,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8259062",
-    "company": "Elastic",
-    "title": "Senior Java Software Engineer - Search Inference - Platform",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Spain \u2022 United Kingdom",
-    "locations": [
-      "Spain",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259062&gh_jid=8259062#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are on the lookout for a Senior Java Developer to join our Elasticsearch team and drive our work on the Inference API in Elasticsearch.\n\nThe Elasticsearch Inference API is the integration layer between Elasticsearch and external machine learning services including Elastic's own Elastic Inference Service (EIS), third-party providers (Anthropic, OpenAI, Cohere, Google), and self-hosted models. It powers features like semantic search, reranking, and generative AI across Elastic Cloud and in hosted environments.\n\nYou'll maintain and develop the plugin framework and REST API with your work spanning protocol design, streaming, async execution, billing integration, and with a tight collaboration with the wider inference team and the Kibana team.\n\nWhat You Will Be Doing\n\nBuild and maintain integrations with internal systems and external inference providers, including schema negotiation, streaming (SSE), and error normalisation\n\nContribute to the inference plugin's internal architecture: task settings, chunking strategies, rate limiting, and provider-level configuration\n\nReview open source contributions to the codebase and work with third party engineers to ensure their contributions meet our technology standards\n\nParticipate in on-call rotation for inference-related incidents\n\nWrite thorough tests: unit tests using ESTestCase, YAML-based REST integration tests, and rolling-upgrade tests\n\nWhat You Bring\n\n5+ years of production Java experience, with experience contributing to a large, established Java codebase. You know core Java and are conversant in the standard library of data structures and concurrency constructs, as well as newer language features.\n\nExperience crafting ergonomic APIs and the ability to reason through trad",
-    "requirements": [
-      "ElasticSearch",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
     "id": "elastic-8259061",
     "company": "Elastic",
     "title": "Senior Java Software Engineer - Search Inference - Platform",
@@ -36918,6 +36840,43 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8259061&gh_jid=8259061",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259061&gh_jid=8259061",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259061&gh_jid=8259061#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are on the lookout for a Senior Java Developer to join our Elasticsearch team and drive our work on the Inference API in Elasticsearch.\n\nThe Elasticsearch Inference API is the integration layer between Elasticsearch and external machine learning services including Elastic's own Elastic Inference Service (EIS), third-party providers (Anthropic, OpenAI, Cohere, Google), and self-hosted models. It powers features like semantic search, reranking, and generative AI across Elastic Cloud and in hosted environments.\n\nYou'll maintain and develop the plugin framework and REST API with your work spanning protocol design, streaming, async execution, billing integration, and with a tight collaboration with the wider inference team and the Kibana team.\n\nWhat You Will Be Doing\n\nBuild and maintain integrations with internal systems and external inference providers, including schema negotiation, streaming (SSE), and error normalisation\n\nContribute to the inference plugin's internal architecture: task settings, chunking strategies, rate limiting, and provider-level configuration\n\nReview open source contributions to the codebase and work with third party engineers to ensure their contributions meet our technology standards\n\nParticipate in on-call rotation for inference-related incidents\n\nWrite thorough tests: unit tests using ESTestCase, YAML-based REST integration tests, and rolling-upgrade tests\n\nWhat You Bring\n\n5+ years of production Java experience, with experience contributing to a large, established Java codebase. You know core Java and are conversant in the standard library of data structures and concurrency constructs, as well as newer language features.\n\nExperience crafting ergonomic APIs and the ability to reason through trad",
+    "requirements": [
+      "ElasticSearch",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8259063",
+    "company": "Elastic",
+    "title": "Senior Java Software Engineer - Search Inference - Platform",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Greece \u2022 United Kingdom",
+    "locations": [
+      "Greece",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8259063&gh_jid=8259063#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are on the lookout for a Senior Java Developer to join our Elasticsearch team and drive our work on the Inference API in Elasticsearch.\n\nThe Elasticsearch Inference API is the integration layer between Elasticsearch and external machine learning services including Elastic's own Elastic Inference Service (EIS), third-party providers (Anthropic, OpenAI, Cohere, Google), and self-hosted models. It powers features like semantic search, reranking, and generative AI across Elastic Cloud and in hosted environments.\n\nYou'll maintain and develop the plugin framework and REST API with your work spanning protocol design, streaming, async execution, billing integration, and with a tight collaboration with the wider inference team and the Kibana team.\n\nWhat You Will Be Doing\n\nBuild and maintain integrations with internal systems and external inference providers, including schema negotiation, streaming (SSE), and error normalisation\n\nContribute to the inference plugin's internal architecture: task settings, chunking strategies, rate limiting, and provider-level configuration\n\nReview open source contributions to the codebase and work with third party engineers to ensure their contributions meet our technology standards\n\nParticipate in on-call rotation for inference-related incidents\n\nWrite thorough tests: unit tests using ESTestCase, YAML-based REST integration tests, and rolling-upgrade tests\n\nWhat You Bring\n\n5+ years of production Java experience, with experience contributing to a large, established Java codebase. You know core Java and are conversant in the standard library of data structures and concurrency constructs, as well as newer language features.\n\nExperience crafting ergonomic APIs and the ability to reason through trad",
     "requirements": [
       "ElasticSearch",
@@ -37007,161 +36966,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8239653",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Integrations 3P - Platform",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Poland \u2022 United Kingdom",
-    "locations": [
-      "Poland",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
-    "requirements": [
-      "Rust",
-      "Go",
-      "ElasticSearch",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8256188",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Integrations 3P - Platform",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Romania \u2022 United Kingdom",
-    "locations": [
-      "Romania",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
-    "requirements": [
-      "Rust",
-      "Go",
-      "ElasticSearch",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8105634",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Integrations 3P - Platform",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Spain \u2022 United Kingdom",
-    "locations": [
-      "Spain",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
-    "requirements": [
-      "Rust",
-      "Go",
-      "ElasticSearch",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8173421",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Integrations 3P - Platform",
-    "department": "Enterprise Search - Engineering",
-    "team": "Enterprise Search - Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "United Kingdom",
-    "locations": [
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
-    "requirements": [
-      "Rust",
-      "Go",
-      "ElasticSearch",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
     "id": "elastic-8131025",
     "company": "Elastic",
     "title": "Senior Software Engineer - Integrations 3P - Platform",
@@ -37187,6 +36991,45 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8131025&gh_jid=8131025",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8131025&gh_jid=8131025",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8131025&gh_jid=8131025#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
+    "requirements": [
+      "Rust",
+      "Go",
+      "ElasticSearch",
+      "LLMs"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8239653",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Integrations 3P - Platform",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Poland \u2022 United Kingdom",
+    "locations": [
+      "Poland",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8239653&gh_jid=8239653#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
     "requirements": [
       "Rust",
@@ -37279,13 +37122,13 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8074855",
+    "id": "elastic-8105634",
     "company": "Elastic",
-    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
-    "department": "Platform - Elasticsearch",
-    "team": "Platform - Elasticsearch",
+    "title": "Senior Software Engineer - Integrations 3P - Platform",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
     "deptTrack": "Engineering",
-    "category": "SWE",
+    "category": "Platform",
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
@@ -37301,16 +37144,15 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8105634&gh_jid=8105634#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
     "requirements": [
-      "Distributed Systems",
-      "GitHub",
-      "PostgreSQL",
-      "MongoDB",
-      "ElasticSearch"
+      "Rust",
+      "Go",
+      "ElasticSearch",
+      "LLMs"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -37319,59 +37161,19 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8066491",
+    "id": "elastic-8256188",
     "company": "Elastic",
-    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
-    "department": "Platform - Elasticsearch",
-    "team": "Platform - Elasticsearch",
+    "title": "Senior Software Engineer - Integrations 3P - Platform",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
     "deptTrack": "Engineering",
-    "category": "SWE",
+    "category": "Platform",
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "United States \u2022 United Kingdom",
+    "location": "Romania \u2022 United Kingdom",
     "locations": [
-      "United States",
-      "United Kingdom"
-    ],
-    "salary": "$133,100 - $210,600",
-    "salaryMin": 133100,
-    "salaryMax": 210600,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
-    "requirements": [
-      "Distributed Systems",
-      "GitHub",
-      "PostgreSQL",
-      "MongoDB",
-      "ElasticSearch"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8074889",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
-    "department": "Platform - Elasticsearch",
-    "team": "Platform - Elasticsearch",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Portugal \u2022 United Kingdom",
-    "locations": [
-      "Portugal",
+      "Romania",
       "United Kingdom"
     ],
     "salary": "Salary Not Disclosed",
@@ -37381,9 +37183,86 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889#app",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8256188&gh_jid=8256188#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
+    "requirements": [
+      "Rust",
+      "Go",
+      "ElasticSearch",
+      "LLMs"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8173421",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Integrations 3P - Platform",
+    "department": "Enterprise Search - Engineering",
+    "team": "Enterprise Search - Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "United Kingdom",
+    "locations": [
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8173421&gh_jid=8173421#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe are looking for a Senior Software Engineer to join the Integrations Team and help us build how Elastic shows up inside the AI ecosystem. AI assistants and agentic tools are quickly becoming the place where developers start their work, and this role exists to make Elastic work in the tools and ecosystems that our users use. We want to be easy to find, easy to connect to, and easy to use.\n\nThe Integrations team owns the developer-facing surfaces that connect Elastic to the broader ecosystem: language clients, CLI, MCP server, third-party integrations, and the skills that make Elastic accessible wherever developers work. You'll build and maintain these projects, engage directly with the developer community, and contribute across team and cross-functional initiatives.\n\nThis is fast-moving territory. We want someone who enjoys an ambiguous, quick-shifting space, who forms opinions about what should be built and not only how, and who is comfortable working closely with our product teams and external partners.\n\nPrior experience with the Elastic product suite is not essential, but is beneficial.\n\nWhat You Will Be Doing\n\nYou'll build and evolve the Elastic MCP server and the infrastructure behind it, working primarily in Go.\n\nYou'll build the platform for universal agent skills: the portable format, the authoring and publishing tooling, and the linting that lets any team at Elastic ship a skill that runs across every agent.\n\nYou'll help set the correctness bar, making sure the skills and tools we ship are backed by evals rather than assumed to work.\n\nYou'll design and deliver integrations that make Elastic available inside third-party AI ecosystems. For that you\u2019ll work closely with our product team and third-party partners t",
+    "requirements": [
+      "Rust",
+      "Go",
+      "ElasticSearch",
+      "LLMs"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8074886",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
+    "department": "Platform - Elasticsearch",
+    "team": "Platform - Elasticsearch",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Greece \u2022 United Kingdom",
+    "locations": [
+      "Greece",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
     "requirements": [
       "Distributed Systems",
@@ -37439,7 +37318,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
   },
   {
-    "id": "elastic-8074894",
+    "id": "elastic-8066491",
     "company": "Elastic",
     "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
     "department": "Platform - Elasticsearch",
@@ -37449,61 +37328,21 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Romania \u2022 United Kingdom",
+    "location": "United States \u2022 United Kingdom",
     "locations": [
-      "Romania",
+      "United States",
       "United Kingdom"
     ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
+    "salary": "$133,100 - $210,600",
+    "salaryMin": 133100,
+    "salaryMax": 210600,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894#app",
-    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
-    "requirements": [
-      "Distributed Systems",
-      "GitHub",
-      "PostgreSQL",
-      "MongoDB",
-      "ElasticSearch"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
-  },
-  {
-    "id": "elastic-8074886",
-    "company": "Elastic",
-    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
-    "department": "Platform - Elasticsearch",
-    "team": "Platform - Elasticsearch",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Greece \u2022 United Kingdom",
-    "locations": [
-      "Greece",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/elastic",
-    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886",
-    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886",
-    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074886&gh_jid=8074886#app",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8066491&gh_jid=8066491#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
     "requirements": [
       "Distributed Systems",
@@ -37544,6 +37383,126 @@ const seedJobs = [
     "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074854&gh_jid=8074854",
     "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074854&gh_jid=8074854",
     "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074854&gh_jid=8074854#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
+    "requirements": [
+      "Distributed Systems",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "ElasticSearch"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8074855",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
+    "department": "Platform - Elasticsearch",
+    "team": "Platform - Elasticsearch",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Spain \u2022 United Kingdom",
+    "locations": [
+      "Spain",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074855&gh_jid=8074855#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
+    "requirements": [
+      "Distributed Systems",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "ElasticSearch"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8074889",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
+    "department": "Platform - Elasticsearch",
+    "team": "Platform - Elasticsearch",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Portugal \u2022 United Kingdom",
+    "locations": [
+      "Portugal",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074889&gh_jid=8074889#app",
+    "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
+    "requirements": [
+      "Distributed Systems",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "ElasticSearch"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #00bfb3, #007770)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=elastic.co&sz=128"
+  },
+  {
+    "id": "elastic-8074894",
+    "company": "Elastic",
+    "title": "Senior Software Engineer - Storage Engine - Elasticsearch",
+    "department": "Platform - Elasticsearch",
+    "team": "Platform - Elasticsearch",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Romania \u2022 United Kingdom",
+    "locations": [
+      "Romania",
+      "United Kingdom"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/elastic",
+    "jobUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894",
+    "applyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894",
+    "directApplyUrl": "https://jobs.elastic.co/jobs?gh_jid=8074894&gh_jid=8074894#app",
     "description": "Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale \u2014 unleashing the potential of businesses and people. The Elastic Search AI Platform, used by more than 50% of the Fortune 500, brings together the precision of search and the intelligence of AI to enable everyone to accelerate the results that matter. By taking advantage of all structured and unstructured data \u2014 securing and protecting private information more effectively \u2014 Elastic\u2019s complete, cloud-based solutions for search, security, and observability help organizations deliver on the promise of AI.\n\nWhat is The Role\n\nWe're looking for a Senior Software Engineer to join the Elasticsearch - Storage Engine team .\u00a0 This globally distributed, fully remote team of experienced engineers develops core storage and query technologies for observability workloads, including improving storage efficiency, advancing ES|QL query processing and performance, and optimizing data layouts for object storage.\n\nThis role is responsible for designing, implementing, and optimizing Elasticsearch's core storage and query engine. The ideal candidate has experience building high-performance, scalable database, search, or distributed systems, with a strong focus on storage, indexing, query execution, and performance optimization.\n\nOur company is distributed by intention. We hire the best engineers we can find wherever they are, whoever they are. We collaborate across continents every day over email, GitHub, Zoom, and Slack. At our best, we write fast, scalable, intuitive and high-quality software. We believe that the best way to do that is to empower individual engineers, code review every change, decide big things by consensus, and strive for incremental improvements.\n\nWhat You Will Be Doing\n\nLead the architectural evolution of core storage engine components, continuously identifying and resolving performance bottlenecks in indexing layouts, serialization formats, and resource utilization.\n\nLead cross organizational initiatives to drive and build industry-leading observability solutions.\n\nWork with a globally distributed team of experienced engineers focused on the logs and metrics capabilities of Elasticsearch.\n\nDrive continuous operational and system improvements by introducing best practices for clean coding standards, demystifying complex system behaviors, ",
     "requirements": [
       "Distributed Systems",
@@ -37817,93 +37776,6 @@ const seedJobs = [
     "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $22B - multiples of 11, always.\n\nWe have expanded from voice into three main platforms:\n\n- ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.\n\n- ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.\n\n- ElevenAPI gives developers access to our leading AI audio foundational models.\n\nEverything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.\n\nHOW WE WORK\n\n- High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.\n\n- Impact not job titles: We don\u2019t have job titles. Instead, it\u2019s about the impact you have. No task is above or beneath you.\n\n- AI first: We use AI to move faster with higher-quality results. We do this across the whole company\u2014from engineering to growth to operations.\n\n- Excellence everywhere: Everything we do should match the quality of our AI models.\n\n- Global team: We prioritize your talent, not your location.\n\nWHAT WE OFFER\n\n- Innovative culture: You\u2019ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what\u2019s possible.\n\n- Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.\n\n- Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.\n\n- Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.\n\n- An",
     "requirements": [
       "Python",
-      "Kubernetes",
-      "System Design",
-      "GitHub"
-    ],
-    "preferred": [
-      "High performance distributed processing"
-    ],
-    "companyColor": "linear-gradient(135deg, #6366f1, #4338ca)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128"
-  },
-  {
-    "id": "elevenlabs-e4e0450f-d139-4f8e-b210-2f326a680d90",
-    "company": "ElevenLabs",
-    "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
-    "department": "Engineering & Product",
-    "team": "Core Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Remote \u2022 Ireland \u2022 Europe \u2022 United States \u2022 Poland \u2022 United Kingdom",
-    "locations": [
-      "Remote",
-      "Ireland",
-      "Europe",
-      "United States",
-      "Poland",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Ashby",
-    "boardUrl": "https://jobs.ashbyhq.com/elevenlabs",
-    "jobUrl": "https://jobs.ashbyhq.com/elevenlabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
-    "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
-    "directApplyUrl": "https://jobs.ashbyhq.com/elevenlabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application",
-    "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $22B - multiples of 11, always.\n\nWe have expanded from voice into three main platforms:\n\n- ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.\n\n- ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.\n\n- ElevenAPI gives developers access to our leading AI audio foundational models.\n\nEverything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.\n\nHOW WE WORK\n\n- High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.\n\n- Impact not job titles: We don\u2019t have job titles. Instead, it\u2019s about the impact you have. No task is above or beneath you.\n\n- AI first: We use AI to move faster with higher-quality results. We do this across the whole company\u2014from engineering to growth to operations.\n\n- Excellence everywhere: Everything we do should match the quality of our AI models.\n\n- Global team: We prioritize your talent, not your location.\n\nWHAT WE OFFER\n\n- Innovative culture: You\u2019ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what\u2019s possible.\n\n- Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.\n\n- Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.\n\n- Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.\n\n- An",
-    "requirements": [
-      "Python",
-      "Kubernetes",
-      "System Design",
-      "GitHub"
-    ],
-    "preferred": [
-      "High performance distributed processing"
-    ],
-    "companyColor": "linear-gradient(135deg, #6366f1, #4338ca)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128"
-  },
-  {
-    "id": "elevenlabs-ce3d5a59-fb8c-482b-bc3f-60e44576c5e0",
-    "company": "ElevenLabs",
-    "title": "Full-Stack Engineer (Backend Leaning) - Platform Engineering",
-    "department": "Engineering & Product",
-    "team": "Core Platform",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Remote \u2022 Ireland \u2022 Europe \u2022 United States \u2022 Poland \u2022 United Kingdom",
-    "locations": [
-      "Remote",
-      "Ireland",
-      "Europe",
-      "United States",
-      "Poland",
-      "United Kingdom"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Ashby",
-    "boardUrl": "https://jobs.ashbyhq.com/elevenlabs",
-    "jobUrl": "https://jobs.ashbyhq.com/elevenlabs/ce3d5a59-fb8c-482b-bc3f-60e44576c5e0",
-    "applyUrl": "https://jobs.ashbyhq.com/elevenlabs/ce3d5a59-fb8c-482b-bc3f-60e44576c5e0",
-    "directApplyUrl": "https://jobs.ashbyhq.com/elevenlabs/ce3d5a59-fb8c-482b-bc3f-60e44576c5e0/application",
-    "description": "ABOUT ELEVENLABS\n\nElevenLabs is an AI research and product company transforming how we interact with technology.\n\nWe launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $22B - multiples of 11, always.\n\nWe have expanded from voice into three main platforms:\n\n- ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.\n\n- ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.\n\n- ElevenAPI gives developers access to our leading AI audio foundational models.\n\nEverything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.\n\nHOW WE WORK\n\n- High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.\n\n- Impact not job titles: We don\u2019t have job titles. Instead, it\u2019s about the impact you have. No task is above or beneath you.\n\n- AI first: We use AI to move faster with higher-quality results. We do this across the whole company\u2014from engineering to growth to operations.\n\n- Excellence everywhere: Everything we do should match the quality of our AI models.\n\n- Global team: We prioritize your talent, not your location.\n\nWHAT WE OFFER\n\n- Innovative culture: You\u2019ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what\u2019s possible.\n\n- Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.\n\n- Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.\n\n- Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.\n\n- An",
-    "requirements": [
-      "Python",
-      "Go",
       "Kubernetes",
       "System Design",
       "GitHub"
@@ -41077,47 +40949,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=glean.com&sz=128"
   },
   {
-    "id": "gleanwork-4746918005",
-    "company": "Glean",
-    "title": "Software Engineer",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Mountain View, CA",
-    "locations": [
-      "Mountain View, CA"
-    ],
-    "salary": "$187,075 - $234,000",
-    "salaryMin": 187075,
-    "salaryMax": 234000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/gleanwork",
-    "jobUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005",
-    "applyUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005",
-    "directApplyUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005#app",
-    "description": "About Glean:\n\nGlean is the Work AI platform that helps everyone work smarter with AI. What began as the industry\u2019s most advanced enterprise search has evolved into a full-scale Work AI ecosystem, powering intelligent Search, an AI Assistant, and scalable AI agents on one secure, open platform. With over 100 enterprise SaaS connectors, flexible LLM choice, and robust APIs, Glean gives organizations the infrastructure to govern, scale, and customize AI across their entire business - without vendor lock-in or costly implementation cycles.\n\nAt its core, Glean is redefining how enterprises find, use, and act on knowledge. Its Enterprise Graph and Personal Knowledge Graph map the relationships between people, content, and activity, delivering deeply personalized, context-aware responses for every employee. This foundation powers Glean\u2019s agentic capabilities - AI agents that automate real work across teams by accessing the industry\u2019s broadest range of data: enterprise and world, structured and unstructured, historical and real-time. The result: measurable business impact through faster onboarding, hours of productivity gained each week, and smarter, safer decisions at every level.\n\nRecognized by Fast Company as one of the World\u2019s Most Innovative Companies (Top 10, 2025), by CNBC\u2019s Disruptor 50, Bloomberg\u2019s AI Startups to Watch (2026), Forbes AI 50, and Gartner\u2019s Tech Innovators in Agentic AI, Glean continues to accelerate its global impact. With customers across 50+ industries and 1,000+ employees in more than 25 countries, we\u2019re helping the world\u2019s largest organizations make every employee AI-fluent, and turning the superintelligent enterprise from concept into reality.\n\nIf you\u2019re excited to shape how the world works, you\u2019ll help build systems used daily across Microsoft Teams, Zoom, ServiceNow, Zendesk, GitHub, and many more. You'll be deeply embedded where people get things done. You'll ship agentic capabilities on an open, extensible stack, with the craft and care required for enterprise trust, as we bring Work AI to every employee, in every company.\n\nAbout the Role\n\nGlean Technologies, Inc. seeks Software Engineer in Mountain View, CA:\n\nJob Duties: Design, develop, and maintain full-stack applications spanning front-end interfaces, REST APIs, and application servers. Build and optimize user-facing features using TypeScript and React. Develop server-side servic",
-    "requirements": [
-      "C++",
-      "C",
-      "Distributed Systems",
-      "GitHub",
-      "TypeScript",
-      "React",
-      "Node.js"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #f59e0b, #d97706)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=glean.com&sz=128"
-  },
-  {
     "id": "gleanwork-4746910005",
     "company": "Glean",
     "title": "Software Engineer",
@@ -41158,6 +40989,47 @@ const seedJobs = [
       "NLP",
       "Deep Learning",
       "Machine Learning"
+    ],
+    "companyColor": "linear-gradient(135deg, #f59e0b, #d97706)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=glean.com&sz=128"
+  },
+  {
+    "id": "gleanwork-4746918005",
+    "company": "Glean",
+    "title": "Software Engineer",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Mountain View, CA",
+    "locations": [
+      "Mountain View, CA"
+    ],
+    "salary": "$187,075 - $234,000",
+    "salaryMin": 187075,
+    "salaryMax": 234000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/gleanwork",
+    "jobUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005",
+    "applyUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005",
+    "directApplyUrl": "https://job-boards.greenhouse.io/gleanwork/jobs/4746918005#app",
+    "description": "About Glean:\n\nGlean is the Work AI platform that helps everyone work smarter with AI. What began as the industry\u2019s most advanced enterprise search has evolved into a full-scale Work AI ecosystem, powering intelligent Search, an AI Assistant, and scalable AI agents on one secure, open platform. With over 100 enterprise SaaS connectors, flexible LLM choice, and robust APIs, Glean gives organizations the infrastructure to govern, scale, and customize AI across their entire business - without vendor lock-in or costly implementation cycles.\n\nAt its core, Glean is redefining how enterprises find, use, and act on knowledge. Its Enterprise Graph and Personal Knowledge Graph map the relationships between people, content, and activity, delivering deeply personalized, context-aware responses for every employee. This foundation powers Glean\u2019s agentic capabilities - AI agents that automate real work across teams by accessing the industry\u2019s broadest range of data: enterprise and world, structured and unstructured, historical and real-time. The result: measurable business impact through faster onboarding, hours of productivity gained each week, and smarter, safer decisions at every level.\n\nRecognized by Fast Company as one of the World\u2019s Most Innovative Companies (Top 10, 2025), by CNBC\u2019s Disruptor 50, Bloomberg\u2019s AI Startups to Watch (2026), Forbes AI 50, and Gartner\u2019s Tech Innovators in Agentic AI, Glean continues to accelerate its global impact. With customers across 50+ industries and 1,000+ employees in more than 25 countries, we\u2019re helping the world\u2019s largest organizations make every employee AI-fluent, and turning the superintelligent enterprise from concept into reality.\n\nIf you\u2019re excited to shape how the world works, you\u2019ll help build systems used daily across Microsoft Teams, Zoom, ServiceNow, Zendesk, GitHub, and many more. You'll be deeply embedded where people get things done. You'll ship agentic capabilities on an open, extensible stack, with the craft and care required for enterprise trust, as we bring Work AI to every employee, in every company.\n\nAbout the Role\n\nGlean Technologies, Inc. seeks Software Engineer in Mountain View, CA:\n\nJob Duties: Design, develop, and maintain full-stack applications spanning front-end interfaces, REST APIs, and application servers. Build and optimize user-facing features using TypeScript and React. Develop server-side servic",
+    "requirements": [
+      "C++",
+      "C",
+      "Distributed Systems",
+      "GitHub",
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
     ],
     "companyColor": "linear-gradient(135deg, #f59e0b, #d97706)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=glean.com&sz=128"
@@ -42874,6 +42746,54 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8636574002",
+    "company": "Graphcore",
+    "title": "Infrastructure and MLOps Engineer",
+    "department": "Software Ops",
+    "team": "Software Ops",
+    "deptTrack": "Engineering",
+    "category": "MLE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "locations": [
+      "London, UK",
+      "Bristol",
+      "Cambridge",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002#app",
+    "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.\n\nWe\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.\n\nAs part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence .\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and\u00a0maintain\u00a0tools and services to support\u00a0AI research and engineering teams\n\nDeploy and\u00a0maintain\u00a0services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python\n\nFamiliarity with cloud services (e.g. AWS)\n\nExperience managing or developing in Linux environments\n\nUnderstanding of CI/CD principles\n\nExperience using Kubernetes (k8s)\n\nExperience of one of the following:\n\nmaintaining machine learning applications.\n\ndeploying ML orchestration tools (e.g. NV Ray, KFP, SkyPilot).\n\nmanaging ML accelerator hardware (e.g. DCGM).\n\nDesirable\n\nExperience with Infrastructure as Code (IaC) tools (e.g. Terraform/OpenTofu",
+    "requirements": [
+      "Python",
+      "C++",
+      "Go",
+      "C",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "GitHub",
+      "Machine Learning",
+      "Linux",
+      "Ray"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8556044002",
     "company": "Graphcore",
     "title": "Infrastructure and MLOps Engineer",
@@ -42949,54 +42869,6 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636572002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636572002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636572002#app",
-    "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.\n\nWe\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.\n\nAs part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence .\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and\u00a0maintain\u00a0tools and services to support\u00a0AI research and engineering teams\n\nDeploy and\u00a0maintain\u00a0services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python\n\nFamiliarity with cloud services (e.g. AWS)\n\nExperience managing or developing in Linux environments\n\nUnderstanding of CI/CD principles\n\nExperience using Kubernetes (k8s)\n\nExperience of one of the following:\n\nmaintaining machine learning applications.\n\ndeploying ML orchestration tools (e.g. NV Ray, KFP, SkyPilot).\n\nmanaging ML accelerator hardware (e.g. DCGM).\n\nDesirable\n\nExperience with Infrastructure as Code (IaC) tools (e.g. Terraform/OpenTofu",
-    "requirements": [
-      "Python",
-      "C++",
-      "Go",
-      "C",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "GitHub",
-      "Machine Learning",
-      "Linux",
-      "Ray"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8636574002",
-    "company": "Graphcore",
-    "title": "Infrastructure and MLOps Engineer",
-    "department": "Software Ops",
-    "team": "Software Ops",
-    "deptTrack": "Engineering",
-    "category": "MLE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
-    "locations": [
-      "London, UK",
-      "Bristol",
-      "Cambridge",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8636574002#app",
     "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.\n\nWe\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.\n\nAs part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence .\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and\u00a0maintain\u00a0tools and services to support\u00a0AI research and engineering teams\n\nDeploy and\u00a0maintain\u00a0services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python\n\nFamiliarity with cloud services (e.g. AWS)\n\nExperience managing or developing in Linux environments\n\nUnderstanding of CI/CD principles\n\nExperience using Kubernetes (k8s)\n\nExperience of one of the following:\n\nmaintaining machine learning applications.\n\ndeploying ML orchestration tools (e.g. NV Ray, KFP, SkyPilot).\n\nmanaging ML accelerator hardware (e.g. DCGM).\n\nDesirable\n\nExperience with Infrastructure as Code (IaC) tools (e.g. Terraform/OpenTofu",
     "requirements": [
       "Python",
@@ -43096,45 +42968,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8855207002",
-    "company": "Graphcore",
-    "title": "Power Integrity Engineer",
-    "department": "HW Circuit Design",
-    "team": "HW Circuit Design",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Bristol, UK \u2022 Bristol",
-    "locations": [
-      "Bristol, UK",
-      "Bristol"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002#app",
-    "description": "About the job\n\nShape the power delivery foundations behind advanced AI compute systems built for real-world reliability.\n\nAs a Power Integrity Engineer, you will deliver robust power integrity solutions across Graphcore silicon and system designs. Your work will help advanced compute platforms operate reliably across complex packages, PCBs and hardware systems.\n\nYou will develop and analyse power delivery networks across silicon, package and PCB designs. You will use simulation, measurement and lab correlation to turn power behaviour into clear design improvements.\n\nThis role gives you ownership across the full system path. You will influence decoupling strategy, stack-up decisions, bring-up debug and best practice for future platforms.\n\nThe team and culture\n\nYou will join the Signal and Power Integrity team within Systems Engineering Hardware Motherboard. The team works across chip, package, board and system engineering to solve problems end to end.\n\nWork moves through modelling, simulation, validation and lab evidence. You will collaborate closely with hardware teams and third parties to improve power and signal performance.\n\nYou will be trusted to guide technical decisions, review peer work and speak up when designs need challenge. Ownership sits close to the engineering detail.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong understanding of power integrity principles, including PDN design and analysis\n\n\u00b7 Proficiency with PI simulation tools such as PowerDC, PowerSI, HFSS/SiWave, Simplis, Spice, ADS or similar\n\n\u00b7 Experience working across chip, package or board-level design\n\n\u00b7 Ability to interpret simulation results and translate them into design improvements\n\n\u00b7 Knowledge of electromagnetic simulation techniques and lab measurement using equipment such as VNAs and oscilloscopes\n\n\u00b7 Strong analytical skills, clear communication and the ability to work cross-functionally\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Grap",
-    "requirements": [
-      "Python",
-      "C++",
-      "Distributed Systems",
-      "System Design"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8870180002",
     "company": "Graphcore",
     "title": "Power Integrity Engineer",
@@ -43161,6 +42994,45 @@ const seedJobs = [
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8870180002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8870180002#app",
     "description": "About the job\n\nShape the power delivery that will make Graphcore\u2019s next-generation AI compute systems reliable.\n\nAs a Power Integrity Engineer, you will analyse power-delivery networks across silicon, package and PCB, turning complex behaviour into practical design recommendations.\n\nYou will build PDN models, investigate parasitics, and use frequency-domain and time-domain analysis to understand stability, droop, resonances and transient response. Your work will directly inform decoupling, layout, and power and ground distribution choices.\n\nYou will use electromagnetic simulation to understand resistance, inductance, coupling and impedance. You will also validate assumptions, identify technical risks, and connect simulation results with hardware measurements.\n\nYou will start with clearly scoped PI problems, supported by experienced engineers when wider decisions are involved. As your capability grows, you will own larger parts of the PDN.\n\nThe team and culture\n\nYou will work alongside experienced PI engineers and colleagues across hardware disciplines, connecting analysis with real design decisions and measurements.\n\nYou will own defined technical problems and move quickly from modelling to recommendations. Decisions are grounded in evidence, physical understanding and clear communication of uncertainty.\n\nYou will contribute to design reviews, speak up when results expose risk, and take responsibility for the quality of your analysis.\n\nWhat we\u2019re looking for\n\nBuild, integrate and analyse PDN models for defined power rails, package structures, PCB designs or subsystems.\n\nUse frequency-domain impedance analysis and time-domain simulation to investigate voltage stability, droop, resonances and transient response.\n\nEvaluate decoupling choices and placement, considering capacitance, parasitics and the interaction between silicon, package and PCB.\n\nUse electromagnetic simulation to extract and understand resistance, inductance, coupling and impedance in power and ground structures.\n\nCheck model setup, assumptions, convergence and physical validity, and explain the limitations of your results.\n\nTranslate findings into practical recommendations for decoupling, layout, power and ground distribution, and other PI design choices.\n\nDocument results, identify technical risks and contribute to design reviews and PI verification.\n\nWork with test engineers to define relevan",
+    "requirements": [
+      "Python",
+      "C++",
+      "Distributed Systems",
+      "System Design"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8855207002",
+    "company": "Graphcore",
+    "title": "Power Integrity Engineer",
+    "department": "HW Circuit Design",
+    "team": "HW Circuit Design",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Bristol, UK \u2022 Bristol",
+    "locations": [
+      "Bristol, UK",
+      "Bristol"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8855207002#app",
+    "description": "About the job\n\nShape the power delivery foundations behind advanced AI compute systems built for real-world reliability.\n\nAs a Power Integrity Engineer, you will deliver robust power integrity solutions across Graphcore silicon and system designs. Your work will help advanced compute platforms operate reliably across complex packages, PCBs and hardware systems.\n\nYou will develop and analyse power delivery networks across silicon, package and PCB designs. You will use simulation, measurement and lab correlation to turn power behaviour into clear design improvements.\n\nThis role gives you ownership across the full system path. You will influence decoupling strategy, stack-up decisions, bring-up debug and best practice for future platforms.\n\nThe team and culture\n\nYou will join the Signal and Power Integrity team within Systems Engineering Hardware Motherboard. The team works across chip, package, board and system engineering to solve problems end to end.\n\nWork moves through modelling, simulation, validation and lab evidence. You will collaborate closely with hardware teams and third parties to improve power and signal performance.\n\nYou will be trusted to guide technical decisions, review peer work and speak up when designs need challenge. Ownership sits close to the engineering detail.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong understanding of power integrity principles, including PDN design and analysis\n\n\u00b7 Proficiency with PI simulation tools such as PowerDC, PowerSI, HFSS/SiWave, Simplis, Spice, ADS or similar\n\n\u00b7 Experience working across chip, package or board-level design\n\n\u00b7 Ability to interpret simulation results and translate them into design improvements\n\n\u00b7 Knowledge of electromagnetic simulation techniques and lab measurement using equipment such as VNAs and oscilloscopes\n\n\u00b7 Strong analytical skills, clear communication and the ability to work cross-functionally\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Grap",
     "requirements": [
       "Python",
       "C++",
@@ -43251,6 +43123,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8591785002",
+    "company": "Graphcore",
+    "title": "Principal Debug Validation Engineer",
+    "department": "Post Silicon Validation",
+    "team": "Post Silicon Validation",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Bengaluru, India \u2022 Bengaluru",
+    "locations": [
+      "Bengaluru, India",
+      "Bengaluru"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002#app",
+    "description": "About us\n\nGraphcore is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group, Graphcore is a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives. A melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nReporting to senior leadership within Architecture and Validation, the Debug Validation Lead will drive post-silicon debug and validation activities for next-generation AI compute silicon and systems. The role is responsible for leading teams focused on identifying, reproducing, analysing and resolving complex silicon, firmware and system-level issues during bring-up, characterization and product readiness.\n\nThis position combines deep technical debugging expertise with strong cross-functional collaboration across multiple engineering disciplines. The role will work closely with architecture, RTL, firmware, software and systems teams to improve debug methodologies, accelerate issue resolution and strengthen validation coverage. The role will work closely with architecture, RTL, firmware, software, systems and platform teams to improve debug methodologies, accelerate issue resolution and strengthen validation coverage.\n\nThe Team\n\nThe Post-Silicon Debug and Validation team sits within the Architecture and Validation organisation and is responsible for bring-up, debug and validation of Graphcore silicon and systems.\n\nThe team works across the full product lifecycle, supporting first silicon bring-up, subsystem validation, system integration and production readiness activities. Engineers collaborate closely with hardware, firmware, software and systems teams to investigate complex failures, develop debug methodologies and improve validation infrastructure.\n\nResponsibilities and Duties\n\nLead post-silicon d",
+    "requirements": [
+      "Python",
+      "C",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8608955002",
     "company": "Graphcore",
     "title": "Principal Debug Validation Engineer",
@@ -43280,44 +43190,6 @@ const seedJobs = [
     "requirements": [
       "Python",
       "C++",
-      "C",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8591785002",
-    "company": "Graphcore",
-    "title": "Principal Debug Validation Engineer",
-    "department": "Post Silicon Validation",
-    "team": "Post Silicon Validation",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Bengaluru, India \u2022 Bengaluru",
-    "locations": [
-      "Bengaluru, India",
-      "Bengaluru"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8591785002#app",
-    "description": "About us\n\nGraphcore is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group, Graphcore is a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives. A melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nReporting to senior leadership within Architecture and Validation, the Debug Validation Lead will drive post-silicon debug and validation activities for next-generation AI compute silicon and systems. The role is responsible for leading teams focused on identifying, reproducing, analysing and resolving complex silicon, firmware and system-level issues during bring-up, characterization and product readiness.\n\nThis position combines deep technical debugging expertise with strong cross-functional collaboration across multiple engineering disciplines. The role will work closely with architecture, RTL, firmware, software and systems teams to improve debug methodologies, accelerate issue resolution and strengthen validation coverage. The role will work closely with architecture, RTL, firmware, software, systems and platform teams to improve debug methodologies, accelerate issue resolution and strengthen validation coverage.\n\nThe Team\n\nThe Post-Silicon Debug and Validation team sits within the Architecture and Validation organisation and is responsible for bring-up, debug and validation of Graphcore silicon and systems.\n\nThe team works across the full product lifecycle, supporting first silicon bring-up, subsystem validation, system integration and production readiness activities. Engineers collaborate closely with hardware, firmware, software and systems teams to investigate complex failures, develop debug methodologies and improve validation infrastructure.\n\nResponsibilities and Duties\n\nLead post-silicon d",
-    "requirements": [
-      "Python",
       "C",
       "Linux"
     ],
@@ -44096,44 +43968,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8704660002",
-    "company": "Graphcore",
-    "title": "Senior Linux Distribution & Validation Engineer",
-    "department": "System Software Integration",
-    "team": "System Software Integration",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Bristol, UK \u2022 Bristol \u2022 Gda\u0144sk",
-    "locations": [
-      "Bristol, UK",
-      "Bristol",
-      "Gda\u0144sk"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002#app",
-    "description": "Senior: GBP 73,500 - 99,500\n\nStaff: GBP 97,300 - 131,700\n\nSubject to alignment to the responsibilities and duties of the role - we currently have multiple positions available at both Senior and Staff level.\n\nAbout the job\n\nBuild the Linux distribution foundation that turns upstream software into trusted Graphcore platform releases.\n\nYou will help create the Linux distribution that powers Graphcore AI systems. The team produces production-ready system images from proven upstream distributions.\n\nYour work will shape how releases are built, validated and prepared for deployment. You will strengthen the engineering path from upstream Linux software to dependable platform releases.\n\nYou will build and improve automated pipelines, run established Linux test suites, and diagnose issues across build and validation flows. As the platform evolves, you will introduce controlled configuration and tuning changes with evidence-led validation.\n\nThis is hands-on systems engineering with visible impact. You will help define reliable processes for a new team building a critical part of Graphcore\u2019s platform.\n\nThe team and culture\n\nYou will join one of Graphcore\u2019s newest engineering teams, helping shape its culture from the start. It is a small, co-located team where ownership matters and progress is visible.\n\nWork happens through close technical discussion, practical problem-solving and evidence-led decisions. Ideas are challenged openly, and the best path wins regardless of hierarchy.\n\nYou will report to a leader who values technical credibility and invests in people\u2019s growth. The team moves with pace, takes responsibility and changes direction when the evidence demands it.\n\nWhat we're looking for\n\nStrong practical experience working in Linux environments\n\nExperience building or maintaining automated CI/CD pipelines for reliable engineering workflows\n\nProficiency in Python, Bash or similar scripting languages\n\nExperience with Linux image creation, provisioning or system installation\n\nAbility to diagnose failures in automated build or test environments\n\nConfidence using established tools while continuously improving engineering quality\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candid",
-    "requirements": [
-      "Python",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8704676002",
     "company": "Graphcore",
     "title": "Senior Linux Distribution & Validation Engineer",
@@ -44210,6 +44044,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8704660002",
+    "company": "Graphcore",
+    "title": "Senior Linux Distribution & Validation Engineer",
+    "department": "System Software Integration",
+    "team": "System Software Integration",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Bristol, UK \u2022 Bristol \u2022 Gda\u0144sk",
+    "locations": [
+      "Bristol, UK",
+      "Bristol",
+      "Gda\u0144sk"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8704660002#app",
+    "description": "Senior: GBP 73,500 - 99,500\n\nStaff: GBP 97,300 - 131,700\n\nSubject to alignment to the responsibilities and duties of the role - we currently have multiple positions available at both Senior and Staff level.\n\nAbout the job\n\nBuild the Linux distribution foundation that turns upstream software into trusted Graphcore platform releases.\n\nYou will help create the Linux distribution that powers Graphcore AI systems. The team produces production-ready system images from proven upstream distributions.\n\nYour work will shape how releases are built, validated and prepared for deployment. You will strengthen the engineering path from upstream Linux software to dependable platform releases.\n\nYou will build and improve automated pipelines, run established Linux test suites, and diagnose issues across build and validation flows. As the platform evolves, you will introduce controlled configuration and tuning changes with evidence-led validation.\n\nThis is hands-on systems engineering with visible impact. You will help define reliable processes for a new team building a critical part of Graphcore\u2019s platform.\n\nThe team and culture\n\nYou will join one of Graphcore\u2019s newest engineering teams, helping shape its culture from the start. It is a small, co-located team where ownership matters and progress is visible.\n\nWork happens through close technical discussion, practical problem-solving and evidence-led decisions. Ideas are challenged openly, and the best path wins regardless of hierarchy.\n\nYou will report to a leader who values technical credibility and invests in people\u2019s growth. The team moves with pace, takes responsibility and changes direction when the evidence demands it.\n\nWhat we're looking for\n\nStrong practical experience working in Linux environments\n\nExperience building or maintaining automated CI/CD pipelines for reliable engineering workflows\n\nProficiency in Python, Bash or similar scripting languages\n\nExperience with Linux image creation, provisioning or system installation\n\nAbility to diagnose failures in automated build or test environments\n\nConfidence using established tools while continuously improving engineering quality\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candid",
+    "requirements": [
+      "Python",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8704662002",
     "company": "Graphcore",
     "title": "Senior Linux Distribution & Validation Engineer",
@@ -44248,97 +44120,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8881587002",
-    "company": "Graphcore",
-    "title": "Senior Machine Learning Engineer (Large Systems)",
-    "department": "Applied AI",
-    "team": "Applied AI",
-    "deptTrack": "Engineering",
-    "category": "MLE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Bristol, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
-    "locations": [
-      "Bristol, UK",
-      "Bristol",
-      "Cambridge",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002#app",
-    "description": "Location: Bristol, London or Cambridge, UK\n\nAbout the job\n\nHelp scale state-of-the art AI models across thousands of accelerators.\n\nAs a Senior Machine Learning Engineer in the Applied AI team, you will contribute to advancing AI technology by developing and optimising new and existing AI models for our specialised hardware. You will work on large scale systems where performance is critical to the success of our projects.\n\nHaving visibility of the entire pipeline from novel accelerator hardware to state-of-the-art AI applications, and the software stack in-between, you will play a critical role in identifying opportunities to innovate and differentiate Graphcore\u2019s technology.\n\nFurthermore, you\u2019ll work closely with researchers in a rapidly-evolving field, where even the most senior engineers are constantly learning and adapting to exciting new challenges.\n\nWe seek engineers with strong technical foundations who are curious and eager to understand and advance AI model implementation, at scale.\n\nWe currently have multiple opportunities available in the team at Senior, Staff and Principal level and offer flexibility through a hybrid working model, from any of our UK offices.\n\nIf you're excited about advancing the next generation of AI models on cutting-edge hardware, we\u2019d love to hear from you!\n\nThe team and culture\n\nThe Applied AI team\u2019s role is to be proxies for our customers, we need to understand the latest AI models, applications, and software, as well as our own hardware and software stack, to ensure that Graphcore\u2019s technology works seamlessly with the AI ecosystem and at scale.\n\nOur work spans from low-level kernel development and optimisation for novel hardware through to implementing and scaling research-level algorithms for the latest AI models.\n\nWe collaborate with the Research team to develop and publish novel ideas in domains such as efficient compute, model scaling and distributed training and inference of AI models for multiple modalities and applications.\n\nResponsibilities\n\nImplement and train state-of-the-art machine learning models and optimise for performance, accuracy and scalability across systems comprising 1000s of accelerators.\n\nBenchmark and profile ML models to identify performance bottlenecks.\n\nDevelop deep understanding across the software stack in order to optimise kernel implementations.\n\nTest and evaluate new internal software rel",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "JAX",
-      "CUDA",
-      "Triton",
-      "C++",
-      "C",
-      "Kubernetes"
-    ],
-    "preferred": [
-      "Deep Learning",
-      "Machine Learning"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8564387002",
-    "company": "Graphcore",
-    "title": "Senior Machine Learning Engineer (Large Systems)",
-    "department": "Applied AI",
-    "team": "Applied AI",
-    "deptTrack": "Engineering",
-    "category": "MLE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Gda\u0144sk",
-    "locations": [
-      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
-      "Bristol",
-      "Gda\u0144sk"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002#app",
-    "description": "Location: Gd\u00e1nsk\n\nSenior: PLN 260,400 - 352,200\n\nStaff: PLN 350,700 - 474,400\n\nAbout the job\n\nHelp scale state-of-the art AI models across thousands of accelerators.\n\nAs a Senior Machine Learning Engineer in the Applied AI team, you will contribute to advancing AI technology by developing and optimising new and existing AI models for our specialised hardware. You will work on large scale systems where performance is critical to the success of our projects.\n\nHaving visibility of the entire pipeline from novel accelerator hardware to state-of-the-art AI applications, and the software stack in-between, you will play a critical role in identifying opportunities to innovate and differentiate Graphcore\u2019s technology.\n\nFurthermore, you\u2019ll work closely with researchers in a rapidly-evolving field, where even the most senior engineers are constantly learning and adapting to exciting new challenges.\n\nWe seek engineers with strong technical foundations who are curious and eager to understand and advance AI model implementation, at scale.\n\nWe currently have multiple opportunities available in the team at Senior and Staff level. We offer flexibility through a hybrid working model, from our modern office in Gd\u00e1nsk.\n\nIf you're excited about advancing the next generation of AI models on cutting-edge hardware, we\u2019d love to hear from you!\n\nThe team and culture\n\nThe Applied AI team\u2019s role is to be proxies for our customers, we need to understand the latest AI models, applications, and software, as well as our own hardware and software stack, to ensure that Graphcore\u2019s technology works seamlessly with the AI ecosystem and at scale.\n\nOur work spans from low-level kernel development and optimisation for novel hardware through to implementing and scaling research-level algorithms for the latest AI models.\n\nWe collaborate with the Research team to develop and publish novel ideas in domains such as efficient compute, model scaling and distributed training and inference of AI models for multiple modalities and applications.\n\nResponsibilities\n\nImplement and train state-of-the-art machine learning models and optimise for performance, accuracy and scalability across systems comprising 1000s of accelerators.\n\nBenchmark and profile ML models to identify performance bottlenecks.\n\nDevelop deep understanding across the software stack in order to optimise kernel implementations.\n\nTest and eval",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "JAX",
-      "CUDA",
-      "Triton",
-      "C++",
-      "C",
-      "Kubernetes"
-    ],
-    "preferred": [
-      "Deep Learning",
-      "Machine Learning"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8881595002",
     "company": "Graphcore",
     "title": "Senior Machine Learning Engineer (Large Systems)",
@@ -44366,6 +44147,52 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881595002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881595002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881595002#app",
+    "description": "Location: Bristol, London or Cambridge, UK\n\nAbout the job\n\nHelp scale state-of-the art AI models across thousands of accelerators.\n\nAs a Senior Machine Learning Engineer in the Applied AI team, you will contribute to advancing AI technology by developing and optimising new and existing AI models for our specialised hardware. You will work on large scale systems where performance is critical to the success of our projects.\n\nHaving visibility of the entire pipeline from novel accelerator hardware to state-of-the-art AI applications, and the software stack in-between, you will play a critical role in identifying opportunities to innovate and differentiate Graphcore\u2019s technology.\n\nFurthermore, you\u2019ll work closely with researchers in a rapidly-evolving field, where even the most senior engineers are constantly learning and adapting to exciting new challenges.\n\nWe seek engineers with strong technical foundations who are curious and eager to understand and advance AI model implementation, at scale.\n\nWe currently have multiple opportunities available in the team at Senior, Staff and Principal level and offer flexibility through a hybrid working model, from any of our UK offices.\n\nIf you're excited about advancing the next generation of AI models on cutting-edge hardware, we\u2019d love to hear from you!\n\nThe team and culture\n\nThe Applied AI team\u2019s role is to be proxies for our customers, we need to understand the latest AI models, applications, and software, as well as our own hardware and software stack, to ensure that Graphcore\u2019s technology works seamlessly with the AI ecosystem and at scale.\n\nOur work spans from low-level kernel development and optimisation for novel hardware through to implementing and scaling research-level algorithms for the latest AI models.\n\nWe collaborate with the Research team to develop and publish novel ideas in domains such as efficient compute, model scaling and distributed training and inference of AI models for multiple modalities and applications.\n\nResponsibilities\n\nImplement and train state-of-the-art machine learning models and optimise for performance, accuracy and scalability across systems comprising 1000s of accelerators.\n\nBenchmark and profile ML models to identify performance bottlenecks.\n\nDevelop deep understanding across the software stack in order to optimise kernel implementations.\n\nTest and evaluate new internal software rel",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "JAX",
+      "CUDA",
+      "Triton",
+      "C++",
+      "C",
+      "Kubernetes"
+    ],
+    "preferred": [
+      "Deep Learning",
+      "Machine Learning"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8881587002",
+    "company": "Graphcore",
+    "title": "Senior Machine Learning Engineer (Large Systems)",
+    "department": "Applied AI",
+    "team": "Applied AI",
+    "deptTrack": "Engineering",
+    "category": "MLE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Bristol, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "locations": [
+      "Bristol, UK",
+      "Bristol",
+      "Cambridge",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8881587002#app",
     "description": "Location: Bristol, London or Cambridge, UK\n\nAbout the job\n\nHelp scale state-of-the art AI models across thousands of accelerators.\n\nAs a Senior Machine Learning Engineer in the Applied AI team, you will contribute to advancing AI technology by developing and optimising new and existing AI models for our specialised hardware. You will work on large scale systems where performance is critical to the success of our projects.\n\nHaving visibility of the entire pipeline from novel accelerator hardware to state-of-the-art AI applications, and the software stack in-between, you will play a critical role in identifying opportunities to innovate and differentiate Graphcore\u2019s technology.\n\nFurthermore, you\u2019ll work closely with researchers in a rapidly-evolving field, where even the most senior engineers are constantly learning and adapting to exciting new challenges.\n\nWe seek engineers with strong technical foundations who are curious and eager to understand and advance AI model implementation, at scale.\n\nWe currently have multiple opportunities available in the team at Senior, Staff and Principal level and offer flexibility through a hybrid working model, from any of our UK offices.\n\nIf you're excited about advancing the next generation of AI models on cutting-edge hardware, we\u2019d love to hear from you!\n\nThe team and culture\n\nThe Applied AI team\u2019s role is to be proxies for our customers, we need to understand the latest AI models, applications, and software, as well as our own hardware and software stack, to ensure that Graphcore\u2019s technology works seamlessly with the AI ecosystem and at scale.\n\nOur work spans from low-level kernel development and optimisation for novel hardware through to implementing and scaling research-level algorithms for the latest AI models.\n\nWe collaborate with the Research team to develop and publish novel ideas in domains such as efficient compute, model scaling and distributed training and inference of AI models for multiple modalities and applications.\n\nResponsibilities\n\nImplement and train state-of-the-art machine learning models and optimise for performance, accuracy and scalability across systems comprising 1000s of accelerators.\n\nBenchmark and profile ML models to identify performance bottlenecks.\n\nDevelop deep understanding across the software stack in order to optimise kernel implementations.\n\nTest and evaluate new internal software rel",
     "requirements": [
       "Python",
@@ -44431,6 +44258,51 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8564387002",
+    "company": "Graphcore",
+    "title": "Senior Machine Learning Engineer (Large Systems)",
+    "department": "Applied AI",
+    "team": "Applied AI",
+    "deptTrack": "Engineering",
+    "category": "MLE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Gda\u0144sk",
+    "locations": [
+      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
+      "Bristol",
+      "Gda\u0144sk"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8564387002#app",
+    "description": "Location: Gd\u00e1nsk\n\nSenior: PLN 260,400 - 352,200\n\nStaff: PLN 350,700 - 474,400\n\nAbout the job\n\nHelp scale state-of-the art AI models across thousands of accelerators.\n\nAs a Senior Machine Learning Engineer in the Applied AI team, you will contribute to advancing AI technology by developing and optimising new and existing AI models for our specialised hardware. You will work on large scale systems where performance is critical to the success of our projects.\n\nHaving visibility of the entire pipeline from novel accelerator hardware to state-of-the-art AI applications, and the software stack in-between, you will play a critical role in identifying opportunities to innovate and differentiate Graphcore\u2019s technology.\n\nFurthermore, you\u2019ll work closely with researchers in a rapidly-evolving field, where even the most senior engineers are constantly learning and adapting to exciting new challenges.\n\nWe seek engineers with strong technical foundations who are curious and eager to understand and advance AI model implementation, at scale.\n\nWe currently have multiple opportunities available in the team at Senior and Staff level. We offer flexibility through a hybrid working model, from our modern office in Gd\u00e1nsk.\n\nIf you're excited about advancing the next generation of AI models on cutting-edge hardware, we\u2019d love to hear from you!\n\nThe team and culture\n\nThe Applied AI team\u2019s role is to be proxies for our customers, we need to understand the latest AI models, applications, and software, as well as our own hardware and software stack, to ensure that Graphcore\u2019s technology works seamlessly with the AI ecosystem and at scale.\n\nOur work spans from low-level kernel development and optimisation for novel hardware through to implementing and scaling research-level algorithms for the latest AI models.\n\nWe collaborate with the Research team to develop and publish novel ideas in domains such as efficient compute, model scaling and distributed training and inference of AI models for multiple modalities and applications.\n\nResponsibilities\n\nImplement and train state-of-the-art machine learning models and optimise for performance, accuracy and scalability across systems comprising 1000s of accelerators.\n\nBenchmark and profile ML models to identify performance bottlenecks.\n\nDevelop deep understanding across the software stack in order to optimise kernel implementations.\n\nTest and eval",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "JAX",
+      "CUDA",
+      "Triton",
+      "C++",
+      "C",
+      "Kubernetes"
+    ],
+    "preferred": [
+      "Deep Learning",
+      "Machine Learning"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8587344002",
     "company": "Graphcore",
     "title": "Senior Power & Performance Validation Engineer",
@@ -44461,86 +44333,6 @@ const seedJobs = [
       "Python",
       "C++",
       "C",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8742245002",
-    "company": "Graphcore",
-    "title": "Senior Software Engineer",
-    "department": "Core",
-    "team": "Core",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Cambridge, UK \u2022 Cambridge",
-    "locations": [
-      "Cambridge, UK",
-      "Cambridge"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002#app",
-    "description": "About the job\n\nBuild the debugger that helps developers unlock more from Graphcore AI processors.\n\nAs a Senior Software Engineer in our Debugger team, you will help define and implement Graphcore\u2019s next-generation debugging capability. Your work will support developers building and optimising workloads on our advanced AI processors.\n\nYou will adapt and expand debugger functionality, resolving complex issues across software and hardware boundaries. The tools you build will help internal and external users understand behaviour, improve performance and move faster.\n\nYou will work closely with software, firmware, hardware, partner and customer teams. This role offers rare depth across processor architecture, toolchains and real developer workflows.\n\nThe team and culture\n\nWork happens close to the technology, with engineers expected to investigate deeply, speak up and take ownership. The team uses Agile ways of working to keep progress visible and decisions moving.\n\nYou will collaborate across software, firmware and hardware teams to identify debug feature opportunities. Decisions are shaped by technical evidence, user needs and the judgement of engineers closest to the problem.\n\nWhat we\u2019re looking for\n\n\u00b7 Experience using debuggers to resolve complex program issues.\n\n\u00b7 Strong low-level programming skills in C, C++ or Rust.\n\n\u00b7 Strong understanding of processor architectures.\n\n\u00b7 Ability to communicate clearly across software, firmware and hardware teams.\n\n\u00b7 A proactive, self-driven approach to improving product quality and functionality.\n\n\u00b7 Familiarity with compiler toolchains, debugging protocols, Python, IDE development or PyTorch.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collaboration, with free food and an on-site barista to support your day\n\n\u00b7 Peace of mind protection: Income protection and life assurance to provide financial security for you and your",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "C++",
-      "Rust",
-      "C"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8651297002",
-    "company": "Graphcore",
-    "title": "Senior Software Engineer",
-    "department": "SW Device",
-    "team": "SW Device",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Bristol, UK \u2022 Bristol",
-    "locations": [
-      "Bristol, UK",
-      "Bristol"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002#app",
-    "description": "About the job\n\nOwn the test strategy that proves Graphcore\u2019s next generation drivers are production-ready.\n\nAs a Staff System Software Engineer, you will shape how Graphcore validates complex device drivers and platform tools. You will bring technical depth across Linux kernels, drivers and systems software.\n\nYour work will help raise the quality bar for products that support the next generation of AI compute. You will influence design decisions, guide test infrastructure and drive reliability across the stack.\n\nYou will design, build, execute and report tests across component, system and acceptance levels. You will debug difficult issues using hardware and software tools, simulators and emulators.\n\nThis is a hands-on technical leadership role with broad reach. You will help teams move quickly while protecting production quality.\n\nThe team and culture\n\nThe Drivers QA team verifies low-level kernel drivers, user-space libraries and platform tools. Work spans component tests, user acceptance and full system validation.\n\nYou will work directly with driver developers, hardware, firmware, ML stack, Kubernetes and cloud management teams. Decisions are made close to the technical detail, with engineers expected to speak up and own outcomes.\n\nThe team values engineers who think big, act fast and take responsibility. You will mentor others, raise standards and turn hard system problems into lasting improvements.\n\nWhat we're looking for\n\n\u00b7 Deep experience validating Linux kernels, device drivers or similar systems software\n\n\u00b7 Strong C++ and Python test development skills\n\n\u00b7 Experience with CI/CD, build tools and modern automated testing practices\n\n\u00b7 Ability to debug complex issues across hardware, firmware, drivers and upper software layers\n\n\u00b7 Proven ownership of technical work, priorities and delivery in an agile engineering setting\n\n\u00b7 Clear communication skills, including the ability to document and explain complex technical concepts\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planni",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Kubernetes",
       "Linux"
     ],
     "preferred": [
@@ -44593,6 +44385,86 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8651297002",
+    "company": "Graphcore",
+    "title": "Senior Software Engineer",
+    "department": "SW Device",
+    "team": "SW Device",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Bristol, UK \u2022 Bristol",
+    "locations": [
+      "Bristol, UK",
+      "Bristol"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651297002#app",
+    "description": "About the job\n\nOwn the test strategy that proves Graphcore\u2019s next generation drivers are production-ready.\n\nAs a Staff System Software Engineer, you will shape how Graphcore validates complex device drivers and platform tools. You will bring technical depth across Linux kernels, drivers and systems software.\n\nYour work will help raise the quality bar for products that support the next generation of AI compute. You will influence design decisions, guide test infrastructure and drive reliability across the stack.\n\nYou will design, build, execute and report tests across component, system and acceptance levels. You will debug difficult issues using hardware and software tools, simulators and emulators.\n\nThis is a hands-on technical leadership role with broad reach. You will help teams move quickly while protecting production quality.\n\nThe team and culture\n\nThe Drivers QA team verifies low-level kernel drivers, user-space libraries and platform tools. Work spans component tests, user acceptance and full system validation.\n\nYou will work directly with driver developers, hardware, firmware, ML stack, Kubernetes and cloud management teams. Decisions are made close to the technical detail, with engineers expected to speak up and own outcomes.\n\nThe team values engineers who think big, act fast and take responsibility. You will mentor others, raise standards and turn hard system problems into lasting improvements.\n\nWhat we're looking for\n\n\u00b7 Deep experience validating Linux kernels, device drivers or similar systems software\n\n\u00b7 Strong C++ and Python test development skills\n\n\u00b7 Experience with CI/CD, build tools and modern automated testing practices\n\n\u00b7 Ability to debug complex issues across hardware, firmware, drivers and upper software layers\n\n\u00b7 Proven ownership of technical work, priorities and delivery in an agile engineering setting\n\n\u00b7 Clear communication skills, including the ability to document and explain complex technical concepts\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planni",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Kubernetes",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8742245002",
+    "company": "Graphcore",
+    "title": "Senior Software Engineer",
+    "department": "Core",
+    "team": "Core",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Cambridge, UK \u2022 Cambridge",
+    "locations": [
+      "Cambridge, UK",
+      "Cambridge"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8742245002#app",
+    "description": "About the job\n\nBuild the debugger that helps developers unlock more from Graphcore AI processors.\n\nAs a Senior Software Engineer in our Debugger team, you will help define and implement Graphcore\u2019s next-generation debugging capability. Your work will support developers building and optimising workloads on our advanced AI processors.\n\nYou will adapt and expand debugger functionality, resolving complex issues across software and hardware boundaries. The tools you build will help internal and external users understand behaviour, improve performance and move faster.\n\nYou will work closely with software, firmware, hardware, partner and customer teams. This role offers rare depth across processor architecture, toolchains and real developer workflows.\n\nThe team and culture\n\nWork happens close to the technology, with engineers expected to investigate deeply, speak up and take ownership. The team uses Agile ways of working to keep progress visible and decisions moving.\n\nYou will collaborate across software, firmware and hardware teams to identify debug feature opportunities. Decisions are shaped by technical evidence, user needs and the judgement of engineers closest to the problem.\n\nWhat we\u2019re looking for\n\n\u00b7 Experience using debuggers to resolve complex program issues.\n\n\u00b7 Strong low-level programming skills in C, C++ or Rust.\n\n\u00b7 Strong understanding of processor architectures.\n\n\u00b7 Ability to communicate clearly across software, firmware and hardware teams.\n\n\u00b7 A proactive, self-driven approach to improving product quality and functionality.\n\n\u00b7 Familiarity with compiler toolchains, debugging protocols, Python, IDE development or PyTorch.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collaboration, with free food and an on-site barista to support your day\n\n\u00b7 Peace of mind protection: Income protection and life assurance to provide financial security for you and your",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "C++",
+      "Rust",
+      "C"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8562012002",
     "company": "Graphcore",
     "title": "Senior Software Engineer",
@@ -44631,7 +44503,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8902106002",
+    "id": "graphcore-8902108002",
     "company": "Graphcore",
     "title": "Senior Software Engineer (ML QA)",
     "department": "Software Ops",
@@ -44641,9 +44513,9 @@ const seedJobs = [
     "domain": "Systems & Low-Level",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Bristol, UK \u2022 Bristol",
+    "location": "Cambridge, UK \u2022 Bristol",
     "locations": [
-      "Bristol, UK",
+      "Cambridge, UK",
       "Bristol"
     ],
     "salary": "Salary Not Disclosed",
@@ -44653,9 +44525,9 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002#app",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002#app",
     "description": "About the job\n\nBuild the software that validates Graphcore\u2019s machine learning stack, from frameworks to AI accelerator hardware.\n\nYou\u2019ll design production-quality test infrastructure that engineers can extend, maintain and rely on as Graphcore\u2019s ML software grows. Your work will help teams deliver reliable products, with clear evidence of numerical accuracy and performance across the stack.\u00a0You\u2019ll architect scalable test frameworks and build CI/CD pipelines that run across simulators, emulators and physical hardware. You\u2019ll create representative ML workloads, analyse their execution and turn the results into practical improvements to testing and tooling.\n\nThis role gives you scope to shape software architecture and developer experience, not just add tests to existing systems. You\u2019ll deepen your understanding of the AI compute stack while solving engineering problems that connect software design with hardware behaviour.\n\nThe team and culture\n\nGraphcore\u2019s ML QA engineers build automation, work with industry-standard frameworks and models, and contribute to upstream open-source projects. You\u2019ll work across software teams, using code and design reviews to strengthen quality, security and maintainability.\n\nYou\u2019ll use workload results to challenge assumptions and guide technical decisions about how Graphcore tests its ML stack. You\u2019ll own improvements, act quickly on testing gaps and mentor junior engineers to raise the team\u2019s technical standards.\n\nWhat we\u2019re looking for\n\nStrong Python skills, demonstrated through designing, developing and maintaining production-quality software.\n\nSoftware design and architecture skills for large, complex codebases, with a focus on testability and long-term maintainability.\n\nExperience building CI/CD pipelines and automated testing systems in Linux environments.\n\nFamiliarity with C or C++, including the ability to read, debug and reason about low-level code.\n\nThe ability to mentor junior engineers and influence engineering practices through constructive feedback.\n\nA self-directed approach to solving complex problems, identifying gaps and driving improvements.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal ",
     "requirements": [
       "Python",
@@ -44711,7 +44583,7 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8902108002",
+    "id": "graphcore-8902106002",
     "company": "Graphcore",
     "title": "Senior Software Engineer (ML QA)",
     "department": "Software Ops",
@@ -44721,9 +44593,9 @@ const seedJobs = [
     "domain": "Systems & Low-Level",
     "seniority": "Senior",
     "employmentType": "Full-time",
-    "location": "Cambridge, UK \u2022 Bristol",
+    "location": "Bristol, UK \u2022 Bristol",
     "locations": [
-      "Cambridge, UK",
+      "Bristol, UK",
       "Bristol"
     ],
     "salary": "Salary Not Disclosed",
@@ -44733,9 +44605,9 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902108002#app",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902106002#app",
     "description": "About the job\n\nBuild the software that validates Graphcore\u2019s machine learning stack, from frameworks to AI accelerator hardware.\n\nYou\u2019ll design production-quality test infrastructure that engineers can extend, maintain and rely on as Graphcore\u2019s ML software grows. Your work will help teams deliver reliable products, with clear evidence of numerical accuracy and performance across the stack.\u00a0You\u2019ll architect scalable test frameworks and build CI/CD pipelines that run across simulators, emulators and physical hardware. You\u2019ll create representative ML workloads, analyse their execution and turn the results into practical improvements to testing and tooling.\n\nThis role gives you scope to shape software architecture and developer experience, not just add tests to existing systems. You\u2019ll deepen your understanding of the AI compute stack while solving engineering problems that connect software design with hardware behaviour.\n\nThe team and culture\n\nGraphcore\u2019s ML QA engineers build automation, work with industry-standard frameworks and models, and contribute to upstream open-source projects. You\u2019ll work across software teams, using code and design reviews to strengthen quality, security and maintainability.\n\nYou\u2019ll use workload results to challenge assumptions and guide technical decisions about how Graphcore tests its ML stack. You\u2019ll own improvements, act quickly on testing gaps and mentor junior engineers to raise the team\u2019s technical standards.\n\nWhat we\u2019re looking for\n\nStrong Python skills, demonstrated through designing, developing and maintaining production-quality software.\n\nSoftware design and architecture skills for large, complex codebases, with a focus on testability and long-term maintainability.\n\nExperience building CI/CD pipelines and automated testing systems in Linux environments.\n\nFamiliarity with C or C++, including the ability to read, debug and reason about low-level code.\n\nThe ability to mentor junior engineers and influence engineering practices through constructive feedback.\n\nA self-directed approach to solving complex problems, identifying gaps and driving improvements.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal ",
     "requirements": [
       "Python",
@@ -44834,50 +44706,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8755487002",
-    "company": "Graphcore",
-    "title": "Senior Software Engineer in Build Engineering",
-    "department": "Software Ops",
-    "team": "Software Ops",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
-    "locations": [
-      "London, UK",
-      "Bristol",
-      "Cambridge",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002#app",
-    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nAn exciting opportunity to join a new team within the Software Operations group. The Build Engineering team is a new function within Software Infrastructure, which focuses on the overall process of building and integration of the Machine Learn ing \u00a0 S oftware \u00a0 S tack. You will work closely with the QA and development teams to get an understanding of how our ML SW stack is built, helping to ensure good build practices, and proving that the stack \u00a0 works together and \u00a0 is reproducible \u00a0 in secure, sandboxed environments.\n\nResponsibilities and Duties\n\nDeveloping our\u00a0internal tooling\u00a0for\u00a0building,\u00a0testing\u00a0and integrating together\u00a0the ML Software Stack\n\nDeveloping tools and technical processes for Software Releases\n\nProviding guidance\u00a0to developers\u00a0on\u00a0best\u00a0build\u00a0practices\u00a0and dependency management\n\nCommunicating\u00a0regularly with\u00a0developers,\u00a0tech leads,\u00a0and\u00a0software\u00a0architects\u00a0about\u00a0aspects of the ML\u00a0Software Stack\n\nWorking closely with QA and the ML Software Stack to resolve any integration issues\n\nContributing fixes towards the ML Software Stack\n\n",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Docker",
-      "Distributed Systems",
-      "Machine Learning",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8755483002",
     "company": "Graphcore",
     "title": "Senior Software Engineer in Build Engineering",
@@ -44922,13 +44750,13 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8605722002",
+    "id": "graphcore-8755487002",
     "company": "Graphcore",
-    "title": "Senior Software Infrastructure Engineer",
+    "title": "Senior Software Engineer in Build Engineering",
     "department": "Software Ops",
     "team": "Software Ops",
     "deptTrack": "Engineering",
-    "category": "Platform",
+    "category": "SWE",
     "domain": "AI / LLM Infra",
     "seniority": "Senior",
     "employmentType": "Full-time",
@@ -44946,24 +44774,21 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002#app",
-    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and maintain tools and services to support the software build and release process\n\nDeploy and maintain services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nSupport the technical development of junior and graduate engineer\n\nEmbody a strong engineering discipline for high reliability and minimal toil\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python/Go/C++ (or similar language)\n\nExperience deploying\u00a0services\u00a0in the\u00a0cloud (AWS\u00a0preferred)\n\nDeep understanding of\u00a0Linux environments\n\nNative user of CI/CD\u00a0f",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8755487002#app",
+    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nAn exciting opportunity to join a new team within the Software Operations group. The Build Engineering team is a new function within Software Infrastructure, which focuses on the overall process of building and integration of the Machine Learn ing \u00a0 S oftware \u00a0 S tack. You will work closely with the QA and development teams to get an understanding of how our ML SW stack is built, helping to ensure good build practices, and proving that the stack \u00a0 works together and \u00a0 is reproducible \u00a0 in secure, sandboxed environments.\n\nResponsibilities and Duties\n\nDeveloping our\u00a0internal tooling\u00a0for\u00a0building,\u00a0testing\u00a0and integrating together\u00a0the ML Software Stack\n\nDeveloping tools and technical processes for Software Releases\n\nProviding guidance\u00a0to developers\u00a0on\u00a0best\u00a0build\u00a0practices\u00a0and dependency management\n\nCommunicating\u00a0regularly with\u00a0developers,\u00a0tech leads,\u00a0and\u00a0software\u00a0architects\u00a0about\u00a0aspects of the ML\u00a0Software Stack\n\nWorking closely with QA and the ML Software Stack to resolve any integration issues\n\nContributing fixes towards the ML Software Stack\n\n",
     "requirements": [
       "Python",
       "C++",
-      "Go",
       "C",
       "Docker",
-      "Kubernetes",
-      "AWS",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "GitHub",
+      "Distributed Systems",
       "Machine Learning",
       "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
     ],
     "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
@@ -45043,6 +44868,53 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8375821002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8375821002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8375821002#app",
+    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and maintain tools and services to support the software build and release process\n\nDeploy and maintain services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nSupport the technical development of junior and graduate engineer\n\nEmbody a strong engineering discipline for high reliability and minimal toil\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python/Go/C++ (or similar language)\n\nExperience deploying\u00a0services\u00a0in the\u00a0cloud (AWS\u00a0preferred)\n\nDeep understanding of\u00a0Linux environments\n\nNative user of CI/CD\u00a0f",
+    "requirements": [
+      "Python",
+      "C++",
+      "Go",
+      "C",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "GitHub",
+      "Machine Learning",
+      "Linux"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8605722002",
+    "company": "Graphcore",
+    "title": "Senior Software Infrastructure Engineer",
+    "department": "Software Ops",
+    "team": "Software Ops",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "locations": [
+      "London, UK",
+      "Bristol",
+      "Cambridge",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605722002#app",
     "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nThe Software Infrastructure team provides critical platforms and services for software development teams across the business. Our responsibilities include managing the CI platform and services, build engineering, component integration, and packaging and release systems. We operate in squads, fostering a culture of service ownership and empowerment for our engineers. We focus on long-term engineering solutions and strive to eliminate toil wherever possible.\n\nResponsibilities and Duties\n\nDevelop, own, and maintain tools and services to support the software build and release process\n\nDeploy and maintain services with Kubernetes and Docker\n\nManage our Cloud Infrastructure using tools such as Terraform\n\nSupport the technical development of junior and graduate engineer\n\nEmbody a strong engineering discipline for high reliability and minimal toil\n\nCandidate Profile\n\nEssential:\n\nKnowledge of Python/Go/C++ (or similar language)\n\nExperience deploying\u00a0services\u00a0in the\u00a0cloud (AWS\u00a0preferred)\n\nDeep understanding of\u00a0Linux environments\n\nNative user of CI/CD\u00a0f",
     "requirements": [
       "Python",
@@ -45454,50 +45326,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8543115002",
-    "company": "Graphcore",
-    "title": "Software Engineer - Triton",
-    "department": "Frameworks",
-    "team": "Frameworks",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Systems & Low-Level",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Poland",
-    "locations": [
-      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
-      "Bristol",
-      "Poland"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002#app",
-    "description": "About the job\n\nBuild the framework support that helps AI developers unlock Graphcore hardware.\n\nYou will help Graphcore accelerators work seamlessly with state-of-the-art ML frameworks, including Triton and PyTorch. Reporting to a Team Lead in Frameworks, you will design, implement, optimise and support critical software.\n\nYour work will shape how researchers and engineers use Graphcore hardware for demanding machine learning workloads. You will improve performance, quality and usability across a complex software stack.\n\nYou will join our Triton team, delivering new features, reviewing code, writing technical documentation and working with upstream communities. You will also help coordinate open-ended technical work across teams.\n\nThis role offers deep technical ownership and visible impact as the ML software landscape evolves. You will keep learning and may contribute across other framework teams.\n\nThe team and culture\n\nThe Frameworks team connects Graphcore hardware with the tools ML engineers and researchers rely on. We work across PyTorch, Triton, JAX and TensorFlow, focusing on usability and performance.\n\nWork happens through agile practices, close technical discussion and clear ownership. Engineers are trusted to speak up, solve hard problems and move work forward with pace.\n\nDecisions are shaped by evidence, code quality and business outcomes. You will work across Graphcore and with open-source communities to deliver software developers can trust.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong software engineering skills, with the judgement to manage quality, complexity and technical debt.\n\n\u00b7 Experience developing in Python and C++.\n\n\u00b7 Experience in compiler development.\n\n\u00b7 Ability to manage complex technical tasks with cross-team dependencies.\n\n\u00b7 Clear communication skills, with a proactive approach to collaboration and technical leadership.\n\n\u00b7 Interest in AI, ML frameworks, performance optimisation or computationally intensive engineering.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collaboration, with free food and an on-site barista to support your day\n\n\u00b7 Peace of",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "JAX",
-      "TensorFlow",
-      "Triton",
-      "C++",
-      "C",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8466438002",
     "company": "Graphcore",
     "title": "Software Engineer - Triton",
@@ -45541,22 +45369,21 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8605755002",
+    "id": "graphcore-8543115002",
     "company": "Graphcore",
-    "title": "Software Engineer in Build Engineering",
-    "department": "Software Ops",
-    "team": "Software Ops",
+    "title": "Software Engineer - Triton",
+    "department": "Frameworks",
+    "team": "Frameworks",
     "deptTrack": "Engineering",
     "category": "SWE",
-    "domain": "AI / LLM Infra",
+    "domain": "Systems & Low-Level",
     "seniority": "Mid / General",
     "employmentType": "Full-time",
-    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Poland",
     "locations": [
-      "London, UK",
+      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
       "Bristol",
-      "Cambridge",
-      "London"
+      "Poland"
     ],
     "salary": "Salary Not Disclosed",
     "salaryMin": null,
@@ -45565,18 +45392,19 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002#app",
-    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nAn exciting opportunity to join a new team within the Software Operations group. The Build Engineering team is a new function within Software Infrastructure, which focuses on the overall process of building and integration of the Machine Learn ing \u00a0 S oftware \u00a0 S tack. You will work closely with the QA and development teams to get an understanding of how our ML SW stack is built, helping to ensure good build practices, and proving that the stack \u00a0 works together and \u00a0 is reproducible \u00a0 in secure, sandboxed environments.\n\nResponsibilities and Duties\n\nDeveloping our\u00a0internal tooling\u00a0for\u00a0building,\u00a0testing\u00a0and integrating together\u00a0the ML Software Stack\n\nDeveloping tools and technical processes for Software Releases\n\nProviding guidance\u00a0to developers\u00a0on\u00a0best\u00a0build\u00a0practices\u00a0and dependency management\n\nCommunicating\u00a0regularly with\u00a0developers,\u00a0tech leads,\u00a0and\u00a0software\u00a0architects\u00a0about\u00a0aspects of the ML\u00a0Software Stack\n\nWorking closely with QA and the ML Software Stack to resolve any integration issues\n\nContributing fixes towards the ML Software Stack\n\n",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8543115002#app",
+    "description": "About the job\n\nBuild the framework support that helps AI developers unlock Graphcore hardware.\n\nYou will help Graphcore accelerators work seamlessly with state-of-the-art ML frameworks, including Triton and PyTorch. Reporting to a Team Lead in Frameworks, you will design, implement, optimise and support critical software.\n\nYour work will shape how researchers and engineers use Graphcore hardware for demanding machine learning workloads. You will improve performance, quality and usability across a complex software stack.\n\nYou will join our Triton team, delivering new features, reviewing code, writing technical documentation and working with upstream communities. You will also help coordinate open-ended technical work across teams.\n\nThis role offers deep technical ownership and visible impact as the ML software landscape evolves. You will keep learning and may contribute across other framework teams.\n\nThe team and culture\n\nThe Frameworks team connects Graphcore hardware with the tools ML engineers and researchers rely on. We work across PyTorch, Triton, JAX and TensorFlow, focusing on usability and performance.\n\nWork happens through agile practices, close technical discussion and clear ownership. Engineers are trusted to speak up, solve hard problems and move work forward with pace.\n\nDecisions are shaped by evidence, code quality and business outcomes. You will work across Graphcore and with open-source communities to deliver software developers can trust.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong software engineering skills, with the judgement to manage quality, complexity and technical debt.\n\n\u00b7 Experience developing in Python and C++.\n\n\u00b7 Experience in compiler development.\n\n\u00b7 Ability to manage complex technical tasks with cross-team dependencies.\n\n\u00b7 Clear communication skills, with a proactive approach to collaboration and technical leadership.\n\n\u00b7 Interest in AI, ML frameworks, performance optimisation or computationally intensive engineering.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collaboration, with free food and an on-site barista to support your day\n\n\u00b7 Peace of",
     "requirements": [
       "Python",
+      "PyTorch",
+      "JAX",
+      "TensorFlow",
+      "Triton",
       "C++",
       "C",
-      "Docker",
-      "Distributed Systems",
-      "Machine Learning",
-      "Linux"
+      "Machine Learning"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -45656,6 +45484,50 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8420314002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8420314002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8420314002#app",
+    "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nAn exciting opportunity to join a new team within the Software Operations group. The Build Engineering team is a new function within Software Infrastructure, which focuses on the overall process of building and integration of the Machine Learn ing \u00a0 S oftware \u00a0 S tack. You will work closely with the QA and development teams to get an understanding of how our ML SW stack is built, helping to ensure good build practices, and proving that the stack \u00a0 works together and \u00a0 is reproducible \u00a0 in secure, sandboxed environments.\n\nResponsibilities and Duties\n\nDeveloping our\u00a0internal tooling\u00a0for\u00a0building,\u00a0testing\u00a0and integrating together\u00a0the ML Software Stack\n\nDeveloping tools and technical processes for Software Releases\n\nProviding guidance\u00a0to developers\u00a0on\u00a0best\u00a0build\u00a0practices\u00a0and dependency management\n\nCommunicating\u00a0regularly with\u00a0developers,\u00a0tech leads,\u00a0and\u00a0software\u00a0architects\u00a0about\u00a0aspects of the ML\u00a0Software Stack\n\nWorking closely with QA and the ML Software Stack to resolve any integration issues\n\nContributing fixes towards the ML Software Stack\n\n",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Docker",
+      "Distributed Systems",
+      "Machine Learning",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8605755002",
+    "company": "Graphcore",
+    "title": "Software Engineer in Build Engineering",
+    "department": "Software Ops",
+    "team": "Software Ops",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "London, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "locations": [
+      "London, UK",
+      "Bristol",
+      "Cambridge",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8605755002#app",
     "description": "About Graphcore\n\nGraphcore\u00a0is one of the world\u2019s leading innovators in Artificial Intelligence compute.\n\nIt is developing hardware, software and systems infrastructure that will unlock the next generation of AI breakthroughs and power the widespread adoption of AI solutions across every industry.\n\nAs part of the SoftBank Group,\u00a0Graphcore\u202fis a member of an elite family of companies responsible for some of the world\u2019s most transformative technologies. Together, they share a bold vision: to enable Artificial Super Intelligence and ensure its benefits are accessible to everyone.\n\nGraphcore\u2019s teams are drawn from diverse backgrounds and bring a broad range of skills and perspectives.\u202fA melting pot of AI research specialists, silicon designers, software engineers and systems architects, Graphcore enjoys a culture of continuous learning and constant innovation.\n\nJob Summary\n\nJoin our dynamic Software Infrastructure team and take a pivotal role in scaling and managing our infrastructure. You will develop essential tools and services that empower our broader software team. Your contributions will enhance the build, test, deployment, and productisation processes of our Machine Learning Software components. Work with our High-Performance Computing (HPC) AI platforms and gain invaluable experience in distributed systems.\n\nThe Team\n\nAn exciting opportunity to join a new team within the Software Operations group. The Build Engineering team is a new function within Software Infrastructure, which focuses on the overall process of building and integration of the Machine Learn ing \u00a0 S oftware \u00a0 S tack. You will work closely with the QA and development teams to get an understanding of how our ML SW stack is built, helping to ensure good build practices, and proving that the stack \u00a0 works together and \u00a0 is reproducible \u00a0 in secure, sandboxed environments.\n\nResponsibilities and Duties\n\nDeveloping our\u00a0internal tooling\u00a0for\u00a0building,\u00a0testing\u00a0and integrating together\u00a0the ML Software Stack\n\nDeveloping tools and technical processes for Software Releases\n\nProviding guidance\u00a0to developers\u00a0on\u00a0best\u00a0build\u00a0practices\u00a0and dependency management\n\nCommunicating\u00a0regularly with\u00a0developers,\u00a0tech leads,\u00a0and\u00a0software\u00a0architects\u00a0about\u00a0aspects of the ML\u00a0Software Stack\n\nWorking closely with QA and the ML Software Stack to resolve any integration issues\n\nContributing fixes towards the ML Software Stack\n\n",
     "requirements": [
       "Python",
@@ -46206,46 +46078,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8651287002",
-    "company": "Graphcore",
-    "title": "Staff Software Engineer",
-    "department": "SW Device",
-    "team": "SW Device",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Gda\u0144sk",
-    "locations": [
-      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
-      "Gda\u0144sk"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002#app",
-    "description": "About the job\n\nOwn the test strategy that proves Graphcore\u2019s next generation drivers are production-ready.\n\nAs a Staff System Software Engineer, you will shape how Graphcore validates complex device drivers and platform tools. You will bring technical depth across Linux kernels, drivers and systems software.\n\nYour work will help raise the quality bar for products that support the next generation of AI compute. You will influence design decisions, guide test infrastructure and drive reliability across the stack.\n\nYou will design, build, execute and report tests across component, system and acceptance levels. You will debug difficult issues using hardware and software tools, simulators and emulators.\n\nThis is a hands-on technical leadership role with broad reach. You will help teams move quickly while protecting production quality.\n\nThe team and culture\n\nThe Drivers QA team verifies low-level kernel drivers, user-space libraries and platform tools. Work spans component tests, user acceptance and full system validation.\n\nYou will work directly with driver developers, hardware, firmware, ML stack, Kubernetes and cloud management teams. Decisions are made close to the technical detail, with engineers expected to speak up and own outcomes.\n\nThe team values engineers who think big, act fast and take responsibility. You will mentor others, raise standards and turn hard system problems into lasting improvements.\n\nWhat we're looking for\n\n\u00b7 Deep experience validating Linux kernels, device drivers or similar systems software\n\n\u00b7 Strong C++ and Python test development skills\n\n\u00b7 Experience with CI/CD, build tools and modern automated testing practices\n\n\u00b7 Ability to debug complex issues across hardware, firmware, drivers and upper software layers\n\n\u00b7 Proven ownership of technical work, priorities and delivery in an agile engineering setting\n\n\u00b7 Clear communication skills, including the ability to document and explain complex technical concepts\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Comprehensive healthcare and dental cover: Premium medical and dental insurance, with the optio",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Kubernetes",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8547700002",
     "company": "Graphcore",
     "title": "Staff Software Engineer",
@@ -46288,20 +46120,20 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8902111002",
+    "id": "graphcore-8651287002",
     "company": "Graphcore",
-    "title": "Staff Software Engineer (ML QA)",
-    "department": "Software Ops",
-    "team": "Software Ops",
+    "title": "Staff Software Engineer",
+    "department": "SW Device",
+    "team": "SW Device",
     "deptTrack": "Engineering",
-    "category": "MLE",
-    "domain": "Systems & Low-Level",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
     "seniority": "Staff / Lead",
     "employmentType": "Full-time",
-    "location": "London, UK \u2022 Bristol",
+    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Gda\u0144sk",
     "locations": [
-      "London, UK",
-      "Bristol"
+      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
+      "Gda\u0144sk"
     ],
     "salary": "Salary Not Disclosed",
     "salaryMin": null,
@@ -46310,15 +46142,15 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002#app",
-    "description": "About the job\n\nBuild the software that validates Graphcore\u2019s machine learning stack, from frameworks to AI accelerator hardware.\n\nYou\u2019ll design production-quality test infrastructure that engineers can extend, maintain and rely on as Graphcore\u2019s ML software grows. Your work will help teams deliver reliable products, with clear evidence of numerical accuracy and performance across the stack.\n\nYou\u2019ll architect scalable test frameworks and build CI/CD pipelines that run across simulators, emulators and physical hardware. You\u2019ll create representative ML workloads, analyse their execution and turn the results into practical improvements to testing and tooling.\n\nThis role gives you scope to shape software architecture and developer experience, not just add tests to existing systems. You\u2019ll deepen your understanding of the AI compute stack while solving engineering problems that connect software design with hardware behaviour.\n\nThe team and culture\n\nGraphcore\u2019s ML QA engineers build automation, work with industry-standard frameworks and models, and contribute to upstream open-source projects. You\u2019ll work across software teams, using code and design reviews to strengthen quality, security and maintainability.\n\nYou\u2019ll use workload results to challenge assumptions and guide technical decisions about how Graphcore tests its ML stack. You\u2019ll own improvements, act quickly on testing gaps and mentor junior engineers to raise the team\u2019s technical standards.\n\nWhat we\u2019re looking for\n\nStrong Python skills, demonstrated through designing, developing and maintaining production-quality software.\n\nSoftware design and architecture skills for large, complex codebases, with a focus on testability and long-term maintainability.\n\nExperience building CI/CD pipelines and automated testing systems in Linux environments.\n\nFamiliarity with C or C++, including the ability to read, debug and reason about low-level code.\n\nThe ability to mentor junior engineers and influence engineering practices through constructive feedback.\n\nA self-directed approach to solving complex problems, identifying gaps and driving improvements.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8651287002#app",
+    "description": "About the job\n\nOwn the test strategy that proves Graphcore\u2019s next generation drivers are production-ready.\n\nAs a Staff System Software Engineer, you will shape how Graphcore validates complex device drivers and platform tools. You will bring technical depth across Linux kernels, drivers and systems software.\n\nYour work will help raise the quality bar for products that support the next generation of AI compute. You will influence design decisions, guide test infrastructure and drive reliability across the stack.\n\nYou will design, build, execute and report tests across component, system and acceptance levels. You will debug difficult issues using hardware and software tools, simulators and emulators.\n\nThis is a hands-on technical leadership role with broad reach. You will help teams move quickly while protecting production quality.\n\nThe team and culture\n\nThe Drivers QA team verifies low-level kernel drivers, user-space libraries and platform tools. Work spans component tests, user acceptance and full system validation.\n\nYou will work directly with driver developers, hardware, firmware, ML stack, Kubernetes and cloud management teams. Decisions are made close to the technical detail, with engineers expected to speak up and own outcomes.\n\nThe team values engineers who think big, act fast and take responsibility. You will mentor others, raise standards and turn hard system problems into lasting improvements.\n\nWhat we're looking for\n\n\u00b7 Deep experience validating Linux kernels, device drivers or similar systems software\n\n\u00b7 Strong C++ and Python test development skills\n\n\u00b7 Experience with CI/CD, build tools and modern automated testing practices\n\n\u00b7 Ability to debug complex issues across hardware, firmware, drivers and upper software layers\n\n\u00b7 Proven ownership of technical work, priorities and delivery in an agile engineering setting\n\n\u00b7 Clear communication skills, including the ability to document and explain complex technical concepts\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Comprehensive healthcare and dental cover: Premium medical and dental insurance, with the optio",
     "requirements": [
       "Python",
       "C++",
       "C",
-      "Machine Learning",
+      "Kubernetes",
       "Linux"
     ],
     "preferred": [
@@ -46353,6 +46185,46 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902112002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902112002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902112002#app",
+    "description": "About the job\n\nBuild the software that validates Graphcore\u2019s machine learning stack, from frameworks to AI accelerator hardware.\n\nYou\u2019ll design production-quality test infrastructure that engineers can extend, maintain and rely on as Graphcore\u2019s ML software grows. Your work will help teams deliver reliable products, with clear evidence of numerical accuracy and performance across the stack.\n\nYou\u2019ll architect scalable test frameworks and build CI/CD pipelines that run across simulators, emulators and physical hardware. You\u2019ll create representative ML workloads, analyse their execution and turn the results into practical improvements to testing and tooling.\n\nThis role gives you scope to shape software architecture and developer experience, not just add tests to existing systems. You\u2019ll deepen your understanding of the AI compute stack while solving engineering problems that connect software design with hardware behaviour.\n\nThe team and culture\n\nGraphcore\u2019s ML QA engineers build automation, work with industry-standard frameworks and models, and contribute to upstream open-source projects. You\u2019ll work across software teams, using code and design reviews to strengthen quality, security and maintainability.\n\nYou\u2019ll use workload results to challenge assumptions and guide technical decisions about how Graphcore tests its ML stack. You\u2019ll own improvements, act quickly on testing gaps and mentor junior engineers to raise the team\u2019s technical standards.\n\nWhat we\u2019re looking for\n\nStrong Python skills, demonstrated through designing, developing and maintaining production-quality software.\n\nSoftware design and architecture skills for large, complex codebases, with a focus on testability and long-term maintainability.\n\nExperience building CI/CD pipelines and automated testing systems in Linux environments.\n\nFamiliarity with C or C++, including the ability to read, debug and reason about low-level code.\n\nThe ability to mentor junior engineers and influence engineering practices through constructive feedback.\n\nA self-directed approach to solving complex problems, identifying gaps and driving improvements.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Machine Learning",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8902111002",
+    "company": "Graphcore",
+    "title": "Staff Software Engineer (ML QA)",
+    "department": "Software Ops",
+    "team": "Software Ops",
+    "deptTrack": "Engineering",
+    "category": "MLE",
+    "domain": "Systems & Low-Level",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "London, UK \u2022 Bristol",
+    "locations": [
+      "London, UK",
+      "Bristol"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8902111002#app",
     "description": "About the job\n\nBuild the software that validates Graphcore\u2019s machine learning stack, from frameworks to AI accelerator hardware.\n\nYou\u2019ll design production-quality test infrastructure that engineers can extend, maintain and rely on as Graphcore\u2019s ML software grows. Your work will help teams deliver reliable products, with clear evidence of numerical accuracy and performance across the stack.\n\nYou\u2019ll architect scalable test frameworks and build CI/CD pipelines that run across simulators, emulators and physical hardware. You\u2019ll create representative ML workloads, analyse their execution and turn the results into practical improvements to testing and tooling.\n\nThis role gives you scope to shape software architecture and developer experience, not just add tests to existing systems. You\u2019ll deepen your understanding of the AI compute stack while solving engineering problems that connect software design with hardware behaviour.\n\nThe team and culture\n\nGraphcore\u2019s ML QA engineers build automation, work with industry-standard frameworks and models, and contribute to upstream open-source projects. You\u2019ll work across software teams, using code and design reviews to strengthen quality, security and maintainability.\n\nYou\u2019ll use workload results to challenge assumptions and guide technical decisions about how Graphcore tests its ML stack. You\u2019ll own improvements, act quickly on testing gaps and mentor junior engineers to raise the team\u2019s technical standards.\n\nWhat we\u2019re looking for\n\nStrong Python skills, demonstrated through designing, developing and maintaining production-quality software.\n\nSoftware design and architecture skills for large, complex codebases, with a focus on testability and long-term maintainability.\n\nExperience building CI/CD pipelines and automated testing systems in Linux environments.\n\nFamiliarity with C or C++, including the ability to read, debug and reason about low-level code.\n\nThe ability to mentor junior engineers and influence engineering practices through constructive feedback.\n\nA self-directed approach to solving complex problems, identifying gaps and driving improvements.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. We also welcome engineers returning to the profession after a career break, including through returnship routes.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal",
     "requirements": [
       "Python",
@@ -46447,6 +46319,46 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
+    "id": "graphcore-8911260002",
+    "company": "Graphcore",
+    "title": "Staff System Software Engineer",
+    "department": "SW Device",
+    "team": "SW Device",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Gda\u0144sk",
+    "locations": [
+      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
+      "Bristol",
+      "Gda\u0144sk"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002#app",
+    "description": "About the job\n\nBuild the test strategy that protects Graphcore\u2019s system software releases at scale.\n\nAs a Staff System Software Engineer, you will shape integration and system testing across firmware, BMC and Linux device drivers. Your work will help create a high quality gate for system software release packages.\n\nYou will design, build, automate and report tests across complex server class systems. You will also develop reusable tools, pipelines and packaging solutions that help teams move faster with confidence.\n\nThis role needs deep low level software knowledge and strong system thinking. You will own hard technical areas, guide best practice and stay close to the code.\n\nThe team and culture\n\nYou will join a new integration and system test team within System Software QA. The team verifies integrated components across BMC, firmware and Linux device drivers.\n\nWork happens close to the hardware, across component teams and QA. You will partner with developers, consult package stakeholders and turn use cases into robust system tests.\n\nDecisions are shaped by evidence, clear technical reasoning and ownership. You will be expected to speak up, act fast and raise standards through hands-on leadership.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong experience in low level system testing and integration across complex software and hardware layers.\n\n\u00b7 Deep understanding of RTOS, complex boot logic, Linux and device drivers.\n\n\u00b7 Test development capability using Python and C/C++.\n\n\u00b7 Experience working with hardware, debuggers, CI/CD pipelines and build or integration tools.\n\n\u00b7 Ability to debug cross-layer issues and drive root-cause investigations to lasting corrective actions.\n\n\u00b7 Clear communication skills, with the ability to mentor engineers and document complex technical decisions.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collabora",
+    "requirements": [
+      "Python",
+      "C++",
+      "C",
+      "Linux"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
     "id": "graphcore-8646993002",
     "company": "Graphcore",
     "title": "Staff System Software Engineer",
@@ -46474,46 +46386,6 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8646993002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8646993002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8646993002#app",
-    "description": "About the job\n\nBuild the test strategy that protects Graphcore\u2019s system software releases at scale.\n\nAs a Staff System Software Engineer, you will shape integration and system testing across firmware, BMC and Linux device drivers. Your work will help create a high quality gate for system software release packages.\n\nYou will design, build, automate and report tests across complex server class systems. You will also develop reusable tools, pipelines and packaging solutions that help teams move faster with confidence.\n\nThis role needs deep low level software knowledge and strong system thinking. You will own hard technical areas, guide best practice and stay close to the code.\n\nThe team and culture\n\nYou will join a new integration and system test team within System Software QA. The team verifies integrated components across BMC, firmware and Linux device drivers.\n\nWork happens close to the hardware, across component teams and QA. You will partner with developers, consult package stakeholders and turn use cases into robust system tests.\n\nDecisions are shaped by evidence, clear technical reasoning and ownership. You will be expected to speak up, act fast and raise standards through hands-on leadership.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong experience in low level system testing and integration across complex software and hardware layers.\n\n\u00b7 Deep understanding of RTOS, complex boot logic, Linux and device drivers.\n\n\u00b7 Test development capability using Python and C/C++.\n\n\u00b7 Experience working with hardware, debuggers, CI/CD pipelines and build or integration tools.\n\n\u00b7 Ability to debug cross-layer issues and drive root-cause investigations to lasting corrective actions.\n\n\u00b7 Clear communication skills, with the ability to mentor engineers and document complex technical decisions.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collabora",
-    "requirements": [
-      "Python",
-      "C++",
-      "C",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
-    "id": "graphcore-8911260002",
-    "company": "Graphcore",
-    "title": "Staff System Software Engineer",
-    "department": "SW Device",
-    "team": "SW Device",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Gda\u0144sk, Pomeranian Voivodeship, Poland \u2022 Bristol \u2022 Gda\u0144sk",
-    "locations": [
-      "Gda\u0144sk, Pomeranian Voivodeship, Poland",
-      "Bristol",
-      "Gda\u0144sk"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8911260002#app",
     "description": "About the job\n\nBuild the test strategy that protects Graphcore\u2019s system software releases at scale.\n\nAs a Staff System Software Engineer, you will shape integration and system testing across firmware, BMC and Linux device drivers. Your work will help create a high quality gate for system software release packages.\n\nYou will design, build, automate and report tests across complex server class systems. You will also develop reusable tools, pipelines and packaging solutions that help teams move faster with confidence.\n\nThis role needs deep low level software knowledge and strong system thinking. You will own hard technical areas, guide best practice and stay close to the code.\n\nThe team and culture\n\nYou will join a new integration and system test team within System Software QA. The team verifies integrated components across BMC, firmware and Linux device drivers.\n\nWork happens close to the hardware, across component teams and QA. You will partner with developers, consult package stakeholders and turn use cases into robust system tests.\n\nDecisions are shaped by evidence, clear technical reasoning and ownership. You will be expected to speak up, act fast and raise standards through hands-on leadership.\n\nWhat we\u2019re looking for\n\n\u00b7 Strong experience in low level system testing and integration across complex software and hardware layers.\n\n\u00b7 Deep understanding of RTOS, complex boot logic, Linux and device drivers.\n\n\u00b7 Test development capability using Python and C/C++.\n\n\u00b7 Experience working with hardware, debuggers, CI/CD pipelines and build or integration tools.\n\n\u00b7 Ability to debug cross-layer issues and drive root-cause investigations to lasting corrective actions.\n\n\u00b7 Clear communication skills, with the ability to mentor engineers and document complex technical decisions.\n\nWhile we have outlined a set of requirements, we value transferable skills and diverse experiences. If you meet most of our essential criteria, we encourage you to submit an application and showcase how your background makes you a strong candidate.\n\nBenefits\n\n\u00b7 Flexible working: Balance your work and personal life with greater flexibility\n\n\u00b7 Generous leave: Take time to rest, recharge and enjoy life outside of work\n\n\u00b7 Retirement planning support: Up to 5% matched pension\n\n\u00b7 Phantom equity: Share in Graphcore\u2019s success\n\n\u00b7 Workplace experience: Enjoy thoughtfully designed office spaces for collabora",
     "requirements": [
       "Python",
@@ -46760,51 +46632,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
   },
   {
-    "id": "graphcore-8632583002",
-    "company": "Graphcore",
-    "title": "AI Research Engineer",
-    "department": "Research",
-    "team": "Research",
-    "deptTrack": "Research",
-    "category": "Research",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Cambridge, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
-    "locations": [
-      "Cambridge, UK",
-      "Bristol",
-      "Cambridge",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/graphcore",
-    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002",
-    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002",
-    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002#app",
-    "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.We\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.As part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence.\n\nJob Summary\n\nAs a research engineer at Graphcore, you will contribute to the advancement of AI research, investigating new ideas that push the\u00a0limits on important AI/ML problems. Specialised hardware has been the key driver of the progress of AI over the last decade, and we\u00a0believe that hardware-aware AI algorithms and AI-aware hardware developments will continue to be critical to advancing this exciting\u00a0field. We are therefore looking for individuals who combine strong machine learning experience with practical engineering skills to\u00a0deliver impactful AI research.\u00a0We are seeking AI researchers with strong software engineering experience, particularly in lower-level programming and performance optimisation for hardware efficiency. Our research spans a broad range of topics, including efficient training and inference,\u00a0world models, life sciences, reinforcement learning, and beyond. You will work closely with researchers to generate ideas and translate\u00a0them into scalable implementations, contributing to publications and projects that help to steer the future of AI hardware.\n\nThe Team\n\nGraphcore Research participates in both fundamental and applied research, to characterise the computational requirements of machine intelligence and to demonstrate how hardware can drive the next generation of innovative AI models. We publish at leading AI/ML conferences (NeurIPS, ICML, ICLR) as well as specialist workshops, and collaborate with other research teams and organisations across the world.\n\nWe pride ourselves on being a supportive and collaborative team, where we organise around our individual research interests to solve problems together in domains such as efficie",
-    "requirements": [
-      "Python",
-      "PyTorch",
-      "JAX",
-      "CUDA",
-      "Triton",
-      "C++",
-      "C",
-      "Deep Learning"
-    ],
-    "preferred": [
-      "Machine Learning"
-    ],
-    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
-  },
-  {
     "id": "graphcore-8632582002",
     "company": "Graphcore",
     "title": "AI Research Engineer",
@@ -46832,6 +46659,51 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632582002",
     "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632582002",
     "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632582002#app",
+    "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.We\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.As part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence.\n\nJob Summary\n\nAs a research engineer at Graphcore, you will contribute to the advancement of AI research, investigating new ideas that push the\u00a0limits on important AI/ML problems. Specialised hardware has been the key driver of the progress of AI over the last decade, and we\u00a0believe that hardware-aware AI algorithms and AI-aware hardware developments will continue to be critical to advancing this exciting\u00a0field. We are therefore looking for individuals who combine strong machine learning experience with practical engineering skills to\u00a0deliver impactful AI research.\u00a0We are seeking AI researchers with strong software engineering experience, particularly in lower-level programming and performance optimisation for hardware efficiency. Our research spans a broad range of topics, including efficient training and inference,\u00a0world models, life sciences, reinforcement learning, and beyond. You will work closely with researchers to generate ideas and translate\u00a0them into scalable implementations, contributing to publications and projects that help to steer the future of AI hardware.\n\nThe Team\n\nGraphcore Research participates in both fundamental and applied research, to characterise the computational requirements of machine intelligence and to demonstrate how hardware can drive the next generation of innovative AI models. We publish at leading AI/ML conferences (NeurIPS, ICML, ICLR) as well as specialist workshops, and collaborate with other research teams and organisations across the world.\n\nWe pride ourselves on being a supportive and collaborative team, where we organise around our individual research interests to solve problems together in domains such as efficie",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "JAX",
+      "CUDA",
+      "Triton",
+      "C++",
+      "C",
+      "Deep Learning"
+    ],
+    "preferred": [
+      "Machine Learning"
+    ],
+    "companyColor": "linear-gradient(135deg, #ef4444, #b91c1c)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=graphcore.ai&sz=128"
+  },
+  {
+    "id": "graphcore-8632583002",
+    "company": "Graphcore",
+    "title": "AI Research Engineer",
+    "department": "Research",
+    "team": "Research",
+    "deptTrack": "Research",
+    "category": "Research",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Cambridge, UK \u2022 Bristol \u2022 Cambridge \u2022 London",
+    "locations": [
+      "Cambridge, UK",
+      "Bristol",
+      "Cambridge",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/graphcore",
+    "jobUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002",
+    "applyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002",
+    "directApplyUrl": "https://job-boards.greenhouse.io/graphcore/jobs/8632583002#app",
     "description": "About Graphcore\n\nAt Graphcore, we\u2019re building the future of AI compute.We\u2019re a team of semiconductor, software and AI experts, with deep experience in creating the complete AI compute stack - from silicon and software to infrastructure at datacenter scale.As part of the SoftBank Group, backed by significant long-term investment, we are delivering key technology into the fast-growing SoftBank AI ecosystem.To meet the vast and exciting AI opportunity, Graphcore is expanding its teams around the world.We are bringing together the brightest minds to solve the toughest problems, in a place where everyone has the opportunity to make an impact on the company, our products and the future of artificial intelligence.\n\nJob Summary\n\nAs a research engineer at Graphcore, you will contribute to the advancement of AI research, investigating new ideas that push the\u00a0limits on important AI/ML problems. Specialised hardware has been the key driver of the progress of AI over the last decade, and we\u00a0believe that hardware-aware AI algorithms and AI-aware hardware developments will continue to be critical to advancing this exciting\u00a0field. We are therefore looking for individuals who combine strong machine learning experience with practical engineering skills to\u00a0deliver impactful AI research.\u00a0We are seeking AI researchers with strong software engineering experience, particularly in lower-level programming and performance optimisation for hardware efficiency. Our research spans a broad range of topics, including efficient training and inference,\u00a0world models, life sciences, reinforcement learning, and beyond. You will work closely with researchers to generate ideas and translate\u00a0them into scalable implementations, contributing to publications and projects that help to steer the future of AI hardware.\n\nThe Team\n\nGraphcore Research participates in both fundamental and applied research, to characterise the computational requirements of machine intelligence and to demonstrate how hardware can drive the next generation of innovative AI models. We publish at leading AI/ML conferences (NeurIPS, ICML, ICLR) as well as specialist workshops, and collaborate with other research teams and organisations across the world.\n\nWe pride ourselves on being a supportive and collaborative team, where we organise around our individual research interests to solve problems together in domains such as efficie",
     "requirements": [
       "Python",
@@ -49996,41 +49868,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
   },
   {
-    "id": "helsing-4660594101",
-    "company": "Helsing",
-    "title": "Electronics Engineer",
-    "department": "Hardware Engineering",
-    "team": "Hardware Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Munich",
-    "locations": [
-      "Munich"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/helsing",
-    "jobUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101",
-    "applyUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101",
-    "directApplyUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101#app",
-    "description": "Who we are\n\nHelsing is a defence AI company. Our mission is to protect our democracies. We aim to achieve technological leadership, so that open societies can continue to make sovereign decisions and control their ethical standards.\n\nAs democracies, we believe we have a special responsibility to be thoughtful about the development and deployment of powerful technologies like AI. We take this responsibility seriously.\n\nWe are an ambitious and committed team of engineers, AI specialists and customer-facing programme managers. \u00a0We are looking for mission-driven people to join our European teams \u2013 and apply their skills to solve the most complex and impactful problems. We embrace an open and transparent culture that welcomes healthy debates on the use of technology in defence, its benefits, and its ethical implications.\n\nThe role\n\nAs an Electronics Engineer on the Physical Products team, you will design and build the electrical systems that bring Helsing's platforms to life. From component selection and electrical architecture definition through to bespoke PCB design and hands-on prototype bring-up, you will shape how our systems are powered, connected, and controlled. Working at the intersection of hardware and systems engineering, you will translate complex requirements into robust, field-ready electronics, iterating rapidly to de-risk designs and validate concepts early. Your work will directly advance Helsing's mission to equip democratic societies with capable, reliable defence technology.\n\nThe day-to-day\n\nDesign, build, and validate bespoke PCBs from schematic through to hands-on bring-up, covering power, digital, and mixed-signal electronics using tools such as Altium Designer or KiCad\n\nDefine the electrical architecture of UAV platforms, producing wiring diagrams, power distribution schemes, and interface definitions that underpin system integration across mechanical, software, and avionics boundaries\n\nSelect and specify components across sensors, actuators, controllers, and power systems, trading off performance, cost, availability, and integration effort to make well-reasoned, documented design decisions\n\nIntegrate communication interfaces such as CAN Bus, Ethernet, and RS422/485, and support RF and radio systems, ensuring robust data and power distribution across the platform\n\nDefine and execute unit-level tests, contribute to reliability and safety a",
-    "requirements": [
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #475569, #1e293b)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
-  },
-  {
     "id": "helsing-4924433101",
     "company": "Helsing",
     "title": "Electronics Engineer",
@@ -50057,6 +49894,41 @@ const seedJobs = [
     "applyUrl": "https://helsing.ai/jobs/4924433101?gh_jid=4924433101",
     "directApplyUrl": "https://helsing.ai/jobs/4924433101?gh_jid=4924433101#app",
     "description": "Who we are\n\nHelsing is a defence AI company. Our mission is to protect our democracies. We aim to achieve technological leadership, so that open societies can continue to make sovereign decisions and control their ethical standards.\n\nAs democracies, we believe we have a special responsibility to be thoughtful about the development and deployment of powerful technologies like AI. We take this responsibility seriously.\n\nWe are an ambitious and committed team of engineers, AI specialists and customer-facing programme managers. \u00a0We are looking for mission-driven people to join our European teams \u2013 and apply their skills to solve the most complex and impactful problems. We embrace an open and transparent culture that welcomes healthy debates on the use of technology in defence, its benefits, and its ethical implications.\n\nThe role\n\nAs an Electronics Engineer on the Physical Products team, you will design and build the electrical systems that bring Helsing's platforms to life. From component selection and electrical architecture definition through to bespoke PCB design and hands-on prototype bring-up, you will shape how our systems are powered, connected, and controlled. Working at the intersection of hardware and systems engineering, you will translate complex requirements into robust, field-ready electronics, iterating rapidly to de-risk designs and validate concepts early. Your work will directly advance Helsing's mission to equip democratic societies with capable, reliable defence technology.\n\nThe day-to-day\n\nDesign, build, and validate bespoke PCBs from schematic through to hands-on bring-up, covering power, digital, and mixed-signal electronics, using tools such as Altium Designer or KiCad\n\nDefine the electrical architecture of UAV platforms, producing wiring diagrams, power distribution schemes, and interface definitions that underpin system integration across mechanical, software, and avionics boundaries\n\nSelect and specify components across sensors, actuators, controllers, and power systems, trading off performance, cost, availability, and integration effort to make well-reasoned, documented design decisions\n\nIntegrate communication interfaces such as CAN Bus, Ethernet, and RS422/485, and support RF and radio systems, ensuring robust data and power distribution across the platform\n\nDefine and execute unit-level tests, contribute to reliability and safety ",
+    "requirements": [
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #475569, #1e293b)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
+  },
+  {
+    "id": "helsing-4660594101",
+    "company": "Helsing",
+    "title": "Electronics Engineer",
+    "department": "Hardware Engineering",
+    "team": "Hardware Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Munich",
+    "locations": [
+      "Munich"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/helsing",
+    "jobUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101",
+    "applyUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101",
+    "directApplyUrl": "https://helsing.ai/jobs/4660594101?gh_jid=4660594101#app",
+    "description": "Who we are\n\nHelsing is a defence AI company. Our mission is to protect our democracies. We aim to achieve technological leadership, so that open societies can continue to make sovereign decisions and control their ethical standards.\n\nAs democracies, we believe we have a special responsibility to be thoughtful about the development and deployment of powerful technologies like AI. We take this responsibility seriously.\n\nWe are an ambitious and committed team of engineers, AI specialists and customer-facing programme managers. \u00a0We are looking for mission-driven people to join our European teams \u2013 and apply their skills to solve the most complex and impactful problems. We embrace an open and transparent culture that welcomes healthy debates on the use of technology in defence, its benefits, and its ethical implications.\n\nThe role\n\nAs an Electronics Engineer on the Physical Products team, you will design and build the electrical systems that bring Helsing's platforms to life. From component selection and electrical architecture definition through to bespoke PCB design and hands-on prototype bring-up, you will shape how our systems are powered, connected, and controlled. Working at the intersection of hardware and systems engineering, you will translate complex requirements into robust, field-ready electronics, iterating rapidly to de-risk designs and validate concepts early. Your work will directly advance Helsing's mission to equip democratic societies with capable, reliable defence technology.\n\nThe day-to-day\n\nDesign, build, and validate bespoke PCBs from schematic through to hands-on bring-up, covering power, digital, and mixed-signal electronics using tools such as Altium Designer or KiCad\n\nDefine the electrical architecture of UAV platforms, producing wiring diagrams, power distribution schemes, and interface definitions that underpin system integration across mechanical, software, and avionics boundaries\n\nSelect and specify components across sensors, actuators, controllers, and power systems, trading off performance, cost, availability, and integration effort to make well-reasoned, documented design decisions\n\nIntegrate communication interfaces such as CAN Bus, Ethernet, and RS422/485, and support RF and radio systems, ensuring robust data and power distribution across the platform\n\nDefine and execute unit-level tests, contribute to reliability and safety a",
     "requirements": [
       "Distributed Systems"
     ],
@@ -50801,46 +50673,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
   },
   {
-    "id": "helsing-4981556101",
-    "company": "Helsing",
-    "title": "Simulation Engineer",
-    "department": "AI & Engineering",
-    "team": "AI & Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Munich - Berlin - London - Paris - Warsaw - Tallinn \u2022 Berlin \u2022 London \u2022 Munich \u2022 Paris",
-    "locations": [
-      "Munich - Berlin - London - Paris - Warsaw - Tallinn",
-      "Berlin",
-      "London",
-      "Munich",
-      "Paris"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/helsing",
-    "jobUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101",
-    "applyUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101",
-    "directApplyUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101#app",
-    "description": "Who we are\n\nHelsing is a defence AI company. Our mission is to protect our democracies. We aim to achieve technological leadership, so that open societies can continue to make sovereign decisions and control their ethical standards.\n\nAs democracies, we believe we have a special responsibility to be thoughtful about the development and deployment of powerful technologies like AI. We take this responsibility seriously.\n\nWe are an ambitious and committed team of engineers, AI specialists and customer-facing programme managers. \u00a0We are looking for mission-driven people to join our European teams \u2013 and apply their skills to solve the most complex and impactful problems. We embrace an open and transparent culture that welcomes healthy debates on the use of technology in defence, its benefits, and its ethical implications.\n\nThe role\n\nAt Helsing we use simulation to train and test autonomy at scale, long before anything touches real hardware. You will be part of a team that owns a system for simulating large-scale 3D worlds containing hundreds of actors, rendered in real time.\n\nYou will work on the internals of the simulation stack, including modelling of vehicles and other actors, integration of high-fidelity models from domain experts, sensor and environment simulation, networking, and interfacing with other components in a distributed system.\n\nTypical examples of day-to-day responsibilities include:\n\nBuilding and maintaining simulation platform internals: subsystem architecture, replication and multiplayer, performance profiling, and the interfaces used by other systems to orchestrate simulation.\n\nComposing simulated platforms from sensor, communications, situational awareness, effector, and control-loop models, and reasoning about the underlying physics such as flight dynamics, rigid-body behaviour, collision, and line of sight.\n\nOwning the trade-off between fidelity, throughput, and engineering cost, choosing the right point for each use case and validating the result against subject matter experts, integration tests, or downstream outcomes.\n\nIntegrating 3D models, animations, and effects from our Content Engineers into the simulation.\n\nInvestigating simulation bugs in order to bridge the gap from our simulation to a reference model.\n\nThe day-to-day\n\nYou will write production code that shapes both the simulation platform and the models running inside it, and yo",
-    "requirements": [
-      "CUDA",
-      "Rust"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #475569, #1e293b)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
-  },
-  {
     "id": "helsing-4948430101",
     "company": "Helsing",
     "title": "Simulation Engineer",
@@ -50910,6 +50742,46 @@ const seedJobs = [
       "C++",
       "C",
       "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #475569, #1e293b)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128"
+  },
+  {
+    "id": "helsing-4981556101",
+    "company": "Helsing",
+    "title": "Simulation Engineer",
+    "department": "AI & Engineering",
+    "team": "AI & Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Munich - Berlin - London - Paris - Warsaw - Tallinn \u2022 Berlin \u2022 London \u2022 Munich \u2022 Paris",
+    "locations": [
+      "Munich - Berlin - London - Paris - Warsaw - Tallinn",
+      "Berlin",
+      "London",
+      "Munich",
+      "Paris"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/helsing",
+    "jobUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101",
+    "applyUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101",
+    "directApplyUrl": "https://helsing.ai/jobs/4981556101?gh_jid=4981556101#app",
+    "description": "Who we are\n\nHelsing is a defence AI company. Our mission is to protect our democracies. We aim to achieve technological leadership, so that open societies can continue to make sovereign decisions and control their ethical standards.\n\nAs democracies, we believe we have a special responsibility to be thoughtful about the development and deployment of powerful technologies like AI. We take this responsibility seriously.\n\nWe are an ambitious and committed team of engineers, AI specialists and customer-facing programme managers. \u00a0We are looking for mission-driven people to join our European teams \u2013 and apply their skills to solve the most complex and impactful problems. We embrace an open and transparent culture that welcomes healthy debates on the use of technology in defence, its benefits, and its ethical implications.\n\nThe role\n\nAt Helsing we use simulation to train and test autonomy at scale, long before anything touches real hardware. You will be part of a team that owns a system for simulating large-scale 3D worlds containing hundreds of actors, rendered in real time.\n\nYou will work on the internals of the simulation stack, including modelling of vehicles and other actors, integration of high-fidelity models from domain experts, sensor and environment simulation, networking, and interfacing with other components in a distributed system.\n\nTypical examples of day-to-day responsibilities include:\n\nBuilding and maintaining simulation platform internals: subsystem architecture, replication and multiplayer, performance profiling, and the interfaces used by other systems to orchestrate simulation.\n\nComposing simulated platforms from sensor, communications, situational awareness, effector, and control-loop models, and reasoning about the underlying physics such as flight dynamics, rigid-body behaviour, collision, and line of sight.\n\nOwning the trade-off between fidelity, throughput, and engineering cost, choosing the right point for each use case and validating the result against subject matter experts, integration tests, or downstream outcomes.\n\nIntegrating 3D models, animations, and effects from our Content Engineers into the simulation.\n\nInvestigating simulation bugs in order to bridge the gap from our simulation to a reference model.\n\nThe day-to-day\n\nYou will write production code that shapes both the simulation platform and the models running inside it, and yo",
+    "requirements": [
+      "CUDA",
+      "Rust"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -52420,44 +52292,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
   },
   {
-    "id": "intercom-5929232",
-    "company": "Intercom",
-    "title": "Senior Core Technologies Engineer",
-    "department": "R&D",
-    "team": "R&D",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Dublin, Ireland",
-    "locations": [
-      "Dublin, Ireland"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/intercom",
-    "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/5929232",
-    "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/5929232",
-    "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/5929232#app",
-    "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat\u2019s the opportunity?\n\nWe are looking for a Senior Engineer to join the team that enables the core technologies that Fin is built on . This role is especially compelling for engineers who enjoy scaling Elasticsearch in production and who also like working across adjacent systems such as MySQL, ingestion pipelines, and owning how they operate from low level systems engineering to all parts of our Rails and monolith.\n\nOur team\u2019s mission is to accelerate Fin\u2019s growth and stability through educated and operationally excellent core technology usage. This means that we\u2019re here to help product engineers and ML scientists build simpler, more performant product - faster. This can be through things like making low level database improvements that enhance everyone's experience, building best in class Elasticsearch tooling, or partnering with teams that utilise any of Fin\u2019s core technologies or our build patterns. Previous projects from the team include future-proofing our databases through sharding and building a mechanism to migrate Elasticsearch indexes for scale and profit .\n\nWe\u2019re building a robust platform where your expertise will be applied to areas such as building a beautiful Messenger, an efficient teammate exp",
-    "requirements": [
-      "Distributed Systems",
-      "MySQL",
-      "ElasticSearch",
-      "Linux"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #2563eb, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
-  },
-  {
     "id": "intercom-7411373",
     "company": "Intercom",
     "title": "Senior ML Science Manager",
@@ -52533,43 +52367,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
   },
   {
-    "id": "intercom-6531495",
-    "company": "Intercom",
-    "title": "Senior Machine Learning Scientist",
-    "department": "AI Group",
-    "team": "AI Group",
-    "deptTrack": "Engineering",
-    "category": "Research",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Dublin, Ireland",
-    "locations": [
-      "Dublin, Ireland"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/intercom",
-    "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495",
-    "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495",
-    "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495#app",
-    "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nFin's Machine Learning team is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated ML product engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nWhat will I be doing?\n\nIdentify areas where ML can create value for our customers\n\nIdentify the right ML framing of product problems\n\nWorking with teammates and Product and Design stakeholders\n\nConduct exploratory data analysis and research\n\nDeeply understand the problem area\n\nResearch and identify the right algorithms and tools\n\nBeing pragmatic, but innovating right to the cutting-edge when needed\n\nPerform offline evaluation to gather ev",
-    "requirements": [
-      "NLP",
-      "Deep Learning",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #2563eb, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
-  },
-  {
     "id": "intercom-7271603",
     "company": "Intercom",
     "title": "Senior Machine Learning Scientist",
@@ -52594,6 +52391,43 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/7271603",
     "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7271603",
     "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7271603#app",
+    "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nFin's Machine Learning team is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated ML product engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nWhat will I be doing?\n\nIdentify areas where ML can create value for our customers\n\nIdentify the right ML framing of product problems\n\nWorking with teammates and Product and Design stakeholders\n\nConduct exploratory data analysis and research\n\nDeeply understand the problem area\n\nResearch and identify the right algorithms and tools\n\nBeing pragmatic, but innovating right to the cutting-edge when needed\n\nPerform offline evaluation to gather ev",
+    "requirements": [
+      "NLP",
+      "Deep Learning",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
+  },
+  {
+    "id": "intercom-6531495",
+    "company": "Intercom",
+    "title": "Senior Machine Learning Scientist",
+    "department": "AI Group",
+    "team": "AI Group",
+    "deptTrack": "Engineering",
+    "category": "Research",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Dublin, Ireland",
+    "locations": [
+      "Dublin, Ireland"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/intercom",
+    "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495",
+    "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495",
+    "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/6531495#app",
     "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nFin's Machine Learning team is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated ML product engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nWhat will I be doing?\n\nIdentify areas where ML can create value for our customers\n\nIdentify the right ML framing of product problems\n\nWorking with teammates and Product and Design stakeholders\n\nConduct exploratory data analysis and research\n\nDeeply understand the problem area\n\nResearch and identify the right algorithms and tools\n\nBeing pragmatic, but innovating right to the cutting-edge when needed\n\nPerform offline evaluation to gather ev",
     "requirements": [
       "NLP",
@@ -52987,6 +52821,43 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
   },
   {
+    "id": "intercom-7393922",
+    "company": "Intercom",
+    "title": "Staff Product Engineer, AI",
+    "department": "AI Group",
+    "team": "AI Group",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Backend & Platform",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Berlin, Germany",
+    "locations": [
+      "Berlin, Germany"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/intercom",
+    "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922",
+    "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922",
+    "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922#app",
+    "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nWe\u2019re looking for Staff Product Engineers to join the AI Group to build Fin's AI-powered products. Product Engineers working in ML work closely with both our ML Scientists and product teams. They must deeply understand our product, our customers, our ML tech stack and our broader product stack.\n\nOur group is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated Engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nIf you are an experienced product engineer who takes an analytical approach to development and has some hands-on experience with ML systems, we'd love to hear from you!\n\nWhat",
+    "requirements": [
+      "Python",
+      "JavaScript",
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
+  },
+  {
     "id": "intercom-7393950",
     "company": "Intercom",
     "title": "Staff Product Engineer, AI",
@@ -53050,43 +52921,6 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393955",
     "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393955",
     "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393955#app",
-    "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nWe\u2019re looking for Staff Product Engineers to join the AI Group to build Fin's AI-powered products. Product Engineers working in ML work closely with both our ML Scientists and product teams. They must deeply understand our product, our customers, our ML tech stack and our broader product stack.\n\nOur group is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated Engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nIf you are an experienced product engineer who takes an analytical approach to development and has some hands-on experience with ML systems, we'd love to hear from you!\n\nWhat",
-    "requirements": [
-      "Python",
-      "JavaScript",
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #2563eb, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=intercom.com&sz=128"
-  },
-  {
-    "id": "intercom-7393922",
-    "company": "Intercom",
-    "title": "Staff Product Engineer, AI",
-    "department": "AI Group",
-    "team": "AI Group",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Backend & Platform",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Berlin, Germany",
-    "locations": [
-      "Berlin, Germany"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/intercom",
-    "jobUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922",
-    "applyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922",
-    "directApplyUrl": "https://job-boards.greenhouse.io/intercom/jobs/7393922#app",
     "description": "Fin , now part of Salesforce, is on a mission to help businesses provide perfect customer experiences.\n\nOur AI Agent Fin is the highest-performing AI Customer Agent on the market today, enabling businesses to deliver impeccable, always-on customer support across the customer journey, from service, to sales, to ecommerce. Powered by our own AI models, Fin resolves complex customer issues end-to-end across every channel, with minimal set-up and integration. Fin can also be combined with our natively integrated Intercom help desk, giving modern support teams one single system.\n\nTogether with Salesforce, the #1 AI CRM, where humans with agents drive customer success, we're building the future of customer experience. Here, ambition meets action. Tech meets trust. And innovation isn't a buzzword, it's a way of life. The world of work as we know it is changing, and we're looking for Trailblazers who are passionate about bettering business and the world through AI.\n\nReady to level up your career at the company leading workforce transformation in the agentic era? You're in the right place. Agentforce is the future of AI, and you are the future of Salesforce.\n\nWhat's the opportunity?\n\nWe\u2019re looking for Staff Product Engineers to join the AI Group to build Fin's AI-powered products. Product Engineers working in ML work closely with both our ML Scientists and product teams. They must deeply understand our product, our customers, our ML tech stack and our broader product stack.\n\nOur group is responsible for defining new ML features, researching appropriate algorithms and technologies, and rapidly getting first prototypes in our customers\u2019 hands.\n\nWe are an extremely product focussed team. We work in partnership with Product and Design functions of teams we support. Our team's dedicated Engineers enable us to move to production fast, often shipping to beta in weeks after a successful offline test.\n\nWe are very passionate about applying machine learning technology, and have productized everything from classic supervised models, to cutting-edge unsupervised clustering algorithms, to novel applications of transformer neural networks. We test and measure the real customer impact of each model we deploy.\n\nIf you are an experienced product engineer who takes an analytical approach to development and has some hands-on experience with ML systems, we'd love to hear from you!\n\nWhat",
     "requirements": [
       "Python",
@@ -73463,47 +73297,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128"
   },
   {
-    "id": "robinhood-7648454",
-    "company": "Robinhood",
-    "title": "Senior Software Engineer, Custody Services",
-    "department": "Bitstamp - Engineering Division",
-    "team": "Bitstamp - Engineering Division",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "Distributed Systems",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Ljubljana, Slovenia \u2022 London, UK",
-    "locations": [
-      "Ljubljana, Slovenia",
-      "London, UK"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/robinhood",
-    "jobUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454",
-    "applyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454",
-    "directApplyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454#app",
-    "description": "Join us in building the future of finance.\n\nOur mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading.\n\nAbout the team + role\n\nWe are building an elite team, applying frontier technologies to the world\u2019s biggest financial problems. We\u2019re looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn\u2019t a place for complacency, it\u2019s where ambitious people do the best work of their careers. We\u2019re a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards.\n\nThe Custody Services team is responsible for managing our crypto infrastructure, digital asset custody providers, and the various integrations we maintain with third-parties \u2014 from wallet management to crypto infrastructure management! The team is also responsible for processing crypto transactions, as well as products like staking, lending, and travel rule compliance. We currently safeguard billions in assets under custody for millions of customers.\n\nAs a\u00a0 Senior Backend Engineer \u00a0on this team, you'll work on the infrastructure behind crypto processing, wallet and key management workflows, and our integrations with third-party custodians. Most of what you'll build sits at the boundary between infrastructure and security.\n\nThis role is based in our Ljubljana, Slovenia office, with in-person attendance expected at least\u00a0 3 days per week . At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams.\n\nRequires participation in an on-call rotation to support business needs.\n\nWhat you\u2019ll do\n\nBuild and run the AWS infrastructure behind custody, key management, and blockchain node operations.\n\nAutomate infrastructure and configuration management (Ansible, Terraform, or similar) so the team spends less time on manual operations.\n\nRun our blockchain nodes across the networks we support, and keep them healthy and available.\n\nWrite and maintain services in Python for infrastructure management and wallet operati",
-    "requirements": [
-      "Python",
-      "Go",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Spark"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #10b981, #047857)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128"
-  },
-  {
     "id": "robinhood-7648452",
     "company": "Robinhood",
     "title": "Senior Software Engineer, Custody Services",
@@ -73530,6 +73323,47 @@ const seedJobs = [
     "applyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648452?t=gh_src=&gh_jid=7648452",
     "directApplyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648452?t=gh_src=&gh_jid=7648452#app",
     "description": "Join us in building the future of finance.\n\nOur mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading.\n\nAbout the team + role\n\nWe are building an elite team, applying frontier technologies to the world\u2019s biggest financial problems. We\u2019re looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn\u2019t a place for complacency, it\u2019s where ambitious people do the best work of their careers. We\u2019re a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards.\n\nThe Custody Services team is responsible for managing our crypto infrastructure, digital asset custody providers, and the various integrations we maintain with third-parties \u2014 from wallet management to crypto infrastructure management! The team is also responsible for processing crypto transactions, as well as products like staking, lending, and travel rule compliance. We currently safeguard billions in assets under custody for millions of customers.\n\nAs a\u00a0 Senior Backend Engineer \u00a0on this team, you'll work on the infrastructure behind crypto processing, wallet and key management workflows, and our integrations with third-party custodians. Most of what you'll build sits at the boundary between infrastructure and security.\n\nThis role is based in our London, UK office(s), with in-person attendance expected at least 3 days per week . At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams.\n\nRequires participation in an on-call rotation to support business needs.\n\nWhat you\u2019ll do\n\nBuild and run the AWS infrastructure behind custody, key management, and blockchain node operations.\n\nAutomate infrastructure and configuration management (Ansible, Terraform, or similar) so the team spends less time on manual operations.\n\nRun our blockchain nodes across the networks we support, and keep them healthy and available.\n\nWrite and maintain services in Python for infrastructure management and wallet operations.\n\nO",
+    "requirements": [
+      "Python",
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Spark"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #10b981, #047857)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128"
+  },
+  {
+    "id": "robinhood-7648454",
+    "company": "Robinhood",
+    "title": "Senior Software Engineer, Custody Services",
+    "department": "Bitstamp - Engineering Division",
+    "team": "Bitstamp - Engineering Division",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "Distributed Systems",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Ljubljana, Slovenia \u2022 London, UK",
+    "locations": [
+      "Ljubljana, Slovenia",
+      "London, UK"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/robinhood",
+    "jobUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454",
+    "applyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454",
+    "directApplyUrl": "https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454#app",
+    "description": "Join us in building the future of finance.\n\nOur mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading.\n\nAbout the team + role\n\nWe are building an elite team, applying frontier technologies to the world\u2019s biggest financial problems. We\u2019re looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn\u2019t a place for complacency, it\u2019s where ambitious people do the best work of their careers. We\u2019re a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards.\n\nThe Custody Services team is responsible for managing our crypto infrastructure, digital asset custody providers, and the various integrations we maintain with third-parties \u2014 from wallet management to crypto infrastructure management! The team is also responsible for processing crypto transactions, as well as products like staking, lending, and travel rule compliance. We currently safeguard billions in assets under custody for millions of customers.\n\nAs a\u00a0 Senior Backend Engineer \u00a0on this team, you'll work on the infrastructure behind crypto processing, wallet and key management workflows, and our integrations with third-party custodians. Most of what you'll build sits at the boundary between infrastructure and security.\n\nThis role is based in our Ljubljana, Slovenia office, with in-person attendance expected at least\u00a0 3 days per week . At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams.\n\nRequires participation in an on-call rotation to support business needs.\n\nWhat you\u2019ll do\n\nBuild and run the AWS infrastructure behind custody, key management, and blockchain node operations.\n\nAutomate infrastructure and configuration management (Ansible, Terraform, or similar) so the team spends less time on manual operations.\n\nRun our blockchain nodes across the networks we support, and keep them healthy and available.\n\nWrite and maintain services in Python for infrastructure management and wallet operati",
     "requirements": [
       "Python",
       "Go",
@@ -82625,6 +82459,47 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=supabase.com&sz=128"
   },
   {
+    "id": "supabase-fb0b563a-e541-43fd-8555-9eb6473aaa11",
+    "company": "Supabase",
+    "title": "Software Engineer - AI Tooling Infrastructure",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Remote, Global",
+    "locations": [
+      "Remote, Global"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Ashby",
+    "boardUrl": "https://jobs.ashbyhq.com/supabase",
+    "jobUrl": "https://jobs.ashbyhq.com/supabase/fb0b563a-e541-43fd-8555-9eb6473aaa11",
+    "applyUrl": "https://jobs.ashbyhq.com/supabase/fb0b563a-e541-43fd-8555-9eb6473aaa11",
+    "directApplyUrl": "https://jobs.ashbyhq.com/supabase/fb0b563a-e541-43fd-8555-9eb6473aaa11/application",
+    "description": "ABOUT SUPABASE\n\nSupabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All services are deeply integrated and designed for growth.\n\nAbout the Role\n\nWe\u2019re looking for a Software Engineer, AI Tooling Infrastructure to join our AI Tooling team and help build and run the backend services behind Supabase\u2019s AI products. The Supabase MCP server is one example of what the team runs in production, alongside the services that support agent skills and the dashboard assistant. You\u2019ll work closely with the Platform, SRE, Auth, Billing and Edge Functions teams, and with the engineers on the AI Tooling team who build the product surfaces.\n\nThe AI Tooling team runs its own services in production and carries its own on-call. Traffic from AI clients and agents behaves differently from traffic from people: hundreds of calls a minute, retry loops, and no reading of deprecation warnings. This role makes sure the services they use are reliable, correctly authorized and observable. It is a systems and infrastructure role rather than a product AI role, and it is not an SRE role. You will build and operate these systems, not only advise on them.\n\nThis role is ideal for someone who thrives in async, fast-paced environments, owns what they ship in production, and is excited about building developer tools that scale to millions.\n\nWHAT YOU\u2019LL BE RESPONSIBLE FOR\n\nIn this role, you\u2019ll:\n\n- Build and operate the production backend services behind Supabase\u2019s AI products, including the MCP server: deployment, scaling, configuration and release.\n\n- Take ownership of how those services are structured, including splitting or reshaping a service when that makes it safer to run and easier to change.\n\n- Define, measure and meet reliability targets for the services the team runs. Set SLOs with the SRE team, track error budgets, and use them to decide what to fix first.\n\n- Participate in the AI Tooling team on-call rotation, and be a first responder for incidents in those services. Investigate, fix, coordinate with other teams during incidents, and write the follow-ups and runbooks.\n\n- Work the AI Tooling team support queue alongside on-call, and turn recurring issues into fixes rather than repeated manual answers.\n\n- Own authentication and authorization f",
+    "requirements": [
+      "Go",
+      "Docker",
+      "Distributed Systems",
+      "PostgreSQL",
+      "Vector Search",
+      "TypeScript",
+      "Node.js"
+    ],
+    "preferred": [
+      "High performance distributed processing"
+    ],
+    "companyColor": "linear-gradient(135deg, #10b981, #047857)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=supabase.com&sz=128"
+  },
+  {
     "id": "supabase-e569b7f7-fa8f-4139-86f6-4f52b456882d",
     "company": "Supabase",
     "title": "Software Engineer - Auth",
@@ -83031,46 +82906,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
   },
   {
-    "id": "tailscale-4710755005",
-    "company": "Tailscale",
-    "title": "Software Engineer, AI Enablement",
-    "department": "Strategic Projects",
-    "team": "Strategic Projects",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Remote (United States) \u2022 Remote (Canada) \u2022 Remote (United Kingdom)",
-    "locations": [
-      "Remote (United States)",
-      "Remote (Canada)",
-      "Remote (United Kingdom)"
-    ],
-    "salary": "$163,000 - $226,000",
-    "salaryMin": 163000,
-    "salaryMax": 226000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tailscale",
-    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005",
-    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005#app",
-    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe're seeking a talented and motivated full-time Software Engineer, AI Enablement to help Tailscale's engineering organization get the most out of AI-assisted development. You'll join a small, high-leverage team reporting to our co-founder, working alongside our first AI enablement engineer to build the tools, workflows, and practices that help every engineer at Tailscale build faster and more safely with AI. This is a foundational role \u2014 you'll have real latitude to shape what AI enablement means here as we scale, with direct visibility into how the whole engineering org adopts these tools.\n\nKey Responsibilities\n\nPartner with engineering leadership and Tailscale's technical staff to define and drive our internal AI-enablement roadmap.\n\nWork closely with the team building Aperture by Tailscale, our AI gateway used both internally and offered as a product.\n\nBuild and iterate on the tools, workflows, and shared practices that help engineers get real value from coding agents \u2014 and evaluate new models and tools, making clear calls on what we adopt.\n\nPartner with engineering and non-engineering teams to find high-leverage opportunities to apply AI \u2014 this is a support function, so success means other teams shipping faster because of what you've built.\n\nEstablish the guardrails, review practices, and documentation that make AI-generated code safe to ship, and act as the internal advocate who helps teams adopt good practices without mandating a single tool.\n\nTrack adoption and measure the real impact of AI t",
-    "requirements": [
-      "Python",
-      "Rust",
-      "Go",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
-  },
-  {
     "id": "tailscale-4710703005",
     "company": "Tailscale",
     "title": "Software Engineer, AI Enablement",
@@ -83097,6 +82932,46 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710703005",
     "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710703005",
     "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710703005#app",
+    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe're seeking a talented and motivated full-time Software Engineer, AI Enablement to help Tailscale's engineering organization get the most out of AI-assisted development. You'll join a small, high-leverage team reporting to our co-founder, working alongside our first AI enablement engineer to build the tools, workflows, and practices that help every engineer at Tailscale build faster and more safely with AI. This is a foundational role \u2014 you'll have real latitude to shape what AI enablement means here as we scale, with direct visibility into how the whole engineering org adopts these tools.\n\nKey Responsibilities\n\nPartner with engineering leadership and Tailscale's technical staff to define and drive our internal AI-enablement roadmap.\n\nWork closely with the team building Aperture by Tailscale, our AI gateway used both internally and offered as a product.\n\nBuild and iterate on the tools, workflows, and shared practices that help engineers get real value from coding agents \u2014 and evaluate new models and tools, making clear calls on what we adopt.\n\nPartner with engineering and non-engineering teams to find high-leverage opportunities to apply AI \u2014 this is a support function, so success means other teams shipping faster because of what you've built.\n\nEstablish the guardrails, review practices, and documentation that make AI-generated code safe to ship, and act as the internal advocate who helps teams adopt good practices without mandating a single tool.\n\nTrack adoption and measure the real impact of AI t",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Go",
+      "LLMs"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
+  },
+  {
+    "id": "tailscale-4710755005",
+    "company": "Tailscale",
+    "title": "Software Engineer, AI Enablement",
+    "department": "Strategic Projects",
+    "team": "Strategic Projects",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Remote (United States) \u2022 Remote (Canada) \u2022 Remote (United Kingdom)",
+    "locations": [
+      "Remote (United States)",
+      "Remote (Canada)",
+      "Remote (United Kingdom)"
+    ],
+    "salary": "$163,000 - $226,000",
+    "salaryMin": 163000,
+    "salaryMax": 226000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tailscale",
+    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005",
+    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4710755005#app",
     "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe're seeking a talented and motivated full-time Software Engineer, AI Enablement to help Tailscale's engineering organization get the most out of AI-assisted development. You'll join a small, high-leverage team reporting to our co-founder, working alongside our first AI enablement engineer to build the tools, workflows, and practices that help every engineer at Tailscale build faster and more safely with AI. This is a foundational role \u2014 you'll have real latitude to shape what AI enablement means here as we scale, with direct visibility into how the whole engineering org adopts these tools.\n\nKey Responsibilities\n\nPartner with engineering leadership and Tailscale's technical staff to define and drive our internal AI-enablement roadmap.\n\nWork closely with the team building Aperture by Tailscale, our AI gateway used both internally and offered as a product.\n\nBuild and iterate on the tools, workflows, and shared practices that help engineers get real value from coding agents \u2014 and evaluate new models and tools, making clear calls on what we adopt.\n\nPartner with engineering and non-engineering teams to find high-leverage opportunities to apply AI \u2014 this is a support function, so success means other teams shipping faster because of what you've built.\n\nEstablish the guardrails, review practices, and documentation that make AI-generated code safe to ship, and act as the internal advocate who helps teams adopt good practices without mandating a single tool.\n\nTrack adoption and measure the real impact of AI t",
     "requirements": [
       "Python",
@@ -83151,46 +83026,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
   },
   {
-    "id": "tailscale-4732874005",
-    "company": "Tailscale",
-    "title": "Software Engineer, Networking (Dataplane)",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Remote (Canada) \u2022 Remote (United States)",
-    "locations": [
-      "Remote (Canada)",
-      "Remote (United States)"
-    ],
-    "salary": "$218,420 - $302,840",
-    "salaryMin": 218420,
-    "salaryMax": 302840,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tailscale",
-    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005",
-    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005#app",
-    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe\u2019re seeking a skilled and diligent full-time Software Engineer to join our growing team. You will work as part of the Dataplane Engineering Team to:\n\nContribute to the core client connectivity features of Tailscale by applying a deep understanding of network engineering and software development.\n\nEvolve and enhance the Tailscale connectivity offerings between clients, subnet routers, exit nodes and other integrations with customer network infrastructure.\n\nProvide architectural insights and resolve escalated customer network issues to fix complex connectivity problems.\n\nCollaborate with product management and internal engineering to develop integrated network solutions that prioritize scalability and ease of maintenance while ensuring a superior customer experience.\n\nBecause we\u2019re an early-stage and fully remote company, we\u2019re looking for a strongly motivated individual who can help move the product forward. The ability to think on your feet, collaborate with highly technical teams, and comfort working asynchronously are essential.\n\nKey Responsibilities\n\nDesign, build, test, and document core Tailscale\u2019s client-side networking software.\n\nAdvance product features by building upon or merging established industry network protocols with Tailscale's specific designs and frameworks.\n\nAdopt a security-centric approach to both architecture and coding to guarantee the resilience and safety of networking modules.\n\nEvaluate and optimize the performance, reliability, and scale of our software across a wide arra",
-    "requirements": [
-      "C++",
-      "Rust",
-      "Go",
-      "C",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
-  },
-  {
     "id": "tailscale-4732897005",
     "company": "Tailscale",
     "title": "Software Engineer, Networking (Dataplane)",
@@ -83216,6 +83051,46 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732897005",
     "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732897005",
     "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732897005#app",
+    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe\u2019re seeking a skilled and diligent full-time Software Engineer to join our growing team. You will work as part of the Dataplane Engineering Team to:\n\nContribute to the core client connectivity features of Tailscale by applying a deep understanding of network engineering and software development.\n\nEvolve and enhance the Tailscale connectivity offerings between clients, subnet routers, exit nodes and other integrations with customer network infrastructure.\n\nProvide architectural insights and resolve escalated customer network issues to fix complex connectivity problems.\n\nCollaborate with product management and internal engineering to develop integrated network solutions that prioritize scalability and ease of maintenance while ensuring a superior customer experience.\n\nBecause we\u2019re an early-stage and fully remote company, we\u2019re looking for a strongly motivated individual who can help move the product forward. The ability to think on your feet, collaborate with highly technical teams, and comfort working asynchronously are essential.\n\nKey Responsibilities\n\nDesign, build, test, and document core Tailscale\u2019s client-side networking software.\n\nAdvance product features by building upon or merging established industry network protocols with Tailscale's specific designs and frameworks.\n\nAdopt a security-centric approach to both architecture and coding to guarantee the resilience and safety of networking modules.\n\nEvaluate and optimize the performance, reliability, and scale of our software across a wide arra",
+    "requirements": [
+      "C++",
+      "Rust",
+      "Go",
+      "C",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
+  },
+  {
+    "id": "tailscale-4732874005",
+    "company": "Tailscale",
+    "title": "Software Engineer, Networking (Dataplane)",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Remote (Canada) \u2022 Remote (United States)",
+    "locations": [
+      "Remote (Canada)",
+      "Remote (United States)"
+    ],
+    "salary": "$218,420 - $302,840",
+    "salaryMin": 218420,
+    "salaryMax": 302840,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tailscale",
+    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005",
+    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4732874005#app",
     "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nWe\u2019re seeking a skilled and diligent full-time Software Engineer to join our growing team. You will work as part of the Dataplane Engineering Team to:\n\nContribute to the core client connectivity features of Tailscale by applying a deep understanding of network engineering and software development.\n\nEvolve and enhance the Tailscale connectivity offerings between clients, subnet routers, exit nodes and other integrations with customer network infrastructure.\n\nProvide architectural insights and resolve escalated customer network issues to fix complex connectivity problems.\n\nCollaborate with product management and internal engineering to develop integrated network solutions that prioritize scalability and ease of maintenance while ensuring a superior customer experience.\n\nBecause we\u2019re an early-stage and fully remote company, we\u2019re looking for a strongly motivated individual who can help move the product forward. The ability to think on your feet, collaborate with highly technical teams, and comfort working asynchronously are essential.\n\nKey Responsibilities\n\nDesign, build, test, and document core Tailscale\u2019s client-side networking software.\n\nAdvance product features by building upon or merging established industry network protocols with Tailscale's specific designs and frameworks.\n\nAdopt a security-centric approach to both architecture and coding to guarantee the resilience and safety of networking modules.\n\nEvaluate and optimize the performance, reliability, and scale of our software across a wide arra",
     "requirements": [
       "C++",
@@ -83311,46 +83186,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
   },
   {
-    "id": "tailscale-4721713005",
-    "company": "Tailscale",
-    "title": "Software Engineer, Strategic Projects",
-    "department": "Strategic Projects",
-    "team": "Strategic Projects",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Mid / General",
-    "employmentType": "Full-time",
-    "location": "Remote (Canada) \u2022 Remote (United States)",
-    "locations": [
-      "Remote (Canada)",
-      "Remote (United States)"
-    ],
-    "salary": "$218,420 - $302,840",
-    "salaryMin": 218420,
-    "salaryMax": 302840,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tailscale",
-    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005",
-    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005#app",
-    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nJoin our Strategic Projects team, reporting to the team's Engineering Manager and ultimately into our co-founder and Chief Strategy Officer. This team exists to show developers and organizations why Tailscale should be their default connectivity substrate, both for internal infrastructure and for embedding into customer-facing products. Aperture, our identity-aware LLM gateway, is one such initiative.\n\nThis is an AI-native team. We use coding agents heavily as a force multiplier and expect every engineer to be a power user. Our customers demand a high bar on code quality, security, and operational rigour, and we treat that as a reason to use every tool available, including LLMs and coding agents, to ship fast without compromising it.\n\nWe move fast from idea to prototype, and we're growing the side of the team that's energized by the path from prototype to dependable product. You'll work shoulder-to-shoulder with product-minded engineers from the moment an idea takes shape, shaping how it's built so it holds up later, and co-owning the work of making it production-grade: stable, observable, maintainable, and ready for real customer load. You're the kind of engineer who finds the long tail of development genuinely satisfying, the edge cases, the failure modes, the tests and runbooks, the details that turn a sharp demo into something customers can rely on.\n\nYou'll work directly with reference customers on integrations and own the production bar on prototypes that graduate into Tailscale's product surfac",
-    "requirements": [
-      "Python",
-      "Rust",
-      "Go",
-      "TypeScript",
-      "LLMs"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
-  },
-  {
     "id": "tailscale-4721714005",
     "company": "Tailscale",
     "title": "Software Engineer, Strategic Projects",
@@ -83376,6 +83211,46 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721714005",
     "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721714005",
     "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721714005#app",
+    "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nJoin our Strategic Projects team, reporting to the team's Engineering Manager and ultimately into our co-founder and Chief Strategy Officer. This team exists to show developers and organizations why Tailscale should be their default connectivity substrate, both for internal infrastructure and for embedding into customer-facing products. Aperture, our identity-aware LLM gateway, is one such initiative.\n\nThis is an AI-native team. We use coding agents heavily as a force multiplier and expect every engineer to be a power user. Our customers demand a high bar on code quality, security, and operational rigour, and we treat that as a reason to use every tool available, including LLMs and coding agents, to ship fast without compromising it.\n\nWe move fast from idea to prototype, and we're growing the side of the team that's energized by the path from prototype to dependable product. You'll work shoulder-to-shoulder with product-minded engineers from the moment an idea takes shape, shaping how it's built so it holds up later, and co-owning the work of making it production-grade: stable, observable, maintainable, and ready for real customer load. You're the kind of engineer who finds the long tail of development genuinely satisfying, the edge cases, the failure modes, the tests and runbooks, the details that turn a sharp demo into something customers can rely on.\n\nYou'll work directly with reference customers on integrations and own the production bar on prototypes that graduate into Tailscale's product surfac",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Go",
+      "TypeScript",
+      "LLMs"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #64748b, #334155)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
+  },
+  {
+    "id": "tailscale-4721713005",
+    "company": "Tailscale",
+    "title": "Software Engineer, Strategic Projects",
+    "department": "Strategic Projects",
+    "team": "Strategic Projects",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Mid / General",
+    "employmentType": "Full-time",
+    "location": "Remote (Canada) \u2022 Remote (United States)",
+    "locations": [
+      "Remote (Canada)",
+      "Remote (United States)"
+    ],
+    "salary": "$218,420 - $302,840",
+    "salaryMin": 218420,
+    "salaryMax": 302840,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tailscale",
+    "jobUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005",
+    "applyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tailscale/jobs/4721713005#app",
     "description": "Thank you for considering Tailscale. If this job description resonates with you, please apply.\u00a0 Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications. We encourage you to help us break that statistic!\n\nAbout Tailscale\n\nTailscale is making safe connection effortless by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We're building a future for the Internet that's easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we're backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.\n\nAbout the Role\n\nJoin our Strategic Projects team, reporting to the team's Engineering Manager and ultimately into our co-founder and Chief Strategy Officer. This team exists to show developers and organizations why Tailscale should be their default connectivity substrate, both for internal infrastructure and for embedding into customer-facing products. Aperture, our identity-aware LLM gateway, is one such initiative.\n\nThis is an AI-native team. We use coding agents heavily as a force multiplier and expect every engineer to be a power user. Our customers demand a high bar on code quality, security, and operational rigour, and we treat that as a reason to use every tool available, including LLMs and coding agents, to ship fast without compromising it.\n\nWe move fast from idea to prototype, and we're growing the side of the team that's energized by the path from prototype to dependable product. You'll work shoulder-to-shoulder with product-minded engineers from the moment an idea takes shape, shaping how it's built so it holds up later, and co-owning the work of making it production-grade: stable, observable, maintainable, and ready for real customer load. You're the kind of engineer who finds the long tail of development genuinely satisfying, the edge cases, the failure modes, the tests and runbooks, the details that turn a sharp demo into something customers can rely on.\n\nYou'll work directly with reference customers on integrations and own the production bar on prototypes that graduate into Tailscale's product surfac",
     "requirements": [
       "Python",
@@ -83463,6 +83338,42 @@ const seedJobs = [
     ],
     "companyColor": "linear-gradient(135deg, #64748b, #334155)",
     "logoUrl": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128"
+  },
+  {
+    "id": "tide-8012699003",
+    "company": "Tide",
+    "title": "Director of Engineering, KYX",
+    "department": "One Platform",
+    "team": "One Platform",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "United Kingdom \u2022 London",
+    "locations": [
+      "United Kingdom",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tide",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE:\n\nTide is hiring a Director of Engineering to lead the engineering organisation behind KYX (KYC and KYB). Our vision for KYX is a world where every genuine business, business owner, their team, and everyone connected to them, onboards to Tide in minutes, unlocks the products they need as they grow, and never has to think twice about their data, while we identify bad actors, stop them at the door, continuously review their activity and off-board them the moment they're found.\n\nYou will be accountable for engineering strategy, organisation and execution across three domains. Onboarding KYX covers identity and access for registration and login, due diligence policy execution and vendor orchestration across the onboarding journey, and the risk scoring and agentic AI that assesses new applicants. Continuous KYX covers ongoing due diligence through periodic and event-triggered reviews, and how business owners bring their own team members onto their account. Risk Scoring is the KYX Scoring & ML team whose models power decisions across both domains.\n\nThis role sits at the intersection of regulated ",
+    "requirements": [
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
     "id": "tide-8014199003",
@@ -83573,42 +83484,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
-    "id": "tide-8012699003",
-    "company": "Tide",
-    "title": "Director of Engineering, KYX",
-    "department": "One Platform",
-    "team": "One Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "United Kingdom \u2022 London",
-    "locations": [
-      "United Kingdom",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8012699003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE:\n\nTide is hiring a Director of Engineering to lead the engineering organisation behind KYX (KYC and KYB). Our vision for KYX is a world where every genuine business, business owner, their team, and everyone connected to them, onboards to Tide in minutes, unlocks the products they need as they grow, and never has to think twice about their data, while we identify bad actors, stop them at the door, continuously review their activity and off-board them the moment they're found.\n\nYou will be accountable for engineering strategy, organisation and execution across three domains. Onboarding KYX covers identity and access for registration and login, due diligence policy execution and vendor orchestration across the onboarding journey, and the risk scoring and agentic AI that assesses new applicants. Continuous KYX covers ongoing due diligence through periodic and event-triggered reviews, and how business owners bring their own team members onto their account. Risk Scoring is the KYX Scoring & ML team whose models power decisions across both domains.\n\nThis role sits at the intersection of regulated ",
-    "requirements": [
-      "Machine Learning"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
-  },
-  {
     "id": "tide-7570173003",
     "company": "Tide",
     "title": "Engineering Manager",
@@ -83652,50 +83527,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
-    "id": "tide-7570167003",
-    "company": "Tide",
-    "title": "Engineering Manager",
-    "department": "One Platform",
-    "team": "One Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Serbia \u2022 Bulgaria \u2022 Lithuania \u2022 Romania",
-    "locations": [
-      "Serbia",
-      "Bulgaria",
-      "Lithuania",
-      "Romania"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE:\n\nAs an Engineering Manager at Tide, you will be responsible for building and running the products your team owns, covering everything our members need to run their business, from banking and payments through to administration and operational tooling.\n\nThis role offers an exceptional opportunity to make a real difference by taking ownership of engineering practices in a rapidly expanding company! We trust and empower our Engineering Managers to make real architectural decisions that affect their domain and shape the future of Tide\u2019s Platform.\n\nWe operate in domain-aligned, full-stack teams that own products end to end. Engineers self-organise, collaborate on technical challenges, and define shared standards through Communities of Practice.\n\nLeading & Directly managing a cross functional team of 8-12 engineers\n\nPartnering with a Product Manager to form the Product Engineering Duo\n\nDeeply caring about what\u2019s being built as much as the how\n\nBeing responsible of the delivery of the team - quality, stability, timelines, dependencies\n\nBeing responsible of the tech excellence and architecture with",
-    "requirements": [
-      "Python",
-      "C",
-      "Docker",
-      "AWS",
-      "GitHub",
-      "PostgreSQL",
-      "Kafka"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
-  },
-  {
     "id": "tide-7569898003",
     "company": "Tide",
     "title": "Engineering Manager",
@@ -83723,6 +83554,50 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7569898003",
     "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7569898003",
     "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7569898003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE:\n\nAs an Engineering Manager at Tide, you will be responsible for building and running the products your team owns, covering everything our members need to run their business, from banking and payments through to administration and operational tooling.\n\nThis role offers an exceptional opportunity to make a real difference by taking ownership of engineering practices in a rapidly expanding company! We trust and empower our Engineering Managers to make real architectural decisions that affect their domain and shape the future of Tide\u2019s Platform.\n\nWe operate in domain-aligned, full-stack teams that own products end to end. Engineers self-organise, collaborate on technical challenges, and define shared standards through Communities of Practice.\n\nLeading & Directly managing a cross functional team of 8-12 engineers\n\nPartnering with a Product Manager to form the Product Engineering Duo\n\nDeeply caring about what\u2019s being built as much as the how\n\nBeing responsible of the delivery of the team - quality, stability, timelines, dependencies\n\nBeing responsible of the tech excellence and architecture with",
+    "requirements": [
+      "Python",
+      "C",
+      "Docker",
+      "AWS",
+      "GitHub",
+      "PostgreSQL",
+      "Kafka"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
+  },
+  {
+    "id": "tide-7570167003",
+    "company": "Tide",
+    "title": "Engineering Manager",
+    "department": "One Platform",
+    "team": "One Platform",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Serbia \u2022 Bulgaria \u2022 Lithuania \u2022 Romania",
+    "locations": [
+      "Serbia",
+      "Bulgaria",
+      "Lithuania",
+      "Romania"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tide",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7570167003#app",
     "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE:\n\nAs an Engineering Manager at Tide, you will be responsible for building and running the products your team owns, covering everything our members need to run their business, from banking and payments through to administration and operational tooling.\n\nThis role offers an exceptional opportunity to make a real difference by taking ownership of engineering practices in a rapidly expanding company! We trust and empower our Engineering Managers to make real architectural decisions that affect their domain and shape the future of Tide\u2019s Platform.\n\nWe operate in domain-aligned, full-stack teams that own products end to end. Engineers self-organise, collaborate on technical challenges, and define shared standards through Communities of Practice.\n\nLeading & Directly managing a cross functional team of 8-12 engineers\n\nPartnering with a Product Manager to form the Product Engineering Duo\n\nDeeply caring about what\u2019s being built as much as the how\n\nBeing responsible of the delivery of the team - quality, stability, timelines, dependencies\n\nBeing responsible of the tech excellence and architecture with",
     "requirements": [
       "Python",
@@ -84069,51 +83944,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
-    "id": "tide-8046430003",
-    "company": "Tide",
-    "title": "Head of Engineering, Tide Credit Services",
-    "department": "One Platform",
-    "team": "One Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Serbia \u2022 Lithuania",
-    "locations": [
-      "Serbia",
-      "Lithuania"
-    ],
-    "salary": "\u20ac91,600 - \u20ac114,500",
-    "salaryMin": 91600,
-    "salaryMax": 114500,
-    "salaryCurrency": "EUR",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM\n\nTide Credit Services (TCS) puts credit in SMEs\u2019 hands when they need it. We build Tide\u2019s on demand lending products\u2014including Credit Flex, Instant Loan, and Credit Score Insights\u2014so members get fast, flexible funding inside the account they already run their business from.\n\nWe are scaling our flagship products globally across the UK, Europe, and India. This is high-velocity, high-impact work: you\u2019ll architect and drive a fully automated, lightning-fast lending engine designed to deliver capital on demand, securely and seamlessly. Partnering with a brilliant and growing cross-functional team of 28 across engineering, product, design, data, and operations, you'll build a robust, scalable platform powering the future of SME credit.\n\nABOUT THE ROLE\n\nAs Head of Engineering for Tide Credit Services (TCS, transactional credit), you\u2019ll own the technology behind how Tide lends to SMEs. That covers Credit Flex, Instant Loan and the platform underneath them.\n\nIt\u2019s a senior, hands-on leadership role with real say over architecture, engineering strategy and delivery. You\u2019ll lead Engineering Managers an",
-    "requirements": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Distributed Systems",
-      "System Design",
-      "GitHub",
-      "PostgreSQL",
-      "MySQL"
-    ],
-    "preferred": [
-      "Kafka",
-      "ElasticSearch",
-      "LLMs"
-    ],
-    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
-  },
-  {
     "id": "tide-8046423003",
     "company": "Tide",
     "title": "Head of Engineering, Tide Credit Services",
@@ -84139,6 +83969,51 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8046423003",
     "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046423003",
     "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046423003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM\n\nTide Credit Services (TCS) puts credit in SMEs\u2019 hands when they need it. We build Tide\u2019s on demand lending products\u2014including Credit Flex, Instant Loan, and Credit Score Insights\u2014so members get fast, flexible funding inside the account they already run their business from.\n\nWe are scaling our flagship products globally across the UK, Europe, and India. This is high-velocity, high-impact work: you\u2019ll architect and drive a fully automated, lightning-fast lending engine designed to deliver capital on demand, securely and seamlessly. Partnering with a brilliant and growing cross-functional team of 28 across engineering, product, design, data, and operations, you'll build a robust, scalable platform powering the future of SME credit.\n\nABOUT THE ROLE\n\nAs Head of Engineering for Tide Credit Services (TCS, transactional credit), you\u2019ll own the technology behind how Tide lends to SMEs. That covers Credit Flex, Instant Loan and the platform underneath them.\n\nIt\u2019s a senior, hands-on leadership role with real say over architecture, engineering strategy and delivery. You\u2019ll lead Engineering Managers an",
+    "requirements": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Distributed Systems",
+      "System Design",
+      "GitHub",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "preferred": [
+      "Kafka",
+      "ElasticSearch",
+      "LLMs"
+    ],
+    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
+  },
+  {
+    "id": "tide-8046430003",
+    "company": "Tide",
+    "title": "Head of Engineering, Tide Credit Services",
+    "department": "One Platform",
+    "team": "One Platform",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Serbia \u2022 Lithuania",
+    "locations": [
+      "Serbia",
+      "Lithuania"
+    ],
+    "salary": "\u20ac91,600 - \u20ac114,500",
+    "salaryMin": 91600,
+    "salaryMax": 114500,
+    "salaryCurrency": "EUR",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tide",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8046430003#app",
     "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM\n\nTide Credit Services (TCS) puts credit in SMEs\u2019 hands when they need it. We build Tide\u2019s on demand lending products\u2014including Credit Flex, Instant Loan, and Credit Score Insights\u2014so members get fast, flexible funding inside the account they already run their business from.\n\nWe are scaling our flagship products globally across the UK, Europe, and India. This is high-velocity, high-impact work: you\u2019ll architect and drive a fully automated, lightning-fast lending engine designed to deliver capital on demand, securely and seamlessly. Partnering with a brilliant and growing cross-functional team of 28 across engineering, product, design, data, and operations, you'll build a robust, scalable platform powering the future of SME credit.\n\nABOUT THE ROLE\n\nAs Head of Engineering for Tide Credit Services (TCS, transactional credit), you\u2019ll own the technology behind how Tide lends to SMEs. That covers Credit Flex, Instant Loan and the platform underneath them.\n\nIt\u2019s a senior, hands-on leadership role with real say over architecture, engineering strategy and delivery. You\u2019ll lead Engineering Managers an",
     "requirements": [
       "Docker",
@@ -84324,6 +84199,46 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
+    "id": "tide-8044352003",
+    "company": "Tide",
+    "title": "Site Reliability Engineering Manager",
+    "department": "One Platform",
+    "team": "One Platform",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Lithuania \u2022 Bulgaria \u2022 Serbia",
+    "locations": [
+      "Lithuania",
+      "Bulgaria",
+      "Serbia"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tide",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM:\n\nThe SRE team is part of Platform Engineering. Its mission is to own the reliability system: the standards, tooling, and platform services that determine how reliable Tide is by default. We measure success by SLO attainment and the reliability our members experience.\n\nABOUT THE ROLE:\n\nTide is hiring an Engineering Manager to lead the SRE team that owns our reliability system.\n\nAs an Engineering Manager, SRE, you will:\n\nLead: Hire, coach, and set clear goals for the SRE team.\n\nDefine SLOs: Agree SLOs with service owners and run the error budget policy.\n\nOwn observability: Run the observability platform 24/7 in production, including SLOs and platform alerting.\n\nRelease safely: Build deployment guardrails such as canary rollouts and auto-rollback.\n\nBuild resilience: Detect partner degradation early with synthetic monitoring and vendor scorecards.\n\nRemove toil: Automate manual incident work, such as recording incident timelines and drafting status updates.\n\nFix systemically: Turn post-mortem findings and incident patterns into cross-cutting platform fixes.\n\nMeasure outcomes: Track SLO attainme",
+    "requirements": [
+      "Python",
+      "Go",
+      "Kubernetes",
+      "AWS"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
+  },
+  {
     "id": "tide-8044286003",
     "company": "Tide",
     "title": "Site Reliability Engineering Manager",
@@ -84364,9 +84279,9 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
-    "id": "tide-8044352003",
+    "id": "tide-8036817003",
     "company": "Tide",
-    "title": "Site Reliability Engineering Manager",
+    "title": "Staff Platform Engineer",
     "department": "One Platform",
     "team": "One Platform",
     "deptTrack": "Engineering",
@@ -84374,11 +84289,10 @@ const seedJobs = [
     "domain": "AI / LLM Infra",
     "seniority": "Staff / Lead",
     "employmentType": "Full-time",
-    "location": "Lithuania \u2022 Bulgaria \u2022 Serbia",
+    "location": "Bulgaria \u2022 Sofia",
     "locations": [
-      "Lithuania",
       "Bulgaria",
-      "Serbia"
+      "Sofia"
     ],
     "salary": "Salary Not Disclosed",
     "salaryMin": null,
@@ -84387,15 +84301,15 @@ const seedJobs = [
     "salaryDisclosed": false,
     "boardSource": "Greenhouse",
     "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8044352003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM:\n\nThe SRE team is part of Platform Engineering. Its mission is to own the reliability system: the standards, tooling, and platform services that determine how reliable Tide is by default. We measure success by SLO attainment and the reliability our members experience.\n\nABOUT THE ROLE:\n\nTide is hiring an Engineering Manager to lead the SRE team that owns our reliability system.\n\nAs an Engineering Manager, SRE, you will:\n\nLead: Hire, coach, and set clear goals for the SRE team.\n\nDefine SLOs: Agree SLOs with service owners and run the error budget policy.\n\nOwn observability: Run the observability platform 24/7 in production, including SLOs and platform alerting.\n\nRelease safely: Build deployment guardrails such as canary rollouts and auto-rollback.\n\nBuild resilience: Detect partner degradation early with synthetic monitoring and vendor scorecards.\n\nRemove toil: Automate manual incident work, such as recording incident timelines and drafting status updates.\n\nFix systemically: Turn post-mortem findings and incident patterns into cross-cutting platform fixes.\n\nMeasure outcomes: Track SLO attainme",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM:\n\nThe IT team at Tide is a small, high-impact group of around 20 people, combining a responsive service desk with strong project-based engineering capability. The team operates in a cloud-native environment, with Google Workspace at the core, and supports a large, globally distributed workforce. The focus is on enabling the business through reliable, secure access to a wide range of SaaS platforms, while continuously improving how services are delivered as the organisation scales.\n\nABOUT THE ROLE:\n\nYou'll be the technical SME for our core IT platforms. As a senior individual contributor, you\u2019ll own the architecture, configuration and health of the platforms every Tidean relies on. You\u2019ll make the key design decisions, keep the platforms secure, well governed and documented, and drive improvements from design through to rollout. The major platforms in scope are:\n\nGoogle Workspace: identity and access policies, DLP, email security and ChromeOS management\n\nNetskope (SSE/SASE): SWG, CASB, DLP and ZTNA\n\nJamf Pro and Microsoft Intune: zero-touch provisioning, compliance, patching and encryption f",
     "requirements": [
       "Python",
-      "Go",
-      "Kubernetes",
-      "AWS"
+      "AWS",
+      "GCP",
+      "Git"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -84482,45 +84396,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
   },
   {
-    "id": "tide-8036817003",
-    "company": "Tide",
-    "title": "Staff Platform Engineer",
-    "department": "One Platform",
-    "team": "One Platform",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Bulgaria \u2022 Sofia",
-    "locations": [
-      "Bulgaria",
-      "Sofia"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/8036817003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE TEAM:\n\nThe IT team at Tide is a small, high-impact group of around 20 people, combining a responsive service desk with strong project-based engineering capability. The team operates in a cloud-native environment, with Google Workspace at the core, and supports a large, globally distributed workforce. The focus is on enabling the business through reliable, secure access to a wide range of SaaS platforms, while continuously improving how services are delivered as the organisation scales.\n\nABOUT THE ROLE:\n\nYou'll be the technical SME for our core IT platforms. As a senior individual contributor, you\u2019ll own the architecture, configuration and health of the platforms every Tidean relies on. You\u2019ll make the key design decisions, keep the platforms secure, well governed and documented, and drive improvements from design through to rollout. The major platforms in scope are:\n\nGoogle Workspace: identity and access policies, DLP, email security and ChromeOS management\n\nNetskope (SSE/SASE): SWG, CASB, DLP and ZTNA\n\nJamf Pro and Microsoft Intune: zero-touch provisioning, compliance, patching and encryption f",
-    "requirements": [
-      "Python",
-      "AWS",
-      "GCP",
-      "Git"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
-  },
-  {
     "id": "tide-7703991003",
     "company": "Tide",
     "title": "Staff Software Engineer, Agentic Platform",
@@ -84562,42 +84437,6 @@ const seedJobs = [
       "PostgreSQL",
       "MySQL",
       "Kafka"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
-  },
-  {
-    "id": "tide-7993908003",
-    "company": "Tide",
-    "title": "VP Engineering, Ongoing Monitoring",
-    "department": "One Platform",
-    "team": "One Platform",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "Berlin, Germany \u2022 London",
-    "locations": [
-      "Berlin, Germany",
-      "London"
-    ],
-    "salary": "Salary Not Disclosed",
-    "salaryMin": null,
-    "salaryMax": null,
-    "salaryCurrency": null,
-    "salaryDisclosed": false,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/tide",
-    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003",
-    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003",
-    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003#app",
-    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE\n\nTide is hiring a VP of Engineering to lead the engineering organisation behind Ongoing Monitoring. You will report directly to the Chief Data and Technology Officer. Ongoing Monitoring protects our members by detecting fraud, financial crime and regulatory risk across every transaction Tide processes. The engineering, data science and platform capability behind it is one of the most technically demanding estates at Tide.\n\nYou will be accountable for the engineering strategy, organisation and execution across all Ongoing Monitoring value streams: real-time transaction monitoring for bank payments fraud, acquiring fraud, Anti Money Laundering, Counter Terrorist Financing, sanctions and prohibited activities monitoring, and the tooling our financial investigators depend on. That means ML models in production, agentic AI inside regulated workflows, and multi-market screening infrastructure that stands up to regulatory scrutiny.\n\nThis role sits at the intersection of regulated risk operations, near real-time platform engineering and applied AI. Our first line operations teams are the primary in",
-    "requirements": [
-      "Machine Learning"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -84667,6 +84506,42 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7993879003",
     "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993879003",
     "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993879003#app",
+    "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE\n\nTide is hiring a VP of Engineering to lead the engineering organisation behind Ongoing Monitoring. You will report directly to the Chief Data and Technology Officer. Ongoing Monitoring protects our members by detecting fraud, financial crime and regulatory risk across every transaction Tide processes. The engineering, data science and platform capability behind it is one of the most technically demanding estates at Tide.\n\nYou will be accountable for the engineering strategy, organisation and execution across all Ongoing Monitoring value streams: real-time transaction monitoring for bank payments fraud, acquiring fraud, Anti Money Laundering, Counter Terrorist Financing, sanctions and prohibited activities monitoring, and the tooling our financial investigators depend on. That means ML models in production, agentic AI inside regulated workflows, and multi-market screening infrastructure that stands up to regulatory scrutiny.\n\nThis role sits at the intersection of regulated risk operations, near real-time platform engineering and applied AI. Our first line operations teams are the primary in",
+    "requirements": [
+      "Machine Learning"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #3b82f6, #1e40af)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tide.co&sz=128"
+  },
+  {
+    "id": "tide-7993908003",
+    "company": "Tide",
+    "title": "VP Engineering, Ongoing Monitoring",
+    "department": "One Platform",
+    "team": "One Platform",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "Berlin, Germany \u2022 London",
+    "locations": [
+      "Berlin, Germany",
+      "London"
+    ],
+    "salary": "Salary Not Disclosed",
+    "salaryMin": null,
+    "salaryMax": null,
+    "salaryCurrency": null,
+    "salaryDisclosed": false,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/tide",
+    "jobUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003",
+    "applyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003",
+    "directApplyUrl": "https://job-boards.greenhouse.io/tide/jobs/7993908003#app",
     "description": "A BOUT TIDE\n\nAt Tide, we help SMEs save time and money in the running of their businesses by not only offering business accounts and related banking services, but also a comprehensive set of highly usable and connected administrative solutions, from invoicing to accounting.\n\nTide is transforming the small business banking market and now supports over 2 million members globally across the UK, India, Germany and France.\n\nUsing advanced technology, all solutions are designed with SMEs in mind. With quick onboarding, low fees and innovative features, we thrive on making data driven decisions to serve our mission: to help SMEs save time and money so they can get back to doing what they love.\n\nTide facts:\n\nTide is available for UK, Indian, German and French SMEs\n\nOver 2 million members globally and rapidly growing\n\nOver $300 million raised in funding\n\n3,000 Tideans globally\n\nRecognised with Great Place to Work certification three years in a row, and among India\u2019s Top 50 Best Workplaces in Banking, Financial Services, and Insurance in 2026\n\nWe have offices in Central London, with a member support and technology centre in Sofia, Bulgaria, technology centres in Serbia, Romania, Lithuania and Hyderabad and offices in Gurugram, New Delhi, Berlin, Paris and Luxembourg\n\nABOUT THE ROLE\n\nTide is hiring a VP of Engineering to lead the engineering organisation behind Ongoing Monitoring. You will report directly to the Chief Data and Technology Officer. Ongoing Monitoring protects our members by detecting fraud, financial crime and regulatory risk across every transaction Tide processes. The engineering, data science and platform capability behind it is one of the most technically demanding estates at Tide.\n\nYou will be accountable for the engineering strategy, organisation and execution across all Ongoing Monitoring value streams: real-time transaction monitoring for bank payments fraud, acquiring fraud, Anti Money Laundering, Counter Terrorist Financing, sanctions and prohibited activities monitoring, and the tooling our financial investigators depend on. That means ML models in production, agentic AI inside regulated workflows, and multi-market screening infrastructure that stands up to regulatory scrutiny.\n\nThis role sits at the intersection of regulated risk operations, near real-time platform engineering and applied AI. Our first line operations teams are the primary in",
     "requirements": [
       "Machine Learning"
@@ -85769,49 +85644,6 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=together.ai&sz=128"
   },
   {
-    "id": "togetherai-5224090007",
-    "company": "Together AI",
-    "title": "Staff Software Engineer - AI Compute, Together Cloud",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "Platform",
-    "domain": "AI / LLM Infra",
-    "seniority": "Staff / Lead",
-    "employmentType": "Full-time",
-    "location": "San Francisco",
-    "locations": [
-      "San Francisco"
-    ],
-    "salary": "$260,000 - $300,000",
-    "salaryMin": 260000,
-    "salaryMax": 300000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/togetherai",
-    "jobUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
-    "applyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
-    "directApplyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007#app",
-    "description": "About the Role\n\nTogether AI is building the AI Native Cloud, an end-to-end platform for the full generative AI lifecycle, combining the fastest LLM inference engine with state-of-the-art GPU cloud infrastructure. The Together Cloud team builds the [Together GPU Clusters](https://www.together.ai/gpu-clusters) flagship IaaS product that provides high-performance, AI-ready GPU clusters through a self-serve cloud console, along with the virtualized infrastructure layer powering Together's inference, RL, and fine-tuning products.\n\nAs a Staff Software Engineer focusing on AI Compute in the Together Cloud org, you will set technical direction for and build major components of the next generation AI cloud platform \u2013 a highly available, global cloud infrastructure with cutting-edge virtualization of the latest ML hardware: GB300s/VRs, BlueField DPUs, InfiniBand and dual/quad-plane RoCEv2 fabrics. That virtualized computing platform powers our own SaaS products \u2013 inference, RL, and fine-tuning \u2013 and serves external cloud customers through self-serve offerings such as on-demand/reserved Kubernetes/Slurm clusters, across dozens of data centers and hundreds of thousands of GPUs.\n\nThis is an architect-and-build role. Fully automated bootstrapping of GPU data centers, high-performance virtualization of GPU compute and DC networking without compromising isolation or portability, and fault-tolerant decentralized control planes \u2014 you'll set the architecture for these across our global and in-DC services, and be a key owner of the hardest parts, in the code as well as the design. Your designs will span the IaaS layer of a greenfield Vera Rubin data center up to the global management plane that schedules capacity across all of them. At this level the job is as much leverage as code: the standards you set and the engineers you grow decide how fast the rest of Together Cloud ships.\n\nResponsibilities\n\nOwn the GPU and network virtualization stack: the hypervisor, kernel, and SDN work that keeps GPU compute and DC networking high-performance, portable, and strongly isolated across heterogeneous hardware.\n\nOwn the in-DC IaaS layer: architect and roadmap the services, Kubernetes operators, and libraries that provision and manage compute, storage, and networks in our data centers \u2014 VMs, parallel filesystems, VPCs, and InfiniBand partitions; lead its build-out for a new Vera Rubin data ",
-    "requirements": [
-      "CUDA",
-      "Golang",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-      "GCP",
-      "Distributed Systems",
-      "GitHub"
-    ],
-    "preferred": [
-      "Fine-tuning",
-      "Go"
-    ],
-    "companyColor": "linear-gradient(135deg, #0ea5e9, #2563eb)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=together.ai&sz=128"
-  },
-  {
     "id": "togetherai-5261592007",
     "company": "Together AI",
     "title": "Staff Software Engineer - AI Compute, Together Cloud",
@@ -85836,6 +85668,49 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5261592007",
     "applyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5261592007",
     "directApplyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5261592007#app",
+    "description": "About the Role\n\nTogether AI is building the AI Native Cloud, an end-to-end platform for the full generative AI lifecycle, combining the fastest LLM inference engine with state-of-the-art GPU cloud infrastructure. The Together Cloud team builds the [Together GPU Clusters](https://www.together.ai/gpu-clusters) flagship IaaS product that provides high-performance, AI-ready GPU clusters through a self-serve cloud console, along with the virtualized infrastructure layer powering Together's inference, RL, and fine-tuning products.\n\nAs a Staff Software Engineer focusing on AI Compute in the Together Cloud org, you will set technical direction for and build major components of the next generation AI cloud platform \u2013 a highly available, global cloud infrastructure with cutting-edge virtualization of the latest ML hardware: GB300s/VRs, BlueField DPUs, InfiniBand and dual/quad-plane RoCEv2 fabrics. That virtualized computing platform powers our own SaaS products \u2013 inference, RL, and fine-tuning \u2013 and serves external cloud customers through self-serve offerings such as on-demand/reserved Kubernetes/Slurm clusters, across dozens of data centers and hundreds of thousands of GPUs.\n\nThis is an architect-and-build role. Fully automated bootstrapping of GPU data centers, high-performance virtualization of GPU compute and DC networking without compromising isolation or portability, and fault-tolerant decentralized control planes \u2014 you'll set the architecture for these across our global and in-DC services, and be a key owner of the hardest parts, in the code as well as the design. Your designs will span the IaaS layer of a greenfield Vera Rubin data center up to the global management plane that schedules capacity across all of them. At this level the job is as much leverage as code: the standards you set and the engineers you grow decide how fast the rest of Together Cloud ships.\n\nResponsibilities\n\nOwn the GPU and network virtualization stack: the hypervisor, kernel, and SDN work that keeps GPU compute and DC networking high-performance, portable, and strongly isolated across heterogeneous hardware.\n\nOwn the in-DC IaaS layer: architect and roadmap the services, Kubernetes operators, and libraries that provision and manage compute, storage, and networks in our data centers \u2014 VMs, parallel filesystems, VPCs, and InfiniBand partitions; lead its build-out for a new Vera Rubin data ",
+    "requirements": [
+      "CUDA",
+      "Golang",
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Distributed Systems",
+      "GitHub"
+    ],
+    "preferred": [
+      "Fine-tuning",
+      "Go"
+    ],
+    "companyColor": "linear-gradient(135deg, #0ea5e9, #2563eb)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=together.ai&sz=128"
+  },
+  {
+    "id": "togetherai-5224090007",
+    "company": "Together AI",
+    "title": "Staff Software Engineer - AI Compute, Together Cloud",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "Platform",
+    "domain": "AI / LLM Infra",
+    "seniority": "Staff / Lead",
+    "employmentType": "Full-time",
+    "location": "San Francisco",
+    "locations": [
+      "San Francisco"
+    ],
+    "salary": "$260,000 - $300,000",
+    "salaryMin": 260000,
+    "salaryMax": 300000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/togetherai",
+    "jobUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
+    "applyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
+    "directApplyUrl": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007#app",
     "description": "About the Role\n\nTogether AI is building the AI Native Cloud, an end-to-end platform for the full generative AI lifecycle, combining the fastest LLM inference engine with state-of-the-art GPU cloud infrastructure. The Together Cloud team builds the [Together GPU Clusters](https://www.together.ai/gpu-clusters) flagship IaaS product that provides high-performance, AI-ready GPU clusters through a self-serve cloud console, along with the virtualized infrastructure layer powering Together's inference, RL, and fine-tuning products.\n\nAs a Staff Software Engineer focusing on AI Compute in the Together Cloud org, you will set technical direction for and build major components of the next generation AI cloud platform \u2013 a highly available, global cloud infrastructure with cutting-edge virtualization of the latest ML hardware: GB300s/VRs, BlueField DPUs, InfiniBand and dual/quad-plane RoCEv2 fabrics. That virtualized computing platform powers our own SaaS products \u2013 inference, RL, and fine-tuning \u2013 and serves external cloud customers through self-serve offerings such as on-demand/reserved Kubernetes/Slurm clusters, across dozens of data centers and hundreds of thousands of GPUs.\n\nThis is an architect-and-build role. Fully automated bootstrapping of GPU data centers, high-performance virtualization of GPU compute and DC networking without compromising isolation or portability, and fault-tolerant decentralized control planes \u2014 you'll set the architecture for these across our global and in-DC services, and be a key owner of the hardest parts, in the code as well as the design. Your designs will span the IaaS layer of a greenfield Vera Rubin data center up to the global management plane that schedules capacity across all of them. At this level the job is as much leverage as code: the standards you set and the engineers you grow decide how fast the rest of Together Cloud ships.\n\nResponsibilities\n\nOwn the GPU and network virtualization stack: the hypervisor, kernel, and SDN work that keeps GPU compute and DC networking high-performance, portable, and strongly isolated across heterogeneous hardware.\n\nOwn the in-DC IaaS layer: architect and roadmap the services, Kubernetes operators, and libraries that provision and manage compute, storage, and networks in our data centers \u2014 VMs, parallel filesystems, VPCs, and InfiniBand partitions; lead its build-out for a new Vera Rubin data ",
     "requirements": [
       "CUDA",
@@ -93440,6 +93315,41 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
   },
   {
+    "id": "xai-5235761007",
+    "company": "xAI",
+    "title": "Network Engineer",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Palo Alto, CA",
+    "locations": [
+      "Palo Alto, CA"
+    ],
+    "salary": "$150,000 - $250,000",
+    "salaryMin": 150000,
+    "salaryMax": 250000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/xai",
+    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007",
+    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007",
+    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007#app",
+    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nNETWORK ENGINEER\n\nSpaceXSI is building and operating large-scale networks that underpin training and inference infrastructure, including high-performance / supercompute fabrics that connect GPU clusters, plus the core, edge, and datacenter networks that keep that infrastructure reachable and reliable.\n\nWe need a Network Engineer who is strong on fundamentals and comfortable owning production network design, deployment, and operations end to end. This is a hands-on engineering seat \u2014 not a NOC technician role and not a network-software (telemetry/ZTP platform) SWE role. You will design and build networks, qualify platforms, ship changes safely, and keep availability and performance high as we scale.\n\nTravel to Memphis (and other build sites) may be required for capacity build-outs. You will participate in a team on-call rotation.\n\nRESPONSIBILITIES:\n\nDesign, deploy, and operate production datacenter and campus/core networks at scale\n\nOwn routing and switching configuration standards (BGP and at least one IGP such as OSPF or IS-IS), including change design, peer reviews, and execution\n\nQualify new network platforms, optics, and topologies; contribute to architecture and capacity planning\n\nBuild and improve monitoring, alerting, and operational documentation so issues are caught and fixed quickly\n\nTroubleshoot Layer 2/Layer 3 incidents end to end \u2014 from link flaps and optics through routing and traffic engineering \u2014 and drive root cause and lasting fixes\n\nAutomate repetitive network tasks with Python, Ansible, or similar tooling where it reduces toil\n\nPartner with compute,",
+    "requirements": [
+      "Python"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
+  },
+  {
     "id": "xai-5235772007",
     "company": "xAI",
     "title": "Network Engineer",
@@ -93465,41 +93375,6 @@ const seedJobs = [
     "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5235772007",
     "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235772007",
     "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235772007#app",
-    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nNETWORK ENGINEER\n\nSpaceXSI is building and operating large-scale networks that underpin training and inference infrastructure, including high-performance / supercompute fabrics that connect GPU clusters, plus the core, edge, and datacenter networks that keep that infrastructure reachable and reliable.\n\nWe need a Network Engineer who is strong on fundamentals and comfortable owning production network design, deployment, and operations end to end. This is a hands-on engineering seat \u2014 not a NOC technician role and not a network-software (telemetry/ZTP platform) SWE role. You will design and build networks, qualify platforms, ship changes safely, and keep availability and performance high as we scale.\n\nTravel to Memphis (and other build sites) may be required for capacity build-outs. You will participate in a team on-call rotation.\n\nRESPONSIBILITIES:\n\nDesign, deploy, and operate production datacenter and campus/core networks at scale\n\nOwn routing and switching configuration standards (BGP and at least one IGP such as OSPF or IS-IS), including change design, peer reviews, and execution\n\nQualify new network platforms, optics, and topologies; contribute to architecture and capacity planning\n\nBuild and improve monitoring, alerting, and operational documentation so issues are caught and fixed quickly\n\nTroubleshoot Layer 2/Layer 3 incidents end to end \u2014 from link flaps and optics through routing and traffic engineering \u2014 and drive root cause and lasting fixes\n\nAutomate repetitive network tasks with Python, Ansible, or similar tooling where it reduces toil\n\nPartner with compute,",
-    "requirements": [
-      "Python"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
-  },
-  {
-    "id": "xai-5235761007",
-    "company": "xAI",
-    "title": "Network Engineer",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Palo Alto, CA",
-    "locations": [
-      "Palo Alto, CA"
-    ],
-    "salary": "$150,000 - $250,000",
-    "salaryMin": 150000,
-    "salaryMax": 250000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/xai",
-    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007",
-    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007",
-    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5235761007#app",
     "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nNETWORK ENGINEER\n\nSpaceXSI is building and operating large-scale networks that underpin training and inference infrastructure, including high-performance / supercompute fabrics that connect GPU clusters, plus the core, edge, and datacenter networks that keep that infrastructure reachable and reliable.\n\nWe need a Network Engineer who is strong on fundamentals and comfortable owning production network design, deployment, and operations end to end. This is a hands-on engineering seat \u2014 not a NOC technician role and not a network-software (telemetry/ZTP platform) SWE role. You will design and build networks, qualify platforms, ship changes safely, and keep availability and performance high as we scale.\n\nTravel to Memphis (and other build sites) may be required for capacity build-outs. You will participate in a team on-call rotation.\n\nRESPONSIBILITIES:\n\nDesign, deploy, and operate production datacenter and campus/core networks at scale\n\nOwn routing and switching configuration standards (BGP and at least one IGP such as OSPF or IS-IS), including change design, peer reviews, and execution\n\nQualify new network platforms, optics, and topologies; contribute to architecture and capacity planning\n\nBuild and improve monitoring, alerting, and operational documentation so issues are caught and fixed quickly\n\nTroubleshoot Layer 2/Layer 3 incidents end to end \u2014 from link flaps and optics through routing and traffic engineering \u2014 and drive root cause and lasting fixes\n\nAutomate repetitive network tasks with Python, Ansible, or similar tooling where it reduces toil\n\nPartner with compute,",
     "requirements": [
       "Python"
@@ -93994,84 +93869,6 @@ const seedJobs = [
       "Go",
       "C",
       "Kubernetes"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
-  },
-  {
-    "id": "xai-5107958007",
-    "company": "xAI",
-    "title": "Software Engineer (X Money)",
-    "department": "Product",
-    "team": "Product",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Palo Alto, CA \u2022 New York, NY",
-    "locations": [
-      "Palo Alto, CA",
-      "New York, NY"
-    ],
-    "salary": "$180,000 - $440,000",
-    "salaryMin": 180000,
-    "salaryMax": 440000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/xai",
-    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007",
-    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007",
-    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007#app",
-    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER (X MONEY)\n\nWe are seeking a talented Software Engineer to join our X Money team, focused on building a revolutionary global payment network that will serve over 600 million users and rival the world\u2019s largest financial institutions. In this role, you will specialize in backend development, designing and optimizing robust microservices to ensure scalability, security, and reliability. You will support full-stack efforts, collaborate with cross-functional teams on payments, fraud detection, and compliance initiatives, and contribute to the creation of a high-scale financial products platform. This is an opportunity to work on greenfield projects in a fast-paced, startup-like environment, driving innovation at the intersection of AI and finance.\n\nRESPONSIBILITIES:\n\nDevelop backend services, APIs, and data models to support high-volume, multi-user environments\n\nWork with iOS, Android & Web client engineers to ship products\n\nDesign robust infrastructure and microservices for payments, transactions, growth, monetization, and engagement across platforms\n\nBuild and maintain fullstack features, including user dashboards, personalized experiences, content delivery, interactive tools, assessments, and real-time analytics\n\nLead architecture, scalability, and reliability decisions for high-concurrency, low-latency systems\n\nUphold engineering excellence via testing, monitoring, deployment, and secure data handling\n\nBASIC QUALIFICATIONS:\n\n2+ years of experience working on large-scale consumer applications\n\nExperience with distributed systems for high-scale, low-late",
-    "requirements": [
-      "Python",
-      "Rust",
-      "Go",
-      "Distributed Systems"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
-  },
-  {
-    "id": "xai-5108231007",
-    "company": "xAI",
-    "title": "Software Engineer (X Money)",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "London, England, United Kingdom \u2022 UK",
-    "locations": [
-      "London, England, United Kingdom",
-      "UK"
-    ],
-    "salary": "\u00a3107,000 - \u00a3262,000",
-    "salaryMin": 107000,
-    "salaryMax": 262000,
-    "salaryCurrency": "GBP",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/xai",
-    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007",
-    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007",
-    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007#app",
-    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER (X MONEY)\n\nWe are seeking a talented Software Engineer to join our X Money team, focused on building a revolutionary global payment network that will serve over 600 million users and rival the world\u2019s largest financial institutions. In this role, you will specialize in backend development, designing and optimizing robust microservices to ensure scalability, security, and reliability. You will support full-stack efforts, collaborate with cross-functional teams on payments, fraud detection, and compliance initiatives, and contribute to the creation of a high-scale financial products platform. This is an opportunity to work on greenfield projects in a fast-paced, startup-like environment, driving innovation at the intersection of AI and finance.\n\nRESPONSIBILITIES:\n\nDevelop backend services, APIs, and data models to support high-volume, multi-user environments\n\nWork with iOS, Android & Web client engineers to ship products\n\nDesign robust infrastructure and microservices for payments, transactions, growth, monetization, and engagement across platforms\n\nBuild and maintain fullstack features, including user dashboards, personalized experiences, content delivery, interactive tools, assessments, and real-time analytics\n\nLead architecture, scalability, and reliability decisions for high-concurrency, low-latency systems\n\nUphold engineering excellence via testing, monitoring, deployment, and secure data handling\n\nBASIC QUALIFICATIONS:\n\n2+ years of experience working on large-scale consumer applications\n\nExperience with distributed systems for high-scale, low-late",
-    "requirements": [
-      "Python",
-      "Rust",
-      "Go",
-      "Distributed Systems"
     ],
     "preferred": [
       "Large-scale distributed systems & AI infrastructure"
@@ -94679,6 +94476,44 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
   },
   {
+    "id": "xai-4946696007",
+    "company": "xAI",
+    "title": "Software Engineer, Network Software & Services",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Palo Alto, CA",
+    "locations": [
+      "Palo Alto, CA"
+    ],
+    "salary": "$150,000 - $250,000",
+    "salaryMin": 150000,
+    "salaryMax": 250000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/xai",
+    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007",
+    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007",
+    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007#app",
+    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER, NETWORK SOFTWARE & SERVICES\n\nAs part of the Network Software and Services for AI (nssAI) team at SpaceXSI, you will build cutting-edge software, services, and frameworks to empower our Network Development Engineers. Working hands-on, you will tackle all facets of network management \u2013 metric collection, configuration, zero-touch provisioning, monitoring, and auto-remediation \u2013 driving automation-first solutions for\u00a0SpaceXSI's production and ancillary networks. Expect to develop extensible tools, streamline complex processes, and ensure rock-solid reliability to support SpaceXSI's mission of accelerating human scientific discovery through AI.\n\nRESPONSIBILITIES:\n\nBuilding software and tools with extensive metrics coverage for some of the world\u2019s largest GPU supercomputing network fabrics used for AI training and serving customer inference queries\n\nImplement IaC best practices, enhancing deployment pipelines, and ensuring robust, secure service delivery across our production environments\n\nBASIC QUALIFICATIONS:\n\nBachelor's degree in an engineering or STEM discipline\n\nPREFERRED SKILLS AND EXPERIENCE:\n\nDeep experience collaborating with network engineers daily using extensive knowledge of network topologies, physical and logical, and network protocols\n\nExpert knowledge and proven history with designing scalable and reliable software from the ground up that can build and orchestrate tens of thousands of network devices at lightning speeds\n\nAbility to thrive in ambiguity, creating metrics that will help prioritize the focus of the team and your own\n\nCOMPENSAT",
+    "requirements": [
+      "Python",
+      "C++",
+      "Distributed Systems",
+      "System Design"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
+  },
+  {
     "id": "xai-5187964007",
     "company": "xAI",
     "title": "Software Engineer, Network Software & Services",
@@ -94705,44 +94540,6 @@ const seedJobs = [
     "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5187964007",
     "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5187964007#app",
     "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER, NETWORK SOFTWARE & SERVICES\n\nAs part of the Network Software and Services for AI (nssAI) team at SpaceXSI, you'll build cutting-edge software, services, and frameworks to empower our Network Development Engineers. Working hands-on, you\u2019ll tackle all facets of network management\u2014metric collection, configuration, zero-touch provisioning, monitoring, and auto-remediation\u2014driving automation-first solutions for SpaceXSI's production and ancillary networks. Expect to develop extensible tools, streamline complex processes, and ensure rock-solid reliability to support SpaceXSI's mission of accelerating human scientific discovery through AI.\n\nRESPONSIBILITIES:\n\nBuilding software and tools with extensive metrics coverage for some of the world\u2019s largest GPU supercomputing network fabrics used for AI training and serving customer inference queries\n\nImplement IaC best practices, enhancing deployment pipelines, and ensuring robust, secure service delivery across our production environments\n\nPREFERRED SKILLS AND EXPERIENCE:\n\nDeep experience collaborating with network engineers daily using extensive knowledge of network topologies, physical and logical, and network protocols\n\nExpert knowledge and proven history with designing scalable and reliable software from the ground up that can build and orchestrate tens of thousands of network devices at lightning speeds\n\nAbility to thrive in ambiguity, creating metrics that will help prioritize the focus of the team and your own\n\nCOMPENSATION AND BENEFITS:\n\n\u20ac80,000 - 150,000 EUR\n\nBase salary is just one part of our total rew",
-    "requirements": [
-      "Python",
-      "C++",
-      "Distributed Systems",
-      "System Design"
-    ],
-    "preferred": [
-      "Large-scale distributed systems & AI infrastructure"
-    ],
-    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
-  },
-  {
-    "id": "xai-4946696007",
-    "company": "xAI",
-    "title": "Software Engineer, Networking Software and Services",
-    "department": "Engineering",
-    "team": "Engineering",
-    "deptTrack": "Engineering",
-    "category": "SWE",
-    "domain": "AI / LLM Infra",
-    "seniority": "Senior",
-    "employmentType": "Full-time",
-    "location": "Palo Alto, CA",
-    "locations": [
-      "Palo Alto, CA"
-    ],
-    "salary": "$150,000 - $250,000",
-    "salaryMin": 150000,
-    "salaryMax": 250000,
-    "salaryCurrency": "USD",
-    "salaryDisclosed": true,
-    "boardSource": "Greenhouse",
-    "boardUrl": "https://boards.greenhouse.io/xai",
-    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007",
-    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007",
-    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/4946696007#app",
-    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER, NETWORKING SOFTWARE AND SERVICES\n\nAs part of the Network Software and Services for AI (nssAI) team at SpaceXSI, you will build cutting-edge software, services, and frameworks to empower our Network Development Engineers. Working hands-on, you will tackle all facets of network management \u2013 metric collection, configuration, zero-touch provisioning, monitoring, and auto-remediation \u2013 driving automation-first solutions for\u00a0SpaceXSI's production and ancillary networks. Expect to develop extensible tools, streamline complex processes, and ensure rock-solid reliability to support SpaceXSI's mission of accelerating human scientific discovery through AI.\n\nRESPONSIBILITIES:\n\nBuilding software and tools with extensive metrics coverage for some of the world\u2019s largest GPU supercomputing network fabrics used for AI training and serving customer inference queries\n\nImplement IaC best practices, enhancing deployment pipelines, and ensuring robust, secure service delivery across our production environments\n\nBASIC QUALIFICATIONS:\n\nBachelor's degree in an engineering or STEM discipline\n\nPREFERRED SKILLS AND EXPERIENCE:\n\nDeep experience collaborating with network engineers daily using extensive knowledge of network topologies, physical and logical, and network protocols\n\nExpert knowledge and proven history with designing scalable and reliable software from the ground up that can build and orchestrate tens of thousands of network devices at lightning speeds\n\nAbility to thrive in ambiguity, creating metrics that will help prioritize the focus of the team and your own\n\nCOMP",
     "requirements": [
       "Python",
       "C++",
@@ -95122,6 +94919,84 @@ const seedJobs = [
     "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
   },
   {
+    "id": "xai-5108231007",
+    "company": "xAI",
+    "title": "Software Engineer, X Money",
+    "department": "Engineering",
+    "team": "Engineering",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "London, England, United Kingdom \u2022 UK",
+    "locations": [
+      "London, England, United Kingdom",
+      "UK"
+    ],
+    "salary": "\u00a3107,000 - \u00a3262,000",
+    "salaryMin": 107000,
+    "salaryMax": 262000,
+    "salaryCurrency": "GBP",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/xai",
+    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007",
+    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007",
+    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5108231007#app",
+    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER, X MONEY\n\nWe are seeking a talented Software Engineer to join our X Money team, focused on building a revolutionary global payment network that will serve over 600 million users and rival the world\u2019s largest financial institutions. In this role, you will specialize in backend development, designing and optimizing robust microservices to ensure scalability, security, and reliability. You will support full-stack efforts, collaborate with cross-functional teams on payments, fraud detection, and compliance initiatives, and contribute to the creation of a high-scale financial products platform. This is an opportunity to work on greenfield projects in a fast-paced, startup-like environment, driving innovation at the intersection of AI and finance.\n\nRESPONSIBILITIES:\n\nDevelop backend services, APIs, and data models to support high-volume, multi-user environments\n\nWork with iOS, Android & Web client engineers to ship products\n\nDesign robust infrastructure and microservices for payments, transactions, growth, monetization, and engagement across platforms\n\nBuild and maintain fullstack features, including user dashboards, personalized experiences, content delivery, interactive tools, assessments, and real-time analytics\n\nLead architecture, scalability, and reliability decisions for high-concurrency, low-latency systems\n\nUphold engineering excellence via testing, monitoring, deployment, and secure data handling\n\nBASIC QUALIFICATIONS:\n\n2+ years of experience working on large-scale consumer applications\n\nExperience with distributed systems for high-scale, low-laten",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Go",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
+  },
+  {
+    "id": "xai-5107958007",
+    "company": "xAI",
+    "title": "Software Engineer, X Money",
+    "department": "Product",
+    "team": "Product",
+    "deptTrack": "Engineering",
+    "category": "SWE",
+    "domain": "AI / LLM Infra",
+    "seniority": "Senior",
+    "employmentType": "Full-time",
+    "location": "Palo Alto, CA \u2022 New York, NY",
+    "locations": [
+      "Palo Alto, CA",
+      "New York, NY"
+    ],
+    "salary": "$180,000 - $440,000",
+    "salaryMin": 180000,
+    "salaryMax": 440000,
+    "salaryCurrency": "USD",
+    "salaryDisclosed": true,
+    "boardSource": "Greenhouse",
+    "boardUrl": "https://boards.greenhouse.io/xai",
+    "jobUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007",
+    "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007",
+    "directApplyUrl": "https://job-boards.greenhouse.io/xai/jobs/5107958007#app",
+    "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today, SpaceX is actively developing the technologies to make this possible, with the ultimate goal of making life multiplanetary and expanding consciousness to the stars.\n\nSpaceXSI is building Super Intelligence to help humanity understand the universe. Our teams are building the full Super Intelligence stack: from our Colossus supercomputers, to Grok models, to our suite of applications, including Grok Bot, Grok Build, Grok Imagine, Grok Voice, and X. We're creating a powerful flywheel where more compute trains better models, better models power more useful products, and what we learn from people using those products shapes what we build next.\n\nSOFTWARE ENGINEER, X MONEY\n\nWe are seeking a talented Software Engineer to join our X Money team, focused on building a revolutionary global payment network that will serve over 600 million users and rival the world\u2019s largest financial institutions. In this role, you will specialize in backend development, designing and optimizing robust microservices to ensure scalability, security, and reliability. You will support full-stack efforts, collaborate with cross-functional teams on payments, fraud detection, and compliance initiatives, and contribute to the creation of a high-scale financial products platform. This is an opportunity to work on greenfield projects in a fast-paced, startup-like environment, driving innovation at the intersection of AI and finance.\n\nRESPONSIBILITIES:\n\nDevelop backend services, APIs, and data models to support high-volume, multi-user environments\n\nWork with iOS, Android & Web client engineers to ship products\n\nDesign robust infrastructure and microservices for payments, transactions, growth, monetization, and engagement across platforms\n\nBuild and maintain fullstack features, including user dashboards, personalized experiences, content delivery, interactive tools, assessments, and real-time analytics\n\nLead architecture, scalability, and reliability decisions for high-concurrency, low-latency systems\n\nUphold engineering excellence via testing, monitoring, deployment, and secure data handling\n\nBASIC QUALIFICATIONS:\n\n2+ years of experience working on large-scale consumer applications\n\nExperience with distributed systems for high-scale, low-laten",
+    "requirements": [
+      "Python",
+      "Rust",
+      "Go",
+      "Distributed Systems"
+    ],
+    "preferred": [
+      "Large-scale distributed systems & AI infrastructure"
+    ],
+    "companyColor": "linear-gradient(135deg, #38bdf8, #1d4ed8)",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=x.ai&sz=128"
+  },
+  {
     "id": "xai-5167318007",
     "company": "xAI",
     "title": "Sr. IT Data Engineer",
@@ -95366,9 +95241,9 @@ const seedJobs = [
 ];
 
 const pipelineManifest = {
-  "syncedAt": "2026-10-31 02:54 AM",
-  "totalRawJobsScanned": 13773,
-  "totalVerifiedJobs": 2405,
+  "syncedAt": "2026-11-01 02:47 AM",
+  "totalRawJobsScanned": 13763,
+  "totalVerifiedJobs": 2402,
   "totalCompanies": 92,
   "stages": [
     "Stage 1: Direct Official ATS Ingestion (Ashby Posting API & Greenhouse Boards API)",
@@ -95384,7 +95259,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/andurilindustries",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/andurilindustries/jobs?content=true",
-      "rawTotal": 2567,
+      "rawTotal": 2562,
       "verifiedCount": 267,
       "engineeringDeptCount": 267,
       "researchDeptCount": 0,
@@ -95396,7 +95271,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/openai",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true",
-      "rawTotal": 813,
+      "rawTotal": 810,
       "verifiedCount": 256,
       "engineeringDeptCount": 220,
       "researchDeptCount": 36,
@@ -95420,7 +95295,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/wayve",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/wayve?includeCompensation=true",
-      "rawTotal": 174,
+      "rawTotal": 175,
       "verifiedCount": 105,
       "engineeringDeptCount": 104,
       "researchDeptCount": 1,
@@ -95528,7 +95403,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/sierra",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/sierra?includeCompensation=true",
-      "rawTotal": 219,
+      "rawTotal": 220,
       "verifiedCount": 41,
       "engineeringDeptCount": 41,
       "researchDeptCount": 0,
@@ -95540,7 +95415,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/cloudflare",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
-      "rawTotal": 465,
+      "rawTotal": 464,
       "verifiedCount": 39,
       "engineeringDeptCount": 39,
       "researchDeptCount": 0,
@@ -95576,7 +95451,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/deliveroo",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/deliveroo/jobs?content=true",
-      "rawTotal": 203,
+      "rawTotal": 202,
       "verifiedCount": 34,
       "engineeringDeptCount": 33,
       "researchDeptCount": 1,
@@ -95612,7 +95487,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/baseten",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/baseten?includeCompensation=true",
-      "rawTotal": 104,
+      "rawTotal": 105,
       "verifiedCount": 31,
       "engineeringDeptCount": 28,
       "researchDeptCount": 3,
@@ -95643,6 +95518,18 @@ const pipelineManifest = {
       "londonCount": 9
     },
     {
+      "company": "Supabase",
+      "slug": "supabase",
+      "boardType": "Ashby",
+      "boardUrl": "https://jobs.ashbyhq.com/supabase",
+      "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/supabase?includeCompensation=true",
+      "rawTotal": 68,
+      "verifiedCount": 29,
+      "engineeringDeptCount": 29,
+      "researchDeptCount": 0,
+      "londonCount": 0
+    },
+    {
       "company": "LangChain",
       "slug": "langchain",
       "boardType": "Ashby",
@@ -95653,18 +95540,6 @@ const pipelineManifest = {
       "engineeringDeptCount": 28,
       "researchDeptCount": 0,
       "londonCount": 1
-    },
-    {
-      "company": "Supabase",
-      "slug": "supabase",
-      "boardType": "Ashby",
-      "boardUrl": "https://jobs.ashbyhq.com/supabase",
-      "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/supabase?includeCompensation=true",
-      "rawTotal": 64,
-      "verifiedCount": 28,
-      "engineeringDeptCount": 28,
-      "researchDeptCount": 0,
-      "londonCount": 0
     },
     {
       "company": "Celonis",
@@ -95679,18 +95554,6 @@ const pipelineManifest = {
       "londonCount": 5
     },
     {
-      "company": "Intercom",
-      "slug": "intercom",
-      "boardType": "Greenhouse",
-      "boardUrl": "https://boards.greenhouse.io/intercom",
-      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs?content=true",
-      "rawTotal": 110,
-      "verifiedCount": 26,
-      "engineeringDeptCount": 26,
-      "researchDeptCount": 0,
-      "londonCount": 16
-    },
-    {
       "company": "Anysphere",
       "slug": "cursor",
       "boardType": "Ashby",
@@ -95703,16 +95566,16 @@ const pipelineManifest = {
       "londonCount": 0
     },
     {
-      "company": "Affirm",
-      "slug": "affirm",
+      "company": "Intercom",
+      "slug": "intercom",
       "boardType": "Greenhouse",
-      "boardUrl": "https://boards.greenhouse.io/affirm",
-      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs?content=true",
-      "rawTotal": 245,
-      "verifiedCount": 24,
-      "engineeringDeptCount": 24,
+      "boardUrl": "https://boards.greenhouse.io/intercom",
+      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs?content=true",
+      "rawTotal": 109,
+      "verifiedCount": 25,
+      "engineeringDeptCount": 25,
       "researchDeptCount": 0,
-      "londonCount": 12
+      "londonCount": 16
     },
     {
       "company": "Reflection AI",
@@ -95737,6 +95600,18 @@ const pipelineManifest = {
       "engineeringDeptCount": 22,
       "researchDeptCount": 1,
       "londonCount": 0
+    },
+    {
+      "company": "Affirm",
+      "slug": "affirm",
+      "boardType": "Greenhouse",
+      "boardUrl": "https://boards.greenhouse.io/affirm",
+      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/affirm/jobs?content=true",
+      "rawTotal": 244,
+      "verifiedCount": 23,
+      "engineeringDeptCount": 23,
+      "researchDeptCount": 0,
+      "londonCount": 12
     },
     {
       "company": "Decagon",
@@ -95792,7 +95667,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/fireworks",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/fireworks?includeCompensation=true",
-      "rawTotal": 89,
+      "rawTotal": 90,
       "verifiedCount": 20,
       "engineeringDeptCount": 20,
       "researchDeptCount": 0,
@@ -95840,11 +95715,11 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/elevenlabs",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/elevenlabs?includeCompensation=true",
-      "rawTotal": 149,
-      "verifiedCount": 19,
-      "engineeringDeptCount": 15,
+      "rawTotal": 141,
+      "verifiedCount": 17,
+      "engineeringDeptCount": 13,
       "researchDeptCount": 4,
-      "londonCount": 18
+      "londonCount": 16
     },
     {
       "company": "Modal",
@@ -95876,7 +95751,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/coinbase",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true",
-      "rawTotal": 250,
+      "rawTotal": 254,
       "verifiedCount": 15,
       "engineeringDeptCount": 15,
       "researchDeptCount": 0,
@@ -95888,7 +95763,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/monzo",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/monzo/jobs?content=true",
-      "rawTotal": 64,
+      "rawTotal": 63,
       "verifiedCount": 15,
       "engineeringDeptCount": 15,
       "researchDeptCount": 0,
@@ -95912,7 +95787,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/stripe",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
-      "rawTotal": 746,
+      "rawTotal": 745,
       "verifiedCount": 15,
       "engineeringDeptCount": 15,
       "researchDeptCount": 0,
@@ -96104,7 +95979,7 @@ const pipelineManifest = {
       "boardType": "Greenhouse",
       "boardUrl": "https://boards.greenhouse.io/rubrik",
       "apiUrl": "https://boards-api.greenhouse.io/v1/boards/rubrik/jobs?content=true",
-      "rawTotal": 159,
+      "rawTotal": 158,
       "verifiedCount": 7,
       "engineeringDeptCount": 6,
       "researchDeptCount": 1,
@@ -96248,7 +96123,7 @@ const pipelineManifest = {
       "boardType": "Ashby",
       "boardUrl": "https://jobs.ashbyhq.com/ramp",
       "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/ramp?includeCompensation=true",
-      "rawTotal": 171,
+      "rawTotal": 172,
       "verifiedCount": 4,
       "engineeringDeptCount": 4,
       "researchDeptCount": 0,
@@ -96488,7 +96363,7 @@ const pipelineManifest = {
 if (typeof window !== "undefined") {
   window.seedJobs = seedJobs;
   window.pipelineManifest = pipelineManifest;
-  window.lastSyncedJobs = "2026-10-31 02:54 AM";
+  window.lastSyncedJobs = "2026-11-01 02:47 AM";
 }
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
